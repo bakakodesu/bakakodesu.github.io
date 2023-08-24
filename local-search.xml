@@ -35,7 +35,7 @@
     <link href="/2023/08/22/VSCode-%E9%85%8D%E7%BD%AE-Conda-%E7%8E%AF%E5%A2%83/"/>
     <url>/2023/08/22/VSCode-%E9%85%8D%E7%BD%AE-Conda-%E7%8E%AF%E5%A2%83/</url>
     
-    <content type="html"><![CDATA[<p>VSCode 下载 Python 插件：</p><p><img src="/2023/08/22/VSCode-%E9%85%8D%E7%BD%AE-Conda-%E7%8E%AF%E5%A2%83/1.png"></p><p>在 VSCode 中使用 CTRL+P 打开搜索，然后输入 <code>&gt; select interpreter</code>：</p><p><img src="/2023/08/22/VSCode-%E9%85%8D%E7%BD%AE-Conda-%E7%8E%AF%E5%A2%83/2.png"></p><p>选择对应环境即可。</p><p>运行代码后，可以在 VSCode 的终端发现自动输入了如下指令：</p><p><img src="/2023/08/22/VSCode-%E9%85%8D%E7%BD%AE-Conda-%E7%8E%AF%E5%A2%83/3.png"></p>]]></content>
+    <content type="html"><![CDATA[<p>VSCode 下载 Python 插件：</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/VSCode-%E9%85%8D%E7%BD%AE-Conda-%E7%8E%AF%E5%A2%831.png"></p><p>在 VSCode 中使用 CTRL+P 打开搜索，然后输入 <code>&gt; select interpreter</code>：</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/VSCode-%E9%85%8D%E7%BD%AE-Conda-%E7%8E%AF%E5%A2%832.png"></p><p>选择对应环境即可。</p><p>运行代码后，可以在 VSCode 的终端发现自动输入了如下指令：</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/VSCode-%E9%85%8D%E7%BD%AE-Conda-%E7%8E%AF%E5%A2%833.png"></p>]]></content>
     
     
     <categories>
@@ -130,9 +130,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>Arduino</tag>
+      
+      <tag>传感器</tag>
       
       <tag>EMG</tag>
       
@@ -236,11 +236,11 @@
     
     <tags>
       
+      <tag>Arduino</tag>
+      
       <tag>传感器</tag>
       
       <tag>CEPT</tag>
-      
-      <tag>Arduino</tag>
       
     </tags>
     
@@ -265,11 +265,11 @@
     
     <tags>
       
+      <tag>Arduino</tag>
+      
       <tag>传感器</tag>
       
       <tag>CEPT</tag>
-      
-      <tag>Arduino</tag>
       
     </tags>
     
@@ -471,7 +471,7 @@
     <link href="/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/"/>
     <url>/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/</url>
     
-    <content type="html"><![CDATA[<p>关于响应时间，例如热电偶测量水温的实验过程：</p><ol><li>用恒温水槽，水温 $T$，环境温度 $T_0$ ，热电偶首先处于外部环境中，稳定后，反映环境温度 $T_0$；</li><li>将热电偶迅速插入到恒温水槽中，这时候热电偶感受的温度参数发生突变，由 $T_0$ 到 $T$。</li></ol><p>那么此时，热电偶输出反映的温度就是 $T$ 吗？答案通常情况之下是否定的，通常可以看到热电偶反映的温度有一个逐渐上升的过程，最终会达到 $T$。而这样的一个过程就是热电偶动态特性的一个体现，如图所示：</p><p><img src="/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/1.png"></p><p>温度的突变是阶跃输入。如果传感器的动态特性足够好的话，那么传感器的输出也应该是一个阶跃输出，但上面的例子中热电偶总是需要一定的时间才能够指示出正确的温度，动态特性越好的热电偶，需要的时间会越短；而在特定时刻，热电偶示出的温度与真实的恒温水槽温度之间的差别就是某时刻的动态误差，这是与时间因素相关的误差。</p><p>响应时间是指从输入量开始起作用到输出指示值进入稳定值所规定的范围内所需要的时间。这个时间与规定的范围有关，这个时间意味着，从这个时间之后输出指示值将全部落在规定的范围之内。</p><p>对于一般情况，当传感器输入一个单位阶跃信号时，其输出信号称为阶跃响应。传感器常见的一阶及二阶阶跃响应曲线如图所示：</p><p><img src="/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/2.png"></p><p>主要的特性指标如下：</p><ol><li>时间常数 $τ$ 为一阶传感器输出值上升到稳态值的 63.2% 所需的时间。它是描述一阶传感器动态特性的重要参数，$τ$ 越小，响应速度越快；</li><li>上升时间 $T_r$ 为传感器输出值由稳态值的 10% 上升到 90% 所需的时间，但有时也规定其他百分数；</li><li>响应时间 $T_s$ 为系统从阶跃输入开始到输出值进入稳态值所规定的范围内所需的时间。一般在稳态响应值 $y_0$ 的上下规定一个 $\pm\Delta%$ 的公差带，当响应曲线开始全部进入这个公差带的时刻就是响应时间 $T_s$。为了明确起见，往往说“百分之 $\Delta$ 响应时间”。</li></ol><p>通常使用两个不同指标来定义响应时间：$T_{63}$ 和 $T_{90}$。当被测参数量值有瞬时变化时，测量值需要多长时间达到最终值的 63% 或 90%。</p><p>以下是为什么选择 63% 来定义响应时间的原因：$T_{63}$ 在一阶线性时域不变系统中等于时间常数 $τ$。这个一阶线性时域不变系统的数学模型描述了某一物理系统对阶跃变化呈指数曲线的反应，如图。这意味着系统将在一个时间常数内达到最终值的 63%，在三个时间常数内达到最终值的 95%，在四个时间常数内达到最终值的 98%。</p><p><img src="/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/3.png"></p><p>一般认为，阶跃输入对于一个传感器来说是最严峻的工作状态。如果在阶跃函数的作用下，传感器能满足动态性能指标，那么在其他函数作用下，其动态性能指标也必定会令人满意。</p>]]></content>
+    <content type="html"><![CDATA[<p>关于响应时间，例如热电偶测量水温的实验过程：</p><ol><li>用恒温水槽，水温 $T$，环境温度 $T_0$ ，热电偶首先处于外部环境中，稳定后，反映环境温度 $T_0$；</li><li>将热电偶迅速插入到恒温水槽中，这时候热电偶感受的温度参数发生突变，由 $T_0$ 到 $T$。</li></ol><p>那么此时，热电偶输出反映的温度就是 $T$ 吗？答案通常情况之下是否定的，通常可以看到热电偶反映的温度有一个逐渐上升的过程，最终会达到 $T$。而这样的一个过程就是热电偶动态特性的一个体现，如图所示：</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B41.png"></p><p>温度的突变是阶跃输入。如果传感器的动态特性足够好的话，那么传感器的输出也应该是一个阶跃输出，但上面的例子中热电偶总是需要一定的时间才能够指示出正确的温度，动态特性越好的热电偶，需要的时间会越短；而在特定时刻，热电偶示出的温度与真实的恒温水槽温度之间的差别就是某时刻的动态误差，这是与时间因素相关的误差。</p><p>响应时间是指从输入量开始起作用到输出指示值进入稳定值所规定的范围内所需要的时间。这个时间与规定的范围有关，这个时间意味着，从这个时间之后输出指示值将全部落在规定的范围之内。</p><p>对于一般情况，当传感器输入一个单位阶跃信号时，其输出信号称为阶跃响应。传感器常见的一阶及二阶阶跃响应曲线如图所示：</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B42.png"></p><p>主要的特性指标如下：</p><ol><li>时间常数 $τ$ 为一阶传感器输出值上升到稳态值的 63.2% 所需的时间。它是描述一阶传感器动态特性的重要参数，$τ$ 越小，响应速度越快；</li><li>上升时间 $T_r$ 为传感器输出值由稳态值的 10% 上升到 90% 所需的时间，但有时也规定其他百分数；</li><li>响应时间 $T_s$ 为系统从阶跃输入开始到输出值进入稳态值所规定的范围内所需的时间。一般在稳态响应值 $y_0$ 的上下规定一个 $\pm\Delta%$ 的公差带，当响应曲线开始全部进入这个公差带的时刻就是响应时间 $T_s$。为了明确起见，往往说“百分之 $\Delta$ 响应时间”。</li></ol><p>通常使用两个不同指标来定义响应时间：$T_{63}$ 和 $T_{90}$。当被测参数量值有瞬时变化时，测量值需要多长时间达到最终值的 63% 或 90%。</p><p>以下是为什么选择 63% 来定义响应时间的原因：$T_{63}$ 在一阶线性时域不变系统中等于时间常数 $τ$。这个一阶线性时域不变系统的数学模型描述了某一物理系统对阶跃变化呈指数曲线的反应，如图。这意味着系统将在一个时间常数内达到最终值的 63%，在三个时间常数内达到最终值的 95%，在四个时间常数内达到最终值的 98%。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B43.png"></p><p>一般认为，阶跃输入对于一个传感器来说是最严峻的工作状态。如果在阶跃函数的作用下，传感器能满足动态性能指标，那么在其他函数作用下，其动态性能指标也必定会令人满意。</p>]]></content>
     
     
     <categories>
@@ -533,11 +533,11 @@
     
     <tags>
       
+      <tag>Arduino</tag>
+      
       <tag>传感器</tag>
       
       <tag>CEPT</tag>
-      
-      <tag>Arduino</tag>
       
     </tags>
     
@@ -662,7 +662,7 @@
     <link href="/2023/07/28/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/"/>
     <url>/2023/07/28/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/</url>
     
-    <content type="html"><![CDATA[<p>输入指令<code>ls /dev/cu.*</code>，可获得 Mac 的串口信息。内容如下</p><p><img src="/2023/07/28/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/1.png"></p><p>输入指令<code>cd /dev</code>回车，再输入指令<code>ls *tty</code>，也可查询串口信息。内容如下</p><p><img src="/2023/07/28/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/2.png"></p><p>之前 Mac 与 Arduino 通信的时候，串口的格式为<code>/dev/tty.Arduino</code>。最近在调试 N100 九轴传感器，发现用「&#x2F;tty.」格式的话识别不到传感器，即<code>/dev/tty.N100</code>不行，必须使用<code>/dev/cu.N100</code>。不知道为什么。</p><p>另外我在想，Arduino 用<code>/dev/cu.Arduino</code>这个格式能行吗…</p>]]></content>
+    <content type="html"><![CDATA[<p>输入指令<code>ls /dev/cu.*</code>，可获得 Mac 的串口信息。内容如下</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%951.png"></p><p>输入指令<code>cd /dev</code>回车，再输入指令<code>ls *tty</code>，也可查询串口信息。内容如下</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%952.png"></p><p>之前 Mac 与 Arduino 通信的时候，串口的格式为<code>/dev/tty.Arduino</code>。最近在调试 N100 九轴传感器，发现用「&#x2F;tty.」格式的话识别不到传感器，即<code>/dev/tty.N100</code>不行，必须使用<code>/dev/cu.N100</code>。不知道为什么。</p><p>另外我在想，Arduino 用<code>/dev/cu.Arduino</code>这个格式能行吗…</p>]]></content>
     
     
     <categories>
@@ -689,7 +689,7 @@
     <link href="/2023/07/27/Mac-%E7%AA%81%E7%84%B6%E5%8D%A1%E9%A1%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
     <url>/2023/07/27/Mac-%E7%AA%81%E7%84%B6%E5%8D%A1%E9%A1%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     
-    <content type="html"><![CDATA[<p>以我目前的经验来说，是「中文简体输入方式」的锅。</p><p><img src="/2023/07/27/Mac-%E7%AA%81%E7%84%B6%E5%8D%A1%E9%A1%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/1.png" alt="我tm卡爆"></p><p>解决办法很简单，在「活动监视器」中找到中文简体输入方式，然后「强制」结束进程即可。</p>]]></content>
+    <content type="html"><![CDATA[<p>以我目前的经验来说，是「中文简体输入方式」的锅。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/Mac-%E7%AA%81%E7%84%B6%E5%8D%A1%E9%A1%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%951.png" alt="我tm卡爆"></p><p>解决办法很简单，在「活动监视器」中找到中文简体输入方式，然后「强制」结束进程即可。</p>]]></content>
     
     
     <categories>
@@ -714,7 +714,7 @@
     <link href="/2023/07/27/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/"/>
     <url>/2023/07/27/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>设备作为虚拟 COM 端口工作时，需要 CP210x USB 至 UART 桥虚拟 COM 端口 (VCP) 驱动器以促进与 CP210x 产品的主机通信。也可使用直接存取驱动器将这些设备连接至主机。</p></blockquote><p>我需要在 Windows 系统下调试 WHEELTEC 的 9 轴传感器 N100。由于办公电脑是 M1 的 Mac Air，所以只能在 Parallels Desktop 上进行（虚拟机系统为 Windows11）。</p><p>插上 USB 后系统可以识别到串口设备，但是在设备管理器中错误代码 28，说明无驱动。之前问店家要了一份相关资料，内有 CP2102 的驱动安装包。安装了，但没用。大概率是 ARM 架构的问题。</p><p>于是跑 silicon lab 官网找最新驱动，这是驱动下载<a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads">地址</a>。</p><p>下载第一个「CP210x Universal Windwos Driver」即可。</p><p><img src="/2023/07/27/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/1.png" alt="网页是这样的"></p><p>解压出来的文件内容是这样的：</p><p><img src="/2023/07/27/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/2.png" alt="arm和arm64"></p><p>接下来只需要右键 silabser.inf 安装即可。</p><p><img src="/2023/07/27/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/3.png" alt="需要点击「显示更多选项」"></p><p>打开设备管理器，代码28搞定，驱动打上了。</p><p><img src="/2023/07/27/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/4.png" alt="开心的调试吧!"></p><p>如果要在 Mac 系统下与 N100 通信，下载「CP210x VCP Mac OSX Driver」，内有一个DMG格式的文件，打开安装即可。树莓派（Linux）则不需要安装驱动就能与 N100 进行通信。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>设备作为虚拟 COM 端口工作时，需要 CP210x USB 至 UART 桥虚拟 COM 端口 (VCP) 驱动器以促进与 CP210x 产品的主机通信。也可使用直接存取驱动器将这些设备连接至主机。</p></blockquote><p>我需要在 Windows 系统下调试 WHEELTEC 的 9 轴传感器 N100。由于办公电脑是 M1 的 Mac Air，所以只能在 Parallels Desktop 上进行（虚拟机系统为 Windows11）。</p><p>插上 USB 后系统可以识别到串口设备，但是在设备管理器中错误代码 28，说明无驱动。之前问店家要了一份相关资料，内有 CP2102 的驱动安装包。安装了，但没用。大概率是 ARM 架构的问题。</p><p>于是跑 silicon lab 官网找最新驱动，这是驱动下载<a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads">地址</a>。</p><p>下载第一个「CP210x Universal Windwos Driver」即可。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A81.png" alt="网页是这样的"></p><p>解压出来的文件内容是这样的：</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A82.png" alt="arm和arm64"></p><p>接下来只需要右键 silabser.inf 安装即可。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A83.png" alt="需要点击「显示更多选项」"></p><p>打开设备管理器，代码28搞定，驱动打上了。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A84.png" alt="开心的调试吧!"></p><p>如果要在 Mac 系统下与 N100 通信，下载「CP210x VCP Mac OSX Driver」，内有一个DMG格式的文件，打开安装即可。树莓派（Linux）则不需要安装驱动就能与 N100 进行通信。</p>]]></content>
     
     
     <categories>
