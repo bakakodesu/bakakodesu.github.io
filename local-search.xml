@@ -4,38 +4,23 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2023/08/23/hello-world/"/>
-    <url>/2023/08/23/hello-world/</url>
+    <title>绳波功率计算公式</title>
+    <link href="/2023/08/03/%E7%BB%B3%E6%B3%A2%E5%8A%9F%E7%8E%87%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/"/>
+    <url>/2023/08/03/%E7%BB%B3%E6%B3%A2%E5%8A%9F%E7%8E%87%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>测试测试</title>
-    <link href="/2013/07/13/TEST/"/>
-    <url>/2013/07/13/TEST/</url>
-    
-    <content type="html"><![CDATA[<p>嗷嗷啊啊</p>]]></content>
+    <content type="html"><![CDATA[<p>绳波的功率公式为<br>$$<br>P&#x3D;(μA²ω²v)&#x2F;2<br>$$<br>其中</p><ul><li>密度μ等于绳重&#x2F;绳长，单位为kg&#x2F;m；</li><li>A绳波振幅，单位为m；</li><li>ω角速度，角速度公式为ω&#x3D;2πf，f为绳波频率。</li></ul><p>波速v计算公式<br>$$<br>v&#x3D;λ&#x2F;T&#x3D;fλ&#x3D;\sqrt{F&#x2F;μ}<br>$$<br>其中</p><ul><li>λ波长，是两个相邻的状态相同的点之间的距离，单位为m;</li><li>周期T&#x3D;1&#x2F;f，波前进一个波长的距离所需的时间;</li><li>F为绳的内部张力或者说拉力。</li></ul><p>但由于拉力F不好测量，所以测量波长λ或者直接测量波速v会是一个更好的方法。</p><p>参考：</p><p><a href="https://www.zhihu.com/question/39274349">已知绳波的轨迹方程，和变力方程如何求其能量？</a></p><p><a href="https://query.libretexts.org/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AD%A6_I-%E5%8A%9B%E5%AD%A6%E3%80%81%E5%A3%B0%E9%9F%B3%E3%80%81%E6%8C%AF%E8%8D%A1%E5%92%8C%E6%B3%A2%E6%B5%AA_(OpenStax)/16%3A_Waves/16.05%3A_%E6%B3%A2%E6%B5%AA%E7%9A%84%E8%83%BD%E9%87%8F%E5%92%8C%E5%8A%9B%E9%87%8F">波浪的能量和力量</a></p>]]></content>
     
     
     <categories>
       
-      <category>分类</category>
+      <category>随笔</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>tag1</tag>
-      
-      <tag>tag2</tag>
+      <tag>IMU</tag>
       
     </tags>
     
