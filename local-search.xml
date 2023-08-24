@@ -130,8 +130,6 @@
     
     <tags>
       
-      <tag>Arduino</tag>
-      
       <tag>传感器</tag>
       
       <tag>EMG</tag>
@@ -278,9 +276,9 @@
   
   
   <entry>
-    <title>Arduino 输入&amp;输出数字信号</title>
-    <link href="/2023/08/11/Arduino-%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7/"/>
-    <url>/2023/08/11/Arduino-%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7/</url>
+    <title>Arduino 输入输出数字信号</title>
+    <link href="/2023/08/11/Arduino-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7/"/>
+    <url>/2023/08/11/Arduino-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7/</url>
     
     <content type="html"><![CDATA[<p>Arduino Uno 上每一个带有数字编号的引脚，都是数字引脚，包括写有 A 编号的模拟输入引脚。</p><p>数字信号是以 0、1 表示的电平不连续变化的信号，也就是以二进制的形式表示的信号。在 Arduino 中数字信号通过高低电平来表示，高电平则为数字信号 1，低电平则为数字信号 0。</p><p>在使用输入或输出功能前，需要先通过 <code>pinMode()</code> 函数配置引脚的模式为输入模式或输出模式：</p><div class="code-wrapper"><pre><code class="hljs c++"><span class="hljs-built_in">pinMode</span>(pin, mode);</code></pre></div><p>参数 pin 为指定配置的引脚编号；参数 mode 为指定的配置模式，包括：</p><ul><li>INPUT，输入模式</li><li>OUTPUT，输出模式</li><li>INPUT_PULLUP，输入上拉模式</li></ul><h3 id="输出模式"><a href="#输出模式" class="headerlink" title="输出模式"></a>输出模式</h3><p>配置成输出模式后，还需要使用 <code>digitalWrite()</code> 让其输出高电平或者是低电平。其调用形式为：</p><div class="code-wrapper"><pre><code class="hljs c++"><span class="hljs-built_in">digitalWrite</span>(pin, value);</code></pre></div><p>参数 pin 为指定输出的引脚编号；参数 value 为要指定输出的电平，使用 HIGH 指定输出高电平，或是使用 LOW 指定输出低电平。Arduino 中输出的低电平为 0V，输出的高电平为当前 Arduino 的工作电压。例如 Arduino UNO 的工作电压为 3.3V，其高电平输出也是 3.3V；Arduino Uno 工作电压为 5V，所以高电平输出也就是 5V。</p><p>示例代码：</p><div class="code-wrapper"><pre><code class="hljs c++"><span class="hljs-comment">/*</span><span class="hljs-comment">Blink</span><span class="hljs-comment">等待一秒钟，点亮LED，再等待一秒钟，熄灭LED，如此循环</span><span class="hljs-comment">*/</span> <span class="hljs-meta">#<span class="hljs-keyword">define</span> ledPin A0     </span><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>&#123;                  <span class="hljs-built_in">pinMode</span>(ledPin, OUTPUT);      <span class="hljs-comment">// 初始化A0引脚设置为输出状态</span>&#125;<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>&#123;  <span class="hljs-built_in">digitalWrite</span>(ledPin, HIGH);  <span class="hljs-built_in">delay</span>(<span class="hljs-number">1000</span>);  <span class="hljs-built_in">digitalWrite</span>(ledPin, LOW);  <span class="hljs-built_in">delay</span>(<span class="hljs-number">1000</span>);&#125;</code></pre></div><h3 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h3><p>数字引脚除了用于输出信号外，还可以用 <code>digitalRead()</code> 函数读取外部输入的数字信号，其调用形式为：</p><div class="code-wrapper"><pre><code class="hljs c++"><span class="hljs-type">int</span> value = <span class="hljs-built_in">digitalRead</span>(pin);</code></pre></div><p>参数 pin 为指定读取状态的引脚编号；返回值 value 为获取到的信号状态，1 为高电平，0 为低电平。</p><p>Arduino Uno 会将大于 1.5V 的输入电压视为高电平，小于 1.3V 的电压视为低电平。所以，即使输入电压不太准确，Arduino Uno 也可以正常识别。</p>]]></content>
     
@@ -305,9 +303,9 @@
   
   
   <entry>
-    <title>Arduino 输入&amp;输出模拟信号</title>
-    <link href="/2023/08/10/Arduino-%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7/"/>
-    <url>/2023/08/10/Arduino-%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7/</url>
+    <title>Arduino 输入输出模拟信号</title>
+    <link href="/2023/08/10/Arduino-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7/"/>
+    <url>/2023/08/10/Arduino-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7/</url>
     
     <content type="html"><![CDATA[<p>在 Arduino UNO 上，除了 14 个数字输入&#x2F;输出引脚，还带有 6 个编号 A 的模拟输入引脚。Arduino 可以读取这些引脚上输入的模拟值，即读取引脚上输入的电压大小。模拟信号是用连续变化的物理量表示的信息，信号随时间作连续变化。</p><p>模拟输入引脚是带有 ADC（Analog-to-Digital Converter，模数转换器）功能的引脚。它可以将外部输入的模拟信号转换为芯片运算时可以识别的数字信号，从而实现读入模拟值的功能。</p><p>Arduino Uno模拟输入功能有 10 位精度，即可以将0～5V的电压信号转换为 0～1023 的整数形式表示。换句话说，我们可以将 5V 等分成 1024 份。0V 的输入信号对应着数值 0，而 5V 的输入信号对应着 1023。</p><h3 id="输入信号"><a href="#输入信号" class="headerlink" title="输入信号"></a>输入信号</h3><p>模拟输入功能需要使用 <code>analogRead()</code> 函数：</p><div class="code-wrapper"><pre><code class="hljs c++"><span class="hljs-type">int</span> value = <span class="hljs-built_in">analogRead</span>(pin)</code></pre></div><p>参数 pin 是指定要读取模拟值的引脚，被指定的引脚必须是模拟输入引脚。如 <code>analogRead(A0)</code>，即是读取A0引脚上的模拟值。Arduino 读取一次模拟输入需要消耗 100 微秒的时间，最大频率为 10000HZ。</p><p><strong>注意：在模拟输入引脚没有任何连接的情况下，用 <code>analogRead()</code> 读取该引脚，这时获得的返回值为不固定的数值。这个数值可能受到多种因素影响，如将手靠近引脚也可能使得该返回值产生变化。</strong></p><p>示例代码：</p><div class="code-wrapper"><pre><code class="hljs c++"><span class="hljs-comment">// 传感器数据传输引脚连接在Arduino的A0引脚</span><span class="hljs-comment">// 传感器另外两个引脚分别连接在Arduino的5V和GND引脚</span><span class="hljs-comment">// 变量sensorValue用来存储模拟输入信号</span><span class="hljs-type">int</span> sensorValue = <span class="hljs-number">0</span>;           <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span><span class="hljs-function"></span>&#123;  <span class="hljs-comment">// Arduino串口通讯初始化 </span>  Serial.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>); &#125;<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span><span class="hljs-function"></span>&#123;  <span class="hljs-comment">// 读取引脚A0输入信号</span>  sensorValue = <span class="hljs-built_in">analogRead</span>(A0);     <span class="hljs-comment">// 将A0输入信号转换为0-1023之间的数值</span>  <span class="hljs-comment">// 并且通过串口监视器显示 </span>  Serial.<span class="hljs-built_in">println</span>(sensorValue); &#125;</code></pre></div><h3 id="输出信号"><a href="#输出信号" class="headerlink" title="输出信号"></a>输出信号</h3><p>与模拟输入功能对应的是模拟输出功能，使用 <code>analogWrite()</code> 函数实现这个功能。但该函数并不是输出真正意义上的模拟值，而是以一种特殊的方式来达到输出近似模拟值的效果，这种方式叫做脉冲宽度调制（PWM，Pulse Width Modulation）。</p><p>在Arduino Uno中，提供PWM功能的引脚为3、5、6、9、10、11。</p><p>当使用 <code>analogWrite()</code> 函数时，指定引脚会通过高低电平的不断转换输出一个周期固定的方波，通过改变高低电平在每个周期中所占的比例（占空比），而得到近似输出不同的电压的效果。</p><p>需要注意的是，这里仅仅是得到了近似模拟值输出的效果，如果要输出真正的模拟值，还需要加上外围滤波电路。</p><div class="code-wrapper"><pre><code class="hljs c++"><span class="hljs-built_in">analogWrite</span>(pin, value)</code></pre></div><p>参数 pin 是指定要输出 PWM 波的引脚，参数 value 指定是 PWM 的脉冲宽度，范围为 0～255。</p><p>在 <code>analogWrite()</code> 和 <code>analogRead()</code> 函数内部，已经完成了引脚的初始化，因此不用在 <code>setup()</code> 函数中进行初始化操作（数字信号的 <code>pinMode()</code>）。</p>]]></content>
     
