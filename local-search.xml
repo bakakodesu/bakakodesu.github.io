@@ -13,7 +13,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>Code</category>
+      
+      <category>Python</category>
       
     </categories>
     
@@ -38,7 +40,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>环境配置</category>
+      
+      <category>VSCode</category>
       
     </categories>
     
@@ -63,7 +67,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>Code</category>
+      
+      <category>Python</category>
       
     </categories>
     
@@ -90,7 +96,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>环境部署</category>
+      
+      <category>AlphaPose</category>
       
     </categories>
     
@@ -115,7 +123,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>驱动</category>
       
     </categories>
     
@@ -144,7 +152,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>资料整合</category>
       
     </categories>
     
@@ -194,14 +202,14 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>Code</category>
+      
+      <category>Python</category>
       
     </categories>
     
     
     <tags>
-      
-      <tag>Arduino</tag>
       
       <tag>Python</tag>
       
@@ -221,7 +229,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>驱动</category>
       
     </categories>
     
@@ -250,7 +258,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>驱动</category>
       
     </categories>
     
@@ -279,7 +287,9 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>Code</category>
+      
+      <category>C++</category>
       
     </categories>
     
@@ -304,7 +314,9 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>Code</category>
+      
+      <category>C++</category>
       
     </categories>
     
@@ -329,7 +341,9 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>环境部署</category>
+      
+      <category>Raspberry Pi</category>
       
     </categories>
     
@@ -354,7 +368,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>Code</category>
+      
+      <category>Swift</category>
       
     </categories>
     
@@ -379,7 +395,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>Code</category>
+      
+      <category>Python</category>
       
     </categories>
     
@@ -404,7 +422,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>Code</category>
+      
+      <category>Python</category>
       
     </categories>
     
@@ -429,7 +449,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>Error</category>
+      
+      <category>Xcode</category>
       
     </categories>
     
@@ -437,6 +459,31 @@
     <tags>
       
       <tag>iOS Development</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>传感器的响应时间</title>
+    <link href="/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/"/>
+    <url>/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/</url>
+    
+    <content type="html"><![CDATA[<p>关于响应时间，例如热电偶测量水温的实验过程：</p><ol><li>用恒温水槽，水温 $T$，环境温度 $T_0$ ，热电偶首先处于外部环境中，稳定后，反映环境温度 $T_0$；</li><li>将热电偶迅速插入到恒温水槽中，这时候热电偶感受的温度参数发生突变，由 $T_0$ 到 $T$。</li></ol><p>那么此时，热电偶输出反映的温度就是 $T$ 吗？答案通常情况之下是否定的，通常可以看到热电偶反映的温度有一个逐渐上升的过程，最终会达到 $T$。而这样的一个过程就是热电偶动态特性的一个体现，如图所示：</p><p><img src="/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/1.png"></p><p>温度的突变是阶跃输入。如果传感器的动态特性足够好的话，那么传感器的输出也应该是一个阶跃输出，但上面的例子中热电偶总是需要一定的时间才能够指示出正确的温度，动态特性越好的热电偶，需要的时间会越短；而在特定时刻，热电偶示出的温度与真实的恒温水槽温度之间的差别就是某时刻的动态误差，这是与时间因素相关的误差。</p><p>响应时间是指从输入量开始起作用到输出指示值进入稳定值所规定的范围内所需要的时间。这个时间与规定的范围有关，这个时间意味着，从这个时间之后输出指示值将全部落在规定的范围之内。</p><p>对于一般情况，当传感器输入一个单位阶跃信号时，其输出信号称为阶跃响应。传感器常见的一阶及二阶阶跃响应曲线如图所示：</p><p><img src="/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/2.png"></p><p>主要的特性指标如下：</p><ol><li>时间常数 $τ$ 为一阶传感器输出值上升到稳态值的 63.2% 所需的时间。它是描述一阶传感器动态特性的重要参数，$τ$ 越小，响应速度越快；</li><li>上升时间 $T_r$ 为传感器输出值由稳态值的 10% 上升到 90% 所需的时间，但有时也规定其他百分数；</li><li>响应时间 $T_s$ 为系统从阶跃输入开始到输出值进入稳态值所规定的范围内所需的时间。一般在稳态响应值 $y_0$ 的上下规定一个 $\pm\Delta%$ 的公差带，当响应曲线开始全部进入这个公差带的时刻就是响应时间 $T_s$。为了明确起见，往往说“百分之 $\Delta$ 响应时间”。</li></ol><p>通常使用两个不同指标来定义响应时间：$T_{63}$ 和 $T_{90}$。当被测参数量值有瞬时变化时，测量值需要多长时间达到最终值的 63% 或 90%。</p><p>以下是为什么选择 63% 来定义响应时间的原因：$T_{63}$ 在一阶线性时域不变系统中等于时间常数 $τ$。这个一阶线性时域不变系统的数学模型描述了某一物理系统对阶跃变化呈指数曲线的反应，如图。这意味着系统将在一个时间常数内达到最终值的 63%，在三个时间常数内达到最终值的 95%，在四个时间常数内达到最终值的 98%。</p><p><img src="/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/3.png"></p><p>一般认为，阶跃输入对于一个传感器来说是最严峻的工作状态。如果在阶跃函数的作用下，传感器能满足动态性能指标，那么在其他函数作用下，其动态性能指标也必定会令人满意。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>文章</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -454,7 +501,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>资料整合</category>
       
     </categories>
     
@@ -479,7 +526,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>驱动</category>
       
     </categories>
     
@@ -508,7 +555,11 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+      <category>Swift</category>
       
     </categories>
     
@@ -526,6 +577,191 @@
   
   
   <entry>
+    <title>Python 导出传感器数据到 .csv 文件</title>
+    <link href="/2023/08/03/Python-%E5%AF%BC%E5%87%BA%E4%BC%A0%E6%84%9F%E5%99%A8%E6%95%B0%E6%8D%AE%E5%88%B0-csv-%E6%96%87%E4%BB%B6/"/>
+    <url>/2023/08/03/Python-%E5%AF%BC%E5%87%BA%E4%BC%A0%E6%84%9F%E5%99%A8%E6%95%B0%E6%8D%AE%E5%88%B0-csv-%E6%96%87%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<p>导出传感器的数据一共分为两步：</p><ol><li>构建数据结构；</li><li>导出数据到 .csv 文件。</li></ol><h3 id="1-构建数据结构"><a href="#1-构建数据结构" class="headerlink" title="1.构建数据结构"></a>1.构建数据结构</h3><p>一般来说，传感器采集的数据为时间序列数据。需要导出的数据一般为：</p><div class="code-wrapper"><pre><code class="hljs python">times = [t1, t2, t3 ... tn]value_A = [a1, a2, a3 ... an]value_B = [b1, b2, b3 ... bn]value_C = [c1, c2, c3 ... cn]</code></pre></div><p>需要构建一个二维数组：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> npexport_data = np.zeros(n, <span class="hljs-number">4</span>)<span class="hljs-comment"># 构建一个 shape = (数据长度, 数据种类) 的 numpy 数组</span>export_data[::, <span class="hljs-number">0</span>] = times        <span class="hljs-comment"># times 替换第 0 列。[0, ::]就是行</span>export_data[::, <span class="hljs-number">1</span>] = value_Aexport_data[::, <span class="hljs-number">2</span>] = value_Bexport_data[::, <span class="hljs-number">3</span>] = value_C<span class="hljs-comment"># 多此一举的操作</span><span class="hljs-comment"># export_data[0, ::] = times</span><span class="hljs-comment"># export_data[1, ::] = value_A</span><span class="hljs-comment"># export_data[2, ::] = value_B</span><span class="hljs-comment"># export_data[3, ::] = value_C</span><span class="hljs-comment"># export_data = export_data.T# 将矩阵的行列转置</span></code></pre></div><p>此时 export_data 的结构是这样的：</p><div class="code-wrapper"><pre><code class="hljs python">[ t1 a1 b1 c1  t2 a2 b2 c2  t3 a3 b3 c3     .....  tn an bn cn ]</code></pre></div><h3 id="2-导出数据"><a href="#2-导出数据" class="headerlink" title="2.导出数据"></a>2.导出数据</h3><p>导出 .csv 需要用到 pandas 库。</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pdcolumn = [<span class="hljs-string">&#x27;Time&#x27;</span>, <span class="hljs-string">&#x27;ValueA&#x27;</span>, <span class="hljs-string">&#x27;ValueB&#x27;</span>, <span class="hljs-string">&#x27;ValueC&#x27;</span>]    <span class="hljs-comment"># 表头</span>export_csv = pd.DataFrame(columns=column, data=export_data)export_csv.to_csv(<span class="hljs-string">&#x27;path/name.csv&#x27;</span>, index=<span class="hljs-literal">False</span>)    <span class="hljs-comment"># index=Ture 的话，会默认生成一列 index 索引列。记住文件名后面要带.csv</span><span class="hljs-comment"># 不需要表头</span><span class="hljs-comment"># export_csv = pd.DataFrame(data=export_data)</span><span class="hljs-comment"># export_csv.to_csv(&#x27;path/name.csv&#x27;, header=None, index=False)</span></code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python 绘制数据移动窗口</title>
+    <link href="/2023/08/03/Python-%E7%BB%98%E5%88%B6%E6%95%B0%E6%8D%AE%E7%A7%BB%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    <url>/2023/08/03/Python-%E7%BB%98%E5%88%B6%E6%95%B0%E6%8D%AE%E7%A7%BB%E5%8A%A8%E7%AA%97%E5%8F%A3/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> npwin_size = <span class="hljs-number">500</span>                          <span class="hljs-comment"># 窗口大小为500</span>x_data = np.zeros(win_size)y1_data = np.zeros(win_size)y2_data = np.zeros(win_size)y3_data = np.zeros(win_size)...<span class="hljs-keyword">def</span> <span class="hljs-title function_">update_data</span>():   <span class="hljs-comment"># 只展示x轴数据平移过程，y轴同理</span>  x_data[:-<span class="hljs-number">1</span>] = x_data[<span class="hljs-number">1</span>:]                <span class="hljs-comment"># 移动</span>  x_data[-<span class="hljs-number">1</span>] = new_value                  <span class="hljs-comment"># 将新值写入</span>  ...<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:  update_data()</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>通过 IMU 绘制物体移动的空间轨迹</title>
+    <link href="/2023/08/03/%E9%80%9A%E8%BF%87-IMU-%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%A7%BB%E5%8A%A8%E7%9A%84%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9/"/>
+    <url>/2023/08/03/%E9%80%9A%E8%BF%87-IMU-%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%A7%BB%E5%8A%A8%E7%9A%84%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9/</url>
+    
+    <content type="html"><![CDATA[<p>一般 IMU 由加速度传感器、陀螺仪组成，也叫 6 轴 IMU。还可以外加一个磁力计，构成 9 轴 IMU。关于加速度传感器和陀螺仪的工作原理，可以参考：</p><ol><li><a href="https://blog.csdn.net/yueqian_scut/article/details/50708073">加速度传感器的原理和应用-手机翻转、失重检测、运动检测、位置识别</a>；</li><li><a href="https://blog.csdn.net/KYJL888/article/details/112802532">MEMS 三轴加速计、三轴陀螺仪、三轴磁力计）6轴IMU+磁力计，9轴传感器讲解</a>；</li><li><a href="https://xiaotaoguo.com/p/imu-model/">IMU 测量模型</a>。</li></ol><p>加速度传感器测得加速度（acc）积分得到速度，再积分得到位移：</p><ol><li><a href="https://makersportal.com/blog/calibration-of-an-inertial-measurement-unit-imu-with-raspberry-pi-part-ii">Gyroscope and Accelerometer Calibration with Raspberry Pi</a>；</li><li><a href="https://www.cnblogs.com/cposture/p/4378922.html">【翻译】利用加速度求解位置的算法——三轴传感器</a>。</li></ol><p>陀螺仪测得角速度（gyr）积分得到姿态：</p><ol><li><a href="https://zhuanlan.zhihu.com/p/45404840">三维旋转：欧拉角、四元数、旋转矩阵、轴角之间的转换</a>；</li><li><a href="https://zhuanlan.zhihu.com/p/103623879">四元数微分方程的推导和解算实现</a>；</li><li><a href="https://www.zhoulujun.cn/html/theory/Mathematics/Geometry/8149.html">三维旋转笔记:欧拉角&#x2F;四元数&#x2F;旋转矩阵&#x2F;轴角-记忆点整理</a>；</li><li><a href="https://www.cnblogs.com/TIANHUAHUA/p/8031606.html">四元数及姿态解算 Mahony 算法</a>。</li></ol><p>所以可以通过加速度传感器+陀螺仪的组合得到比较准确姿态，在去除重力加速度分量影响下二次积分可以得到位置。这种基于 IMU 测量数据进行位置、速度解算的方法可简称惯性导航（惯导）解算：</p><ol><li><a href="https://zhaoxuhui.top/blog/2022/02/11/basic-notes-on-imu-and-inertial-navigation.html#32-mems%E5%8A%A0%E9%80%9F%E5%BA%A6%E8%AE%A1%E7%9A%84%E8%AF%AF%E5%B7%AE%E7%89%B9%E6%80%A7">IMU与惯性导航基础知识介绍</a>；</li><li><a href="https://zhuanlan.zhihu.com/p/131342530">多传感器融合定位理论基础（五）：惯性导航解算</a>；</li><li><a href="https://xiaotaoguo.com/p/imu-pose-update/">基于 IMU 的惯性导航解算及误差分析</a>。</li></ol><p>其中的难点在于：</p><ol><li>姿态不准导致重力影响去除不了；</li><li>MEMS 器件本身的零点漂移不能去除。</li></ol><p>这导致使用 IMU 定位时，始终存在不可避免的漂移，且漂移会随着积分越来越大。所以需针对具体应用设计相应的处理算法。目前使用较多的<strong>步态定位</strong>。</p><ol><li><a href="https://github.com/xioTechnologies/Oscillatory-Motion-Tracking-With-x-IMU">Oscillatory-Motion-Tracking-With-x-IMU</a>，Matlab开源项目；</li><li><a href="https://github.com/xioTechnologies/Gait-Tracking-With-x-IMU">Gait-Tracking-With-x-IMU</a>，Matlab开源项目；</li><li><a href="https://github.com/italogsfernandes/Gait-Tracking-With-x-IMU">Gait-Tracking-With-x-IMU</a>，Python开源项目；</li><li><a href="https://github.com/daehwa/Gait-Tracking-With-x-IMU-Python">Gait Tracking with x-imu Python</a>，Python开源项目；</li><li><a href="https://github.com/xioTechnologies/Gait-Tracking">Gait-Tracking</a>，Python开源项目。</li></ol><p>就目前来说，第 1 个项目的算法效果最好，这是 <a href="https://www.zhihu.com/zvideo/1361803858457579522">效果展示</a>。但需要注意的是：</p><ol><li>Script 中 samplePeriod 需要与传感器采样频率一致；</li><li>注意单位转换，我这里传感器采集的角速度单位为rad&#x2F;s，但是项目中角速度的单位为deg&#x2F;s。两者的转化关系为：<br>$$<br>π&#x2F;180*deg &#x3D; rad<br>$$</li><li>算法对于 IMU 的放置和运动模式都做了要求。事实上，对于简单、低频的动作，算法都能够绘制出较为精准的空间运动轨迹。但是对于复杂、高频的动作，算法没有表现出很好的兼容性，数据漂移很严重。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>资料整合</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>传感器</tag>
+      
+      <tag>IMU</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Mac 串口查询之 /dev/cu. 与 /dev/tty. 记录</title>
+    <link href="/2023/07/28/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/"/>
+    <url>/2023/07/28/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<p>输入指令<code>ls /dev/cu.*</code>，可获得 Mac 的串口信息。内容如下</p><p><img src="/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/1.png"></p><p>输入指令<code>cd /dev</code>回车，再输入指令<code>ls *tty</code>，也可查询串口信息。内容如下</p><p><img src="/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/2.png"></p><p>之前 Mac 与 Arduino 通信的时候，串口的格式为<code>/dev/tty.Arduino</code>。最近在调试 N100 九轴传感器，发现用「&#x2F;tty.」格式的话识别不到传感器，即<code>/dev/tty.N100</code>不行，必须使用<code>/dev/cu.N100</code>。不知道为什么。</p><p>另外我在想，Arduino 用<code>/dev/cu.Arduino</code>这个格式能行吗…</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>传感器</tag>
+      
+      <tag>Mac</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Mac 突然卡顿的解决办法</title>
+    <link href="/2023/07/27/Mac-%E7%AA%81%E7%84%B6%E5%8D%A1%E9%A1%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <url>/2023/07/27/Mac-%E7%AA%81%E7%84%B6%E5%8D%A1%E9%A1%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<p>以我目前的经验来说，是「中文简体输入方式」的锅。</p><p><img src="/Mac-%E7%AA%81%E7%84%B6%E5%8D%A1%E9%A1%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/1.png" alt="我tm卡爆"></p><p>解决办法很简单，在「活动监视器」中找到中文简体输入方式，然后「强制」结束进程即可。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Mac</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>M1 Mac Parallels Desktop Windows11 安装 CP210x 串口驱动</title>
+    <link href="/2023/07/27/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/"/>
+    <url>/2023/07/27/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>设备作为虚拟 COM 端口工作时，需要 CP210x USB 至 UART 桥虚拟 COM 端口 (VCP) 驱动器以促进与 CP210x 产品的主机通信。也可使用直接存取驱动器将这些设备连接至主机。</p></blockquote><p>我需要在 Windows 系统下调试 WHEELTEC 的 9 轴传感器 N100。由于办公电脑是 M1 的 Mac Air，所以只能在 Parallels Desktop 上进行（虚拟机系统为 Windows11）。</p><p>插上 USB 后系统可以识别到串口设备，但是在设备管理器中错误代码 28，说明无驱动。之前问店家要了一份相关资料，内有 CP2102 的驱动安装包。安装了，但没用。大概率是 ARM 架构的问题。</p><p>于是跑 silicon lab 官网找最新驱动，这是驱动下载<a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads">地址</a>。</p><p>下载第一个「CP210x Universal Windwos Driver」即可。</p><p><img src="/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/1.png" alt="网页是这样的"></p><p>解压出来的文件内容是这样的：</p><p><img src="/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/2.png" alt="arm和arm64"></p><p>接下来只需要右键 silabser.inf 安装即可。</p><p><img src="/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/3.png" alt="需要点击「显示更多选项」"></p><p>打开设备管理器，代码28搞定，驱动打上了。</p><p><img src="/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/4.png" alt="开心的调试吧!"></p><p>如果要在 Mac 系统下与 N100 通信，下载「CP210x VCP Mac OSX Driver」，内有一个DMG格式的文件，打开安装即可。树莓派（Linux）则不需要安装驱动就能与 N100 进行通信。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>传感器</tag>
+      
+      <tag>Mac</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Mac 触控板手势失效的解决办法</title>
+    <link href="/2023/07/27/Mac-%E8%A7%A6%E6%8E%A7%E6%9D%BF%E6%89%8B%E5%8A%BF%E5%A4%B1%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <url>/2023/07/27/Mac-%E8%A7%A6%E6%8E%A7%E6%9D%BF%E6%89%8B%E5%8A%BF%E5%A4%B1%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<ol><li>用活动监视器关闭Dock（程序坞）；</li><li>在终端输入<code>killall Dock</code></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Mac</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>PyCharm 获取 Conda 环境列表失败，报错 error code 1 的解决办法</title>
     <link href="/2023/07/27/PyCharm-%E8%8E%B7%E5%8F%96-Conda-%E7%8E%AF%E5%A2%83%E5%88%97%E8%A1%A8%E5%A4%B1%E8%B4%A5%EF%BC%8C%E6%8A%A5%E9%94%99-error-code-1-%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
     <url>/2023/07/27/PyCharm-%E8%8E%B7%E5%8F%96-Conda-%E7%8E%AF%E5%A2%83%E5%88%97%E8%A1%A8%E5%A4%B1%E8%B4%A5%EF%BC%8C%E6%8A%A5%E9%94%99-error-code-1-%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
@@ -535,7 +771,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>环境配置</category>
+      
+      <category>PyCharm</category>
       
     </categories>
     
