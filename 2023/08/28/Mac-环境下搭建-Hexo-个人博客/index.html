@@ -18,44 +18,24 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta name="description" content="原文链接 搭建私有图床免费图床有两个缺点，一方面是基于隐私的保护的问题，另一方面是你不知道它什么时候可能就没了~，所以如果你对资源管理有更高的要求，或者你是一个小团队需要有自己的图床以保证稳定性，不妨往下看，我手把手教你搭建自己的私有图床。 需要用到两个东西：  腾讯云 COS（对象存储） uPic 客户端  购买腾讯云 COS其实国内提供对象存储服务的有很多，例如腾讯云、阿里云、七牛云、百度云、">
+    <meta name="description" content="原文：Mac OS 环境下使用 Hexo 搭建个人博客。 参考：  Mac 系统有什么软件打开 .pub 文件？； hexo 发布之后 gitpage 自定义域名失效。  准备工作安装 Git 和 Node.jsbrew install git brew install node  测试所需组件是否安装成功npm -v node -v git --version  均返回版本号即代表安装成功。 安">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 uPic 搭配腾讯云搭建图床">
-<meta property="og:url" content="https://wonderhoi.com/2023/08/26/%E4%BD%BF%E7%94%A8-uPic-%E6%90%AD%E9%85%8D%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/index.html">
+<meta property="og:title" content="Mac 环境下搭建 Hexo 个人博客">
+<meta property="og:url" content="https://wonderhoi.com/2023/08/28/Mac-%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA-Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="原文链接 搭建私有图床免费图床有两个缺点，一方面是基于隐私的保护的问题，另一方面是你不知道它什么时候可能就没了~，所以如果你对资源管理有更高的要求，或者你是一个小团队需要有自己的图床以保证稳定性，不妨往下看，我手把手教你搭建自己的私有图床。 需要用到两个东西：  腾讯云 COS（对象存储） uPic 客户端  购买腾讯云 COS其实国内提供对象存储服务的有很多，例如腾讯云、阿里云、七牛云、百度云、">
+<meta property="og:description" content="原文：Mac OS 环境下使用 Hexo 搭建个人博客。 参考：  Mac 系统有什么软件打开 .pub 文件？； hexo 发布之后 gitpage 自定义域名失效。  准备工作安装 Git 和 Node.jsbrew install git brew install node  测试所需组件是否安装成功npm -v node -v git --version  均返回版本号即代表安装成功。 安">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/8c71da4b83b79821350aeb074312bb85.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/157a4689ac564d86ab64cfe8ce0c456b.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/16e922b14f5ae75c91845683a540b870.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/b09b74e4a9cd77b4255cd4542d519ba9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/e6bd74b237fa8914f5dc85788c8b3fdf.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/5f6286198ba8b1ad6c743952cd4d9b99.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/3908682f470e049dae15ff3b3178352d.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/16763a27c4f28b8a2608574f1b763bd9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/1b8680f5e02cc2d70f1a0253afd037c1.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/a3fc05d6a35b9065478cc417c0a26679.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/ccd164a592c4ef6659d8231145681902.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/e39f339ac3902bc03f3b8672c1e0470a.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/461469f544f6e3037721265a3ea20757.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/71787d4c7210fceaaddf58a8805fdca9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/c0856f11a2315a401d5e8dcc5ba1617f.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/641b4ba0223a8225ad0161ddbdb92b91.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/e20dabd582fda5b2ebb904738c6529b6.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/b6c2c37042dc1bef7ec884cc3be20fde.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/67ca93666ebccc3e530b3affabcbe7c6.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
-<meta property="article:published_time" content="2023-08-26T02:54:30.000Z">
-<meta property="article:modified_time" content="2023-08-26T04:31:07.533Z">
+<meta property="article:published_time" content="2023-08-28T08:15:32.000Z">
+<meta property="article:modified_time" content="2023-08-28T08:46:27.721Z">
 <meta property="article:author" content="刘子航">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.sspai.com/2020/12/22/8c71da4b83b79821350aeb074312bb85.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>使用 uPic 搭配腾讯云搭建图床 - 这是一个PM的BLOG</title>
+  <title>Mac 环境下搭建 Hexo 个人博客 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -248,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="使用 uPic 搭配腾讯云搭建图床"></span>
+            <span id="subtitle" data-typed-text="Mac 环境下搭建 Hexo 个人博客"></span>
           
         </div>
 
@@ -259,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-08-26 10:54" pubdate>
-          2023年8月26日 上午
+        <time datetime="2023-08-28 16:15" pubdate>
+          2023年8月28日 下午
         </time>
       </span>
     
@@ -271,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          2.1k 字
         
       </span>
     
@@ -282,7 +262,7 @@
         
         
         
-          14 分钟
+          18 分钟
         
       </span>
     
@@ -319,80 +299,76 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">使用 uPic 搭配腾讯云搭建图床</h1>
+            <h1 id="seo-header">Mac 环境下搭建 Hexo 个人博客</h1>
             
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://sspai.com/post/64169">原文链接</a></p>
-<h3 id="搭建私有图床"><a href="#搭建私有图床" class="headerlink" title="搭建私有图床"></a>搭建私有图床</h3><p>免费图床有两个缺点，一方面是基于隐私的保护的问题，另一方面是你不知道它什么时候可能就没了~，所以如果你对资源管理有更高的要求，或者你是一个小团队需要有自己的图床以保证稳定性，不妨往下看，我手把手教你搭建自己的私有图床。</p>
-<p>需要用到两个东西：</p>
+                <p>原文：<a target="_blank" rel="noopener" href="https://l3zc.com/2022/05/mac%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac OS 环境下使用 Hexo 搭建个人博客</a>。</p>
+<p>参考：</p>
 <ol>
-<li>腾讯云 COS（对象存储）</li>
-<li>uPic 客户端</li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/26071345">Mac 系统有什么软件打开 .pub 文件？</a>；</li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/xs20691718/article/details/81873921">hexo 发布之后 gitpage 自定义域名失效</a>。</li>
 </ol>
-<h4 id="购买腾讯云-COS"><a href="#购买腾讯云-COS" class="headerlink" title="购买腾讯云 COS"></a>购买腾讯云 COS</h4><p>其实国内提供对象存储服务的有很多，例如腾讯云、阿里云、七牛云、百度云、又拍云等，选择腾讯云主要是基于两点考虑：</p>
-<ol>
-<li>稳定可靠速度快，节点丰富还便宜</li>
-<li>支持微信或 QQ 登录，对大多数人来说方面，不用再格外注册账号</li>
-</ol>
-<blockquote>
-<p>你甚至可以使用 github 来做免费图床，但缺点是 github 在国内速度太慢了，体验不好，我不推荐。</p>
-</blockquote>
-<p>首先，你需要注册并开通「<a href="https://sspai.com/link?target=https://link.zhihu.com/?target=https://console.cloud.tencent.com/cos5">腾讯云对象存储</a>」，你可以使用微信或 QQ 登录：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/8c71da4b83b79821350aeb074312bb85.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>在「存储桶列表」&gt;「创建存储桶」，地区按照你的实际情况选择，访问权限设置为「公有读私有写」：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/157a4689ac564d86ab64cfe8ce0c456b.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p><img src="https://cdn.sspai.com/2020/12/22/16e922b14f5ae75c91845683a540b870.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>存储桶创建好之后，接下来就可以直接上传图片：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/b09b74e4a9cd77b4255cd4542d519ba9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>上传完成后，点击「详情」，复制「对象地址」中的 URL 即可访问对象：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/e6bd74b237fa8914f5dc85788c8b3fdf.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p><img src="https://cdn.sspai.com/2020/12/22/5f6286198ba8b1ad6c743952cd4d9b99.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>如果你要使用 Markdown，只需要手动编辑 Markdown 语法即可，例如：</p>
-<div class="code-wrapper"><pre><code class="hljs markdown">![<span class="hljs-string">example</span>](<span class="hljs-link">https://myupic-1253463441.cos.ap-nanjing.myqcloud.com/3b6cae2afdea8f710c0a5ccb460c39cb-0.jpg</span>)</code></pre></div>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="安装-Git-和-Node-js"><a href="#安装-Git-和-Node-js" class="headerlink" title="安装 Git 和 Node.js"></a>安装 Git 和 Node.js</h4><div class="code-wrapper"><pre><code class="hljs bash">brew install git
+brew install node</code></pre></div>
 
-<p>腾讯云是根据流量来实时计费的，根据我自己的使用经验来看价格是非常便宜：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/3908682f470e049dae15ff3b3178352d.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>更详细的计费规则参见：<a href="https://sspai.com/link?target=https://link.zhihu.com/?target=https://cloud.tencent.com/product/cos/pricing">腾讯云 COS 定价</a></p>
-<p>上面已经介绍了基本的使用方法，但是你可能也发现了，如果每张图片都这样手动上传、手动复制链接、手动粘贴的话，效率未免太低了，这时候就需要使用我们的主角—— uPic 客户端了。</p>
-<h4 id="uPic-客户端配置"><a href="#uPic-客户端配置" class="headerlink" title="uPic 客户端配置"></a>uPic 客户端配置</h4><p>uPic客户端是开源免费的，可以在如下 GitHub 地址进行下载：</p>
-<ul>
-<li><a href="https://sspai.com/link?target=https://github.com/gee1k/uPic">https://github.com/gee1k/uPic</a></li>
-</ul>
-<p>打开偏好设置，在「图床」中添加一个「腾讯云 COS」：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/16763a27c4f28b8a2608574f1b763bd9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<h3 id="配置项说明"><a href="#配置项说明" class="headerlink" title="配置项说明"></a>配置项说明</h3><ul>
-<li><code>区域</code>: 对象储存空间所属的区域，可在腾讯云控制台查看。</li>
-<li><code>空间名称</code>: 对象储存空间名称，可在腾讯云控制台查看。</li>
-<li><code>SecretId</code>: 密钥。</li>
-<li><code>SecretKey</code>: 密钥。</li>
-<li><code>域名</code>: 使用腾讯云默认提供的测试域名或者你的自定义域名。域名可在控制台查看。<code>域名需以http://或者https://开头</code>。</li>
-<li><code>保存路径</code>: 文件储存的路径（包括文件夹）。 <code>支持 &#123;year&#125; &#123;month&#125; &#123;day&#125; &#123;hour&#125; &#123;minute&#125; &#123;second&#125; &#123;since_second&#125; &#123;since_millisecond&#125; &#123;random&#125; &#123;filename&#125; &#123;.suffix&#125; 等变量。比如：上传的图片为 uPic.jpg，设定为 “uPic/&#123;filename&#125;&#123;.suffix&#125;”，则会保存到 “uPic/uPic.jpg”。</code></li>
-<li>在<code>保存路径</code>输入框后面的是<code>网址后缀</code>: 用于自定义图片处理。腾讯云 COS 目前还不支持，先预留。</li>
-</ul>
-<p><strong>看起来有点复杂，不过没关系，下面跟着我一步步配置即可。</strong></p>
-<p>点击腾讯云<strong>「</strong>存储桶列表<strong>」</strong>，点击「配置管理」：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/1b8680f5e02cc2d70f1a0253afd037c1.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>可以看到「存储桶名称」和「访问域名」，复制填写到 uPic 中：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/a3fc05d6a35b9065478cc417c0a26679.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>然进入腾讯云「API 密钥管理」，系统会提示建议创建子账号来管理，点击「切换使用子账号密钥」：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/ccd164a592c4ef6659d8231145681902.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>选择「快速创建」：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/e39f339ac3902bc03f3b8672c1e0470a.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>随意输入用户名，例如 GuestforuPic，点击用户权限：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/461469f544f6e3037721265a3ea20757.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>搜索「QcloudCOSFullAccess」，勾选并确定：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/71787d4c7210fceaaddf58a8805fdca9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p><img src="https://cdn.sspai.com/2020/12/22/c0856f11a2315a401d5e8dcc5ba1617f.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>然后进入腾讯云的「用户列表」&gt;「用户详情」&gt;「API密钥」&gt;「新建密钥」：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/641b4ba0223a8225ad0161ddbdb92b91.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p><img src="https://cdn.sspai.com/2020/12/22/e20dabd582fda5b2ebb904738c6529b6.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>复制 SecretId 和 SecretKey 到 uPic 客户端：</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/b6c2c37042dc1bef7ec884cc3be20fde.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>至于最后的「保存路径」可以保持不变，如果你有特殊要求再做自定义。</p>
-<p>点击「验证」测试一下，如果提示上传成功就配置完成啦！点击保存即可。</p>
-<p><img src="https://cdn.sspai.com/2020/12/22/67ca93666ebccc3e530b3affabcbe7c6.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h4 id="测试所需组件是否安装成功"><a href="#测试所需组件是否安装成功" class="headerlink" title="测试所需组件是否安装成功"></a>测试所需组件是否安装成功</h4><div class="code-wrapper"><pre><code class="hljs bash">npm -v
+node -v
+git --version</code></pre></div>
+
+<p>均返回版本号即代表安装成功。</p>
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p>我们使用 npm 命令安装 Hexo：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">npm install -g hexo-cli</code></pre></div>
+
+<p>等待安装完成后初始化博客：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">hexo init blog</code></pre></div>
+
+<p>这条指令的作用是在你目前所在的目录下（默认是你的 home 目录）新建一个名为 blog 的文件夹（你可以将这条命令中的 blog 替换成任何你想要的名字），并在内初始化你的博客。<strong>之后所有的操作都在这个文件夹下进行，请确保在执行后文的操作前已经切换到了这个文件夹（cd blog）。</strong></p>
+<p>待初始化完成，切换到 blog 文件夹中，即可生成和预览博客。</p>
+<div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> blog
+hexo g
+hexo s</code></pre></div>
+
+<p>执行 <code>hexo s</code> 命令后，通过浏览器访问 <code>http://127.0.0.1:4000</code> 可以预览你的博客，预览功能会实时监测博客的文件变化，并实时反馈在浏览器上，在调试博客前端时非常好用。</p>
+<h3 id="部署网站到-GitHub"><a href="#部署网站到-GitHub" class="headerlink" title="部署网站到 GitHub"></a>部署网站到 GitHub</h3><p>执行 <code>hexo g</code> 命令后博客静态文件会生成在 public 文件夹下，只需要将这些文件上传到你的静态网站托管服务即可将站点发布到公网，本文用到的托管服务是 Github Pages，下文提到的用户名均指你的 Github 用户名。</p>
+<h4 id="添加-SSH-Key-到-github"><a href="#添加-SSH-Key-到-github" class="headerlink" title="添加 SSH Key 到 github"></a>添加 SSH Key 到 github</h4><p>若之前使用过相关功能且已经配置过请跳过此步。</p>
+<p>配置 Git 用户名和账号：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;username&quot;</span>
+git config --global user.email <span class="hljs-string">&quot;example@example.com&quot;</span></code></pre></div>
+
+<p>其中 <code>username</code> 是你的用户名，<code>example@example.com</code> 是你 Github 的登录邮箱。</p>
+<p>然后通过终端命令生成 SSH Key：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;example@example.com&quot;</span></code></pre></div>
+
+<p>如果已经创建过会出现 <code>Overwrite (y/n)? n</code> 提示可以输入 <code>n</code>，没有创建过的话三个回车就好，执行完成后会在 <code>~/.ssh/id_rsa.pub</code> 目录下生成需要使用的 key，也就是公钥。</p>
+<p>到账户主文件夹下同时按 <code>Command+Shift+.</code> 显示隐藏文件，找到 <code>.ssh</code> 文件夹，打开 <code>id_rsa.pub</code>，将里面的内容全部复制（使用 cd 命令进入 <code>id_rsa.pub</code> 目录，再使用 <code>more id_rsa.pub</code> 命令查看公钥的内容）。</p>
+<p>打开 <a target="_blank" rel="noopener" href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建 New SSH Key，Title 随意填，Key 就把刚才复制的内容全都粘贴上去。然后点 Add SSH Key 即可。</p>
+<p>完成这些工作以后可以通过以下命令测试是否配置成功：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">ssh git@github.com</code></pre></div>
+
+<p>出现你的 Github 用户名代表配置成功。</p>
+<h4 id="上传本地文件到-Github"><a href="#上传本地文件到-Github" class="headerlink" title="上传本地文件到 Github"></a>上传本地文件到 Github</h4><p>在Github上新建一个仓库，Repository Name 填 <code>你的用户名.github.io</code>，仓库状态设为 Public，点击 Create Repository 创建新的网站仓库。</p>
+<p>安装 Hexo 的扩展 <code>hexo-deployer-git</code>，注意一定要在你的博客文件夹下执行：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">npm install hexo-deployer-git --save</code></pre></div>
+
+<p>编辑博客安装文件夹下的 <code>_config.yml</code> 文件，<strong>翻到底部</strong>，修改 deploy 部分为：</p>
+<div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span>
+  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:你的用户名/你的用户名.github.io.git</span>
+  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span></code></pre></div>
+
+<p>修改完成后保存，此时就可以使用 <code>hexo d</code> 把存在本地的博客 deploy 到 Github 上了：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">hexo g
+hexo d</code></pre></div>
+
+<p>第一次执行 <code>hexo d</code> 命令时可能要求你输入你的 Github 账号和密码，如果报错，可能是因为 Github 在 2021 年 8 月 13 日停止了使用账户密码认证的支持，这时需要在 Gihub 上 <a target="_blank" rel="noopener" href="https://github.com/settings/tokens">Developer Settings页面</a> 上新建一个 Personal Access Token 代替密码就可以顺利 deploy。</p>
+<p>执行完毕后，访问 <code>你的用户名.github.io</code> 就能看到你的博客了。</p>
+<h3 id="绑定自定义域名（可选）"><a href="#绑定自定义域名（可选）" class="headerlink" title="绑定自定义域名（可选）"></a>绑定自定义域名（可选）</h3><p>其实到这一步就可以开始写博客了，默认的 github.io 的域名是可以更换的：</p>
+<p>首先自行申请一个域名，登陆到域名申请的后台，添加一条 <code>CNAME</code> 解析记录：<code>你的用户名.github.io</code>。</p>
+<p>打开存放博客的 Github 仓库，进入 Settings 页面在 pages 选项里的 Custom domain 里填入你的域名，点击 Save，勾选 Enforce HTTPS，即可通过自定义域名访问你的博客。</p>
+<p>每次配置 Custom domain 之后，再次 <code>hexo deploy</code> 之后，Custom domain 会被重置失效。解决方案为：</p>
+<p>在 hexo 生成的博客的 source 目录下新建一个 <code>CNAME</code> 文件，然后在这个文件中填入你的域名，这样就不会每次发布之后，Custom domain 都被重置掉。</p>
 
                 
               </div>
@@ -416,7 +392,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/%E5%9B%BE%E5%BA%8A/" class="category-chain-item">图床</a>
+  <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Hexo/" class="category-chain-item">Hexo</a>
   
   
 
@@ -445,8 +421,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>使用 uPic 搭配腾讯云搭建图床</div>
-      <div>https://wonderhoi.com/2023/08/26/使用-uPic-搭配腾讯云搭建图床/</div>
+      <div>Mac 环境下搭建 Hexo 个人博客</div>
+      <div>https://wonderhoi.com/2023/08/28/Mac-环境下搭建-Hexo-个人博客/</div>
     </div>
     <div class="license-meta">
       
@@ -458,7 +434,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年8月26日</div>
+          <div>2023年8月28日</div>
         </div>
       
       
@@ -490,18 +466,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/08/28/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B/" title="呼吸代谢监测">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">呼吸代谢监测</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/08/22/Python-%E4%B8%AD-PIL.Image-%E5%92%8C-OpenCV-%E5%9B%BE%E5%83%8F%E6%A0%BC%E5%BC%8F%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/" title="Python 中 PIL.Image 和 OpenCV 图像格式相互转换">
-                        <span class="hidden-mobile">Python 中 PIL.Image 和 OpenCV 图像格式相互转换</span>
+                      <a href="/2023/08/28/EMG-%E7%9B%B8%E5%85%B3%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/" title="EMG 相关应用场景">
+                        <span class="hidden-mobile">EMG 相关应用场景</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
