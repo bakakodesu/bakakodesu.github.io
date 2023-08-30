@@ -18,15 +18,15 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta name="description" content="采用 threading 并加锁import threading  # 重写线程 class Calculate(threading.Thread):     def __init__(self, name, count):         threading.Thread.__init__(self)         self.name &#x3D; name         self.count &#x3D; c">
+    <meta name="description" content="采用 threading 并加锁import threading  # 重写线程 class Calculate(threading.Thread): 	def __init__(self, name, count): 		threading.Thread.__init__(self) 		self.name &#x3D; name 		self.count &#x3D; count      	def run(se">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 以及 pyqt 线程锁简单使用">
 <meta property="og:url" content="https://wonderhoi.com/2023/08/29/Python-%E4%BB%A5%E5%8F%8A-pyqt-%E7%BA%BF%E7%A8%8B%E9%94%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="采用 threading 并加锁import threading  # 重写线程 class Calculate(threading.Thread):     def __init__(self, name, count):         threading.Thread.__init__(self)         self.name &#x3D; name         self.count &#x3D; c">
+<meta property="og:description" content="采用 threading 并加锁import threading  # 重写线程 class Calculate(threading.Thread): 	def __init__(self, name, count): 		threading.Thread.__init__(self) 		self.name &#x3D; name 		self.count &#x3D; count      	def run(se">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-29T09:16:06.000Z">
-<meta property="article:modified_time" content="2023-08-30T07:17:44.093Z">
+<meta property="article:modified_time" content="2023-08-30T07:25:39.384Z">
 <meta property="article:author" content="刘子航">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -308,28 +308,28 @@
 
 <span class="hljs-comment"># 重写线程</span>
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">Calculate</span>(threading.Thread):
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count</span>):
-        threading.Thread.__init__(self)
-        self.name = name
-        self.count = count
-        
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
-      	<span class="hljs-comment"># 每0.1秒执行一次cal函数，不要带()</span>
-    	  timer = threading.Timer(<span class="hljs-number">0.1</span>, self.cal)
-    		timer.start()
+	<span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count</span>):
+		threading.Thread.__init__(self)
+		self.name = name
+		self.count = count
     
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
-      	<span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> self.count)
-      	self.count += <span class="hljs-number">1</span>
+	<span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
+		<span class="hljs-comment"># 每0.1秒执行一次cal函数，不要带()</span>
+		timer = threading.Timer(<span class="hljs-number">0.1</span>, self.cal)
+		timer.start()
+    
+  <span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
+		<span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> self.count)
+    self.count += <span class="hljs-number">1</span>
         
 <span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
-  	count1 = <span class="hljs-number">0</span>
-    count2 = <span class="hljs-number">0</span>
-    <span class="hljs-comment"># 初始化线程</span>
-    calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, count1)
-    calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, count2)
-    calculate1.start()
-    calculate2.start()
+	count1 = <span class="hljs-number">0</span>
+	count2 = <span class="hljs-number">0</span>
+	<span class="hljs-comment"># 初始化线程</span>
+	calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, count1)
+	calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, count2)
+	calculate1.start()
+	calculate2.start()
 
 <span class="hljs-comment"># ouput:</span>
 <span class="hljs-comment"># COUNT1 is 0</span>
@@ -347,36 +347,36 @@
 
 <span class="hljs-comment"># 重写线程</span>
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">Calculate</span>(threading.Thread):
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count, acquire, release</span>):
-        threading.Thread.__init__(self)
-        self.name = name
-        self.count = count
-        self.acquire = acquire	<span class="hljs-comment"># 需要加锁线程</span>
-        self.release = release	<span class="hljs-comment"># 需要解锁线程</span>
-        
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
-    	  timer = threading.Timer(<span class="hljs-number">0.1</span>, self.cal)
-    		timer.start()
+	<span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count, acquire, release</span>):
+		threading.Thread.__init__(self)
+		self.name = name
+    self.count = count
+    self.acquire = acquire	<span class="hljs-comment"># 需要加锁线程</span>
+    self.release = release	<span class="hljs-comment"># 需要解锁线程</span>
     
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
-      	self.acquire.acquire()
-      	<span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> self.count)
-      	self.count += <span class="hljs-number">1</span>
-      	self.release.release()
+  <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
+		timer = threading.Timer(<span class="hljs-number">0.1</span>, self.cal)
+    timer.start()
+    
+  <span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
+		self.acquire.acquire()
+		<span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> self.count)
+		self.count += <span class="hljs-number">1</span>
+		self.release.release()
         
 <span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
-  	count1 = <span class="hljs-number">0</span>
-    count2 = <span class="hljs-number">0</span>
-    <span class="hljs-comment"># 初始化线程锁</span>
-    count1_lock = threading.Lock()
-    count2_lock = threading.Lock()
-    <span class="hljs-comment"># count2加锁，这样只能先运行没有加锁的count1</span>
-    count2_lock.acquire()
-    calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, count1, count1_lock, count2_lock)
-    calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, count2, count2_lock, count1_lock)
+	count1 = <span class="hljs-number">0</span>
+	count2 = <span class="hljs-number">0</span>
+	<span class="hljs-comment"># 初始化线程锁</span>
+	count1_lock = threading.Lock()
+	count2_lock = threading.Lock()
+	<span class="hljs-comment"># count2加锁，这样只能先运行没有加锁的count1</span>
+	count2_lock.acquire()
+	calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, count1, count1_lock, count2_lock)
+	calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, count2, count2_lock, count1_lock)
     
-    calculate1.start()
-    calculate2.start()
+	calculate1.start()
+	calculate2.start()
 
 <span class="hljs-comment"># ouput:</span>
 <span class="hljs-comment"># COUNT1 is 0</span>
@@ -394,47 +394,47 @@
 
 <span class="hljs-comment"># 重写线程</span>
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">Calculate</span>(<span class="hljs-title class_ inherited__">QThread</span>):
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count, lock, unlock</span>):
-        <span class="hljs-built_in">super</span>(Calculate, self).__init__()
-        self.name = name
-        self.count = count
-        self.lock = lock	<span class="hljs-comment"># 需要加锁线程</span>
-        self.unlock = unlock	<span class="hljs-comment"># 需要解锁线程</span>
+	<span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count, lock, unlock</span>):
+		<span class="hljs-built_in">super</span>(Calculate, self).__init__()
+		self.name = name
+		self.count = count
+		self.lock = lock	<span class="hljs-comment"># 需要加锁线程</span>
+		self.unlock = unlock	<span class="hljs-comment"># 需要解锁线程</span>
         
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
-				timer = QTimer()
-        timer.timeout.connect(<span class="hljs-keyword">lambda</span>: self.cal())
-        timer.start(<span class="hljs-number">100</span>)
+	<span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
+		timer = QTimer()
+		timer.timeout.connect(<span class="hljs-keyword">lambda</span>: self.cal())
+		timer.start(<span class="hljs-number">100</span>)
     
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
-      	self.lock.lock()
-      	<span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> self.count)
-      	self.count += <span class="hljs-number">1</span>
-      	self.unlock.unlock()
+	<span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
+    self.lock.lock()
+    <span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> self.count)
+    self.count += <span class="hljs-number">1</span>
+    self.unlock.unlock()
 
 <span class="hljs-comment"># QThread只能在QT程序中运行</span>
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>(<span class="hljs-title class_ inherited__">QMainWindow</span>):
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, title</span>):
-        <span class="hljs-built_in">super</span>(Window, self).__init__()
-        self.count1 = <span class="hljs-number">0</span>
-    		self.count2 = <span class="hljs-number">0</span>
-		    <span class="hljs-comment"># 初始化线程锁</span>
-    		self.count1_lock = QMutex()
-		    self.count2_lock = QMutex()
-    		<span class="hljs-comment"># count2加锁，这样只能先运行没有加锁的count1</span>
-		    self.count2_lock.lock()
-    		self.calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, self.count1, self.count1_lock, self.count2_lock)
-		    self.calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, self.count2, self.count2_lock, self.count1_lock)
-    
-    		self.calculate1.start()
-		    self.calculate2.start()
+  <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, title</span>):
+    <span class="hljs-built_in">super</span>(Window, self).__init__()
+    self.count1 = <span class="hljs-number">0</span>
+    self.count2 = <span class="hljs-number">0</span>
+    <span class="hljs-comment"># 初始化线程锁</span>
+    self.count1_lock = QMutex()
+    self.count2_lock = QMutex()
+    <span class="hljs-comment"># count2加锁，这样只能先运行没有加锁的count1</span>
+    self.count2_lock.lock()
+    self.calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, self.count1, self.count1_lock, self.count2_lock)
+		self.calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, self.count2, self.count2_lock, self.count1_lock)
+
+		self.calculate1.start()
+		self.calculate2.start()
         
         
 <span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
-  	app = QApplication(sys.argv)
-    win = Window()
-    win.show()
-    sys.exit(app.exec_())
+  app = QApplication(sys.argv)
+  win = Window()
+  win.show()
+  sys.exit(app.exec_())
 
 <span class="hljs-comment"># ouput:</span>
 <span class="hljs-comment"># COUNT1 is 0</span>
