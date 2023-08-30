@@ -18,24 +18,24 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta name="description" content="原文：Mac OS 环境下使用 Hexo 搭建个人博客。 参考：  Mac 系统有什么软件打开 .pub 文件？； hexo 发布之后 gitpage 自定义域名失效。  准备工作安装 Git 和 Node.jsbrew install git brew install node  测试所需组件是否安装成功npm -v node -v git --version  均返回版本号即代表安装成功。 安">
+    <meta name="description" content="采用 threading 并加锁import threading  # 重写线程 class Calculate(threading.Thread):     def __init__(self, name, count):         threading.Thread.__init__(self)         self.name &#x3D; name         self.count &#x3D; c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac 环境下搭建 Hexo 个人博客">
-<meta property="og:url" content="https://wonderhoi.com/2023/08/28/Mac-%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA-Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="Python 以及 pyqt 线程锁简单使用">
+<meta property="og:url" content="https://wonderhoi.com/2023/08/29/Python-%E4%BB%A5%E5%8F%8A-pyqt-%E7%BA%BF%E7%A8%8B%E9%94%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="原文：Mac OS 环境下使用 Hexo 搭建个人博客。 参考：  Mac 系统有什么软件打开 .pub 文件？； hexo 发布之后 gitpage 自定义域名失效。  准备工作安装 Git 和 Node.jsbrew install git brew install node  测试所需组件是否安装成功npm -v node -v git --version  均返回版本号即代表安装成功。 安">
+<meta property="og:description" content="采用 threading 并加锁import threading  # 重写线程 class Calculate(threading.Thread):     def __init__(self, name, count):         threading.Thread.__init__(self)         self.name &#x3D; name         self.count &#x3D; c">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-08-28T08:15:32.000Z">
-<meta property="article:modified_time" content="2023-08-28T08:46:27.721Z">
+<meta property="article:published_time" content="2023-08-29T09:16:06.000Z">
+<meta property="article:modified_time" content="2023-08-30T07:17:44.093Z">
 <meta property="article:author" content="刘子航">
-<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Mac 环境下搭建 Hexo 个人博客 - 这是一个PM的BLOG</title>
+  <title>Python 以及 pyqt 线程锁简单使用 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -228,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Mac 环境下搭建 Hexo 个人博客"></span>
+            <span id="subtitle" data-typed-text="Python 以及 pyqt 线程锁简单使用"></span>
           
         </div>
 
@@ -239,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-08-28 16:15" pubdate>
-          2023年8月28日 下午
+        <time datetime="2023-08-29 17:16" pubdate>
+          2023年8月29日 下午
         </time>
       </span>
     
@@ -251,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.1k 字
+          2.6k 字
         
       </span>
     
@@ -262,7 +262,7 @@
         
         
         
-          18 分钟
+          22 分钟
         
       </span>
     
@@ -299,76 +299,153 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Mac 环境下搭建 Hexo 个人博客</h1>
+            <h1 id="seo-header">Python 以及 pyqt 线程锁简单使用</h1>
             
             
               <div class="markdown-body">
                 
-                <p>原文：<a target="_blank" rel="noopener" href="https://l3zc.com/2022/05/mac%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac OS 环境下使用 Hexo 搭建个人博客</a>。</p>
-<p>参考：</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/26071345">Mac 系统有什么软件打开 .pub 文件？</a>；</li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/xs20691718/article/details/81873921">hexo 发布之后 gitpage 自定义域名失效</a>。</li>
-</ol>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="安装-Git-和-Node-js"><a href="#安装-Git-和-Node-js" class="headerlink" title="安装 Git 和 Node.js"></a>安装 Git 和 Node.js</h4><div class="code-wrapper"><pre><code class="hljs bash">brew install git
-brew install node</code></pre></div>
+                <h3 id="采用-threading-并加锁"><a href="#采用-threading-并加锁" class="headerlink" title="采用 threading 并加锁"></a>采用 threading 并加锁</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> threading
 
-<h4 id="测试所需组件是否安装成功"><a href="#测试所需组件是否安装成功" class="headerlink" title="测试所需组件是否安装成功"></a>测试所需组件是否安装成功</h4><div class="code-wrapper"><pre><code class="hljs bash">npm -v
-node -v
-git --version</code></pre></div>
+<span class="hljs-comment"># 重写线程</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Calculate</span>(threading.Thread):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count</span>):
+        threading.Thread.__init__(self)
+        self.name = name
+        self.count = count
+        
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
+      	<span class="hljs-comment"># 每0.1秒执行一次cal函数，不要带()</span>
+    	  timer = threading.Timer(<span class="hljs-number">0.1</span>, self.cal)
+    		timer.start()
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
+      	<span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> self.count)
+      	self.count += <span class="hljs-number">1</span>
+        
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
+  	count1 = <span class="hljs-number">0</span>
+    count2 = <span class="hljs-number">0</span>
+    <span class="hljs-comment"># 初始化线程</span>
+    calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, count1)
+    calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, count2)
+    calculate1.start()
+    calculate2.start()
 
-<p>均返回版本号即代表安装成功。</p>
-<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p>我们使用 npm 命令安装 Hexo：</p>
-<div class="code-wrapper"><pre><code class="hljs bash">npm install -g hexo-cli</code></pre></div>
+<span class="hljs-comment"># ouput:</span>
+<span class="hljs-comment"># COUNT1 is 0</span>
+<span class="hljs-comment"># COUNT1 is 1</span>
+<span class="hljs-comment"># COUNT1 is 2</span>
+<span class="hljs-comment"># COUNT2 is 0</span>
+<span class="hljs-comment"># COUNT1 is 3</span>
+<span class="hljs-comment"># COUNT2 is 1</span>
+<span class="hljs-comment"># COUNT1 is 4</span>
+<span class="hljs-comment"># COUNT2 is 2</span>
+<span class="hljs-comment"># COUNT2 is 3</span></code></pre></div>
 
-<p>等待安装完成后初始化博客：</p>
-<div class="code-wrapper"><pre><code class="hljs bash">hexo init blog</code></pre></div>
+<p>可以发现两个线程之间的执行并不同步，若想同步执行，则需要加「线程锁」。</p>
+<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> threading
 
-<p>这条指令的作用是在你目前所在的目录下（默认是你的 home 目录）新建一个名为 blog 的文件夹（你可以将这条命令中的 blog 替换成任何你想要的名字），并在内初始化你的博客。<strong>之后所有的操作都在这个文件夹下进行，请确保在执行后文的操作前已经切换到了这个文件夹（cd blog）。</strong></p>
-<p>待初始化完成，切换到 blog 文件夹中，即可生成和预览博客。</p>
-<div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> blog
-hexo g
-hexo s</code></pre></div>
+<span class="hljs-comment"># 重写线程</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Calculate</span>(threading.Thread):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count, acquire, release</span>):
+        threading.Thread.__init__(self)
+        self.name = name
+        self.count = count
+        self.acquire = acquire	<span class="hljs-comment"># 需要加锁线程</span>
+        self.release = release	<span class="hljs-comment"># 需要解锁线程</span>
+        
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
+    	  timer = threading.Timer(<span class="hljs-number">0.1</span>, self.cal)
+    		timer.start()
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
+      	self.acquire.acquire()
+      	<span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> self.count)
+      	self.count += <span class="hljs-number">1</span>
+      	self.release.release()
+        
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
+  	count1 = <span class="hljs-number">0</span>
+    count2 = <span class="hljs-number">0</span>
+    <span class="hljs-comment"># 初始化线程锁</span>
+    count1_lock = threading.Lock()
+    count2_lock = threading.Lock()
+    <span class="hljs-comment"># count2加锁，这样只能先运行没有加锁的count1</span>
+    count2_lock.acquire()
+    calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, count1, count1_lock, count2_lock)
+    calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, count2, count2_lock, count1_lock)
+    
+    calculate1.start()
+    calculate2.start()
 
-<p>执行 <code>hexo s</code> 命令后，通过浏览器访问 <code>http://127.0.0.1:4000</code> 可以预览你的博客，预览功能会实时监测博客的文件变化，并实时反馈在浏览器上，在调试博客前端时非常好用。</p>
-<h3 id="部署网站到-GitHub"><a href="#部署网站到-GitHub" class="headerlink" title="部署网站到 GitHub"></a>部署网站到 GitHub</h3><p>执行 <code>hexo g</code> 命令后博客静态文件会生成在 public 文件夹下，只需要将这些文件上传到你的静态网站托管服务即可将站点发布到公网，本文用到的托管服务是 Github Pages，下文提到的用户名均指你的 Github 用户名。</p>
-<h4 id="添加-SSH-Key-到-github"><a href="#添加-SSH-Key-到-github" class="headerlink" title="添加 SSH Key 到 github"></a>添加 SSH Key 到 github</h4><p>若之前使用过相关功能且已经配置过请跳过此步。</p>
-<p>配置 Git 用户名和账号：</p>
-<div class="code-wrapper"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;username&quot;</span>
-git config --global user.email <span class="hljs-string">&quot;example@example.com&quot;</span></code></pre></div>
+<span class="hljs-comment"># ouput:</span>
+<span class="hljs-comment"># COUNT1 is 0</span>
+<span class="hljs-comment"># COUNT2 is 0</span>
+<span class="hljs-comment"># COUNT1 is 1</span>
+<span class="hljs-comment"># COUNT2 is 1</span>
+<span class="hljs-comment"># COUNT1 is 2</span>
+<span class="hljs-comment"># COUNT2 is 2</span>
+<span class="hljs-comment"># COUNT1 is 3</span>
+<span class="hljs-comment"># COUNT2 is 3</span></code></pre></div>
 
-<p>其中 <code>username</code> 是你的用户名，<code>example@example.com</code> 是你 Github 的登录邮箱。</p>
-<p>然后通过终端命令生成 SSH Key：</p>
-<div class="code-wrapper"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;example@example.com&quot;</span></code></pre></div>
+<h3 id="采用-QThread-并加锁"><a href="#采用-QThread-并加锁" class="headerlink" title="采用 QThread 并加锁"></a>采用 QThread 并加锁</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys
+<span class="hljs-keyword">from</span> PyQt5.QtCore <span class="hljs-keyword">import</span> QThread, QTimer, QMutex
+<span class="hljs-keyword">from</span> PyQt5.QtWidgets <span class="hljs-keyword">import</span> QMainWindow, QApplication
 
-<p>如果已经创建过会出现 <code>Overwrite (y/n)? n</code> 提示可以输入 <code>n</code>，没有创建过的话三个回车就好，执行完成后会在 <code>~/.ssh/id_rsa.pub</code> 目录下生成需要使用的 key，也就是公钥。</p>
-<p>到账户主文件夹下同时按 <code>Command+Shift+.</code> 显示隐藏文件，找到 <code>.ssh</code> 文件夹，打开 <code>id_rsa.pub</code>，将里面的内容全部复制（使用 cd 命令进入 <code>id_rsa.pub</code> 目录，再使用 <code>more id_rsa.pub</code> 命令查看公钥的内容）。</p>
-<p>打开 <a target="_blank" rel="noopener" href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建 New SSH Key，Title 随意填，Key 就把刚才复制的内容全都粘贴上去。然后点 Add SSH Key 即可。</p>
-<p>完成这些工作以后可以通过以下命令测试是否配置成功：</p>
-<div class="code-wrapper"><pre><code class="hljs bash">ssh git@github.com</code></pre></div>
+<span class="hljs-comment"># 重写线程</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Calculate</span>(<span class="hljs-title class_ inherited__">QThread</span>):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count, lock, unlock</span>):
+        <span class="hljs-built_in">super</span>(Calculate, self).__init__()
+        self.name = name
+        self.count = count
+        self.lock = lock	<span class="hljs-comment"># 需要加锁线程</span>
+        self.unlock = unlock	<span class="hljs-comment"># 需要解锁线程</span>
+        
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
+				timer = QTimer()
+        timer.timeout.connect(<span class="hljs-keyword">lambda</span>: self.cal())
+        timer.start(<span class="hljs-number">100</span>)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
+      	self.lock.lock()
+      	<span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> self.count)
+      	self.count += <span class="hljs-number">1</span>
+      	self.unlock.unlock()
 
-<p>出现你的 Github 用户名代表配置成功。</p>
-<h4 id="上传本地文件到-Github"><a href="#上传本地文件到-Github" class="headerlink" title="上传本地文件到 Github"></a>上传本地文件到 Github</h4><p>在Github上新建一个仓库，Repository Name 填 <code>你的用户名.github.io</code>，仓库状态设为 Public，点击 Create Repository 创建新的网站仓库。</p>
-<p>安装 Hexo 的扩展 <code>hexo-deployer-git</code>，注意一定要在你的博客文件夹下执行：</p>
-<div class="code-wrapper"><pre><code class="hljs bash">npm install hexo-deployer-git --save</code></pre></div>
+<span class="hljs-comment"># QThread只能在QT程序中运行</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>(<span class="hljs-title class_ inherited__">QMainWindow</span>):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, title</span>):
+        <span class="hljs-built_in">super</span>(Window, self).__init__()
+        self.count1 = <span class="hljs-number">0</span>
+    		self.count2 = <span class="hljs-number">0</span>
+		    <span class="hljs-comment"># 初始化线程锁</span>
+    		self.count1_lock = QMutex()
+		    self.count2_lock = QMutex()
+    		<span class="hljs-comment"># count2加锁，这样只能先运行没有加锁的count1</span>
+		    self.count2_lock.lock()
+    		self.calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, self.count1, self.count1_lock, self.count2_lock)
+		    self.calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, self.count2, self.count2_lock, self.count1_lock)
+    
+    		self.calculate1.start()
+		    self.calculate2.start()
+        
+        
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
+  	app = QApplication(sys.argv)
+    win = Window()
+    win.show()
+    sys.exit(app.exec_())
 
-<p>编辑博客安装文件夹下的 <code>_config.yml</code> 文件，<strong>翻到底部</strong>，修改 deploy 部分为：</p>
-<div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span>
-  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span>
-  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:你的用户名/你的用户名.github.io.git</span>
-  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span></code></pre></div>
+<span class="hljs-comment"># ouput:</span>
+<span class="hljs-comment"># COUNT1 is 0</span>
+<span class="hljs-comment"># COUNT2 is 0</span>
+<span class="hljs-comment"># COUNT1 is 1</span>
+<span class="hljs-comment"># COUNT2 is 1</span>
+<span class="hljs-comment"># COUNT1 is 2</span>
+<span class="hljs-comment"># COUNT2 is 2</span>
+<span class="hljs-comment"># COUNT1 is 3</span>
+<span class="hljs-comment"># COUNT2 is 3</span></code></pre></div>
 
-<p>修改完成后保存，此时就可以使用 <code>hexo d</code> 把存在本地的博客 deploy 到 Github 上了：</p>
-<div class="code-wrapper"><pre><code class="hljs bash">hexo g
-hexo d</code></pre></div>
-
-<p>第一次执行 <code>hexo d</code> 命令时可能要求你输入你的 Github 账号和密码，如果报错，可能是因为 Github 在 2021 年 8 月 13 日停止了使用账户密码认证的支持，这时需要在 Gihub 上 <a target="_blank" rel="noopener" href="https://github.com/settings/tokens">Developer Settings页面</a> 上新建一个 Personal Access Token 代替密码就可以顺利 deploy。</p>
-<p>执行完毕后，访问 <code>你的用户名.github.io</code> 就能看到你的博客了。</p>
-<h3 id="绑定自定义域名（可选）"><a href="#绑定自定义域名（可选）" class="headerlink" title="绑定自定义域名（可选）"></a>绑定自定义域名（可选）</h3><p>其实到这一步就可以开始写博客了，默认的 github.io 的域名是可以更换的：</p>
-<p>首先自行申请一个域名，登陆到域名申请的后台，添加一条 <code>CNAME</code> 解析记录：<code>你的用户名.github.io</code>。</p>
-<p>打开存放博客的 Github 仓库，进入 Settings 页面在 pages 选项里的 Custom domain 里填入你的域名，点击 Save，勾选 Enforce HTTPS，即可通过自定义域名访问你的博客。</p>
-<p>每次配置 Custom domain 之后，再次 <code>hexo deploy</code> 之后，Custom domain 会被重置失效。解决方案为：</p>
-<p>在 hexo 生成的博客的 source 目录下新建一个 <code>CNAME</code> 文件，然后在这个文件中填入你的域名，这样就不会每次发布之后，Custom domain 都被重置掉。</p>
 
                 
               </div>
@@ -387,12 +464,12 @@ hexo d</code></pre></div>
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="category-chain-item">环境配置</a>
+  <a href="/categories/Code/" class="category-chain-item">Code</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Hexo/" class="category-chain-item">Hexo</a>
+  <a href="/categories/Code/Python/" class="category-chain-item">Python</a>
   
   
 
@@ -409,7 +486,7 @@ hexo d</code></pre></div>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
       
     </div>
   
@@ -421,8 +498,8 @@ hexo d</code></pre></div>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Mac 环境下搭建 Hexo 个人博客</div>
-      <div>https://wonderhoi.com/2023/08/28/Mac-环境下搭建-Hexo-个人博客/</div>
+      <div>Python 以及 pyqt 线程锁简单使用</div>
+      <div>https://wonderhoi.com/2023/08/29/Python-以及-pyqt-线程锁简单使用/</div>
     </div>
     <div class="license-meta">
       
@@ -434,7 +511,7 @@ hexo d</code></pre></div>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年8月28日</div>
+          <div>2023年8月29日</div>
         </div>
       
       
@@ -466,18 +543,12 @@ hexo d</code></pre></div>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/08/29/Python-%E4%BB%A5%E5%8F%8A-pyqt-%E7%BA%BF%E7%A8%8B%E9%94%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="Python 以及 pyqt 线程锁简单使用">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Python 以及 pyqt 线程锁简单使用</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/08/28/EMG-%E7%9B%B8%E5%85%B3%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/" title="EMG 相关应用场景">
-                        <span class="hidden-mobile">EMG 相关应用场景</span>
+                      <a href="/2023/08/28/Mac-%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA-Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="Mac 环境下搭建 Hexo 个人博客">
+                        <span class="hidden-mobile">Mac 环境下搭建 Hexo 个人博客</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
