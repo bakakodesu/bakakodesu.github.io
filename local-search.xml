@@ -4,6 +4,87 @@
   
   
   <entry>
+    <title>基于表面肌电信号和动作捕捉的上肢运动疲劳分析</title>
+    <link href="/2023/09/01/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E9%9D%A2%E8%82%8C%E7%94%B5%E4%BF%A1%E5%8F%B7%E5%92%8C%E5%8A%A8%E4%BD%9C%E6%8D%95%E6%8D%89%E7%9A%84%E4%B8%8A%E8%82%A2%E8%BF%90%E5%8A%A8%E7%96%B2%E5%8A%B3%E5%88%86%E6%9E%90/"/>
+    <url>/2023/09/01/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E9%9D%A2%E8%82%8C%E7%94%B5%E4%BF%A1%E5%8F%B7%E5%92%8C%E5%8A%A8%E4%BD%9C%E6%8D%95%E6%8D%89%E7%9A%84%E4%B8%8A%E8%82%A2%E8%BF%90%E5%8A%A8%E7%96%B2%E5%8A%B3%E5%88%86%E6%9E%90/</url>
+    
+    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/4521B14B-F4D8-4E18-9C33-075EB468CAA8_2/0anKdmJXKHOfJLskNNsD0U5WBCELNFkNh3CnGIplcIYz/4521B14B-F4D8-4E18-9C33-075EB468CAA8_2.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>文献搬运</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>EMG</tag>
+      
+      <tag>运动科学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Swift 除余和取整</title>
+    <link href="/2023/08/31/Swift-%E9%99%A4%E4%BD%99%E5%92%8C%E5%8F%96%E6%95%B4/"/>
+    <url>/2023/08/31/Swift-%E9%99%A4%E4%BD%99%E5%92%8C%E5%8F%96%E6%95%B4/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> x <span class="hljs-operator">=</span> <span class="hljs-number">8.625</span><span class="hljs-built_in">print</span>(x <span class="hljs-operator">/</span> <span class="hljs-number">0.75</span>)<span class="hljs-comment">// Prints &quot;11.5&quot;</span><span class="hljs-comment">// 取整</span><span class="hljs-keyword">let</span> q <span class="hljs-operator">=</span> (x <span class="hljs-operator">/</span> <span class="hljs-number">0.75</span>).rounded(.towardZero)<span class="hljs-comment">// q == 11.0</span><span class="hljs-comment">// 除余</span><span class="hljs-keyword">let</span> r <span class="hljs-operator">=</span> x.truncatingRemainder(dividingBy: <span class="hljs-number">0.75</span>)<span class="hljs-comment">// r == 0.375</span><span class="hljs-keyword">let</span> x1 <span class="hljs-operator">=</span> <span class="hljs-number">0.75</span> <span class="hljs-operator">*</span> q <span class="hljs-operator">+</span> r<span class="hljs-comment">// x1 == 8.625</span></code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Swift</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Swift 数组去重</title>
+    <link href="/2023/08/31/Swift-%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
+    <url>/2023/08/31/Swift-%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/</url>
+    
+    <content type="html"><![CDATA[<h3 id="两组数组去重"><a href="#两组数组去重" class="headerlink" title="两组数组去重"></a>两组数组去重</h3><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">extension</span> <span class="hljs-title class_">Array</span> <span class="hljs-title class_">where</span> <span class="hljs-title class_">Element</span>: <span class="hljs-title class_">Hashable</span> &#123;    <span class="hljs-keyword">func</span> <span class="hljs-title function_">difference</span>(<span class="hljs-params">from</span> <span class="hljs-params">other</span>: [<span class="hljs-type">Element</span>]) -&gt; [<span class="hljs-type">Element</span>] &#123;        <span class="hljs-keyword">let</span> thisSet <span class="hljs-operator">=</span> <span class="hljs-type">Set</span>(<span class="hljs-keyword">self</span>)        <span class="hljs-keyword">let</span> otherSet <span class="hljs-operator">=</span> <span class="hljs-type">Set</span>(other)        <span class="hljs-keyword">return</span> <span class="hljs-type">Array</span>(thisSet.symmetricDifference(otherSet))    &#125;&#125;</code></pre></div><p>用法</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> names1 <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;Paul&quot;</span>, <span class="hljs-string">&quot;Ringo&quot;</span>]<span class="hljs-keyword">let</span> names2 <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;Ringo&quot;</span>, <span class="hljs-string">&quot;Paul&quot;</span>, <span class="hljs-string">&quot;George&quot;</span>]<span class="hljs-keyword">let</span> difference <span class="hljs-operator">=</span> names1.difference(from: names2)<span class="hljs-built_in">print</span>(difference)<span class="hljs-comment">// output:</span><span class="hljs-comment">// [&quot;George&quot;, &quot;John&quot;]</span></code></pre></div><h3 id="单个数组去重"><a href="#单个数组去重" class="headerlink" title="单个数组去重"></a>单个数组去重</h3><p>如果数组内只含有基础类型的数据时，可以写两个for循环遍历，用下标取值做对比；当然也可以用集合 Set（Swift），比较方便快捷。</p><p>但是如果需要对 model 数组进行去重，则用不了 Set。</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">import</span> UIKit<span class="hljs-keyword">extension</span> <span class="hljs-title class_">Array</span> &#123;    <span class="hljs-comment">// 去重</span>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">filterDuplicates</span>&lt;<span class="hljs-type">E</span>: <span class="hljs-type">Equatable</span>&gt;(<span class="hljs-keyword">_</span> <span class="hljs-params">filter</span>: (<span class="hljs-type">Element</span>) -&gt; <span class="hljs-type">E</span>) -&gt; [<span class="hljs-type">Element</span>] &#123;        <span class="hljs-keyword">var</span> result <span class="hljs-operator">=</span> [<span class="hljs-type">Element</span>]()        <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-keyword">self</span> &#123;            <span class="hljs-keyword">let</span> key <span class="hljs-operator">=</span> filter(value)            <span class="hljs-keyword">if</span> <span class="hljs-operator">!</span>result.map(&#123;filter(<span class="hljs-variable">$0</span>)&#125;).contains(key) &#123;                result.append(value)            &#125;        &#125;        <span class="hljs-keyword">return</span> result    &#125;&#125;</code></pre></div><p>用法</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-comment">// 基础类型去重</span><span class="hljs-keyword">let</span> arrays <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;3&quot;</span>, <span class="hljs-string">&quot;4&quot;</span>, <span class="hljs-string">&quot;4&quot;</span>]<span class="hljs-keyword">let</span> filterArrays <span class="hljs-operator">=</span> arrays.filterDuplicates(&#123;<span class="hljs-variable">$0</span>&#125;)<span class="hljs-built_in">print</span>(filterArrays)<span class="hljs-comment">// output</span><span class="hljs-comment">// [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;]</span><span class="hljs-comment">// model类的去重</span><span class="hljs-keyword">let</span> modelArrays <span class="hljs-operator">=</span> [<span class="hljs-type">Model</span>(<span class="hljs-string">&quot;1&quot;</span>), <span class="hljs-type">Model</span>(<span class="hljs-string">&quot;1&quot;</span>), <span class="hljs-type">Model</span>(<span class="hljs-string">&quot;2&quot;</span>), <span class="hljs-type">Model</span>(<span class="hljs-string">&quot;3&quot;</span>)]<span class="hljs-keyword">let</span> filterModels <span class="hljs-operator">=</span> modelArrays.filterDuplicates(&#123;<span class="hljs-variable">$0</span>.name&#125;)<span class="hljs-built_in">print</span>(filterModels)<span class="hljs-comment">// output</span><span class="hljs-comment">// [Model(&quot;1&quot;), Model(&quot;2&quot;), Model(&quot;3&quot;)]</span></code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Swift</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Python 以及 pyqt 线程锁简单使用</title>
     <link href="/2023/08/29/Python-%E4%BB%A5%E5%8F%8A-pyqt-%E7%BA%BF%E7%A8%8B%E9%94%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
     <url>/2023/08/29/Python-%E4%BB%A5%E5%8F%8A-pyqt-%E7%BA%BF%E7%A8%8B%E9%94%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</url>
@@ -582,7 +663,7 @@
     
     <categories>
       
-      <category>Error</category>
+      <category>环境配置</category>
       
       <category>Xcode</category>
       

@@ -18,24 +18,24 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta name="description" content="采用 threading 并加锁import threading   # 重写线程 class Calculate(threading.Thread):     def __init__(self, name, count):         threading.Thread.__init__(self)         self.name &#x3D; name         self.count &#x3D;">
+    <meta name="description" content="两组数组去重extension Array where Element: Hashable &amp;#123;     func difference(from other: [Element]) -&gt; [Element] &amp;#123;         let thisSet &#x3D; Set(self)         let otherSet &#x3D; Set(other)         return">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 以及 pyqt 线程锁简单使用">
-<meta property="og:url" content="https://wonderhoi.com/2023/08/29/Python-%E4%BB%A5%E5%8F%8A-pyqt-%E7%BA%BF%E7%A8%8B%E9%94%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="Swift 数组去重">
+<meta property="og:url" content="https://wonderhoi.com/2023/08/31/Swift-%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="采用 threading 并加锁import threading   # 重写线程 class Calculate(threading.Thread):     def __init__(self, name, count):         threading.Thread.__init__(self)         self.name &#x3D; name         self.count &#x3D;">
+<meta property="og:description" content="两组数组去重extension Array where Element: Hashable &amp;#123;     func difference(from other: [Element]) -&gt; [Element] &amp;#123;         let thisSet &#x3D; Set(self)         let otherSet &#x3D; Set(other)         return">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-08-29T09:16:06.000Z">
-<meta property="article:modified_time" content="2023-08-30T07:52:07.512Z">
+<meta property="article:published_time" content="2023-08-31T15:31:03.000Z">
+<meta property="article:modified_time" content="2023-08-31T15:39:02.577Z">
 <meta property="article:author" content="刘子航">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Swift">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Python 以及 pyqt 线程锁简单使用 - 这是一个PM的BLOG</title>
+  <title>Swift 数组去重 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -228,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Python 以及 pyqt 线程锁简单使用"></span>
+            <span id="subtitle" data-typed-text="Swift 数组去重"></span>
           
         </div>
 
@@ -239,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-08-29 17:16" pubdate>
-          2023年8月29日 下午
+        <time datetime="2023-08-31 23:31" pubdate>
+          2023年8月31日 晚上
         </time>
       </span>
     
@@ -251,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.6k 字
+          1.4k 字
         
       </span>
     
@@ -262,7 +262,7 @@
         
         
         
-          22 分钟
+          12 分钟
         
       </span>
     
@@ -299,159 +299,60 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Python 以及 pyqt 线程锁简单使用</h1>
+            <h1 id="seo-header">Swift 数组去重</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="采用-threading-并加锁"><a href="#采用-threading-并加锁" class="headerlink" title="采用 threading 并加锁"></a>采用 threading 并加锁</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> threading
+                <h3 id="两组数组去重"><a href="#两组数组去重" class="headerlink" title="两组数组去重"></a>两组数组去重</h3><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">extension</span> <span class="hljs-title class_">Array</span> <span class="hljs-title class_">where</span> <span class="hljs-title class_">Element</span>: <span class="hljs-title class_">Hashable</span> &#123;
+    <span class="hljs-keyword">func</span> <span class="hljs-title function_">difference</span>(<span class="hljs-params">from</span> <span class="hljs-params">other</span>: [<span class="hljs-type">Element</span>]) -&gt; [<span class="hljs-type">Element</span>] &#123;
+        <span class="hljs-keyword">let</span> thisSet <span class="hljs-operator">=</span> <span class="hljs-type">Set</span>(<span class="hljs-keyword">self</span>)
+        <span class="hljs-keyword">let</span> otherSet <span class="hljs-operator">=</span> <span class="hljs-type">Set</span>(other)
+        <span class="hljs-keyword">return</span> <span class="hljs-type">Array</span>(thisSet.symmetricDifference(otherSet))
+    &#125;
+&#125;</code></pre></div>
 
+<p>用法</p>
+<div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> names1 <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;Paul&quot;</span>, <span class="hljs-string">&quot;Ringo&quot;</span>]
+<span class="hljs-keyword">let</span> names2 <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;Ringo&quot;</span>, <span class="hljs-string">&quot;Paul&quot;</span>, <span class="hljs-string">&quot;George&quot;</span>]
+<span class="hljs-keyword">let</span> difference <span class="hljs-operator">=</span> names1.difference(from: names2)
+<span class="hljs-built_in">print</span>(difference)
 
-<span class="hljs-comment"># 重写线程</span>
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Calculate</span>(threading.Thread):
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count</span>):
-        threading.Thread.__init__(self)
-        self.name = name
-        self.count = count
+<span class="hljs-comment">// output:</span>
+<span class="hljs-comment">// [&quot;George&quot;, &quot;John&quot;]</span></code></pre></div>
 
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
-        <span class="hljs-comment"># 每0.1秒执行一次cal函数，不要带()</span>
-        timer = threading.Timer(<span class="hljs-number">0.1</span>, self.cal)
-        timer.start()
+<h3 id="单个数组去重"><a href="#单个数组去重" class="headerlink" title="单个数组去重"></a>单个数组去重</h3><p>如果数组内只含有基础类型的数据时，可以写两个for循环遍历，用下标取值做对比；当然也可以用集合 Set（Swift），比较方便快捷。</p>
+<p>但是如果需要对 model 数组进行去重，则用不了 Set。</p>
+<div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">import</span> UIKit
 
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
-        <span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> + self.count)
-        self.count += <span class="hljs-number">1</span>
+<span class="hljs-keyword">extension</span> <span class="hljs-title class_">Array</span> &#123;
+    <span class="hljs-comment">// 去重</span>
+    <span class="hljs-keyword">func</span> <span class="hljs-title function_">filterDuplicates</span>&lt;<span class="hljs-type">E</span>: <span class="hljs-type">Equatable</span>&gt;(<span class="hljs-keyword">_</span> <span class="hljs-params">filter</span>: (<span class="hljs-type">Element</span>) -&gt; <span class="hljs-type">E</span>) -&gt; [<span class="hljs-type">Element</span>] &#123;
+        <span class="hljs-keyword">var</span> result <span class="hljs-operator">=</span> [<span class="hljs-type">Element</span>]()
+        <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-keyword">self</span> &#123;
+            <span class="hljs-keyword">let</span> key <span class="hljs-operator">=</span> filter(value)
+            <span class="hljs-keyword">if</span> <span class="hljs-operator">!</span>result.map(&#123;filter(<span class="hljs-variable">$0</span>)&#125;).contains(key) &#123;
+                result.append(value)
+            &#125;
+        &#125;
+        <span class="hljs-keyword">return</span> result
+    &#125;
+&#125;</code></pre></div>
 
+<p>用法</p>
+<div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-comment">// 基础类型去重</span>
+<span class="hljs-keyword">let</span> arrays <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;3&quot;</span>, <span class="hljs-string">&quot;4&quot;</span>, <span class="hljs-string">&quot;4&quot;</span>]
+<span class="hljs-keyword">let</span> filterArrays <span class="hljs-operator">=</span> arrays.filterDuplicates(&#123;<span class="hljs-variable">$0</span>&#125;)
+<span class="hljs-built_in">print</span>(filterArrays)
+<span class="hljs-comment">// output</span>
+<span class="hljs-comment">// [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;]</span>
 
-<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
-    count1 = <span class="hljs-number">0</span>
-    count2 = <span class="hljs-number">0</span>
-    <span class="hljs-comment"># 初始化线程</span>
-    calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, count1)
-    calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, count2)
-    calculate1.start()
-    calculate2.start()
-
-<span class="hljs-comment"># ouput:</span>
-<span class="hljs-comment"># COUNT1 is 0</span>
-<span class="hljs-comment"># COUNT1 is 1</span>
-<span class="hljs-comment"># COUNT1 is 2</span>
-<span class="hljs-comment"># COUNT2 is 0</span>
-<span class="hljs-comment"># COUNT1 is 3</span>
-<span class="hljs-comment"># COUNT2 is 1</span>
-<span class="hljs-comment"># COUNT1 is 4</span>
-<span class="hljs-comment"># COUNT2 is 2</span>
-<span class="hljs-comment"># COUNT2 is 3</span>
-</code></pre></div>
-
-<p>可以发现两个线程之间的执行并不同步，若想同步执行，则需要加「线程锁」。</p>
-<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> threading
-
-
-<span class="hljs-comment"># 重写线程</span>
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Calculate</span>(threading.Thread):
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count, acquire, release</span>):
-        threading.Thread.__init__(self)
-        self.name = name
-        self.count = count
-        self.acquire = acquire  <span class="hljs-comment"># 需要加锁线程</span>
-        self.release = release  <span class="hljs-comment"># 需要解锁线程</span>
-
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
-        timer = threading.Timer(<span class="hljs-number">0.1</span>, self.cal)
-        timer.start()
-
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
-        self.acquire.acquire()
-        <span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> + self.count)
-        self.count += <span class="hljs-number">1</span>
-        self.release.release()
-
-
-<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
-    count1 = <span class="hljs-number">0</span>
-    count2 = <span class="hljs-number">0</span>
-    <span class="hljs-comment"># 初始化线程锁</span>
-    count1_lock = threading.Lock()
-    count2_lock = threading.Lock()
-    <span class="hljs-comment"># count2加锁，这样只能先运行没有加锁的count1</span>
-    count2_lock.acquire()
-    calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, count1, count1_lock, count2_lock)
-    calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, count2, count2_lock, count1_lock)
-
-    calculate1.start()
-    calculate2.start()
-
-<span class="hljs-comment"># ouput:</span>
-<span class="hljs-comment"># COUNT1 is 0</span>
-<span class="hljs-comment"># COUNT2 is 0</span>
-<span class="hljs-comment"># COUNT1 is 1</span>
-<span class="hljs-comment"># COUNT2 is 1</span>
-<span class="hljs-comment"># COUNT1 is 2</span>
-<span class="hljs-comment"># COUNT2 is 2</span>
-<span class="hljs-comment"># COUNT1 is 3</span>
-<span class="hljs-comment"># COUNT2 is 3</span></code></pre></div>
-
-<h3 id="采用-QThread-并加锁"><a href="#采用-QThread-并加锁" class="headerlink" title="采用 QThread 并加锁"></a>采用 QThread 并加锁</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys
-<span class="hljs-keyword">from</span> PyQt5.QtCore <span class="hljs-keyword">import</span> QThread, QTimer, QMutex
-<span class="hljs-keyword">from</span> PyQt5.QtWidgets <span class="hljs-keyword">import</span> QMainWindow, QApplication
-
-
-<span class="hljs-comment"># 重写线程</span>
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Calculate</span>(<span class="hljs-title class_ inherited__">QThread</span>):
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, count, lock, unlock</span>):
-        <span class="hljs-built_in">super</span>(Calculate, self).__init__()
-        self.name = name
-        self.count = count
-        self.lock = lock  <span class="hljs-comment"># 需要加锁线程</span>
-        self.unlock = unlock  <span class="hljs-comment"># 需要解锁线程</span>
-
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
-        timer = QTimer()
-        timer.timeout.connect(<span class="hljs-keyword">lambda</span>: self.cal())
-        timer.start(<span class="hljs-number">100</span>)
-
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cal</span>(<span class="hljs-params">self</span>):
-        self.lock.lock()
-        <span class="hljs-built_in">print</span>(self.name + <span class="hljs-string">&#x27; is &#x27;</span> + self.count)
-        self.count += <span class="hljs-number">1</span>
-        self.unlock.unlock()
-
-
-<span class="hljs-comment"># QThread只能在QT程序中运行</span>
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>(<span class="hljs-title class_ inherited__">QMainWindow</span>):
-    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
-        <span class="hljs-built_in">super</span>(Window, self).__init__()
-        self.count1 = <span class="hljs-number">0</span>
-        self.count2 = <span class="hljs-number">0</span>
-        <span class="hljs-comment"># 初始化线程锁</span>
-        self.count1_lock = QMutex()
-        self.count2_lock = QMutex()
-        <span class="hljs-comment"># count2加锁，这样只能先运行没有加锁的count1</span>
-        self.count2_lock.lock()
-        self.calculate1 = Calculate(<span class="hljs-string">&#x27;COUNT1&#x27;</span>, self.count1, self.count1_lock, self.count2_lock)
-        self.calculate2 = Calculate(<span class="hljs-string">&#x27;COUNT2&#x27;</span>, self.count2, self.count2_lock, self.count1_lock)
-
-        self.calculate1.start()
-        self.calculate2.start()
-
-
-<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
-    app = QApplication(sys.argv)
-    win = Window()
-    win.show()
-    sys.exit(app.exec_())
-
-<span class="hljs-comment"># ouput:</span>
-<span class="hljs-comment"># COUNT1 is 0</span>
-<span class="hljs-comment"># COUNT2 is 0</span>
-<span class="hljs-comment"># COUNT1 is 1</span>
-<span class="hljs-comment"># COUNT2 is 1</span>
-<span class="hljs-comment"># COUNT1 is 2</span>
-<span class="hljs-comment"># COUNT2 is 2</span>
-<span class="hljs-comment"># COUNT1 is 3</span>
-<span class="hljs-comment"># COUNT2 is 3</span></code></pre></div>
+<span class="hljs-comment">// model类的去重</span>
+<span class="hljs-keyword">let</span> modelArrays <span class="hljs-operator">=</span> [<span class="hljs-type">Model</span>(<span class="hljs-string">&quot;1&quot;</span>), <span class="hljs-type">Model</span>(<span class="hljs-string">&quot;1&quot;</span>), <span class="hljs-type">Model</span>(<span class="hljs-string">&quot;2&quot;</span>), <span class="hljs-type">Model</span>(<span class="hljs-string">&quot;3&quot;</span>)]
+<span class="hljs-keyword">let</span> filterModels <span class="hljs-operator">=</span> modelArrays.filterDuplicates(&#123;<span class="hljs-variable">$0</span>.name&#125;)
+<span class="hljs-built_in">print</span>(filterModels)
+<span class="hljs-comment">// output</span>
+<span class="hljs-comment">// [Model(&quot;1&quot;), Model(&quot;2&quot;), Model(&quot;3&quot;)]</span></code></pre></div>
 
 
                 
@@ -476,7 +377,7 @@
   
     <span>></span>
     
-  <a href="/categories/Code/Python/" class="category-chain-item">Python</a>
+  <a href="/categories/Code/Swift/" class="category-chain-item">Swift</a>
   
   
 
@@ -493,7 +394,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
+        <a href="/tags/Swift/" class="print-no-link">#Swift</a>
       
     </div>
   
@@ -505,8 +406,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Python 以及 pyqt 线程锁简单使用</div>
-      <div>https://wonderhoi.com/2023/08/29/Python-以及-pyqt-线程锁简单使用/</div>
+      <div>Swift 数组去重</div>
+      <div>https://wonderhoi.com/2023/08/31/Swift-数组去重/</div>
     </div>
     <div class="license-meta">
       
@@ -518,7 +419,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年8月29日</div>
+          <div>2023年8月31日</div>
         </div>
       
       
@@ -550,9 +451,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/08/31/Swift-%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" title="Swift 数组去重">
+                      <a href="/2023/08/31/Swift-%E9%99%A4%E4%BD%99%E5%92%8C%E5%8F%96%E6%95%B4/" title="Swift 除余和取整">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Swift 数组去重</span>
+                        <span class="hidden-mobile">Swift 除余和取整</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -560,8 +461,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/08/28/Mac-%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA-Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="Mac 环境下搭建 Hexo 个人博客">
-                        <span class="hidden-mobile">Mac 环境下搭建 Hexo 个人博客</span>
+                      <a href="/2023/08/29/Python-%E4%BB%A5%E5%8F%8A-pyqt-%E7%BA%BF%E7%A8%8B%E9%94%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="Python 以及 pyqt 线程锁简单使用">
+                        <span class="hidden-mobile">Python 以及 pyqt 线程锁简单使用</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
