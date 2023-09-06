@@ -4,6 +4,108 @@
   
   
   <entry>
+    <title>Well-being, Flow Experience and Personal Characteristics of Individuals who Do Extreme Sports as Serious Leisure</title>
+    <link href="/2023/09/06/Well-being-Flow-Experience-and-Personal-Characteristics-of-Individuals-who-Do-Extreme-Sports-as-Serious-Leisure/"/>
+    <url>/2023/09/06/Well-being-Flow-Experience-and-Personal-Characteristics-of-Individuals-who-Do-Extreme-Sports-as-Serious-Leisure/</url>
+    
+    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/12AC5B89-A212-4D4C-9180-A48F2FB6DFF5_2/CMVybFFXpxjQzpuBPhwfMONl9DVcQpoKOXGkiBGA9JYz/Well-being%20Flow%20Experience%20and%20Personal%20Characteristics%20of%20Individuals%20who%20Do%20Extreme%20Sports%20as%20Serious%20Leisure.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>文献搬运</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>运动心理学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Peak Moments in Sport - A Literature Review</title>
+    <link href="/2023/09/06/Peak-Moments-in-Sport-A-Literature-Review/"/>
+    <url>/2023/09/06/Peak-Moments-in-Sport-A-Literature-Review/</url>
+    
+    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/C0564B89-023E-4F5D-AD12-900F64D29736_2/cE20Wlyq2UgcQqwRtX6NZjssSDCtNBGxm3XSJGtP2Woz/Peak%20Moments%20in%20Sport%20-%20A%20Literature%20Review.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>文献搬运</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>运动心理学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Peak Experience, Peak Performance, and Flow - A Comparative Analysis of Positive Human Experiences</title>
+    <link href="/2023/09/06/Peak-Experience-Peak-Performance-and-Flow-A-Comparative-Analysis-of-Positive-Human-Experiences/"/>
+    <url>/2023/09/06/Peak-Experience-Peak-Performance-and-Flow-A-Comparative-Analysis-of-Positive-Human-Experiences/</url>
+    
+    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/A8E499E9-9042-4335-9E87-7661FFB215B7_2/jdcLtkey9EjoxrC2b9wP3mvmnbX9o6p6mxXt8z4ywLAz/Peak%20Experience%20Peak%20Performance%20and%20Flow%20-%20A%20Comparative%20Analysis%20of%20Positive%20Human%20Experiences.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>文献搬运</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>运动心理学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hexo 展示 PDF 文件</title>
+    <link href="/2023/09/01/Hexo-%E5%B1%95%E7%A4%BA-PDF-%E6%96%87%E4%BB%B6/"/>
+    <url>/2023/09/01/Hexo-%E5%B1%95%E7%A4%BA-PDF-%E6%96%87%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<h3 id="安装-hexo-pdf-插件"><a href="#安装-hexo-pdf-插件" class="headerlink" title="安装 hexo-pdf 插件"></a>安装 hexo-pdf 插件</h3><div class="code-wrapper"><pre><code class="hljs bash">npm install --save hexo-pdf</code></pre></div><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>在需要的文章添加如下语句：</p><div class="code-wrapper"><pre><code class="hljs markdown">&#123;% pdf YourURL %&#125;</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>环境配置</category>
+      
+      <category>Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>基于表面肌电信号和动作捕捉的上肢运动疲劳分析</title>
     <link href="/2023/09/01/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E9%9D%A2%E8%82%8C%E7%94%B5%E4%BF%A1%E5%8F%B7%E5%92%8C%E5%8A%A8%E4%BD%9C%E6%8D%95%E6%8D%89%E7%9A%84%E4%B8%8A%E8%82%A2%E8%BF%90%E5%8A%A8%E7%96%B2%E5%8A%B3%E5%88%86%E6%9E%90/"/>
     <url>/2023/09/01/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E9%9D%A2%E8%82%8C%E7%94%B5%E4%BF%A1%E5%8F%B7%E5%92%8C%E5%8A%A8%E4%BD%9C%E6%8D%95%E6%8D%89%E7%9A%84%E4%B8%8A%E8%82%A2%E8%BF%90%E5%8A%A8%E7%96%B2%E5%8A%B3%E5%88%86%E6%9E%90/</url>
@@ -182,9 +284,9 @@
     
     <tags>
       
-      <tag>CEPT</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>CEPT</tag>
       
     </tags>
     
@@ -339,16 +441,18 @@
     
     <categories>
       
-      <category>驱动</category>
+      <category>Code</category>
+      
+      <category>Arduino</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>EMG</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -443,7 +547,9 @@
     
     <categories>
       
-      <category>驱动</category>
+      <category>Code</category>
+      
+      <category>Arduino</category>
       
     </categories>
     
@@ -472,7 +578,9 @@
     
     <categories>
       
-      <category>驱动</category>
+      <category>Code</category>
+      
+      <category>Arduino</category>
       
     </categories>
     
@@ -740,7 +848,9 @@
     
     <categories>
       
-      <category>驱动</category>
+      <category>Code</category>
+      
+      <category>Arduino</category>
       
     </categories>
     
