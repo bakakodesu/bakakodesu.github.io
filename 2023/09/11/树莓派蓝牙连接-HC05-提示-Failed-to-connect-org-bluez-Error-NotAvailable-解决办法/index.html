@@ -18,24 +18,24 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta name="description" content="缓存原因通过 File - Invalidate caches… 的方式清理缓存。 网盘原因因为我的工程文件是放在 Dropbox 里的。有时候会因为 Dropbox 在同步文件导致打开工程文件后，在建立和更新索引时卡住。">
+    <meta name="description" content="树莓派在连接 HC05 蓝牙模块时遇见了一些问题。 虽然成功配对： [bluetooth]# pair 98:D3:02:96:9A:BB Attempting to pair with 98:D3:02:96:9A:BB [CHG] Device 98:D3:02:96:9A:BB Connected: yes Request PIN code [agent] Enter PIN code: [">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PyCharm 打开文件在 scanning files to index 卡死，或者关闭文件时等待时间过长">
-<meta property="og:url" content="https://wonderhoi.com/2023/09/11/PyCharm-%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E5%9C%A8-scanning-files-to-index-%E5%8D%A1%E6%AD%BB%EF%BC%8C%E6%88%96%E8%80%85%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6%E6%97%B6%E7%AD%89%E5%BE%85%E6%97%B6%E9%97%B4%E8%BF%87%E9%95%BF/index.html">
+<meta property="og:title" content="树莓派蓝牙连接 HC05 提示 Failed to connect: org.bluez.Error.NotAvailable 解决办法">
+<meta property="og:url" content="https://wonderhoi.com/2023/09/11/%E6%A0%91%E8%8E%93%E6%B4%BE%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5-HC05-%E6%8F%90%E7%A4%BA-Failed-to-connect-org-bluez-Error-NotAvailable-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="缓存原因通过 File - Invalidate caches… 的方式清理缓存。 网盘原因因为我的工程文件是放在 Dropbox 里的。有时候会因为 Dropbox 在同步文件导致打开工程文件后，在建立和更新索引时卡住。">
+<meta property="og:description" content="树莓派在连接 HC05 蓝牙模块时遇见了一些问题。 虽然成功配对： [bluetooth]# pair 98:D3:02:96:9A:BB Attempting to pair with 98:D3:02:96:9A:BB [CHG] Device 98:D3:02:96:9A:BB Connected: yes Request PIN code [agent] Enter PIN code: [">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-09-11T03:34:29.000Z">
-<meta property="article:modified_time" content="2023-09-11T03:44:12.791Z">
+<meta property="article:published_time" content="2023-09-11T09:38:37.000Z">
+<meta property="article:modified_time" content="2023-09-11T09:58:46.022Z">
 <meta property="article:author" content="刘子航">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Raspberry Pi">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>PyCharm 打开文件在 scanning files to index 卡死，或者关闭文件时等待时间过长 - 这是一个PM的BLOG</title>
+  <title>树莓派蓝牙连接 HC05 提示 Failed to connect: org.bluez.Error.NotAvailable 解决办法 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -228,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="PyCharm 打开文件在 scanning files to index 卡死，或者关闭文件时等待时间过长"></span>
+            <span id="subtitle" data-typed-text="树莓派蓝牙连接 HC05 提示 Failed to connect: org.bluez.Error.NotAvailable 解决办法"></span>
           
         </div>
 
@@ -239,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-11 11:34" pubdate>
-          2023年9月11日 中午
+        <time datetime="2023-09-11 17:38" pubdate>
+          2023年9月11日 下午
         </time>
       </span>
     
@@ -251,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          101 字
+          1.3k 字
         
       </span>
     
@@ -290,13 +290,51 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">PyCharm 打开文件在 scanning files to index 卡死，或者关闭文件时等待时间过长</h1>
+            <h1 id="seo-header">树莓派蓝牙连接 HC05 提示 Failed to connect: org.bluez.Error.NotAvailable 解决办法</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="缓存原因"><a href="#缓存原因" class="headerlink" title="缓存原因"></a>缓存原因</h3><p>通过 File - Invalidate caches… 的方式清理缓存。</p>
-<h3 id="网盘原因"><a href="#网盘原因" class="headerlink" title="网盘原因"></a>网盘原因</h3><p>因为我的工程文件是放在 Dropbox 里的。有时候会因为 Dropbox 在同步文件导致打开工程文件后，在建立和更新索引时卡住。</p>
+                <p>树莓派在连接 HC05 蓝牙模块时遇见了一些问题。</p>
+<p>虽然成功配对：</p>
+<div class="code-wrapper"><pre><code class="hljs less"><span class="hljs-selector-attr">[bluetooth]</span># <span class="hljs-selector-tag">pair</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span>
+<span class="hljs-selector-tag">Attempting</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">pair</span> <span class="hljs-selector-tag">with</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span>
+<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">Connected</span>: <span class="hljs-selector-tag">yes</span>
+<span class="hljs-selector-tag">Request</span> <span class="hljs-selector-tag">PIN</span> <span class="hljs-selector-tag">code</span>
+<span class="hljs-selector-attr">[agent]</span> <span class="hljs-selector-tag">Enter</span> <span class="hljs-selector-tag">PIN</span> <span class="hljs-selector-tag">code</span>: <span class="hljs-selector-attr">[DEL]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">4</span><span class="hljs-selector-tag">D</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">E</span>:<span class="hljs-number">4</span><span class="hljs-selector-tag">F</span>:<span class="hljs-number">54</span>:<span class="hljs-number">59</span>:<span class="hljs-number">22</span> <span class="hljs-number">4</span><span class="hljs-selector-tag">D-9E-4F-54-59-22</span>
+<span class="hljs-selector-attr">[agent]</span> <span class="hljs-selector-tag">Enter</span> <span class="hljs-selector-tag">PIN</span> <span class="hljs-selector-tag">code</span>: <span class="hljs-selector-attr">[DEL]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">10</span>:<span class="hljs-number">05</span>:<span class="hljs-number">6</span><span class="hljs-selector-tag">C</span>:<span class="hljs-number">76</span>:<span class="hljs-selector-tag">F6</span>:<span class="hljs-selector-tag">F0</span> <span class="hljs-selector-tag">MC76F6F0</span>
+<span class="hljs-selector-attr">[agent]</span> <span class="hljs-selector-tag">Enter</span> <span class="hljs-selector-tag">PIN</span> <span class="hljs-selector-tag">code</span>: <span class="hljs-number">1234</span>
+<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">UUIDs</span>: <span class="hljs-number">00001101</span><span class="hljs-selector-tag">-0000-1000-8000-00805f9b34fb</span>
+<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">ServicesResolved</span>: <span class="hljs-selector-tag">yes</span>
+<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">Paired</span>: <span class="hljs-selector-tag">yes</span>
+<span class="hljs-selector-tag">Pairing</span> <span class="hljs-selector-tag">successful</span>
+<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">ServicesResolved</span>: <span class="hljs-selector-tag">no</span>
+<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">Connected</span>: <span class="hljs-selector-tag">no</span></code></pre></div>
+
+<p>但可以看到自动断开了。</p>
+<p>再次连接时，提示 <code>Failed to connect: org.bluez.Error.NotAvailable</code>，如下面所示：</p>
+<div class="code-wrapper"><pre><code class="hljs yaml">[<span class="hljs-string">bluetooth</span>]<span class="hljs-comment"># connect 98:D3:02:96:9A:BB</span>
+<span class="hljs-string">Attempting</span> <span class="hljs-string">to</span> <span class="hljs-string">connect</span> <span class="hljs-string">to</span> <span class="hljs-number">98</span><span class="hljs-string">:D3:02:96:9A:BB</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 98:D3:02:96:9A:BB Connected:</span> <span class="hljs-literal">yes</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 98:D3:02:96:9A:BB ServicesResolved:</span> <span class="hljs-literal">yes</span>
+<span class="hljs-attr">Failed to connect:</span> <span class="hljs-string">org.bluez.Error.NotAvailable</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 98:D3:02:96:9A:BB ServicesResolved:</span> <span class="hljs-literal">no</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 98:D3:02:96:9A:BB Connected:</span> <span class="hljs-literal">no</span></code></pre></div>
+
+<p>在 GUI 上进行连接，则会提示 <code>Connection failed - No usable services on this device</code>。</p>
+<p>此处问题并非个例、在其它帖子里看到过相同问题。</p>
+<p>真正的原因是默认情况下树莓派蓝牙始终是作为从模式，所以主动连接的话，无论什么设备都会秒掉线（存疑）。</p>
+<p>下面是解决办法：</p>
+<p>不再通过 bluetoothctl 工具进行连接，而是：</p>
+<div class="code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">sudo</span> rfcomm connect hci0 <span class="hljs-number">98</span>:D3:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span>A:BB</code></pre></div>
+
+<p>参考：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://forums.raspberrypi.com/viewtopic.php?t=162911&sid=86d298a19589e7836b4eb2408a920bde">Failed to connect: org.bluez.Error.NotAvailable</a>；</li>
+<li><a target="_blank" rel="noopener" href="https://forums.raspberrypi.com/viewtopic.php?t=163712&sid=3d7b1a34f4fcf6cfcafecdb3d345bf15">Raspberry Pi 3 Unable to Connect to Arduino with HC-06</a></li>
+<li><a target="_blank" rel="noopener" href="https://raspberrypi.stackexchange.com/questions/82173/failed-to-connect-org-bluez-error-notavailable-error">Failed to connect: org.bluez.Error.NotAvailable - Error</a>；</li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/jinanhezhuang/article/details/109250208">树莓派和HC-05蓝牙连接以及通过串口写入（Write）和读入(Read)数据</a>。</li>
+</ol>
 
                 
               </div>
@@ -315,15 +353,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="category-chain-item">环境配置</a>
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/PyCharm/" class="category-chain-item">PyCharm</a>
-  
-  
-
   
 
       </span>
@@ -337,7 +368,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
+        <a href="/tags/Raspberry-Pi/" class="print-no-link">#Raspberry Pi</a>
       
     </div>
   
@@ -349,8 +380,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>PyCharm 打开文件在 scanning files to index 卡死，或者关闭文件时等待时间过长</div>
-      <div>https://wonderhoi.com/2023/09/11/PyCharm-打开文件在-scanning-files-to-index-卡死，或者关闭文件时等待时间过长/</div>
+      <div>树莓派蓝牙连接 HC05 提示 Failed to connect: org.bluez.Error.NotAvailable 解决办法</div>
+      <div>https://wonderhoi.com/2023/09/11/树莓派蓝牙连接-HC05-提示-Failed-to-connect-org-bluez-Error-NotAvailable-解决办法/</div>
     </div>
     <div class="license-meta">
       
@@ -394,9 +425,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/09/11/macOS-%E6%9F%A5%E7%9C%8B%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87%E7%9A%84-MAC-%E5%9C%B0%E5%9D%80/" title="macOS 查看蓝牙设备的 MAC 地址">
+                      <a href="/2023/09/11/%E5%85%B3%E8%8A%82%E6%B4%BB%E5%8A%A8%E5%BA%A6-ROM/" title="关节活动度 ROM">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">macOS 查看蓝牙设备的 MAC 地址</span>
+                        <span class="hidden-mobile">关节活动度 ROM</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -404,8 +435,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/11/STRETCH-SHORTENING-CYCLE-SSC/" title="STRETCH-SHORTENING CYCLE (SSC)">
-                        <span class="hidden-mobile">STRETCH-SHORTENING CYCLE (SSC)</span>
+                      <a href="/2023/09/11/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE%E8%93%9D%E7%89%99%EF%BC%88%E7%BB%88%E7%AB%AF%EF%BC%89/" title="树莓派配置蓝牙（终端）">
+                        <span class="hidden-mobile">树莓派配置蓝牙（终端）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
