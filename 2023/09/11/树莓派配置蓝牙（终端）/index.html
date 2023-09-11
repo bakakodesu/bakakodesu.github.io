@@ -26,7 +26,7 @@
 <meta property="og:description" content="启动蓝牙命令行工具 bluetoothctl  开启代理 agent on  扫描设备 scan on  通过扫描设备，可以检索到对应设备的MAC地址，之后可以用该设备的MAC地址来与树莓派进行配对，扫描结果如下 [bluetooth]# scan on Discovery started [CHG] Controller E4:5F:01:26:55:90 Discovering: yes [">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-11T09:34:26.000Z">
-<meta property="article:modified_time" content="2023-09-11T09:35:57.754Z">
+<meta property="article:modified_time" content="2023-09-11T14:16:29.774Z">
 <meta property="article:author" content="刘子航">
 <meta property="article:tag" content="Raspberry Pi">
 <meta name="twitter:card" content="summary_large_image">
@@ -297,35 +297,35 @@
                 
                 <ol>
 <li><p>启动蓝牙命令行工具</p>
-<div class="code-wrapper"><pre><code class="hljs ebnf"><span class="hljs-attribute">bluetoothctl</span></code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs bash">bluetoothctl</code></pre></div>
 </li>
 <li><p>开启代理</p>
-<div class="code-wrapper"><pre><code class="hljs nginx"><span class="hljs-attribute">agent</span> <span class="hljs-literal">on</span></code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs bash">agent on</code></pre></div>
 </li>
 <li><p>扫描设备</p>
-<div class="code-wrapper"><pre><code class="hljs nginx"><span class="hljs-attribute">scan</span> <span class="hljs-literal">on</span></code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs bash">scan on</code></pre></div>
 
 <p>通过扫描设备，可以检索到对应设备的MAC地址，之后可以用该设备的MAC地址来与树莓派进行配对，扫描结果如下</p>
-<div class="code-wrapper"><pre><code class="hljs mipsasm">[<span class="hljs-keyword">bluetooth]# </span><span class="hljs-keyword">scan </span>on
-<span class="hljs-keyword">Discovery </span>started
-[CHG] Controller E4:<span class="hljs-number">5</span>F:<span class="hljs-number">01</span>:<span class="hljs-number">26</span>:<span class="hljs-number">55</span>:<span class="hljs-number">90</span> <span class="hljs-keyword">Discovering: </span>yes
-[NEW] Device <span class="hljs-number">4</span>A:E4:<span class="hljs-number">8</span>E:E3:<span class="hljs-keyword">BC:54 </span><span class="hljs-number">4</span>A-E4<span class="hljs-number">-8</span>E-E3-<span class="hljs-keyword">BC-54</span>
-<span class="hljs-keyword"></span>[CHG] Device <span class="hljs-number">9</span>C:<span class="hljs-number">19</span>:C2:<span class="hljs-number">4</span>D:<span class="hljs-number">88</span>:DC Name: Redmi <span class="hljs-keyword">Buds </span><span class="hljs-number">3</span></code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs yaml">[<span class="hljs-string">bluetooth</span>]<span class="hljs-comment"># scan on</span>
+<span class="hljs-string">Discovery</span> <span class="hljs-string">started</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Controller E4:5F:01:26:55:90 Discovering:</span> <span class="hljs-literal">yes</span>
+[<span class="hljs-string">NEW</span>] <span class="hljs-string">Device</span> <span class="hljs-string">4A:E4:8E:E3:BC:54</span> <span class="hljs-string">4A-E4-8E-E3-BC-54</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 9C:19:C2:4D:88:DC Name:</span> <span class="hljs-string">Redmi</span> <span class="hljs-string">Buds</span> <span class="hljs-number">3</span></code></pre></div>
 </li>
 <li><p>树莓派与蓝牙设备进行配对</p>
-<div class="code-wrapper"><pre><code class="hljs mathematica"><span class="hljs-punctuation">[</span><span class="hljs-variable">bluetooth</span><span class="hljs-punctuation">]</span><span class="hljs-type">#</span> <span class="hljs-variable">pair</span> <span class="hljs-number">9</span><span class="hljs-built_in">C</span><span class="hljs-operator">:</span><span class="hljs-number">19</span><span class="hljs-operator">:</span><span class="hljs-variable">C2</span><span class="hljs-operator">:</span><span class="hljs-number">4</span><span class="hljs-built_in">D</span><span class="hljs-operator">:</span><span class="hljs-number">88</span><span class="hljs-operator">:</span><span class="hljs-variable">DC</span>
-<span class="hljs-variable">Attempting</span> <span class="hljs-variable">to</span> <span class="hljs-variable">pair</span> <span class="hljs-variable">with</span> <span class="hljs-number">9</span><span class="hljs-built_in">C</span><span class="hljs-operator">:</span><span class="hljs-number">19</span><span class="hljs-operator">:</span><span class="hljs-variable">C2</span><span class="hljs-operator">:</span><span class="hljs-number">4</span><span class="hljs-built_in">D</span><span class="hljs-operator">:</span><span class="hljs-number">88</span><span class="hljs-operator">:</span><span class="hljs-variable">DC</span>
-<span class="hljs-punctuation">[</span><span class="hljs-variable">CHG</span><span class="hljs-punctuation">]</span> <span class="hljs-variable">Device</span> <span class="hljs-number">9</span><span class="hljs-built_in">C</span><span class="hljs-operator">:</span><span class="hljs-number">19</span><span class="hljs-operator">:</span><span class="hljs-variable">C2</span><span class="hljs-operator">:</span><span class="hljs-number">4</span><span class="hljs-built_in">D</span><span class="hljs-operator">:</span><span class="hljs-number">88</span><span class="hljs-operator">:</span><span class="hljs-variable">DC</span> <span class="hljs-variable">Connected</span><span class="hljs-operator">:</span> <span class="hljs-variable">yes</span></code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs yaml">[<span class="hljs-string">bluetooth</span>]<span class="hljs-comment"># pair 9C:19:C2:4D:88:DC</span>
+<span class="hljs-string">Attempting</span> <span class="hljs-string">to</span> <span class="hljs-string">pair</span> <span class="hljs-string">with</span> <span class="hljs-string">9C:19:C2:4D:88:DC</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 9C:19:C2:4D:88:DC Connected:</span> <span class="hljs-literal">yes</span></code></pre></div>
 
 <p>配对成功</p>
 </li>
 <li><p>连接设备（第一次配对会自动连接，否则需要执行以下命令连接）</p>
-<div class="code-wrapper"><pre><code class="hljs mathematica"><span class="hljs-punctuation">[</span><span class="hljs-variable">Redmi</span> <span class="hljs-variable">Buds</span> <span class="hljs-number">3</span><span class="hljs-punctuation">]</span><span class="hljs-type">#</span> <span class="hljs-variable">connect</span> <span class="hljs-number">9</span><span class="hljs-built_in">C</span><span class="hljs-operator">:</span><span class="hljs-number">19</span><span class="hljs-operator">:</span><span class="hljs-variable">C2</span><span class="hljs-operator">:</span><span class="hljs-number">4</span><span class="hljs-built_in">D</span><span class="hljs-operator">:</span><span class="hljs-number">88</span><span class="hljs-operator">:</span><span class="hljs-variable">DC</span>
-<span class="hljs-variable">Attempting</span> <span class="hljs-variable">to</span> <span class="hljs-variable">connect</span> <span class="hljs-variable">to</span> <span class="hljs-number">9</span><span class="hljs-built_in">C</span><span class="hljs-operator">:</span><span class="hljs-number">19</span><span class="hljs-operator">:</span><span class="hljs-variable">C2</span><span class="hljs-operator">:</span><span class="hljs-number">4</span><span class="hljs-built_in">D</span><span class="hljs-operator">:</span><span class="hljs-number">88</span><span class="hljs-operator">:</span><span class="hljs-variable">DC</span>
-<span class="hljs-punctuation">[</span><span class="hljs-variable">CHG</span><span class="hljs-punctuation">]</span> <span class="hljs-variable">Device</span> <span class="hljs-number">9</span><span class="hljs-built_in">C</span><span class="hljs-operator">:</span><span class="hljs-number">19</span><span class="hljs-operator">:</span><span class="hljs-variable">C2</span><span class="hljs-operator">:</span><span class="hljs-number">4</span><span class="hljs-built_in">D</span><span class="hljs-operator">:</span><span class="hljs-number">88</span><span class="hljs-operator">:</span><span class="hljs-variable">DC</span> <span class="hljs-variable">Connected</span><span class="hljs-operator">:</span> <span class="hljs-variable">yes</span>
-<span class="hljs-variable">Connection</span> <span class="hljs-variable">successful</span></code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs yaml">[<span class="hljs-string">Redmi</span> <span class="hljs-string">Buds</span> <span class="hljs-number">3</span>]<span class="hljs-comment"># connect 9C:19:C2:4D:88:DC</span>
+<span class="hljs-string">Attempting</span> <span class="hljs-string">to</span> <span class="hljs-string">connect</span> <span class="hljs-string">to</span> <span class="hljs-string">9C:19:C2:4D:88:DC</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 9C:19:C2:4D:88:DC Connected:</span> <span class="hljs-literal">yes</span>
+<span class="hljs-string">Connection</span> <span class="hljs-string">successful</span></code></pre></div>
 
-<p>连接成功（如需退出可输入<code>quit</code>退出蓝牙）</p>
+<p>连接成功（如需退出可输入 <code>quit</code> 退出蓝牙）</p>
 </li>
 </ol>
 

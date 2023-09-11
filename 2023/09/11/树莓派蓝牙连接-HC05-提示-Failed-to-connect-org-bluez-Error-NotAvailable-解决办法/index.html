@@ -26,7 +26,7 @@
 <meta property="og:description" content="树莓派在连接 HC05 蓝牙模块时遇见了一些问题。 虽然成功配对： [bluetooth]# pair 98:D3:02:96:9A:BB Attempting to pair with 98:D3:02:96:9A:BB [CHG] Device 98:D3:02:96:9A:BB Connected: yes Request PIN code [agent] Enter PIN code: [">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-11T09:38:37.000Z">
-<meta property="article:modified_time" content="2023-09-11T09:58:46.022Z">
+<meta property="article:modified_time" content="2023-09-11T14:16:26.676Z">
 <meta property="article:author" content="刘子航">
 <meta property="article:tag" content="Raspberry Pi">
 <meta name="twitter:card" content="summary_large_image">
@@ -297,19 +297,19 @@
                 
                 <p>树莓派在连接 HC05 蓝牙模块时遇见了一些问题。</p>
 <p>虽然成功配对：</p>
-<div class="code-wrapper"><pre><code class="hljs less"><span class="hljs-selector-attr">[bluetooth]</span># <span class="hljs-selector-tag">pair</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span>
-<span class="hljs-selector-tag">Attempting</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">pair</span> <span class="hljs-selector-tag">with</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span>
-<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">Connected</span>: <span class="hljs-selector-tag">yes</span>
-<span class="hljs-selector-tag">Request</span> <span class="hljs-selector-tag">PIN</span> <span class="hljs-selector-tag">code</span>
-<span class="hljs-selector-attr">[agent]</span> <span class="hljs-selector-tag">Enter</span> <span class="hljs-selector-tag">PIN</span> <span class="hljs-selector-tag">code</span>: <span class="hljs-selector-attr">[DEL]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">4</span><span class="hljs-selector-tag">D</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">E</span>:<span class="hljs-number">4</span><span class="hljs-selector-tag">F</span>:<span class="hljs-number">54</span>:<span class="hljs-number">59</span>:<span class="hljs-number">22</span> <span class="hljs-number">4</span><span class="hljs-selector-tag">D-9E-4F-54-59-22</span>
-<span class="hljs-selector-attr">[agent]</span> <span class="hljs-selector-tag">Enter</span> <span class="hljs-selector-tag">PIN</span> <span class="hljs-selector-tag">code</span>: <span class="hljs-selector-attr">[DEL]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">10</span>:<span class="hljs-number">05</span>:<span class="hljs-number">6</span><span class="hljs-selector-tag">C</span>:<span class="hljs-number">76</span>:<span class="hljs-selector-tag">F6</span>:<span class="hljs-selector-tag">F0</span> <span class="hljs-selector-tag">MC76F6F0</span>
-<span class="hljs-selector-attr">[agent]</span> <span class="hljs-selector-tag">Enter</span> <span class="hljs-selector-tag">PIN</span> <span class="hljs-selector-tag">code</span>: <span class="hljs-number">1234</span>
-<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">UUIDs</span>: <span class="hljs-number">00001101</span><span class="hljs-selector-tag">-0000-1000-8000-00805f9b34fb</span>
-<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">ServicesResolved</span>: <span class="hljs-selector-tag">yes</span>
-<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">Paired</span>: <span class="hljs-selector-tag">yes</span>
-<span class="hljs-selector-tag">Pairing</span> <span class="hljs-selector-tag">successful</span>
-<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">ServicesResolved</span>: <span class="hljs-selector-tag">no</span>
-<span class="hljs-selector-attr">[CHG]</span> <span class="hljs-selector-tag">Device</span> <span class="hljs-number">98</span>:<span class="hljs-selector-tag">D3</span>:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span><span class="hljs-selector-tag">A</span>:<span class="hljs-selector-tag">BB</span> <span class="hljs-selector-tag">Connected</span>: <span class="hljs-selector-tag">no</span></code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs yaml">[<span class="hljs-string">bluetooth</span>]<span class="hljs-comment"># pair 98:D3:02:96:9A:BB</span>
+<span class="hljs-string">Attempting</span> <span class="hljs-string">to</span> <span class="hljs-string">pair</span> <span class="hljs-string">with</span> <span class="hljs-number">98</span><span class="hljs-string">:D3:02:96:9A:BB</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 98:D3:02:96:9A:BB Connected:</span> <span class="hljs-literal">yes</span>
+<span class="hljs-string">Request</span> <span class="hljs-string">PIN</span> <span class="hljs-string">code</span>
+[<span class="hljs-string">agent</span>] <span class="hljs-attr">Enter PIN code:</span> [<span class="hljs-string">DEL</span>] <span class="hljs-string">Device</span> <span class="hljs-string">4D:9E:4F:54:59:22</span> <span class="hljs-string">4D-9E-4F-54-59-22</span>
+[<span class="hljs-string">agent</span>] <span class="hljs-attr">Enter PIN code:</span> [<span class="hljs-string">DEL</span>] <span class="hljs-string">Device</span> <span class="hljs-number">10</span><span class="hljs-string">:05:6C:76:F6:F0</span> <span class="hljs-string">MC76F6F0</span>
+[<span class="hljs-string">agent</span>] <span class="hljs-attr">Enter PIN code:</span> <span class="hljs-number">1234</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 98:D3:02:96:9A:BB UUIDs:</span> <span class="hljs-number">00001101</span><span class="hljs-number">-0000</span><span class="hljs-number">-1000</span><span class="hljs-number">-8000</span><span class="hljs-string">-00805f9b34fb</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 98:D3:02:96:9A:BB ServicesResolved:</span> <span class="hljs-literal">yes</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 98:D3:02:96:9A:BB Paired:</span> <span class="hljs-literal">yes</span>
+<span class="hljs-string">Pairing</span> <span class="hljs-string">successful</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 98:D3:02:96:9A:BB ServicesResolved:</span> <span class="hljs-literal">no</span>
+[<span class="hljs-string">CHG</span>] <span class="hljs-attr">Device 98:D3:02:96:9A:BB Connected:</span> <span class="hljs-literal">no</span></code></pre></div>
 
 <p>但可以看到自动断开了。</p>
 <p>再次连接时，提示 <code>Failed to connect: org.bluez.Error.NotAvailable</code>，如下面所示：</p>
@@ -326,7 +326,7 @@
 <p>真正的原因是默认情况下树莓派蓝牙始终是作为从模式，所以主动连接的话，无论什么设备都会秒掉线（存疑）。</p>
 <p>下面是解决办法：</p>
 <p>不再通过 bluetoothctl 工具进行连接，而是：</p>
-<div class="code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">sudo</span> rfcomm connect hci0 <span class="hljs-number">98</span>:D3:<span class="hljs-number">02</span>:<span class="hljs-number">96</span>:<span class="hljs-number">9</span>A:BB</code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs bash">sudo rfcomm connect hci0 98:D3:02:96:9A:BB</code></pre></div>
 
 <p>参考：</p>
 <ol>

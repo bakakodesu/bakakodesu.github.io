@@ -26,7 +26,7 @@
 <meta property="og:description" content="绳波的功率公式为$$P&#x3D;(μA²ω²v)&#x2F;2$$其中  密度μ等于绳重&#x2F;绳长，单位为kg&#x2F;m； A绳波振幅，单位为m； ω角速度，角速度公式为ω&#x3D;2πf，f为绳波频率。  波速v计算公式$$v&#x3D;λ&#x2F;T&#x3D;fλ&#x3D;\sqrt{F&#x2F;μ}$$其中  λ波长，是两个相邻的状态相同的点之间的距离，单位为m; 周期">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-03T12:46:25.000Z">
-<meta property="article:modified_time" content="2023-08-24T09:28:46.107Z">
+<meta property="article:modified_time" content="2023-09-11T14:16:16.431Z">
 <meta property="article:author" content="刘子航">
 <meta property="article:tag" content="IMU">
 <meta name="twitter:card" content="summary_large_image">
@@ -471,12 +471,6 @@
   
 
 
-  
-  
-
-
-
-
 
 
 
@@ -692,49 +686,6 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
