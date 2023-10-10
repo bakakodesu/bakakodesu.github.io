@@ -4,6 +4,193 @@
   
   
   <entry>
+    <title>CoreData 报错 Failed to call designated initializer on NSManagedObject class</title>
+    <link href="/2023/10/10/CoreData-%E6%8A%A5%E9%94%99-Failed-to-call-designated-initializer-on-NSManagedObject-class/"/>
+    <url>/2023/10/10/CoreData-%E6%8A%A5%E9%94%99-Failed-to-call-designated-initializer-on-NSManagedObject-class/</url>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://stackoverflow.com/questions/33301250/resolving-failed-to-call-designated-initializer-on-nsmanagedobject-class">Resolving ‘Failed to call designated initializer on NSManagedObject class’</a></li></ul><p>The problem lies not in the code in your question, but in the snippet you included as comments to the other answer:</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">var</span> currentCourse <span class="hljs-operator">=</span> <span class="hljs-type">Course</span>()</code></pre></div><p>This doesn’t just declare <code>currentCourse</code> to be of type <code>Course</code>, it also creates an instance of the <code>Course</code> entity using the standard <code>init</code> method. This is expressly not allowed: You must use the designated initialiser: <code>init(entity entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?)</code>. This is described in the Apple Documentation <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Reference/CoreDataFramework/Classes/NSManagedObject_Class/index.html#//apple_ref/doc/uid/TP30001171-SW7">here</a>.</p><p>I suspect you do not ever use the instance created by the above var definition, so just define it as being of type <code>Course?</code>:</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">var</span> currentCourse : <span class="hljs-type">Course</span>?</code></pre></div><p>Since it is optional, you do not need to set an initial value, though you will need to unwrap the value whenever it is used.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Swift</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CoreData 删除数据时 SwiftUI 崩溃</title>
+    <link href="/2023/10/10/CoreData-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE%E6%97%B6-SwiftUI-%E5%B4%A9%E6%BA%83/"/>
+    <url>/2023/10/10/CoreData-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE%E6%97%B6-SwiftUI-%E5%B4%A9%E6%BA%83/</url>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://stackoverflow.com/questions/60604658/crash-when-delete-a-record-from-coredata-in-swiftui">Crash when delete a record from coredata in SwiftUI</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Swift</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Swift 汉字转码</title>
+    <link href="/2023/10/10/Swift-%E6%B1%89%E5%AD%97%E8%BD%AC%E7%A0%81/"/>
+    <url>/2023/10/10/Swift-%E6%B1%89%E5%AD%97%E8%BD%AC%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<h3 id="汉字转码"><a href="#汉字转码" class="headerlink" title="汉字转码"></a>汉字转码</h3><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> <span class="hljs-type">URL</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;https://www.baidu.com/s?wd=点个赞吧&quot;</span><span class="hljs-keyword">let</span> result <span class="hljs-operator">=</span> str.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)<span class="hljs-built_in">print</span>(result)</code></pre></div><h3 id="解码"><a href="#解码" class="headerlink" title="解码"></a>解码</h3><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> <span class="hljs-type">URL</span> <span class="hljs-operator">=</span> result<span class="hljs-operator">?</span>.removingPercentEncoding<span class="hljs-built_in">print</span>(<span class="hljs-type">URL</span>)</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Swift</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SwiftUI 隐藏键盘</title>
+    <link href="/2023/10/06/SwiftUI-%E9%9A%90%E8%97%8F%E9%94%AE%E7%9B%98/"/>
+    <url>/2023/10/06/SwiftUI-%E9%9A%90%E8%97%8F%E9%94%AE%E7%9B%98/</url>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://stackoverflow.com/questions/56491386/how-to-hide-keyboard-when-using-swiftui">How to hide keyboard when using SwiftUI?</a>;</li><li><a href="https://stackoverflow.com/questions/703754/how-to-dismiss-keyboard-for-uitextview-with-return-key">How to dismiss keyboard for UITextView with return key?</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Swift</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Swift 创建可以自动停止的 Timer</title>
+    <link href="/2023/10/06/Swift-%E5%88%9B%E5%BB%BA%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%8A%A8%E5%81%9C%E6%AD%A2%E7%9A%84-Timer/"/>
+    <url>/2023/10/06/Swift-%E5%88%9B%E5%BB%BA%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%8A%A8%E5%81%9C%E6%AD%A2%E7%9A%84-Timer/</url>
+    
+    <content type="html"><![CDATA[<h3 id="在离开页面时停止-Timer"><a href="#在离开页面时停止-Timer" class="headerlink" title="在离开页面时停止 Timer"></a>在离开页面时停止 Timer</h3><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">import</span> SwiftUI<span class="hljs-keyword">struct</span> <span class="hljs-title class_">TimerView</span>: <span class="hljs-title class_">View</span> &#123;    <span class="hljs-meta">@State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> number <span class="hljs-operator">=</span> <span class="hljs-number">0</span>    <span class="hljs-meta">@State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> timer: <span class="hljs-type">Timer</span>?    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;        <span class="hljs-type">VStack</span> &#123;            <span class="hljs-type">Image</span>(<span class="hljs-string">&quot;pic&quot;</span>)            <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;<span class="hljs-subst">\(number)</span>&quot;</span>)                .font(.largeTitle)        &#125;        .onAppear &#123;            <span class="hljs-keyword">self</span>.timer <span class="hljs-operator">=</span> <span class="hljs-type">Timer</span>.scheduledTimer(withTimeInterval: <span class="hljs-number">1</span>, repeats: <span class="hljs-literal">true</span>) &#123; (<span class="hljs-keyword">_</span>) <span class="hljs-keyword">in</span>                <span class="hljs-keyword">self</span>.number <span class="hljs-operator">+=</span> <span class="hljs-number">1</span>                <span class="hljs-built_in">print</span>(<span class="hljs-keyword">self</span>.number)                            &#125;        &#125;        .onDisappear &#123;            <span class="hljs-keyword">self</span>.timer<span class="hljs-operator">?</span>.invalidate()        &#125;    &#125;&#125;</code></pre></div><h3 id="使用-Combine-提供的-timer-publisher"><a href="#使用-Combine-提供的-timer-publisher" class="headerlink" title="使用 Combine 提供的 timer publisher"></a>使用 Combine 提供的 timer publisher</h3><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">import</span> SwiftUI<span class="hljs-keyword">import</span> Combine<span class="hljs-keyword">struct</span> <span class="hljs-title class_">TimerView</span>: <span class="hljs-title class_">View</span> &#123;    <span class="hljs-meta">@State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> number <span class="hljs-operator">=</span> <span class="hljs-number">0</span>    <span class="hljs-keyword">let</span> timer <span class="hljs-operator">=</span> <span class="hljs-type">Timer</span>.publish(every: <span class="hljs-number">1</span>, on: .main, in: .common).autoconnect()    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;        <span class="hljs-type">VStack</span> &#123;            <span class="hljs-type">Image</span>(<span class="hljs-string">&quot;pic&quot;</span>)            <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;<span class="hljs-subst">\(number)</span>&quot;</span>)                .font(.largeTitle)        &#125;        .onReceive(timer, perform: &#123; (<span class="hljs-keyword">_</span>) <span class="hljs-keyword">in</span>             <span class="hljs-keyword">self</span>.number <span class="hljs-operator">+=</span> <span class="hljs-number">1</span>             <span class="hljs-built_in">print</span>(<span class="hljs-keyword">self</span>.number)        &#125;)    &#125;&#125;</code></pre></div><p>combine 扩充了 timer 的功能，我们可以直接产生 timer 的 publisher，让它定时发送 value。在此我们设定它每秒触发一次。</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> timer <span class="hljs-operator">=</span> <span class="hljs-type">Timer</span>.publish(every: <span class="hljs-number">1</span>, on: .main, in: .common).autoconnect()</code></pre></div><p>由于 timer 的 publisher 必须先连接才能发送 value 的 publisher，所以我们调用 autoconnect，让它可以自动连接，方便之后接收 timer 发送的 value。</p><p>在 view 上调用 onReceive(_:perform:)，传入 publisher timer，接收 timer 每秒发送的 value，perform 传入 timer 定時触发的 closure 。</p><div class="code-wrapper"><pre><code class="hljs swift">.onReceive(timer, perform: &#123; (<span class="hljs-keyword">_</span>) <span class="hljs-keyword">in</span>             <span class="hljs-keyword">self</span>.number <span class="hljs-operator">+=</span> <span class="hljs-number">1</span>             <span class="hljs-built_in">print</span>(<span class="hljs-keyword">self</span>.number)&#125;)</code></pre></div><p>使用 onReceive(_:perform:) 定义 timer 触发的 closure 有特別的好处，当 SwiftUI view 关闭后，timer 也会自动停止，不用另外调用 invalidate。</p><h4 id="timer-publisher-发送的-value-是时间"><a href="#timer-publisher-发送的-value-是时间" class="headerlink" title="timer publisher 发送的 value 是时间"></a>timer publisher 发送的 value 是时间</h4><p>timer publisher 的类型是 TimerPublisher，从它的定义我们发现它发送的 value 类型是 Date，因此以下例子打印的 value 是 timer 触发的时间。</p><div class="code-wrapper"><pre><code class="hljs swift">.onReceive(timer, perform: &#123; (value) <span class="hljs-keyword">in</span>    <span class="hljs-built_in">print</span>(value)&#125;)</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Swift</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>pygraph 无法实时刷新图表</title>
+    <link href="/2023/10/06/pygraph-%E6%97%A0%E6%B3%95%E5%AE%9E%E6%97%B6%E5%88%B7%E6%96%B0%E5%9B%BE%E8%A1%A8/"/>
+    <url>/2023/10/06/pygraph-%E6%97%A0%E6%B3%95%E5%AE%9E%E6%97%B6%E5%88%B7%E6%96%B0%E5%9B%BE%E8%A1%A8/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<span class="hljs-keyword">import</span> serial<span class="hljs-keyword">from</span> PyQt5.QtWidgets <span class="hljs-keyword">import</span> QMainWindow, QApplication, QVBoxLayout, QWidget<span class="hljs-keyword">from</span> PyQt5.QtCore <span class="hljs-keyword">import</span> QThread, QTimer<span class="hljs-keyword">import</span> pyqtgraph <span class="hljs-keyword">as</span> pg<span class="hljs-keyword">import</span> sys<span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>(<span class="hljs-title class_ inherited__">QMainWindow</span>):    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, port, baud</span>):        <span class="hljs-built_in">super</span>(Window, self).__init__()        self.roll_plot = pg.PlotWidget()        self.ser = serial.Serial(port, baud, timeout=<span class="hljs-number">1</span>)        self.roll_plot.setLabel(<span class="hljs-string">&#x27;left&#x27;</span>, <span class="hljs-string">&#x27;Flow L/min&#x27;</span>)        self.roll_plot.setLabel(<span class="hljs-string">&#x27;bottom&#x27;</span>, <span class="hljs-string">&#x27;Time s&#x27;</span>)        self.roll_curve = self.roll_plot.plot(pen=<span class="hljs-string">&#x27;r&#x27;</span>)        win_size = <span class="hljs-number">50</span>  <span class="hljs-comment"># 5s</span>        self.roll_x = np.zeros(win_size)        self.roll_y = np.zeros(win_size)        layout = QVBoxLayout()        layout.addWidget(self.roll_plot)                self.central_widget = QWidget()        self.central_widget.setLayout(layout)        self.setCentralWidget(self.central_widget)        self.thread = Sensor(self.ser, self.roll_x, self.roll_y, self.roll_curve)        self.thread.start()<span class="hljs-keyword">class</span> <span class="hljs-title class_">Sensor</span>(<span class="hljs-title class_ inherited__">QThread</span>):    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, ser, roll_x, roll_y, roll_curve</span>):        <span class="hljs-built_in">super</span>(Sensor, self).__init__()        self.ser = ser        self.roll_x = roll_x        self.roll_y = roll_y        self.roll_curve = roll_curve    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):        <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:            self.update_flow()    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update_flow</span>(<span class="hljs-params">self</span>):        <span class="hljs-keyword">try</span>:            sensor_value = self.ser.readline()            value = <span class="hljs-built_in">float</span>(sensor_value)        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:            value = <span class="hljs-number">0.0</span>            <span class="hljs-built_in">print</span>(e)        self.roll_x[:-<span class="hljs-number">1</span>] = self.roll_x[<span class="hljs-number">1</span>:]        self.roll_y[:-<span class="hljs-number">1</span>] = self.roll_y[<span class="hljs-number">1</span>:]        self.roll_x[-<span class="hljs-number">1</span>] = self.roll_x[-<span class="hljs-number">2</span>] + <span class="hljs-number">0.1</span>        self.roll_y[-<span class="hljs-number">1</span>] = value        <span class="hljs-comment"># 这里的做法是在 Sensor 线程中调用 setData 刷新图表</span>        <span class="hljs-comment"># 但问题是在程序运行一段时间后，图表不会自动刷新</span>        self.roll_curve.setData(self.roll_x, self.roll_y)        <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():    app = QApplication(sys.argv)    flow_win = Window(<span class="hljs-string">&#x27;/dev/tty.usbmodem1301&#x27;</span>, <span class="hljs-number">115200</span>)    flow_win.show()    sys.exit(app.exec_())<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:    main()</code></pre></div><p>图表不会自动刷新的原因是 setData 必须在主线程中运行！</p><p>修改为 <strong>Sensor 线程用于采集数据，主线程用来刷新图表</strong>:</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<span class="hljs-keyword">import</span> serial<span class="hljs-keyword">from</span> PyQt5.QtWidgets <span class="hljs-keyword">import</span> QMainWindow, QApplication, QVBoxLayout, QWidget<span class="hljs-keyword">from</span> PyQt5.QtCore <span class="hljs-keyword">import</span> QThread, QTimer<span class="hljs-keyword">import</span> pyqtgraph <span class="hljs-keyword">as</span> pg<span class="hljs-keyword">import</span> sys<span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>(<span class="hljs-title class_ inherited__">QMainWindow</span>):    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, port, baud</span>):        <span class="hljs-built_in">super</span>(Window, self).__init__()        self.roll_plot = pg.PlotWidget()        self.ser = serial.Serial(port, baud, timeout=<span class="hljs-number">1</span>)        self.roll_plot.setLabel(<span class="hljs-string">&#x27;left&#x27;</span>, <span class="hljs-string">&#x27;Flow L/min&#x27;</span>)        self.roll_plot.setLabel(<span class="hljs-string">&#x27;bottom&#x27;</span>, <span class="hljs-string">&#x27;Time s&#x27;</span>)        self.roll_curve = self.roll_plot.plot(pen=<span class="hljs-string">&#x27;r&#x27;</span>)        win_size = <span class="hljs-number">50</span>  <span class="hljs-comment"># 5s</span>        self.roll_x = np.zeros(win_size)        self.roll_y = np.zeros(win_size)        layout = QVBoxLayout()        layout.addWidget(self.roll_plot)        self.central_widget = QWidget()        self.central_widget.setLayout(layout)        self.setCentralWidget(self.central_widget)        <span class="hljs-comment"># 仅采集数据</span>        self.thread = Sensor(self.ser, self.roll_x, self.roll_y)        self.thread.start()        <span class="hljs-comment"># 100ms 刷新一次图表</span>        self.timer = QTimer()        self.timer.timeout.connect(<span class="hljs-keyword">lambda</span>: self.plot_data())        self.timer.start(<span class="hljs-number">100</span>)    <span class="hljs-keyword">def</span> <span class="hljs-title function_">plot_data</span>(<span class="hljs-params">self</span>):        self.roll_curve.setData(self.roll_x, self.roll_y)<span class="hljs-keyword">class</span> <span class="hljs-title class_">Sensor</span>(<span class="hljs-title class_ inherited__">QThread</span>):    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, ser, roll_x, roll_y</span>):        <span class="hljs-built_in">super</span>(Sensor, self).__init__()        self.ser = ser        self.roll_x = roll_x        self.roll_y = roll_y    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):        <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:            self.update_flow()    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update_flow</span>(<span class="hljs-params">self</span>):        <span class="hljs-keyword">try</span>:            sensor_value = self.ser.readline()            value = <span class="hljs-built_in">float</span>(sensor_value)        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:            value = <span class="hljs-number">0.0</span>            <span class="hljs-built_in">print</span>(e)        self.roll_x[:-<span class="hljs-number">1</span>] = self.roll_x[<span class="hljs-number">1</span>:]        self.roll_y[:-<span class="hljs-number">1</span>] = self.roll_y[<span class="hljs-number">1</span>:]        self.roll_x[-<span class="hljs-number">1</span>] = self.roll_x[-<span class="hljs-number">2</span>] + <span class="hljs-number">0.1</span>        self.roll_y[-<span class="hljs-number">1</span>] = value<span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():    app = QApplication(sys.argv)    flow_win = Window(<span class="hljs-string">&#x27;/dev/tty.usbmodem1301&#x27;</span>, <span class="hljs-number">115200</span>)    flow_win.show()    sys.exit(app.exec_())<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:    main()</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>yoyo 间歇恢复测试</title>
+    <link href="/2023/10/05/yoyo-%E9%97%B4%E6%AD%87%E6%81%A2%E5%A4%8D%E6%B5%8B%E8%AF%95/"/>
+    <url>/2023/10/05/yoyo-%E9%97%B4%E6%AD%87%E6%81%A2%E5%A4%8D%E6%B5%8B%E8%AF%95/</url>
+    
+    <content type="html"><![CDATA[<h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>yoyo 间歇恢复测试是<strong>高强度有氧能力和最大氧耗量（VO2 max）</strong>的有效可靠预测指标。</p><p>YO-YO间歇恢复测试的三种变体：</p><p><strong>1级、2级和亚最大测试。</strong></p><h4 id="YYIR1"><a href="#YYIR1" class="headerlink" title="YYIR1"></a>YYIR1</h4><p>评估个体反复进行高强度有氧运动的能力。</p><p>针对年轻或休闲运动员，起始速度为 10km&#x2F;hr。</p><h4 id="YYIR2"><a href="#YYIR2" class="headerlink" title="YYIR2"></a>YYIR2</h4><p>测试在强烈的间歇性运动中有大量无氧成分和显著有氧贡献的能力。</p><p>针对精英和专业运动员，起始速度为 13km&#x2F;hr。</p><h4 id="亚最大-yoyo-间歇恢复测试"><a href="#亚最大-yoyo-间歇恢复测试" class="headerlink" title="亚最大 yoyo 间歇恢复测试"></a>亚最大 yoyo 间歇恢复测试</h4><p>用于监测比赛期间、康复期间或难以进行最大测试的个体的表现。</p><h3 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h3><p>必须在一致的环境（即设施）中进行，以免受不同天气类型的影响，并具有不受潮湿或湿滑条件影响的可靠表面。如果环境不一致，以后重复测试的可靠性可能会受到严重阻碍，并导致数据毫无价值。</p><h4 id="设备"><a href="#设备" class="headerlink" title="设备"></a>设备</h4><ul><li>设施——一致、平坦、防滑（最小长度 30m）；</li><li>标记锥体；</li><li>卷尺（&gt;30m）；</li><li>YYIR 测试音频 CD 或 MP3；</li><li>带扬声器的 CD 或 MP3 播放器（扬声器的音量尤为重要）；</li><li>表现记录表；</li><li>记录完成的往返次数的裁判员（在“计分”部分中进行了解释）。</li></ul><h4 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h4><p> YYIR 测试的配置，如果需要准确可靠的数据，则必须遵守该配置。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/yoyo-%E9%97%B4%E6%AD%87%E6%81%A2%E5%A4%8D%E6%B5%8B%E8%AF%951.png"></p><ul><li>参与者从锥体 B 开始测试。</li><li>当音频播放器发出指示时，它们必须跑向锥体 C（必须在下一个蜂鸣信号发出之前到达锥体 C），并在下一个信号发出之前立即返回锥体 B。</li><li>到达圆锥体 B 后，参与者将有 10 秒的恢复时间，在此期间他们必须从圆锥体 B 慢跑到圆锥体 A，然后在下一个班车开始之前返回圆锥体 B。</li><li>在此测试中，参与者只允许连续两次失败尝试，然后退出测试。也就是说，如果个人未能在分配的时间内到达圆锥体 C 并返回圆锥体 B，则会发出失败信号。如果这种情况连续第二次发生，那么他们就会被淘汰。</li><li>一旦退出测试，必须记录个人的分数。</li><li>YYIR1 通常持续 5-15 分钟，YYIR2 大约持续 2-15 分钟 。</li></ul><h3 id="评分系统"><a href="#评分系统" class="headerlink" title="评分系统"></a>评分系统</h3><p>该测试由 91 个往返跑步阶段组成，持续时间最长约为 29 分钟；然而，很难有人能够完成整个测试。测试的分数可以以三种方式呈现：</p><ol><li>总距离（米）；</li><li>达到的级别；</li><li>最大摄氧量（VO2 max）。</li></ol><p>总距离更简单易懂且计算简单，而达到的级别则较为复杂，因为测试开始时是在第 5 级，然后直接跳至第 9 级。</p><h4 id="计算距离"><a href="#计算距离" class="headerlink" title="计算距离"></a>计算距离</h4><p>要计算总距离，最简单的方法是记录参与者完成的往返次数，然后将该数字乘以 40（40 &#x3D; 2 x 20 m 往返 **[从锥体 B 到锥体 C &#x3D; 20 m，然后跑回来从锥体 C 到锥体 B &#x3D; 20 m]**）。</p><p>例如，如果一名运动员进行 30 次往返，则可以将该数字乘以 40 来计算其总距离（例如 30 x 40 &#x3D; 1,200 m）</p><h4 id="计算级别"><a href="#计算级别" class="headerlink" title="计算级别"></a>计算级别</h4><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/yoyo-%E9%97%B4%E6%AD%87%E6%81%A2%E5%A4%8D%E6%B5%8B%E8%AF%952.jpg"></p><h4 id="计算-VO2max"><a href="#计算-VO2max" class="headerlink" title="计算 VO2max"></a>计算 VO2max</h4><p>计算 VO2max的公式如下：</p><ul><li>YYIR1 测试：<strong>VO2max(mL&#x2F;kg&#x2F;min) &#x3D; IR1 距离(m) × 0.0084 + 36.4</strong></li><li>YYIR2 测试：<strong>VO2max(mL&#x2F;kg&#x2F;min) &#x3D; IR2 距离(m) × 0.0136 + 45.3</strong></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>文章</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>运动科学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>压力知觉与运动性心理疲劳的关系_一个有调节的中介模型</title>
     <link href="/2023/09/18/%E5%8E%8B%E5%8A%9B%E7%9F%A5%E8%A7%89%E4%B8%8E%E8%BF%90%E5%8A%A8%E6%80%A7%E5%BF%83%E7%90%86%E7%96%B2%E5%8A%B3%E7%9A%84%E5%85%B3%E7%B3%BB-%E4%B8%80%E4%B8%AA%E6%9C%89%E8%B0%83%E8%8A%82%E7%9A%84%E4%B8%AD%E4%BB%8B%E6%A8%A1%E5%9E%8B/"/>
     <url>/2023/09/18/%E5%8E%8B%E5%8A%9B%E7%9F%A5%E8%A7%89%E4%B8%8E%E8%BF%90%E5%8A%A8%E6%80%A7%E5%BF%83%E7%90%86%E7%96%B2%E5%8A%B3%E7%9A%84%E5%85%B3%E7%B3%BB-%E4%B8%80%E4%B8%AA%E6%9C%89%E8%B0%83%E8%8A%82%E7%9A%84%E4%B8%AD%E4%BB%8B%E6%A8%A1%E5%9E%8B/</url>
@@ -151,9 +338,9 @@
     
     <tags>
       
-      <tag>IMU</tag>
-      
       <tag>Swift</tag>
+      
+      <tag>IMU</tag>
       
     </tags>
     
@@ -503,7 +690,7 @@
     <link href="/2023/09/11/%E5%8F%91%E5%8A%9B%E7%8E%87-RFD/"/>
     <url>/2023/09/11/%E5%8F%91%E5%8A%9B%E7%8E%87-RFD/</url>
     
-    <content type="html"><![CDATA[<p>这篇文章说得最细致：<a href="https://www.scienceforsport.com/rate-of-force-development-rfd-2/">RATE OF FORCE DEVELOPMENT (RFD)</a></p><p>这两篇文章就稍微简单一点：</p><ol><li><a href="https://www.jeffchensports.com/blog/rfd">運動表現的迷思–RFD(發力率)？</a>;</li><li><a href="https://zhuanlan.zhihu.com/p/644908769">什么是发力率What is RFD？理论篇</a>。</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>这篇文章说得最细致：<a href="https://www.scienceforsport.com/rate-of-force-development-rfd-2/">RATE OF FORCE DEVELOPMENT (RFD)</a></p><p>这两篇文章就稍微简单一点：</p><ol><li><a href="https://www.jeffchensports.com/blog/rfd">運動表現的迷思–RFD(發力率)？</a>;</li><li><a href="https://zhuanlan.zhihu.com/p/644908769">什么是发力率What is RFD？理论篇</a>；</li><li><a href="https://oneilathlete.com/the-difference-between-explosive-power-power-rfd/">爆發力&#x2F;功率&#x2F;發力率 你還分不清楚嗎？</a>;</li><li><a href="https://www.don1don.com/archives/131386/131386">如何訓練爆發力？ 四張圖了解功率輸出</a>。</li></ol>]]></content>
     
     
     <categories>
@@ -829,9 +1016,9 @@
     
     <tags>
       
-      <tag>CEPT</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>CEPT</tag>
       
     </tags>
     
@@ -995,9 +1182,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>EMG</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -1426,18 +1613,18 @@
       
       <category>Code</category>
       
-      <category>Python</category>
-      
       <category>Swift</category>
+      
+      <category>Python</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>Swift</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
