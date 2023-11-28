@@ -4,6 +4,249 @@
   
   
   <entry>
+    <title>Pandas 遍历 dataframe 中的 item</title>
+    <link href="/2023/11/28/Pandas-%E9%81%8D%E5%8E%86-dataframe-%E4%B8%AD%E7%9A%84-item/"/>
+    <url>/2023/11/28/Pandas-%E9%81%8D%E5%8E%86-dataframe-%E4%B8%AD%E7%9A%84-item/</url>
+    
+    <content type="html"><![CDATA[<p>数据格式为</p><table><thead><tr><th>time</th><th>ecg</th><th>rep</th></tr></thead><tbody><tr><td>1700624658822114462</td><td>-0.157</td><td>6</td></tr></tbody></table><h3 id="采用-df-iterrows"><a href="#采用-df-iterrows" class="headerlink" title="采用 df.iterrows()"></a>采用 df.iterrows()</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> df1.iterrows():    <span class="hljs-built_in">print</span>(item)</code></pre></div><p>输出内容为</p><div class="code-wrapper"><pre><code class="hljs elm">(<span class="hljs-number">14017</span>, time    <span class="hljs-number">1700624658822114462</span><span class="hljs-title">ecg</span>     <span class="hljs-number">-0.157</span><span class="hljs-title">rep</span>     <span class="hljs-number">6</span><span class="hljs-type">Name</span>: <span class="hljs-number">14017</span>, d<span class="hljs-keyword">type</span>: float64)</code></pre></div><p>若 <code>print(item[0])</code> 则显示</p><div class="code-wrapper"><pre><code class="hljs">14017</code></pre></div><p>若 <code>print(item[0])</code> 则显示</p><div class="code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">time</span>    <span class="hljs-number">1700624658822114462</span><span class="hljs-attribute">ecg</span>    -<span class="hljs-number">0</span>.<span class="hljs-number">157</span><span class="hljs-attribute">rep</span>     <span class="hljs-number">6</span><span class="hljs-attribute">Name</span>: <span class="hljs-number">14216</span>, dtype: float64</code></pre></div><h3 id="采用-df-itertuples"><a href="#采用-df-itertuples" class="headerlink" title="采用 df.itertuples()"></a>采用 df.itertuples()</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> df1.itertuples():    <span class="hljs-built_in">print</span>(item)</code></pre></div><p>输出内容为</p><div class="code-wrapper"><pre><code class="hljs livescript">Pandas(Index=<span class="hljs-number">14216</span>, time=<span class="hljs-number">1700624658822114462</span>, ecg=-<span class="hljs-number">0.157</span>, rep=<span class="hljs-number">6</span>)<span class="hljs-built_in">print</span><span class="hljs-function"><span class="hljs-params">(item[<span class="hljs-number">0</span>])</span> -&gt;</span> <span class="hljs-number">14216</span><span class="hljs-built_in">print</span><span class="hljs-function"><span class="hljs-params">(item[<span class="hljs-number">1</span>])</span> -&gt;</span> <span class="hljs-number">1700624658822114462</span><span class="hljs-built_in">print</span><span class="hljs-function"><span class="hljs-params">(item[<span class="hljs-number">2</span>])</span> -&gt;</span> -<span class="hljs-number">0.157</span><span class="hljs-built_in">print</span><span class="hljs-function"><span class="hljs-params">(item[<span class="hljs-number">3</span>])</span> -&gt;</span> <span class="hljs-number">6</span></code></pre></div><h3 id="采用-df1-items"><a href="#采用-df1-items" class="headerlink" title="采用 df1.items()"></a>采用 df1.items()</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> df1.items():    <span class="hljs-built_in">print</span>(item)</code></pre></div><p>输出内容为（按列输出）</p><div class="code-wrapper"><pre><code class="hljs scheme">(<span class="hljs-symbol">&#x27;time</span>&#x27;, <span class="hljs-number">0</span>        <span class="hljs-number">1700624538840442752</span><span class="hljs-number">1</span>        <span class="hljs-number">1700624538943768244</span><span class="hljs-number">2</span>        <span class="hljs-number">1700624539047093736</span><span class="hljs-number">3</span>        <span class="hljs-number">1700624539150419228</span><span class="hljs-number">4</span>        <span class="hljs-number">1700624539253744720</span>                ...         <span class="hljs-number">14212</span>    <span class="hljs-number">1700624658791314974</span><span class="hljs-number">14213</span>    <span class="hljs-number">1700624658799014846</span><span class="hljs-number">14214</span>    <span class="hljs-number">1700624658806714718</span><span class="hljs-number">14215</span>    <span class="hljs-number">1700624658814414590</span><span class="hljs-number">14216</span>    <span class="hljs-number">1700624658822114462</span>Name: time, Length: <span class="hljs-number">14217</span>, dtype: int64)(<span class="hljs-symbol">&#x27;ecg</span>&#x27;, <span class="hljs-number">0</span>       <span class="hljs-number">-0.004</span><span class="hljs-number">1</span>        <span class="hljs-number">0.044</span><span class="hljs-number">2</span>        <span class="hljs-number">0.059</span><span class="hljs-number">3</span>        <span class="hljs-number">0.007</span><span class="hljs-number">4</span>       <span class="hljs-number">-0.086</span>         ...  <span class="hljs-number">14212</span>   <span class="hljs-number">-0.376</span><span class="hljs-number">14213</span>   <span class="hljs-number">-0.310</span><span class="hljs-number">14214</span>   <span class="hljs-number">-0.236</span><span class="hljs-number">14215</span>   <span class="hljs-number">-0.189</span><span class="hljs-number">14216</span>   <span class="hljs-number">-0.157</span>Name: ecg, Length: <span class="hljs-number">14217</span>, dtype: float64)(<span class="hljs-symbol">&#x27;rep</span>&#x27;, <span class="hljs-number">0</span>        <span class="hljs-number">4</span><span class="hljs-number">1</span>        <span class="hljs-number">4</span><span class="hljs-number">2</span>        <span class="hljs-number">4</span><span class="hljs-number">3</span>        <span class="hljs-number">4</span><span class="hljs-number">4</span>        <span class="hljs-number">4</span>        ..<span class="hljs-number">14212</span>    <span class="hljs-number">6</span><span class="hljs-number">14213</span>    <span class="hljs-number">6</span><span class="hljs-number">14214</span>    <span class="hljs-number">6</span><span class="hljs-number">14215</span>    <span class="hljs-number">6</span><span class="hljs-number">14216</span>    <span class="hljs-number">6</span>Name: rep, Length: <span class="hljs-number">14217</span>, dtype: int64)</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Pandas 创建并插入数据</title>
+    <link href="/2023/11/28/Pandas-%E5%88%9B%E5%BB%BA%E5%B9%B6%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE/"/>
+    <url>/2023/11/28/Pandas-%E5%88%9B%E5%BB%BA%E5%B9%B6%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs python">ecgs = [<span class="hljs-number">10</span>]times = [<span class="hljs-number">10</span>]reps = [<span class="hljs-number">10</span>]hrs = [<span class="hljs-number">10</span>]<span class="hljs-comment"># 创建df</span>dataframe = pd.DataFrame(&#123;<span class="hljs-string">&#x27;time&#x27;</span>: times, <span class="hljs-string">&#x27;ecg&#x27;</span>: ecgs, <span class="hljs-string">&#x27;rep&#x27;</span>: reps&#125;)<span class="hljs-comment"># 插入</span>new_df = dataframe.copy()new_df[<span class="hljs-string">&#x27;hr&#x27;</span>] = hrsnew_df.to_csv(<span class="hljs-string">&#x27;data.csv&#x27;</span>, index=<span class="hljs-literal">False</span>)</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Pandas 已知元素，获取其索引</title>
+    <link href="/2023/11/28/Pandas-%E5%B7%B2%E7%9F%A5%E5%85%83%E7%B4%A0%EF%BC%8C%E8%8E%B7%E5%8F%96%E5%85%B6%E7%B4%A2%E5%BC%95/"/>
+    <url>/2023/11/28/Pandas-%E5%B7%B2%E7%9F%A5%E5%85%83%E7%B4%A0%EF%BC%8C%E8%8E%B7%E5%8F%96%E5%85%B6%E7%B4%A2%E5%BC%95/</url>
+    
+    <content type="html"><![CDATA[<p>例如，知道其时间戳，找到 index</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(df[df[<span class="hljs-string">&#x27;time&#x27;</span>].isin([timestamp])])<span class="hljs-built_in">print</span>(df[df[<span class="hljs-string">&#x27;time&#x27;</span>].isin([timestamp])].index)<span class="hljs-built_in">print</span>(df[df[<span class="hljs-string">&#x27;time&#x27;</span>].isin([timestamp])].index[<span class="hljs-number">0</span>])</code></pre></div><p>第一个 print 为</p><div class="code-wrapper"><pre><code class="hljs pgsql">                     <span class="hljs-type">time</span>    ecg  hr  rr  marker<span class="hljs-number">1444</span>  <span class="hljs-number">1700624323518685002</span> <span class="hljs-number">-0.356</span> <span class="hljs-keyword">NaN</span> <span class="hljs-keyword">NaN</span>     <span class="hljs-keyword">NaN</span></code></pre></div><p>第二个 print 为</p><div class="code-wrapper"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">Index</span><span class="hljs-params">([<span class="hljs-number">1444</span>], dtype=<span class="hljs-string">&#x27;int64&#x27;</span>)</span></span></code></pre></div><p>第三个 print 为</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-number">1444</span></code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Pandas 数据截取</title>
+    <link href="/2023/11/28/Pandas-%E6%95%B0%E6%8D%AE%E6%88%AA%E5%8F%96/"/>
+    <url>/2023/11/28/Pandas-%E6%95%B0%E6%8D%AE%E6%88%AA%E5%8F%96/</url>
+    
+    <content type="html"><![CDATA[<p>知道 index 的情况下，完全可以采用</p><div class="code-wrapper"><pre><code class="hljs python">df_copy = df.copy()df_cut = df_copy[top:bottom]</code></pre></div><p>进行截取操作。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python 纳秒时间戳转时间</title>
+    <link href="/2023/11/28/Python-%E7%BA%B3%E7%A7%92%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%97%B6%E9%97%B4/"/>
+    <url>/2023/11/28/Python-%E7%BA%B3%E7%A7%92%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%97%B6%E9%97%B4/</url>
+    
+    <content type="html"><![CDATA[<p>关于数量级</p><div class="code-wrapper"><pre><code class="hljs \">1 秒1, 000 毫秒1, 000, 000 微秒1, 000, 000, 000 纳秒对于一个纳秒时间戳：1700621512995758338. 纳秒1700621512995758.338 微秒1700621512995.758338 毫秒1700621512.995758338 秒</code></pre></div><p>转换代码</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> datetime<span class="hljs-comment">#假设纳秒时间戳为 1635678377992198863</span>nano_second_timestamp = <span class="hljs-number">1635678377992198863</span><span class="hljs-comment"># 将纳秒时间戳除以一亿得到秒级时间戳</span>second_timestamp = nano_second_timestamp // <span class="hljs-number">1000000000</span><span class="hljs-comment"># 将秒级时间戳转换为datetime对象</span>d = datetime.datetime.fromtimestamp(second_timestamp)<span class="hljs-comment"># 将datetime对象转换为指定格式的时间字符串</span>formatted_time = d.strftime(<span class="hljs-string">&#x27;%Y-%m-%d %H:%M:%S.%f&#x27;</span>)<span class="hljs-built_in">print</span>(formatted_time) <span class="hljs-comment"># 输出：&#x27;2021-10-31 15:06:17.992199&#x27;</span></code></pre></div><p>在上述代码中，最后的时间字符串格式为  <code>&#39;%Y-%m-%d %H:%M:%S.%f&#39;</code>，其中 %Y 代表年份，%m 代表月份，%d 代表日期，%H 代表小时，%M 代表分钟，%S 代表秒，%f 代表微秒（注意，因为 datetime 对象的微秒值是范围在 0~999999 之间，所以需要对纳秒时间戳进行转换后，取后六位代表微秒）。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python 通过 datetime 计算时间差</title>
+    <link href="/2023/11/28/Python-%E9%80%9A%E8%BF%87-datetime-%E8%AE%A1%E7%AE%97%E6%97%B6%E9%97%B4%E5%B7%AE/"/>
+    <url>/2023/11/28/Python-%E9%80%9A%E8%BF%87-datetime-%E8%AE%A1%E7%AE%97%E6%97%B6%E9%97%B4%E5%B7%AE/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs python">d1 = datetime.datetime.fromtimestamp(df[<span class="hljs-string">&#x27;time&#x27;</span>][start_index] / <span class="hljs-number">1000000000</span>)d2 = datetime.datetime.fromtimestamp(df[<span class="hljs-string">&#x27;time&#x27;</span>][end_index] / <span class="hljs-number">1000000000</span>)diff_d = d2-d1<span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;时间差为 &#x27;</span>, diff_d)<span class="hljs-comment"># 时间差为  0:12:13.942854</span></code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python 数组中每个元素+1</title>
+    <link href="/2023/11/28/Python-%E6%95%B0%E7%BB%84%E4%B8%AD%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0-1/"/>
+    <url>/2023/11/28/Python-%E6%95%B0%E7%BB%84%E4%B8%AD%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0-1/</url>
+    
+    <content type="html"><![CDATA[<p>方法一</p><div class="code-wrapper"><pre><code class="hljs python">a = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>]a = <span class="hljs-built_in">map</span>(<span class="hljs-keyword">lambda</span> x:x+<span class="hljs-number">1</span>,a)</code></pre></div><p>方法二</p><div class="code-wrapper"><pre><code class="hljs python">a = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>]a = [item+<span class="hljs-number">1</span> <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> a]</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>解决 SettingWithCopyWarning Try using .loc[row_indexer,col_indexer] = value instead</title>
+    <link href="/2023/11/28/%E8%A7%A3%E5%86%B3-SettingWithCopyWarning-Try-using-loc-row-indexer-col-indexer-value-instead/"/>
+    <url>/2023/11/28/%E8%A7%A3%E5%86%B3-SettingWithCopyWarning-Try-using-loc-row-indexer-col-indexer-value-instead/</url>
+    
+    <content type="html"><![CDATA[<p>利用 Pandas 向 DataFrame 中插入一列数据时，出现警告：</p><div class="code-wrapper"><pre><code class="hljs oxygene">SettingWithCopyWarning:A value <span class="hljs-keyword">is</span> trying <span class="hljs-keyword">to</span> be <span class="hljs-keyword">set</span> <span class="hljs-keyword">on</span> a <span class="hljs-keyword">copy</span> <span class="hljs-keyword">of</span> a slice <span class="hljs-keyword">from</span> a DataFrame.<span class="hljs-keyword">Try</span> <span class="hljs-keyword">using</span> .loc[row_indexer,col_indexer] = value instead</code></pre></div><p>解决办法：</p><p>先 copy 一份数据。</p><div class="code-wrapper"><pre><code class="hljs python">a = a.copy()a[<span class="hljs-string">&#x27;column&#x27;</span>] = Your <span class="hljs-type">List</span></code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>pandas Series 和 DataFrame</title>
+    <link href="/2023/11/20/pandas-Series-%E5%92%8C-DataFrame/"/>
+    <url>/2023/11/20/pandas-Series-%E5%92%8C-DataFrame/</url>
+    
+    <content type="html"><![CDATA[<h3 id="list-to-Series"><a href="#list-to-Series" class="headerlink" title="list to Series"></a>list to Series</h3><p>参考：<a href="https://www.runoob.com/pandas/pandas-series.html">Pandas 数据结构 - Series</a></p><p>Pandas Series 类似表格中的一个列（column），类似于一维数组，可以保存任何数据类型。</p><p>Series 由索引（index）和列组成，函数如下：</p><div class="code-wrapper"><pre><code class="hljs python">pandas.Series( data, index, dtype, name, copy)</code></pre></div><p>参数说明：</p><ul><li><strong>data</strong>：一组数据(ndarray 类型)。</li><li><strong>index</strong>：数据索引标签，如果不指定，默认从 0 开始。</li><li><strong>dtype</strong>：数据类型，默认会自己判断。</li><li><strong>name</strong>：设置名称。</li><li><strong>copy</strong>：拷贝数据，默认为 False。</li></ul><h3 id="list-to-DataFrame"><a href="#list-to-DataFrame" class="headerlink" title="list to DataFrame"></a>list to DataFrame</h3><p>参考：<a href="https://www.runoob.com/pandas/pandas-dataframe.html">Pandas 数据结构 - DataFrame</a></p><p>DataFrame 是一个表格型的数据结构，它含有一组有序的列，每列可以是不同的值类型（数值、字符串、布尔型值）。DataFrame 既有行索引也有列索引，它可以被看做由 Series 组成的字典（共同用一个索引）。</p><div class="code-wrapper"><pre><code class="hljs python">pandas.DataFrame( data, index, columns, dtype, copy)</code></pre></div><p>参数说明：</p><ul><li><strong>data</strong>：一组数据(ndarray、series, map, lists, dict 等类型)。</li><li><strong>index</strong>：索引值，或者可以称为行标签。</li><li><strong>columns</strong>：列标签，默认为 RangeIndex (0, 1, 2, …, n) 。</li><li><strong>dtype</strong>：数据类型。</li><li><strong>copy</strong>：拷贝数据，默认为 False。</li></ul><h3 id="DataFrame-to-csv"><a href="#DataFrame-to-csv" class="headerlink" title="DataFrame to csv"></a>DataFrame to csv</h3><p>index是否要索引，heard 是否要列名。</p><div class="code-wrapper"><pre><code class="hljs python">data.to_csv(<span class="hljs-string">&#x27;data.csv&#x27;</span>, index=<span class="hljs-literal">True</span>, header=<span class="hljs-literal">True</span>)</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>「转载」光学心率测量原理</title>
     <link href="/2023/11/20/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E5%85%89%E5%AD%A6%E5%BF%83%E7%8E%87%E6%B5%8B%E9%87%8F%E5%8E%9F%E7%90%86/"/>
     <url>/2023/11/20/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E5%85%89%E5%AD%A6%E5%BF%83%E7%8E%87%E6%B5%8B%E9%87%8F%E5%8E%9F%E7%90%86/</url>
@@ -20,9 +263,9 @@
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>心率</tag>
       
     </tags>
     
@@ -202,9 +445,9 @@
     
     <categories>
       
-      <category>Python</category>
-      
       <category>Code</category>
+      
+      <category>Python</category>
       
     </categories>
     
@@ -500,9 +743,9 @@
     
     <tags>
       
-      <tag>运动科学</tag>
-      
       <tag>计算机视觉</tag>
+      
+      <tag>运动科学</tag>
       
     </tags>
     
@@ -1950,9 +2193,9 @@
     
     <tags>
       
-      <tag>IMU</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>IMU</tag>
       
     </tags>
     
@@ -2103,9 +2346,9 @@
     
     <categories>
       
-      <category>Python</category>
-      
       <category>Code</category>
+      
+      <category>Python</category>
       
     </categories>
     

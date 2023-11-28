@@ -18,23 +18,34 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="分类 - Code">
-<meta property="og:url" content="https://wonderhoi.com/categories/Python/Code/index.html">
+    <meta name="description" content="d1 &#x3D; datetime.datetime.fromtimestamp(df[&amp;#x27;time&amp;#x27;][start_index] &#x2F; 1000000000) d2 &#x3D; datetime.datetime.fromtimestamp(df[&amp;#x27;time&amp;#x27;][end_index] &#x2F; 1000000000) diff_d &#x3D; d2-d1 print(&amp;#x27;时间差为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 通过 datetime 计算时间差">
+<meta property="og:url" content="https://wonderhoi.com/2023/11/28/Python-%E9%80%9A%E8%BF%87-datetime-%E8%AE%A1%E7%AE%97%E6%97%B6%E9%97%B4%E5%B7%AE/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="d1 &#x3D; datetime.datetime.fromtimestamp(df[&amp;#x27;time&amp;#x27;][start_index] &#x2F; 1000000000) d2 &#x3D; datetime.datetime.fromtimestamp(df[&amp;#x27;time&amp;#x27;][end_index] &#x2F; 1000000000) diff_d &#x3D; d2-d1 print(&amp;#x27;时间差为">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-28T06:39:00.000Z">
+<meta property="article:modified_time" content="2023-11-28T06:47:57.683Z">
 <meta property="article:author" content="刘子航">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>分类 - Code - 这是一个PM的BLOG</title>
+  <title>Python 通过 datetime 计算时间差 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -111,7 +122,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 40vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -217,9 +228,40 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="分类 - Code"></span>
+            <span id="subtitle" data-typed-text="Python 通过 datetime 计算时间差"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-28 14:39" pubdate>
+          2023年11月28日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          219 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
 
         
       </div>
@@ -235,46 +277,202 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 31 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2023</p>
-    
-    <a href="/2023/10/30/python-%E7%BB%99%E5%87%BA%E5%85%B7%E4%BD%93%E5%87%BD%E6%95%B0%E5%BD%A2%E5%BC%8F%EF%BC%8C%E6%B1%82%E5%87%BD%E6%95%B0%E5%90%84%E9%A1%B9%E7%B3%BB%E6%95%B0/" class="list-group-item list-group-item-action">
-      <time>10-30</time>
-      <div class="list-group-item-title">python 给出具体函数形式，求函数各项系数</div>
-    </a>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Python 通过 datetime 计算时间差</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <div class="code-wrapper"><pre><code class="hljs python">d1 = datetime.datetime.fromtimestamp(df[<span class="hljs-string">&#x27;time&#x27;</span>][start_index] / <span class="hljs-number">1000000000</span>)
+d2 = datetime.datetime.fromtimestamp(df[<span class="hljs-string">&#x27;time&#x27;</span>][end_index] / <span class="hljs-number">1000000000</span>)
+diff_d = d2-d1
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;时间差为 &#x27;</span>, diff_d)
+
+<span class="hljs-comment"># 时间差为  0:12:13.942854</span></code></pre></div>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
   
     
-    <a href="/2023/06/23/PyTorch-%E9%B8%A2%E5%B0%BE%E8%8A%B1%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="list-group-item list-group-item-action">
-      <time>06-23</time>
-      <div class="list-group-item-title">PyTorch 鸢尾花深度学习</div>
-    </a>
+      <span class="category-chain">
+        
+  <a href="/categories/Code/" class="category-chain-item">Code</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/Code/Python/" class="category-chain-item">Python</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Python 通过 datetime 计算时间差</div>
+      <div>https://wonderhoi.com/2023/11/28/Python-通过-datetime-计算时间差/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>刘子航</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月28日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/11/28/Python-%E7%BA%B3%E7%A7%92%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%97%B6%E9%97%B4/" title="Python 纳秒时间戳转时间">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Python 纳秒时间戳转时间</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/11/28/Python-%E6%95%B0%E7%BB%84%E4%B8%AD%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0-1/" title="Python 数组中每个元素+1">
+                        <span class="hidden-mobile">Python 数组中每个元素+1</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
 </div>
 
 
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
     
 
     
@@ -392,6 +590,99 @@
 
 
 
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
 
