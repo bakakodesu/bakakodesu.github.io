@@ -4,6 +4,89 @@
   
   
   <entry>
+    <title>鸢尾花的非监督学习</title>
+    <link href="/2023/12/22/%E9%B8%A2%E5%B0%BE%E8%8A%B1%E7%9A%84%E9%9D%9E%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2023/12/22/%E9%B8%A2%E5%B0%BE%E8%8A%B1%E7%9A%84%E9%9D%9E%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<p>参考：</p><ol><li><a href="https://cloud.tencent.com/developer/article/1020155">【Scikit-Learn 中文文档】聚类 - 无监督学习 - 用户指南 | ApacheCN</a></li><li><a href="https://www.flyai.com/article/516">机器学习（二）之无监督学习：数据变换、聚类分析</a></li></ol><p>代码：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> KMeans<span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score, adjusted_rand_scorecsv_path = <span class="hljs-string">&#x27;/Users/bakako/Downloads/archive/Iris.csv&#x27;</span>df = pd.read_csv(csv_path)<span class="hljs-comment"># 将 dataframe 转为 numpy</span>dataset = df.values<span class="hljs-comment"># delete index</span>dataset = np.delete(dataset, <span class="hljs-number">0</span>, axis=<span class="hljs-number">1</span>)<span class="hljs-comment"># delete label</span>features = np.delete(dataset, -<span class="hljs-number">1</span>, axis=<span class="hljs-number">1</span>)<span class="hljs-comment"># delete feature</span>labels = np.delete(dataset, [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], axis=<span class="hljs-number">1</span>)<span class="hljs-comment"># 分割训练集和测试集</span>train_features, \        test_features, \        train_labels, \        test_labels = train_test_split(features, labels, test_size=<span class="hljs-number">0.2</span>)X = train_featuresmodel = KMeans(n_clusters=<span class="hljs-number">3</span>)model.fit(X)label_predict = model.labels_x0 = X[label_predict == <span class="hljs-number">0</span>]x1 = X[label_predict == <span class="hljs-number">1</span>]x2 = X[label_predict == <span class="hljs-number">2</span>]fig, axes = plt.subplots(<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, figsize=(<span class="hljs-number">32</span>, <span class="hljs-number">6</span>))<span class="hljs-comment"># 按花萼长度查看分布情况</span>axes[<span class="hljs-number">0</span>].scatter(X[:, <span class="hljs-number">0</span>], X[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;see&#x27;</span>)axes[<span class="hljs-number">0</span>].set_xlabel(<span class="hljs-string">&#x27;sepal length&#x27;</span>)axes[<span class="hljs-number">0</span>].set_ylabel(<span class="hljs-string">&#x27;sepal width&#x27;</span>)axes[<span class="hljs-number">0</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># 按花瓣长度查看分布情况</span>axes[<span class="hljs-number">1</span>].scatter(X[:, <span class="hljs-number">2</span>], X[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;see&#x27;</span>)axes[<span class="hljs-number">1</span>].set_xlabel(<span class="hljs-string">&#x27;petal length&#x27;</span>)axes[<span class="hljs-number">1</span>].set_ylabel(<span class="hljs-string">&#x27;petal width&#x27;</span>)axes[<span class="hljs-number">1</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># 按花萼进行聚类</span>axes[<span class="hljs-number">2</span>].scatter(x0[:, <span class="hljs-number">0</span>], x0[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;label0&#x27;</span>)axes[<span class="hljs-number">2</span>].scatter(x1[:, <span class="hljs-number">0</span>], x1[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;*&#x27;</span>, label=<span class="hljs-string">&#x27;label1&#x27;</span>)axes[<span class="hljs-number">2</span>].scatter(x2[:, <span class="hljs-number">0</span>], x2[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;blue&#x27;</span>, marker=<span class="hljs-string">&#x27;+&#x27;</span>, label=<span class="hljs-string">&#x27;label2&#x27;</span>)axes[<span class="hljs-number">2</span>].set_xlabel(<span class="hljs-string">&#x27;sepal length&#x27;</span>)axes[<span class="hljs-number">2</span>].set_ylabel(<span class="hljs-string">&#x27;sepal width&#x27;</span>)axes[<span class="hljs-number">2</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># 按花瓣进行聚类</span>axes[<span class="hljs-number">3</span>].scatter(x0[:, <span class="hljs-number">2</span>], x0[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;label0&#x27;</span>)axes[<span class="hljs-number">3</span>].scatter(x1[:, <span class="hljs-number">2</span>], x1[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;*&#x27;</span>, label=<span class="hljs-string">&#x27;label1&#x27;</span>)axes[<span class="hljs-number">3</span>].scatter(x2[:, <span class="hljs-number">2</span>], x2[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;blue&#x27;</span>, marker=<span class="hljs-string">&#x27;+&#x27;</span>, label=<span class="hljs-string">&#x27;label2&#x27;</span>)axes[<span class="hljs-number">3</span>].set_xlabel(<span class="hljs-string">&#x27;petal length&#x27;</span>)axes[<span class="hljs-number">3</span>].set_ylabel(<span class="hljs-string">&#x27;petal width&#x27;</span>)axes[<span class="hljs-number">3</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># plt.show()</span>prediction = model.predict(test_features)test_labels_num = []<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> test_labels:    <span class="hljs-keyword">if</span> item == <span class="hljs-string">&#x27;Iris-setosa&#x27;</span>:        test_labels_num.append(<span class="hljs-number">0</span>)    <span class="hljs-keyword">elif</span> item == <span class="hljs-string">&#x27;Iris-versicolor&#x27;</span>:        test_labels_num.append(<span class="hljs-number">1</span>)    <span class="hljs-keyword">elif</span> item == <span class="hljs-string">&#x27;Iris-virginica&#x27;</span>:        test_labels_num.append(<span class="hljs-number">2</span>)<span class="hljs-built_in">print</span>(accuracy_score(test_labels_num, prediction))<span class="hljs-comment"># 用这种方式评估聚类时，一个常见的错误是使用 accuracy_score 而不是 adjusted_rand_score、normalized_mutual_info_score 或其他聚类指标。</span><span class="hljs-comment"># 使用精度的问题在于，它要求分配的簇标签与真实值完全匹配。但簇标签本身毫无意义——唯一重要的是哪些点位于同一个簇中。</span><span class="hljs-comment"># 聚类后 x0、x1、x2 三类花会对应 012，021，102，120，201，210 的任意组合</span><span class="hljs-comment"># 所以你不知道 0 对应的是真实标签中的 Iris-setosa 还是 Iris-virginica 还是 Iris-versicolor</span><span class="hljs-comment"># 所以有 5/6 的概率是得不到正确值的</span><span class="hljs-comment"># 比如说下面这种情况</span><span class="hljs-built_in">print</span>(prediction)           <span class="hljs-comment"># [1 1 2 2 1 0 2 1 2 0 0 1 0 2 1 1 1 1 0 2 0 0 2 2 0 2 2 0 1 1]</span><span class="hljs-built_in">print</span>(test_labels_num)      <span class="hljs-comment"># [0 0 1 1 0 2 1 0 1 2 2 0 2 1 0 0 0 0 2 1 2 2 1 1 2 1 1 2 0 0]</span><span class="hljs-comment"># 聚类后预测的关系是 0-Iris-virginica，1-Iris-setosa，2-Iris-versicolor</span><span class="hljs-comment"># 所以要使用 metrics.adjusted_rand_score(labels_true, labels_pred)</span><span class="hljs-comment"># 输出越接近 1 说明模型越好</span><span class="hljs-comment"># adjusted_rand_score 函数用的一维数组，所以要将 test_labels 从（30，1）降维成（30，）</span><span class="hljs-comment"># prediction 已经是（30，）</span>test_labels = test_labels.flatten()<span class="hljs-built_in">print</span>(adjusted_rand_score(test_labels, prediction))<span class="hljs-comment"># 是 symmetric（对称的）：交换参数不会改变 score （得分）。它可以作为 consensus measure（共识度量）</span><span class="hljs-comment"># 所以下面这样也是可以的</span><span class="hljs-built_in">print</span>(adjusted_rand_score(test_labels_num, prediction))</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+      <tag>深度学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Numpy 的 1 维数组相关操作</title>
+    <link href="/2023/12/20/Numpy-%E7%9A%84-1-%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/"/>
+    <url>/2023/12/20/Numpy-%E7%9A%84-1-%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/</url>
+    
+    <content type="html"><![CDATA[<p>np.array([1,2,3])，既不是行向量，也不是列向量，称为秩 rank 为 1 的 array，如果对其转置，则会得到其本身。</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> npb = np.array([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>])  <span class="hljs-comment"># shape=（3，）</span>b2 = b.reshape((<span class="hljs-number">3</span>,<span class="hljs-number">1</span>))  <span class="hljs-comment"># shape=（3，1）</span></code></pre></div><p>当然也可以进行降维操作</p><div class="code-wrapper"><pre><code class="hljs python">b3 = b2.reshape(<span class="hljs-number">3</span>, )  <span class="hljs-comment"># b2.flatten() 都是降维 shape=（3，）</span></code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>通过 HRV 预测运动 RPE</title>
+    <link href="/2023/12/15/%E9%80%9A%E8%BF%87-HRV-%E9%A2%84%E6%B5%8B%E8%BF%90%E5%8A%A8-RPE/"/>
+    <url>/2023/12/15/%E9%80%9A%E8%BF%87-HRV-%E9%A2%84%E6%B5%8B%E8%BF%90%E5%8A%A8-RPE/</url>
+    
+    <content type="html"><![CDATA[<p>通过 HRV 预测 REP 核心文献为 2 篇。</p><ol><li>《Heart Rate Variability-Based Subjective Physical Fatigue Assessment》</li><li>《Sports fatigue detection based on deep learning》</li></ol><h3 id="1-HRV-的相关指标"><a href="#1-HRV-的相关指标" class="headerlink" title="1.HRV 的相关指标"></a>1.HRV 的相关指标</h3><h4 id="1-1-时域分析"><a href="#1-1-时域分析" class="headerlink" title="1.1.时域分析"></a>1.1.时域分析</h4><table><thead><tr><th>名称</th><th>单位</th><th>描述</th></tr></thead><tbody><tr><td>meanNN</td><td>ms</td><td>平均相邻正常心跳时间间隔</td></tr><tr><td>meanHR</td><td>1&#x2F;min</td><td>平均心率</td></tr><tr><td>SDNN</td><td>ms</td><td>全部正常窦性心搏间期（NN）的标准差</td></tr><tr><td>RMSSD</td><td>ms</td><td>全程相邻NN间期之差的均方根值</td></tr><tr><td>SDANN</td><td>ms</td><td>分段先计算心跳间期的平均值，再计算平均间期的标准差</td></tr><tr><td>SDNNi</td><td>ms</td><td>上述标准差的平均值</td></tr><tr><td>NN50</td><td>count</td><td>每对相邻正常心跳时间间隔，差距超过50毫秒的数目</td></tr><tr><td>pNN50</td><td>%</td><td>间隔差距超过50毫秒的占比</td></tr><tr><td>HRVTi</td><td>-</td><td>相邻正常心跳间隔的总个数除以相邻正常心跳间隔直方图的高度</td></tr><tr><td>TINN</td><td>ms</td><td>使用最小方差法，求出全部NN间期的直方图近似三角形底边的宽度</td></tr></tbody></table><p>目前已知：</p><ol><li>HRVTi 减小，交感神经活动增强，副交感神经活动下降；</li></ol><h4 id="1-2-频域分析"><a href="#1-2-频域分析" class="headerlink" title="1.2.频域分析"></a>1.2.频域分析</h4><table><thead><tr><th>名称</th><th>单位</th><th>描述</th></tr></thead><tbody><tr><td>VLF</td><td>ms^2</td><td>极低频功率</td></tr><tr><td>LF</td><td>ms^2</td><td>低频功率</td></tr><tr><td>HF</td><td>ms^2</td><td>高频功率</td></tr><tr><td>LF&#x2F;HF</td><td>-</td><td>比值</td></tr><tr><td>peakVLF</td><td>Hz</td><td></td></tr><tr><td>peakLF</td><td>Hz</td><td></td></tr><tr><td>peakHF</td><td>Hz</td><td></td></tr></tbody></table><p>目前已知：</p><ol><li>LF&#x2F;HF 减小，反应了交感神经和副交感神经系统活动的均衡状态发生变化；</li></ol><h4 id="1-3-非线性分析"><a href="#1-3-非线性分析" class="headerlink" title="1.3.非线性分析"></a>1.3.非线性分析</h4><table><thead><tr><th>名称</th><th>单位</th><th>描述</th></tr></thead><tbody><tr><td>sampen</td><td>-</td><td>两个序列在下一点保持相似的条件概率的负自然对数</td></tr><tr><td>SD1</td><td>ms</td><td>庞加莱图短轴</td></tr><tr><td>SD2</td><td>ms</td><td>庞加莱图长轴</td></tr><tr><td>SD1&#x2F;SD2</td><td>-</td><td></td></tr><tr><td>Alpha</td><td>-</td><td>去波动趋势分析</td></tr><tr><td>Alpha1</td><td>-</td><td>短时程参数</td></tr><tr><td>Alpha2</td><td>-</td><td>长时程参数</td></tr></tbody></table><p>目前已知：</p><ol><li>SD1 反应的是短期、瞬时 RR（两个 R 波） 变化；</li><li>SD2 则是为长期的；</li><li>SD1&#x2F;SD2 可代表交感神经与副交感神经的活性；</li><li>运动强度越大 Alpha1 越低。</li></ol><h3 id="2-具体文献"><a href="#2-具体文献" class="headerlink" title="2.具体文献"></a>2.具体文献</h3><p>两篇文献均是通过机器学习的方法，实现 HRV 数据预测运动期间的 REP。</p><p>前者，也就是《Heart Rate Variability-Based Subjective Physical Fatigue Assessment》，通过 Bruce 测试，具体内容见下：</p><table><thead><tr><th>Stage</th><th>Duration（min）</th><th>Speed</th><th>Incline（%）</th></tr></thead><tbody><tr><td>rest</td><td>5</td><td>0</td><td>0</td></tr><tr><td>1</td><td>5</td><td>3</td><td>5</td></tr><tr><td>2</td><td>5</td><td>5</td><td>5</td></tr><tr><td>3</td><td>5</td><td>6.4</td><td>5</td></tr><tr><td>4</td><td>5</td><td>7.8</td><td>5</td></tr><tr><td>5</td><td>5</td><td>10.2</td><td>5</td></tr><tr><td>6</td><td>直到力竭</td><td>11.6</td><td>5</td></tr></tbody></table><p>收集测试期间的心跳数据（ECG），并且在每隔阶段结束时，要求汇报 RPE。</p><p>这里的 RPE 采用的是 6-20 量表。</p><p>但最后会被划分为：</p><ol><li>6-10 为轻松；</li><li>11-16 为有点累；</li><li>17-20 为累。</li></ol><p>最终呈现的数据格式为:</p><div class="code-wrapper"><pre><code class="hljs dts"><span class="hljs-symbol">stage:</span><span class="hljs-symbol">duration:</span><span class="hljs-symbol">speed:</span><span class="hljs-symbol">incline:</span><span class="hljs-symbol">heart:</span> []<span class="hljs-symbol">rpe:</span></code></pre></div><p>后者《Sports fatigue detection based on deep learning》同为 Bruce 测试。</p><p>但每个阶段的具体运动速度&#x2F;坡度&#x2F;时间有调整，针对男女具体运动内容不同。</p><p>每个阶段改为 3 分钟，且<strong>每</strong>分钟都收集一次 RPE。同样采用 6-20 量表，但划分方式有点区别：</p><ol><li>6-11 为轻松；</li><li>12-16 为有点累；</li><li>17-20 为累。</li></ol><p>前者在 31 个特征中筛选出 14 个特征，并最终选用 LightGBM 算法。</p><p>后者直接确认了 27 个特征，使用 Bi-LSTM 神经网络。</p><h3 id="3-其它"><a href="#3-其它" class="headerlink" title="3.其它"></a>3.其它</h3><p>除了使用 HRV 特征量外，还可以通过卷积（CNN）的方式来提取特征。参考：</p><ol><li>《Real-Time Detection of Acute Cognitive Stress Using a Convolutional Neural Network From Electrocardiographic Signal》</li><li>《基于表面肌电信号能量核相图的卷积神经网络人体手势识别算法》</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>资料整理</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>运动科学</tag>
+      
+      <tag>深度学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Pandas 遍历 dataframe 中的 item</title>
     <link href="/2023/11/28/Pandas-%E9%81%8D%E5%8E%86-dataframe-%E4%B8%AD%E7%9A%84-item/"/>
     <url>/2023/11/28/Pandas-%E9%81%8D%E5%8E%86-dataframe-%E4%B8%AD%E7%9A%84-item/</url>
@@ -116,7 +199,7 @@
     <link href="/2023/11/28/Python-%E7%BA%B3%E7%A7%92%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%97%B6%E9%97%B4/"/>
     <url>/2023/11/28/Python-%E7%BA%B3%E7%A7%92%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%97%B6%E9%97%B4/</url>
     
-    <content type="html"><![CDATA[<p>关于数量级</p><div class="code-wrapper"><pre><code class="hljs \">1 秒1, 000 毫秒1, 000, 000 微秒1, 000, 000, 000 纳秒对于一个纳秒时间戳：1700621512995758338. 纳秒1700621512995758.338 微秒1700621512995.758338 毫秒1700621512.995758338 秒</code></pre></div><p>转换代码</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> datetime<span class="hljs-comment">#假设纳秒时间戳为 1635678377992198863</span>nano_second_timestamp = <span class="hljs-number">1635678377992198863</span><span class="hljs-comment"># 将纳秒时间戳除以一亿得到秒级时间戳</span>second_timestamp = nano_second_timestamp // <span class="hljs-number">1000000000</span><span class="hljs-comment"># 将秒级时间戳转换为datetime对象</span>d = datetime.datetime.fromtimestamp(second_timestamp)<span class="hljs-comment"># 将datetime对象转换为指定格式的时间字符串</span>formatted_time = d.strftime(<span class="hljs-string">&#x27;%Y-%m-%d %H:%M:%S.%f&#x27;</span>)<span class="hljs-built_in">print</span>(formatted_time) <span class="hljs-comment"># 输出：&#x27;2021-10-31 15:06:17.992199&#x27;</span></code></pre></div><p>在上述代码中，最后的时间字符串格式为  <code>&#39;%Y-%m-%d %H:%M:%S.%f&#39;</code>，其中 %Y 代表年份，%m 代表月份，%d 代表日期，%H 代表小时，%M 代表分钟，%S 代表秒，%f 代表微秒（注意，因为 datetime 对象的微秒值是范围在 0~999999 之间，所以需要对纳秒时间戳进行转换后，取后六位代表微秒）。</p>]]></content>
+    <content type="html"><![CDATA[<p>关于数量级</p><div class="code-wrapper"><pre><code class="hljs \">1 秒1, 000 毫秒1, 000, 000 微秒1, 000, 000, 000 纳秒对于一个纳秒时间戳：1700621512995758338. 纳秒1700621512995758.338 微秒1700621512995.758338 毫秒1700621512.995758338 秒</code></pre></div><p>转换代码</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> datetime<span class="hljs-comment">#假设纳秒时间戳为 1635678377992198863</span>nano_second_timestamp = <span class="hljs-number">1635678377992198863</span><span class="hljs-comment"># 将纳秒时间戳除以一亿得到秒级时间戳</span>second_timestamp = nano_second_timestamp / <span class="hljs-number">1000000000</span><span class="hljs-comment"># 将秒级时间戳转换为datetime对象</span>d = datetime.datetime.fromtimestamp(second_timestamp)<span class="hljs-comment"># 将datetime对象转换为指定格式的时间字符串</span>formatted_time = d.strftime(<span class="hljs-string">&#x27;%Y-%m-%d %H:%M:%S.%f&#x27;</span>)<span class="hljs-built_in">print</span>(formatted_time) <span class="hljs-comment"># 输出：&#x27;2021-10-31 15:06:17.992199&#x27;</span></code></pre></div><p>在上述代码中，最后的时间字符串格式为  <code>&#39;%Y-%m-%d %H:%M:%S.%f&#39;</code>，其中 %Y 代表年份，%m 代表月份，%d 代表日期，%H 代表小时，%M 代表分钟，%S 代表秒，%f 代表微秒（注意，因为 datetime 对象的微秒值是范围在 0~999999 之间，所以需要对纳秒时间戳进行转换后，取后六位代表微秒）。</p>]]></content>
     
     
     <categories>
@@ -220,11 +303,11 @@
   
   
   <entry>
-    <title>pandas Series 和 DataFrame</title>
-    <link href="/2023/11/20/pandas-Series-%E5%92%8C-DataFrame/"/>
-    <url>/2023/11/20/pandas-Series-%E5%92%8C-DataFrame/</url>
+    <title>Pandas List 转换为 Series</title>
+    <link href="/2023/11/20/Pandas-List-%E8%BD%AC%E6%8D%A2%E4%B8%BA-Series/"/>
+    <url>/2023/11/20/Pandas-List-%E8%BD%AC%E6%8D%A2%E4%B8%BA-Series/</url>
     
-    <content type="html"><![CDATA[<h3 id="list-to-Series"><a href="#list-to-Series" class="headerlink" title="list to Series"></a>list to Series</h3><p>参考：<a href="https://www.runoob.com/pandas/pandas-series.html">Pandas 数据结构 - Series</a></p><p>Pandas Series 类似表格中的一个列（column），类似于一维数组，可以保存任何数据类型。</p><p>Series 由索引（index）和列组成，函数如下：</p><div class="code-wrapper"><pre><code class="hljs python">pandas.Series( data, index, dtype, name, copy)</code></pre></div><p>参数说明：</p><ul><li><strong>data</strong>：一组数据(ndarray 类型)。</li><li><strong>index</strong>：数据索引标签，如果不指定，默认从 0 开始。</li><li><strong>dtype</strong>：数据类型，默认会自己判断。</li><li><strong>name</strong>：设置名称。</li><li><strong>copy</strong>：拷贝数据，默认为 False。</li></ul><h3 id="list-to-DataFrame"><a href="#list-to-DataFrame" class="headerlink" title="list to DataFrame"></a>list to DataFrame</h3><p>参考：<a href="https://www.runoob.com/pandas/pandas-dataframe.html">Pandas 数据结构 - DataFrame</a></p><p>DataFrame 是一个表格型的数据结构，它含有一组有序的列，每列可以是不同的值类型（数值、字符串、布尔型值）。DataFrame 既有行索引也有列索引，它可以被看做由 Series 组成的字典（共同用一个索引）。</p><div class="code-wrapper"><pre><code class="hljs python">pandas.DataFrame( data, index, columns, dtype, copy)</code></pre></div><p>参数说明：</p><ul><li><strong>data</strong>：一组数据(ndarray、series, map, lists, dict 等类型)。</li><li><strong>index</strong>：索引值，或者可以称为行标签。</li><li><strong>columns</strong>：列标签，默认为 RangeIndex (0, 1, 2, …, n) 。</li><li><strong>dtype</strong>：数据类型。</li><li><strong>copy</strong>：拷贝数据，默认为 False。</li></ul><h3 id="DataFrame-to-csv"><a href="#DataFrame-to-csv" class="headerlink" title="DataFrame to csv"></a>DataFrame to csv</h3><p>index是否要索引，heard 是否要列名。</p><div class="code-wrapper"><pre><code class="hljs python">data.to_csv(<span class="hljs-string">&#x27;data.csv&#x27;</span>, index=<span class="hljs-literal">True</span>, header=<span class="hljs-literal">True</span>)</code></pre></div>]]></content>
+    <content type="html"><![CDATA[<p>手上有 ecg 信号数组。需要转换成相应的格式：</p><div class="code-wrapper"><pre><code class="hljs dns"><span class="hljs-number">0</span>        <span class="hljs-number">0.000763</span><span class="hljs-number">1</span>       -<span class="hljs-number">0.000610</span><span class="hljs-number">2</span>        <span class="hljs-number">0.000763</span><span class="hljs-number">3</span>        <span class="hljs-number">0.002289</span><span class="hljs-number">4</span>        <span class="hljs-number">0.005341</span>           ...   <span class="hljs-number">50677</span>    <span class="hljs-number">0.005798</span><span class="hljs-number">50678</span>    <span class="hljs-number">0.003357</span><span class="hljs-number">50679</span>    <span class="hljs-number">0.008392</span><span class="hljs-number">50680</span>    <span class="hljs-number">0.010681</span><span class="hljs-number">50681</span>    <span class="hljs-number">0.008240</span>Name: ECG, Length: <span class="hljs-number">50682</span>, dtype: float64</code></pre></div><p>type 后可以发现该格式为：</p><div class="code-wrapper"><pre><code class="hljs actionscript">&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;pandas.core.series.Series&#x27;</span>&gt;</code></pre></div><p>于是可以</p><div class="code-wrapper"><pre><code class="hljs python">ecg = pd.Series(ecg, name=<span class="hljs-string">&#x27;ECG&#x27;</span>)</code></pre></div><p>这样就将 List 转换成了 Series</p>]]></content>
     
     
     <categories>
@@ -797,9 +880,9 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>IMU</tag>
+      
+      <tag>Swift</tag>
       
     </tags>
     
@@ -1747,11 +1830,11 @@
     
     <tags>
       
-      <tag>Arduino</tag>
-      
       <tag>传感器</tag>
       
       <tag>CEPT</tag>
+      
+      <tag>Arduino</tag>
       
     </tags>
     
@@ -1778,11 +1861,11 @@
     
     <tags>
       
-      <tag>Arduino</tag>
-      
       <tag>传感器</tag>
       
       <tag>CEPT</tag>
+      
+      <tag>Arduino</tag>
       
     </tags>
     
@@ -2079,11 +2162,11 @@
     
     <tags>
       
-      <tag>Arduino</tag>
-      
       <tag>传感器</tag>
       
       <tag>CEPT</tag>
+      
+      <tag>Arduino</tag>
       
     </tags>
     

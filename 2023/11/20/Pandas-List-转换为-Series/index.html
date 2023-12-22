@@ -18,15 +18,15 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta name="description" content="list to Series参考：Pandas 数据结构 - Series Pandas Series 类似表格中的一个列（column），类似于一维数组，可以保存任何数据类型。 Series 由索引（index）和列组成，函数如下： pandas.Series( data, index, dtype, name, copy)  参数说明：  data：一组数据(ndarray 类型)。 inde">
+    <meta name="description" content="手上有 ecg 信号数组。需要转换成相应的格式： 0        0.000763 1       -0.000610 2        0.000763 3        0.002289 4        0.005341            ...    50677    0.005798 50678    0.003357 50679    0.008392 50680    0.01">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pandas Series 和 DataFrame">
-<meta property="og:url" content="https://wonderhoi.com/2023/11/20/pandas-Series-%E5%92%8C-DataFrame/index.html">
+<meta property="og:title" content="Pandas List 转换为 Series">
+<meta property="og:url" content="https://wonderhoi.com/2023/11/20/Pandas-List-%E8%BD%AC%E6%8D%A2%E4%B8%BA-Series/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="list to Series参考：Pandas 数据结构 - Series Pandas Series 类似表格中的一个列（column），类似于一维数组，可以保存任何数据类型。 Series 由索引（index）和列组成，函数如下： pandas.Series( data, index, dtype, name, copy)  参数说明：  data：一组数据(ndarray 类型)。 inde">
+<meta property="og:description" content="手上有 ecg 信号数组。需要转换成相应的格式： 0        0.000763 1       -0.000610 2        0.000763 3        0.002289 4        0.005341            ...    50677    0.005798 50678    0.003357 50679    0.008392 50680    0.01">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-20T09:28:15.000Z">
-<meta property="article:modified_time" content="2023-11-20T09:48:54.322Z">
+<meta property="article:modified_time" content="2023-11-28T08:04:06.742Z">
 <meta property="article:author" content="刘子航">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -35,7 +35,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>pandas Series 和 DataFrame - 这是一个PM的BLOG</title>
+  <title>Pandas List 转换为 Series - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -228,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="pandas Series 和 DataFrame"></span>
+            <span id="subtitle" data-typed-text="Pandas List 转换为 Series"></span>
           
         </div>
 
@@ -251,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          665 字
+          296 字
         
       </span>
     
@@ -290,39 +290,32 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">pandas Series 和 DataFrame</h1>
+            <h1 id="seo-header">Pandas List 转换为 Series</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="list-to-Series"><a href="#list-to-Series" class="headerlink" title="list to Series"></a>list to Series</h3><p>参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/pandas/pandas-series.html">Pandas 数据结构 - Series</a></p>
-<p>Pandas Series 类似表格中的一个列（column），类似于一维数组，可以保存任何数据类型。</p>
-<p>Series 由索引（index）和列组成，函数如下：</p>
-<div class="code-wrapper"><pre><code class="hljs python">pandas.Series( data, index, dtype, name, copy)</code></pre></div>
+                <p>手上有 ecg 信号数组。需要转换成相应的格式：</p>
+<div class="code-wrapper"><pre><code class="hljs dns"><span class="hljs-number">0</span>        <span class="hljs-number">0.000763</span>
+<span class="hljs-number">1</span>       -<span class="hljs-number">0.000610</span>
+<span class="hljs-number">2</span>        <span class="hljs-number">0.000763</span>
+<span class="hljs-number">3</span>        <span class="hljs-number">0.002289</span>
+<span class="hljs-number">4</span>        <span class="hljs-number">0.005341</span>
+           ...   
+<span class="hljs-number">50677</span>    <span class="hljs-number">0.005798</span>
+<span class="hljs-number">50678</span>    <span class="hljs-number">0.003357</span>
+<span class="hljs-number">50679</span>    <span class="hljs-number">0.008392</span>
+<span class="hljs-number">50680</span>    <span class="hljs-number">0.010681</span>
+<span class="hljs-number">50681</span>    <span class="hljs-number">0.008240</span>
+Name: ECG, Length: <span class="hljs-number">50682</span>, dtype: float64</code></pre></div>
 
-<p>参数说明：</p>
-<ul>
-<li><strong>data</strong>：一组数据(ndarray 类型)。</li>
-<li><strong>index</strong>：数据索引标签，如果不指定，默认从 0 开始。</li>
-<li><strong>dtype</strong>：数据类型，默认会自己判断。</li>
-<li><strong>name</strong>：设置名称。</li>
-<li><strong>copy</strong>：拷贝数据，默认为 False。</li>
-</ul>
-<h3 id="list-to-DataFrame"><a href="#list-to-DataFrame" class="headerlink" title="list to DataFrame"></a>list to DataFrame</h3><p>参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/pandas/pandas-dataframe.html">Pandas 数据结构 - DataFrame</a></p>
-<p>DataFrame 是一个表格型的数据结构，它含有一组有序的列，每列可以是不同的值类型（数值、字符串、布尔型值）。DataFrame 既有行索引也有列索引，它可以被看做由 Series 组成的字典（共同用一个索引）。</p>
-<div class="code-wrapper"><pre><code class="hljs python">pandas.DataFrame( data, index, columns, dtype, copy)</code></pre></div>
+<p>type 后可以发现该格式为：</p>
+<div class="code-wrapper"><pre><code class="hljs actionscript">&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;pandas.core.series.Series&#x27;</span>&gt;</code></pre></div>
 
-<p>参数说明：</p>
-<ul>
-<li><strong>data</strong>：一组数据(ndarray、series, map, lists, dict 等类型)。</li>
-<li><strong>index</strong>：索引值，或者可以称为行标签。</li>
-<li><strong>columns</strong>：列标签，默认为 RangeIndex (0, 1, 2, …, n) 。</li>
-<li><strong>dtype</strong>：数据类型。</li>
-<li><strong>copy</strong>：拷贝数据，默认为 False。</li>
-</ul>
-<h3 id="DataFrame-to-csv"><a href="#DataFrame-to-csv" class="headerlink" title="DataFrame to csv"></a>DataFrame to csv</h3><p>index是否要索引，heard 是否要列名。</p>
-<div class="code-wrapper"><pre><code class="hljs python">data.to_csv(<span class="hljs-string">&#x27;data.csv&#x27;</span>, index=<span class="hljs-literal">True</span>, header=<span class="hljs-literal">True</span>)</code></pre></div>
+<p>于是可以</p>
+<div class="code-wrapper"><pre><code class="hljs python">ecg = pd.Series(ecg, name=<span class="hljs-string">&#x27;ECG&#x27;</span>)</code></pre></div>
 
+<p>这样就将 List 转换成了 Series</p>
 
                 
               </div>
@@ -375,8 +368,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>pandas Series 和 DataFrame</div>
-      <div>https://wonderhoi.com/2023/11/20/pandas-Series-和-DataFrame/</div>
+      <div>Pandas List 转换为 Series</div>
+      <div>https://wonderhoi.com/2023/11/20/Pandas-List-转换为-Series/</div>
     </div>
     <div class="license-meta">
       

@@ -26,7 +26,7 @@
 <meta property="og:description" content="关于数量级 1 秒 1, 000 毫秒 1, 000, 000 微秒 1, 000, 000, 000 纳秒  对于一个纳秒时间戳： 1700621512995758338. 纳秒 1700621512995758.338 微秒 1700621512995.758338 毫秒 1700621512.995758338 秒  转换代码 import datetime  #假设纳秒时间戳为 16356">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-28T06:48:49.000Z">
-<meta property="article:modified_time" content="2023-11-28T06:57:43.852Z">
+<meta property="article:modified_time" content="2023-12-06T04:11:02.857Z">
 <meta property="article:author" content="刘子航">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -251,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          666 字
+          665 字
         
       </span>
     
@@ -314,7 +314,7 @@
 nano_second_timestamp = <span class="hljs-number">1635678377992198863</span>
 
 <span class="hljs-comment"># 将纳秒时间戳除以一亿得到秒级时间戳</span>
-second_timestamp = nano_second_timestamp // <span class="hljs-number">1000000000</span>
+second_timestamp = nano_second_timestamp / <span class="hljs-number">1000000000</span>
 
 <span class="hljs-comment"># 将秒级时间戳转换为datetime对象</span>
 d = datetime.datetime.fromtimestamp(second_timestamp)
