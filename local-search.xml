@@ -4,6 +4,91 @@
   
   
   <entry>
+    <title>ANN、RNN 与 CNN 在运动信号方面的研究</title>
+    <link href="/2023/12/29/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B6/"/>
+    <url>/2023/12/29/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B6/</url>
+    
+    <content type="html"><![CDATA[<h3 id="ANN（MLP）"><a href="#ANN（MLP）" class="headerlink" title="ANN（MLP）"></a>ANN（MLP）</h3><p>这里将 SVM 和 Random Forest 也包含在内。</p><h4 id="1-《Influence-mechanism-of-running-sportswear-fatigue-based-on-BP-neural-network》"><a href="#1-《Influence-mechanism-of-running-sportswear-fatigue-based-on-BP-neural-network》" class="headerlink" title="1.《Influence mechanism of running sportswear fatigue based on BP neural network》"></a>1.《Influence mechanism of running sportswear fatigue based on BP neural network》</h4><p>ANN，手动提取 EMG 信号特征预测疲劳。</p><h4 id="2-《A-Novel-Method-for-Classification-of-Running-Fatigue-Using-Change-Point-Segmentation》"><a href="#2-《A-Novel-Method-for-Classification-of-Running-Fatigue-Using-Change-Point-Segmentation》" class="headerlink" title="2.《A Novel Method for Classification of Running Fatigue Using Change-Point Segmentation》"></a>2.《A Novel Method for Classification of Running Fatigue Using Change-Point Segmentation》</h4><p>Random Forest，手动提取 EMG 信号特征预测疲劳。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B612.png"></p><h4 id="3-《Sport-induced-fatigue-detection-in-gait-parameters-using-inertial-sensors-and-support-vector-machines》"><a href="#3-《Sport-induced-fatigue-detection-in-gait-parameters-using-inertial-sensors-and-support-vector-machines》" class="headerlink" title="3.《Sport-induced fatigue detection in gait parameters using inertial sensors and support vector machines》"></a>3.《Sport-induced fatigue detection in gait parameters using inertial sensors and support vector machines》</h4><p>SVM，手动提取 IMU 信号特征预测疲劳。</p><h3 id="RNN"><a href="#RNN" class="headerlink" title="RNN"></a>RNN</h3><h4 id="1-《Sports-fatigue-detection-based-on-deep-learning》"><a href="#1-《Sports-fatigue-detection-based-on-deep-learning》" class="headerlink" title="1.《Sports fatigue detection based on deep learning》"></a>1.《Sports fatigue detection based on deep learning》</h4><p>BiLSTM，手动提取 ECG 信号特征预测 RPE。</p><p>该文献不是直接采用原始 ECG 信号进行模型训练，而是先手动提取了 ECG 信号特征（HRV）。</p><p>可以看到原始信号和提取特征后的准确率：</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B69.png"></p><p>文献还对比了 Random Forest、SVM 与 ANN 下面为准确率：</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B610.png"></p><h4 id="2-《Heart-Rate-Variability-Based-Subjective-Physical-Fatigue-Assessment》"><a href="#2-《Heart-Rate-Variability-Based-Subjective-Physical-Fatigue-Assessment》" class="headerlink" title="2.《Heart Rate Variability-Based Subjective Physical Fatigue Assessment》"></a>2.《Heart Rate Variability-Based Subjective Physical Fatigue Assessment》</h4><p>LightGBM，手动提取 ECG 信号特征预测 RPE。</p><p>这篇文献是采用 LightGBM 处理时间序列，所以放在了 RNN 这里。本篇文献除了采用 LightGBM 外，还对比了 DT、KNN 与 SVM 的准确率：</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B611.png"></p><h3 id="CNN"><a href="#CNN" class="headerlink" title="CNN"></a>CNN</h3><h4 id="1-《Real-Time-Detection-of-Acute-Cognitive-Stress-Using-a-Convolutional-Neural-Network-From-Electrocardiographic-Signal》"><a href="#1-《Real-Time-Detection-of-Acute-Cognitive-Stress-Using-a-Convolutional-Neural-Network-From-Electrocardiographic-Signal》" class="headerlink" title="1.《Real-Time Detection of Acute Cognitive Stress Using a Convolutional Neural Network From Electrocardiographic Signal》"></a>1.《Real-Time Detection of Acute Cognitive Stress Using a Convolutional Neural Network From Electrocardiographic Signal》</h4><p>CNN，通过 CNN 提取 ECG 信号特征预测急性认知压力。</p><p>文献使用了十层的简单 CNN 结构。</p><ul><li>第一层是图像输入层。其大小为799×1×1，等于输入频带的大小；</li><li>第二层是卷积层，由六个 4×1×1 的滤波器组成，步幅为 1×1；</li><li>接下来是批量归一化层、ReLU 层和概率为 0.5 的 dropout 层；</li><li>接下来的三层是两个全连接层和它们之间的批量归一化层。两个全连接层的单元数量分别为十个和两个；</li><li>最后两层是 softmax 层和分类输出层，它们都有两个单元。</li></ul><h4 id="2-《Cardiologist-Level-Arrhythmia-Detection-with-Convolutional-Neural-Networks》"><a href="#2-《Cardiologist-Level-Arrhythmia-Detection-with-Convolutional-Neural-Networks》" class="headerlink" title="2.《Cardiologist-Level Arrhythmia Detection with Convolutional Neural Networks》"></a>2.《Cardiologist-Level Arrhythmia Detection with Convolutional Neural Networks》</h4><p>CNN，通过 CNN 提取 ECG 信号特征预测心律失常。</p><p>CNN 网络大致的结构都可以用下面图片展示：</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B68.png"></p><h4 id="3-《基于表面肌电信号能量核相图的卷积神经网络人体手势识别算法》"><a href="#3-《基于表面肌电信号能量核相图的卷积神经网络人体手势识别算法》" class="headerlink" title="3.《基于表面肌电信号能量核相图的卷积神经网络人体手势识别算法》"></a>3.《基于表面肌电信号能量核相图的卷积神经网络人体手势识别算法》</h4><p>CNN，通过 CNN 提取 EMG 信号特征预测手势。</p><h3 id="组合模型"><a href="#组合模型" class="headerlink" title="组合模型"></a>组合模型</h3><h4 id="1-《A-Deep-Learning-Approach-for-Fatigue-Prediction-in-Sports-Using-GPS-Data-and-Rate-of-Perceived-Exertion》"><a href="#1-《A-Deep-Learning-Approach-for-Fatigue-Prediction-in-Sports-Using-GPS-Data-and-Rate-of-Perceived-Exertion》" class="headerlink" title="1.《A Deep Learning Approach for Fatigue Prediction in Sports Using GPS Data and Rate of Perceived Exertion》"></a>1.《A Deep Learning Approach for Fatigue Prediction in Sports Using GPS Data and Rate of Perceived Exertion》</h4><p>CNN-GRU，通过 CNN 提取 IMU 信号特征，然后通过 GRU 训练预测 RPE。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B67.png"></p><h4 id="2-《基于卷积长短时记忆网络的心律失常分类方法》"><a href="#2-《基于卷积长短时记忆网络的心律失常分类方法》" class="headerlink" title="2.《基于卷积长短时记忆网络的心律失常分类方法》"></a>2.《基于卷积长短时记忆网络的心律失常分类方法》</h4><p>CNN-LSTM，该文献通过 CNN 提取 ECG 特征后，并不是直接交给 FC 层进行分类，而是再经过 LSTM 后再交给 FC 层进行 Softmax 分类。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B61.png"></p><h4 id="3-《Dynamic-gesture-recognition-based-on-LSTM-CNN》"><a href="#3-《Dynamic-gesture-recognition-based-on-LSTM-CNN》" class="headerlink" title="3.《Dynamic gesture recognition based on LSTM-CNN》"></a>3.《Dynamic gesture recognition based on LSTM-CNN》</h4><p>与上面文献恰好相反，该文献的组合为 LSTM-CNN 识别 EMG 信号对应的手势。</p><p>模型由 2 个 LSTM 层、2 个一维卷积层和 1 个输出层组成。首先，通过 LSTM 层传递输入信号来提取时间信息。使用 2 个 LSTM 层，每个 LSTM 层有 52 个单元，每个单元有 64 个隐藏层。LSTM层的输出信号被输入到擅长特征提取的CNN层。具体来说，使用 2 个卷积层，第一层使用 65 个 3·1 卷积核，第二层卷积层使用 30 个 3·1 滤波器。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B66.png"></p><h4 id="4-《基于深度学习并行网络模型的心律失常分类方法》"><a href="#4-《基于深度学习并行网络模型的心律失常分类方法》" class="headerlink" title="4.《基于深度学习并行网络模型的心律失常分类方法》"></a>4.《基于深度学习并行网络模型的心律失常分类方法》</h4><p>这篇文献的网络比较复杂。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B62.png"></p><p>一共采用了 3 种网络 DenseNet+BiLSTM+ECANet，最后采用 Softmax 对 ECG 信号进行分类。</p><h5 id="DenseNet（CNN）"><a href="#DenseNet（CNN）" class="headerlink" title="DenseNet（CNN）"></a>DenseNet（CNN）</h5><p>密集连接卷积神经网络，Densely connected convolutional network</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B63.png"></p><h5 id="BiLSTM（RNN）"><a href="#BiLSTM（RNN）" class="headerlink" title="BiLSTM（RNN）"></a>BiLSTM（RNN）</h5><p>双向长短时记忆网络，Bidirectional long short-term memory network</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B64.png"></p><h5 id="ECANet"><a href="#ECANet" class="headerlink" title="ECANet"></a>ECANet</h5><p>高效通道注意力网络，Efficient channel attention network</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B65.png"></p><h4 id="5-《融合-CNN-和-BiLSTM-的心律失常心拍分类模型》"><a href="#5-《融合-CNN-和-BiLSTM-的心律失常心拍分类模型》" class="headerlink" title="5.《融合 CNN 和 BiLSTM 的心律失常心拍分类模型》"></a>5.《融合 CNN 和 BiLSTM 的心律失常心拍分类模型》</h4><p>本文献融合了 CNN 和 BiLSTM 的神经网络。将经过正则化的大尺度心拍输入 Muti-BiLSTM 网络中，提取一维时序数据的全局特征；将经过正则化的小尺度心拍输入 CNN 网络提取心拍的局部特征。将大尺度特征和局部特征经过拼接后的向量输入到 3 层全连接网络中。全连接层的激活函数都是指数线性单元(exponential linear units, ELU)，最后通过 softmax 的激活函数实现心拍的分类。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B615.png"></p><p>这篇文献倒是没有上篇文献那么复杂。虽然同样是分成了 2 个网络：</p><h5 id="CNN-1"><a href="#CNN-1" class="headerlink" title="CNN"></a>CNN</h5><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B613.png"></p><h5 id="BiLSTM"><a href="#BiLSTM" class="headerlink" title="BiLSTM"></a>BiLSTM</h5><p>利用多层的 BiLSTM（Multi-BiLSTM）网络构成一个全局特征提取器。其中每一层都包括一个前向的 LSTM 和后向的 LSTM 层，最后一个双边 LSTM 紧跟着一个全连接层。</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B614.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>资料整合</category>
+      
+      <category>文章</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>深度学习</tag>
+      
+      <tag>运动科学</tag>
+      
+      <tag>心率</tag>
+      
+      <tag>IMU</tag>
+      
+      <tag>EMG</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>RNN 与 LSTM 网络</title>
+    <link href="/2023/12/29/RNN-%E4%B8%8E-LSTM-%E7%BD%91%E7%BB%9C/"/>
+    <url>/2023/12/29/RNN-%E4%B8%8E-LSTM-%E7%BD%91%E7%BB%9C/</url>
+    
+    <content type="html"><![CDATA[<ol><li><p><a href="https://www.cnblogs.com/wuliytTaotao/p/9512963.html">循环神经网络（Recurrent Neural Network，RNN）</a></p></li><li><p><a href="https://www.jiqizhixin.com/articles/2018-12-14-4">RNN 结构详解</a></p></li><li><p><a href="https://zhuanlan.zhihu.com/p/139617364">LSTM模型结构的可视化</a></p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>资料整合</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>深度学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>多层感知器 MLP，全连接网络，DNN 三者的关系</title>
+    <link href="/2023/12/29/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E5%99%A8-MLP%EF%BC%8C%E5%85%A8%E8%BF%9E%E6%8E%A5%E7%BD%91%E7%BB%9C%EF%BC%8CDNN-%E4%B8%89%E8%80%85%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
+    <url>/2023/12/29/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E5%99%A8-MLP%EF%BC%8C%E5%85%A8%E8%BF%9E%E6%8E%A5%E7%BD%91%E7%BB%9C%EF%BC%8CDNN-%E4%B8%89%E8%80%85%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
+    
+    <content type="html"><![CDATA[<p>不确定全连接网络对应的英文，先做这个解释: </p><p>FullyConnected(FC) Layer &#x3D; 一层 layer</p><p>MLP &#x3D; 多层 FC layer 构成的 NN</p><p>DNN &#x3D; MLP 和 CNN 的集合相并，通常包括多个卷积 layer 和 FC layer</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>深度学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>鸢尾花的非监督学习</title>
     <link href="/2023/12/22/%E9%B8%A2%E5%B0%BE%E8%8A%B1%E7%9A%84%E9%9D%9E%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/"/>
     <url>/2023/12/22/%E9%B8%A2%E5%B0%BE%E8%8A%B1%E7%9A%84%E9%9D%9E%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/</url>
@@ -22,9 +107,9 @@
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -69,16 +154,16 @@
     
     <categories>
       
-      <category>资料整理</category>
+      <category>资料整合</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>运动科学</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>运动科学</tag>
       
     </tags>
     
@@ -346,9 +431,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>心率</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -799,9 +884,9 @@
     
     <tags>
       
-      <tag>运动科学</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>运动科学</tag>
       
     </tags>
     
@@ -826,9 +911,9 @@
     
     <tags>
       
-      <tag>计算机视觉</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>计算机视觉</tag>
       
     </tags>
     
@@ -1396,9 +1481,9 @@
     
     <tags>
       
-      <tag>EMG</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>EMG</tag>
       
     </tags>
     
@@ -1531,9 +1616,9 @@
     
     <tags>
       
-      <tag>EMG</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>EMG</tag>
       
     </tags>
     
@@ -1558,9 +1643,9 @@
     
     <tags>
       
-      <tag>CEPT</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>CEPT</tag>
       
     </tags>
     
@@ -1724,9 +1809,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>EMG</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -1830,11 +1915,11 @@
     
     <tags>
       
+      <tag>Arduino</tag>
+      
       <tag>传感器</tag>
       
       <tag>CEPT</tag>
-      
-      <tag>Arduino</tag>
       
     </tags>
     
@@ -1861,11 +1946,11 @@
     
     <tags>
       
+      <tag>Arduino</tag>
+      
       <tag>传感器</tag>
       
       <tag>CEPT</tag>
-      
-      <tag>Arduino</tag>
       
     </tags>
     
@@ -2054,11 +2139,11 @@
     
     <tags>
       
+      <tag>深度学习</tag>
+      
       <tag>计算机视觉</tag>
       
       <tag>Python</tag>
-      
-      <tag>深度学习</tag>
       
     </tags>
     
@@ -2162,11 +2247,11 @@
     
     <tags>
       
+      <tag>Arduino</tag>
+      
       <tag>传感器</tag>
       
       <tag>CEPT</tag>
-      
-      <tag>Arduino</tag>
       
     </tags>
     
@@ -2276,9 +2361,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>IMU</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -2438,9 +2523,9 @@
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
