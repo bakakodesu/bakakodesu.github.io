@@ -1,0 +1,725 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <link rel="icon" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="刘子航">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="1.概述心脏运作可以揭露人体许多极具价值的信息，包括其健康状态、生活方式，甚至是情绪状态及心脏疾病的早期发病等。传统的医疗设备中，监测心跳速率和心脏活动是经由测量电生理讯号与心电图 (ECG) 来完成的，需要将电极连接到身体来量测心脏组织中所引发电气活动的信号。此外，随着心跳会有一压力波通过血管进行传递，这个波会稍微改变血管的直径，除了 ECG 外的另一选择──光体积变化描记图法 (Photopl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ECG&#x2F;PPG 量测解决方案">
+<meta property="og:url" content="https://wonderhoi.com/2023/11/16/ECG-PPG-%E9%87%8F%E6%B5%8B%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="1.概述心脏运作可以揭露人体许多极具价值的信息，包括其健康状态、生活方式，甚至是情绪状态及心脏疾病的早期发病等。传统的医疗设备中，监测心跳速率和心脏活动是经由测量电生理讯号与心电图 (ECG) 来完成的，需要将电极连接到身体来量测心脏组织中所引发电气活动的信号。此外，随着心跳会有一压力波通过血管进行传递，这个波会稍微改变血管的直径，除了 ECG 外的另一选择──光体积变化描记图法 (Photopl">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.richtek.com/Design%20Support/Technical%20Document/~/media/Richtek/Design%20Support/Technical%20Documentation/AN057/CN/Version4/image001.jpg?file=preview.png">
+<meta property="og:image" content="https://www.richtek.com/Design%20Support/Technical%20Document/~/media/Richtek/Design%20Support/Technical%20Documentation/AN057/CN/Version4/image002.png?file=preview.png">
+<meta property="og:image" content="https://www.richtek.com/Design%20Support/Technical%20Document/~/media/Richtek/Design%20Support/Technical%20Documentation/AN057/CN/Version4/image003.png?file=preview.png">
+<meta property="article:published_time" content="2023-11-16T08:48:55.000Z">
+<meta property="article:modified_time" content="2023-11-16T09:42:57.000Z">
+<meta property="article:author" content="刘子航">
+<meta property="article:tag" content="心率">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.richtek.com/Design%20Support/Technical%20Document/~/media/Richtek/Design%20Support/Technical%20Documentation/AN057/CN/Version4/image001.jpg?file=preview.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>ECG/PPG 量测解决方案 - 这是一个PM的BLOG</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wonderhoi.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>这是一个PM的BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="ECG/PPG 量测解决方案"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-16 16:48" pubdate>
+          2023年11月16日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.8k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">ECG/PPG 量测解决方案</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h3><p>心脏运作可以揭露人体许多极具价值的信息，包括其健康状态、生活方式，甚至是情绪状态及心脏疾病的早期发病等。传统的医疗设备中，监测心跳速率和心脏活动是经由测量电生理讯号与心电图 (ECG) 来完成的，需要将电极连接到身体来量测心脏组织中所引发电气活动的信号。此外，随着心跳会有一压力波通过血管进行传递，这个波会稍微改变血管的直径，除了 ECG 外的另一选择──光体积变化描记图法 (Photoplethysmography, PPG) 就是利用这个变化，是一种无需测量生物电信号就能获得心脏功能信息的光学技术。PPG 主要用于测量血氧饱和度 (SpO2)，但也可不进行生物电信号测量就提供心脏功能信息。借助 PPG 技术，心率监护仪可集成到手表或护腕等可穿戴设备上，以达成连续侦测的应用。</p>
+<h3 id="2-生理讯号：ECG-vs-PPG-与-PTT"><a href="#2-生理讯号：ECG-vs-PPG-与-PTT" class="headerlink" title="2.生理讯号：ECG vs. PPG 与 PTT"></a>2.生理讯号：ECG vs. PPG 与 PTT</h3><p>心电描记术 (Electrocardiography, ECG或者EKG) 是一种经胸腔以时间为单位记录心脏的电生理活动，利用在人体皮肤表面贴上的电极，可以侦测到心脏的电位传动，而心电图所记录的并不是单一心室或心房细胞的电位变化，而是心脏整体的电位变化。心电图的结果通常以波型显示，基本包括有 P 波、QRS 波组、T 波、P 波代表的是心房收缩，QRS 波组则是心室收缩，T 波是心室舒张。有关心跳率的测量或评估，是以 R 波与 R 波的间隔时间来代表。RR 间隔越大代表心跳率越低，RR 间隔越小代表心跳率越高。测量 ECG 信号常常要在身体多个部位连接传感器电极，在胸部和四肢之间最多可以连接 10 个电极。</p>
+<p><img src="https://www.richtek.com/Design%20Support/Technical%20Document/~/media/Richtek/Design%20Support/Technical%20Documentation/AN057/CN/Version4/image001.jpg?file=preview.png" srcset="/img/loading.gif" lazyload></p>
+<p>光体积变化描记图法 (Photoplethysmography，简称PPG) 是借光电手段在活体组织中检测血液容积变化的一种无创检测方法。当一定波长的光束照射到指端皮肤表面，每次心跳时，血管的收缩和扩张都会影响光的透射 (例如在透射PPG中，通过指尖的光线) 或是光的反射 (例如在反射 PPG 中，来自手腕表面附近的光线)。当光线透过皮肤组织然后再反射到光敏传感器时，光照会有一定的衰减。像肌肉、骨骼、静脉和其他连接组织对光的吸收是基本不变的 (前提是测量部位没有大幅度的运动)，但是动脉会不同，由于动脉里有血液的脉动，那么对光的吸收自然也会有所变化。当我们把光转换成电信号时，正是由于动脉对光的吸收有变化而其他组织对光的吸收基本不变，得到的信号就可以分为直流 DC 信号和交流 AC 信号。提取其中的 AC 信号，就能反应出血液流动的特点。</p>
+<p><img src="https://www.richtek.com/Design%20Support/Technical%20Document/~/media/Richtek/Design%20Support/Technical%20Documentation/AN057/CN/Version4/image002.png?file=preview.png" srcset="/img/loading.gif" lazyload></p>
+<p>下图是 PPG 信号和 ECG 信号的对比：</p>
+<p><img src="https://www.richtek.com/Design%20Support/Technical%20Document/~/media/Richtek/Design%20Support/Technical%20Documentation/AN057/CN/Version4/image003.png?file=preview.png" srcset="/img/loading.gif" lazyload></p>
+<p>根据 PPG 与 ECG 个别的生理特征点，我们可以发现 ECG 的峰值来自于心室的收缩，而 PPG 的峰值则是因为血管收缩所造成的，因此我们可以得到血液自心脏送出后到达量测部位的传输时间，也就是脉搏波传递时间 Pulse Transit Time (PTT)，脉搏波传递的速度与血压是直接相关的，血压高时，脉搏波传递快，反之则慢，所以通过心电信号 ECG 与脉搏波信号 PPG 获得脉搏传递时间 (PTT)，再加上常规的一些身体参数 (如身高、体重) 即可得出脉搏波传递速度，通过建立的特征方程来估计人体脉搏的收缩压与舒张压，可实现无创连续血压测量。</p>
+<h3 id="3-信号处理"><a href="#3-信号处理" class="headerlink" title="3.信号处理"></a>3.信号处理</h3><h4 id="ECG"><a href="#ECG" class="headerlink" title="ECG"></a>ECG</h4><p>一般 ECG 电极需放置在心脏两侧并紧贴皮肤，可以用来记录心电信号随时间的变化。实际 ECG 信号的幅度只有几毫伏，频率不超过几百赫兹。ECG 测量面临诸多挑战：一方面，来自 ECG 主电源的 50Hz 至 60Hz 电容耦合干扰要比心脏信号强许多；另一方面，身体皮肤的接触阻抗以及传感器之间阻抗的不匹配，这会导致较大的偏差并降低共模抑制能力；此外，还要解决接触噪声以及电磁源产生的干扰问题。此类应用中一些重要的放大器参数包括共模抑制、输入偏移电压和偏移电压漂移、输出摆幅以及放大器噪声，说明如下：</p>
+<ul>
+<li><strong>共模抑制</strong></li>
+</ul>
+<p>如前文所述，放置在患者皮肤上的电极可能有大约数百毫伏特的直流电压，而有用讯号的电压通常小于一毫伏特。仪表放大器配置非常适合这种情况，该放大器将消除任何与差分输入共模的讯号 (来自电极或任何共模噪声，如 60Hz 干扰)，同时放大有用的心电讯号。在这种情况下，考虑放大器电路的共模抑制参数是非常重要的，不仅针对直流讯号，还要考虑跨频率，尤其是线路频率为 50Hz 或 60Hz 时。具有高共模抑制比的放大器将消除更多不需要的噪声并实现更高精度的测量。</p>
+<ul>
+<li><strong>输入偏移电压和偏移电压漂移</strong></li>
+</ul>
+<p>由于有用电压相当小，放大器需要提供增益，以提高检测电路的分辨率。此应用需要高增益，因此放大器的偏移电压非常重要。放大器产生的任何偏移电压都将乘以电路增益，例如，假定心脏收缩在皮肤上的一个指定电极上产生 1 毫伏特电压，假定放大器电路的增益设置为 1000，则放大器电路的理想输出为 1 伏特，但如果放大器的输入偏移电压为 100 微伏特时，则将在输出产生 100 毫伏特的误差 (占有用讯号的 10%)。值得注意的是，放大器的输入偏移误差以输入为参考，因此，误差将与放大器的增益成比例。 </p>
+<p>与所有电子组件一样，放大器的特性会随时间和温度发生变化，其电压偏移也是如此。放大器电压偏移是误差的来源，随着偏移电压的漂移，此误差可能变得更大。然而，透过选择低漂移放大器 (如采用自动归零校准架构的放大器) 或者定期执行系统校准，藉此校正失调和漂移的运算放大器，可大幅度地减小此类误差源带来的影响。</p>
+<ul>
+<li><strong>放大器输出摆幅</strong></li>
+</ul>
+<p>在前面的示例中，电极上 1 毫伏特电压变化会在放大器电路的输出上产生 1 伏特的电压变化。对于 5 伏特单电源系统，这代表放大器电路可精确检测 0 ~ 5 毫伏特的电压，放大器需要输出可摆动到最低与最高的电源轨。相反地，如果放大器不支持轨对轨的输出摆动，则电压的动态范围会变小，就无法正确检测出完整的输入讯号，因而会限制检测电路的动态范围，无法做出精确的侦测。</p>
+<ul>
+<li><strong>放大器噪声</strong></li>
+</ul>
+<p>当评估此类应用的放大器时，另一个必须考虑的重要参数是放大器噪声。值得注意的是，放大器的噪声可能不会随频率保持恒定，尤其是在 1&#x2F;f 噪声可成为主要噪声源的低频率下；在 ECG 应用中，有用的讯号带宽通常为直流到 100Hz，因此 1&#x2F;f 噪声仍是误差源之一。</p>
+<h4 id="PPG"><a href="#PPG" class="headerlink" title="PPG"></a>PPG</h4><p>测量 PPG 面临的主要挑战来自环境光和运动产生的干扰。阳光产生的直流误差相对而言比较容易消除，但日光灯和节能灯发出的光线都带有可引起交流误差的频率分量。运动也会干扰光学系统，当光学心率监护仪用于睡眠研究时，这可能不是问题，但如果在活动期间穿戴，则将很难消除运动伪像，光学传感器 (LED 和光电检测器) 和皮肤之间的相对移动也会降低光信号的灵敏度。</p>
+<p>此外，运动的频率分量也可能会被误判为心率，因此，必须测量该运动并进行补偿。设备与人体之间相贴越紧密，这种影响就越小，但采用机械方式消除这种影响几乎是不可能的。通常可使用多种方法来测量运动的干扰，其中一种是光学方法，即使用多个 LED 波长。共模信号表示运动，而差分信号用来检测心率。不过，最好是使用真正的运动传感器，该传感器不仅可准确测量应用于可穿戴设备的运动，而且还可用于提供其他功能，例如跟踪活动、计算步数或者在检测到特定g值时启动某个应用。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%96%87%E7%AB%A0/" class="category-chain-item">文章</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%BF%83%E7%8E%87/" class="print-no-link">#心率</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>ECG/PPG 量测解决方案</div>
+      <div>https://wonderhoi.com/2023/11/16/ECG-PPG-量测解决方案/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>刘子航</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/11/17/%E5%A6%82%E4%BD%95%E8%AE%A9-plt-savefig-%E4%B8%BA%E6%9C%80%E5%A4%A7%E5%8C%96%E7%9A%84%E7%AA%97%E5%8F%A3%E4%BF%9D%E5%AD%98%E5%9B%BE%E5%83%8F%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E9%BB%98%E8%AE%A4%E7%9A%84%E5%B0%BA%E5%AF%B8/" title="如何让 plt.savefig() 为最大化的窗口保存图像，而不是默认的尺寸">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">如何让 plt.savefig() 为最大化的窗口保存图像，而不是默认的尺寸</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/11/07/%E3%80%8C%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91%E3%80%8DHeartPy-Python-Heart-Rate-Analysis-Toolkit-II/" title="「文档翻译」HeartPy - Python Heart Rate Analysis Toolkit II">
+                        <span class="hidden-mobile">「文档翻译」HeartPy - Python Heart Rate Analysis Toolkit II</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
