@@ -1,0 +1,995 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <link rel="icon" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="刘子航">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="鸢尾花数据Iris Species 定义鸢尾花类class Iris:     def __init__(self, sepal_length, sepal_width, petal_length, petal_width, species):         self.sepal_length &#x3D; sepal_length         self.sepal_width &#x3D; sepal_wid">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyTorch 鸢尾花深度学习">
+<meta property="og:url" content="https://wonderhoi.com/2023/06/23/PyTorch-%E9%B8%A2%E5%B0%BE%E8%8A%B1%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="鸢尾花数据Iris Species 定义鸢尾花类class Iris:     def __init__(self, sepal_length, sepal_width, petal_length, petal_width, species):         self.sepal_length &#x3D; sepal_length         self.sepal_width &#x3D; sepal_wid">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-23T06:38:59.000Z">
+<meta property="article:modified_time" content="2023-11-20T08:41:20.000Z">
+<meta property="article:author" content="刘子航">
+<meta property="article:tag" content="深度学习">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>PyTorch 鸢尾花深度学习 - 这是一个PM的BLOG</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wonderhoi.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>这是一个PM的BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="PyTorch 鸢尾花深度学习"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-06-23 14:38" pubdate>
+          2023年6月23日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.4k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">PyTorch 鸢尾花深度学习</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="鸢尾花数据"><a href="#鸢尾花数据" class="headerlink" title="鸢尾花数据"></a>鸢尾花数据</h3><p><a target="_blank" rel="noopener" href="https://www.kaggle.com/datasets/uciml/iris">Iris Species</a></p>
+<h3 id="定义鸢尾花类"><a href="#定义鸢尾花类" class="headerlink" title="定义鸢尾花类"></a>定义鸢尾花类</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Iris</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, sepal_length, sepal_width, petal_length, petal_width, species</span>):
+        self.sepal_length = sepal_length
+        self.sepal_width = sepal_width
+        self.petal_length = petal_length
+        self.petal_width = petal_width
+        self.species = species
+
+    <span class="hljs-comment"># 返回 feature</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">feature</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> [self.sepal_length, self.sepal_width, self.petal_length, self.petal_width]
+
+    <span class="hljs-comment"># 返回 label</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">label</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">if</span> self.species == <span class="hljs-string">&#x27;Iris-setosa&#x27;</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+        <span class="hljs-keyword">elif</span> self.species == <span class="hljs-string">&#x27;Iris-versicolor&#x27;</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+        <span class="hljs-keyword">elif</span> self.species == <span class="hljs-string">&#x27;Iris-virginica&#x27;</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span></code></pre></div>
+
+
+
+<h3 id="定义鸢尾花数据集"><a href="#定义鸢尾花数据集" class="headerlink" title="定义鸢尾花数据集"></a>定义鸢尾花数据集</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">IrisDataset</span>(<span class="hljs-title class_ inherited__">Dataset</span>):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, features, labels</span>):
+        self.features = features
+        self.labels = labels
+
+    <span class="hljs-comment"># 返回数据集长度</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__len__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(self.features)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self, index</span>):
+        item_feature = self.features[index]
+        item_label = self.labels[index]
+        <span class="hljs-keyword">return</span> item_feature, item_label</code></pre></div>
+
+<h3 id="读取-csv-数据构建数据集"><a href="#读取-csv-数据构建数据集" class="headerlink" title="读取 csv 数据构建数据集"></a>读取 csv 数据构建数据集</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_data</span>():
+    tic = time.time()
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;读取cvs文件&#x27;</span>)
+    csv_path = <span class="hljs-string">&#x27;/Users/bakako/Downloads/archive/Iris.csv&#x27;</span>
+    datasource = pd.read_csv(csv_path)
+    datasource_len = <span class="hljs-built_in">len</span>(datasource)
+
+    <span class="hljs-comment"># 构建数据集矩阵 n 行，4 列</span>
+
+    <span class="hljs-comment"># [[0. 0. 0. 0.]</span>
+    <span class="hljs-comment">#       ...</span>
+    <span class="hljs-comment">#  [0. 0. 0. 0.]]</span>
+    iris_features = np.zeros((datasource_len, <span class="hljs-number">4</span>), dtype=<span class="hljs-built_in">float</span>)
+    iris_labels = []
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;构造数据结构&#x27;</span>)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(datasource_len):
+        <span class="hljs-comment"># 创建 iris 对象</span>
+        iris = Iris(datasource.SepalLengthCm[i], datasource.SepalWidthCm[i],
+                    datasource.PetalLengthCm[i], datasource.PetalWidthCm[i],
+                    datasource.Species[i])
+
+        <span class="hljs-comment"># iris = Iris(datasource[&#x27;SepalLengthCm&#x27;][i], datasource[&#x27;SepalWidthCm&#x27;][i],</span>
+        <span class="hljs-comment">#             datasource[&#x27;PetalLengthCm&#x27;][i], datasource[&#x27;PetalWidthCm&#x27;][i],</span>
+        <span class="hljs-comment">#             datasource[&#x27;Species&#x27;][i])</span>
+
+        <span class="hljs-comment"># [[0. 0. 0. 0.]  &lt;- 将元素一行一行进行替换</span>
+        <span class="hljs-comment">#       ...</span>
+        <span class="hljs-comment">#  [0. 0. 0. 0.]]</span>
+        iris_features[[i], :] = iris.feature()
+        iris_labels.append(iris.label())
+
+    <span class="hljs-comment"># 把数据集按照 8:2 的比例来划分为训练集和测试集</span>
+    train_features, \
+        test_features, \
+        train_labels, \
+        test_labels = train_test_split(iris_features, iris_labels, test_size=<span class="hljs-number">0.2</span>)
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;构造训练集&#x27;</span>)
+    <span class="hljs-comment"># 将训练集和测试集转换为PyTorch的张量对象并设置数据类型，加上to(device)可以运行在GPU上</span>
+    train_dataset = IrisDataset(torch.FloatTensor(train_features),
+                                torch.LongTensor(train_labels))
+    test_features = torch.FloatTensor(test_features)
+    test_labels = torch.LongTensor(test_labels)
+
+    toc = time.time()
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Loading Time: &#x27;</span> + <span class="hljs-built_in">str</span>(<span class="hljs-number">1000</span> * (toc - tic)) + <span class="hljs-string">&#x27;ms&#x27;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#x27;</span>)
+    <span class="hljs-keyword">return</span> train_dataset, test_features, test_labels</code></pre></div>
+
+<h3 id="训练模型"><a href="#训练模型" class="headerlink" title="训练模型"></a>训练模型</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">train_model</span>(<span class="hljs-params">dataset, epochs, gpu</span>):
+    tic = time.time()
+    device = torch.device(<span class="hljs-string">&quot;cuda:0&quot;</span> <span class="hljs-keyword">if</span> torch.cuda.is_available() <span class="hljs-keyword">else</span> <span class="hljs-string">&quot;cpu&quot;</span>)
+    model = Model(n_feature=<span class="hljs-number">4</span>, n_hidden=<span class="hljs-number">40</span>, n_label=<span class="hljs-number">3</span>)
+    <span class="hljs-keyword">if</span> gpu:
+        model.to(device)
+
+    optimizer = torch.optim.SGD(model.parameters(), lr=<span class="hljs-number">0.02</span>)
+    loss_func = torch.nn.CrossEntropyLoss()
+    batch_size = <span class="hljs-number">5</span>  <span class="hljs-comment"># 每次训练 5 个样本</span>
+    dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=<span class="hljs-literal">True</span>, num_workers=<span class="hljs-number">0</span>, pin_memory=<span class="hljs-literal">True</span>)
+
+    <span class="hljs-comment"># epoch 为训练次数</span>
+    <span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(epochs):
+        <span class="hljs-comment"># 分 120/5 = 24 次训练</span>
+        <span class="hljs-keyword">for</span> step, (features, labels) <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(dataloader):
+            <span class="hljs-keyword">if</span> gpu:
+                features = features.to(device)
+                labels = labels.to(device)
+
+            <span class="hljs-comment"># 前向传播计算输出结果</span>
+            output = model(features)
+            loss = loss_func(output, labels)
+            <span class="hljs-comment"># 注意 labels 的结构应该是 [0. 0. 0.]，而不是[[0.], [0.], [0.]]</span>
+            <span class="hljs-comment"># loss 必须是[x, x, x] -&gt; y，而不是[x, x, x] -&gt; [y]</span>
+            <span class="hljs-comment"># 否则会报错：0D or 1D target tensor expected, multi-target not supported</span>
+            <span class="hljs-comment"># 如果出现这种情况，可以进行降维 labels = labels.squeeze(1)</span>
+
+            <span class="hljs-comment"># 反向传播，更新梯度并优化模型参数</span>
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Epoch: &#x27;</span>, epoch + <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;| Step: &#x27;</span>, step + <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;| Loss: &#x27;</span>, loss.item())
+
+    toc = time.time()
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;训练结束&#x27;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Train time:&#x27;</span> + <span class="hljs-built_in">str</span>(<span class="hljs-number">1000</span> * (toc - tic)) + <span class="hljs-string">&#x27;ms&#x27;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#x27;</span>)
+
+    <span class="hljs-keyword">return</span> model</code></pre></div>
+
+<h3 id="整体代码"><a href="#整体代码" class="headerlink" title="整体代码"></a>整体代码</h3><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> Dataset, DataLoader
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+<span class="hljs-keyword">import</span> time
+
+
+<span class="hljs-comment"># 定义鸢尾花类</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Iris</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, sepal_length, sepal_width, petal_length, petal_width, species</span>):
+        self.sepal_length = sepal_length
+        self.sepal_width = sepal_width
+        self.petal_length = petal_length
+        self.petal_width = petal_width
+        self.species = species
+
+    <span class="hljs-comment"># 返回 feature</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">feature</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> [self.sepal_length, self.sepal_width, self.petal_length, self.petal_width]
+
+    <span class="hljs-comment"># 返回 label</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">label</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">if</span> self.species == <span class="hljs-string">&#x27;Iris-setosa&#x27;</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+        <span class="hljs-keyword">elif</span> self.species == <span class="hljs-string">&#x27;Iris-versicolor&#x27;</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+        <span class="hljs-keyword">elif</span> self.species == <span class="hljs-string">&#x27;Iris-virginica&#x27;</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span>
+
+
+<span class="hljs-comment"># 定义数据集</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">IrisDataset</span>(<span class="hljs-title class_ inherited__">Dataset</span>):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, features, labels</span>):
+        self.features = features
+        self.labels = labels
+
+    <span class="hljs-comment"># 返回数据集长度</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__len__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(self.features)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self, index</span>):
+        item_feature = self.features[index]
+        item_label = self.labels[index]
+        <span class="hljs-keyword">return</span> item_feature, item_label
+
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Model</span>(torch.nn.Module):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, n_feature, n_hidden, n_label</span>):
+        <span class="hljs-built_in">super</span>(Model, self).__init__()
+        self.hidden = torch.nn.Linear(n_feature, n_hidden)      <span class="hljs-comment"># 定义隐藏层网络</span>
+        self.output = torch.nn.Linear(n_hidden, n_label)        <span class="hljs-comment"># 定义输出层网络</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">forward</span>(<span class="hljs-params">self, x</span>):
+        x = torch.nn.functional.relu(self.hidden(x))            <span class="hljs-comment"># 隐藏层的激活函数,采用relu,也可以采用sigmod,tanh</span>
+        x = torch.nn.functional.softmax(self.output(x), dim=<span class="hljs-number">1</span>)  <span class="hljs-comment"># 输出层softmax</span>
+        <span class="hljs-keyword">return</span> x
+
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">get_data</span>():
+    tic = time.time()
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;读取cvs文件&#x27;</span>)
+    csv_path = <span class="hljs-string">&#x27;/Users/bakako/Downloads/archive/Iris.csv&#x27;</span>
+    datasource = pd.read_csv(csv_path)
+    datasource_len = <span class="hljs-built_in">len</span>(datasource)
+
+    <span class="hljs-comment"># 构建数据集矩阵 n 行，4 列</span>
+
+    <span class="hljs-comment"># [[0. 0. 0. 0.]</span>
+    <span class="hljs-comment">#       ...</span>
+    <span class="hljs-comment">#  [0. 0. 0. 0.]]</span>
+    iris_features = np.zeros((datasource_len, <span class="hljs-number">4</span>), dtype=<span class="hljs-built_in">float</span>)
+    iris_labels = []
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;构造数据结构&#x27;</span>)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(datasource_len):
+        <span class="hljs-comment"># 创建 iris 对象</span>
+        iris = Iris(datasource.SepalLengthCm[i], datasource.SepalWidthCm[i],
+                    datasource.PetalLengthCm[i], datasource.PetalWidthCm[i],
+                    datasource.Species[i])
+
+        <span class="hljs-comment"># iris = Iris(datasource[&#x27;SepalLengthCm&#x27;][i], datasource[&#x27;SepalWidthCm&#x27;][i],</span>
+        <span class="hljs-comment">#             datasource[&#x27;PetalLengthCm&#x27;][i], datasource[&#x27;PetalWidthCm&#x27;][i],</span>
+        <span class="hljs-comment">#             datasource[&#x27;Species&#x27;][i])</span>
+
+        <span class="hljs-comment"># [[0. 0. 0. 0.]  &lt;- 将元素一行一行进行替换</span>
+        <span class="hljs-comment">#       ...</span>
+        <span class="hljs-comment">#  [0. 0. 0. 0.]]</span>
+        iris_features[[i], :] = iris.feature()
+        iris_labels.append(iris.label())
+
+    <span class="hljs-comment"># 把数据集按照 8:2 的比例来划分为训练集和测试集</span>
+    train_features, \
+        test_features, \
+        train_labels, \
+        test_labels = train_test_split(iris_features, iris_labels, test_size=<span class="hljs-number">0.2</span>)
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;构造训练集&#x27;</span>)
+    <span class="hljs-comment"># 将训练集和测试集转换为PyTorch的张量对象并设置数据类型，加上to(device)可以运行在GPU上</span>
+    train_dataset = IrisDataset(torch.FloatTensor(train_features),
+                                torch.LongTensor(train_labels))
+    test_features = torch.FloatTensor(test_features)
+    test_labels = torch.LongTensor(test_labels)
+
+    toc = time.time()
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Loading Time: &#x27;</span> + <span class="hljs-built_in">str</span>(<span class="hljs-number">1000</span> * (toc - tic)) + <span class="hljs-string">&#x27;ms&#x27;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#x27;</span>)
+    <span class="hljs-keyword">return</span> train_dataset, test_features, test_labels
+
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">train_model</span>(<span class="hljs-params">dataset, epochs, gpu</span>):
+    tic = time.time()
+    device = torch.device(<span class="hljs-string">&quot;cuda:0&quot;</span> <span class="hljs-keyword">if</span> torch.cuda.is_available() <span class="hljs-keyword">else</span> <span class="hljs-string">&quot;cpu&quot;</span>)
+    model = Model(n_feature=<span class="hljs-number">4</span>, n_hidden=<span class="hljs-number">40</span>, n_label=<span class="hljs-number">3</span>)
+    <span class="hljs-keyword">if</span> gpu:
+        model.to(device)
+
+    optimizer = torch.optim.SGD(model.parameters(), lr=<span class="hljs-number">0.02</span>)
+    loss_func = torch.nn.CrossEntropyLoss()
+    batch_size = <span class="hljs-number">5</span>  <span class="hljs-comment"># 每次训练 5 个样本</span>
+    dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=<span class="hljs-literal">True</span>, num_workers=<span class="hljs-number">0</span>, pin_memory=<span class="hljs-literal">True</span>)
+
+    <span class="hljs-comment"># epoch 为训练次数</span>
+    <span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(epochs):
+        <span class="hljs-comment"># 分 120/5 = 24 次训练</span>
+        <span class="hljs-keyword">for</span> step, (features, labels) <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(dataloader):
+            <span class="hljs-keyword">if</span> gpu:
+                features = features.to(device)
+                labels = labels.to(device)
+
+            <span class="hljs-comment"># 前向传播计算输出结果</span>
+            output = model(features)
+            loss = loss_func(output, labels)
+            <span class="hljs-comment"># 注意 labels 的结构应该是 [0. 0. 0.]，而不是[[0.], [0.], [0.]]</span>
+            <span class="hljs-comment"># loss 必须是[x, x, x] -&gt; y，而不是[x, x, x] -&gt; [y]</span>
+            <span class="hljs-comment"># 否则会报错：0D or 1D target tensor expected, multi-target not supported</span>
+            <span class="hljs-comment"># 如果出现这种情况，可以进行降维 labels = labels.squeeze(1)</span>
+
+            <span class="hljs-comment"># 反向传播，更新梯度并优化模型参数</span>
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Epoch: &#x27;</span>, epoch + <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;| Step: &#x27;</span>, step + <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;| Loss: &#x27;</span>, loss.item())
+
+    toc = time.time()
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;训练结束&#x27;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Train time:&#x27;</span> + <span class="hljs-built_in">str</span>(<span class="hljs-number">1000</span> * (toc - tic)) + <span class="hljs-string">&#x27;ms&#x27;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#x27;</span>)
+
+    <span class="hljs-keyword">return</span> model
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
+    gpu = <span class="hljs-literal">False</span>
+    train_dataset, test_features, test_labels = get_data()
+    model = train_model(train_dataset, <span class="hljs-number">100</span>, gpu)
+    result = model(test_features)
+    <span class="hljs-comment"># prediction = torch.argmax(result, 1)  # 求最大值的索引</span>
+    prediction = torch.<span class="hljs-built_in">max</span>(result, <span class="hljs-number">1</span>)[<span class="hljs-number">1</span>]    <span class="hljs-comment"># 这里第一个1表示求三个结果里的最大值，第二1表示我们只要索引(1返回index, 0返回原值)</span>
+    correct = (prediction == test_labels).<span class="hljs-built_in">sum</span>().item()
+    accuracy = <span class="hljs-built_in">float</span>(correct) / <span class="hljs-built_in">float</span>(<span class="hljs-built_in">len</span>(test_features))
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;莺尾花预测准确率:&quot;</span>, accuracy)</code></pre></div>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Code/" class="category-chain-item">Code</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Code/Python/" class="category-chain-item">Python</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="print-no-link">#深度学习</a>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>PyTorch 鸢尾花深度学习</div>
+      <div>https://wonderhoi.com/2023/06/23/PyTorch-鸢尾花深度学习/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>刘子航</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年6月23日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/07/27/PyCharm-%E8%8E%B7%E5%8F%96-Conda-%E7%8E%AF%E5%A2%83%E5%88%97%E8%A1%A8%E5%A4%B1%E8%B4%A5%EF%BC%8C%E6%8A%A5%E9%94%99-error-code-1-%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" title="PyCharm 获取 Conda 环境列表失败，报错 error code 1 的解决办法">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">PyCharm 获取 Conda 环境列表失败，报错 error code 1 的解决办法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/06/14/%E5%87%A0%E5%A4%A7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" title="几大界面设计语言">
+                        <span class="hidden-mobile">几大界面设计语言</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
