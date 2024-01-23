@@ -18,21 +18,26 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="SwiftUI 在 WatchOS 中的 List 与 ForEach 奇怪的地方">
-<meta property="og:url" content="https://wonderhoi.com/2024/01/17/SwiftUI-%E5%9C%A8-WatchOS-%E4%B8%AD%E7%9A%84-List-%E4%B8%8E-ForEach-%E5%A5%87%E6%80%AA%E7%9A%84%E5%9C%B0%E6%96%B9/index.html">
+    <meta name="description" content="坐标系![坐标](https:&#x2F;&#x2F;bakako-1308163928.cos.ap-guangzhou.myqcloud.com&#x2F;uPic&#x2F;iOS 加速度坐标1.png) X、Y、Z 是相对手机的 所有传感器的原始数据都是一个以手机作为参考系的三维向量：  X轴  手机正放时，屏幕右侧方向为 X 轴正方向，左侧方向为 X 轴负方向；  Y轴  手机屏幕顶部向上方向记为 Y 轴正方向，屏幕底部向下方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 加速度坐标">
+<meta property="og:url" content="https://wonderhoi.com/2024/01/22/iOS-%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9D%90%E6%A0%87/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="坐标系![坐标](https:&#x2F;&#x2F;bakako-1308163928.cos.ap-guangzhou.myqcloud.com&#x2F;uPic&#x2F;iOS 加速度坐标1.png) X、Y、Z 是相对手机的 所有传感器的原始数据都是一个以手机作为参考系的三维向量：  X轴  手机正放时，屏幕右侧方向为 X 轴正方向，左侧方向为 X 轴负方向；  Y轴  手机屏幕顶部向上方向记为 Y 轴正方向，屏幕底部向下方">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-17T02:30:22.000Z">
-<meta property="article:modified_time" content="2024-01-17T02:30:22.000Z">
+<meta property="article:published_time" content="2024-01-22T02:57:19.000Z">
+<meta property="article:modified_time" content="2024-01-23T03:29:42.317Z">
 <meta property="article:author" content="刘子航">
+<meta property="article:tag" content="IMU">
+<meta property="article:tag" content="传感器">
+<meta property="article:tag" content="iOS Development">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>SwiftUI 在 WatchOS 中的 List 与 ForEach 奇怪的地方 - 这是一个PM的BLOG</title>
+  <title>iOS 加速度坐标 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -225,7 +230,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="SwiftUI 在 WatchOS 中的 List 与 ForEach 奇怪的地方"></span>
+            <span id="subtitle" data-typed-text="iOS 加速度坐标"></span>
           
         </div>
 
@@ -236,8 +241,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-17 10:30" pubdate>
-          2024年1月17日 上午
+        <time datetime="2024-01-22 10:57" pubdate>
+          2024年1月22日 上午
         </time>
       </span>
     
@@ -248,7 +253,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          501 字
         
       </span>
     
@@ -287,12 +292,33 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">SwiftUI 在 WatchOS 中的 List 与 ForEach 奇怪的地方</h1>
+            <h1 id="seo-header">iOS 加速度坐标</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <h3 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h3><p>![坐标](<a target="_blank" rel="noopener" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/iOS">https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/iOS</a> 加速度坐标1.png)</p>
+<p>X、Y、Z 是相对手机的</p>
+<p>所有传感器的原始数据都是一个以手机作为参考系的三维向量：</p>
+<ul>
+<li>X轴</li>
+</ul>
+<p>手机正放时，屏幕右侧方向为 X 轴正方向，左侧方向为 X 轴负方向；</p>
+<ul>
+<li>Y轴</li>
+</ul>
+<p>手机屏幕顶部向上方向记为 Y 轴正方向，屏幕底部向下方向为 Y 轴负方向；</p>
+<ul>
+<li>Z轴</li>
+</ul>
+<p>手机正放时，垂直屏幕向上方向为 Z 轴正方向，向下为 Z 轴负方向。</p>
+<h3 id="加速度"><a href="#加速度" class="headerlink" title="加速度"></a>加速度</h3><p>一共可以获取到 2 种加速度。</p>
+<h4 id="gravity"><a href="#gravity" class="headerlink" title="gravity"></a>gravity</h4><p>重力在 xyz 方向上的分量</p>
+<h4 id="userAcceleration"><a href="#userAcceleration" class="headerlink" title="userAcceleration"></a>userAcceleration</h4><p><a target="_blank" rel="noopener" href="https://developer.apple.com/documentation/coremotion/cmdevicemotion/1616149-useracceleration">userAcceleration</a>，设备在 xyz 方向上的总加速度。</p>
+<p>总加速度等于重力加上用户施加到设备的加速度。</p>
+<h3 id="关于姿态解算"><a href="#关于姿态解算" class="headerlink" title="关于姿态解算"></a>关于姿态解算</h3><p>CoreMotion 并没有根据设备加速度以及角速度进行「<strong>空间绝对坐标系</strong>」的解算。只解算了姿态与重力加速度，目的是为了能抵消重力加速度在 xyz 轴上分量对整体加速度的影响。</p>
+<p>这意味着 CoreMotion 只有<strong>设备</strong>上下前后左右的概念，没有<strong>质点</strong>上下东南西北的概念。也意味着设备需要「<strong>固定</strong>」一个摆放位置和摆放方向，否者多次测得的数据是没有参考意义的。</p>
+
                 
               </div>
             
@@ -300,6 +326,38 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/IMU/" class="print-no-link">#IMU</a>
+      
+        <a href="/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/" class="print-no-link">#传感器</a>
+      
+        <a href="/tags/iOS-Development/" class="print-no-link">#iOS Development</a>
+      
+    </div>
   
 </div>
 
@@ -309,8 +367,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>SwiftUI 在 WatchOS 中的 List 与 ForEach 奇怪的地方</div>
-      <div>https://wonderhoi.com/2024/01/17/SwiftUI-在-WatchOS-中的-List-与-ForEach-奇怪的地方/</div>
+      <div>iOS 加速度坐标</div>
+      <div>https://wonderhoi.com/2024/01/22/iOS-加速度坐标/</div>
     </div>
     <div class="license-meta">
       
@@ -322,7 +380,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月17日</div>
+          <div>2024年1月22日</div>
         </div>
       
       
@@ -354,9 +412,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/01/18/%E5%BC%80%E5%8F%91-Polar-H10-%E5%BF%83%E7%8E%87%E5%B8%A6%E9%81%87%E5%88%B0%E7%9A%84%E6%97%B6%E9%97%B4%E6%88%B3%E9%97%AE%E9%A2%98/" title="开发 Polar H10 心率带遇到的时间戳问题">
+                      <a href="/2024/01/23/SwiftUI-List-%E4%B8%8E-ForEach-%E7%9A%84%E5%8C%BA%E5%88%AB/" title="SwiftUI List 与 ForEach 的区别">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">开发 Polar H10 心率带遇到的时间戳问题</span>
+                        <span class="hidden-mobile">SwiftUI List 与 ForEach 的区别</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -364,8 +422,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/01/13/Swift-%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%B9%E6%B3%95/" title="Swift 时间相关的方法">
-                        <span class="hidden-mobile">Swift 时间相关的方法</span>
+                      <a href="/2024/01/19/Xcode-%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95-iWatch-%E7%9A%84%E5%9D%91/" title="Xcode 真机调试 iWatch 的坑">
+                        <span class="hidden-mobile">Xcode 真机调试 iWatch 的坑</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

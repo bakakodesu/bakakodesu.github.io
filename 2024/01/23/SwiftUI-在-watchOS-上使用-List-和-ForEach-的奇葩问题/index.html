@@ -18,23 +18,24 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta name="description" content="邮箱：&amp;#98;&amp;#97;&amp;#107;&amp;#x61;&amp;#107;&amp;#x6f;&amp;#x77;&amp;#119;&amp;#x77;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109; 微信：bakakowww">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://wonderhoi.com/about/index.html">
+    <meta name="description" content="在手表上创建可以点击的按钮。 1.List + ForEach + ButtonList &amp;#123;     ForEach(data) &amp;#123; item in         Button&amp;#123;             print(&quot;Clicked&quot;)         &amp;#125; label: &amp;#123;             Text(item.name">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SwiftUI 在 watchOS 上使用 List 和 ForEach 的奇葩问题">
+<meta property="og:url" content="https://wonderhoi.com/2024/01/23/SwiftUI-%E5%9C%A8-watchOS-%E4%B8%8A%E4%BD%BF%E7%94%A8-List-%E5%92%8C-ForEach-%E7%9A%84%E5%A5%87%E8%91%A9%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="邮箱：&amp;#98;&amp;#97;&amp;#107;&amp;#x61;&amp;#107;&amp;#x6f;&amp;#x77;&amp;#119;&amp;#x77;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109; 微信：bakakowww">
+<meta property="og:description" content="在手表上创建可以点击的按钮。 1.List + ForEach + ButtonList &amp;#123;     ForEach(data) &amp;#123; item in         Button&amp;#123;             print(&quot;Clicked&quot;)         &amp;#125; label: &amp;#123;             Text(item.name">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-19T12:37:58.922Z">
-<meta property="article:modified_time" content="2023-08-24T15:54:36.000Z">
+<meta property="article:published_time" content="2024-01-23T03:39:02.000Z">
+<meta property="article:modified_time" content="2024-01-23T06:52:14.545Z">
 <meta property="article:author" content="刘子航">
+<meta property="article:tag" content="Swift">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>关于 - 这是一个PM的BLOG</title>
+  <title>SwiftUI 在 watchOS 上使用 List 和 ForEach 的奇葩问题 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -121,7 +122,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 40vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -227,9 +228,40 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="关于"></span>
+            <span id="subtitle" data-typed-text="SwiftUI 在 watchOS 上使用 List 和 ForEach 的奇葩问题"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-01-23 11:39" pubdate>
+          2024年1月23日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          642 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
 
         
       </div>
@@ -245,39 +277,192 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-            <div class="about-avatar">
-              <img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/avatar.png" srcset="/img/loading.gif" lazyload class="img-fluid" alt="avatar">
-            </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="text-center">
-  <div class="about-info">
-    <div class="about-name">刘</div>
-    <div class="about-intro">上班就是为了不上班！</div>
-    <div class="about-icons">
       
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">SwiftUI 在 watchOS 上使用 List 和 ForEach 的奇葩问题</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>在手表上创建可以点击的按钮。</p>
+<h3 id="1-List-ForEach-Button"><a href="#1-List-ForEach-Button" class="headerlink" title="1.List + ForEach + Button"></a>1.List + ForEach + Button</h3><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-type">List</span> &#123;
+    <span class="hljs-type">ForEach</span>(data) &#123; item <span class="hljs-keyword">in</span>
+        <span class="hljs-type">Button</span>&#123;
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Clicked&quot;</span>)
+        &#125; label: &#123;
+            <span class="hljs-type">Text</span>(item.name)
+                <span class="hljs-comment">// .padding()</span>
+        &#125;
+    &#125;
+&#125;</code></pre></div>
+
+<p>整个按钮可以点击，且有点击动画。不过加 <code>.padding()</code> 不会改变按钮大小。</p>
+<h3 id="2-List-ForEach-HStack-Text"><a href="#2-List-ForEach-HStack-Text" class="headerlink" title="2.List + ForEach + HStack(Text)"></a>2.List + ForEach + HStack(Text)</h3><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-type">List</span> &#123;
+    <span class="hljs-type">ForEach</span>(data) &#123; item <span class="hljs-keyword">in</span>
+        <span class="hljs-type">HStack</span> &#123;
+            <span class="hljs-type">Text</span>(item.name)
+            <span class="hljs-type">Spacer</span>()
+        &#125;.onTapGesture &#123;
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Clicked&quot;</span>)
+        &#125;
+    &#125;
+&#125;</code></pre></div>
+
+<p><strong>只有 Text 文字部分可以点击，且没有点击动画。</strong></p>
+<p>不用 HStack 而是直接用 Text 效果是一样的。</p>
+<h3 id="3-List-Button"><a href="#3-List-Button" class="headerlink" title="3.List + Button"></a>3.List + Button</h3><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-type">List</span>(data) &#123; item <span class="hljs-keyword">in</span>
+    <span class="hljs-type">Button</span>&#123;
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Clicked&quot;</span>)
+    &#125; label: &#123;
+        <span class="hljs-type">Text</span>(item.name)
+						<span class="hljs-comment">// .padding()</span>
+    &#125;
+&#125;</code></pre></div>
+
+<p>整个按钮可以点击，且有点击动画。加 <code>.padding()</code> 同样不会改变按钮大小。</p>
+<h3 id="4-List-HStack-Text"><a href="#4-List-HStack-Text" class="headerlink" title="4.List + HStack(Text)"></a>4.List + HStack(Text)</h3><p>效果与「List + ForEach + HStack(Text)」相同。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Swift/" class="print-no-link">#Swift</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>SwiftUI 在 watchOS 上使用 List 和 ForEach 的奇葩问题</div>
+      <div>https://wonderhoi.com/2024/01/23/SwiftUI-在-watchOS-上使用-List-和-ForEach-的奇葩问题/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>刘子航</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年1月23日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/01/23/SwiftUI-List-%E4%B8%8E-ForEach-%E7%9A%84%E5%8C%BA%E5%88%AB/" title="SwiftUI List 与 ForEach 的区别">
+                        <span class="hidden-mobile">SwiftUI List 与 ForEach 的区别</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
     </div>
   </div>
 </div>
 
-<article class="about-content page-content mt-5">
-  <div class="markdown-body">
-    <p>邮箱：<a href="mailto:&#98;&#97;&#107;&#x61;&#107;&#x6f;&#x77;&#119;&#x77;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#98;&#97;&#107;&#x61;&#107;&#x6f;&#x77;&#119;&#x77;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
-<p>微信：bakakowww</p>
-
-  </div>
-
-  
-</article>
-
 
 
 
@@ -304,11 +489,8 @@
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
     
 
     
@@ -425,6 +607,46 @@
   
 
 
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
