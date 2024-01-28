@@ -26,7 +26,7 @@
 <meta property="og:description" content="一般 IMU 由加速度传感器、陀螺仪组成，也叫 6 轴 IMU。还可以外加一个磁力计，构成 9 轴 IMU。关于加速度传感器和陀螺仪的工作原理，可以参考：  加速度传感器的原理和应用-手机翻转、失重检测、运动检测、位置识别； MEMS 三轴加速计、三轴陀螺仪、三轴磁力计）6轴IMU+磁力计，9轴传感器讲解； IMU 测量模型。  加速度传感器测得加速度（acc）积分得到速度，再积分得到位移：  G">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-03T04:59:32.000Z">
-<meta property="article:modified_time" content="2023-10-05T17:14:14.000Z">
+<meta property="article:modified_time" content="2024-01-26T16:34:43.474Z">
 <meta property="article:author" content="刘子航">
 <meta property="article:tag" content="IMU">
 <meta property="article:tag" content="传感器">
@@ -336,7 +336,7 @@
 <p>就目前来说，第 1 个项目的算法效果最好，这是 <a target="_blank" rel="noopener" href="https://www.zhihu.com/zvideo/1361803858457579522">效果展示</a>。但需要注意的是：</p>
 <ol>
 <li>Script 中 samplePeriod 需要与传感器采样频率一致；</li>
-<li>注意单位转换，我这里传感器采集的角速度单位为rad&#x2F;s，但是项目中角速度的单位为deg&#x2F;s。两者的转化关系为：<br>$$<br>π&#x2F;180*deg &#x3D; rad<br>$$</li>
+<li>注意单位转换（参考：<a target="_blank" rel="noopener" href="https://github.com/xioTechnologies/Gait-Tracking-With-x-IMU/issues/11">About the time data</a>），我这里传感器采集的角速度单位为 rad&#x2F;s，但是项目中角速度的单位为 deg&#x2F;s。两者的转化关系为：<br>$$<br>π&#x2F;180*deg &#x3D; rad<br>$$</li>
 <li>算法对于 IMU 的放置和运动模式都做了要求。事实上，对于简单、低频的动作，算法都能够绘制出较为精准的空间运动轨迹。但是对于复杂、高频的动作，算法没有表现出很好的兼容性，数据漂移很严重。</li>
 </ol>
 
