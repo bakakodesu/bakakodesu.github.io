@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>SwiftUI 数组在 ObservedObject 更新时被清空</title>
+    <link href="/2024/02/18/SwiftUI-%E6%95%B0%E7%BB%84%E5%9C%A8-ObservedObject-%E6%9B%B4%E6%96%B0%E6%97%B6%E8%A2%AB%E6%B8%85%E7%A9%BA/"/>
+    <url>/2024/02/18/SwiftUI-%E6%95%B0%E7%BB%84%E5%9C%A8-ObservedObject-%E6%9B%B4%E6%96%B0%E6%97%B6%E8%A2%AB%E6%B8%85%E7%A9%BA/</url>
+    
+    <content type="html"><![CDATA[<p>大致的情况是通过 <code>@ObservedObject</code>声明 Model 后，随着 View 的刷新，Model 的数组会被清空。</p><p>解决办法是改用<code>@StateObject</code>声明 Model。</p><p>具体可参考：</p><p><a href="https://onevcat.com/2020/06/stateobject/">@StateObject 和 @ObservedObject 的区别和使用</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>蓝牙键盘唤醒吞字问题</title>
+    <link href="/2024/01/29/%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98%E5%94%A4%E9%86%92%E5%90%9E%E5%AD%97%E9%97%AE%E9%A2%98/"/>
+    <url>/2024/01/29/%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98%E5%94%A4%E9%86%92%E5%90%9E%E5%AD%97%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p>IQUNIX F96 双模在休眠唤醒后，会出现吞字现象（或者延迟）。</p><p>但是 ROG 的魔导士 RX LP 三模则不会。</p><p>参考：</p><ul><li><p><a href="https://bbs.tgfcer.com/thread-8379606-1-1.html">为啥国产机械无线键盘休眠唤醒的延时都很高？</a></p></li><li><p><a href="https://www.chiphell.com/thread-2494850-1-1.html">无线键盘都是休眠后敲第一个键打不出字符吗？</a></p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>外设</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Polar H10 的加速度坐标系</title>
     <link href="/2024/01/26/Polar-H10-%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9D%90%E6%A0%87%E7%B3%BB/"/>
     <url>/2024/01/26/Polar-H10-%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9D%90%E6%A0%87%E7%B3%BB/</url>
@@ -3180,6 +3230,33 @@
     <tags>
       
       <tag>App</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SwiftUI Button Disabled</title>
+    <link href="/2023/04/18/SwiftUI-Button-Disabled/"/>
+    <url>/2023/04/18/SwiftUI-Button-Disabled/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> isButtonDisabled <span class="hljs-operator">=</span> <span class="hljs-literal">true</span><span class="hljs-type">Button</span>(action: &#123;    <span class="hljs-comment">// 按钮被点击后执行的操作</span>&#125;) &#123;    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Button&quot;</span>)&#125;.disabled(isButtonDisabled)</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Swift</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
       
     </tags>
     
