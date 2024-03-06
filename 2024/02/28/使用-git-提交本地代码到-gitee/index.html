@@ -18,15 +18,15 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta name="description" content="在 gitee 上创建一个仓库，得到仓库地址； cd 到代码根目录； 初始化项目git init； 配置git config； 提交项目代码到暂存区git add .； 填写备注git commit -m &quot;1&quot;； 拷贝代码提交托管到仓库git remote add origin https:&#x2F;&#x2F;gitee.com&#x2F;你的仓库地址&#x2F;xxx.git； 提交git push -u">
+    <meta name="description" content="在 gitee 上创建一个仓库，得到仓库地址。cd 到代码根目录： 初始化项目： git init  配置好 git config 后提交项目代码到暂存区： git add .  填写备注： git commit -m &quot;1&quot;  将远程仓库与本地代码进行关联: git remote add origin https:&#x2F;&#x2F;gitee.com&#x2F;你的仓库地址&#x2F;xxx.git  pus">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 git 提交本地代码到 gitee">
 <meta property="og:url" content="https://wonderhoi.com/2024/02/28/%E4%BD%BF%E7%94%A8-git-%E6%8F%90%E4%BA%A4%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0-gitee/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="在 gitee 上创建一个仓库，得到仓库地址； cd 到代码根目录； 初始化项目git init； 配置git config； 提交项目代码到暂存区git add .； 填写备注git commit -m &quot;1&quot;； 拷贝代码提交托管到仓库git remote add origin https:&#x2F;&#x2F;gitee.com&#x2F;你的仓库地址&#x2F;xxx.git； 提交git push -u">
+<meta property="og:description" content="在 gitee 上创建一个仓库，得到仓库地址。cd 到代码根目录： 初始化项目： git init  配置好 git config 后提交项目代码到暂存区： git add .  填写备注： git commit -m &quot;1&quot;  将远程仓库与本地代码进行关联: git remote add origin https:&#x2F;&#x2F;gitee.com&#x2F;你的仓库地址&#x2F;xxx.git  pus">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-28T08:37:35.000Z">
-<meta property="article:modified_time" content="2024-02-28T09:29:50.491Z">
+<meta property="article:modified_time" content="2024-03-04T02:57:59.824Z">
 <meta property="article:author" content="刘子航">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary_large_image">
@@ -251,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          375 字
+          583 字
         
       </span>
     
@@ -295,27 +295,38 @@
             
               <div class="markdown-body">
                 
-                <ol>
-<li>在 gitee 上创建一个仓库，得到仓库地址；</li>
-<li>cd 到代码根目录；</li>
-<li>初始化项目<code>git init</code>；</li>
-<li>配置<code>git config</code>；</li>
-<li>提交项目代码到暂存区<code>git add .</code>；</li>
-<li>填写备注<code>git commit -m &quot;1&quot;</code>；</li>
-<li>拷贝代码提交托管到仓库<code>git remote add origin https://gitee.com/你的仓库地址/xxx.git</code>；</li>
-<li>提交<code>git push -u origin master</code></li>
-</ol>
+                <p>在 gitee 上创建一个仓库，得到仓库地址。cd 到代码根目录：</p>
+<p>初始化项目：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">git init</code></pre></div>
+
+<p>配置好 <code>git config</code> 后提交项目代码到暂存区：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">git add .</code></pre></div>
+
+<p>填写备注：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">git commit -m <span class="hljs-string">&quot;1&quot;</span></code></pre></div>
+
+<p>将远程仓库与本地代码进行关联:</p>
+<div class="code-wrapper"><pre><code class="hljs bash">git remote add origin https://gitee.com/你的仓库地址/xxx.git</code></pre></div>
+
+<p>push 代码：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">git push -u origin master</code></pre></div>
+
 <p>如果 push 时提示：更新被拒绝，因为远程仓库包含您本地尚不存在的提交。</p>
-<p>那就可以采用强制使用push：</p>
+<p>那就可以采用强制使用 push：</p>
 <div class="code-wrapper"><pre><code class="hljs bash">git push -u origin +master</code></pre></div>
 
 <p>参考</p>
 <ol>
 <li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39644462/article/details/117751612">mac上使用git提交本地代码到gitee仓库</a>；</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39852676/article/details/113530542">更新被拒绝，因为远程仓库包含您本地尚不存在的提交</a>；</p>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39852676/article/details/113530542">更新被拒绝，因为远程仓库包含您本地尚不存在的提交</a>。</p>
 </li>
 </ol>
+<p>实际上是远程仓库和本地内容不一致导致的，原因是新建远程仓库的时候新建了 <code>LICENSE</code> 文件和 <code>.gitignore</code>，这是本地没有的。</p>
+<p>所以正确操作是下拉代码后，再 push 代码：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">git pull origin master</code></pre></div>
+
+<p>需要注意的是，<code>git pull</code> 命令会自动合并代码，如果出现冲突需要手动解决。如果不想自动合并代码，可以使用 <code>git fetch</code> 命令先将远程仓库的代码拉取到本地，再使用 <code>git merge</code> 命令进行合并。</p>
 <p>再次推送更新，执行下面即可：</p>
 <div class="code-wrapper"><pre><code class="hljs bash">git add .
 git commit -m <span class="hljs-string">&quot;&quot;</span>
