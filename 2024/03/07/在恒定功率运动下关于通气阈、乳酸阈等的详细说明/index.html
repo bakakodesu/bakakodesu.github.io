@@ -18,27 +18,24 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta name="description" content="系统功能分析个体呼出气体成分，并计算耗氧速度（摄氧量）$V_{O_2}$ 以及代谢能量 EE。 呼吸监测方法介绍道格拉斯袋法道格拉斯袋法（douglas bags）是最早的开放式（open circuit）间接测量代谢消耗的方法，也是测量代谢消耗的「金标准」[1][2]。 原理很简单，将运动呼出的气体用道格拉斯气袋收集起来，然后测量气袋中气体的体积、$O_2$、$CO_2$ 浓度。之后经过计算就能">
+    <meta name="description" content="从原理方面进行解释：当个体以「较低」恒定功率进行运动时，最终身体会从有氧运动状态进入到无氧运动状态。 首先在不讨论内能、电能等能量消耗和损失的情况下，可以建立起一个简单的运动模型：$$\frac{运动的机械能 + 稳定姿态消耗能量+稳定内环境消耗能量}{有氧呼吸供能+无氧呼吸供能}&#x3D;1$$ VO2 slow component恒定功率运动随着时间的增加，会出现所谓的「心率漂移」或者「VO">
 <meta property="og:type" content="article">
-<meta property="og:title" content="呼吸代谢监测">
-<meta property="og:url" content="https://wonderhoi.com/2023/08/28/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B/index.html">
+<meta property="og:title" content="在恒定功率运动下关于通气阈、乳酸阈等的详细说明">
+<meta property="og:url" content="https://wonderhoi.com/2024/03/07/%E5%9C%A8%E6%81%92%E5%AE%9A%E5%8A%9F%E7%8E%87%E8%BF%90%E5%8A%A8%E4%B8%8B%E5%85%B3%E4%BA%8E%E9%80%9A%E6%B0%94%E9%98%88%E3%80%81%E4%B9%B3%E9%85%B8%E9%98%88%E7%AD%89%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="系统功能分析个体呼出气体成分，并计算耗氧速度（摄氧量）$V_{O_2}$ 以及代谢能量 EE。 呼吸监测方法介绍道格拉斯袋法道格拉斯袋法（douglas bags）是最早的开放式（open circuit）间接测量代谢消耗的方法，也是测量代谢消耗的「金标准」[1][2]。 原理很简单，将运动呼出的气体用道格拉斯气袋收集起来，然后测量气袋中气体的体积、$O_2$、$CO_2$ 浓度。之后经过计算就能">
+<meta property="og:description" content="从原理方面进行解释：当个体以「较低」恒定功率进行运动时，最终身体会从有氧运动状态进入到无氧运动状态。 首先在不讨论内能、电能等能量消耗和损失的情况下，可以建立起一个简单的运动模型：$$\frac{运动的机械能 + 稳定姿态消耗能量+稳定内环境消耗能量}{有氧呼吸供能+无氧呼吸供能}&#x3D;1$$ VO2 slow component恒定功率运动随着时间的增加，会出现所谓的「心率漂移」或者「VO">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B1.png">
-<meta property="article:published_time" content="2023-08-28T04:08:38.000Z">
-<meta property="article:modified_time" content="2024-03-07T07:11:19.542Z">
+<meta property="article:published_time" content="2024-03-07T03:10:01.000Z">
+<meta property="article:modified_time" content="2024-03-08T08:29:26.294Z">
 <meta property="article:author" content="刘子航">
 <meta property="article:tag" content="运动科学">
-<meta property="article:tag" content="CEPT">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>呼吸代谢监测 - 这是一个PM的BLOG</title>
+  <title>在恒定功率运动下关于通气阈、乳酸阈等的详细说明 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -231,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="呼吸代谢监测"></span>
+            <span id="subtitle" data-typed-text="在恒定功率运动下关于通气阈、乳酸阈等的详细说明"></span>
           
         </div>
 
@@ -242,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-08-28 12:08" pubdate>
-          2023年8月28日 中午
+        <time datetime="2024-03-07 11:10" pubdate>
+          2024年3月7日 上午
         </time>
       </span>
     
@@ -254,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4k 字
+          2.1k 字
         
       </span>
     
@@ -293,171 +290,54 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">呼吸代谢监测</h1>
+            <h1 id="seo-header">在恒定功率运动下关于通气阈、乳酸阈等的详细说明</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="系统功能"><a href="#系统功能" class="headerlink" title="系统功能"></a>系统功能</h2><p>分析个体呼出气体成分，并计算耗氧速度（摄氧量）$V_{O_2}$ 以及代谢能量 EE。</p>
-<h2 id="呼吸监测方法介绍"><a href="#呼吸监测方法介绍" class="headerlink" title="呼吸监测方法介绍"></a>呼吸监测方法介绍</h2><h3 id="道格拉斯袋法"><a href="#道格拉斯袋法" class="headerlink" title="道格拉斯袋法"></a>道格拉斯袋法</h3><p>道格拉斯袋法（douglas bags）是最早的开放式（open circuit）间接测量代谢消耗的方法，也是测量代谢消耗的「金标准」[1][2]。</p>
-<p>原理很简单，将运动呼出的气体用道格拉斯气袋收集起来，然后测量气袋中气体的体积、$O_2$、$CO_2$ 浓度。之后经过计算就能得出运动中代谢能量消耗。</p>
-<h3 id="逐步呼吸法"><a href="#逐步呼吸法" class="headerlink" title="逐步呼吸法"></a>逐步呼吸法</h3><p>道格拉斯袋法必须在运动完成后进行测量，测得值是一个平均量，无法实时测量，也无法对运动的某个时间节点进行分析。随着计算机的发展，逐步呼吸法（breath by breath）被发明[3]。借助于传感器（对传感器性能和信号处理要求很高）和电脑，可以实现对每次呼出气体的流量、成分进行测量，从而得到实时代谢能量消耗。</p>
-<h3 id="混合气室法（系统采用）"><a href="#混合气室法（系统采用）" class="headerlink" title="混合气室法（系统采用）"></a>混合气室法（系统采用）</h3><p>混合气室法（mixing chamber）[4]是将呼出气体排入到一个 5L 左右的混合室内让其充分混合，通过测量混合室中的气体浓度来计算代谢能量消耗。可以理解为测量几次呼出气体的平均值。主要有 2 个优点：</p>
+                <p>从原理方面进行解释：<strong>当个体以「较低」恒定功率进行运动时，最终身体会从有氧运动状态进入到无氧运动状态。</strong></p>
+<p>首先在不讨论内能、电能等能量消耗和损失的情况下，可以建立起一个简单的运动模型：<br>$$<br>\frac{运动的机械能 + 稳定姿态消耗能量+稳定内环境消耗能量}{有氧呼吸供能+无氧呼吸供能}&#x3D;1<br>$$</p>
+<h3 id="VO2-slow-component"><a href="#VO2-slow-component" class="headerlink" title="VO2 slow component"></a>VO2 slow component</h3><p>恒定功率运动随着时间的增加，会出现所谓的「心率漂移」或者「VO2 slow component」，也就是人体摄氧量上升的现象。</p>
+<p>即在「公式 1」中，运动的机械能没有产生变化，有氧呼吸与无氧呼吸的供能却在提升。由于「公式 1」中的比值始终为 1，所以可以认为多出来的能量消耗在了别的地方。</p>
+<p>调整一下「公式1」，有：<br>$$<br>k &#x3D; \frac{运动的机械能}{有氧呼吸供能+无氧呼吸供能}<br>$$<br>也就是说，个体进行恒定功率运动，在 VO2 slow component 的影响下，供能持续增加，k 持续衰减。</p>
+<p>其中一个解释是：</p>
+<p>肌肉经济性的下降（需要募集更多肌纤维来维持恒定输出，或单个肌纤维代谢需求上升），这种经济性下降以及摄氧量上升和疲劳关系密切。</p>
+<p>疲劳与肌肉经济性下降都和下面的现象相关：</p>
 <ol>
-<li>相较于道格拉斯袋法，混合气室法能实现实时代谢测量（相较于逐步呼吸法没那么实时，视运动量而定）；</li>
-<li>相较于逐步呼吸法，虽然时效性没有那么好，但混合气室法更加稳定[5]，信号处理起来更容易[6]，且对传感器的要求不高。</li>
+<li>ATP 水解的吉布斯自由能下降；</li>
+<li>PCr 和肌糖原浓度下降；</li>
+<li>[H+]、[ADP]、[Pi]、[NH3] 等代谢物质累积。</li>
 </ol>
-<h2 id="系统组成"><a href="#系统组成" class="headerlink" title="系统组成"></a>系统组成</h2><p>基于混合气室法的呼吸监测模块由 4 个重要组成部分。</p>
-<h3 id="非重复呼吸阀-管道"><a href="#非重复呼吸阀-管道" class="headerlink" title="非重复呼吸阀&#x2F;管道"></a>非重复呼吸阀&#x2F;管道</h3><p>非重复呼吸阀（Non Rebreathing Valve）的作用是保证第二次呼吸不会吸入上一次呼出的气体，否则会造成误差。但实际这个现象不可避免，所以需要保证呼吸阀腔体（也叫死腔，dead space）体积小于 70ml[1]。</p>
-<p>此外，死腔体积不能太小，否者会对呼吸造成阻力增加测量时的人体额外能量消耗，WHO 建议呼吸阀的阻力不高于 $300L&#x2F;min-5cmH_2O$[1]。同理，连接呼吸阀和混合室的管道建议阻力不高于 $300L&#x2F;min-1.5cmH_2O$。</p>
-<h3 id="混合室"><a href="#混合室" class="headerlink" title="混合室"></a>混合室</h3><p>人体在静息状态下，每分钟的通气量大约为 4-8L，采用 5L 的混合室，意味着静息状态的呼出气体能在 1min 中充满混合室（将混合室原本的气体排出）。</p>
-<h3 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h3><p>传感器的原则是响应时间越短越好。</p>
-<h4 id="响应时间"><a href="#响应时间" class="headerlink" title="响应时间"></a>响应时间</h4><p><a href="https://wonderhoi.com/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/">传感器的响应时间</a>。</p>
-<h4 id="传感器清单"><a href="#传感器清单" class="headerlink" title="传感器清单"></a>传感器清单</h4><p><a href="https://wonderhoi.com/2023/08/03/%E6%B0%94%E4%BD%93%E6%B5%81%E9%87%8F%E4%BC%A0%E6%84%9F%E5%99%A8-AFM3000-SFM3000-%E9%A9%B1%E5%8A%A8/">气体流量传感器</a>；</p>
-<p><a href="https://wonderhoi.com/2023/08/11/O2-%E6%B5%93%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0496-%E9%A9%B1%E5%8A%A8/">O2浓度传感器</a>；</p>
-<p><a href="https://wonderhoi.com/2023/08/11/CO2-%E6%B5%93%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0220-%E9%A9%B1%E5%8A%A8/">CO2浓度传感器</a>。</p>
-<h3 id="上位机"><a href="#上位机" class="headerlink" title="上位机"></a>上位机</h3><p>目前的方案是下位机数据采集 Arduino&#x2F;C++，上位机数据处理树莓派&#x2F;Python。</p>
-<h2 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h2><p>呼吸代谢监测系统最终会采集到：</p>
+<p>VO2 slow component 与 PCr slow component，即与产生力的 PCr 消耗<strong>增加</strong>有关，这可以解释收缩效率<strong>降低</strong>的原因。因此，VO2 slow component 可能与收缩机制效率的<strong>降低</strong>（ ATP&#x2F;功率值的<strong>增加</strong>，产生相同功率需要更多ATP）有关，而不是由于 ATP 生产系统的效率的<strong>降低</strong>（VO2&#x2F;ATP 比值的<strong>增加</strong>）。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/674838646">VO2 slow component相关的摄氧量动力学</a></p>
+<h3 id="有氧呼吸底物的转变"><a href="#有氧呼吸底物的转变" class="headerlink" title="有氧呼吸底物的转变"></a>有氧呼吸底物的转变</h3><p>由上面可以知道 VO2 slow component 的出现意味着人体有氧呼吸供能增加。此时有氧呼吸的底物由脂类向糖原转变，这点可以通过呼吸商进行监控：</p>
+<p>$$<br>RQ &#x3D; \frac{V_{CO_2}}{V_{O_2}}<br>$$</p>
+<p>当 RQ 约等于 0.7 时，可以认为有氧呼吸的底物全是脂类，而当 RQ 约等于 1 时，可以认为有氧呼吸的底物全是糖类。</p>
+<p>RQ 约为 0.85 时，有氧呼吸底物糖类与脂类各占 50%。另外 RQ&#x3D;0.85 也被定义为第一通气阈，VT1。</p>
+<h3 id="糖酵解、三羧酸循环以及乳酸的产生"><a href="#糖酵解、三羧酸循环以及乳酸的产生" class="headerlink" title="糖酵解、三羧酸循环以及乳酸的产生"></a>糖酵解、三羧酸循环以及乳酸的产生</h3><p>糖类作为有氧呼吸底物的第一个步骤就是糖酵解，也就是无氧呼吸（可以说有氧呼吸一定伴随着无氧呼吸）。葡萄糖在细胞质中被分解成丙酮酸，并释放出部分 ATP。这部分 ATP 就是无氧呼吸提供的能量。</p>
+<p>丙酮酸进入线粒体后被转化为乙酰辅酶 A，乙酰辅酶 A 作为有氧呼吸的底物被「三羧酸循环」完全氧化后生成大量的 ATP。这部分 ATP 就是有氧呼吸提供的能量。</p>
+<p>有关丙酮酸的相关反应：<br>$$<br>乳酸 \xleftarrow[还原]{乳酸脱氢酶} 丙酮酸 \xrightarrow[氧化]{丙酮酸脱氢酶} 乙酰辅酶A \xrightarrow[氧化]{} ATP<br>$$<br>丙酮酸还原成乳酸的意义在于重建糖酵解所需要的烟酰腺嘌呤二核苷酸（NAD+）来保持 ATP 的生成。<br>$$<br>丙酮酸 + NADH + H^+ \rightarrow 乳酸 + NAD^+<br>$$<br>如果 NAD+ 没有得到释放，就无法参与到之后的糖酵解过程中。缺少了 NAD+ 糖酵解过程就会被抑制，也就是说 ATP 的生产会被抑制。</p>
+<p>比如说在下面这些情况下：</p>
 <ol>
-<li>呼出或吸入气体流量；</li>
-<li>呼出气体中的 $O_2$ 浓度；</li>
-<li>呼出气体中的 $CO_2$ 浓度。</li>
+<li>运输氧气能力有限（细胞获得氧气不足）；</li>
+<li>处理氧气能力有限（线粒体数量，丙酮酸运输受体数量，酶活性等）。</li>
 </ol>
-<p>之后通过计算可得出摄氧速度（摄氧量） $V_{O_2}$、呼吸商 RQ、代谢能量 EE。</p>
-<p><strong>这里按气体流量传感器采集呼出气体流量计算（采集吸入气体的流量其计算原理是一样的）。</strong></p>
-<h3 id="气体流量-ATPS-换算-STPD"><a href="#气体流量-ATPS-换算-STPD" class="headerlink" title="气体流量 ATPS 换算 STPD"></a>气体流量 ATPS 换算 STPD</h3><p>气体体积需按标准状态（STPD 状态，$\theta &#x3D; 0°C$，$\rho &#x3D; 101.3kPa$ 或 $\rho &#x3D; 760mmHg$，干燥气体）来计算[7][8]。</p>
-<p>由于所收集的气体都是饱和水蒸气（其饱和水蒸气压力是温度的函数），而测量温度为室温条（ATPS 状态，环境温度，环境压力，水蒸气饱和），两者换算系数 $f$ 可利用水蒸气分压计算：</p>
-<p>在千帕单位下换算系数为：<br>$$<br>f &#x3D; \frac{273K * (\rho-\rho_{H_2O})}{(273K+\theta)*101.3kPa}<br>$$<br>或者在毫米汞柱单位下：<br>$$<br>f &#x3D; \frac{273K * (\rho-\rho_{H_2O})}{(273K+\theta)*760mmHg}<br>$$<br>其中：</p>
+<p>这时候丙酮酸脱氢酶无法及时将丙酮酸氧化为乙酰辅酶 A，丙酮酸开始堆积。在这种情况下假如乳酸脱氢酶不将丙酮酸还原为乳酸的话，后续的糖酵解就无法进行下去。</p>
+<h3 id="乳酸"><a href="#乳酸" class="headerlink" title="乳酸"></a>乳酸</h3><p>由于 VO2 slow component 继续作用，有氧呼吸供能加无氧呼吸供能持续提高。</p>
+<p>从上面可以知道，无论是有氧呼吸还是无氧呼吸，都是必须通过糖酵解生成丙酮酸。而内环境为了避免丙酮酸堆积影响 ATP 的生产，会将无法氧化的丙酮酸还原成乳酸，最终体现在血乳酸浓度的增加上。</p>
 <ul>
-<li>$f$ 为标准状态气体体积换算系数；</li>
-<li>$\rho$ 为测得环境的大气压；</li>
-<li>$\rho_{H_2O}$ 为呼出气体饱和水蒸气的分压；</li>
-<li>$\theta$ 为呼出气体的温度（在气体流量计中或用道格拉斯袋时测量的大气温度），单位为摄氏度(°C)。</li>
+<li><p>当血液中的乳酸达到 2mmol&#x2F;L 时，一般认为到达第一乳酸阈，LT1。此时血乳酸浓度会持续增加，但仍然会稳定在一个区间内。</p>
+</li>
+<li><p>当血液中的乳酸达到 4mmol&#x2F;L 时，一般认为到达第一乳酸阈，LT2。此时血乳酸浓度会急速增加。</p>
+</li>
 </ul>
-<p>如果收集到的呼出气体在环境中受热高于 37°C 以上，需用 37°C 的饱和水蒸气压 6.27kPa。如果收集到的呼出气体温度不高于 37°C，其饱和水蒸气压见下表：</p>
-<p>20°C~37°C 范围内（间隔为 1°C）饱和水蒸气压力，单位为千帕(kPa)：</p>
-<table>
-<thead>
-<tr>
-<th>温度&#x2F;°C</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>20</td>
-<td>2.34</td>
-<td>2.49</td>
-<td>2.64</td>
-<td>2.81</td>
-<td>2.98</td>
-<td>3.17</td>
-<td>3.36</td>
-<td>3.56</td>
-<td>3.78</td>
-<td>4.00</td>
-</tr>
-<tr>
-<td>30</td>
-<td>4.24</td>
-<td>4.49</td>
-<td>4.75</td>
-<td>5.03</td>
-<td>5.32</td>
-<td>5.62</td>
-<td>5.94</td>
-<td>6.27</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-<p>转换为毫米汞柱(mmHg)：</p>
-<table>
-<thead>
-<tr>
-<th>温度&#x2F;°C</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>20</td>
-<td>17.5</td>
-<td>18.7</td>
-<td>19.8</td>
-<td>21.1</td>
-<td>22.4</td>
-<td>23.8</td>
-<td>25.2</td>
-<td>26.7</td>
-<td>28.4</td>
-<td>30.0</td>
-</tr>
-<tr>
-<td>30</td>
-<td>31.8</td>
-<td>33.7</td>
-<td>35.7</td>
-<td>37.7</td>
-<td>39.9</td>
-<td>42.2</td>
-<td>44.6</td>
-<td>47.1</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-<p>记气体流量传感器读值（呼出气体流量）为 $V_{E-ATPS}$，单位一般为 L&#x2F;min。</p>
-<p>则标准状态的气体流量为 $V_{E-STPD}&#x3D;f*V_{E-ATPS}$。</p>
-<h4 id="BTPS-概念"><a href="#BTPS-概念" class="headerlink" title="BTPS 概念"></a>BTPS 概念</h4><ul>
-<li>STPD 状态，$\theta &#x3D; 0°C$，$\rho &#x3D; 101.3kPa$ 或 $\rho &#x3D; 760mmHg$，干燥气体；</li>
-<li>ATPS 状态，环境温度，环境压力，水蒸气饱和；</li>
-<li>BTPS 状态，身体内环境温度 37°C，环境压力，水蒸气饱和。</li>
+<p>另外，虽然第二通气阈，也就是 VT2 与 LT2 不完全一致，但两者具有高度相关性。</p>
+<ul>
+<li>临界功率 CP 其实也是在这个拐点出现，而且最好是将临界功率与身体功率挂钩（「公式2」中的分母），而不是运动功率（「公式2」中分子）。</li>
 </ul>
-<p>三者的转换公式为：<br>$$<br>V_{BTPS}&#x3D;V_{ATPS} * \frac{(273K+37) * (\rho-\rho_{H_2O})}{(273K+\theta) * (\rho-47.1mmHg)}<br>$$</p>
-<p>$$<br>V_{STPD}&#x3D;V_{BTPS} * \frac{273K * (\rho-47.1mmHg)}{(273K+37) * 760mmHg}<br>$$</p>
-<h3 id="V-O-2-计算"><a href="#V-O-2-计算" class="headerlink" title="$V_{O_2}$ 计算"></a>$V_{O_2}$ 计算</h3><p>核心关系是人体不会消耗和产生氮气，也就是人体吸入和呼出的 $N_2$ 量是不变的。大气中气体成分可以近似分为 0.03% 的 $CO_2$，20.93% 的 $O_2$ 和 79.04% 的 $N_2$ 以及非常少的稀有气体。</p>
-<p>记吸入气体中 $O_2$ 浓度为 $F_IO_2$，$CO_2$ 浓度为 $F_ICO_2$，$N_2$ 浓度为 $F_IN_2$；</p>
-<p>记呼出气体中 $O_2$ 浓度为 $F_EO_2$，$CO_2$ 浓度为 $F_ECO_2$，$N_2$ 浓度为 $F_EN_2$。</p>
-<p>那么吸入气体流量：<br>$$<br>V_{I-STPD}&#x3D;V_{E-STPD}*\frac{F_EN_2}{F_IN_2}&#x3D;V_{E-STPD}*\frac{1-F_EO_2-F_ECO_2}{1-F_IO_2-F_ICO_2}<br>$$<br>$O_2$ 消耗速度（摄氧量）：<br>$$<br>V_{O_2}&#x3D;V_{I-STPD}*F_IO_2-V_{E-STPD}*F_EO_2<br>$$<br>同理 $CO_2$ 产生速度：<br>$$<br>V_{CO_2}&#x3D;V_{E-STPD}*F_ECO_2-V_{I-STPD}*F_ICO_2<br>$$</p>
-<h4 id="最大摄氧量-V-O-2max"><a href="#最大摄氧量-V-O-2max" class="headerlink" title="最大摄氧量 $V_{O_2max}$"></a>最大摄氧量 $V_{O_2max}$</h4><p>当个体满足以下 4 种条件的任意 3 种即认为达到最大摄氧量标准[9]：</p>
-<ol>
-<li>$V_{O_2}$ 不随负荷的增加而上升，且个体达到力竭；</li>
-<li>$V_{O_2}$ 的变化幅度不超过 5% 或 150mL&#x2F;min 或 2mL&#x2F;kg&#x2F;min；</li>
-<li>呼吸商大于 1.15；</li>
-<li>心率大于 180 次&#x2F;min。</li>
-</ol>
-<h3 id="RQ、EE计算"><a href="#RQ、EE计算" class="headerlink" title="RQ、EE计算"></a>RQ、EE计算</h3><p>呼吸商 RQ 或者呼吸交换率 RER 等于 $\frac{V_{CO_2}}{V_{O_2}}$。根据 RQ 数值查询对应的 O2-kCal&#x2F;L 数值：</p>
-<p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B1.png" srcset="/img/loading.gif" lazyload></p>
-<p>例如 RQ&#x3D;0.8，那么意味着每消耗 1L 氧气，人体需要代谢 4.801kCal 的能量。那么此时的人体代谢 EE &#x3D; $V_{O_2}$ * 4.801 kCal&#x2F;min。</p>
-<h4 id="呼吸底物"><a href="#呼吸底物" class="headerlink" title="呼吸底物"></a>呼吸底物</h4><p>由上表可以发现，根据 RQ 可以知道当前呼吸代谢底物是以脂肪为主还是以糖类为主。</p>
-<h2 id="系统校准"><a href="#系统校准" class="headerlink" title="系统校准"></a>系统校准</h2><p>系统校准可以采用测量代谢当量 MET 的方法进行。1MET 的耗氧量为 3.5ml&#x2F;kg&#x2F;min[10]，在人<strong>静息</strong>状态下测得。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1689864610603-1d877ddb-18a2-4d7e-881a-5cc99e0757d4.pdf">📎Open-circuit respirometry a historical review of portable gas analysis systems.pdf</a></p>
-<p>[2] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1689864623935-2727c37e-08b5-4cde-bed8-0ac81d0c527f.pdf">📎a brief historical review of the use of Douglas bags and chemical analyzers.pdf</a></p>
-<p>[3] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1689864746920-56963d18-9dce-4cf1-9034-3ad2229d9af5.pdf">📎On-line computer analysis and breath-by-breath graphical display of exercise function tests..pdf</a></p>
-<p>[4] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1689864829672-a808cc03-6ed0-4525-8dfa-31de54e3d435.pdf">📎Validity and Stability of a Computerized Metabolic System with Mixing Chamber.pdf</a></p>
-<p>[5] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1689864864021-dd003bcd-bd70-4c95-888a-7b6223a43b05.pdf">📎Accuracy and precision of CPET equipment A comparison of breath by breath and mixing chamber systems.pdf</a></p>
-<p>[6] <a target="_blank" rel="noopener" href="https://www.redbackbiotek.com/mixing-chamber">Mxing Chamber vs Breath by Breath</a></p>
-<p>[7] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1692113579367-e3ed568b-cb7a-4409-9709-89baabb1a4ae.pdf">📎Metabolic Computations in Open-Circuit Spirometry.pdf</a></p>
-<p>[8] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1692113510091-3b4b025d-54f9-42e4-b53e-50f43c2bf02b.pdf">📎热环境人类工效学 代谢率的测定.pdf</a></p>
-<p>[9] 《体育院校通用教材&#x2F;运动生理学》，人民体育出版社，2002</p>
-<p>[10]  <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1692114986255-7fc81d83-22c1-41c8-9b77-4b87cbbbf5d0.pdf">📎Resting Oxygen Uptake Value of 1 Metabolic Equivalent of Task in Older Adults A Systematic Review and Descriptive Analysis.pdf</a></p>
+<p>VT2 出现意味着 RQ 开始大于 1（当身体达到 VO2max 时，RQ 接近 1.15），也就是人体呼出 CO2 的速度要大于吸入 O2 的速度，这个时候身体呼吸加快的目的更多时排出 CO2。</p>
+<p>此时可以认为，身体已经由有氧运动状态进入到了无氧运动状态。</p>
+<p>（关于乳酸的去处，当氧气充足时，乳酸可以在肌肉细胞中被重新氧化为丙酮酸，然后进入三羧酸循环。或者在肝脏内糖异生的过程中通过科里循环转化为葡萄糖）</p>
 
                 
               </div>
@@ -493,8 +373,6 @@
       
         <a href="/tags/%E8%BF%90%E5%8A%A8%E7%A7%91%E5%AD%A6/" class="print-no-link">#运动科学</a>
       
-        <a href="/tags/CEPT/" class="print-no-link">#CEPT</a>
-      
     </div>
   
 </div>
@@ -505,8 +383,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>呼吸代谢监测</div>
-      <div>https://wonderhoi.com/2023/08/28/呼吸代谢监测/</div>
+      <div>在恒定功率运动下关于通气阈、乳酸阈等的详细说明</div>
+      <div>https://wonderhoi.com/2024/03/07/在恒定功率运动下关于通气阈、乳酸阈等的详细说明/</div>
     </div>
     <div class="license-meta">
       
@@ -518,7 +396,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年8月28日</div>
+          <div>2024年3月7日</div>
         </div>
       
       
@@ -550,18 +428,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/08/28/EMG-%E7%9B%B8%E5%85%B3%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/" title="EMG 相关应用场景">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">EMG 相关应用场景</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/08/26/%E4%BD%BF%E7%94%A8-uPic-%E6%90%AD%E9%85%8D%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" title="使用 uPic 搭配腾讯云搭建图床">
-                        <span class="hidden-mobile">使用 uPic 搭配腾讯云搭建图床</span>
+                      <a href="/2024/03/04/Pandas-%E6%8A%8A%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%90%8C%E7%9A%84%E4%B8%A4%E7%BB%84%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90/" title="Pandas 把日期相同的两组数据对齐">
+                        <span class="hidden-mobile">Pandas 把日期相同的两组数据对齐</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>在恒定功率运动下关于通气阈、乳酸阈等的详细说明</title>
+    <link href="/2024/03/07/%E5%9C%A8%E6%81%92%E5%AE%9A%E5%8A%9F%E7%8E%87%E8%BF%90%E5%8A%A8%E4%B8%8B%E5%85%B3%E4%BA%8E%E9%80%9A%E6%B0%94%E9%98%88%E3%80%81%E4%B9%B3%E9%85%B8%E9%98%88%E7%AD%89%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E/"/>
+    <url>/2024/03/07/%E5%9C%A8%E6%81%92%E5%AE%9A%E5%8A%9F%E7%8E%87%E8%BF%90%E5%8A%A8%E4%B8%8B%E5%85%B3%E4%BA%8E%E9%80%9A%E6%B0%94%E9%98%88%E3%80%81%E4%B9%B3%E9%85%B8%E9%98%88%E7%AD%89%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E/</url>
+    
+    <content type="html"><![CDATA[<p>从原理方面进行解释：<strong>当个体以「较低」恒定功率进行运动时，最终身体会从有氧运动状态进入到无氧运动状态。</strong></p><p>首先在不讨论内能、电能等能量消耗和损失的情况下，可以建立起一个简单的运动模型：<br>$$<br>\frac{运动的机械能 + 稳定姿态消耗能量+稳定内环境消耗能量}{有氧呼吸供能+无氧呼吸供能}&#x3D;1<br>$$</p><h3 id="VO2-slow-component"><a href="#VO2-slow-component" class="headerlink" title="VO2 slow component"></a>VO2 slow component</h3><p>恒定功率运动随着时间的增加，会出现所谓的「心率漂移」或者「VO2 slow component」，也就是人体摄氧量上升的现象。</p><p>即在「公式 1」中，运动的机械能没有产生变化，有氧呼吸与无氧呼吸的供能却在提升。由于「公式 1」中的比值始终为 1，所以可以认为多出来的能量消耗在了别的地方。</p><p>调整一下「公式1」，有：<br>$$<br>k &#x3D; \frac{运动的机械能}{有氧呼吸供能+无氧呼吸供能}<br>$$<br>也就是说，个体进行恒定功率运动，在 VO2 slow component 的影响下，供能持续增加，k 持续衰减。</p><p>其中一个解释是：</p><p>肌肉经济性的下降（需要募集更多肌纤维来维持恒定输出，或单个肌纤维代谢需求上升），这种经济性下降以及摄氧量上升和疲劳关系密切。</p><p>疲劳与肌肉经济性下降都和下面的现象相关：</p><ol><li>ATP 水解的吉布斯自由能下降；</li><li>PCr 和肌糖原浓度下降；</li><li>[H+]、[ADP]、[Pi]、[NH3] 等代谢物质累积。</li></ol><p>VO2 slow component 与 PCr slow component，即与产生力的 PCr 消耗<strong>增加</strong>有关，这可以解释收缩效率<strong>降低</strong>的原因。因此，VO2 slow component 可能与收缩机制效率的<strong>降低</strong>（ ATP&#x2F;功率值的<strong>增加</strong>，产生相同功率需要更多ATP）有关，而不是由于 ATP 生产系统的效率的<strong>降低</strong>（VO2&#x2F;ATP 比值的<strong>增加</strong>）。</p><p>参考：<a href="https://zhuanlan.zhihu.com/p/674838646">VO2 slow component相关的摄氧量动力学</a></p><h3 id="有氧呼吸底物的转变"><a href="#有氧呼吸底物的转变" class="headerlink" title="有氧呼吸底物的转变"></a>有氧呼吸底物的转变</h3><p>由上面可以知道 VO2 slow component 的出现意味着人体有氧呼吸供能增加。此时有氧呼吸的底物由脂类向糖原转变，这点可以通过呼吸商进行监控：</p><p>$$<br>RQ &#x3D; \frac{V_{CO_2}}{V_{O_2}}<br>$$</p><p>当 RQ 约等于 0.7 时，可以认为有氧呼吸的底物全是脂类，而当 RQ 约等于 1 时，可以认为有氧呼吸的底物全是糖类。</p><p>RQ 约为 0.85 时，有氧呼吸底物糖类与脂类各占 50%。另外 RQ&#x3D;0.85 也被定义为第一通气阈，VT1。</p><h3 id="糖酵解、三羧酸循环以及乳酸的产生"><a href="#糖酵解、三羧酸循环以及乳酸的产生" class="headerlink" title="糖酵解、三羧酸循环以及乳酸的产生"></a>糖酵解、三羧酸循环以及乳酸的产生</h3><p>糖类作为有氧呼吸底物的第一个步骤就是糖酵解，也就是无氧呼吸（可以说有氧呼吸一定伴随着无氧呼吸）。葡萄糖在细胞质中被分解成丙酮酸，并释放出部分 ATP。这部分 ATP 就是无氧呼吸提供的能量。</p><p>丙酮酸进入线粒体后被转化为乙酰辅酶 A，乙酰辅酶 A 作为有氧呼吸的底物被「三羧酸循环」完全氧化后生成大量的 ATP。这部分 ATP 就是有氧呼吸提供的能量。</p><p>有关丙酮酸的相关反应：<br>$$<br>乳酸 \xleftarrow[还原]{乳酸脱氢酶} 丙酮酸 \xrightarrow[氧化]{丙酮酸脱氢酶} 乙酰辅酶A \xrightarrow[氧化]{} ATP<br>$$<br>丙酮酸还原成乳酸的意义在于重建糖酵解所需要的烟酰腺嘌呤二核苷酸（NAD+）来保持 ATP 的生成。<br>$$<br>丙酮酸 + NADH + H^+ \rightarrow 乳酸 + NAD^+<br>$$<br>如果 NAD+ 没有得到释放，就无法参与到之后的糖酵解过程中。缺少了 NAD+ 糖酵解过程就会被抑制，也就是说 ATP 的生产会被抑制。</p><p>比如说在下面这些情况下：</p><ol><li>运输氧气能力有限（细胞获得氧气不足）；</li><li>处理氧气能力有限（线粒体数量，丙酮酸运输受体数量，酶活性等）。</li></ol><p>这时候丙酮酸脱氢酶无法及时将丙酮酸氧化为乙酰辅酶 A，丙酮酸开始堆积。在这种情况下假如乳酸脱氢酶不将丙酮酸还原为乳酸的话，后续的糖酵解就无法进行下去。</p><h3 id="乳酸"><a href="#乳酸" class="headerlink" title="乳酸"></a>乳酸</h3><p>由于 VO2 slow component 继续作用，有氧呼吸供能加无氧呼吸供能持续提高。</p><p>从上面可以知道，无论是有氧呼吸还是无氧呼吸，都是必须通过糖酵解生成丙酮酸。而内环境为了避免丙酮酸堆积影响 ATP 的生产，会将无法氧化的丙酮酸还原成乳酸，最终体现在血乳酸浓度的增加上。</p><ul><li><p>当血液中的乳酸达到 2mmol&#x2F;L 时，一般认为到达第一乳酸阈，LT1。此时血乳酸浓度会持续增加，但仍然会稳定在一个区间内。</p></li><li><p>当血液中的乳酸达到 4mmol&#x2F;L 时，一般认为到达第一乳酸阈，LT2。此时血乳酸浓度会急速增加。</p></li></ul><p>另外，虽然第二通气阈，也就是 VT2 与 LT2 不完全一致，但两者具有高度相关性。</p><ul><li>临界功率 CP 其实也是在这个拐点出现，而且最好是将临界功率与身体功率挂钩（「公式2」中的分母），而不是运动功率（「公式2」中分子）。</li></ul><p>VT2 出现意味着 RQ 开始大于 1（当身体达到 VO2max 时，RQ 接近 1.15），也就是人体呼出 CO2 的速度要大于吸入 O2 的速度，这个时候身体呼吸加快的目的更多时排出 CO2。</p><p>此时可以认为，身体已经由有氧运动状态进入到了无氧运动状态。</p><p>（关于乳酸的去处，当氧气充足时，乳酸可以在肌肉细胞中被重新氧化为丙酮酸，然后进入三羧酸循环。或者在肝脏内糖异生的过程中通过科里循环转化为葡萄糖）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>文章</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>运动科学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Pandas 把日期相同的两组数据对齐</title>
     <link href="/2024/03/04/Pandas-%E6%8A%8A%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%90%8C%E7%9A%84%E4%B8%A4%E7%BB%84%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90/"/>
     <url>/2024/03/04/Pandas-%E6%8A%8A%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%90%8C%E7%9A%84%E4%B8%A4%E7%BB%84%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90/</url>
@@ -228,11 +253,11 @@
     
     <tags>
       
+      <tag>传感器</tag>
+      
       <tag>心率</tag>
       
       <tag>IMU</tag>
-      
-      <tag>传感器</tag>
       
     </tags>
     
@@ -307,9 +332,9 @@
     
     <tags>
       
-      <tag>IMU</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>IMU</tag>
       
       <tag>iOS Development</tag>
       
@@ -492,11 +517,11 @@
     
     <tags>
       
-      <tag>心率</tag>
+      <tag>Swift</tag>
       
       <tag>传感器</tag>
       
-      <tag>Swift</tag>
+      <tag>心率</tag>
       
     </tags>
     
@@ -776,15 +801,15 @@
     
     <tags>
       
-      <tag>深度学习</tag>
+      <tag>EMG</tag>
       
       <tag>运动科学</tag>
+      
+      <tag>深度学习</tag>
       
       <tag>心率</tag>
       
       <tag>IMU</tag>
-      
-      <tag>EMG</tag>
       
     </tags>
     
@@ -915,9 +940,9 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>深度学习</tag>
       
     </tags>
     
@@ -1185,9 +1210,9 @@
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>心率</tag>
       
     </tags>
     
@@ -1665,9 +1690,9 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>深度学习</tag>
       
     </tags>
     
@@ -1746,9 +1771,9 @@
     
     <tags>
       
-      <tag>IMU</tag>
-      
       <tag>Swift</tag>
+      
+      <tag>IMU</tag>
       
     </tags>
     
@@ -2262,9 +2287,9 @@
     
     <tags>
       
-      <tag>运动科学</tag>
-      
       <tag>EMG</tag>
+      
+      <tag>运动科学</tag>
       
     </tags>
     
@@ -2397,9 +2422,9 @@
     
     <tags>
       
-      <tag>运动科学</tag>
-      
       <tag>EMG</tag>
+      
+      <tag>运动科学</tag>
       
     </tags>
     
@@ -2534,9 +2559,9 @@
     
     <tags>
       
-      <tag>计算机视觉</tag>
-      
       <tag>Python</tag>
+      
+      <tag>计算机视觉</tag>
       
     </tags>
     
@@ -2922,9 +2947,9 @@
       
       <tag>深度学习</tag>
       
-      <tag>计算机视觉</tag>
-      
       <tag>Python</tag>
+      
+      <tag>计算机视觉</tag>
       
     </tags>
     
@@ -3142,9 +3167,9 @@
     
     <tags>
       
-      <tag>IMU</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>IMU</tag>
       
     </tags>
     
@@ -3519,6 +3544,33 @@
     <tags>
       
       <tag>App</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Pycharm 项目文件名是红色的原因</title>
+    <link href="/2023/02/10/Pycharm-%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%90%8D%E6%98%AF%E7%BA%A2%E8%89%B2%E7%9A%84%E5%8E%9F%E5%9B%A0/"/>
+    <url>/2023/02/10/Pycharm-%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%90%8D%E6%98%AF%E7%BA%A2%E8%89%B2%E7%9A%84%E5%8E%9F%E5%9B%A0/</url>
+    
+    <content type="html"><![CDATA[<p>将项目设置成了 Git 仓库，但是文件没有添加到 Git 里，就会显示为红色。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>环境配置</category>
+      
+      <category>PyCharm</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git</tag>
       
     </tags>
     
