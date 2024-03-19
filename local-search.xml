@@ -4,6 +4,58 @@
   
   
   <entry>
+    <title>Python 的整型不会溢出</title>
+    <link href="/2024/03/13/Python-%E7%9A%84%E6%95%B4%E5%9E%8B%E4%B8%8D%E4%BC%9A%E6%BA%A2%E5%87%BA/"/>
+    <url>/2024/03/13/Python-%E7%9A%84%E6%95%B4%E5%9E%8B%E4%B8%8D%E4%BC%9A%E6%BA%A2%E5%87%BA/</url>
+    
+    <content type="html"><![CDATA[<p>在 Python 中，整数的大小是动态的，即 Python 可以自动调整整数的大小以适应其值。这种处理整数的方式被称为“任意精度算术”，它使得 Python 的整数可以存储任意大小的值，因此不会出现溢出的情况。任意精度算术的实现方式是使用大数运算库，这种库可以动态地分配和释放内存以存储整数的值，从而避免了 C++ 中整数类型大小的限制。</p><p>另外，Python 还提供了一种叫做“长整数”的整数类型，它可以存储更大的整数值，甚至超过了计算机硬件的限制。当 Python 中的整数超过了其原始大小限制时，它会自动转换为长整数类型，从而继续进行计算，而不会溢出。</p><p>简单来说，Python 中的 int 类型不像 C&#x2F;C++ 中的 int（32位，__int64：64位），Python int 支持任意精度（arbitrary precision）。</p><p>对于一个足够大的数，想要让 C&#x2F;C++ 显示结果，是比较麻烦的，对 __int64 类型变量而言，必然发生类型的截断。但是在 Python 中却不会发生。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python 读取文件夹下的文件</title>
+    <link href="/2024/03/12/Python-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6/"/>
+    <url>/2024/03/12/Python-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs python">path = <span class="hljs-string">&#x27;&#x27;</span>files = os.listdir(path)    <span class="hljs-comment"># 读取文件夹下的文件名称</span><span class="hljs-keyword">for</span> file_name <span class="hljs-keyword">in</span> files:  <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(path + <span class="hljs-string">&#x27;/&#x27;</span> + file_name, <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-keyword">as</span> file:      <span class="hljs-comment"># 相关操作</span>data = json.load(file)<span class="hljs-comment"># json</span>        data = file.readlines()<span class="hljs-comment"># txt</span></code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>在恒定功率运动下关于通气阈、乳酸阈等的详细说明</title>
     <link href="/2024/03/07/%E5%9C%A8%E6%81%92%E5%AE%9A%E5%8A%9F%E7%8E%87%E8%BF%90%E5%8A%A8%E4%B8%8B%E5%85%B3%E4%BA%8E%E9%80%9A%E6%B0%94%E9%98%88%E3%80%81%E4%B9%B3%E9%85%B8%E9%98%88%E7%AD%89%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E/"/>
     <url>/2024/03/07/%E5%9C%A8%E6%81%92%E5%AE%9A%E5%8A%9F%E7%8E%87%E8%BF%90%E5%8A%A8%E4%B8%8B%E5%85%B3%E4%BA%8E%E9%80%9A%E6%B0%94%E9%98%88%E3%80%81%E4%B9%B3%E9%85%B8%E9%98%88%E7%AD%89%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E/</url>
@@ -114,7 +166,7 @@
     <link href="/2024/02/29/Python-%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E9%80%89%E5%8F%96/"/>
     <url>/2024/02/29/Python-%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E9%80%89%E5%8F%96/</url>
     
-    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs python">string[start:end:step]<span class="hljs-built_in">list</span>[start:end:step]</code></pre></div><ul><li><code>start</code>：起始索引。这个索引的元素会被包含在其中。如果没有 <code>start</code>，则假定它等于 0；</li><li><code>end</code>：终止索引。这个索引的元素不包括在其中。如果没有 <code>end</code>，或者指定的值超出长度，则默认为等于整体长度；</li><li><code>step</code>：在当前字符之后的每一个 “step” 字符都要包括在内。默认值是 1。如果没有 <code>step</code>，则假定它等于1。</li></ul><p><code>start</code>与<code>end</code>相当于左闭右开：</p><ul><li><code>[start:end]</code>：获取从 <code>start</code> 到 <code>end</code> - 1 的所有元素；</li><li><code>[:end]</code>：获取从开头到 <code>end</code> - 1 的所有元素；</li><li><code>[start:]</code>：获取从 <code>start</code> 到末尾的所有元素。</li></ul><p>例如：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">str</span> = <span class="hljs-string">&#x27;12345678&#x27;</span><span class="hljs-built_in">list</span> = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]<span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">0</span>:<span class="hljs-number">5</span>])<span class="hljs-comment"># 获取索引为5的元素(6)之前的数，[1, 2, 3, 4, 5]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">2</span>:<span class="hljs-number">4</span>])<span class="hljs-comment"># [3, 4]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[-<span class="hljs-number">1</span>])<span class="hljs-comment"># [8]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[-<span class="hljs-number">2</span>])<span class="hljs-comment"># [7]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[-<span class="hljs-number">5</span>:])<span class="hljs-comment"># [4, 5, 6, 7, 8]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">1</span>:-<span class="hljs-number">4</span>])<span class="hljs-comment"># [2, 3, 4]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[:<span class="hljs-number">2</span>])<span class="hljs-comment"># [1, 2]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">2</span>:])<span class="hljs-comment"># [3, 4, 5, 6, 7, 8]</span></code></pre></div>]]></content>
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs python">string[start:end:step]<span class="hljs-built_in">list</span>[start:end:step]</code></pre></div><ul><li><code>start</code>：起始索引。这个索引的元素会被包含在其中。如果没有 <code>start</code>，则假定它等于 0；</li><li><code>end</code>：终止索引。这个索引的元素不包括在其中。如果没有 <code>end</code>，或者指定的值超出长度，则默认为等于整体长度；</li><li><code>step</code>：在当前字符之后的每一个 “step” 字符都要包括在内。默认值是 1。如果没有 <code>step</code>，则假定它等于1。</li></ul><p><code>start</code>与<code>end</code>相当于左闭右开：</p><ul><li><code>[start:end]</code>：获取从 <code>start</code> 到 <code>end</code> - 1 的所有元素；</li><li><code>[:end]</code>：获取从开头到 <code>end</code> - 1 的所有元素；</li><li><code>[start:]</code>：获取从 <code>start</code> 到末尾的所有元素。</li></ul><p>例如：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">str</span> = <span class="hljs-string">&#x27;12345678&#x27;</span><span class="hljs-comment"># python 字符串截取</span><span class="hljs-built_in">list</span> = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]<span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">0</span>:<span class="hljs-number">5</span>])<span class="hljs-comment"># 获取索引为5的元素(6)之前的数，[1, 2, 3, 4, 5]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">2</span>:<span class="hljs-number">4</span>])<span class="hljs-comment"># [3, 4]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[-<span class="hljs-number">1</span>])<span class="hljs-comment"># [8]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[-<span class="hljs-number">2</span>])<span class="hljs-comment"># [7]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[-<span class="hljs-number">5</span>:])<span class="hljs-comment"># [4, 5, 6, 7, 8]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">1</span>:-<span class="hljs-number">4</span>])<span class="hljs-comment"># [2, 3, 4]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[:<span class="hljs-number">2</span>])<span class="hljs-comment"># [1, 2]</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">2</span>:])<span class="hljs-comment"># [3, 4, 5, 6, 7, 8]</span></code></pre></div>]]></content>
     
     
     <categories>
@@ -253,11 +305,11 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>心率</tag>
       
       <tag>IMU</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -332,9 +384,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>IMU</tag>
+      
+      <tag>传感器</tag>
       
       <tag>iOS Development</tag>
       
@@ -517,11 +569,11 @@
     
     <tags>
       
-      <tag>Swift</tag>
+      <tag>心率</tag>
       
       <tag>传感器</tag>
       
-      <tag>心率</tag>
+      <tag>Swift</tag>
       
     </tags>
     
@@ -801,15 +853,15 @@
     
     <tags>
       
-      <tag>EMG</tag>
+      <tag>深度学习</tag>
       
       <tag>运动科学</tag>
-      
-      <tag>深度学习</tag>
       
       <tag>心率</tag>
       
       <tag>IMU</tag>
+      
+      <tag>EMG</tag>
       
     </tags>
     
@@ -872,7 +924,7 @@
     <link href="/2023/12/22/%E9%B8%A2%E5%B0%BE%E8%8A%B1%E7%9A%84%E9%9D%9E%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/"/>
     <url>/2023/12/22/%E9%B8%A2%E5%B0%BE%E8%8A%B1%E7%9A%84%E9%9D%9E%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/</url>
     
-    <content type="html"><![CDATA[<p>参考：</p><ol><li><a href="https://cloud.tencent.com/developer/article/1020155">【Scikit-Learn 中文文档】聚类 - 无监督学习 - 用户指南 | ApacheCN</a></li><li><a href="https://www.flyai.com/article/516">机器学习（二）之无监督学习：数据变换、聚类分析</a></li></ol><p>代码：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> KMeans<span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score, adjusted_rand_scorecsv_path = <span class="hljs-string">&#x27;/Users/bakako/Downloads/archive/Iris.csv&#x27;</span>df = pd.read_csv(csv_path)<span class="hljs-comment"># 将 dataframe 转为 numpy</span>dataset = df.values<span class="hljs-comment"># delete index</span>dataset = np.delete(dataset, <span class="hljs-number">0</span>, axis=<span class="hljs-number">1</span>)<span class="hljs-comment"># delete label</span>features = np.delete(dataset, -<span class="hljs-number">1</span>, axis=<span class="hljs-number">1</span>)<span class="hljs-comment"># delete feature</span>labels = np.delete(dataset, [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], axis=<span class="hljs-number">1</span>)<span class="hljs-comment"># 分割训练集和测试集</span>train_features, \        test_features, \        train_labels, \        test_labels = train_test_split(features, labels, test_size=<span class="hljs-number">0.2</span>)X = train_featuresmodel = KMeans(n_clusters=<span class="hljs-number">3</span>)model.fit(X)label_predict = model.labels_x0 = X[label_predict == <span class="hljs-number">0</span>]x1 = X[label_predict == <span class="hljs-number">1</span>]x2 = X[label_predict == <span class="hljs-number">2</span>]fig, axes = plt.subplots(<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, figsize=(<span class="hljs-number">32</span>, <span class="hljs-number">6</span>))<span class="hljs-comment"># 按花萼长度查看分布情况</span>axes[<span class="hljs-number">0</span>].scatter(X[:, <span class="hljs-number">0</span>], X[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;see&#x27;</span>)axes[<span class="hljs-number">0</span>].set_xlabel(<span class="hljs-string">&#x27;sepal length&#x27;</span>)axes[<span class="hljs-number">0</span>].set_ylabel(<span class="hljs-string">&#x27;sepal width&#x27;</span>)axes[<span class="hljs-number">0</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># 按花瓣长度查看分布情况</span>axes[<span class="hljs-number">1</span>].scatter(X[:, <span class="hljs-number">2</span>], X[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;see&#x27;</span>)axes[<span class="hljs-number">1</span>].set_xlabel(<span class="hljs-string">&#x27;petal length&#x27;</span>)axes[<span class="hljs-number">1</span>].set_ylabel(<span class="hljs-string">&#x27;petal width&#x27;</span>)axes[<span class="hljs-number">1</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># 按花萼进行聚类</span>axes[<span class="hljs-number">2</span>].scatter(x0[:, <span class="hljs-number">0</span>], x0[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;label0&#x27;</span>)axes[<span class="hljs-number">2</span>].scatter(x1[:, <span class="hljs-number">0</span>], x1[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;*&#x27;</span>, label=<span class="hljs-string">&#x27;label1&#x27;</span>)axes[<span class="hljs-number">2</span>].scatter(x2[:, <span class="hljs-number">0</span>], x2[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;blue&#x27;</span>, marker=<span class="hljs-string">&#x27;+&#x27;</span>, label=<span class="hljs-string">&#x27;label2&#x27;</span>)axes[<span class="hljs-number">2</span>].set_xlabel(<span class="hljs-string">&#x27;sepal length&#x27;</span>)axes[<span class="hljs-number">2</span>].set_ylabel(<span class="hljs-string">&#x27;sepal width&#x27;</span>)axes[<span class="hljs-number">2</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># 按花瓣进行聚类</span>axes[<span class="hljs-number">3</span>].scatter(x0[:, <span class="hljs-number">2</span>], x0[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;label0&#x27;</span>)axes[<span class="hljs-number">3</span>].scatter(x1[:, <span class="hljs-number">2</span>], x1[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;*&#x27;</span>, label=<span class="hljs-string">&#x27;label1&#x27;</span>)axes[<span class="hljs-number">3</span>].scatter(x2[:, <span class="hljs-number">2</span>], x2[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;blue&#x27;</span>, marker=<span class="hljs-string">&#x27;+&#x27;</span>, label=<span class="hljs-string">&#x27;label2&#x27;</span>)axes[<span class="hljs-number">3</span>].set_xlabel(<span class="hljs-string">&#x27;petal length&#x27;</span>)axes[<span class="hljs-number">3</span>].set_ylabel(<span class="hljs-string">&#x27;petal width&#x27;</span>)axes[<span class="hljs-number">3</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># plt.show()</span>prediction = model.predict(test_features)test_labels_num = []<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> test_labels:    <span class="hljs-keyword">if</span> item == <span class="hljs-string">&#x27;Iris-setosa&#x27;</span>:        test_labels_num.append(<span class="hljs-number">0</span>)    <span class="hljs-keyword">elif</span> item == <span class="hljs-string">&#x27;Iris-versicolor&#x27;</span>:        test_labels_num.append(<span class="hljs-number">1</span>)    <span class="hljs-keyword">elif</span> item == <span class="hljs-string">&#x27;Iris-virginica&#x27;</span>:        test_labels_num.append(<span class="hljs-number">2</span>)<span class="hljs-built_in">print</span>(accuracy_score(test_labels_num, prediction))<span class="hljs-comment"># 用这种方式评估聚类时，一个常见的错误是使用 accuracy_score 而不是 adjusted_rand_score、normalized_mutual_info_score 或其他聚类指标。</span><span class="hljs-comment"># 使用精度的问题在于，它要求分配的簇标签与真实值完全匹配。但簇标签本身毫无意义——唯一重要的是哪些点位于同一个簇中。</span><span class="hljs-comment"># 聚类后 x0、x1、x2 三类花会对应 012，021，102，120，201，210 的任意组合</span><span class="hljs-comment"># 所以你不知道 0 对应的是真实标签中的 Iris-setosa 还是 Iris-virginica 还是 Iris-versicolor</span><span class="hljs-comment"># 所以有 5/6 的概率是得不到正确值的</span><span class="hljs-comment"># 比如说下面这种情况</span><span class="hljs-built_in">print</span>(prediction)           <span class="hljs-comment"># [1 1 2 2 1 0 2 1 2 0 0 1 0 2 1 1 1 1 0 2 0 0 2 2 0 2 2 0 1 1]</span><span class="hljs-built_in">print</span>(test_labels_num)      <span class="hljs-comment"># [0 0 1 1 0 2 1 0 1 2 2 0 2 1 0 0 0 0 2 1 2 2 1 1 2 1 1 2 0 0]</span><span class="hljs-comment"># 聚类后预测的关系是 0-Iris-virginica，1-Iris-setosa，2-Iris-versicolor</span><span class="hljs-comment"># 所以要使用 metrics.adjusted_rand_score(labels_true, labels_pred)</span><span class="hljs-comment"># 输出越接近 1 说明模型越好</span><span class="hljs-comment"># adjusted_rand_score 函数用的一维数组，所以要将 test_labels 从（30，1）降维成（30，）</span><span class="hljs-comment"># prediction 已经是（30，）</span>test_labels = test_labels.flatten()<span class="hljs-built_in">print</span>(adjusted_rand_score(test_labels, prediction))<span class="hljs-comment"># 是 symmetric（对称的）：交换参数不会改变 score （得分）。它可以作为 consensus measure（共识度量）</span><span class="hljs-comment"># 所以下面这样也是可以的</span><span class="hljs-built_in">print</span>(adjusted_rand_score(test_labels_num, prediction))</code></pre></div>]]></content>
+    <content type="html"><![CDATA[<p>代码：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> KMeans<span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score, adjusted_rand_scorecsv_path = <span class="hljs-string">&#x27;/Users/bakako/Downloads/archive/Iris.csv&#x27;</span>df = pd.read_csv(csv_path)<span class="hljs-comment"># 将 dataframe 转为 numpy</span>dataset = df.values<span class="hljs-comment"># delete index</span>dataset = np.delete(dataset, <span class="hljs-number">0</span>, axis=<span class="hljs-number">1</span>)<span class="hljs-comment"># delete label</span>features = np.delete(dataset, -<span class="hljs-number">1</span>, axis=<span class="hljs-number">1</span>)<span class="hljs-comment"># delete feature</span>labels = np.delete(dataset, [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], axis=<span class="hljs-number">1</span>)<span class="hljs-comment"># 分割训练集和测试集</span>train_features, \        test_features, \        train_labels, \        test_labels = train_test_split(features, labels, test_size=<span class="hljs-number">0.2</span>)X = train_featuresmodel = KMeans(n_clusters=<span class="hljs-number">3</span>)model.fit(X)label_predict = model.labels_x0 = X[label_predict == <span class="hljs-number">0</span>]x1 = X[label_predict == <span class="hljs-number">1</span>]x2 = X[label_predict == <span class="hljs-number">2</span>]fig, axes = plt.subplots(<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, figsize=(<span class="hljs-number">32</span>, <span class="hljs-number">6</span>))<span class="hljs-comment"># 按花萼长度查看分布情况</span>axes[<span class="hljs-number">0</span>].scatter(X[:, <span class="hljs-number">0</span>], X[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;see&#x27;</span>)axes[<span class="hljs-number">0</span>].set_xlabel(<span class="hljs-string">&#x27;sepal length&#x27;</span>)axes[<span class="hljs-number">0</span>].set_ylabel(<span class="hljs-string">&#x27;sepal width&#x27;</span>)axes[<span class="hljs-number">0</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># 按花瓣长度查看分布情况</span>axes[<span class="hljs-number">1</span>].scatter(X[:, <span class="hljs-number">2</span>], X[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;see&#x27;</span>)axes[<span class="hljs-number">1</span>].set_xlabel(<span class="hljs-string">&#x27;petal length&#x27;</span>)axes[<span class="hljs-number">1</span>].set_ylabel(<span class="hljs-string">&#x27;petal width&#x27;</span>)axes[<span class="hljs-number">1</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># 按花萼进行聚类</span>axes[<span class="hljs-number">2</span>].scatter(x0[:, <span class="hljs-number">0</span>], x0[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;label0&#x27;</span>)axes[<span class="hljs-number">2</span>].scatter(x1[:, <span class="hljs-number">0</span>], x1[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;*&#x27;</span>, label=<span class="hljs-string">&#x27;label1&#x27;</span>)axes[<span class="hljs-number">2</span>].scatter(x2[:, <span class="hljs-number">0</span>], x2[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;blue&#x27;</span>, marker=<span class="hljs-string">&#x27;+&#x27;</span>, label=<span class="hljs-string">&#x27;label2&#x27;</span>)axes[<span class="hljs-number">2</span>].set_xlabel(<span class="hljs-string">&#x27;sepal length&#x27;</span>)axes[<span class="hljs-number">2</span>].set_ylabel(<span class="hljs-string">&#x27;sepal width&#x27;</span>)axes[<span class="hljs-number">2</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># 按花瓣进行聚类</span>axes[<span class="hljs-number">3</span>].scatter(x0[:, <span class="hljs-number">2</span>], x0[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;o&#x27;</span>, label=<span class="hljs-string">&#x27;label0&#x27;</span>)axes[<span class="hljs-number">3</span>].scatter(x1[:, <span class="hljs-number">2</span>], x1[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;*&#x27;</span>, label=<span class="hljs-string">&#x27;label1&#x27;</span>)axes[<span class="hljs-number">3</span>].scatter(x2[:, <span class="hljs-number">2</span>], x2[:, <span class="hljs-number">3</span>], c=<span class="hljs-string">&#x27;blue&#x27;</span>, marker=<span class="hljs-string">&#x27;+&#x27;</span>, label=<span class="hljs-string">&#x27;label2&#x27;</span>)axes[<span class="hljs-number">3</span>].set_xlabel(<span class="hljs-string">&#x27;petal length&#x27;</span>)axes[<span class="hljs-number">3</span>].set_ylabel(<span class="hljs-string">&#x27;petal width&#x27;</span>)axes[<span class="hljs-number">3</span>].legend(loc=<span class="hljs-number">2</span>)<span class="hljs-comment"># plt.show()</span>prediction = model.predict(test_features)test_labels_num = []<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> test_labels:    <span class="hljs-keyword">if</span> item == <span class="hljs-string">&#x27;Iris-setosa&#x27;</span>:        test_labels_num.append(<span class="hljs-number">0</span>)    <span class="hljs-keyword">elif</span> item == <span class="hljs-string">&#x27;Iris-versicolor&#x27;</span>:        test_labels_num.append(<span class="hljs-number">1</span>)    <span class="hljs-keyword">elif</span> item == <span class="hljs-string">&#x27;Iris-virginica&#x27;</span>:        test_labels_num.append(<span class="hljs-number">2</span>)<span class="hljs-built_in">print</span>(accuracy_score(test_labels_num, prediction))<span class="hljs-built_in">print</span>(adjusted_rand_score(test_labels_num, prediction))</code></pre></div><p>其中，在 <a href="https://www.flyai.com/article/516">机器学习（二）之无监督学习：数据变换、聚类分析</a> 中有提到：</p><blockquote><p>用这种方式评估聚类时，一个常见的错误是使用 <code>accuracy_score</code> 而不是  <code>adjusted_rand_score</code>、<code>normalized_mutual_info_score</code> 或其他聚类指标。使用精度的问题在于，它要求分配的簇标签与真实值完全匹配。但簇标签本身毫无意义——唯一重要的是哪些点位于同一个簇中。</p></blockquote><p>简单说，聚类后 x0、x1、x2 三类花会对应 012，021，102，120，201，210 的任意组合。所以你不知道 0 对应的是真实标签中的 Iris-setosa、Iris-virginica 还是 Iris-versicolor。有 5&#x2F;6 的概率是得不到正确值的。</p><p>比如说下面这种情况</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(prediction)           <span class="hljs-comment"># [1 1 2 2 1 0 2 1 2 0 0 1 0 2 1 1 1 1 0 2 0 0 2 2 0 2 2 0 1 1]</span><span class="hljs-built_in">print</span>(test_labels_num)      <span class="hljs-comment"># [0 0 1 1 0 2 1 0 1 2 2 0 2 1 0 0 0 0 2 1 2 2 1 1 2 1 1 2 0 0]</span></code></pre></div><p>聚类后预测的关系是 0 对应 Iris-virginica，1 对应 Iris-setosa，2 对应 Iris-versicolor。</p><p>这与我们手动标签的 0 对应 Iris-setosa，1 对应 Iris-versicolor，2 对应 Iris-virginica 对不上。</p><p>此时使用  <code>accuracy_score</code>  会存在问题。应该使用  <code>adjusted_rand_score(labels_true, labels_pred)</code>，输出越接近 1 说明模型越好。</p><p>另外，在 <a href="https://cloud.tencent.com/developer/article/1020155">【Scikit-Learn 中文文档】聚类 - 无监督学习</a> 中有提到：</p><blockquote><p> <code>adjusted_rand_score</code>  是  <strong>symmetric（对称的）</strong>——交换参数不会改变 score （得分）。它可以作为 <strong>consensus measure（共识度量）</strong>。</p></blockquote><p>也就是说，我随意改变手动标签 012 的值，或者干脆直接用 Iris-setosa、Iris-versicolor、Iris-virginica 也是不影响结果的。</p><div class="code-wrapper"><pre><code class="hljs python">test_labels = test_labels.flatten()<span class="hljs-comment"># adjusted_rand_score 函数用的一维数组，所以要将 test_labels 从（30，1）降维成（30，）</span><span class="hljs-comment"># prediction 已经是（30，）</span><span class="hljs-built_in">print</span>(adjusted_rand_score(test_labels, prediction))</code></pre></div>]]></content>
     
     
     <categories>
@@ -940,9 +992,9 @@
     
     <tags>
       
-      <tag>运动科学</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>运动科学</tag>
       
     </tags>
     
@@ -1210,9 +1262,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>心率</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -1225,7 +1277,7 @@
     <link href="/2023/11/17/%E5%A6%82%E4%BD%95%E8%AE%A9-plt-savefig-%E4%B8%BA%E6%9C%80%E5%A4%A7%E5%8C%96%E7%9A%84%E7%AA%97%E5%8F%A3%E4%BF%9D%E5%AD%98%E5%9B%BE%E5%83%8F%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E9%BB%98%E8%AE%A4%E7%9A%84%E5%B0%BA%E5%AF%B8/"/>
     <url>/2023/11/17/%E5%A6%82%E4%BD%95%E8%AE%A9-plt-savefig-%E4%B8%BA%E6%9C%80%E5%A4%A7%E5%8C%96%E7%9A%84%E7%AA%97%E5%8F%A3%E4%BF%9D%E5%AD%98%E5%9B%BE%E5%83%8F%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E9%BB%98%E8%AE%A4%E7%9A%84%E5%B0%BA%E5%AF%B8/</url>
     
-    <content type="html"><![CDATA[<p>在分析心率时，通过如下代码保存的图片是挤在一起的</p><div class="code-wrapper"><pre><code class="hljs python">plt.tight_layout()plt.savefig(<span class="hljs-string">&quot;ecg.png&quot;</span>, dpi=<span class="hljs-number">120</span>)</code></pre></div><p>如图</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ecg1.png"></p><p>这也就是使用 <code>plt.show()</code> 显示的默认窗口。必须要将窗口放大后才能将内容全部展开，可图片无法放大。</p><p>所以参考了：</p><ol><li><a href="https://stackoverflow.com/questions/38120826/how-to-make-plt-savefig-save-image-for-maximized-window-instead-of-default-s"><a href="https://stackoverflow.com/questions/38120826/how-to-make-plt-savefig-save-image-for-maximized-window-instead-of-default-s">How to make plt.savefig() save image for ‘maximized’ window instead of default size</a></a></li><li><a href="https://stackoverflow.com/questions/32428193/saving-matplotlib-graphs-to-image-as-full-screen">Saving Matplotlib graphs to image as full screen</a></li><li><a href="https://stackoverflow.com/questions/10041627/how-to-make-savefig-save-image-for-maximized-window-instead-of-default-size">How to make savefig() save image for ‘maximized’ window instead of default size</a></li></ol><p>这三个问题后，有解决方法：</p><div class="code-wrapper"><pre><code class="hljs python">figure = plt.gcf()  <span class="hljs-comment"># get current figure</span>figure.set_size_inches(<span class="hljs-number">32</span>, <span class="hljs-number">18</span>)  <span class="hljs-comment"># set figure&#x27;s size manually to your full screen (32x18)</span>plt.savefig(<span class="hljs-string">&#x27;ecg.png&#x27;</span>, bbox_inches=<span class="hljs-string">&#x27;tight&#x27;</span>, dpi=<span class="hljs-number">120</span>)  <span class="hljs-comment"># bbox_inches removes extra white spaces</span></code></pre></div><p>保存图片ok</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ecg2.png"></p>]]></content>
+    <content type="html"><![CDATA[<p>在使用 <a href="https://github.com/neuropsychology/NeuroKit">NeuroKit</a> 分析心率时，可以通过下面代码保存结果为图片</p><div class="code-wrapper"><pre><code class="hljs python">plt.tight_layout()plt.savefig(<span class="hljs-string">&quot;ecg.png&quot;</span>, dpi=<span class="hljs-number">120</span>)</code></pre></div><p>但是得到的图片如下图所示，所有东西都挤在了一起：</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ecg1.png"></p><p>使用 <code>plt.show()</code> 显示的默认窗口也是这样，必须要将窗口放大后才能将内容全部展开。可图片无法放大。</p><p>所以参考了：</p><ol><li><a href="https://stackoverflow.com/questions/38120826/how-to-make-plt-savefig-save-image-for-maximized-window-instead-of-default-s">How to make plt.savefig() save image for ‘maximized’ window instead of default size</a></li><li><a href="https://stackoverflow.com/questions/32428193/saving-matplotlib-graphs-to-image-as-full-screen">Saving Matplotlib graphs to image as full screen</a></li><li><a href="https://stackoverflow.com/questions/10041627/how-to-make-savefig-save-image-for-maximized-window-instead-of-default-size">How to make savefig() save image for ‘maximized’ window instead of default size</a></li></ol><p>这三个问题，以及 <a href="https://github.com/neuropsychology/NeuroKit/pull/678">ppg_plot() was not returning matplotlib.Figure</a> 后有解决方法：</p><div class="code-wrapper"><pre><code class="hljs python">figure = plt.gcf()  <span class="hljs-comment"># get current figure</span>figure.set_size_inches(<span class="hljs-number">32</span>, <span class="hljs-number">18</span>)  <span class="hljs-comment"># set figure&#x27;s size manually to your full screen (32x18)</span>plt.savefig(<span class="hljs-string">&#x27;ecg.png&#x27;</span>, bbox_inches=<span class="hljs-string">&#x27;tight&#x27;</span>, dpi=<span class="hljs-number">120</span>)  <span class="hljs-comment"># bbox_inches removes extra white spaces</span></code></pre></div><p>保存图片ok</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/ecg2.png"></p>]]></content>
     
     
     <categories>
@@ -1238,6 +1290,8 @@
     
     
     <tags>
+      
+      <tag>心率</tag>
       
       <tag>Python</tag>
       
@@ -1690,9 +1744,9 @@
     
     <tags>
       
-      <tag>运动科学</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>运动科学</tag>
       
     </tags>
     
@@ -1771,9 +1825,9 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>IMU</tag>
+      
+      <tag>Swift</tag>
       
     </tags>
     
@@ -2287,9 +2341,9 @@
     
     <tags>
       
-      <tag>EMG</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>EMG</tag>
       
     </tags>
     
@@ -2422,9 +2476,9 @@
     
     <tags>
       
-      <tag>EMG</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>EMG</tag>
       
     </tags>
     
@@ -2559,9 +2613,9 @@
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>计算机视觉</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -2947,9 +3001,9 @@
       
       <tag>深度学习</tag>
       
-      <tag>Python</tag>
-      
       <tag>计算机视觉</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -3167,9 +3221,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>IMU</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     

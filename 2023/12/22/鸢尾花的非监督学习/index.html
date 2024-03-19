@@ -18,15 +18,15 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta name="description" content="参考：  【Scikit-Learn 中文文档】聚类 - 无监督学习 - 用户指南 | ApacheCN 机器学习（二）之无监督学习：数据变换、聚类分析  代码： import matplotlib.pyplot as plt from sklearn.cluster import KMeans from sklearn.model_selection import train_test_spli">
+    <meta name="description" content="代码： import matplotlib.pyplot as plt from sklearn.cluster import KMeans from sklearn.model_selection import train_test_split import pandas as pd import numpy as np from sklearn.metrics import accuracy_">
 <meta property="og:type" content="article">
 <meta property="og:title" content="鸢尾花的非监督学习">
 <meta property="og:url" content="https://wonderhoi.com/2023/12/22/%E9%B8%A2%E5%B0%BE%E8%8A%B1%E7%9A%84%E9%9D%9E%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="参考：  【Scikit-Learn 中文文档】聚类 - 无监督学习 - 用户指南 | ApacheCN 机器学习（二）之无监督学习：数据变换、聚类分析  代码： import matplotlib.pyplot as plt from sklearn.cluster import KMeans from sklearn.model_selection import train_test_spli">
+<meta property="og:description" content="代码： import matplotlib.pyplot as plt from sklearn.cluster import KMeans from sklearn.model_selection import train_test_split import pandas as pd import numpy as np from sklearn.metrics import accuracy_">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-22T01:54:54.000Z">
-<meta property="article:modified_time" content="2023-12-22T02:19:23.000Z">
+<meta property="article:modified_time" content="2024-03-19T02:57:11.353Z">
 <meta property="article:author" content="刘子航">
 <meta property="article:tag" content="深度学习">
 <meta property="article:tag" content="Python">
@@ -252,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.2k 字
+          3.4k 字
         
       </span>
     
@@ -296,12 +296,7 @@
             
               <div class="markdown-body">
                 
-                <p>参考：</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1020155">【Scikit-Learn 中文文档】聚类 - 无监督学习 - 用户指南 | ApacheCN</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.flyai.com/article/516">机器学习（二）之无监督学习：数据变换、聚类分析</a></li>
-</ol>
-<p>代码：</p>
+                <p>代码：</p>
 <div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
 <span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> KMeans
 <span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
@@ -383,26 +378,32 @@ test_labels_num = []
         test_labels_num.append(<span class="hljs-number">2</span>)
 
 <span class="hljs-built_in">print</span>(accuracy_score(test_labels_num, prediction))
-<span class="hljs-comment"># 用这种方式评估聚类时，一个常见的错误是使用 accuracy_score 而不是 adjusted_rand_score、normalized_mutual_info_score 或其他聚类指标。</span>
-<span class="hljs-comment"># 使用精度的问题在于，它要求分配的簇标签与真实值完全匹配。但簇标签本身毫无意义——唯一重要的是哪些点位于同一个簇中。</span>
-<span class="hljs-comment"># 聚类后 x0、x1、x2 三类花会对应 012，021，102，120，201，210 的任意组合</span>
-<span class="hljs-comment"># 所以你不知道 0 对应的是真实标签中的 Iris-setosa 还是 Iris-virginica 还是 Iris-versicolor</span>
-<span class="hljs-comment"># 所以有 5/6 的概率是得不到正确值的</span>
-<span class="hljs-comment"># 比如说下面这种情况</span>
-<span class="hljs-built_in">print</span>(prediction)           <span class="hljs-comment"># [1 1 2 2 1 0 2 1 2 0 0 1 0 2 1 1 1 1 0 2 0 0 2 2 0 2 2 0 1 1]</span>
-<span class="hljs-built_in">print</span>(test_labels_num)      <span class="hljs-comment"># [0 0 1 1 0 2 1 0 1 2 2 0 2 1 0 0 0 0 2 1 2 2 1 1 2 1 1 2 0 0]</span>
-<span class="hljs-comment"># 聚类后预测的关系是 0-Iris-virginica，1-Iris-setosa，2-Iris-versicolor</span>
-<span class="hljs-comment"># 所以要使用 metrics.adjusted_rand_score(labels_true, labels_pred)</span>
-<span class="hljs-comment"># 输出越接近 1 说明模型越好</span>
-<span class="hljs-comment"># adjusted_rand_score 函数用的一维数组，所以要将 test_labels 从（30，1）降维成（30，）</span>
-<span class="hljs-comment"># prediction 已经是（30，）</span>
-test_labels = test_labels.flatten()
-
-<span class="hljs-built_in">print</span>(adjusted_rand_score(test_labels, prediction))
-<span class="hljs-comment"># 是 symmetric（对称的）：交换参数不会改变 score （得分）。它可以作为 consensus measure（共识度量）</span>
-<span class="hljs-comment"># 所以下面这样也是可以的</span>
 <span class="hljs-built_in">print</span>(adjusted_rand_score(test_labels_num, prediction))</code></pre></div>
 
+<p>其中，在 <a target="_blank" rel="noopener" href="https://www.flyai.com/article/516">机器学习（二）之无监督学习：数据变换、聚类分析</a> 中有提到：</p>
+<blockquote>
+<p>用这种方式评估聚类时，一个常见的错误是使用 <code>accuracy_score</code> 而不是  <code>adjusted_rand_score</code>、<code>normalized_mutual_info_score</code> 或其他聚类指标。使用精度的问题在于，它要求分配的簇标签与真实值完全匹配。但簇标签本身毫无意义——唯一重要的是哪些点位于同一个簇中。</p>
+</blockquote>
+<p>简单说，聚类后 x0、x1、x2 三类花会对应 012，021，102，120，201，210 的任意组合。所以你不知道 0 对应的是真实标签中的 Iris-setosa、Iris-virginica 还是 Iris-versicolor。有 5&#x2F;6 的概率是得不到正确值的。</p>
+<p>比如说下面这种情况</p>
+<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(prediction)           
+<span class="hljs-comment"># [1 1 2 2 1 0 2 1 2 0 0 1 0 2 1 1 1 1 0 2 0 0 2 2 0 2 2 0 1 1]</span>
+<span class="hljs-built_in">print</span>(test_labels_num)      
+<span class="hljs-comment"># [0 0 1 1 0 2 1 0 1 2 2 0 2 1 0 0 0 0 2 1 2 2 1 1 2 1 1 2 0 0]</span></code></pre></div>
+
+<p>聚类后预测的关系是 0 对应 Iris-virginica，1 对应 Iris-setosa，2 对应 Iris-versicolor。</p>
+<p>这与我们手动标签的 0 对应 Iris-setosa，1 对应 Iris-versicolor，2 对应 Iris-virginica 对不上。</p>
+<p>此时使用  <code>accuracy_score</code>  会存在问题。应该使用  <code>adjusted_rand_score(labels_true, labels_pred)</code>，输出越接近 1 说明模型越好。</p>
+<p>另外，在 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1020155">【Scikit-Learn 中文文档】聚类 - 无监督学习</a> 中有提到：</p>
+<blockquote>
+<p> <code>adjusted_rand_score</code>  是  <strong>symmetric（对称的）</strong>——交换参数不会改变 score （得分）。它可以作为 <strong>consensus measure（共识度量）</strong>。</p>
+</blockquote>
+<p>也就是说，我随意改变手动标签 012 的值，或者干脆直接用 Iris-setosa、Iris-versicolor、Iris-virginica 也是不影响结果的。</p>
+<div class="code-wrapper"><pre><code class="hljs python">test_labels = test_labels.flatten()
+<span class="hljs-comment"># adjusted_rand_score 函数用的一维数组，所以要将 test_labels 从（30，1）降维成（30，）</span>
+<span class="hljs-comment"># prediction 已经是（30，）</span>
+
+<span class="hljs-built_in">print</span>(adjusted_rand_score(test_labels, prediction))</code></pre></div>
 
                 
               </div>
