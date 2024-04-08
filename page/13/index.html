@@ -251,6 +251,347 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2023/08/03/%E6%B0%94%E4%BD%93%E6%B5%81%E9%87%8F%E4%BC%A0%E6%84%9F%E5%99%A8-AFM3000-SFM3000-%E9%A9%B1%E5%8A%A8/" target="_self">
+          气体流量传感器 AFM3000/SFM3000 驱动
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/03/%E6%B0%94%E4%BD%93%E6%B5%81%E9%87%8F%E4%BC%A0%E6%84%9F%E5%99%A8-AFM3000-SFM3000-%E9%A9%B1%E5%8A%A8/" target="_self">
+        <div>
+          之前买入了奥松电子的气体流量传感器，型号为 AFM3000。到手后发现没有 Arduino 的驱动代码，调试不了。 离谱的是，我在 Arduino 论坛逛的时候，发现了这个问题：I2C communication with SFM3000 series flow sensor from Sensirion。问题中用到的气体流量传感器为 SFM3000，看了说明书后，只能说两款传感器基本一样。 于是
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-03 18:56" pubdate>
+              2023-08-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Code/" class="category-chain-item">Code</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Code/Arduino/" class="category-chain-item">Arduino</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Arduino/">#Arduino</a>
+            
+              <a href="/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/">#传感器</a>
+            
+              <a href="/tags/CEPT/">#CEPT</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/03/Python-Swift-%E4%B8%89%E5%85%83%EF%BC%88%E7%9B%AE%EF%BC%89%E8%BF%90%E7%AE%97/" target="_self">
+          Python Swift 三元（目）运算
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/03/Python-Swift-%E4%B8%89%E5%85%83%EF%BC%88%E7%9B%AE%EF%BC%89%E8%BF%90%E7%AE%97/" target="_self">
+        <div>
+          Python的三元运算写法： is_true = True result = &#x27;TRUE&#x27; if is_true else &#x27;FALSE&#x27; # output: TRUE    Swift的三元运算写法： isTrue = true result = isTrue ? &quot;TRUE&quot; : &quot;FALSE&quot; // output
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-03 18:31" pubdate>
+              2023-08-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Code/" class="category-chain-item">Code</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Code/Swift/" class="category-chain-item">Swift</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Swift/">#Swift</a>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/03/Python-%E5%AF%BC%E5%87%BA%E4%BC%A0%E6%84%9F%E5%99%A8%E6%95%B0%E6%8D%AE%E5%88%B0-csv-%E6%96%87%E4%BB%B6/" target="_self">
+          Python 导出传感器数据到 .csv 文件
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/03/Python-%E5%AF%BC%E5%87%BA%E4%BC%A0%E6%84%9F%E5%99%A8%E6%95%B0%E6%8D%AE%E5%88%B0-csv-%E6%96%87%E4%BB%B6/" target="_self">
+        <div>
+          导出传感器的数据一共分为两步：  构建数据结构； 导出数据到 .csv 文件。  1.构建数据结构一般来说，传感器采集的数据为时间序列数据。需要导出的数据一般为： times = [t1, t2, t3 ... tn] value_A = [a1, a2, a3 ... an] value_B = [b1, b2, b3 ... bn] value_C = [c1, c2, c3 ... cn]
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-03 18:12" pubdate>
+              2023-08-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Code/" class="category-chain-item">Code</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Code/Python/" class="category-chain-item">Python</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/03/Python-%E7%BB%98%E5%88%B6%E6%95%B0%E6%8D%AE%E7%A7%BB%E5%8A%A8%E7%AA%97%E5%8F%A3/" target="_self">
+          Python 绘制数据移动窗口
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/03/Python-%E7%BB%98%E5%88%B6%E6%95%B0%E6%8D%AE%E7%A7%BB%E5%8A%A8%E7%AA%97%E5%8F%A3/" target="_self">
+        <div>
+          import numpy as np  win_size = 500                          # 窗口大小为500 x_data = np.zeros(win_size) y1_data = np.zeros(win_size) y2_data = np.zeros(win_size) y3_data = np.zeros(win_size)  ...  def upda
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-03 16:59" pubdate>
+              2023-08-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Code/" class="category-chain-item">Code</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Code/Python/" class="category-chain-item">Python</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/03/%E9%80%9A%E8%BF%87-IMU-%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%A7%BB%E5%8A%A8%E7%9A%84%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9/" target="_self">
+          通过 IMU 绘制物体移动的空间轨迹
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/03/%E9%80%9A%E8%BF%87-IMU-%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%A7%BB%E5%8A%A8%E7%9A%84%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9/" target="_self">
+        <div>
+          一般 IMU 由加速度传感器、陀螺仪组成，也叫 6 轴 IMU。还可以外加一个磁力计，构成 9 轴 IMU。关于加速度传感器和陀螺仪的工作原理，可以参考：  加速度传感器的原理和应用-手机翻转、失重检测、运动检测、位置识别； MEMS 三轴加速计、三轴陀螺仪、三轴磁力计）6轴IMU+磁力计，9轴传感器讲解； IMU 测量模型。  加速度传感器测得加速度（acc）积分得到速度，再积分得到位移：  G
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-03 12:59" pubdate>
+              2023-08-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%B5%84%E6%96%99%E6%95%B4%E5%90%88/" class="category-chain-item">资料整合</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/IMU/">#IMU</a>
+            
+              <a href="/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/">#传感器</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2023/07/28/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/" target="_self">
           Mac 串口查询之 /dev/cu. 与 /dev/tty. 记录
         </a>
@@ -561,346 +902,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/06/23/PyTorch-%E9%B8%A2%E5%B0%BE%E8%8A%B1%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" target="_self">
-          PyTorch 鸢尾花深度学习
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/06/23/PyTorch-%E9%B8%A2%E5%B0%BE%E8%8A%B1%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" target="_self">
-        <div>
-          鸢尾花数据Iris Species 定义鸢尾花类class Iris:     def __init__(self, sepal_length, sepal_width, petal_length, petal_width, species):         self.sepal_length = sepal_length         self.sepal_width = sepal_wid
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-06-23 14:38" pubdate>
-              2023-06-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Code/" class="category-chain-item">Code</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Code/Python/" class="category-chain-item">Python</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">#深度学习</a>
-            
-              <a href="/tags/Python/">#Python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/06/14/%E5%87%A0%E5%A4%A7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" target="_self">
-          几大界面设计语言
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/06/14/%E5%87%A0%E5%A4%A7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" target="_self">
-        <div>
-          Apple 的 HIG  Android 的 Material Design  阿里的 Ant Design  IBM 的 Carbon Design
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-06-14 10:41" pubdate>
-              2023-06-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/PM/" class="category-chain-item">PM</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/PM/UX/" class="category-chain-item">UX</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/UX/">#UX</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/05/23/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-Dtd-Playlist%EF%BC%88%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE-App%EF%BC%89/" target="_self">
-          好看的 App 之 Dtd Playlist（音乐播放 App）
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/05/23/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-Dtd-Playlist%EF%BC%88%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE-App%EF%BC%89/" target="_self">
-        <div>
-          UI 非常对我胃口的一个 App。
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-05-23 10:52" pubdate>
-              2023-05-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/PM/" class="category-chain-item">PM</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/PM/App/" class="category-chain-item">App</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/App/">#App</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/05/11/Pycharm-%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%BF%AB%E6%8D%B7%E9%94%AE/" target="_self">
-          Pycharm 代码格式化快捷键
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/05/11/Pycharm-%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%BF%AB%E6%8D%B7%E9%94%AE/" target="_self">
-        <div>
-          windows：Ctrl+Alt+L mac：Cmd+Option+L
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-05-11 16:49" pubdate>
-              2023-05-11
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Python/">#Python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/05/11/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-NoteCircle-%E5%92%8C-DayCircle%EF%BC%88%E8%AE%B0%E4%BA%8B%E5%B7%A5%E5%85%B7%EF%BC%89/" target="_self">
-          好看的 App 之 NoteCircle 和 DayCircle（记事工具）
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/05/11/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-NoteCircle-%E5%92%8C-DayCircle%EF%BC%88%E8%AE%B0%E4%BA%8B%E5%B7%A5%E5%85%B7%EF%BC%89/" target="_self">
-        <div>
-          一个是 todo 软件，一个是记日软件。
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-05-11 10:49" pubdate>
-              2023-05-11
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/PM/" class="category-chain-item">PM</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/PM/App/" class="category-chain-item">App</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/App/">#App</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/12/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#board">11</a><a class="page-number" href="/page/12/#board">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/#board">14</a><a class="extend next" rel="next" href="/page/14/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/12/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#board">11</a><a class="page-number" href="/page/12/#board">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/#board">14</a><a class="page-number" href="/page/15/#board">15</a><a class="extend next" rel="next" href="/page/14/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

@@ -4,6 +4,137 @@
   
   
   <entry>
+    <title>使用 SensorKit 获取 iWatch 的 PPG 信号</title>
+    <link href="/2024/04/03/%E4%BD%BF%E7%94%A8-SensorKit-%E8%8E%B7%E5%8F%96-iWatch-%E7%9A%84-PPG-%E4%BF%A1%E5%8F%B7/"/>
+    <url>/2024/04/03/%E4%BD%BF%E7%94%A8-SensorKit-%E8%8E%B7%E5%8F%96-iWatch-%E7%9A%84-PPG-%E4%BF%A1%E5%8F%B7/</url>
+    
+    <content type="html"><![CDATA[<p>参考 <a href="https://developer.apple.com/documentation/sensorkit/configuring_your_project_for_sensor_reading">Configuring your project for sensor reading</a></p><h3 id="第一步，配置描述文件"><a href="#第一步，配置描述文件" class="headerlink" title="第一步，配置描述文件"></a>第一步，配置描述文件</h3><p><a href="https://developer.apple.com/documentation/sensorkit/configuring_your_project_for_sensor_reading#3680788">Create a manual provisioning profile</a></p><h4 id="注册-App-ID"><a href="#注册-App-ID" class="headerlink" title="注册 App ID"></a>注册 App ID</h4><p><a href="https://developer.apple.com/cn/help/account/manage-identifiers/register-an-app-id">注册 App ID</a></p><h4 id="创建证书"><a href="#创建证书" class="headerlink" title="创建证书"></a>创建证书</h4><p><a href="https://developer.apple.com/cn/help/account/create-certificates/create-a-certificate-signing-request/">创建证书签名请求</a></p><h4 id="注册设备"><a href="#注册设备" class="headerlink" title="注册设备"></a>注册设备</h4><p><a href="https://developer.apple.com/cn/help/account/register-devices/register-a-single-device">注册一台设备</a></p><p><a href="https://developer.apple.com/documentation/xcode/distributing-your-app-to-registered-devices">获取设备UDID</a>，在 Xcode 中获取就好。</p><h4 id="创建并下载描述文件"><a href="#创建并下载描述文件" class="headerlink" title="创建并下载描述文件"></a>创建并下载描述文件</h4><p><a href="https://developer.apple.com/cn/help/account/manage-profiles/create-a-development-provisioning-profile/">创建开发预置描述文件</a></p><h3 id="第二步，配置-plist"><a href="#第二步，配置-plist" class="headerlink" title="第二步，配置 plist"></a>第二步，配置 plist</h3><p><a href="https://developer.apple.com/documentation/sensorkit/configuring_your_project_for_sensor_reading#3680789">Configure Xcode for signing</a></p><p>创建 <code>.entitlements</code> 文件：</p><div class="code-wrapper"><pre><code class="hljs mathematica">在 <span class="hljs-variable">Xcode</span> <span class="hljs-number">12</span> 中创建 <span class="hljs-variable">entitlements</span> 文件可以按照以下步骤进行：<span class="hljs-number">1.</span>打开 <span class="hljs-variable">Xcode</span> <span class="hljs-number">12</span> 并打开您的项目。<span class="hljs-number">2.</span>从左侧导航栏中选择您的项目文件，然后在 <span class="hljs-variable">Targets</span> 下选择您的应用程序目标。<span class="hljs-number">3.</span>选择 <span class="hljs-variable">Signing</span> <span class="hljs-operator">&amp;</span> <span class="hljs-variable">Capabilities</span> 标签页。<span class="hljs-number">4.</span>单击 <span class="hljs-operator">+</span><span class="hljs-variable">Capability</span> 按钮以添加新功能。<span class="hljs-number">5.</span>搜索 <span class="hljs-variable">App</span> <span class="hljs-variable">Sandbox</span> 并选择它。<span class="hljs-number">6.</span>启用 <span class="hljs-variable">App</span> <span class="hljs-variable">Sandbox</span> 功能后，您将看到一个名为 <span class="hljs-variable">App</span> <span class="hljs-variable">Sandbox</span> 的菜单。单击它以展开菜单。<span class="hljs-number">7.</span>您将看到一个名为 <span class="hljs-variable">Entitlements</span> 的选项。启用此选项后，将自动创建一个名为 <span class="hljs-variable">YourApp</span><span class="hljs-operator">.</span><span class="hljs-variable">entitlements</span> 的文件。这个<span class="hljs-variable">entitlements</span>文件是自动创建的，但如果您需要自己创建<span class="hljs-variable">entitlements</span>文件，可以按照以下步骤进行：在<span class="hljs-variable">Xcode</span>中选择您的项目文件。<span class="hljs-number">1.</span>单击 <span class="hljs-built_in">File</span> <span class="hljs-operator">&gt;</span> <span class="hljs-variable">New</span> <span class="hljs-operator">&gt;</span> <span class="hljs-built_in">File</span>…<span class="hljs-number">2.</span>选择 <span class="hljs-variable">iOS</span> <span class="hljs-operator">&gt;</span> <span class="hljs-variable">Resource</span> <span class="hljs-operator">&gt;</span> <span class="hljs-built_in">Property</span> <span class="hljs-built_in">List</span><span class="hljs-number">3.</span>单击 <span class="hljs-built_in">Next</span>。<span class="hljs-number">4.</span>输入文件名并选择要保存的位置。<span class="hljs-number">5.</span>单击 <span class="hljs-variable">Create</span> 以创建 <span class="hljs-variable">entitlements</span> 文件。创建了 <span class="hljs-variable">entitlements</span> 文件后，您可以在 <span class="hljs-variable">Signing</span> <span class="hljs-operator">&amp;</span> <span class="hljs-variable">Capabilities</span> 标签页中将其添加到您的应用程序目标中。记得确保 <span class="hljs-variable">entitlements</span> 文件中包含所需的权限和功能，否则您的应用程序可能无法正常工作。</code></pre></div><p>按照教程中说的进行配置后，报错。</p><div class="code-wrapper"><pre><code class="hljs livecodeserver">The <span class="hljs-built_in">file</span> <span class="hljs-string">&quot;/Users/bakako/Library/Mobile Documents/com~apple~CloudDocs/Developer/RunningDataRecording/RunningDataRecording.entitlements&quot;</span> could <span class="hljs-keyword">not</span> be opened.Verify <span class="hljs-keyword">the</span> <span class="hljs-built_in">value</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> CODE_SIGN_ENTITLEMENTS build setting <span class="hljs-keyword">for</span> target <span class="hljs-string">&quot;RunningDataRecording&quot;</span> is correct <span class="hljs-keyword">and</span> that <span class="hljs-keyword">the</span> <span class="hljs-built_in">file</span> exists <span class="hljs-keyword">on</span> <span class="hljs-title">disk</span>.</code></pre></div><p>发现是在注册 App ID 选择 Capabilities 时没有勾选 SensorKit。</p><p>但找了半天也没有发现 SensorKit，然后在 <a href="https://www.researchandcare.org/resources/accessing-sensorkit-data/">Accessing SensorKit Data</a> 中知道，必须向苹果申请，且苹果通过后才会给你开通 SensorKit。</p><p>项目夭折！！！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>文章</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>心率</tag>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>自编码 Autoencoder</title>
+    <link href="/2024/03/28/%E8%87%AA%E7%BC%96%E7%A0%81-Autoencoder/"/>
+    <url>/2024/03/28/%E8%87%AA%E7%BC%96%E7%A0%81-Autoencoder/</url>
+    
+    <content type="html"><![CDATA[<p>可参考：</p><ol><li><a href="https://yulizi123.github.io/tutorials/machine-learning/torch/4-04-autoencoder/">AutoEncoder (自编码&#x2F;非监督学习)</a></li><li><a href="https://yulizi123.github.io/tutorials/machine-learning/ML-intro/2-5-autoencoder/">自编码 (Autoencoder)</a></li></ol><p>其中，有提到：</p><blockquote><p>到了真正使用自编码的时候，通常只会用到自编码前半部分。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>深度学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>时间序列数据集</title>
+    <link href="/2024/03/28/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E9%9B%86/"/>
+    <url>/2024/03/28/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E9%9B%86/</url>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.timeseriesclassification.com/dataset.php">Time Series Classification</a></p><p><a href="https://www.cs.ucr.edu/~eamonn/time_series_data_2018/">UCR Time Series Classification Archive</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>深度学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python 统计数组不重复值的个数</title>
+    <link href="/2024/03/28/Python-%E7%BB%9F%E8%AE%A1%E6%95%B0%E7%BB%84%E4%B8%8D%E9%87%8D%E5%A4%8D%E5%80%BC%E7%9A%84%E4%B8%AA%E6%95%B0/"/>
+    <url>/2024/03/28/Python-%E7%BB%9F%E8%AE%A1%E6%95%B0%E7%BB%84%E4%B8%8D%E9%87%8D%E5%A4%8D%E5%80%BC%E7%9A%84%E4%B8%AA%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs python">my_list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]unique_count = <span class="hljs-built_in">len</span>(<span class="hljs-built_in">set</span>(my_list))<span class="hljs-built_in">print</span>(unique_count)</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Code</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>DTC 模型时间序列聚类</title>
+    <link href="/2024/03/21/DTC-%E6%A8%A1%E5%9E%8B%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E8%81%9A%E7%B1%BB/"/>
+    <url>/2024/03/21/DTC-%E6%A8%A1%E5%9E%8B%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E8%81%9A%E7%B1%BB/</url>
+    
+    <content type="html"><![CDATA[<h2 id="DeepTemporalClustering"><a href="#DeepTemporalClustering" class="headerlink" title="DeepTemporalClustering"></a>DeepTemporalClustering</h2><p>项目地址：<a href="https://github.com/FlorentF9/DeepTemporalClustering">DeepTemporalClustering</a></p><h3 id="默认运行"><a href="#默认运行" class="headerlink" title="默认运行"></a>默认运行</h3><h4 id="报错-1"><a href="#报错-1" class="headerlink" title="报错 1"></a>报错 1</h4><div class="code-wrapper"><pre><code class="hljs sml"><span class="hljs-symbol">&#x27;kullback</span> leibler divergence&#x27; from <span class="hljs-symbol">&#x27;keras</span>.losses&#x27;</code></pre></div><p>求 KL 散度，解决办法：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">from</span> keras.losses <span class="hljs-keyword">import</span> kullback_leibler_divergence<span class="hljs-comment"># 改为</span><span class="hljs-keyword">from</span> keras.losses <span class="hljs-keyword">import</span> kl_divergence</code></pre></div><h4 id="报错-2"><a href="#报错-2" class="headerlink" title="报错 2"></a>报错 2</h4><div class="code-wrapper"><pre><code class="hljs ceylon">No <span class="hljs-keyword">module</span> named <span class="hljs-string">&#x27;keras.engine&#x27;</span></code></pre></div><p>解决办法：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">from</span> keras.engine.topology <span class="hljs-keyword">import</span> Layer, InputSpec<span class="hljs-comment"># 改为</span><span class="hljs-keyword">from</span> keras.layers <span class="hljs-keyword">import</span> Layer<span class="hljs-keyword">from</span> keras.layers <span class="hljs-keyword">import</span> InputSpec</code></pre></div><h4 id="报错-3"><a href="#报错-3" class="headerlink" title="报错 3"></a>报错 3</h4><div class="code-wrapper"><pre><code class="hljs pgsql">cannot <span class="hljs-keyword">import</span> <span class="hljs-type">name</span> <span class="hljs-string">&#x27;CuDNNLSTM&#x27;</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;keras.layers&#x27;</span></code></pre></div><p>解决办法：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">from</span> keras.layers <span class="hljs-keyword">import</span> CuDNNLSTM<span class="hljs-comment"># 改为</span><span class="hljs-keyword">from</span> keras.layers <span class="hljs-keyword">import</span> LSTM<span class="hljs-comment"># 上面是需要 CUDA 环境</span></code></pre></div><p>而且参考：<a href="https://github.com/FlorentF9/DeepTemporalClustering/issues/15">CuDNNLSTM not found</a></p><h4 id="报错-4"><a href="#报错-4" class="headerlink" title="报错 4"></a>报错 4</h4><div class="code-wrapper"><pre><code class="hljs autohotkey">The filename must end in `.weights.h5`.</code></pre></div><p>解决办法：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-comment"># self.model.save_weights(save_dir + &#x27;/DTC_model_&#x27; + str(epoch) + &#x27;.h5&#x27;)</span>self.model.save_weights(save_dir + <span class="hljs-string">&#x27;/DTC_model_&#x27;</span> + <span class="hljs-built_in">str</span>(epoch) + <span class="hljs-string">&#x27;.weights.h5&#x27;</span>)</code></pre></div><h4 id="报错-5"><a href="#报错-5" class="headerlink" title="报错 5"></a>报错 5</h4><div class="code-wrapper"><pre><code class="hljs nginx"><span class="hljs-attribute">module</span> <span class="hljs-string">&#x27;keras.backend&#x27;</span> has <span class="hljs-literal">no</span> attribute <span class="hljs-string">&#x27;sum&#x27;</span></code></pre></div><p>解决办法：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> keras.backend <span class="hljs-keyword">as</span> K <span class="hljs-comment"># or from keras import backend as K</span><span class="hljs-comment"># 改为</span><span class="hljs-keyword">import</span> keras.src.legacy.backend <span class="hljs-keyword">as</span> K</code></pre></div><p>后端函数的路径修改了</p><h4 id="报错-6"><a href="#报错-6" class="headerlink" title="报错 6"></a>报错 6</h4><div class="code-wrapper"><pre><code class="hljs ceylon">TypeError: <span class="hljs-string">&#x27;float&#x27;</span> <span class="hljs-keyword">object</span> <span class="hljs-keyword">is</span> not subscriptable</code></pre></div><p>如果你在一个不可索引的浮动变量上使用方括号符号进行索引或切片，Python 会引发 <code>TypeError: &#39;float&#39; object is not subscriptable</code> </p><p>问题的原因在于 :</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">if</span> self.heatmap:loss = self.model.evaluate(X_train, [X_train, p, p], batch_size=batch_size, verbose=<span class="hljs-literal">False</span>)<span class="hljs-keyword">else</span>:loss = self.model.evaluate(X_train, [X_train, p], batch_size=batch_size, verbose=<span class="hljs-literal">False</span>)</code></pre></div><p><code>evaluate</code> 返回的应该是一个数组。只有这样在才能取到值：</p><div class="code-wrapper"><pre><code class="hljs python">logdict[<span class="hljs-string">&#x27;L&#x27;</span>] = loss[<span class="hljs-number">0</span>]logdict[<span class="hljs-string">&#x27;Lr&#x27;</span>] = loss[<span class="hljs-number">1</span>]logdict[<span class="hljs-string">&#x27;Lc&#x27;</span>] = loss[<span class="hljs-number">2</span>]</code></pre></div><p>通过 <code>metrics_names</code> 查看也能知道只返回了一个值，参考</p><ol><li><a href="https://www.jianshu.com/p/5da582d23391">Keras中的model.evaluate()返回了什么值</a></li><li><a href="https://www.volcengine.com/theme/8358706-D-7-1">当尝试从Keras神经网络的mode.evaluate中返回多个指标的值时出现错误。</a></li><li><a href="https://geek-docs.com/python/python-ask-answer/195_python_what_values_are_returned_from_modelevaluate_in_keras.html">Python Keras中model.evaluate()返回了哪些值</a></li><li><a href="https://keras-zh.readthedocs.io/models/sequential/">Sequential 模型 API</a></li></ol><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(self.model.metrics_names)<span class="hljs-comment"># &gt;&gt; [&#x27;loss&#x27;]</span></code></pre></div><p>目前已知：</p><ol><li><code>print(self.model.metrics_names)</code> 可以打印 loss 的标签；</li><li><code>model.evaluate</code> 具体返回多少个值是不确定的，如果在 complie 的时候没有指定 metrics 的话，默认只有 loss 一个返回值。</li></ol><p>现在看 model 的 complie 代码：</p><div class="code-wrapper"><pre><code class="hljs python">self.model.<span class="hljs-built_in">compile</span>(loss=[<span class="hljs-string">&#x27;mse&#x27;</span>, <span class="hljs-string">&#x27;kld&#x27;</span>],<span class="hljs-comment"># kld：KL散度， mse：MSE 均方误差</span>                   loss_weights=[<span class="hljs-number">1.0</span>, gamma],                   optimizer=optimizer)</code></pre></div><p>这里没有指定 metrics 但是指定了两个 loss。</p><p>从 <a href="https://www.rvmcu.com/column-topic-id-1677.html">keras常用的损失函数Losses与评价函数Metrics</a> 中可以知道：</p><div class="code-wrapper"><pre><code class="hljs nginx"><span class="hljs-attribute">mse</span> 为 MSE 均方误差kld 为 KL 散度</code></pre></div><p>另外 loss 也是支持 [loss1, loss2, loss3] 的这种格式，参考：</p><ol><li><a href="https://juejin.cn/s/keras%E5%A4%9A%E4%B8%AAloss%E5%90%8C%E6%97%B6%E4%BC%98%E5%8C%96">keras多个loss同时优化</a></li><li><a href="https://mikito.mythsman.com/post/5da44e775ed28235d7573581/">tf.keras多输出和自定义loss</a></li><li><a href="https://blog.csdn.net/Fwuyi/article/details/125166195">keras自定义loss</a></li></ol><p>但还是不知道为何只返回了一个值……</p><p>临时解决方案：</p><div class="code-wrapper"><pre><code class="hljs python">self.model.<span class="hljs-built_in">compile</span>(loss=[<span class="hljs-string">&#x27;mse&#x27;</span>, <span class="hljs-string">&#x27;kld&#x27;</span>],<span class="hljs-comment"># kld：KL散度， mse：MSE 均方误差</span>                   metrics=[<span class="hljs-string">&#x27;mse&#x27;</span>],                   loss_weights=[<span class="hljs-number">1.0</span>, gamma],                   optimizer=optimizer)</code></pre></div><p>这样的话，就不会报错了……</p><h4 id="报错-7"><a href="#报错-7" class="headerlink" title="报错 7"></a>报错 7</h4><p>更换数据集后报错：</p><div class="code-wrapper"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">assert</span><span class="hljs-params">(timesteps % pool_size == <span class="hljs-number">0</span>)</span></span></code></pre></div><p>解决办法：</p><p>调整 <code>pool_size</code> 保证时间戳可以整除池化</p><h4 id="报错-8"><a href="#报错-8" class="headerlink" title="报错 8"></a>报错 8</h4><p>开启 <code>heatmap</code> 报错：</p><div class="code-wrapper"><pre><code class="hljs pgsql">ValueError: The <span class="hljs-type">name</span> &quot;reshape&quot; <span class="hljs-keyword">is</span> used <span class="hljs-number">2</span> times <span class="hljs-keyword">in</span> the model. <span class="hljs-keyword">All</span> operation names should be <span class="hljs-keyword">unique</span>.</code></pre></div><h3 id="使用-heatmap-运行"><a href="#使用-heatmap-运行" class="headerlink" title="使用 heatmap 运行"></a>使用 heatmap 运行</h3><h4 id="报错-9"><a href="#报错-9" class="headerlink" title="报错 9"></a>报错 9</h4><div class="code-wrapper"><pre><code class="hljs pgsql">ValueError: The <span class="hljs-type">name</span> &quot;reshape&quot; <span class="hljs-keyword">is</span> used <span class="hljs-number">2</span> times <span class="hljs-keyword">in</span> the model. <span class="hljs-keyword">All</span> layer names should be <span class="hljs-keyword">unique</span>.</code></pre></div><p>找到这块代码：</p><div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">if</span> self.heatmap:    n_heatmap_filters = self.n_clusters  <span class="hljs-comment"># one heatmap (class activation map) per cluster</span>    encoded = self.encoder.output<span class="hljs-comment"># heatmap_layer = Reshape((-1, 1, self.n_units[1]))(encoded)</span><span class="hljs-comment"># 取个名字即可</span>    heatmap_layer = Reshape((-<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, self.n_units[<span class="hljs-number">1</span>]), name=<span class="hljs-string">&#x27;1&#x27;</span>)(encoded)    heatmap_layer = UpSampling2D((self.pool_size, <span class="hljs-number">1</span>))(heatmap_layer)    heatmap_layer = Conv2DTranspose(n_heatmap_filters, (self.kernel_size, <span class="hljs-number">1</span>), padding=<span class="hljs-string">&#x27;same&#x27;</span>)(heatmap_layer)    <span class="hljs-comment"># The next one is the heatmap layer we will visualize</span>    heatmap_layer = Reshape((-<span class="hljs-number">1</span>, n_heatmap_filters), name=<span class="hljs-string">&#x27;Heatmap&#x27;</span>)(heatmap_layer)    heatmap_output_layer = GlobalAveragePooling1D()(heatmap_layer)    <span class="hljs-comment"># A dense layer must be added only if `n_heatmap_filters` is different from `n_clusters`</span>    <span class="hljs-comment"># heatmap_output_layer = Dense(self.n_clusters, activation=&#x27;relu&#x27;)(heatmap_output_layer)</span>    heatmap_output_layer = Softmax()(heatmap_output_layer)  <span class="hljs-comment"># normalize activations with softmax</span></code></pre></div><h4 id="报错-10"><a href="#报错-10" class="headerlink" title="报错 10"></a>报错 10</h4><div class="code-wrapper"><pre><code class="hljs oxygene">AttributeError: <span class="hljs-keyword">module</span> <span class="hljs-string">&#x27;keras.backend&#x27;</span> <span class="hljs-keyword">has</span> no attribute <span class="hljs-string">&#x27;variable&#x27;</span></code></pre></div><p>解决办法：</p><div class="code-wrapper"><pre><code class="hljs python">self.heatmap_loss_weight = K.variable(self.initial_heatmap_loss_weight)<span class="hljs-comment"># 改为</span>self.heatmap_loss_weight = keras.src.legacy.backend.variable(self.initial_heatmap_loss_weight)</code></pre></div><p>参考报错 5</p><h4 id="报错-11"><a href="#报错-11" class="headerlink" title="报错 11"></a>报错 11</h4><div class="code-wrapper"><pre><code class="hljs oxygene">AttributeError: <span class="hljs-keyword">module</span> <span class="hljs-string">&#x27;keras.backend&#x27;</span> <span class="hljs-keyword">has</span> no attribute <span class="hljs-string">&#x27;set_value&#x27;</span></code></pre></div><p>同理</p><div class="code-wrapper"><pre><code class="hljs Python">K.set_value(self.heatmap_loss_weight, self.final_heatmap_loss_weight)<span class="hljs-comment"># 改为</span>keras.src.legacy.backend.set_value(self.heatmap_loss_weight, self.final_heatmap_loss_weight)</code></pre></div><h2 id="Deep-temporal-clustering"><a href="#Deep-temporal-clustering" class="headerlink" title="Deep-temporal-clustering"></a>Deep-temporal-clustering</h2><p>项目地址：<a href="https://github.com/HamzaG737/Deep-temporal-clustering">Deep-temporal-clustering</a></p><h3 id="默认运行-1"><a href="#默认运行-1" class="headerlink" title="默认运行"></a>默认运行</h3><div class="code-wrapper"><pre><code class="hljs stylus">python3 train<span class="hljs-selector-class">.py</span> <span class="hljs-attr">--similarity</span> <span class="hljs-string">&#x27;CID&#x27;</span> <span class="hljs-attr">--pool</span> <span class="hljs-number">7</span></code></pre></div><p>可以获得结果</p><h3 id="使用-CBF-数据集"><a href="#使用-CBF-数据集" class="headerlink" title="使用 CBF 数据集"></a>使用 CBF 数据集</h3><div class="code-wrapper"><pre><code class="hljs stylus">python3 train<span class="hljs-selector-class">.py</span> <span class="hljs-attr">--dataset_name</span> <span class="hljs-string">&#x27;CBF&#x27;</span> <span class="hljs-attr">--similarity</span> <span class="hljs-string">&#x27;CID&#x27;</span> <span class="hljs-attr">--pool</span> <span class="hljs-number">8</span></code></pre></div><h4 id="报错-1-1"><a href="#报错-1-1" class="headerlink" title="报错 1"></a>报错 1</h4><div class="code-wrapper"><pre><code class="hljs axapta">ValueError: multi_<span class="hljs-keyword">class</span> <span class="hljs-title class_">must</span> be <span class="hljs-keyword">in</span> (<span class="hljs-string">&#x27;ovo&#x27;</span>, <span class="hljs-string">&#x27;ovr&#x27;</span>)</code></pre></div><p>解决办法：</p><div class="code-wrapper"><pre><code class="hljs python">roc_auc = roc_auc_score(y_test, preds)<span class="hljs-comment"># 改为</span>roc_auc = roc_auc_score(y_test, preds, multi_class=<span class="hljs-string">&#x27;ovr&#x27;</span>)</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>深度学习</tag>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Python 的整型不会溢出</title>
     <link href="/2024/03/13/Python-%E7%9A%84%E6%95%B4%E5%9E%8B%E4%B8%8D%E4%BC%9A%E6%BA%A2%E5%87%BA/"/>
     <url>/2024/03/13/Python-%E7%9A%84%E6%95%B4%E5%9E%8B%E4%B8%8D%E4%BC%9A%E6%BA%A2%E5%87%BA/</url>
@@ -33,7 +164,7 @@
     <link href="/2024/03/12/Python-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6/"/>
     <url>/2024/03/12/Python-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6/</url>
     
-    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs python">path = <span class="hljs-string">&#x27;&#x27;</span>files = os.listdir(path)    <span class="hljs-comment"># 读取文件夹下的文件名称</span><span class="hljs-keyword">for</span> file_name <span class="hljs-keyword">in</span> files:  <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(path + <span class="hljs-string">&#x27;/&#x27;</span> + file_name, <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-keyword">as</span> file:      <span class="hljs-comment"># 相关操作</span>data = json.load(file)<span class="hljs-comment"># json</span>        data = file.readlines()<span class="hljs-comment"># txt</span></code></pre></div>]]></content>
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs python">path = <span class="hljs-string">&#x27;&#x27;</span>files = os.listdir(path)    <span class="hljs-comment"># 读取文件夹下的文件名称</span><span class="hljs-keyword">for</span> file_name <span class="hljs-keyword">in</span> files:  <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(path + <span class="hljs-string">&#x27;/&#x27;</span> + file_name, <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-keyword">as</span> file:      <span class="hljs-comment"># 相关操作</span>      data = json.load(file)<span class="hljs-comment"># json</span>      data = file.readlines()<span class="hljs-comment"># txt</span></code></pre></div>]]></content>
     
     
     <categories>
@@ -3558,7 +3689,7 @@
     <link href="/2023/04/09/%E5%B8%B8%E7%94%A8%E7%9A%84-conda-%E6%8C%87%E4%BB%A4/"/>
     <url>/2023/04/09/%E5%B8%B8%E7%94%A8%E7%9A%84-conda-%E6%8C%87%E4%BB%A4/</url>
     
-    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs cmd">conda env list查看环境conda list查看安装包conda create -n tensorflow python=<span class="hljs-number">3</span>.<span class="hljs-number">8</span>.<span class="hljs-number">5</span>创建新环境conda activate tensorflow激活conda remove -n tensorflow --all删除</code></pre></div><p>重命名。conda 其实没有重命名指令，实现重命名是通过克隆完成的，分两步：<br>1、先克隆一份旧环境，克隆过程中重新命名<br>2、删除旧环境</p><div class="code-wrapper"><pre><code class="hljs cmd"># 第一步：conda create -n pytorch --clone tensorflow# 第二步：conda remove -n tensorflow --all</code></pre></div>]]></content>
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs cmd">查看环境conda env list查看安装包conda list创建新环境conda create -n tensorflow python=<span class="hljs-number">3</span>.<span class="hljs-number">8</span>.<span class="hljs-number">5</span>激活conda activate tensorflow删除conda remove -n tensorflow --all显示指定环境的修改记录conda list -n tensorflow -r或者激活环境后conda list --revision选择想回退记录后的编号conda install --revision <span class="hljs-number">0</span>/<span class="hljs-number">1</span>/<span class="hljs-number">2</span>…关于 Python 升降级查看可选择的 Python 版本conda search --full --name pythonconda install python==version</code></pre></div><p>重命名。conda 其实没有重命名指令，实现重命名是通过克隆完成的，分两步：<br>1、先克隆一份旧环境，克隆过程中重新命名<br>2、删除旧环境</p><div class="code-wrapper"><pre><code class="hljs cmd"># 第一步：conda create -n pytorch --clone tensorflow# 第二步：conda remove -n tensorflow --all</code></pre></div>]]></content>
     
     
     <categories>
