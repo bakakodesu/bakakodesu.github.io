@@ -18,23 +18,24 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="从直接测热法到计算机视觉技术：身体活动能量消耗测量的历史与未来">
-<meta property="og:url" content="https://wonderhoi.com/2023/09/18/%E4%BB%8E%E7%9B%B4%E6%8E%A5%E6%B5%8B%E7%83%AD%E6%B3%95%E5%88%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E6%8A%80%E6%9C%AF%EF%BC%9A%E8%BA%AB%E4%BD%93%E6%B4%BB%E5%8A%A8%E8%83%BD%E9%87%8F%E6%B6%88%E8%80%97%E6%B5%8B%E9%87%8F%E7%9A%84%E5%8E%86%E5%8F%B2%E4%B8%8E%E6%9C%AA%E6%9D%A5/index.html">
+    <meta name="description" content="matplotlib可参考 matplotlib.pyplot的使用总结大全 两种示例用法 import matplotlib.pyplot as plt import pandas as pd   def plot_ACC(path):     df &#x3D; pd.read_csv(path)     print(df)     fig, axes &#x3D; plt.subplots(3, 1, figs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="matplotlib 与 pyqt 组件之间的层级关系">
+<meta property="og:url" content="https://wonderhoi.com/2024/04/08/matplotlib-%E4%B8%8E-pyqt-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="matplotlib可参考 matplotlib.pyplot的使用总结大全 两种示例用法 import matplotlib.pyplot as plt import pandas as pd   def plot_ACC(path):     df &#x3D; pd.read_csv(path)     print(df)     fig, axes &#x3D; plt.subplots(3, 1, figs">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-09-18T02:56:29.000Z">
-<meta property="article:modified_time" content="2023-09-18T02:59:07.000Z">
+<meta property="article:published_time" content="2024-04-08T03:52:26.000Z">
+<meta property="article:modified_time" content="2024-04-08T07:33:26.492Z">
 <meta property="article:author" content="刘子航">
-<meta property="article:tag" content="计算机视觉">
-<meta property="article:tag" content="运动科学">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>从直接测热法到计算机视觉技术：身体活动能量消耗测量的历史与未来 - 这是一个PM的BLOG</title>
+  <title>matplotlib 与 pyqt 组件之间的层级关系 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -227,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="从直接测热法到计算机视觉技术：身体活动能量消耗测量的历史与未来"></span>
+            <span id="subtitle" data-typed-text="matplotlib 与 pyqt 组件之间的层级关系"></span>
           
         </div>
 
@@ -238,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-18 10:56" pubdate>
-          2023年9月18日 上午
+        <time datetime="2024-04-08 11:52" pubdate>
+          2024年4月8日 中午
         </time>
       </span>
     
@@ -250,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          1.8k 字
         
       </span>
     
@@ -289,19 +290,83 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">从直接测热法到计算机视觉技术：身体活动能量消耗测量的历史与未来</h1>
+            <h1 id="seo-header">matplotlib 与 pyqt 组件之间的层级关系</h1>
             
             
               <div class="markdown-body">
                 
-                
-
-	<div class="row">
-    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/70662169-FC75-4DFF-BBC6-3B0E467408E6_2/TQUBVIcs5gVIVD12yil0gZKhlHzJQIc6yJJroB6LvY0z/70662169-FC75-4DFF-BBC6-3B0E467408E6_2.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
+                <h3 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h3><p>可参考 <a target="_blank" rel="noopener" href="https://www.zhihu.com/tardis/zm/art/139052035?source_id=1003">matplotlib.pyplot的使用总结大全</a></p>
+<p>两种示例用法</p>
+<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
 
 
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">plot_ACC</span>(<span class="hljs-params">path</span>):
+    df = pd.read_csv(path)
+    <span class="hljs-built_in">print</span>(df)
+    fig, axes = plt.subplots(<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, figsize=(<span class="hljs-number">36</span>, <span class="hljs-number">10</span>))
+
+    axes[<span class="hljs-number">0</span>].scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;X&#x27;</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;1&#x27;</span>, label=<span class="hljs-string">&#x27;X Acc&#x27;</span>)
+    axes[<span class="hljs-number">0</span>].set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)
+    axes[<span class="hljs-number">0</span>].set_ylabel(<span class="hljs-string">&#x27;g or mg&#x27;</span>)
+    axes[<span class="hljs-number">0</span>].legend(loc=<span class="hljs-number">2</span>)
+
+    axes[<span class="hljs-number">1</span>].scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;Y&#x27;</span>], c=<span class="hljs-string">&#x27;blue&#x27;</span>, marker=<span class="hljs-string">&#x27;2&#x27;</span>, label=<span class="hljs-string">&#x27;Y Acc&#x27;</span>)
+    axes[<span class="hljs-number">1</span>].set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)
+    axes[<span class="hljs-number">1</span>].set_ylabel(<span class="hljs-string">&#x27;g or mg&#x27;</span>)
+    axes[<span class="hljs-number">1</span>].legend(loc=<span class="hljs-number">2</span>)
+
+    axes[<span class="hljs-number">2</span>].scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;Z&#x27;</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;3&#x27;</span>, label=<span class="hljs-string">&#x27;Z Acc&#x27;</span>)
+    axes[<span class="hljs-number">2</span>].set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)
+    axes[<span class="hljs-number">2</span>].set_ylabel(<span class="hljs-string">&#x27;g or mg&#x27;</span>)
+    axes[<span class="hljs-number">2</span>].legend(loc=<span class="hljs-number">2</span>)
+
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">plot_ECG</span>(<span class="hljs-params">path</span>):
+    df = pd.read_csv(path)
+    <span class="hljs-built_in">print</span>(df)
+    fig = plt.figure(figsize=(<span class="hljs-number">36</span>, <span class="hljs-number">10</span>))
+    ax = fig.add_subplot()
+    ax.scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;ECG&#x27;</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;1&#x27;</span>, label=<span class="hljs-string">&#x27;ECG&#x27;</span>)
+    ax.set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)
+    ax.set_ylabel(<span class="hljs-string">&#x27;mV&#x27;</span>)
+    ax.legend(loc=<span class="hljs-number">2</span>)
+
+
+iPhone_path = <span class="hljs-string">&#x27;20240128/CSV/iPhone_ACC_date.csv_CUT/9.csv&#x27;</span>
+Polar_ACC_path = <span class="hljs-string">&#x27;20240128/CSV/Polar_ACC_date.csv_CUT/9.csv&#x27;</span>
+Polar_ECG_path = <span class="hljs-string">&#x27;20240128/CSV/Polar_ECG_date.csv_CUT/9.csv&#x27;</span>
+
+plot_ECG(Polar_ECG_path)
+plot_ACC(iPhone_path)
+plot_ACC(Polar_ACC_path)
+
+plt.show()</code></pre></div>
+
+<p>关于 <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43412878/article/details/109561021">legend()中loc的用法</a></p>
+<div class="code-wrapper"><pre><code class="hljs excel">legend 主要用来设置图例相关的内容，其中 loc 用来表示图例的具体位置，他的可选的参数可以是字符，也可以是数字，默认情况下是 <span class="hljs-number">0</span>（即 best），参数及意思如下：
+<span class="hljs-symbol">0:</span> ‘best’ （自动寻找最好的位置）
+<span class="hljs-symbol">1:</span> ‘<span class="hljs-built_in">upper</span> <span class="hljs-built_in">right</span>’ （右上角）
+<span class="hljs-symbol">2:</span> ‘<span class="hljs-built_in">upper</span> <span class="hljs-built_in">left</span>’ （左上角）
+<span class="hljs-symbol">3:</span> ‘<span class="hljs-built_in">lower</span> <span class="hljs-built_in">left</span>’ （左下角）
+<span class="hljs-symbol">4:</span> ‘<span class="hljs-built_in">lower</span> <span class="hljs-built_in">right</span>’ （右下角）
+<span class="hljs-symbol">5:</span> ‘<span class="hljs-built_in">right</span>’ （右边中间）
+<span class="hljs-symbol">6:</span> ‘center <span class="hljs-built_in">left</span>’ （左边中间）
+<span class="hljs-symbol">7:</span> ‘center <span class="hljs-built_in">right</span>’ （右边中间）
+<span class="hljs-symbol">8:</span> ‘<span class="hljs-built_in">lower</span> center’ （中间最下面）
+<span class="hljs-symbol">9:</span> ‘<span class="hljs-built_in">upper</span> center’ （中间最上面）
+<span class="hljs-symbol">10:</span> ‘center’ （正中心）</code></pre></div>
+
+<h3 id="PyQt"><a href="#PyQt" class="headerlink" title="PyQt"></a>PyQt</h3><p>层级结构如下：</p>
+<div class="code-wrapper"><pre><code class="hljs nestedtext">QMainWindow
+		<span class="hljs-bullet">-</span> <span class="hljs-string">setCentralWidget</span>
+		QWidget
+				<span class="hljs-bullet">-</span> <span class="hljs-string">setLayout</span>
+				QVBoxLayout
+						<span class="hljs-bullet">-</span> <span class="hljs-string">addLayout</span>
+						QHBoxLayout
+								<span class="hljs-bullet">-</span> <span class="hljs-string">addWidget</span>
+								pg.PlotWidget</code></pre></div>
 
                 
               </div>
@@ -320,7 +385,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%BF%90%E5%8A%A8%E6%96%87%E7%8C%AE/" class="category-chain-item">运动文献</a>
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
   
   
 
@@ -335,9 +400,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" class="print-no-link">#计算机视觉</a>
-      
-        <a href="/tags/%E8%BF%90%E5%8A%A8%E7%A7%91%E5%AD%A6/" class="print-no-link">#运动科学</a>
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
       
     </div>
   
@@ -349,8 +412,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>从直接测热法到计算机视觉技术：身体活动能量消耗测量的历史与未来</div>
-      <div>https://wonderhoi.com/2023/09/18/从直接测热法到计算机视觉技术：身体活动能量消耗测量的历史与未来/</div>
+      <div>matplotlib 与 pyqt 组件之间的层级关系</div>
+      <div>https://wonderhoi.com/2024/04/08/matplotlib-与-pyqt-组件之间的层级关系/</div>
     </div>
     <div class="license-meta">
       
@@ -362,7 +425,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月18日</div>
+          <div>2024年4月8日</div>
         </div>
       
       
@@ -394,18 +457,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/09/18/%E4%B9%92%E4%B9%93%E7%90%83%E7%B2%BE%E7%A1%AE%E6%97%8B%E8%BD%AC%E3%80%81%E9%80%9F%E5%BA%A6%E5%8F%8A%E8%90%BD%E7%82%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%E7%A0%94%E7%A9%B6/" title="乒乓球精确旋转、速度及落点数据的人工神经网络模型研究">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">乒乓球精确旋转、速度及落点数据的人工神经网络模型研究</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/18/%E7%94%B7%E5%AD%90%E8%B5%9B%E8%89%87240%E6%AC%A1%E5%8D%A7%E6%8B%89%E7%BB%83%E4%B9%A0%E7%9A%84%E8%83%BD%E9%87%8F%E4%BB%A3%E8%B0%A2%E7%89%B9%E5%BE%81%EF%BC%88%E8%83%BD%E9%87%8F%E4%BB%A3%E8%B0%A2%E5%8D%A0%E6%AF%94%E8%AE%A1%E7%AE%97%EF%BC%89/" title="男子赛艇240次卧拉练习的能量代谢特征（能量代谢占比计算）">
-                        <span class="hidden-mobile">男子赛艇240次卧拉练习的能量代谢特征（能量代谢占比计算）</span>
+                      <a href="/2024/04/03/%E4%BD%BF%E7%94%A8-SensorKit-%E8%8E%B7%E5%8F%96-iWatch-%E7%9A%84-PPG-%E4%BF%A1%E5%8F%B7/" title="使用 SensorKit 获取 iWatch 的 PPG 信号">
+                        <span class="hidden-mobile">使用 SensorKit 获取 iWatch 的 PPG 信号</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
