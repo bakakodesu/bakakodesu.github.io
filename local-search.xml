@@ -4,6 +4,164 @@
   
   
   <entry>
+    <title>树莓派安装 VSCode</title>
+    <link href="/2024/04/16/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85-VSCode/"/>
+    <url>/2024/04/16/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85-VSCode/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs clean">sudo apt update   #检查更新sudo apt upgrade  #进行更新sudo apt install <span class="hljs-keyword">code</span> -y  #安装VSCode</code></pre></div><p>之后在 Programming 中可以找到 VSCode</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>环境配置</category>
+      
+      <category>Raspberry Pi</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Raspberry Pi</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>清华大学 PyPI 镜像</title>
+    <link href="/2024/04/16/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6-PyPI-%E9%95%9C%E5%83%8F/"/>
+    <url>/2024/04/16/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6-PyPI-%E9%95%9C%E5%83%8F/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/">https://mirrors.tuna.tsinghua.edu.cn/help/pypi/</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Linux 里如何退出 nano 编辑器</title>
+    <link href="/2024/04/15/Linux-%E9%87%8C%E5%A6%82%E4%BD%95%E9%80%80%E5%87%BA-nano-%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    <url>/2024/04/15/Linux-%E9%87%8C%E5%A6%82%E4%BD%95%E9%80%80%E5%87%BA-nano-%E7%BC%96%E8%BE%91%E5%99%A8/</url>
+    
+    <content type="html"><![CDATA[<ol><li><p>如果你要保存所做的修改，按下 Ctrl+O</p></li><li><p>想要退出，按下 Ctrl+X</p><ol><li>如果你退出前没有保存所做的修改，它会提示你是否要保存；如果不要，请按N，反之，则按Y；然后它会让你确认要保存的文件名，确认或修改后按 Enter 即可</li></ol></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>树莓派安装 Conda</title>
+    <link href="/2024/04/15/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85-Conda/"/>
+    <url>/2024/04/15/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85-Conda/</url>
+    
+    <content type="html"><![CDATA[<h3 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h3><p>安装 Conda 的流程按照 <a href="https://blog.csdn.net/qq_45266796/article/details/115128171">树莓派学习（二） 安装anaconda</a> 进行即可。</p><h3 id="更新配置"><a href="#更新配置" class="headerlink" title="更新配置"></a>更新配置</h3><p>在安装完成输入指令 <code>conda list</code> 提示</p><div class="code-wrapper"><pre><code class="hljs avrasm"><span class="hljs-symbol">bash:</span> conda: command not found</code></pre></div><p>解决方案参考 <a href="https://blog.csdn.net/weixin_39589455/article/details/128620393">树莓派上如何安装anaconda&#x2F;miniconda环境配置</a> 中提到的添加 <code>.bashrc</code> 配置。</p><p>里面用到的是 vim，但是我参考了这篇文章 <a href="https://blog.csdn.net/aizsa111/article/details/134225047">树莓派3b | Raspberry Pi OS系统 | 安装conda环境、pytorch及opencv</a>，而这里面用到的是 nano 编辑器。</p><p>输入</p><div class="code-wrapper"><pre><code class="hljs bash">sudo nano ~/.bashrc</code></pre></div><p>然后在末尾加入</p><div class="code-wrapper"><pre><code class="hljs routeros"><span class="hljs-built_in">export</span> <span class="hljs-attribute">PATH</span>=<span class="hljs-string">&quot;/home/pi/miniconda3/bin:<span class="hljs-variable">$PATH</span>&quot;</span>我写入的是这个<span class="hljs-built_in">export</span> <span class="hljs-attribute">PATH</span>=<span class="hljs-string">&quot;/home/pi/miniconda3/bin:&quot;</span><span class="hljs-variable">$PATH</span>但也有说这个的</code></pre></div><p>保存，然后更新配置即可</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> ~/.bashrc</code></pre></div><h3 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h3><p>在创建环境时，报错</p><div class="code-wrapper"><pre><code class="hljs pgsql">AttributeError:<span class="hljs-string">&#x27;SSLError&#x27;</span> <span class="hljs-keyword">object</span> has <span class="hljs-keyword">no</span> <span class="hljs-keyword">attribute</span> <span class="hljs-string">&#x27;message&#x27;</span></code></pre></div><p>解决办法，关闭 SSL 验证：</p><div class="code-wrapper"><pre><code class="hljs routeros">conda<span class="hljs-built_in"> config </span>--<span class="hljs-built_in">set</span> ssl_verify <span class="hljs-literal">false</span></code></pre></div><p>参考：</p><ol><li><a href="https://blog.csdn.net/weixin_39589455/article/details/128620393">树莓派上如何安装anaconda&#x2F;miniconda环境配置</a></li><li><a href="https://github.com/conda/conda/issues/11739">AttributeError: ‘SSLError’ object has no attribute ‘message’</a></li></ol><p>此后会继续报错：</p><div class="code-wrapper"><pre><code class="hljs subunit"><span class="hljs-keyword">Error: </span>No packages found in current linux-armv7l channels matching: python ==3.9</code></pre></div><p>根据 <a href="https://blog.csdn.net/weixin_39589455/article/details/128620393">树莓派上如何安装anaconda&#x2F;miniconda环境配置</a> 中提到的，输入</p><div class="code-wrapper"><pre><code class="hljs routeros">conda<span class="hljs-built_in"> config </span>--<span class="hljs-built_in">add</span> channels rpi</code></pre></div><p>但是无效。</p><p>从 <a href="https://blog.csdn.net/weixin_44596902/article/details/122512641">树莓派miniconda 升级 python 版本</a> 得知，miniconda 只支持 3.6 版本的 python。</p><p>自此所有问题已经得到解决。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>环境配置</category>
+      
+      <category>Raspberry Pi</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Raspberry Pi</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>文丘里喷嘴通过差压测量流量</title>
+    <link href="/2024/04/11/%E6%96%87%E4%B8%98%E9%87%8C%E5%96%B7%E5%98%B4%E9%80%9A%E8%BF%87%E5%B7%AE%E5%8E%8B%E6%B5%8B%E9%87%8F%E6%B5%81%E9%87%8F/"/>
+    <url>/2024/04/11/%E6%96%87%E4%B8%98%E9%87%8C%E5%96%B7%E5%98%B4%E9%80%9A%E8%BF%87%E5%B7%AE%E5%8E%8B%E6%B5%8B%E9%87%8F%E6%B5%81%E9%87%8F/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1JV411m7gx/?spm_id_from=333.337.search-card.all.click&vd_source=e6f379136d38211008ce7d13802d4571">差压流量测量原理（孔板-喷嘴-文丘里管）</a></p><p>原视频：</p><p><a href="https://www.youtube.com/watch?v=oUd4WxjoHKY">The Differential Pressure Flow Measuring Principle (Orifice-Nozzle-Venturi)</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>运动科学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>DIY 呼吸代谢监测系统</title>
+    <link href="/2024/04/09/DIY-%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B%E7%B3%BB%E7%BB%9F/"/>
+    <url>/2024/04/09/DIY-%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B%E7%B3%BB%E7%BB%9F/</url>
+    
+    <content type="html"><![CDATA[<p> <a href="https://www.instructables.com/Accurate-VO2-Max-for-Zwift-and-Strava/">Accurate VO2 Max for Zwift and Strava</a></p><p> <a href="https://www.instructables.com/Real-VO2Max-Measure-Your-Athletic-Potential/">Real VO2Max–Measure Your Athletic Potential</a></p><p><a href="https://www.instructables.com/3D-Printed-Snorkel/">3D Printed Snorkel</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Arduino</tag>
+      
+      <tag>运动科学</tag>
+      
+      <tag>CEPT</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>matplotlib 与 pyqt 组件之间的层级关系</title>
     <link href="/2024/04/08/matplotlib-%E4%B8%8E-pyqt-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/"/>
     <url>/2024/04/08/matplotlib-%E4%B8%8E-pyqt-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/</url>
@@ -727,9 +885,9 @@
       
       <tag>心率</tag>
       
-      <tag>传感器</tag>
-      
       <tag>Swift</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -1927,9 +2085,9 @@
     
     <tags>
       
-      <tag>计算机视觉</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>计算机视觉</tag>
       
     </tags>
     
@@ -2397,9 +2555,9 @@
     
     <tags>
       
-      <tag>计算机视觉</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>计算机视觉</tag>
       
       <tag>Python</tag>
       
@@ -3186,9 +3344,9 @@
     
     <tags>
       
-      <tag>计算机视觉</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>计算机视觉</tag>
       
       <tag>Python</tag>
       
@@ -3745,7 +3903,7 @@
     <link href="/2023/04/09/%E5%B8%B8%E7%94%A8%E7%9A%84-conda-%E6%8C%87%E4%BB%A4/"/>
     <url>/2023/04/09/%E5%B8%B8%E7%94%A8%E7%9A%84-conda-%E6%8C%87%E4%BB%A4/</url>
     
-    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs cmd">查看环境conda env list查看安装包conda list创建新环境conda create -n tensorflow python=<span class="hljs-number">3</span>.<span class="hljs-number">8</span>.<span class="hljs-number">5</span>激活conda activate tensorflow删除conda remove -n tensorflow --all显示指定环境的修改记录conda list -n tensorflow -r或者激活环境后conda list --revision选择想回退记录后的编号conda install --revision <span class="hljs-number">0</span>/<span class="hljs-number">1</span>/<span class="hljs-number">2</span>…关于 Python 升降级查看可选择的 Python 版本conda search --full --name pythonconda install python==version</code></pre></div><p>重命名。conda 其实没有重命名指令，实现重命名是通过克隆完成的，分两步：<br>1、先克隆一份旧环境，克隆过程中重新命名<br>2、删除旧环境</p><div class="code-wrapper"><pre><code class="hljs cmd"># 第一步：conda create -n pytorch --clone tensorflow# 第二步：conda remove -n tensorflow --all</code></pre></div>]]></content>
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="hljs cmd">查看环境conda env list查看安装包conda list创建新环境conda create -n tensorflow python=<span class="hljs-number">3</span>.<span class="hljs-number">8</span>.<span class="hljs-number">5</span>激活conda activate tensorflow删除conda remove -n tensorflow --all显示指定环境的修改记录conda list -n tensorflow -r或者激活环境后conda list --revision选择想回退记录后的编号conda install --revision <span class="hljs-number">0</span>/<span class="hljs-number">1</span>/<span class="hljs-number">2</span>…关于 Python 升降级查看可选择的 Python 版本conda search --full --name pythonconda install python==version</code></pre></div><p>重命名。conda 其实没有重命名指令，实现重命名是通过克隆完成的，分两步：<br>1、先克隆一份旧环境，克隆过程中重新命名<br>2、删除旧环境</p><div class="code-wrapper"><pre><code class="hljs cmd"># 第一步：conda create -n pytorch --clone tensorflow# 第二步：conda remove -n tensorflow --all</code></pre></div><p>base 环境也能删除，回退</p><ol><li><a href="https://blog.csdn.net/m0_46114594/article/details/110696046">如何删除、关闭anaconda的base环境</a></li><li><a href="https://blog.csdn.net/m0_46825740/article/details/120932098">conda篇—base环境重置</a></li></ol>]]></content>
     
     
     <categories>
