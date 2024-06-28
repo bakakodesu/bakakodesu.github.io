@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>PC上屏蔽知乎视频</title>
+    <link href="/2024/06/18/PC%E4%B8%8A%E5%B1%8F%E8%94%BD%E7%9F%A5%E4%B9%8E%E8%A7%86%E9%A2%91/"/>
+    <url>/2024/06/18/PC%E4%B8%8A%E5%B1%8F%E8%94%BD%E7%9F%A5%E4%B9%8E%E8%A7%86%E9%A2%91/</url>
+    
+    <content type="html"><![CDATA[<p>用油猴脚本 <a href="https://greasyfork.org/zh-CN/scripts/419081-%E7%9F%A5%E4%B9%8E%E5%A2%9E%E5%BC%BA">知乎增强</a> 即可。AdBlock 什么的都不靠谱。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>合集</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【转载】關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！</title>
     <link href="/2024/06/17/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E9%97%9C%E5%8D%A1%E8%A8%AD%E8%A8%88%E7%9A%84%E4%BA%94%E5%A4%A7%E5%BF%83%E6%B3%95%EF%BC%8D%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9A%E9%81%B8%E6%93%87%E3%80%82%E9%AB%94%E9%A9%97%E4%B8%8D%E5%8F%AA%E6%98%AFYES-NO%EF%BC%8C%E8%80%8C%E6%98%AF%E6%83%B3%E8%A6%81%E6%9B%B4%E5%A4%9A%EF%BC%81/"/>
     <url>/2024/06/17/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E9%97%9C%E5%8D%A1%E8%A8%AD%E8%A8%88%E7%9A%84%E4%BA%94%E5%A4%A7%E5%BF%83%E6%B3%95%EF%BC%8D%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9A%E9%81%B8%E6%93%87%E3%80%82%E9%AB%94%E9%A9%97%E4%B8%8D%E5%8F%AA%E6%98%AFYES-NO%EF%BC%8C%E8%80%8C%E6%98%AF%E6%83%B3%E8%A6%81%E6%9B%B4%E5%A4%9A%EF%BC%81/</url>
@@ -230,9 +255,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>运动科学</tag>
-      
       <tag>CEPT</tag>
+      
+      <tag>运动科学</tag>
       
       <tag>合集</tag>
       
@@ -284,9 +309,9 @@
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>Swift</tag>
+      
+      <tag>心率</tag>
       
     </tags>
     
@@ -311,9 +336,9 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>合集</tag>
+      
+      <tag>深度学习</tag>
       
     </tags>
     
@@ -338,9 +363,9 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>合集</tag>
+      
+      <tag>深度学习</tag>
       
     </tags>
     
@@ -392,9 +417,9 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>Python</tag>
+      
+      <tag>深度学习</tag>
       
     </tags>
     
@@ -550,9 +575,9 @@
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>Python</tag>
+      
+      <tag>心率</tag>
       
     </tags>
     
@@ -704,11 +729,11 @@
     
     <tags>
       
+      <tag>传感器</tag>
+      
       <tag>心率</tag>
       
       <tag>IMU</tag>
-      
-      <tag>传感器</tag>
       
     </tags>
     
@@ -783,9 +808,9 @@
     
     <tags>
       
-      <tag>IMU</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>IMU</tag>
       
       <tag>iOS Development</tag>
       
@@ -968,11 +993,11 @@
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>Swift</tag>
       
       <tag>传感器</tag>
+      
+      <tag>心率</tag>
       
     </tags>
     
@@ -1136,11 +1161,11 @@
     
     <tags>
       
+      <tag>Python</tag>
+      
       <tag>深度学习</tag>
       
       <tag>心率</tag>
-      
-      <tag>Python</tag>
       
     </tags>
     
@@ -1167,11 +1192,11 @@
     
     <tags>
       
+      <tag>Python</tag>
+      
       <tag>深度学习</tag>
       
       <tag>心率</tag>
-      
-      <tag>Python</tag>
       
     </tags>
     
@@ -1198,9 +1223,9 @@
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>Python</tag>
+      
+      <tag>心率</tag>
       
     </tags>
     
@@ -1252,9 +1277,9 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>深度学习</tag>
       
       <tag>心率</tag>
       
@@ -1337,9 +1362,9 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>Python</tag>
+      
+      <tag>深度学习</tag>
       
     </tags>
     
@@ -1391,9 +1416,9 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>深度学习</tag>
       
     </tags>
     
@@ -1661,9 +1686,9 @@
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>心率</tag>
       
     </tags>
     
@@ -1690,9 +1715,9 @@
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>Python</tag>
+      
+      <tag>心率</tag>
       
     </tags>
     
@@ -1744,9 +1769,9 @@
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>Python</tag>
+      
+      <tag>心率</tag>
       
     </tags>
     
@@ -1773,9 +1798,9 @@
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>Python</tag>
+      
+      <tag>心率</tag>
       
     </tags>
     
@@ -2143,9 +2168,9 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>深度学习</tag>
       
     </tags>
     
@@ -2170,9 +2195,9 @@
     
     <tags>
       
-      <tag>运动科学</tag>
-      
       <tag>计算机视觉</tag>
+      
+      <tag>运动科学</tag>
       
     </tags>
     
@@ -2224,9 +2249,9 @@
     
     <tags>
       
-      <tag>IMU</tag>
-      
       <tag>Swift</tag>
+      
+      <tag>IMU</tag>
       
     </tags>
     
@@ -2640,11 +2665,11 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>计算机视觉</tag>
       
       <tag>Python</tag>
+      
+      <tag>深度学习</tag>
       
     </tags>
     
@@ -2933,9 +2958,9 @@
     
     <tags>
       
-      <tag>运动科学</tag>
-      
       <tag>CEPT</tag>
+      
+      <tag>运动科学</tag>
       
     </tags>
     
@@ -3099,9 +3124,9 @@
     
     <tags>
       
-      <tag>EMG</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>EMG</tag>
       
     </tags>
     
@@ -3429,11 +3454,11 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>计算机视觉</tag>
       
       <tag>Python</tag>
+      
+      <tag>深度学习</tag>
       
     </tags>
     
@@ -3651,9 +3676,9 @@
     
     <tags>
       
-      <tag>IMU</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>IMU</tag>
       
     </tags>
     
@@ -3813,9 +3838,9 @@
     
     <tags>
       
-      <tag>深度学习</tag>
-      
       <tag>Python</tag>
+      
+      <tag>深度学习</tag>
       
     </tags>
     
