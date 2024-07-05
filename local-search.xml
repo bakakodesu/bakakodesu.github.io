@@ -321,7 +321,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>部署</category>
       
     </categories>
     
@@ -1413,7 +1413,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1463,7 +1463,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1513,7 +1513,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2098,7 +2098,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2286,11 +2286,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
+      <tag>串口</tag>
       
       <tag>Mac</tag>
-      
-      <tag>串口</tag>
       
     </tags>
     
@@ -2324,7 +2322,7 @@
   
   
   <entry>
-    <title>STRETCH-SHORTENING CYCLE (SSC)</title>
+    <title>「转载」STRETCH-SHORTENING CYCLE (SSC)</title>
     <link href="/2023/09/11/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DSTRETCH-SHORTENING-CYCLE-SSC/"/>
     <url>/2023/09/11/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DSTRETCH-SHORTENING-CYCLE-SSC/</url>
     
@@ -2569,6 +2567,8 @@
       
       <tag>Hexo</tag>
       
+      <tag>Git</tag>
+      
     </tags>
     
   </entry>
@@ -2696,6 +2696,8 @@
     
     <tags>
       
+      <tag>Anaconda</tag>
+      
       <tag>VSCode</tag>
       
     </tags>
@@ -2720,8 +2722,6 @@
     
     
     <tags>
-      
-      <tag>深度学习</tag>
       
       <tag>Python</tag>
       
@@ -3007,7 +3007,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>文章</category>
       
     </categories>
     
@@ -3324,11 +3324,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
+      <tag>串口</tag>
       
       <tag>Mac</tag>
-      
-      <tag>串口</tag>
       
     </tags>
     
@@ -3378,11 +3376,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
+      <tag>串口</tag>
       
       <tag>Mac</tag>
-      
-      <tag>串口</tag>
       
     </tags>
     
@@ -3511,7 +3507,7 @@
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>PyCharm</tag>
       
     </tags>
     
@@ -3560,8 +3556,6 @@
     
     
     <tags>
-      
-      <tag>Python</tag>
       
       <tag>Anaconda</tag>
       
@@ -3614,8 +3608,6 @@
     
     
     <tags>
-      
-      <tag>Mac</tag>
       
       <tag>Xcode</tag>
       
