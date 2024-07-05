@@ -2288,9 +2288,9 @@
       
       <tag>传感器</tag>
       
-      <tag>串口</tag>
-      
       <tag>Mac</tag>
+      
+      <tag>串口</tag>
       
     </tags>
     
@@ -3326,9 +3326,9 @@
       
       <tag>传感器</tag>
       
-      <tag>串口</tag>
-      
       <tag>Mac</tag>
+      
+      <tag>串口</tag>
       
     </tags>
     
@@ -3380,9 +3380,9 @@
       
       <tag>传感器</tag>
       
-      <tag>串口</tag>
-      
       <tag>Mac</tag>
+      
+      <tag>串口</tag>
       
     </tags>
     
@@ -3432,7 +3432,7 @@
     
     <tags>
       
-      <tag>Pycharm</tag>
+      <tag>PyCharm</tag>
       
       <tag>Anaconda</tag>
       
@@ -3617,7 +3617,7 @@
       
       <tag>Mac</tag>
       
-      <tag>Xocde</tag>
+      <tag>Xcode</tag>
       
     </tags>
     
