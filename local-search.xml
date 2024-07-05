@@ -20,7 +20,7 @@
     
     <tags>
       
-      <tag>合集</tag>
+      <tag>生产力（摸鱼）</tag>
       
     </tags>
     
@@ -29,9 +29,34 @@
   
   
   <entry>
-    <title>【转载】關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！</title>
-    <link href="/2024/06/17/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E9%97%9C%E5%8D%A1%E8%A8%AD%E8%A8%88%E7%9A%84%E4%BA%94%E5%A4%A7%E5%BF%83%E6%B3%95%EF%BC%8D%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9A%E9%81%B8%E6%93%87%E3%80%82%E9%AB%94%E9%A9%97%E4%B8%8D%E5%8F%AA%E6%98%AFYES-NO%EF%BC%8C%E8%80%8C%E6%98%AF%E6%83%B3%E8%A6%81%E6%9B%B4%E5%A4%9A%EF%BC%81/"/>
-    <url>/2024/06/17/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E9%97%9C%E5%8D%A1%E8%A8%AD%E8%A8%88%E7%9A%84%E4%BA%94%E5%A4%A7%E5%BF%83%E6%B3%95%EF%BC%8D%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9A%E9%81%B8%E6%93%87%E3%80%82%E9%AB%94%E9%A9%97%E4%B8%8D%E5%8F%AA%E6%98%AFYES-NO%EF%BC%8C%E8%80%8C%E6%98%AF%E6%83%B3%E8%A6%81%E6%9B%B4%E5%A4%9A%EF%BC%81/</url>
+    <title>「转载」如何磨练关卡设计师的“手艺”？从这个方向着手试试</title>
+    <link href="/2024/06/17/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E5%A6%82%E4%BD%95%E7%A3%A8%E7%BB%83%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%9A%84%E2%80%9C%E6%89%8B%E8%89%BA%E2%80%9D%EF%BC%9F%E4%BB%8E%E8%BF%99%E4%B8%AA%E6%96%B9%E5%90%91%E7%9D%80%E6%89%8B%E8%AF%95%E8%AF%95/"/>
+    <url>/2024/06/17/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E5%A6%82%E4%BD%95%E7%A3%A8%E7%BB%83%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%9A%84%E2%80%9C%E6%89%8B%E8%89%BA%E2%80%9D%EF%BC%9F%E4%BB%8E%E8%BF%99%E4%B8%AA%E6%96%B9%E5%90%91%E7%9D%80%E6%89%8B%E8%AF%95%E8%AF%95/</url>
+    
+    <content type="html"><![CDATA[<p>原文<a href="https://mp.weixin.qq.com/s/fovOPunIXIkqRo2xBq-zSQ">如何磨练关卡设计师的“手艺”？从这个方向着手试试</a></p><blockquote><p>如果把游戏设计类⽐成做菜，那么关卡设计师就像是⼀个在原材料已经确定下的厨⼦。为什么说原材料已经确定了呢？因为游戏主要的机制（Gameplay）是已经确定的，例如：怪物的⾏为与种类、⾓⾊的3C与技能等。⽽关卡设计师需要为这些游戏机制提供⼀个载体，把它们拼凑在⼀起，就像⽤⼤⽕将⾷材与调料混合，同样的⾷材通过不同的搭配与烹调⽅式却能呈现出不同⻛味。</p></blockquote><p>想要打造⼀顿好饭，每⼀道菜之间需要有差异化，不能烤完⽜排烤⽺排；⽽是要像法式⼤餐⼀样有前菜、主菜与甜品，菜品的⼴度能让我们吃得不乏味。与此同时，菜品的深度也很重要：同样的法式⼤餐，有的每⼀道都很平庸；有的却每⼀道菜都令⼈回味⽆穷，⼝感、⾊泽、⾹味每⼀种感官体验都极具层次感！</p><p>好的关卡设计师就和⽶其林⼤厨⼀样，都需要不断地磨练⼿艺才能把⾃⼰的作品打造成艺术。深度决定了⼀个关卡玩法的天花板，这往往⽐较抽象与困难；但⼴度更侧重要素的运⽤与组合，这是⽐较容易实现与学习的，因此我们先聊聊⼴度与多样性。</p><h1 id="关卡广度"><a href="#关卡广度" class="headerlink" title="关卡广度"></a>关卡广度</h1><p>关卡⼴度其实就是说关卡设计师通过对关卡不同要素的拼配，在⼀个有限的关卡内给玩家带来丰富的体验。所以我们⾸先需要探讨⼀个关卡到底有哪些要素，然后再考虑如何对这些要素进⾏组合装配来达成创造多种体验的⽬的。</p><h1 id="关卡要素"><a href="#关卡要素" class="headerlink" title="关卡要素"></a>关卡要素</h1><p>找⼀个⻢⾥奥的关卡来举例，我们可以发现其中有：</p><ul><li><strong>⾓⾊类</strong></li></ul><p>（玩家可控制的）主⾓，其具有基本操作-移动、跳跃、下蹲等。</p><p>敌⼈-不同种类具有不同的⾏为与攻击⽅式。</p><p>NPC-例如酷霸王与公主。</p><ul><li><strong>地形与Layout</strong></li></ul><p>⻢⾥奥的基本地形为横板</p><p>但是把这些板⼦按⾼低不同排列起来，其就变成了Layout且会考验玩家技巧。</p><ul><li><strong>采集物</strong></li></ul><p>Gameplay相关-吃了变⼤或者能打枪的蘑菇。</p><p>系统相关（不会对局内游戏玩法机制造成影响，⽤于局外养成或计分）-⾦币</p><ul><li><strong>交互物</strong></li></ul><p>⽤于移动的机关-管道，可以下去发现新地⽅。</p><ul><li><strong>陷阱</strong></li></ul><p>胜利条件-单局最后升起旗帜。</p><h1 id="要素与广度"><a href="#要素与广度" class="headerlink" title="要素与广度"></a>要素与广度</h1><p>关卡的⼴度并不是⽆限地要素堆砌，⽽是在既定的体验⽬标与节奏路径下，合理搭配各类关卡要素使整个关卡流程具有差异化体验与⼀致性。</p><p>如下图所⽰，要素的多样性需要服从两个⼤框架的束缚：体验⽬标（这个关卡要给玩家什么样的感受）与关卡节奏（循序渐进）。</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/F03VdOKPlCmC56MYSKF0G6DgnBc6L1KUeaE0NKBFKgQhiaiaLuVic3TTk1OPnoUCicu9c3IicJhhzERlmkAII2vviaibA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"></p><p>⽽要素的数量也符合边际效益递减原则：要素过少意味着⼀个关卡内玩家需要进⾏重复的操作，那到关卡后期就会有疲惫与乏味感，很难推动情绪进⼊⾼潮；如果要素过多超过了玩家可以承受的范围，⼤家会觉得很沮丧因为⼈脑的内存是有限的，⼿忙脚乱且难以记忆只会让玩家觉得乱七⼋糟。</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/F03VdOKPlCmC56MYSKF0G6DgnBc6L1KUWZlicKweBNqbNrGKvSfYWM2BlUVxQ9hDcpKLDvia9IibL2SicX1Ku5nvfg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"></p><p><strong>举个例⼦</strong></p><p>假设我们要做⼀个⻢⾥奥关卡，其体验⽬标是：惊险刺激。</p><p>如果只通过不断增加敌⼈的数量，来达成这个⽬标，那⽆疑是⼀个缺乏⼴度的关卡。</p><h1 id="非游戏机制性要素"><a href="#非游戏机制性要素" class="headerlink" title="非游戏机制性要素"></a>非游戏机制性要素</h1><p>从艺术表现的⾓度出发，为了达成这个体验⽬标，我们的美术设定可以是昏暗的、如果再增加⼀些闪烁的灯光就更好了；⽽⾳乐则需要动感与快节奏的。</p><p>从叙事的⾓度出发，我们可以在关卡之前增加⼀些主题的铺垫，如公主被抓⾛或者酷霸王的挑衅来激起玩家⼼中的愤怒。</p><p>⽽在关卡结束后，可以⼀下变得舒缓，画⾯突然明亮形成鲜明对⽐，给到玩家⼀种守得云开⻅⽉明的感受。</p><h1 id="游戏机制性要素"><a href="#游戏机制性要素" class="headerlink" title="游戏机制性要素"></a>游戏机制性要素</h1><p>针对最上层的体验⽬标，我们可以把它拆解成具体的玩家挑战；⽽不同的挑战可以再进⾏更细节的⼦⽬标拆解，最终我们要⽤已有的要素来构建出这些玩家挑战。</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/F03VdOKPlCmC56MYSKF0G6DgnBc6L1KU10hib6DTI8knHOOGt2X4VkE0T8RTSISDSLcQl6ANrPPXicJibMekQu4Eg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"></p><p>我们选取“操作时机的正确性”作为⽰范，来看怎么⽤已有要素多样地构建这个挑战。</p><ul><li><strong>敌⼈是最简单的⽅式</strong></li></ul><p>部署具有较快攻击⾏为的敌⼈，使玩家需要及时躲避。</p><p>放置具有抗性的敌⼈，只有在某些时间窗⼝攻击才可造成伤害（打地⿏，但打地⿏不能造成压迫感，所以这种敌⼈还需要给玩家造成威胁才⾏）。</p><p>⽽不同类型敌⼈的组合，可以增加难度，让玩家在正确时机内需要完成特定的操作组合才能过关。</p><ul><li><strong>地形与layout</strong></li></ul><p>构建需要正确时机完成操作才可通过的地形，如⼆段跳。</p><p>类糖⾖⼈快速移动的平台，逼迫玩家做出正确躲闪操作。</p><ul><li><strong>交互物</strong></li></ul><p>⾷⼈花或陷阱，⼤家都⽿熟能祥。</p><p>咋⼀看这些直接的⼿段都很清晰明了，⼤家应该都想得到。但是，重点在于要素之间的配合。</p><ul><li><strong>地形+敌⼈</strong></li></ul><p>玩家在上坡的路上需要克服重⼒来躲避敌⼈。</p><p>玩家在敌⼈⼤潮来临前需要跳到平台上。</p><p>在这⾥，敌⼈其实是作为⼲扰项来制造紧张感，其实质威胁并不⼤。</p><ul><li><strong>地形+收集物</strong></li></ul><p>本来通过特殊地形的操作⽐较简单，但是为了获得蘑菇或⾦币，你需要做出⼀些骚操作才可以，⽽失败的代价就是坠⼊深渊。深渊也可以替换成敌⼈或者陷阱，使压迫感更强。</p><p>在这⾥，收集物是作为⼀种诱饵；在关卡流程上也可以做⼀些⽂章：刚开始让玩家承担较⼩⻛险即可获得收集物，尝到⼀些甜头，在后续更难的挑战中就容易形成思维定式来主动冒险⽆意识之间陷⼊紧张刺激的陷阱中。</p><p>与上述例⼦类似，“交互物+敌⼈”、“收集物+敌⼈”等都能形成相似的组合，⽽随着关卡进⼊后期可以进⾏更多要素种类的组合。</p><h1 id="关卡节奏与要素组合数量"><a href="#关卡节奏与要素组合数量" class="headerlink" title="关卡节奏与要素组合数量"></a>关卡节奏与要素组合数量</h1><p>众所周知，⼀个良好的关卡难度曲线去随着进程起伏上升的，只有这样才能循序渐进地把玩家情绪推动到最⾼点。对于要素组合来说，也需要遵循这个框架。</p><p>在关卡初始阶段，尽量只有单个要素威胁来制造挑战。此时主要⽬的是让玩家熟悉关卡的挑战与基本操作，热个⾝。</p><p>在玩家上⼿之后，则可以利⽤⼀些要素组合，建议是“⼲扰项+威胁项”的组合，⼲扰项要素只造成⼼理上的威胁，避免难度曲线上升过于陡峭。</p><p>⾼潮，在最终时刻需要集合多种要素来验证玩家在关卡中学到的技巧，因此可以是把之前的要素都组合起来。如果屏幕中组件过多，我们也可以把⼀些要素的设计合并到⼀个物体上，其实Boss的设计就是如此。</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/F03VdOKPlCmC56MYSKF0G6DgnBc6L1KUIrn1MKKGnD9kFyp6ljgNtCk71H1n33GYBP70KWCjBbKcMUZdYUftbw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>转载</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>游戏设计</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>「转载」關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！</title>
+    <link href="/2024/06/17/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E9%97%9C%E5%8D%A1%E8%A8%AD%E8%A8%88%E7%9A%84%E4%BA%94%E5%A4%A7%E5%BF%83%E6%B3%95%EF%BC%8D%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9A%E9%81%B8%E6%93%87%E3%80%82%E9%AB%94%E9%A9%97%E4%B8%8D%E5%8F%AA%E6%98%AFYES-NO%EF%BC%8C%E8%80%8C%E6%98%AF%E6%83%B3%E8%A6%81%E6%9B%B4%E5%A4%9A%EF%BC%81/"/>
+    <url>/2024/06/17/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E9%97%9C%E5%8D%A1%E8%A8%AD%E8%A8%88%E7%9A%84%E4%BA%94%E5%A4%A7%E5%BF%83%E6%B3%95%EF%BC%8D%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9A%E9%81%B8%E6%93%87%E3%80%82%E9%AB%94%E9%A9%97%E4%B8%8D%E5%8F%AA%E6%98%AFYES-NO%EF%BC%8C%E8%80%8C%E6%98%AF%E6%83%B3%E8%A6%81%E6%9B%B4%E5%A4%9A%EF%BC%81/</url>
     
     <content type="html"><![CDATA[<p>原文：<a href="https://lucigamedesign543.medium.com/top-5-level-design-principles-72ebcabe5739">[技術宅] 關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！</a></p><h1 id="Choices-選擇－探索非線性互動媒體的獨特魅力"><a href="#Choices-選擇－探索非線性互動媒體的獨特魅力" class="headerlink" title="Choices 選擇－探索非線性互動媒體的獨特魅力"></a>Choices 選擇－探索非線性互動媒體的獨特魅力</h1><p>「一個遊戲是由一系列的有趣決定所構成。」 — 《<em>文明帝國</em>》的創始者席德·梅爾（Sid Meier）所說的。這句話深刻地揭示了遊戲作為一種獨特媒介的核心特質，那就是透過玩家與遊戲的互動，帶來多樣且豐富的體驗。「選擇」成為了遊戲與其他媒介區別開來的關鍵要素，賦予玩家成為故事主導的能力。</p><p>這背後的深意是通過讓玩家主動作出選擇，他們不僅是在遊戲中活動的參與者，更是推動故事發展的重要力量。在遊戲設計領域，這種玩家的主導權被稱為「Agency」。在深入探討「選擇」這一概念時，我們可以將其細分為以下三點。</p><h2 id="1-機會與選項-—-Opportunity-Options"><a href="#1-機會與選項-—-Opportunity-Options" class="headerlink" title="1. 機會與選項 — Opportunity &amp; Options"></a>1. 機會與選項 — Opportunity &amp; Options</h2><p>「選項」可能很直接，就如同問玩家“你想採取哪一個行動？”例如，在《<em>Candy Crush</em>》遊戲中，可動的糖果數量就代表了玩家的選項，他們可以選擇將藍色糖果向下滑動形成特殊糖果，或者將綠色糖果向左滑動進行消除等等。</p><p>「Opportunity 機會」則需要玩家透過遊戲機制和深思熟慮來進行行動。以圖中的關卡為例，玩家需要破壞瓶子糖果並填滿橘色汽水，讓Bubble Bear能夠上升到糖果線的右上方。在這個關卡中，糖果魚是關鍵的元素，所以如果玩家選擇了上述的藍色match 4，他們將獲得一個藍色垂直射線特殊糖果，從而有機會擊中下方的黃色糖果魚。</p><p>當然，你可能會想，“這種完美的配合不可能每次都發生，有時候沒有糖果魚或特殊糖果可用！”這就是開發者透過設計來創造的「機會」。這個開放式的關卡設計，加上特定顏色的汽水和其他元素，使得創造特殊糖果的機會較高，從而提高了隱性選擇的可行性。</p><p>幾乎所有的遊戲都能提供「機會」與「選項」的概念，不論是劇情為重的《<em>Detroit: Become Human</em>》讓玩家選擇對話回應或是動作；或是開放世界的《G<em>host of Tsushima</em>》中，可以讓玩家選擇走平面入侵蒙古軍，或是登高上屋簷潛行刺殺；又或是節奏快速的roguelike《<em>Hades</em>》，提供玩家開場武器跟，或是清場後的技能等等都是選擇。讀者也可以思考你最近玩的遊戲中，哪一些是所謂的「機會與選擇」</p><p>那麼，當遊戲提供了眾多選擇時，玩家如何判斷哪些是“好”的選擇？又該如何在众多選項中做出最佳決定？這引出了我們的下一個討論點：“<strong>具意義的選擇 — Meaningful Choice</strong>”。</p><h2 id="2-具意義的選擇-—-Meaningful-Choice"><a href="#2-具意義的選擇-—-Meaningful-Choice" class="headerlink" title="2. 具意義的選擇 — Meaningful Choice"></a>2. 具意義的選擇 — Meaningful Choice</h2><p>在探索遊戲世界的過程中，「具意義的選擇」究竟是什麼？作為一種充滿互動性的非線性媒介，遊戲由一系列精彩的決定構成，而這些「選擇」即是玩家的「決定」。不過，並非所有決定都需帶有深遠的意義。有些選擇雖然有趣，但影響有限。作為開發者，我們追求的是創造那些能引發玩家情感共鳴，並對遊戲進程產生重要影響的「有意義」瞬間。那麼，如何設計出讓玩家感受到重要性並需深思熟慮的選擇呢？</p><h3 id="引導玩家「優先化選擇」"><a href="#引導玩家「優先化選擇」" class="headerlink" title="引導玩家「優先化選擇」"></a><strong>引導玩家「優先化選擇」</strong></h3><p>所謂的「優先化選擇」是指讓玩家對眼前的選項進行排序，決定哪些需優先考慮。在這一過程中，玩家會思考哪些選擇更為重要，從而決定行動的先後順序。創造一個能夠引發玩家這種思維的環境需要對遊戲玩法機制進行細緻的整合，並設計各種情境來激發玩家的判斷力。如老闆在《淺談Level Design — 關卡設計》中所提到：</p><blockquote><p><em>Level Design是一種設計讓玩家透過遊戲中階段性的環境，空間或遊玩的互動，來發揮出game mechanic（遊戲機制）的最大效益，而讓遊戲有更強的帶入感，更吸引玩家，或是使其更有趣，玩家可從中得到喜悅與樂趣。</em></p></blockquote><p>例如，在三消遊戲中，將blocker（障礙方塊）視為敵人，設計師會利用各種blocker（障礙方塊）創造預期的關卡難度和情境。每個blocker（障礙方塊）的行為模式和位置都不同，這迫使玩家思考如何有效地移除這些障礙，哪些blocker應優先處理，以及從哪個位置開始攻略關卡。</p><p>在非三消的遊戲中，開發者需理解「敵人單位的差異化（Orthogonal Unit Differentiation）」，創造出讓玩家需要進行「優先化選擇」的情境。知名的《<em>Doom</em>》便是一個例子，遊戲中不同類型的敵人具有不同的攻擊模式，玩家需在快速的遊戲節奏中判斷哪個敵人應先被攻擊。這樣的設計理念在許多遊戲中都有體現，如《<em>Uncharted</em>》系列、《<em>God of War</em>》、《<em>Hades</em>》、《<em>Diablo</em>》等。</p><h3 id="情境與機會驅動的選擇"><a href="#情境與機會驅動的選擇" class="headerlink" title="情境與機會驅動的選擇"></a><strong>情境與機會驅動的選擇</strong></h3><p>在「優先化選擇」的基礎上，玩家會根據當前的情境和潛在機會作出有意義的優先選擇。例如，在一個關卡中可能有多條路線通往終點，玩家會根據自身的利益和當前情境決定走哪條路，這可能基於對某種玩法的偏好、獲勝的概率或額外獎勵等因素。《Super Mario Bro》中的水管提供了一個選擇，玩家可以潛入其中獲取更多金幣或道具，使得這一選擇成為有意義的行為。</p><p>發者透過關卡設計提供的選擇，不僅體現在如《<em>Metal Gear</em>》和《<em>Assassin’s Creed</em>》等遊戲中帶起的潛行玩法，而且也適用於休閒遊戲。在《<em>Candy Crush</em>》系列中，選擇何時使用Color bomb 或Sprinkleshell 等道具，往往取決於當前情境和機會。例如，Sprinkleshell 的功能是在收集到足夠的青色糖果後，玩家可以點擊啟動消除關卡中指定顏色的糖果。在設計以此功能為核心的關卡時，玩家需要判斷在適當的情境下何時使用，每次選擇的時機都至關重要。</p><p>以特定關卡為例，玩家的目標是收集所有的Honey Bear。當關卡進入第二個畫面時，玩家需要擊破深藍色的糖果以破壞Honey Bear，但這些糖果的位置通常不易觸及。設計師巧妙地希望玩家利用Sprinkleshell來一次性擊破深藍色糖果，從而完成目標。因此，每一次玩家選擇使用Sprinkleshell的時機都受到情境和機會的驅動，這種選擇的重要性不言而喻。</p><h2 id="3-技巧與機運的交織-—-Skill-or-Luck-or-Both"><a href="#3-技巧與機運的交織-—-Skill-or-Luck-or-Both" class="headerlink" title="3. 技巧與機運的交織 — Skill or Luck or Both?"></a>3. 技巧與機運的交織 — Skill or Luck or Both?</h2><p>當我們談論「技巧」與「機運」時，你可能會好奇它們與選擇有何關聯。提及「機運」，我們常聯想到隨機性和運氣，這些元素與技巧形成了一種微妙的平衡。技巧是玩家可以透過練習掌握的元素，而隨機性則是無法預測的，它為遊戲增添了挑戰、驚喜和不確定性。然而，技巧在很多情況下成為了玩家戰勝關卡的關鍵，尤其對於那些技巧嫻熟的玩家來說，他們能夠利用自己的技巧來抵消不幸的影響。相反地，對於新手或技巧尚未成熟的玩家，我們也不希望他們因為不幸的隨機事件而沮喪至放棄遊戲。於是，選擇成為了克服隨機性和提升技巧的重要工具之一。</p><p>「Fielding」是開發者希望帶給玩家的一種經驗。玩家需要透過自身技巧，分析隨機事件對關卡所帶來的變化，從而作出最佳選擇。並且，從每次正面或負面的回饋中學習，理解為何某個選擇是好的或壞的，並在未來的選擇中進行調整。</p><p>在遊戲的每一個情境下，都存在「已知」與「未知」的元素。「隨機、機運、機率」這些因素增加了未知元素的比重，從而打破了玩家對遊戲一成不變的認知，帶來驚奇、挑戰和新鮮感。</p><p>在開發三消遊戲時，開發者可以透過控制關卡中的物件（例如blocker、candies、specials）的釋放機率、顏色、數量等，來為玩家創造一定的機運。目標是找到那個甜蜜點，讓不可控因素不會超過玩家對遊戲的控制。在進行關卡review時，如果發現某個關卡特別容易產生大量特殊糖果或觸發連鎖反應，我們會特別留意並進行多次測試，確保它符合預期的體驗和難度，並確保玩家仍在控制中。會議中常說的一句話是：“Don’t let the level play by itself,” 即使關卡符合我們的預期難度和體驗。</p><p>《Baldur’s Gate 3》中每個招式的施放都有一定的成功機率，Roguelite遊戲也同樣融入了隨機元素，玩家需要根據當前的關卡選擇有利於自己的技能和武器。另一個“運氣與技能”典型的例子是《Mario Kart》的問號箱，它看似隨機，但實際上會根據玩家的排名影響道具的機率，考驗玩家使用道具的技巧。</p><h2 id="結語：三者的和諧共鳴"><a href="#結語：三者的和諧共鳴" class="headerlink" title="結語：三者的和諧共鳴"></a>結語：三者的和諧共鳴</h2><p>在這篇探討中，我們發現「機會與選擇」、「具意義的選擇」以及「技巧與機運」這三點彼此之間有著深刻的相互影響。如果開發者僅提供機會與選擇，遊戲可能會顯得單調乏味，難以吸引玩家深入體驗。相對地，若只強調具意義的選擇，則可能使遊戲過於壓力山大，讓玩家對每個可能的後果感到躊躇。至於技巧與機運，若不當平衡則可能造成遊戲的不確定因素過高或技術門檻太大，阻礙玩家進入那個狀態的心流。</p><p>這三者之間存在著一種相輔相成的關係。至少根據老闆在開發三消遊戲和先前經驗中的體會，透過這三個要素的結合可以創造出引人入勝的關卡設計。這些原則或許在開發其他類型的產品時也能發揮作用，雖然其中某些可能不盡適用。如果讀者們有任何特別的想法或見解，非常歡迎在留言區進行分享與討論。</p>]]></content>
     
@@ -63,14 +88,12 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>合集</category>
       
     </categories>
     
     
     <tags>
-      
-      <tag>合集</tag>
       
       <tag>游戏设计</tag>
       
@@ -90,14 +113,12 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>合集</category>
       
     </categories>
     
     
     <tags>
-      
-      <tag>合集</tag>
       
       <tag>游戏设计</tag>
       
@@ -117,9 +138,7 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>Raspberry Pi</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -127,6 +146,8 @@
     <tags>
       
       <tag>Raspberry Pi</tag>
+      
+      <tag>VSCode</tag>
       
     </tags>
     
@@ -151,7 +172,7 @@
     
     <tags>
       
-      <tag>git</tag>
+      <tag>Git</tag>
       
     </tags>
     
@@ -194,14 +215,14 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>Raspberry Pi</category>
+      <category>文章</category>
       
     </categories>
     
     
     <tags>
+      
+      <tag>Anaconda</tag>
       
       <tag>Raspberry Pi</tag>
       
@@ -221,7 +242,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>合集</category>
       
     </categories>
     
@@ -246,20 +267,18 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>合集</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Arduino</tag>
-      
-      <tag>CEPT</tag>
-      
       <tag>运动科学</tag>
       
-      <tag>合集</tag>
+      <tag>Arduino</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
@@ -302,16 +321,16 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>心率</tag>
+      
+      <tag>Swift</tag>
       
     </tags>
     
@@ -329,14 +348,12 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>合集</category>
       
     </categories>
     
     
     <tags>
-      
-      <tag>合集</tag>
       
       <tag>深度学习</tag>
       
@@ -356,14 +373,12 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>合集</category>
       
     </categories>
     
     
     <tags>
-      
-      <tag>合集</tag>
       
       <tag>深度学习</tag>
       
@@ -383,9 +398,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -410,16 +423,16 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>部署</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -462,9 +475,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -514,9 +525,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -566,18 +575,16 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>部署</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>心率</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -627,7 +634,7 @@
     
     <tags>
       
-      <tag>git</tag>
+      <tag>Git</tag>
       
     </tags>
     
@@ -645,9 +652,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -704,7 +709,7 @@
     
     <tags>
       
-      <tag>外设</tag>
+      <tag>生产力（摸鱼）</tag>
       
     </tags>
     
@@ -729,11 +734,11 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>心率</tag>
       
       <tag>IMU</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -808,11 +813,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>IMU</tag>
       
-      <tag>iOS Development</tag>
+      <tag>传感器</tag>
       
     </tags>
     
@@ -837,7 +840,7 @@
     
     <tags>
       
-      <tag>iOS Development</tag>
+      <tag>Xcode</tag>
       
     </tags>
     
@@ -855,9 +858,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -882,9 +883,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>文章</category>
       
     </categories>
     
@@ -934,9 +933,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -993,11 +990,11 @@
     
     <tags>
       
-      <tag>Swift</tag>
+      <tag>心率</tag>
       
       <tag>传感器</tag>
       
-      <tag>心率</tag>
+      <tag>Swift</tag>
       
     </tags>
     
@@ -1015,9 +1012,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>文章</category>
       
     </categories>
     
@@ -1042,9 +1037,7 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>Xocde</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1053,7 +1046,7 @@
       
       <tag>Swift</tag>
       
-      <tag>iOS Development</tag>
+      <tag>Xcode</tag>
       
     </tags>
     
@@ -1071,9 +1064,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>合集</category>
       
     </categories>
     
@@ -1098,16 +1089,14 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>Xocde</category>
+      <category>随笔</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>iOS Development</tag>
+      <tag>Xcode</tag>
       
     </tags>
     
@@ -1125,16 +1114,14 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>Xcode</category>
+      <category>随笔</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>iOS Development</tag>
+      <tag>Xcode</tag>
       
     </tags>
     
@@ -1152,20 +1139,18 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>文章</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>深度学习</tag>
       
       <tag>心率</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -1183,20 +1168,18 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>文章</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>深度学习</tag>
       
       <tag>心率</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -1214,18 +1197,16 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>部署</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>心率</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -1234,18 +1215,16 @@
   
   
   <entry>
-    <title>SwiftUI ForEach 与 Identifiable 协议</title>
-    <link href="/2024/01/04/SwiftUI-ForEach-%E4%B8%8E-Identifiable-%E5%8D%8F%E8%AE%AE/"/>
-    <url>/2024/01/04/SwiftUI-ForEach-%E4%B8%8E-Identifiable-%E5%8D%8F%E8%AE%AE/</url>
+    <title>「转载」SwiftUI ForEach 与 Identifiable 协议</title>
+    <link href="/2024/01/04/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DSwiftUI-ForEach-%E4%B8%8E-Identifiable-%E5%8D%8F%E8%AE%AE/"/>
+    <url>/2024/01/04/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DSwiftUI-ForEach-%E4%B8%8E-Identifiable-%E5%8D%8F%E8%AE%AE/</url>
     
     <content type="html"><![CDATA[<p><a href="https://oldbird.run/swift/swiftui/ForEach.html#todoitem-%E4%B8%BA%E5%95%A5%E8%A6%81%E5%AE%9E%E7%8E%B0-identifiable">原文地址</a></p><h3 id="ForEach-的初始化方法"><a href="#ForEach-的初始化方法" class="headerlink" title="ForEach 的初始化方法"></a>ForEach 的初始化方法</h3><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">public</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">ForEach</span>&lt;<span class="hljs-title class_">Data</span>, <span class="hljs-title class_">ID</span>, <span class="hljs-title class_">Content</span>&gt; <span class="hljs-title class_">where</span> <span class="hljs-title class_">Data</span> : <span class="hljs-title class_">RandomAccessCollection</span>, <span class="hljs-title class_">ID</span> : <span class="hljs-title class_">Hashable</span> &#123;    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> data: <span class="hljs-type">Data</span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> content: (<span class="hljs-type">Data</span>.<span class="hljs-type">Element</span>) -&gt; <span class="hljs-type">Content</span>&#125;</code></pre></div><p>在待办清单案例中，我们有用到<code>ForEach</code>这个视图。ForEach 将集合的东西生成一个个 View，然后再组合成一个 View。大大简化了相似代码，同时也解决了<code>ViewBuilder</code>参数个数限制问题。它在<code>SwiftUI</code>开发中非常常见，所以今天一起深入挖掘下 <code>ForEach</code> 相关知识。</p><p>待办清单案例中涉及<code>ForEach</code>使用的代码如下：</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-comment">/// 需要实现 Identifiable 协议</span><span class="hljs-keyword">struct</span> <span class="hljs-title class_">TodoItem</span>: <span class="hljs-title class_">Identifiable</span> &#123;    <span class="hljs-keyword">var</span> id: <span class="hljs-type">UUID</span> <span class="hljs-operator">=</span> <span class="hljs-type">UUID</span>()    <span class="hljs-keyword">var</span> task: <span class="hljs-type">String</span>    <span class="hljs-keyword">var</span> imgName: <span class="hljs-type">String</span>&#125;<span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;    <span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> listData: [<span class="hljs-type">TodoItem</span>] <span class="hljs-operator">=</span> [        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;写一篇SwiftUI文章&quot;</span>, imgName: <span class="hljs-string">&quot;pencil.circle&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;看WWDC视频&quot;</span>, imgName: <span class="hljs-string">&quot;square.and.pencil&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;定外卖&quot;</span>, imgName: <span class="hljs-string">&quot;folder&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;关注OldBirds公众号&quot;</span>, imgName: <span class="hljs-string">&quot;link&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;6点半跑步2公里&quot;</span>, imgName: <span class="hljs-string">&quot;moon&quot;</span>)        ]        <span class="hljs-type">NavigationView</span> &#123;        <span class="hljs-type">List</span> &#123;            <span class="hljs-type">Section</span>(header: <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;待办事项&quot;</span>)) &#123;                <span class="hljs-type">ForEach</span>(listData) &#123; item <span class="hljs-keyword">in</span>                    <span class="hljs-type">HStack</span>&#123;                        <span class="hljs-type">Image</span>(systemName: item.imgName)                        <span class="hljs-type">Text</span>(item.task)                    &#125;                &#125;                .onDelete(perform: deleteItem)                .onMove(perform: moveItem)            &#125;            <span class="hljs-type">Section</span>(header: <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;其他内容&quot;</span>)) &#123;                <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Hello World&quot;</span>)            &#125;        &#125;        .listStyle(<span class="hljs-type">GroupedListStyle</span>())        .navigationTitle(<span class="hljs-type">Text</span>(<span class="hljs-string">&quot;待办清单&quot;</span>))    &#125;&#125;</code></pre></div><p>我们将围绕下面两个问题，进行对 <code>ForEach</code> 的深入了解：</p><ol><li><code>ForEach</code> 有哪些初始化方法？</li><li><code>TodoItem</code> 为什么要实现<code>Identifiable</code> 协议？</li></ol><h4 id="range"><a href="#range" class="headerlink" title="range"></a>range</h4><p>这个初始化器是 <code>ForEach</code> 中最简单的。它类似于常见的<code>for</code>循环：</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">ContentView</span>: <span class="hljs-title class_">View</span> &#123;    <span class="hljs-keyword">let</span> data <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;写一篇SwiftUI文章&quot;</span>,                <span class="hljs-string">&quot;看WWDC视频&quot;</span>,                <span class="hljs-string">&quot;订外卖&quot;</span>,                <span class="hljs-string">&quot;关注OldBirds公众号&quot;</span>,                <span class="hljs-string">&quot;6点半跑步2公里&quot;</span>,]    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;        <span class="hljs-type">List</span> &#123;            <span class="hljs-type">ForEach</span>(<span class="hljs-number">0</span><span class="hljs-operator">..&lt;</span>data.count) &#123; index <span class="hljs-keyword">in</span>                <span class="hljs-type">Text</span>(data[index])            &#125;        &#125;    &#125;&#125;</code></pre></div><p>但是请注意，此视图仅呈现一次。因此，如果<code>data.count</code>更改，视图将不会更新。例如，单击以下代码中的<code>添加待办事项</code>会返回错误：</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">ContentView</span>: <span class="hljs-title class_">View</span> &#123;    <span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> data <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;写一篇SwiftUI文章&quot;</span>,                       <span class="hljs-string">&quot;看WWDC视频&quot;</span>,                       <span class="hljs-string">&quot;订外卖&quot;</span>,                       <span class="hljs-string">&quot;关注OldBirds公众号&quot;</span>,                       <span class="hljs-string">&quot;6点半跑步2公里&quot;</span>,]    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;        <span class="hljs-type">VStack</span> &#123;            <span class="hljs-type">List</span> &#123;                <span class="hljs-type">ForEach</span>(<span class="hljs-number">0</span><span class="hljs-operator">..&lt;</span>data.count) &#123; index <span class="hljs-keyword">in</span>                    <span class="hljs-type">Text</span>(data[index])                &#125;            &#125;            <span class="hljs-type">Button</span>(<span class="hljs-string">&quot;添加待办事项&quot;</span>) &#123;                addTodo()            &#125;.padding()        &#125;    &#125;    <span class="hljs-keyword">func</span> <span class="hljs-title function_">addTodo</span>() &#123;        data.append(<span class="hljs-string">&quot;Hello SwiftUI&quot;</span>)    &#125;&#125;</code></pre></div><p>点击按钮，列表没有反应。我们然后将代码运行到模拟器，点击按钮，在控制台输出如下错误：</p><div class="code-wrapper"><pre><code class="hljs sh">ForEach&lt;Range&lt;Int&gt;, Int, Text&gt; count (6) != its initial count (5). `ForEach(_:content:)` should only be used <span class="hljs-keyword">for</span> *constant* data. Instead conform data to `Identifiable` or use `ForEach(_:<span class="hljs-built_in">id</span>:content:)` and provide an explicit `<span class="hljs-built_in">id</span>`!</code></pre></div><p>从报错中，我们知道**<code>ForEach(_:content:)</code>只能使用常量数据**。</p><h4 id="Identifiable"><a href="#Identifiable" class="headerlink" title="Identifiable"></a>Identifiable</h4><p>在待办清单案例中，我们直接传递数组 listData 就可以了。</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-comment">/// 需要实现 Identifiable 协议</span><span class="hljs-keyword">struct</span> <span class="hljs-title class_">TodoItem</span>: <span class="hljs-title class_">Identifiable</span> &#123;    <span class="hljs-keyword">var</span> id: <span class="hljs-type">UUID</span> <span class="hljs-operator">=</span> <span class="hljs-type">UUID</span>()    <span class="hljs-keyword">var</span> task: <span class="hljs-type">String</span>    <span class="hljs-keyword">var</span> imgName: <span class="hljs-type">String</span>&#125;<span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;    <span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> listData: [<span class="hljs-type">TodoItem</span>] <span class="hljs-operator">=</span> [        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;写一篇SwiftUI文章&quot;</span>, imgName: <span class="hljs-string">&quot;pencil.circle&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;看WWDC视频&quot;</span>, imgName: <span class="hljs-string">&quot;square.and.pencil&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;定外卖&quot;</span>, imgName: <span class="hljs-string">&quot;folder&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;关注OldBirds公众号&quot;</span>, imgName: <span class="hljs-string">&quot;link&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;6点半跑步2公里&quot;</span>, imgName: <span class="hljs-string">&quot;moon&quot;</span>)        ]        <span class="hljs-type">NavigationView</span> &#123;        <span class="hljs-type">List</span> &#123;            <span class="hljs-type">Section</span>(header: <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;待办事项&quot;</span>)) &#123;                <span class="hljs-type">ForEach</span>(listData) &#123; item <span class="hljs-keyword">in</span>                    <span class="hljs-type">HStack</span>&#123;                        <span class="hljs-type">Image</span>(systemName: item.imgName)                        <span class="hljs-type">Text</span>(item.task)                    &#125;                &#125;                .onDelete(perform: deleteItem)                .onMove(perform: moveItem)            &#125;            <span class="hljs-type">Section</span>(header: <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;其他内容&quot;</span>)) &#123;                <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Hello World&quot;</span>)            &#125;        &#125;        .listStyle(<span class="hljs-type">GroupedListStyle</span>())        .navigationTitle(<span class="hljs-type">Text</span>(<span class="hljs-string">&quot;待办清单&quot;</span>))    &#125;&#125;</code></pre></div><p>如果我们将<code>TodoItem</code>不实现<code>Identifiable</code>，看看会发生什么？</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">TodoItem</span>/*: <span class="hljs-title class_">Identifiable</span>*/ &#123;    <span class="hljs-keyword">var</span> id: <span class="hljs-type">UUID</span> <span class="hljs-operator">=</span> <span class="hljs-type">UUID</span>()    <span class="hljs-keyword">var</span> task: <span class="hljs-type">String</span>    <span class="hljs-keyword">var</span> imgName: <span class="hljs-type">String</span>&#125;<span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;    <span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> listData: [<span class="hljs-type">TodoItem</span>] <span class="hljs-operator">=</span> [        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;写一篇SwiftUI文章&quot;</span>, imgName: <span class="hljs-string">&quot;pencil.circle&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;看WWDC视频&quot;</span>, imgName: <span class="hljs-string">&quot;square.and.pencil&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;定外卖&quot;</span>, imgName: <span class="hljs-string">&quot;folder&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;关注OldBirds公众号&quot;</span>, imgName: <span class="hljs-string">&quot;link&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;6点半跑步2公里&quot;</span>, imgName: <span class="hljs-string">&quot;moon&quot;</span>)        ]        <span class="hljs-type">NavigationView</span> &#123;        <span class="hljs-type">List</span> &#123;            <span class="hljs-type">Section</span>(header: <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;待办事项&quot;</span>)) &#123;                <span class="hljs-type">ForEach</span>(listData) &#123; item <span class="hljs-keyword">in</span>                    <span class="hljs-type">HStack</span>&#123;                        <span class="hljs-type">Image</span>(systemName: item.imgName)                        <span class="hljs-type">Text</span>(item.task)                    &#125;                &#125;                .onDelete(perform: deleteItem)                .onMove(perform: moveItem)            &#125;            <span class="hljs-type">Section</span>(header: <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;其他内容&quot;</span>)) &#123;                <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Hello World&quot;</span>)            &#125;        &#125;        .listStyle(<span class="hljs-type">GroupedListStyle</span>())        .navigationTitle(<span class="hljs-type">Text</span>(<span class="hljs-string">&quot;待办清单&quot;</span>))    &#125;&#125;</code></pre></div><p>会报错：</p><div class="code-wrapper"><pre><code class="hljs sh">Referencing initializer <span class="hljs-string">&#x27;init (_:content:)&#x27;</span> on <span class="hljs-string">&#x27;ForEach&#x27;</span> requires that <span class="hljs-string">&#x27;TodoItem&#x27;</span> conform to <span class="hljs-string">&#x27;Identifiable&#x27;</span></code></pre></div><p>从报错信息可知，我们必须要将数组的元素实现<code>Identifiable</code>协议。</p><p>数组的元素如果是普通类型，比如<code>String</code>也会报错：</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">ContentView</span>: <span class="hljs-title class_">View</span> &#123;    <span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> data <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;写一篇SwiftUI文章&quot;</span>,                       <span class="hljs-string">&quot;看WWDC视频&quot;</span>,                       <span class="hljs-string">&quot;订外卖&quot;</span>,                       <span class="hljs-string">&quot;关注OldBirds公众号&quot;</span>,                       <span class="hljs-string">&quot;6点半跑步2公里&quot;</span>,]    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;        <span class="hljs-type">VStack</span> &#123;            <span class="hljs-type">List</span> &#123;                <span class="hljs-type">ForEach</span>(data) &#123; item <span class="hljs-keyword">in</span>                    <span class="hljs-type">Text</span>(item)                &#125;            &#125;            <span class="hljs-type">Button</span>(<span class="hljs-string">&quot;添加待办事项&quot;</span>) &#123;                addTodo()            &#125;.padding()        &#125;    &#125;    <span class="hljs-keyword">func</span> <span class="hljs-title function_">addTodo</span>() &#123;        data.append(<span class="hljs-string">&quot;Hello SwiftUI&quot;</span>)    &#125;&#125;</code></pre></div><div class="code-wrapper"><pre><code class="hljs sh">Referencing initializer <span class="hljs-string">&#x27;init (_:content:)&#x27;</span> on <span class="hljs-string">&#x27;ForEach&#x27;</span> requires that <span class="hljs-string">&#x27;String&#x27;</span> conform to <span class="hljs-string">&#x27;Identifiable&#x27;</span></code></pre></div><p>需要通过指定<code>id: \.self</code>即可，因为它们本身可以作为可识别的对象。</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">ContentView</span>: <span class="hljs-title class_">View</span> &#123;    <span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> data <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;写一篇SwiftUI文章&quot;</span>,                       <span class="hljs-string">&quot;看WWDC视频&quot;</span>,                       <span class="hljs-string">&quot;订外卖&quot;</span>,                       <span class="hljs-string">&quot;关注OldBirds公众号&quot;</span>,                       <span class="hljs-string">&quot;6点半跑步2公里&quot;</span>,]    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;        <span class="hljs-type">VStack</span> &#123;            <span class="hljs-type">List</span> &#123;                <span class="hljs-type">ForEach</span>(data, id: \.<span class="hljs-keyword">self</span>) &#123; item <span class="hljs-keyword">in</span>                    <span class="hljs-type">Text</span>(item)                &#125;            &#125;            <span class="hljs-type">Button</span>(<span class="hljs-string">&quot;添加待办事项&quot;</span>) &#123;                addTodo()            &#125;.padding()        &#125;    &#125;    <span class="hljs-keyword">func</span> <span class="hljs-title function_">addTodo</span>() &#123;        data.append(<span class="hljs-string">&quot;Hello SwiftUI&quot;</span>)    &#125;&#125;</code></pre></div><h4 id="id-Hashable"><a href="#id-Hashable" class="headerlink" title="id&amp;Hashable"></a>id&amp;Hashable</h4><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">public</span> <span class="hljs-keyword">init</span>(<span class="hljs-keyword">_</span> <span class="hljs-params">data</span>: <span class="hljs-type">Data</span>, <span class="hljs-params">id</span>: <span class="hljs-type">KeyPath</span>&lt;<span class="hljs-type">Data</span>.<span class="hljs-type">Element</span>, <span class="hljs-type">ID</span>&gt;, <span class="hljs-meta">@ViewBuilder</span> <span class="hljs-params">content</span>: <span class="hljs-keyword">@escaping</span> (<span class="hljs-type">Data</span>.<span class="hljs-type">Element</span>) -&gt; <span class="hljs-type">Content</span>)</code></pre></div><p>id 要求我们传入的是一个 <code>KeyPath</code>，且<code>ID</code>必须实现<code>Hashable</code>。而我们常见的数据类型 <code>Int/String/...</code>都默认实现<code>Hashable</code>。</p><p>通过指定 <code>id</code> 的初始化方式适用于元素没有实现 <code>Identifiable</code> 的场景。</p><p>如果<code>TodoItem</code>没有实现<code>Identifiable</code>，我们也可以这样做：</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">TodoItem</span>/*: <span class="hljs-title class_">Identifiable</span>*/ &#123;    <span class="hljs-comment">// var id: UUID = UUID()</span>    <span class="hljs-keyword">var</span> task: <span class="hljs-type">String</span>    <span class="hljs-keyword">var</span> imgName: <span class="hljs-type">String</span>&#125;<span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;    <span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> listData: [<span class="hljs-type">TodoItem</span>] <span class="hljs-operator">=</span> [        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;写一篇SwiftUI文章&quot;</span>, imgName: <span class="hljs-string">&quot;pencil.circle&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;看WWDC视频&quot;</span>, imgName: <span class="hljs-string">&quot;square.and.pencil&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;定外卖&quot;</span>, imgName: <span class="hljs-string">&quot;folder&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;关注OldBirds公众号&quot;</span>, imgName: <span class="hljs-string">&quot;link&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;6点半跑步2公里&quot;</span>, imgName: <span class="hljs-string">&quot;moon&quot;</span>)        ]        <span class="hljs-type">NavigationView</span> &#123;        <span class="hljs-type">List</span> &#123;            <span class="hljs-type">Section</span>(header: <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;待办事项&quot;</span>)) &#123;                <span class="hljs-type">ForEach</span>(listData, id: \.task) &#123; item <span class="hljs-keyword">in</span>                    <span class="hljs-type">HStack</span>&#123;                        <span class="hljs-type">Image</span>(systemName: item.imgName)                        <span class="hljs-type">Text</span>(item.task)                    &#125;                &#125;                .onDelete(perform: deleteItem)                .onMove(perform: moveItem)            &#125;            <span class="hljs-type">Section</span>(header: <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;其他内容&quot;</span>)) &#123;                <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Hello World&quot;</span>)            &#125;        &#125;        .listStyle(<span class="hljs-type">GroupedListStyle</span>())        .navigationTitle(<span class="hljs-type">Text</span>(<span class="hljs-string">&quot;待办清单&quot;</span>))    &#125;&#125;</code></pre></div><p>但是我们得确保 task 的唯一性，为什么呢？</p><h3 id="TodoItem-为啥要实现-Identifiable"><a href="#TodoItem-为啥要实现-Identifiable" class="headerlink" title="TodoItem 为啥要实现 Identifiable?"></a><code>TodoItem</code> 为啥要实现 Identifiable?</h3><p>实现<code>Identifiable</code>的目的是为了要区分数组的成员，这样可以更有效率地管理 List 里的视图。</p><p>我们简单通过样例来说明下其中的原理：</p><div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">TodoItem</span> &#123;    <span class="hljs-keyword">var</span> task: <span class="hljs-type">String</span>    <span class="hljs-keyword">var</span> imgName: <span class="hljs-type">String</span>&#125;<span class="hljs-keyword">struct</span> <span class="hljs-title class_">ContentView</span>: <span class="hljs-title class_">View</span> &#123;    <span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> listData: [<span class="hljs-type">TodoItem</span>] <span class="hljs-operator">=</span> [        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;写一篇SwiftUI文章&quot;</span>, imgName: <span class="hljs-string">&quot;pencil.circle&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;看WWDC视频&quot;</span>, imgName: <span class="hljs-string">&quot;square.and.pencil&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;定外卖&quot;</span>, imgName: <span class="hljs-string">&quot;folder&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;关注OldBirds公众号&quot;</span>, imgName: <span class="hljs-string">&quot;link&quot;</span>),        <span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;6点半跑步2公里&quot;</span>, imgName: <span class="hljs-string">&quot;moon&quot;</span>),    ]    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;        <span class="hljs-type">VStack</span> &#123;            <span class="hljs-type">List</span> &#123;                <span class="hljs-type">ForEach</span>(listData, id: \.task) &#123; item <span class="hljs-keyword">in</span>                    <span class="hljs-type">HStack</span>&#123;                        <span class="hljs-type">Image</span>(systemName: item.imgName)                        <span class="hljs-type">Text</span>(item.task)                    &#125;                &#125;            &#125;            <span class="hljs-type">Button</span>(<span class="hljs-string">&quot;添加待办事项&quot;</span>) &#123;                addTodo()            &#125;.padding()        &#125;    &#125;    <span class="hljs-keyword">func</span> <span class="hljs-title function_">addTodo</span>() &#123;        listData.append(<span class="hljs-type">TodoItem</span>(task: <span class="hljs-string">&quot;写一篇SwiftUI文章&quot;</span>, imgName: <span class="hljs-string">&quot;moon&quot;</span>))    &#125;&#125;</code></pre></div><p>我们让<code>TodoItem</code>不实现<code>Identifiable</code>, 用<code>\.task</code>传递给 id。我们希望点击添加按钮的时候，列表会同步刷新，且新增的图标是个<code>月亮</code>。</p><p>但是事情并没有顺从你的心意，会发现，新增的视图的 icon 并不是月亮。</p><p>而是用了第一个<code>TodoItem(task: &quot;写一篇SwiftUI文章&quot;, imgName: &quot;pencil.circle&quot;)</code>的 <code>pencil.circle</code>，其实不仅仅是图标，整个显示都跟第一个视图一样的。</p><p>因为无法区分这两个 TodoItem，所以就以最开始出现的视图重复，发生了错乱。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>ForEach 的使用还是比较简单的，有三种初始化方式，通过 range 迭代的时候，记得保证集合是个常量。第二种通过 Identifiable 保证元素唯一，通常做法用 UUID 作为 id。第三种，通过指定 KeyPath，需要保证实现了 Hashable，且最好做到唯一，不然显示会错乱。</p>]]></content>
     
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>转载</category>
       
     </categories>
     
@@ -1277,9 +1256,9 @@
     
     <tags>
       
-      <tag>运动科学</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>运动科学</tag>
       
       <tag>心率</tag>
       
@@ -1303,7 +1282,7 @@
     
     <categories>
       
-      <category>资料整合</category>
+      <category>合集</category>
       
     </categories>
     
@@ -1353,18 +1332,16 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>文章</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -1382,9 +1359,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1409,16 +1384,18 @@
     
     <categories>
       
-      <category>资料整合</category>
+      <category>合集</category>
       
     </categories>
     
     
     <tags>
       
+      <tag>深度学习</tag>
+      
       <tag>运动科学</tag>
       
-      <tag>深度学习</tag>
+      <tag>心率</tag>
       
     </tags>
     
@@ -1436,9 +1413,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>文章</category>
       
     </categories>
     
@@ -1463,9 +1438,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1490,9 +1463,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>文章</category>
       
     </categories>
     
@@ -1517,9 +1488,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1544,9 +1513,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>文章</category>
       
     </categories>
     
@@ -1571,9 +1538,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1598,9 +1563,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1625,9 +1588,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1652,9 +1613,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1679,16 +1638,16 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>转载</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>心率</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -1706,9 +1665,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1716,8 +1673,6 @@
     <tags>
       
       <tag>Python</tag>
-      
-      <tag>心率</tag>
       
     </tags>
     
@@ -1760,18 +1715,16 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>文档翻译</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>心率</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -1789,18 +1742,16 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>文档翻译</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>心率</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -1818,9 +1769,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1845,7 +1794,7 @@
     
     <categories>
       
-      <category>资料整合</category>
+      <category>合集</category>
       
     </categories>
     
@@ -1870,9 +1819,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1897,9 +1844,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1924,9 +1869,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1951,9 +1894,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1978,9 +1919,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2005,9 +1944,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>合集</category>
       
     </categories>
     
@@ -2032,9 +1969,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>文章</category>
       
     </categories>
     
@@ -2059,9 +1994,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2102,120 +2035,16 @@
   
   
   <entry>
-    <title>压力知觉与运动性心理疲劳的关系_一个有调节的中介模型</title>
-    <link href="/2023/09/18/%E5%8E%8B%E5%8A%9B%E7%9F%A5%E8%A7%89%E4%B8%8E%E8%BF%90%E5%8A%A8%E6%80%A7%E5%BF%83%E7%90%86%E7%96%B2%E5%8A%B3%E7%9A%84%E5%85%B3%E7%B3%BB-%E4%B8%80%E4%B8%AA%E6%9C%89%E8%B0%83%E8%8A%82%E7%9A%84%E4%B8%AD%E4%BB%8B%E6%A8%A1%E5%9E%8B/"/>
-    <url>/2023/09/18/%E5%8E%8B%E5%8A%9B%E7%9F%A5%E8%A7%89%E4%B8%8E%E8%BF%90%E5%8A%A8%E6%80%A7%E5%BF%83%E7%90%86%E7%96%B2%E5%8A%B3%E7%9A%84%E5%85%B3%E7%B3%BB-%E4%B8%80%E4%B8%AA%E6%9C%89%E8%B0%83%E8%8A%82%E7%9A%84%E4%B8%AD%E4%BB%8B%E6%A8%A1%E5%9E%8B/</url>
+    <title>能量代谢占比计算</title>
+    <link href="/2023/09/18/%E8%83%BD%E9%87%8F%E4%BB%A3%E8%B0%A2%E5%8D%A0%E6%AF%94%E8%AE%A1%E7%AE%97/"/>
+    <url>/2023/09/18/%E8%83%BD%E9%87%8F%E4%BB%A3%E8%B0%A2%E5%8D%A0%E6%AF%94%E8%AE%A1%E7%AE%97/</url>
     
-    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/97D04C75-BAE7-4611-A6FF-D638751925FB_2/k63NyaIFRwQtQkBlfAH4sdq7iitlekidWOiRoe1XceIz/_.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>运动文献</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>运动心理学</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>我国运动生物力学研究热点与影响力变化</title>
-    <link href="/2023/09/18/%E6%88%91%E5%9B%BD%E8%BF%90%E5%8A%A8%E7%94%9F%E7%89%A9%E5%8A%9B%E5%AD%A6%E7%A0%94%E7%A9%B6%E7%83%AD%E7%82%B9%E4%B8%8E%E5%BD%B1%E5%93%8D%E5%8A%9B%E5%8F%98%E5%8C%96/"/>
-    <url>/2023/09/18/%E6%88%91%E5%9B%BD%E8%BF%90%E5%8A%A8%E7%94%9F%E7%89%A9%E5%8A%9B%E5%AD%A6%E7%A0%94%E7%A9%B6%E7%83%AD%E7%82%B9%E4%B8%8E%E5%BD%B1%E5%93%8D%E5%8A%9B%E5%8F%98%E5%8C%96/</url>
-    
-    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/374927DC-DEFC-4A43-B592-CE86556D39F6_2/yPaDzyWrRyxyCT1MCPwYmzHQ6Hy7tzRCRvXKkF5CcaEz/374927DC-DEFC-4A43-B592-CE86556D39F6_2.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    <content type="html"><![CDATA[<p>关于人体能量代谢占比的计算方式，可以参考文献：男子赛艇240次卧拉练习的能量代谢特征</p>]]></content>
     
     
     <categories>
       
-      <category>运动文献</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>运动统计</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>乒乓球精确旋转、速度及落点数据的人工神经网络模型研究</title>
-    <link href="/2023/09/18/%E4%B9%92%E4%B9%93%E7%90%83%E7%B2%BE%E7%A1%AE%E6%97%8B%E8%BD%AC%E3%80%81%E9%80%9F%E5%BA%A6%E5%8F%8A%E8%90%BD%E7%82%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%E7%A0%94%E7%A9%B6/"/>
-    <url>/2023/09/18/%E4%B9%92%E4%B9%93%E7%90%83%E7%B2%BE%E7%A1%AE%E6%97%8B%E8%BD%AC%E3%80%81%E9%80%9F%E5%BA%A6%E5%8F%8A%E8%90%BD%E7%82%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%E7%A0%94%E7%A9%B6/</url>
-    
-    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/62ACBE04-97CF-4835-90FE-3E5A2E91F3B4_2/wuYBp2JQVmj8ciyVJ7NymoMDKemLmIoMgbU2G3d5i4Mz/62ACBE04-97CF-4835-90FE-3E5A2E91F3B4_2.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>运动文献</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>运动科学</tag>
-      
-      <tag>深度学习</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>从直接测热法到计算机视觉技术：身体活动能量消耗测量的历史与未来</title>
-    <link href="/2023/09/18/%E4%BB%8E%E7%9B%B4%E6%8E%A5%E6%B5%8B%E7%83%AD%E6%B3%95%E5%88%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E6%8A%80%E6%9C%AF%EF%BC%9A%E8%BA%AB%E4%BD%93%E6%B4%BB%E5%8A%A8%E8%83%BD%E9%87%8F%E6%B6%88%E8%80%97%E6%B5%8B%E9%87%8F%E7%9A%84%E5%8E%86%E5%8F%B2%E4%B8%8E%E6%9C%AA%E6%9D%A5/"/>
-    <url>/2023/09/18/%E4%BB%8E%E7%9B%B4%E6%8E%A5%E6%B5%8B%E7%83%AD%E6%B3%95%E5%88%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E6%8A%80%E6%9C%AF%EF%BC%9A%E8%BA%AB%E4%BD%93%E6%B4%BB%E5%8A%A8%E8%83%BD%E9%87%8F%E6%B6%88%E8%80%97%E6%B5%8B%E9%87%8F%E7%9A%84%E5%8E%86%E5%8F%B2%E4%B8%8E%E6%9C%AA%E6%9D%A5/</url>
-    
-    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/70662169-FC75-4DFF-BBC6-3B0E467408E6_2/TQUBVIcs5gVIVD12yil0gZKhlHzJQIc6yJJroB6LvY0z/70662169-FC75-4DFF-BBC6-3B0E467408E6_2.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>运动文献</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>计算机视觉</tag>
-      
-      <tag>运动科学</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>男子赛艇240次卧拉练习的能量代谢特征（能量代谢占比计算）</title>
-    <link href="/2023/09/18/%E7%94%B7%E5%AD%90%E8%B5%9B%E8%89%87240%E6%AC%A1%E5%8D%A7%E6%8B%89%E7%BB%83%E4%B9%A0%E7%9A%84%E8%83%BD%E9%87%8F%E4%BB%A3%E8%B0%A2%E7%89%B9%E5%BE%81%EF%BC%88%E8%83%BD%E9%87%8F%E4%BB%A3%E8%B0%A2%E5%8D%A0%E6%AF%94%E8%AE%A1%E7%AE%97%EF%BC%89/"/>
-    <url>/2023/09/18/%E7%94%B7%E5%AD%90%E8%B5%9B%E8%89%87240%E6%AC%A1%E5%8D%A7%E6%8B%89%E7%BB%83%E4%B9%A0%E7%9A%84%E8%83%BD%E9%87%8F%E4%BB%A3%E8%B0%A2%E7%89%B9%E5%BE%81%EF%BC%88%E8%83%BD%E9%87%8F%E4%BB%A3%E8%B0%A2%E5%8D%A0%E6%AF%94%E8%AE%A1%E7%AE%97%EF%BC%89/</url>
-    
-    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/0D39AE3E-F889-44C1-A6C1-7F7168C99357_2/bTR38Pawg7gN82hxi32SQgyx5bcPeh09iDvYD01Ph6sz/240.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>运动文献</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2240,18 +2069,18 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>文章</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>IMU</tag>
+      
+      <tag>传感器</tag>
+      
+      <tag>Swift</tag>
       
     </tags>
     
@@ -2269,9 +2098,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>文章</category>
       
     </categories>
     
@@ -2328,61 +2155,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>Linux</tag>
       
-      <tag>Raspberry Pi</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>发展肌肉力量的最佳训练负荷(The Optimal Training Load for the Development of Muscular Power)</title>
-    <link href="/2023/09/11/%E5%8F%91%E5%B1%95%E8%82%8C%E8%82%89%E5%8A%9B%E9%87%8F%E7%9A%84%E6%9C%80%E4%BD%B3%E8%AE%AD%E7%BB%83%E8%B4%9F%E8%8D%B7-The-Optimal-Training-Load-for-the-Development-of-Muscular-Power/"/>
-    <url>/2023/09/11/%E5%8F%91%E5%B1%95%E8%82%8C%E8%82%89%E5%8A%9B%E9%87%8F%E7%9A%84%E6%9C%80%E4%BD%B3%E8%AE%AD%E7%BB%83%E8%B4%9F%E8%8D%B7-The-Optimal-Training-Load-for-the-Development-of-Muscular-Power/</url>
-    
-    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/F1D9C18D-E5F4-487E-BC4E-E47724051D03_2/CZAynzyyu1QBbBXetDdfMnxZaNm9wa1iYCcnKMOBj38z/The%20Optimal%20Training%20Load%20for%20the%20Development%20of%20Muscular%20Power.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>运动文献</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>运动科学</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>最佳功率负荷下不同力量训练手段骨骼肌输出功率的确定及特征</title>
-    <link href="/2023/09/11/%E6%9C%80%E4%BD%B3%E5%8A%9F%E7%8E%87%E8%B4%9F%E8%8D%B7%E4%B8%8B%E4%B8%8D%E5%90%8C%E5%8A%9B%E9%87%8F%E8%AE%AD%E7%BB%83%E6%89%8B%E6%AE%B5%E9%AA%A8%E9%AA%BC%E8%82%8C%E8%BE%93%E5%87%BA%E5%8A%9F%E7%8E%87%E7%9A%84%E7%A1%AE%E5%AE%9A%E5%8F%8A%E7%89%B9%E5%BE%81/"/>
-    <url>/2023/09/11/%E6%9C%80%E4%BD%B3%E5%8A%9F%E7%8E%87%E8%B4%9F%E8%8D%B7%E4%B8%8B%E4%B8%8D%E5%90%8C%E5%8A%9B%E9%87%8F%E8%AE%AD%E7%BB%83%E6%89%8B%E6%AE%B5%E9%AA%A8%E9%AA%BC%E8%82%8C%E8%BE%93%E5%87%BA%E5%8A%9F%E7%8E%87%E7%9A%84%E7%A1%AE%E5%AE%9A%E5%8F%8A%E7%89%B9%E5%BE%81/</url>
-    
-    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/0151E7F3-C842-4CAC-B3CE-7938E09EB241_2/NpbywbU4syEE01bvgDsG6h0cjdZKqXGBqty39iMAa5oz/0151E7F3-C842-4CAC-B3CE-7938E09EB241_2.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>运动文献</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>运动科学</tag>
+      <tag>串口</tag>
       
     </tags>
     
@@ -2432,6 +2207,8 @@
     
     <tags>
       
+      <tag>串口</tag>
+      
       <tag>Raspberry Pi</tag>
       
     </tags>
@@ -2450,14 +2227,14 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>Raspberry Pi</category>
+      <category>随笔</category>
       
     </categories>
     
     
     <tags>
+      
+      <tag>串口</tag>
       
       <tag>Raspberry Pi</tag>
       
@@ -2511,6 +2288,8 @@
       
       <tag>传感器</tag>
       
+      <tag>串口</tag>
+      
       <tag>Mac</tag>
       
     </tags>
@@ -2529,16 +2308,14 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>PyCharm</category>
+      <category>随笔</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>PyCharm</tag>
       
     </tags>
     
@@ -2548,15 +2325,15 @@
   
   <entry>
     <title>STRETCH-SHORTENING CYCLE (SSC)</title>
-    <link href="/2023/09/11/STRETCH-SHORTENING-CYCLE-SSC/"/>
-    <url>/2023/09/11/STRETCH-SHORTENING-CYCLE-SSC/</url>
+    <link href="/2023/09/11/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DSTRETCH-SHORTENING-CYCLE-SSC/"/>
+    <url>/2023/09/11/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DSTRETCH-SHORTENING-CYCLE-SSC/</url>
     
     <content type="html"><![CDATA[<p>原文地址：<a href="https://www.scienceforsport.com/stretch-shortening-cycle/">STRETCH-SHORTENING CYCLE (SSC)</a></p><p>The stretch-shortening cycle is a spring-like mechanism that enhances athletic performance in explosive- and endurance-based sports.</p><p><strong>Contents of Article</strong></p><ol><li>Summary</li><li>What is the Stretch-Shortening Cycle (SSC)?</li><li>What are the mechanisms of the Stretch-Shortening Cycle?</li><li>Electromechanical Delay (EMD)</li><li>Conclusion</li><li>References</li><li>About the Author</li><li>Comments</li></ol><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>The stretch-shortening cycle (SSC) refers to the ‘pre-stretch’ or ‘countermovement’ action that is commonly observed during typical human movements such as jumping. This pre-stretch allows the athlete to produce more force and move quicker. Though there is controversy surrounding the mechanics responsible for the performance improvements observed from using the SSC,  it is likely to be a combination of the active state and the storage of elastic energy within the tendon. Due to the negative effects of the electromechanical delay, it may be suggested that training methods which improve muscular pre-activity, such as plyometric and ballistic training, may be beneficial for improving athletic performance.</p><h2 id="What-is-the-Stretch-Shortening-Cycle-SSC"><a href="#What-is-the-Stretch-Shortening-Cycle-SSC" class="headerlink" title="What is the Stretch-Shortening Cycle (SSC)?"></a>What is the Stretch-Shortening Cycle (SSC)?</h2><p>Athletes have been shown to jump 2-4 cm higher during the <a href="https://www.scienceforsport.com/countermovement-jump-cmj/">countermovement jump</a>(CMJ) than they can during the <a href="https://www.scienceforsport.com/squat-jump/">squat jump</a> (SJ) (1). This is simply because the <a href="https://www.scienceforsport.com/countermovement-jump-cmj/">CMJ</a>incorporates a pre-stretch dropping action when compared to an <a href="https://www.scienceforsport.com/squat-jump/">SJ</a>, which initiates the movement from a static position without the use of a pre-stretch (2). This pre-stretch, or ‘countermovement’ action is known as the stretch-shortening cycle (SSC) and is comprised of three phases (eccentric, amortization, and concentric) (Figure 1) (3). Images A-B display the eccentric phase, image C demonstrates the amortisation phase, and images D-E represent the concentric phase of the SSC.</p><p><img src="https://www.scienceforsport.com/wp-content/uploads/2016/01/Figure-1-Phases-of-the-Stretch-Shortening-Cycle-1024x189.jpg"></p><p>The SSC is described as a rapid cyclical muscle action whereby the muscle undergoes an eccentric contraction, followed by a transitional period prior to the concentric contraction (4). This muscle action is also sometimes referred to as the reverse action of muscles (5). The action of the SSC is perhaps best described as a spring-like mechanism, whereby compressing the coil causes it to rebound and therefore jump off a surface or in a different direction (Figure 2). Increasing the speed at which the coil is compressed or how hard it is pressed down (amount of force applied) will result in the spring jumping higher or farther. This is known as the ‘rate of loading’, and increasing this will often mean the spring will jump higher or farther. Therefore, a jump that incorporates a ‘run-up’ will often allow an athlete to jump higher or farther than a jump from a static position because of an increase in the rate of loading (6, 7, 8).</p><p><img src="https://www.scienceforsport.com/wp-content/uploads/2016/01/Figure-2-Spring-like-mechanism-of-the-Stretch-Shortening-Cycle-SSC.png"></p><p>The SSC does not only occur during single-bout <a href="https://www.scienceforsport.com/multidirectional-plyometrics-how-do-these-impact-jump-change-of-direction-and-dynamic-postural-control/">jumping or rebounding movements but also during any form of human movement when a limb changes direction</a>. For example, during walking, jumping, running, twisting or even lowering and then raising your arm. As the limbs are continuously changing direction, there is constant use of the SSC in order to change the direction the limb is moving. As some movements are much faster than others (e.g. sprinting vs. walking), there are great differences in the speed of the SSC. Consequently, the SSC has been separated into two categories based on the duration of the SSC:</p><ol><li>Fast-SSC: &lt;250 milliseconds (ms)</li><li>Slow-SSC: &gt;250 ms</li></ol><p>Table 1 provides some examples of common exercises and their potential SSC classification. As displayed in Table 1, a long jump is typically classified as a fast-SSC movement as it has a ground contact time of 140-170 ms (9). Whereas race walking, which has a ground contact time of 270-300 ms is commonly classified as a slow-SSC movement (10).</p><p><strong>Table 2</strong>. Ground contact times&#x2F;coupling time of common exercises.</p><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Ground contact time</strong></th><th><strong>SSC Classification</strong></th></tr></thead><tbody><tr><td>Race walking (10)</td><td>270-300</td><td>Slow</td></tr><tr><td>Sprinting (11)</td><td>80-90</td><td>Fast</td></tr><tr><td>Countermovement jump (CMJ) (12)</td><td>500</td><td>Slow</td></tr><tr><td>Depth Jump (20-60cm) (2,3)</td><td>130-300</td><td>Fast &#x2F; Slow</td></tr><tr><td>Long Jump (13)</td><td>140-170</td><td>Fast</td></tr><tr><td>Multiple Hurdle Jumps (5)</td><td>150</td><td>Fast</td></tr></tbody></table><p>As measuring the duration of the SSC at each contributing joint (e.g. ankle, knee, hip) during a jumping exercise is problematic, researchers have often questioned the ability to measure the SSC indirectly by analysing the ground contact times. As a result, researchers have looked for relationships between ground contact times and coupling time*. Strong relationships have been found between coupling time and exercises with ground contact times ranging from 270-2500 ms (16, 17).</p><p>However, no relationships were observed in exercises with ground contact times of 400-800 ms (17). This, therefore, questions the reliability of classifying exercises with ground contact times of &lt; 850 ms into particular SSC categories based on their ground contact duration. For example, simply classifying race walking as a slow-SSC movement because it has a ground contact time between 270-300 ms. Though this is often common practice, understanding the issue with doing so is important.</p><blockquote><p><em>Coupling time is the amortisation&#x2F;isometric phase of the SSC which connects the eccentric to the concentric phase – hence the term ‘coupling’, as it couples the two together. Or in other words, coupling time is defined as the transition between the eccentric and concentric phases of the SSC (16).</em></p></blockquote><h2 id="What-are-the-mechanisms-of-the-Stretch-Shortening-Cycle"><a href="#What-are-the-mechanisms-of-the-Stretch-Shortening-Cycle" class="headerlink" title="What are the mechanisms of the Stretch-Shortening Cycle?"></a>What are the mechanisms of the Stretch-Shortening Cycle?</h2><p>There are numerous neurophysiological mechanisms thought to contribute to the SSC, some of which include: storage of elastic energy (18, 19, 20, 21), involuntary nervous processes (22, 23), active state (1, 24), length-tension characteristics (25, 26), pre-activity tension (27, 28) and enhanced <a href="https://www.scienceforsport.com/how-tennis-ball-drills-can-help-develop-hand-eye-coordination/">motor coordination</a> (1, 24). Despite this large list, it is commonly agreed there are three primary mechanics responsible for the performance-enhancing effects of the SSC (2).</p><p>These three mechanisms are:</p><ol><li>Storage of Elastic Energy</li><li>Neurophysiological Model</li><li>Active State</li></ol><p><strong>Storage of Elastic Energy</strong></p><p>The concept of elastic energy is similar to that of a stretched rubber band. When the band is stretched, there is a build-up of stored energy, which when released, causes the band to rapidly contract back to its original shape. The amount of stored elastic energy (sometimes referred to as ‘strain’ or ‘potential’ energy) is potentially equal to the applied force and induced deformation (5). In other words, the amount of force used to stretch the band should be equivalent to the amount of force produced by the band in order to return to its pre-stretched state.</p><p>In humans, this stretch and storage of elastic energy is instead placed upon the muscles and tendons during movement. However, due to the elastic properties of the tendon, it is commonly agreed that the tendon is the primary site for the storage of elastic energy (29, 30). Unlike muscles, the tendons cannot be voluntarily contracted, and as a result, they can only remain in their state of tension.</p><p>This means the muscle must contract and stiffen prior to the beginning of the SSC during ground contact – known as ‘muscular pre-activity’. The muscle must then remain contracted&#x2F; stiff during the first two processes of the SSC (eccentric and amortisation phases) in order to transmit the isometric forces into the tendon. This causes the deformation&#x2F; lengthening of the tendon and the development of the storage of elastic energy.</p><p>During the concentric phase of the SSC (often referred to as the ‘positive acceleration’ phase), the muscle is then able to concentrically contract and provide additional propulsive force (2). Failing to stiffen during the eccentric and amortisation phases, means the performance-enhancing effect of the SSC will be lost and the joint would likely collapse. This demonstrates the importance of muscle stiffness during the SSC and its ability to improve performance. It also suggests that athletes with higher levels of <a href="https://www.scienceforsport.com/the-importance-of-muscular-strength-in-athletic-performance/">muscular strength</a> can absorb more force (i.e. higher rate of loading), and therefore have a better ability to use the SSC.</p><p>An abundance of research has demonstrated that stronger athletes have a better ability to store elastic energy than less-strong individuals (31, 32, 33). Elite athletes from both power- and endurance-based sports have also been demonstrated to possess a superior ability to store elastic energy (31, 32). Furthermore, efficient utilisation of the SSC during sprinting has been shown to recover approximately 60% of total mechanical energy, suggesting the other 40% is recovered by metabolic processes (34, 35). In aerobic long-distance running, higher SSC abilities have also been shown to enhance running economy – suggesting that athletes with a better SSC capacity can conserve more energy whilst running (33, 36, 37). This indicates the importance of the SSC for both energy release and energy conservation. However, this storage of the elastic energy within the tendon cannot last forever and has been shown to have a half-life of 850 milliseconds (38).</p><p><strong>Neurophysiological Model</strong></p><p>The muscles and tendons contain sensory receptors known as ‘proprioceptors’, these send information to the brain about changes in length, tension and joint angles (39). The proprioceptors within the muscle are known as ‘muscle spindles’, whilst those in the tendon are called ‘Golgi tendon organs’.</p><p>When a muscle is forcefully lengthened, the muscle spindles engage a stretch-reflex response to <a href="https://www.scienceforsport.com/what-adaptations-occur-to-youth-athletes-using-injury-prevention-programs/">prevent over-lengthening and limit the possibility of injury</a>. The engagement of these muscle spindles is thought to cause increased recruitment of motor units and&#x2F; or an increased rate coding effect (40, 41). An excitation of either or both of these neural responses would lead to a concurrent increase in concentric force output and may, therefore, explain the performance-enhancing effects of the SSC.</p><p>The increase in concentric force output would therefore then lead to an enhanced <a href="https://www.scienceforsport.com/max-power-the-keys-to-getting-the-most-out-of-power-training/">power</a> output during sporting movements (e.g. jump), and thus may improve performance. However, many studies have reported no increase in muscle activation after a pre-stretch activity (e.g. <a href="https://www.scienceforsport.com/countermovement-jump-cmj/">CMJ</a>) when compared to non-pre-stretch activity (e.g. <a href="https://www.scienceforsport.com/squat-jump/">SJ</a>) (26, 42, 43). This suggests that muscle spindle reflex activity does not have any impact on the increased force by the SSC (1).</p><p>Furthermore, when a muscle is forcefully lengthened, the Golgi tendon organs (GTO) engage an opposite stretch-reflex response to the muscle spindles. Their role is to inhibit (i.e. prevent) the excitation of the muscle spindles during forceful over-lengthening to prevent the possibility of injury (5). Though this may seem like a bizarre trade-off between the muscle spindles and the GTO, the muscle spindles activate when the muscle-tendon unit is forcefully lengthened, whilst the GTO activate when the forceful lengthening becomes too large (39).</p><p>Due to the inhibitory stretch-reflex response of the GTO, it is thought this may counteract the contraction action of the muscle spindles. If so, this would mean that the GTO inhibits the high-muscular stiffness needed during the SSC and therefore reduces the concentric force output and subsequent performance (2). In fact, research has shown that muscle activation levels – and therefore muscle stiffness – have been reduced during the early phases of the SSC in individuals who are unaccustomed to intense SSC movements (28).</p><p>Interestingly, however, 4-months of <a href="https://www.scienceforsport.com/plyometric-training-2/">plyometric training</a> has been shown to reduce this GTO inhibitory effect (disinhibition) and increase muscular pre-activity and muscle-tendon stiffness (27). As a result, it appears that effective training methods (e.g. <a href="https://www.scienceforsport.com/plyometric-training-2/">plyometrics</a>) can reduce or even eliminate the potential negative effects observed from the GTO inhibitory effect.</p><p><strong>Active State</strong></p><p>The active state is the period of time in which force can be developed during the eccentric and amortisation phases of the SSC before any concentric contraction occurs. For example, during the ‘countermovement’ or ‘dropping’ action of the <a href="https://www.scienceforsport.com/countermovement-jump-cmj/">CMJ</a>, the active state is developed during the eccentric and amortisation phases. The unpinning belief is that exercises that possess longer eccentric and amortisation phases of the SSC will allow more time for the formation of cross-bridges, therefore enhancing joint moments, and thus improving concentric force output. Increasing the amount of force, and the time available for force to be developed typically leads to a concurrent increase in the impulse (Impulse &#x3D; Force x Time) (24, 44). In other words, increasing the force application will lead to improvements in power output and therefore athletic performance.</p><p>There is widespread agreement to suggest the active state is the largest contributor to the performance-enhancing effects of the SSC, as it allows for a greater build-up of force prior to concentric shortening (1, 24, 44, 2).</p><h2 id="What-is-the-Electromechanical-Delay-EMD"><a href="#What-is-the-Electromechanical-Delay-EMD" class="headerlink" title="What is the Electromechanical Delay (EMD)?"></a>What is the Electromechanical Delay (EMD)?</h2><p>The electromechanical delay (EMD) refers to a neural and physiological delay in the production of mechanical force. This simply implies the muscles cannot generate and transmit force to the skeletal system instantaneously, instead, there is a slight delay. A delay in the production of mechanical force can, therefore, lead to a reduction in performance (24).</p><p>Currently, there are numerous components that have been suggested to contribute to this delay:</p><ol><li>Finite rate of increase in muscle stimulation by the central nervous system.</li><li>Propagation of the action potential on the muscle membrane.</li><li>Time constraints of calcium release and cross-bridge formation.</li><li>Interaction between the contractile filaments and the series of elastic components.</li><li>Toe region of the tendon.</li></ol><p>As a complete analysis of all these neurophysiological factors is beyond the scope of this article and readily available in exercise physiology textbooks, only the toe region will be explained.</p><p>The toe region of the SSC, otherwise simply explained as ‘slack within the tendon’ is present at the very beginning of the SSC. To simplify this concept, imagine a coiled-up piece of string that is being pulled from both ends in order to straighten it out and create tension. Well this ‘slack’, before the string is straight, is referred to as the ‘toe-region’. It is recognised that this slack within the tendon delays the time in which muscle-tendon stiffness and concentric force can be generated – simply the time taken to straighten the string and create tension (45) (Figure 3). Therefore, the toe region reduces the time available to generate force during the SSC and thus reduces concentric force output.</p><p><img src="https://www.scienceforsport.com/wp-content/uploads/2016/02/Figure-3-Tendon-Force-Deformation-Curve-Toe-Region-Science-for-Sport.png"></p><p>Due to the negative effects of the EMD on mechanical force, it has been proposed that optimising muscular pre-activity may reduce or even counteract the effects of EMD by exciting the muscle and creating muscle-tendon stiffness prior to the start of the SSC (2). As a result, training methods which improve pre-activity, such as <a href="https://www.scienceforsport.com/plyometric-training-2/">plyometric</a> and <a href="https://www.scienceforsport.com/ballistic-training/">ballistic training</a>, may be beneficial for the optimization of the SSC (27).</p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>The SSC, otherwise known as the reverse action of muscles, is a spring-like mechanism shown to enhance <a href="https://www.scienceforsport.com/omega-3s-why-they-are-the-real-alphas-of-fat-for-athletic-performance/">athletic performance</a> both in explosive- and endurance-based sports. Well-trained athletes appear to possess better SSC capacities than less- or non-trained individuals and thus highlight the necessity to optimise this property to enhance athleticism. Despite the long list of mechanisms proposed to influence the effects of the SSC, the active state is commonly believed to be the primary contributor. The time to develop mechanical force is negatively affected by the electromechanical delay, and thus attempts to maximise muscular pre-activity via particular training methods (e.g. <a href="https://www.scienceforsport.com/plyometric-training-2/">plyometrics</a>) should be profound.</p><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol><li>Bobbert MF and Casius LJ. Is the countermovement on jump height due to active state development? Med Sci Sport Exerc 37: 440–446, 2005. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/15741843">PubMed]</a></li><li>Turner, A.N. &amp; Jeffreys, I. (2010). The stretch-shortening cycle: proposed mechanisms and methods for enhancement. <em>Journal of Strength and Conditioning Research, 17,</em> 60-67. [<a href="https://www.researchgate.net/publication/232163543_The_Stretch-Shortening_Cycle_Proposed_Mechanisms_and_Methods_for_Enhancement">Link]</a></li><li>Komi PV (1984) Physiological and biomechanical correlates of muscle function: effects of muscle structure and stretch-shortening cycle on force and speed. Exerc Sport Sci Rev 12:81-121 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/6376140">PubMed]</a></li><li>Lloyd, R.S., Oliver, J.L., Hughes, M.G., and Williams, C.A. (2012). The effects of 4-weeks of plyometric training on <a href="https://www.scienceforsport.com/reactive-strength-index/">reactive strength index</a> and leg stiffness in male youths. <em>Journal of Strength and Conditioning Research</em>, 26(10), pp.2812–2819. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/22130392">PubMed]</a></li><li>Zatsiorsky VM and Kraemer WJ. Science and Practice of Strength Training. Champaign, IL: Human Kinetics, 2006. pp. 33–39. [<a href="http://www.humankinetics.com/products/all-products/science-and-practice-of-strength-training-2nd-edition">Link]</a></li><li>Aura O and Viitasalo JT. Biomechanical characteristics of jumping. Int J Sports Biomech 5: 89–97, 1989. [<a href="https://journals.humankinetics.com/view/journals/jab/5/1/article-p89.xml">Link]</a></li><li>McBride JM,McCaulleyGO, and Cormie P. Influence of preactivity and eccentric muscle activity on concentric performance during vertical jumping. J Strength Cond Res 23: 750–757, 2008. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/18438244">PubMed]</a></li><li>McCaulley GO, Cormie P, Cavill MJ, Nuzzo JL, Urbiztondo ZG, and McBride JM. Mechanical efficiency during repetitive vertical jumping. Eur J Appl Physiol 101: 115–123, 2007. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/17530275">PubMed]</a></li><li>Stefanyshyn, D. &amp; Nigg, B. (1998) Contribution of the lower extremity joints to mechanical energy in running vertical jumps and running long jumps. Journal of Sport Sciences, 16, 177-186. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/9531006">PubMed]</a></li><li>Padulo, J, Annino, G, D’Ottavio, S, Vernillo, G, Smith, L, Migliaccio, GM, and Tihanyi, J. Footstep analysis at different slopes and speeds in elite race walking. J Strength Cond Res 27(1): 125–129, 2013 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/22450256">PubMed]</a></li><li>Taylor, M. J. D., &amp; Beneke, R. (2012). Spring Mass Characteristics of the Fastest Men on Earth.<em>International journal of sports medicine</em>, <em>33</em>(8), 667.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/22510798">PubMed</a>]</li><li>Laffaye, G., &amp; Wagner, P. (2013). Eccentric <a href="https://www.scienceforsport.com/rate-of-force-development-rfd-2/">rate of force development</a>determines jumping performance. <em>Computer Methods in Biomechanics and Biomedical Engineering</em>, 16(1), pp.82–83. [<a href="http://www.tandfonline.com/doi/abs/10.1080/10255842.2013.815839?journalCode=gcmb20">Link]</a></li><li>Ball, NB, Stock, CG, and Scurr, JC. Bilateral contact ground reaction forces and contact times during plyometric drop jumping. J Strength Cond Res 24(10): 2762–2769, 2010. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/20613651">PubMed]</a></li><li>Walsh, M, Arampatzis, A, Schade, F, and Bruggemann, G. The effect of drop jump starting height and contact time on power, work performed and moment of force. J Strength Cond Res 18: 561–566, 2004. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/15320658">PubMed]</a></li><li>Flanagan EP and Comyns TM. The use of contact time and the reactive strength index to optimise fast stretch-shortening cycle training. Strength Cond J 30: 33– 38, 2008. [<a href="https://www.researchgate.net/publication/232212864_The_Use_of_Contact_Time_and_the_Reactive_Strength_Index_to_Optimize_Fast_Stretch-Shortening_Cycle_Training">Link]</a></li><li>Kobsar, D., &amp; Barden, J. (2011). Contact time predicts coupling time in slow stretch-shortening cycle jumps. <em>Journal of Strength and Conditioning Research,</em> 25(1), pp.51-52. [<a href="http://journals.lww.com/nsca-jscr/Abstract/2011/03001/Contact_Time_Predicts_Coupling_Time_in_Slow.79.aspx?trendmd-shared=0">Link]</a></li><li>Zameziati, K., Morin, J.B., Deiuri, E., Telonio, A., &amp; Belli, A. (2006). Influence of the contact time on coupling time and a simple method to measure coupling time. <em>European Journal of Applied Physiology</em>, 96, pp.752–756. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/16477446">PubMed]</a></li><li>Potteiger JA, Lockwood RH, Haub MD, Dolezal BA, Almuzaini KS, Schroeder JM, and Zebas CJ. Muscle <a href="https://www.scienceforsport.com/a-strength-power-training-decision-tree/">power and fiber characteristics following 8 weeks of plyometric training</a>. J Strength Cond Res 13: 275–279, 1999. [<a href="https://www.researchgate.net/publication/232211979_Muscle_Power_and_Fiber_Characteristics_Following_8_Weeks_of_Plyometric_Training">Link]</a></li><li>Spurrs RW, Murphy AJ, and Watsford ML. The <a href="https://www.scienceforsport.com/sleep-extension-through-napping-may-effect-performance/">effect of plyometric training on distance running performance</a>. Eur J Appl Physiol 89: 1–7, 2003. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/12627298">PubMed]</a></li><li>McBride JM,McCaulleyGO, and Cormie P. influence of preactivity and eccentric muscle activity on concentric performance during vertical jumping. J Strength Cond Res 23: 750–757, 2008. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/18438244">PubMed]</a></li><li>Myer GD, Ford KR, Brent JL, and Hewett TE. The effects of plyometric vs. dynamic stabilization and balance training on power, balance, and landing force in female athletes. J Strength Cond Res 20: 345–353, 2006. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/16686562">PubMed]</a></li><li>Bosco C, Komi PV, and Ito A. Pre-stretch potentiation of human skeletal muscle during ballistic movement. Acta Physiol Scand 111: 135–140, 1981. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/7282389">PubMed]</a></li><li>Bosco C, Montanari G, Ribacchi R, Giovenali P, Latteri F, Iachelli G, Faina M, Coli R, DalMonte A, Las RosaM, CortelliG, and Saibene F. Relationship between the efficiency of muscular work during jumping and the energetic of running. Eur J Appl Physiol 56: 138–143, 1987. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/3569218">PubMed]</a></li><li>Bobbert MF, Gerritsen KGM, Litjens MCA, and Van Soest AJ. Why is countermovement jump height greater than squat jump height? Med Sci Sports Exerc 28: 1402–1412, 1996. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/8933491">PubMed]</a></li><li>Ettema GJ, Huijing PA, and De Hann A. The potentiating effect of pre-stretch on contractile performance of rat gastrocnemius medialis muscle during subsequent shortening and isometric contractions. J Exp Biology 165: 121– 136, 1992. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/1588248">PubMed]</a></li><li>Finni T, Ikegawa S, Lepola V, and Komi P. In vivo behaviour of vastus lateralis muscle during dynamic performances. Eur J Sport Sci 1: 1–13, 2001. [<a href="http://www.tandfonline.com/doi/abs/10.1080/17461390100071101">Link]</a></li><li>Kyrolainen H, Komi PV, and Kim DH. Effects of <a href="https://www.scienceforsport.com/how-to-implement-strength-and-power-training-principles-into-rehabilitation/">power training</a> on neuromuscular performance and mechanical efficiency. Scand J Med Sci Sports 1: 78–87, 1991. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1600-0838.1991.tb00275.x/abstract">Link]</a></li><li>Schmidtbleicher D, Gollhofer A, and Frick U. Effects of stretch shortening time training on the performance capability and innervation characteristics of leg extensor muscles. In: Biomechanics XI-A (Vol 7-A). DeGroot G, Hollander A, Huijing P, and Van Ingen Schenau G, eds. Amsterdam, the Netherlands: Free University Press, 1988. pp. 185–189. [<a href="https://books.google.com.au/books/about/Biomechanics_XI_A.html?id=_v97SQAACAAJ&redir_esc=y">Link]</a></li><li>Kubo K, Kawakami Y, and Fukunaga T. Influence of elastic properties of tendon structures on <a href="https://www.scienceforsport.com/monitoring-fatigue-are-subjective-wellness-jumping-performance-and-submaximal-running-test-reliable/">jump performance</a> in humans. J Appl Physiol 87: 2090–2096, 1999. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/10601154">PubMed]</a></li><li>Lichtwark GA, and Wilson AM. Is Achilles tendon compliance optimised for maximum muscle efficiency during locomotion? J Biomech 40: 1768–1775, 2007. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/17101140">PubMed]</a></li><li>Hobara H, Kimura K, Omuro K, Gomi K. Muraoka T, Iso S, and Kanosue K. Determinants of difference in leg stiffness between endurance- and power-trained athletes. J Biomech 41: 506–514, 2008. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/18062979">PubMed]</a></li><li>Arampatzis A, Karamanidis K, Morey- Klapsing G, De Monte G, and Stafilidis S. Mechanical properties of the triceps surae tendon and aponeurosis in relation to intensity of sport activity. J Biomech 40: 1946–1952, 2007. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/17101142">PubMed]</a></li><li>Dalleau G, Belli A, Bourdin M, and Lacour JR. The spring-mass model and the energy cost of treadmill running. Eur J Appl Physiol Occup Physiol 77: 257–263, 1998. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/9535587">PubMed]</a></li><li>Voigt M, Bojsen-Moller F, Simonsen EB, and Dyhre-Poulsen P. The influence of tendon Youngs modulus, dimensions and instantaneous moment arms on the efficiency of human movement. J Biomech 28: 281–291, 1995. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/7730387">PubMed]</a></li><li>Verkhoshansky YV. Quickness and velocity in sports movements. N Stud Athletics. 11: 29–37, 1996. [<a href="https://www.google.com.au/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwipnYCGquzKAhWGspQKHY2hB2QQFggcMAA&url=http://www.iaaf.org/download/downloadnsa?filename=4b717228-d483-4074-952a-26eacf94b253.pdf&urlslug=quickness-and-velocity-in-sports-movements&usg=AFQjCNFm_wOXPr4WcBEPoq50xPc-lYKszg&sig2=AY-zt1vx9u1Hl71uYO1A2g">Link]</a></li><li>Heise GD and Martin PE. ‘‘Leg spring’’ characteristics and the aerobic demand of running. Med Sci Sports Exerc 30: 750– 754, 1998. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/9588619">PubMed]</a></li><li>Goldspink G. Muscle energetic and animal locomotion: In Mechanics and Energetic of Animal Locomotion. Alexander Mc and Goldspink G, eds. London, United Kingdom: Chapman and Hill, 1977. pp. 57–81. [<a href="http://www.amazon.com/Mechanics-energetics-locomotion-McNeill-Alexander/dp/0470991852">PubMed]</a></li><li>Wilson, G.J., Murphy, A.J., and Pryor, J.F. (1994). Musculotendinous stiffness: Its relationship to eccentric, isometric, and concentric performance. <em>Journal of Applied Physiology</em>, 76(1), pp.2714–2719. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/7928905">PubMed]</a></li><li><em>McArdle, W.D., Katch, F.I., Katch, L.K., (2010). Exercise physiology: Nutrition, energy, and human performance, 7th</em> London: Lippincott Williams &amp; Wilkins. [<a href="http://www.amazon.com/Exercise-Physiology-Nutrition-Performance-Lippincott/dp/0781797810">Link]</a></li><li>Butler, R.J., Crowell, H.P., and Davis, I.M. (2003). Lower extremity stiffness: Implications for performance and injury. <em>Clinical Biomechanics</em>, 18(1), pp.511–517. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/12828900">PubMed]</a></li><li>Bosco, C., Komi, P.V., and Ito, A. (1981). Pre-stretch potentiation of human skeletal muscle during ballistic movement. <em>Acta Physiologica Scandinavica,</em> 111(17), pp.135–140. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/7282389">PubMed]</a></li><li>Kubo K, Morimoto M, Komuro T, Yata H, Tsunoda N, Kanehisa H, and Fukunga T. Effects of plyometric and weight <a href="https://www.scienceforsport.com/which-to-choose-to-maximise-performance-in-team-sports-complex-or-contrast-training/">training on muscle-tendon complex and jump performance</a>. Med Sci Sports Exerc 39: 1801–1810, 2007. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/17909408">PubMed]</a></li><li>Thompson DD and Chapman AE. The mechanical response of active human muscle during and after stretch. Eur J Appl Physiol 57: 691–697, 1998. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/3416853">PubMed]</a></li><li>Van Ingen Schenau GJ, Bobbert MF, and De Hann A. Mechanics and energetics of the stretch shortening cycle: A stimulating discussion. J Appl Biomech 13: 484– 496, 1997. [<a href="https://www.researchgate.net/publication/229071227_Mechanics_and_energetics_of_the_stretch-shortening_cycle_A_stimulating_discussion">Link]</a></li><li>Hill, A.V. (1938). The heat of shortening and the dynamic constants of muscle. Proceedings of the Royal Social B, 126, pp.136–195. [<a href="http://rspb.royalsocietypublishing.org/content/126/843/136">Link]</a></li></ol>]]></content>
     
     
     <categories>
       
-      <category>文章</category>
+      <category>转载</category>
       
     </categories>
     
@@ -2572,16 +2349,16 @@
   
   
   <entry>
-    <title>RATE OF FORCE DEVELOPMENT (RFD)</title>
-    <link href="/2023/09/11/RATE-OF-FORCE-DEVELOPMENT-RFD/"/>
-    <url>/2023/09/11/RATE-OF-FORCE-DEVELOPMENT-RFD/</url>
+    <title>「转载」RATE OF FORCE DEVELOPMENT (RFD)</title>
+    <link href="/2023/09/11/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DRATE-OF-FORCE-DEVELOPMENT-RFD/"/>
+    <url>/2023/09/11/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DRATE-OF-FORCE-DEVELOPMENT-RFD/</url>
     
     <content type="html"><![CDATA[<p>原文地址：<a href="https://www.scienceforsport.com/rate-of-force-development-rfd-2/">RATE OF FORCE DEVELOPMENT (RFD)</a></p><p>The Rate of Force Development (RFD) is a measure of explosive strength, and higher RFDs have been linked with better athletic performance.</p><p><strong>Contents of Article</strong></p><ol><li>Summary</li><li>What is the Rate of Force Development (RFD)?</li><li>What impacts the Rate of Force Development?</li><li>Why is the Rate of Force Development important for sports?</li><li>How do you calculate the Rate of Force Development?</li><li>Is the Rate of Force Development valid and reliable?</li><li>How do you improve your Rate of Force Development?</li><li>Conclusion</li><li>References</li><li>About the Author</li></ol><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>The Rate of Force Development (RFD) is a measure of explosive strength, or simply how fast an athlete can develop force. Athletes with a higher RFD have been shown to perform better during numerous physical performance tests. This, therefore, highlights the potential importance this value has in the role of athletic development. </p><p>Whilst many forms of training have been shown to improve the RFD in untrained individuals, only <a href="https://www.scienceforsport.com/how-to-get-started-with-resistance-training-what-you-need-to-know/">resistance</a> and <a href="https://www.scienceforsport.com/ballistic-training/">ballistic training</a> have been shown to enhance this quality in trained athletes. Lastly, though there are multiple ways to measure the RFD, the time-interval sampling windows appear to be the most reliable.</p><h2 id="What-is-the-Rate-of-Force-Development"><a href="#What-is-the-Rate-of-Force-Development" class="headerlink" title="What is the Rate of Force Development?"></a>What is the Rate of Force Development?</h2><p>The RFD is a measure of explosive strength, or simply how fast an athlete can develop force – hence the ‘rate’ of ‘force development’. This is defined as the speed at which the contractile elements of the muscle can develop force (1). Therefore, improving an athlete’s RFD may make them more explosive as they can develop larger forces in a shorter period of time. Developing a more explosive athlete may improve their sporting performance. In fact, higher RFDs have been directly linked with better jump (2-8), sprint (9), cycling (10), weightlifting (5, 6), and even golf swing performances (11).</p><p>The RFD is commonly believed to be manifested during the <a href="http://www.scienceforsport.com/stretch-shortening-cycle/">stretch-shortening cycle (SSC)</a>. Depending upon the duration of <a href="https://www.scienceforsport.com/stretch-shortening-cycle/">SSC</a>, exercises are classified as either slow- (≥ 250 milliseconds) or fast-SSC (≤ 250 milliseconds) movements (12). For example, a <a href="https://www.scienceforsport.com/countermovement-jump-cmj/">counter-movement jump</a> (CMJ) is classified as a slow-SSC movement as the duration of the SSC lasts approximately 500 milliseconds (3). On the other hand, sprinting is classified as a fast-SSC movement as the duration of the SSC lasts between 80-90 milliseconds (13). Table 1 displays the SSC durations of some common exercises.</p><p>Table 1. SSC durations of common exercises.</p><table><thead><tr><th>Exercise</th><th>SSC Duration (Ms)</th><th>SSC Classification</th></tr></thead><tbody><tr><td>Race Walking (14)</td><td>270-300</td><td>Slow</td></tr><tr><td>Sprinting (13)</td><td>80-90</td><td>Fast</td></tr><tr><td>Countermovement Jump (CMJ) (3)</td><td>500</td><td>Slow</td></tr><tr><td>Drop Jump (20cm - 60cm) (15, 16)</td><td>130-300</td><td>Fast &#x2F; Slow</td></tr><tr><td>Long Jump (17)</td><td>140-170</td><td>Fast</td></tr><tr><td>Multiple Hurdle Jumps (18)</td><td>150</td><td>Fast</td></tr></tbody></table><p>Because the movement is slower, exercises with slow-SSC have a longer timeframe to develop force than those with a fast-SSC; this means slow-SSC exercises can typically create higher peak forces (7, 19). However, as there is typically less urgency to develop force during the slow-SSC movements, they often do not develop force as quickly as fast-SSC movements. This means that exercises with a slow-SSC produce lower RFDs than fast-SSC movements (7, 19). Therefore, slow-SSC exercises produce higher peak forces, but lower RFD than fast-SSC movements.</p><p>On the other hand, as it takes 140-710 milliseconds to develop peak force during various jump exercises (7, 5, 20), fast-SSC exercises may struggle to produce peak forces because the <a href="https://www.scienceforsport.com/stretch-shortening-cycle/">SSC</a> simply does not last long enough. Whilst they may not be capable of producing peak forces, they can produce large a RFD due to the speed of the movement (Table 2).</p><p>Table 2. Differences between force-time characteristics of various exercises.</p><table><thead><tr><th>Exercise</th><th>Peak Force(N)</th><th>Time to Peak Force(s)</th><th>Peak RFD</th><th>Time to Peak RFD</th></tr></thead><tbody><tr><td>Isometric Mid-Thigh Pull</td><td>3177</td><td>0.25</td><td>22008</td><td>0.12</td></tr><tr><td>Mid-Thigh Clean Pull @ 90% of 1RM</td><td>2327</td><td>0.25</td><td>23472</td><td>0.14</td></tr><tr><td>Mid-Thigh Clean Pull @ 30% of 1RM</td><td>1817</td><td>0.15</td><td>27607</td><td>0.09</td></tr><tr><td>Countermovement Jump (CMJ)</td><td>1449</td><td>0.39</td><td>12093</td><td>0.26</td></tr><tr><td>Squat Jump (SJ)</td><td>1663</td><td>0.32</td><td>11529</td><td>0.19</td></tr></tbody></table><p>Data extracted from experienced male weightlifters Kawamori et al., (7).</p><p>It is suggested that exercises characterised by larger joint displacements (i.e. work through a larger range of movement) are typically categorised as slow-SSC movements. Whereas exercises with smaller joint displacements are commonly referred to as fast-SSC movements (21). For example, a <a href="https://www.scienceforsport.com/countermovement-jump-cmj/">CMJ</a> (slow-SSC movement) experiences larger joint displacements than sprinting (fast-SSC) (Figure 1). This helps to dissociate between what are slow-SSC movements and what are fast-SSC movements when no research has determined what classification they belong to.</p><p><img src="https://www.scienceforsport.com/wp-content/uploads/2016/01/Figure-1-CMJ-and-Sprint-Joint-Angles.jpg"></p><h2 id="What-impacts-the-Rate-of-Force-Development"><a href="#What-impacts-the-Rate-of-Force-Development" class="headerlink" title="What impacts the Rate of Force Development?"></a>What impacts the Rate of Force Development?</h2><p>Improvements in RFD are likely to be the result of increases in muscle-tendon stiffness (22, 23), enhanced muscle force production via changes in muscle fibre type or type area (from type I to type IIA) (24, 25), and increases in neural drive during the early phase of the <a href="https://www.scienceforsport.com/stretch-shortening-cycle/">SSC</a> (&lt; 100 ms) (26, 27). In contrast, RFD appears to be negatively affected by changes in muscle fibre type (from type IIX to type IIA) (28), and increases in fascicle length (causing reduced muscle stiffness) (29).</p><h2 id="Why-is-the-Rate-of-Force-Development-important-for-sports"><a href="#Why-is-the-Rate-of-Force-Development-important-for-sports" class="headerlink" title="Why is the Rate of Force Development important for sports?"></a>Why is the Rate of Force Development important for sports?</h2><p>As <a href="https://www.scienceforsport.com/max-power-the-keys-to-getting-the-most-out-of-power-training/">power</a> is a key determinant in the performances of many sports, optimising an athlete’s explosiveness may be of great importance (30-35). Research has identified that RFD has been directly linked to performances during jumping (2-8), <a href="https://www.scienceforsport.com/olympic-weightlifting/">weightlifting</a>(5, 6), cycling (10), sprinting (9), and even during the golf swing (11) – suggesting a better RFD can lead to better athletic performance. Moreover, elite sprinters have been shown to possess greater RFD than well-trained sprinters (9). Collectively, this information suggests that RFD may be an important contributor to athletic performance.</p><ul><li>RFD linked to better jump, sprint, cycling, <a href="https://www.scienceforsport.com/olympic-weightlifting/">weightlifting,</a> and golf swing performances</li><li>Elite-level sprinters have better RFD than well-trained sprinters</li><li>Power-trained athletes have greater RFD than non-power-trained athletes (36).</li><li>Power-trained athletes have greater RFD than endurance athletes (36).</li></ul><h2 id="How-do-you-calculate-the-Rate-of-Force-Development"><a href="#How-do-you-calculate-the-Rate-of-Force-Development" class="headerlink" title="How do you calculate the Rate of Force Development?"></a>How do you calculate the Rate of Force Development?</h2><p>As RFD is an expression of explosive strength, it is measured in Newtons per second squared (N·s-1). The RFD can be calculated for isometric, concentric and eccentric muscle contractions, with the latter two otherwise referred to in the research as the ‘positive’ and ‘negative’ acceleration phases of the <a href="https://www.scienceforsport.com/stretch-shortening-cycle/">SSC</a> (2, 3). In fact, one study suggests that eccentric RFD is a better predictor of jump performance than concentric RFD because it summarises several intrinsic properties of muscle and tendons during a key moment (2). However, this is yet to be validated by other research.</p><p>Multiple measures of RFD have been developed in order to measure various components of performance during both isometric and dynamic movements:</p><ol><li>Average RFD or IES (Index of Explosiveness) (2, 3, 5, 6, 8, 9, 11, 37, 38)</li><li>Time-interval RFD (11, 39)</li><li>Instantaneous RFD (40, 41)</li><li>Peak or maximal RFD (42, 4, 5, 7, 10, 11, 36)</li><li>Time to peak RFD (11, 7)</li></ol><p><strong>Average RFD</strong></p><p>This value is identical to the IES discussed by Zatsiorsky (1995) (37) and is calculated by dividing the peak force by the time to achieve peak force (39). However, this form of measuring average RFD has been shown to have lower levels of reliability in comparison to time-interval RFD and peak RFD (39). These lower levels of reliability may be associated with each athlete’s time to achieve peak force, as not all athletes can achieve peak force in the same time frame. Therefore, measuring RFD using predetermined time intervals can accommodate for these variances.</p><p><strong>How to calculate Average RFD</strong></p><p>Example – Calculating Average RFD</p><p><em>Average RFD</em> <em>[N·s-1] &#x3D; Peak Force [N] &#x2F; Time to achieve peak force [s][&#x2F;toggle]</em></p><p>Time-Interval RFD: Though this measure of RFD is effectively the same as average RFD, it is calculated at various time intervals (e.g. 0-30, 0-50, 0-90, 0-100, 0-150, 0-200, and 0-250 milliseconds [39]). This value simply represents a change in force divided by a change in time. It is calculated by dividing the force at the end of the time interval by the duration of the time interval (39) (Table 3). Just note that when calculating RFD, the time should be calculated in seconds, not milliseconds.</p><p><strong>How to Calculate Time-Interval RFD</strong></p><p>Example – Calculating RFD with a 0-30 millisecond time-interval:</p><p><em>RFD</em> <em>[N·s-1] &#x3D; Change in Force [N] &#x2F; Change in Time [s]</em></p><p><em>RFD</em> <em>[N·s-1] &#x3D; Force [N] at 30 milliseconds &#x2F; 0.03 second time-interval [s]</em></p><p><em>RFD</em> <em>[N·s-1] &#x3D; 50N &#x2F; 0.03s</em></p><p><em>RFD</em> <em>[N·s-1] &#x3D; 1,666</em></p><p>Table 3. Time-interval RFD calculations for the isometric mid-thigh clean pull.</p><table><thead><tr><th>Time(Ms)</th><th>Force(N)</th><th>Change in Force(N)</th><th>Change in Time(s)</th><th>Change in Force &#x2F; Change in Time</th><th>RFD(N·s-1)</th></tr></thead><tbody><tr><td>0-30</td><td>50</td><td>50</td><td>0.03</td><td>50&#x2F;0.03</td><td>1666</td></tr><tr><td>0-50</td><td>180</td><td>180</td><td>0.05</td><td>180&#x2F;0.05</td><td>3600</td></tr><tr><td>0-90</td><td>540</td><td>540</td><td>0.09</td><td>540&#x2F;0.09</td><td>6000</td></tr><tr><td>0-100</td><td>600</td><td>600</td><td>0.1</td><td>590&#x2F;0.1</td><td>5900</td></tr><tr><td>0-150</td><td>850</td><td>850</td><td>0.15</td><td>850&#x2F;0.15</td><td>5666</td></tr><tr><td>0-200</td><td>1200</td><td>1200</td><td>0.2</td><td>1190&#x2F;0.2</td><td>5950</td></tr><tr><td>0-250</td><td>1400</td><td>1400</td><td>0.25</td><td>1400&#x2F;0.25</td><td>5600</td></tr></tbody></table><p>This data is adapted from the data reported by (11).</p><p>The <a href="https://www.scienceforsport.com/what-do-strength-and-conditioning-coaches-do-and-how-can-you-get-a-job-in-the-sc-industry/">strength and conditioning coach </a>should select the time intervals they wish to use based upon the nature of the exercise. For example, if the exercise has a fast-<a href="https://www.scienceforsport.com/stretch-shortening-cycle/">SSC</a>movement (e.g. Sprinting – 80-90 milliseconds), then it may be suggested that time intervals of ≤ 100 milliseconds may be most appropriate (e.g. 0-50, 0-90, and 0-100 milliseconds). Furthermore, the early time intervals (&lt; 100 ms) are often referred to as ‘early phase’ RFD, whilst &gt; 100s time intervals are referred to as ‘late phase’ RFD.</p><p><strong>Instantaneous RFD</strong></p><p>This value is measured by using the maximal tangential slope between two adjacent data points. In other words, the data is recorded using 1 millisecond time intervals, and from this, the change in force is divided by the change in time at every 1 millisecond time interval. As this value of RFD is calculated every 1 millisecond, it provides a very precise measure of RFD.</p><p><strong>Peak or Maximal RFD</strong></p><p>This value of RFD is really as simple as it sounds, it is the largest amount of RFD produced during the movement. Most commonly, the value is identified by measuring the peak RFD during numerous sampling windows of 1, 2, 5, 10, 20, 30, and 50 (40, 39). For example, if the strength and conditioning coach selected a sampling window of 5 milliseconds, they would measure peak RFD every 5 milliseconds (e.g. 0-5, 5-10, and 10-15 milliseconds and so forth). They would then simply identify the largest RFD value out of those recorded – this value is then the peak RFD. Whilst all of these sampling windows have been reported as reliable measures of peak RFD, the 20 millisecond sampling window has been shown to be the most reliable (39). Table 4 demonstrates how to identify peak RFD during an isometric performance.</p><p>Table 4. Peak RFD calculations using 50-millisecond sampling windows.</p><table><thead><tr><th>Time(Ms)</th><th>Force(N)</th><th>Change in Force(N)</th><th>Change in Time(s)</th><th>Change in Force &#x2F; Change in Time</th><th>RFD(N·s-1)</th></tr></thead><tbody><tr><td>0-50</td><td>180</td><td>180</td><td>0.05</td><td>180&#x2F;0.05</td><td>3600</td></tr><tr><td>50-100</td><td>600</td><td>420</td><td>0.05</td><td>420&#x2F;0.05</td><td>8400</td></tr><tr><td>100-150</td><td>850</td><td>250</td><td>0.05</td><td>250&#x2F;0.05</td><td>5000</td></tr><tr><td>150-200</td><td>1200</td><td>350</td><td>0.05</td><td>350&#x2F;0.05</td><td>7000</td></tr><tr><td>200-250</td><td>1400</td><td>200</td><td>0.05</td><td>200&#x2F;0.05</td><td>4000</td></tr></tbody></table><table><thead><tr><th align="right">Peak RFD</th><th>8400</th></tr></thead><tbody><tr><td align="right">Time to Peak RFD (Ms)</td><td>100</td></tr><tr><td align="right">Average RFD (peak force &#x2F; time to peak force)</td><td>5600</td></tr></tbody></table><p>From this data, the coach is able to calculate the athlete’s peak RFD, time to peak RFD and average RFD. These variables are useful tools for comparing a group of athletes to identify who the best and worst individuals are at developing force quickly.</p><p><strong>Time to Peak RFD</strong></p><p>As displayed in Table 4, this value of RFD is extremely straightforward. It is a useful tool for measuring performance as it provides the coach with information on how quickly the athlete is able to achieve their maximal explosive strength (i.e. peak RFD). Decreasing an athlete’s time to achieve peak RFD will allow them to produce higher forces in shorter periods of time, and therefore may increase their explosiveness and overall athletic performance.</p><h2 id="Is-the-Rate-of-Force-Development-valid-and-reliable"><a href="#Is-the-Rate-of-Force-Development-valid-and-reliable" class="headerlink" title="Is the Rate of Force Development valid and reliable?"></a>Is the Rate of Force Development valid and reliable?</h2><p>The RFD and its various measures (Average RFD, Time-Interval RFD, Peak RFD, and Time to Peak RFD) have all been shown to be valid and reliable tools for assessing explosive strength (11, 39). However, the most reliable measures for assessing RFD appears to be any of the time-interval sampling windows (i.e. 0-30, 0-50, 0-90, 0-100, 0-150, 0-200, and 0-250 milliseconds), and peak RFD using 20 millisecond windows (39). It is therefore recommended that these two variables should be preferable when measuring RFD.</p><h2 id="How-do-you-improve-your-Rate-of-Force-Development"><a href="#How-do-you-improve-your-Rate-of-Force-Development" class="headerlink" title="How do you improve your Rate of Force Development?"></a>How do you improve your Rate of Force Development?</h2><p>Increasing the RFD whilst simultaneously reducing the time in which peak RFD occurs, will result in a left and upward shift in the force-time curve (Figure 2). This left and upward shift enables the athlete to produce greater forces in a shorter period of time, ultimately improving their explosiveness.</p><p><img src="https://www.scienceforsport.com/wp-content/uploads/2016/03/Figure-2-Shift-in-the-Force-Time-curve-after-a-sucessful-training-programme..png"></p><p>It is often suggested that athletes must train at various sections along the force-time curve if improvements in RFD are to occur. By only training on one part of the force-time curve (e.g. maximum strength), it is likely the athlete will only improve their performance at that section on the paradigm. For example, only training maximal strength may lead to improvements in force production, but it may also result in a reduction in the time to achieve that force (Figure 3).</p><p>As training programmes that combine strength and power training have been repeatedly shown to improve athletic performance more than strength or speed training alone (43), there is no surprise that most exercise professionals commonly use an all-rounded approach within their programming.</p><p><img src="https://www.scienceforsport.com/wp-content/uploads/2016/03/Figure-3-Force-time-curve-after-training-specifc-elements.png"></p><p>The following types of training have all shown to improve RFD:</p><ul><li>Resistance training (44, 45, 46, 47, 48)</li><li><a href="https://www.scienceforsport.com/ballistic-training/">Ballistic training</a> (49, 50, 51, 52)</li><li><a href="https://www.scienceforsport.com/olympic-weightlifting/">Olympic Weightlifting</a> (53)</li><li><a href="https://www.scienceforsport.com/plyometric-training/">Plyometric training</a> (54, 55, 50, 56)</li><li><a href="https://www.scienceforsport.com/nba-training-secrets-how-the-worlds-biggest-and-best-balance-training-and-games/">Balance training</a> (57, 58)</li></ul><p>However, only those listed below have shown RFD improvements in trained or athletic subjects:</p><ul><li>Resistance training (59, 60, 61, 62, 63)</li><li>Ballistic training (51, 52)</li></ul><p>So whilst numerous training methods have been shown to improve RFD in untrained and elderly males and females, little research has shown RFD improvements in trained or athletic subjects.</p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>RFD is a reliable measure of explosive strength, with higher RFDs have been linked with better athletic performance. Improvements in RFD are likely to be the result of increases in muscle-tendon stiffness, enhanced muscle force production via changes in muscle fibre type (from type I to type IIA), and increases in neural drive. </p><p>The most reliable values for measuring this component of performance appear to be calculating RFD at various time intervals and peak RFD using 20-millisecond sampling windows. Though various methods of training have been shown to improve performance (resistance, ballistic, <a href="https://www.scienceforsport.com/olympic-weightlifting/">Olympic Weightlifting</a>, <a href="https://www.scienceforsport.com/plyometric-training/">plyometrics</a>, and balance training), only resistance and ballistic training have been proven to increase RFD in trained and athletic populations.</p><p><img src="https://www.scienceforsport.com/wp-content/uploads/2016/03/Rate-of-Force-Development.jpg"></p><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol><li>Aagaard P., Simonsen E.B., Andersen J.L., Magnusson P., and Dyhre-Poulsen P. (2002) Increased rate of force development and neural drive of human skeleton muscle following resistance training. <em>J Appl Physiol</em> 93: 1318-1326. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/12235031">PubMed]</a></li><li>Laffaye, G., &amp; Wagner, P. (2013). Eccentric rate of force development determines jumping performance. <em>Computer Methods in Biomechanics and Biomedical Engineering</em>, 16(1), pp.82–83. [<a href="https://www.researchgate.net/publication/244987434_Eccentric_rate_of_force_development_determines_jumping_performance">Link]</a></li><li>Laffaye, G, Wagner, PP, and Tombleson, TIL. Countermovement jump height: Gender and sport-specific differences in the forcetime variables. J Strength Cond Res 28(4): 1096–1105, 2014 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/23838969">PubMed]</a></li><li>Haff, GG, Carlock, JM, Hartman, MJ, Kilgore, JL, Kawamori, N, Jackson, JR, Morris, RT, Sands, WA, and Stone, MH. Force-time curve characteristics of dynamic and isometric muscle actions of elite women Olympic weightlifters. J Strength Cond Res 19: 741–748, 2005. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/16287343">PubMed]</a></li><li>McLellan, CP, Lovell, DI, and Gass, GC. The role of rate of force development on vertical jump performance. J Strength Cond Res 25(2): 379–385, 2011 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/20093963">PubMed]</a></li><li>Haff, GG, Stone, MH, O’Bryant, HS, Harman, E, Dinan, CN, Johnson, R, and Han, KH. Force-time dependent characteristics of dynamic and isometric muscle actions. J Strength Cond Res 11: 269– 272, 1997. [<a href="http://journals.lww.com/nsca-jscr/Abstract/1997/11000/Force_Time_Dependent_Characteristics_of_Dynamic.14.aspx">Link]</a></li><li>Kawamori, N, Rossi, SJ, Justice, BD, Haff, EE, Pistilli, EE, O’Bryant, HS, Stone, MH, and Haff, GG. Peak force and rate of force development during isometric and dynamic mid-thigh clean pulls performed at various intensities. J Strength Cond Res 20: 483–491, 2006. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/16937959">PubMed]</a></li><li>Nuzzo, JL, McBride, JM, Cormie, P, and McCaulley, GO. Relationship between countermovement jump performance and multijoint isometric and dynamic tests of strength. J Strength Cond Res 22: 699–707, 2008. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/18438251">PubMed]</a></li><li>Slawinski, J, Bonnefoy, A, Leveˆque, JM, Ontanon, G, Riquet, A, Dumas, R, and Che&#96; ze, L. Kinematic and kinetic comparisons of elite and well-trained sprinters during sprint start. J Strength Cond Res 24(4): 896–905, 2010 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/19935105">PubMed]</a></li><li>Stone, MH, Sands, WA, Carlock, J, Callan, S, Dickie, D, Daigle, K, Cotton, J, Smith, SL, and Hartman, M. The importance of isometric maximum strength and peak rate-of-force development in sprint cycling. J Strength Cond Res 18(4): 878–884, 2004. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/15574097">PubMed]</a></li><li>Leary, BK, Statler, J, Hopkins, B, Fitzwater, R, Kesling, T, Lyon, J, Phillips, B, Bryner, RW, Cormie, P, and Haff, GG. The relationship between isometric force-time curve characteristics and club head speed in recreational golfers. J Strength Cond Res 26: 2685–2697, 2012. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/22797001">PubMed]</a></li><li>Turner, A., and Jeffreys, I. (2010). The Stretch-Shortening Cycle: Proposed Mechanisms and Methods for Enhancement. <em>Strength and Conditioning Journal</em>. 32(4), pp.87-99. [<a href="https://www.researchgate.net/publication/232163543_The_Stretch-Shortening_Cycle_Proposed_Mechanisms_and_Methods_for_Enhancement">PubMed]</a></li><li>Taylor, M. J. D., &amp; Beneke, R. (2012). Spring Mass Characteristics of the Fastest Men on Earth.<em>International journal of sports medicine</em>, <em>33</em>(8), 667.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/22510798">PubMed</a>]</li><li>Padulo, J, Annino, G, D’Ottavio, S, Vernillo, G, Smith, L, Migliaccio, GM, and Tihanyi, J. Footstep analysis at different slopes and speeds in elite race walking. J Strength Cond Res 27(1): 125–129, 2013 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/22450256">PubMed]</a></li><li>Ball, NB, Stock, CG, and Scurr, JC. Bilateral contact ground reaction forces and contact times during plyometric drop jumping. J Strength Cond Res 24(10): 2762–2769, 2010. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/20613651">PubMed]</a></li><li>Walsh, M, Arampatzis, A, Schade, F, and Bruggemann, G. The effect of drop jump starting height and contact time on power, work performed and moment of force. J Strength Cond Res 18: 561–566, 2004. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/15320658">PubMed]</a></li><li>Stefanyshyn, D. &amp; Nigg, B. (1998) Contribution of the lower extremity joints to mechanical energy in running vertical jumps and running long jumps. Journal of Sport Sciences, 16, 177-186.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/9531006">PubMed]</a></li><li>Flanagan EP and Comyns TM. The use of contact time and the <a href="https://www.scienceforsport.com/reactive-strength-index/">reactive strength index</a> to optimise fast stretch-shortening cycle training. Strength Cond J 30: 33– 38, 2008. [<a href="https://www.researchgate.net/publication/232212864_The_Use_of_Contact_Time_and_the_Reactive_Strength_Index_to_Optimize_Fast_Stretch-Shortening_Cycle_Training">Link]</a></li><li>Jensen, R.L., Flanagan, E.P., &amp; Ebben, W.P. (2008). Rate of force development and time to peak force during plyometric exercises. <em>Musculoskeletal Mechanics</em>, ISBS Conference 2008, July 14-18, 2008, Seoul, Korea. 199-202. [<a href="https://ojs.ub.uni-konstanz.de/cpa/article/view/2023">Link]</a></li><li>Markstrom, JL and Olsson, CJ. Countermovement jump peak force relative to body weight and jump height as predictors for sprint running performances: (In)homogeneity of track and field athletes? J Strength Cond Res 27(4): 944–953, 2013 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/22692108">PubMed]</a></li><li>Ebben WP, Flanagan EP, Jensen RJ. Gender Similarities in Rate of Force Development and Time to Takeoff during the Countermovement Jump. Journal of Exercise Physiology, 2007;10(6):10-17. [<a href="https://www.researchgate.net/publication/231424259_Gender_similarities_in_rate_of_force_development_and_time_to_takeoff_during_the_countermovement_jump">Link]</a></li><li>Kubo, K., Kanehisa, H., Ito, M., &amp; Fukunaga, T. (2001). Effects of isometric training on the elasticity of human tendon structures in vivo. Journal of Applied Physiology, 91(1), 26-32.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/11408409">PubMed</a>]</li><li>Burgess, K. E., Connick, M. J., Graham-Smith, P., &amp; Pearson, S. J. (2007). Plyometric vs. isometric training influences on tendon properties and muscle output. The Journal of Strength &amp; Conditioning Research, 21(3), 986-989.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/17685695">PubMed</a>]</li><li>Häkkinen, K., Alen, M., Kraemer, W. J., Gorostiaga, E., Izquierdo, M., Rusko, H., &amp; Paavolainen, L. (2003). Neuromuscular adaptations during concurrent strength and endurance training versus strength training. European journal of applied physiology, 89(1), 42-52.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/12627304">PubMed</a>]</li><li>Aagaard, P., Simonsen, E. B., Andersen, J. L., Magnusson, P., &amp; Dyhre-Poulsen, P. (2002a). Increased rate of force development and neural drive of human skeletal muscle following resistance training. Journal of applied physiology, 93(4), 1318-1326.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/12235031">PubMed</a>]</li><li>Van Cutsem, M., Duchateau, J., &amp; Hainaut, K. (1998). Changes in single motor unit behaviour contribute to the increase in contraction speed after dynamic training in humans. The Journal of Physiology, 513(Pt 1), 295.[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2231276/">PubMed</a>]</li><li>Vila-Chã, C., Falla, D., Correia, M. V., &amp; Farina, D. (2012). Changes in H reflex and V wave following short-term endurance and strength training. Journal of Applied Physiology, 112(1), 54-63.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/21998264">PubMed</a>]</li><li>Andersen, L. L., Andersen, J. L., Zebis, M. K., &amp; Aagaard, P. (2010). Early and late rate of force development: differential adaptive responses to resistance training?. Scandinavian journal of medicine &amp; science in sports, 20(1), e162-e169.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/19793220">PubMed</a>]</li><li>Blazevich, A. J., Cannavan, D., Horne, S., Coleman, D. R., &amp; Aagaard, P. (2009). Changes in muscle force-length properties affect the early rise of force in vivo. Muscle &amp; nerve, 39(4), 512.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/19296490">PubMed</a>]</li><li>Baker, D and Nance, S. (1999). The relation between strength and power in professional rugby league players. Journal of Strength and Conditioning Research, 13: 224–229. [<a href="https://www.researchgate.net/publication/232100672_The_Relation_Between_Strength_and_Power_in_Professional_Rugby_League_Players">Link]</a></li><li>Comfort, P, Allen, M, and Graham-Smith, P. (2011a). Kinetic comparisons during variations of the power clean. Journal of Strength and Conditioning Research, 25: 3269– 3273. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/22080325">PubMed]</a></li><li>Comfort, P, Fletcher, C, and McMahon, JJ. (2012). Determination of optimal load during the power clean in collegiate athletes. Journal of Strength and Conditioning Research, 26: 2970–2974. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/22190161">PubMed]</a></li><li>Cormie, P, McBride, JM, and McCaulley, GO. (2007). Validation of power measurement techniques in dynamic lower body resistance exercises. J Appl Biomech 23: 103–118. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/17603130">PubMed]</a></li><li>Cronin, J, McNair, PJ, and Marshall, RN. (2001). <a href="https://www.scienceforsport.com/power-development-how-one-simple-test-can-take-you-to-the-next-level/">Developing explosive power:</a> A comparison of technique and training. J Sci Med Sport 4: 59–70. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/11339494">PubMed]</a></li><li>Garhammer, J. &amp; Gregor, R. (1992). Propulsion Forces as a Function of Intensity for Weightlifting and Vertical Jumping, J. Appl. Sports Sci. Research, 6(3): 129-134. [<a href="https://www.google.com.au/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwi1ysHItOfKAhULFJQKHdwXACwQFggcMAA&url=http://web.csulb.edu/~atlastwl/Propulsive_Forces_WL_VJ_JASSR1992.pdf&usg=AFQjCNHId0Sx525QKsSIdQZY_o6-4w3v6w&sig2=seDtUrzl1Kb1T2oQqe2acg">Link]</a></li><li>Hakkinen, K., and E. Myllyla. Acute effects of muscle fatigue and recovery on force production and relaxation in endurance, power and strength athletes. <em>Sports Med. Phys. Fitness</em> 30: 5–12. 1990. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/2195236">PubMed]</a></li><li>Zatsiorsky, VM. Science and Practice of Strength Training. Champaign, IL: Human Kinetics, 1995. [<a href="http://www.humankinetics.com/products/all-products/science-and-practice-of-strength-training-2nd-edition">Link]</a></li><li>Comfort, P., Udall, R., &amp; Jones, P.A. (2012). The effect of loading on kinematic and kinetic variables during the mid-thigh clean pull. Journal of Strength and Conditioning Research. 26(5):1208-14, [<a href="http://www.ncbi.nlm.nih.gov/pubmed/22516901">PubMed]</a></li><li>Haff, GG, Ruben, RP, Lider, J, Twine, C, and Cormie, P. A comparison of methods for determining the rate of force development during isometric midthigh clean pulls. J Strength Cond Res 29(2): 386–395, 2015 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/25259470">PubMed]</a></li><li>Comfort, P, Allen, M, and Graham-Smith, P. Comparisons of peak ground reaction force and rate of force development during variations of the power clean. J Strength Cond Res 25(5): 1235–1239, 2011a [<a href="http://www.ncbi.nlm.nih.gov/pubmed/21522071">PubMed]</a></li><li>Comfort, P, Allen, M, and Graham-Smith, P. Kinetic comparisons during variations of the power clean. J Strength Cond Res 25(12): 3269–3273, 2011b [<a href="http://www.ncbi.nlm.nih.gov/pubmed/22080325">PubMed]</a></li><li>Wilson, G.J., Lyttle, A.D., Ostrowski, K.J., &amp; Murphy, A.J. (1995). Assessing dynamic performance: A comparison of rate of force development tests. J Strength Cond Res, 9(3), 176-181. [<a href="https://www.researchgate.net/publication/232100152_Assessing_Dynamic_Performance_A_Comparison_of_Rate_of_Force_Development_Tests">Link]</a></li><li>Stone, M.H., (1993). Literature review: Explosive exercises and training. National Strength and Conditioning Association Journal, 15(3), pp.7-15. [<a href="https://www.google.com.au/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0ahUKEwit6sWwtefKAhWFo5QKHTsrApIQFggyMAI&url=http://www.usrowing.org/docs/default-source/resource-library/10a-6.pdf?sfvrsn=0&usg=AFQjCNFyUeeVxyWIRa90OE4P5tkFs_PSmw&sig2=2SYnwYPgctHcjAWQndBjAQ">Link]</a></li><li>Thompson, B. J., Stock, M. S., Shields, J. E., Luera, M. J., Munayer, I. K., Mota, J. A., &amp; Olinghouse, K. D. (2015). Barbell deadlift training increases the rate of torque development and vertical jump performance in novices. The Journal of Strength &amp; Conditioning Research, 29(1), 1-10.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/25226322">PubMed</a>]</li><li>Unhjem, R., Lundestad, R., Fimland, M. S., Mosti, M. P., Wang, E. (2015) Strength training-induced responses in older adults: attenuation of descending neural drive with age. Age. [<a href="http://www.ncbi.nlm.nih.gov/pubmed/25940749">PubMed</a>]</li><li>Mosti, M. P., Carlsen, T., Aas, E., Hoff, J., Stunes, A. K., &amp; Syversen, U. (2014). Maximal Strength Training Improves Bone Mineral Density and Neuromuscular Performance in Young Adult Women. The Journal of Strength &amp; Conditioning Research, 28(10), 2935-2945.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/24736773">PubMed</a>]</li><li>Oliveira, F. B., Oliveira, A. S., Rizatto, G. F., &amp; Denadai, B. S. (2013a). Resistance training for explosive and maximal strength: effects on early and late rate of force development. Journal of sports science &amp; medicine, 12(3), 402.[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3772581/">PubMed</a>]</li><li>Branislav, R., Milivoj, D., Abella, C. P., Deval, V. C., &amp; Siniša, K. (2013). Effects of combined and classic training on different isometric rate of force development parameters of leg extensors in female volleyball players: Discriminative analysis approach. Journal of research in medical sciences: the official journal of Isfahan University of Medical Sciences, 18(10), 840.[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3897066/">PubMed</a>]</li><li>Kramer, A., Ritzmann, R., Gruber, M., &amp; Gollhofer, A. (2012). Four weeks of training in a sledge jump system improved the jump pattern to almost natural reactive jumps. European journal of applied physiology, 112(1), 285.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/21544569">PubMed</a>]</li><li>De Villarreal, E. S. S., Izquierdo, M., &amp; Gonzalez-Badillo, J. J. (2011). Enhancing jump performance after combined vs. maximal power, heavy-resistance, and <a href="https://www.scienceforsport.com/plyometric-training-2/">plyometric training</a> alone. The Journal of Strength &amp; Conditioning Research, 25(12), 3274-3281.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/22082794">PubMed</a>]</li><li>Newton, R. U., Kraemer, W. J., &amp; Häkkinen, K. (1999). Effects of ballistic training on preseason preparation of elite volleyball players. Medicine and science in sports and exercise, 31(2), 323.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/10063823">PubMed</a>]</li><li>Cormie, P., McGuigan, M. R., &amp; Newton, R. U. (2010). Influence of strength on magnitude and mechanisms of adaptation to power training. Medicine and science in sports and exercise, 42(8), 1566.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/20639724">PubMed</a>]</li><li>Haff, G. G., Jackson, J. R., Kawamori, N., Carlock, J. M., Hartman, M. J., Kilgore, J. L., &amp; Stone, M. H. (2008). Force-time curve characteristics and hormonal alterations during an eleven-week training period in elite women weightlifters. Journal of strength and conditioning research, 22(2), 433-446.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/18550958">PubMed</a>]</li><li>Behrens, M., Mau-Moeller, A., &amp; Bruhn, S. (2014). Effect of plyometric training on neural and mechanical properties of the knee extensor muscles. International journal of sports medicine, 35(2), 101.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/23900900">PubMed</a>]</li><li>Correa, C. S., LaRoche, D. P., Cadore, E. L., Reischak-Oliveira, A., Bottaro, M., Kruel, L. F. M., &amp; Pinto, R. S. (2012). 3 Different types of strength training in older women. International journal of sports medicine, 33(12), 962.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/22782384">PubMed</a>]</li><li>Kyröläinen, H., Avela, J., McBride, J. M., Koskinen, S., Andersen, J. L., Sipilä, S., &amp; Komi, P. V. (2005). Effects of power training on muscle structure and neuromuscular performance. Scandinavian journal of medicine &amp; science in sports, 15(1), 58.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/15679573">PubMed</a>]</li><li>Gruber, M., &amp; Gollhofer, A. (2004). Impact of sensorimotor training on the rate of force development and neural activation. European journal of applied physiology, 92(1-2), 98-105.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/15024669">PubMed</a>]</li><li>Gruber, M., Gruber, S. B., Taube, W., Schubert, M., Beck, S. C., &amp; Gollhofer, A. (2007). Differential effects of ballistic versus sensorimotor training on rate of force development and neural activation in humans. Journal of strength and conditioning research, 21(1), 274.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/17313292">PubMed</a>]</li><li>Ingebrigtsen, J., Holtermann, A., &amp; Roeleveld, K. (2009). Effects of load and contraction velocity during three-week biceps curls training on isometric and isokinetic performance. The Journal of Strength &amp; Conditioning Research, 23(6), 1670-1676.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/19675498">PubMed</a>]</li><li>Lamont, H. S., Cramer, J. T., Bemben, D. A., Shehab, R. L., Anderson, M. A., &amp; Bemben, M. G. (2010). Effects of adding whole body vibration to squat training on isometric force&#x2F;time characteristics. The Journal of Strength &amp; Conditioning Research, 24(1), 171-183.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/19924007">PubMed</a>]</li><li>Lamas, L., Ugrinowitsch, C., Rodacki, A., Pereira, G., Mattos, E. C., Kohn, A. F., &amp; Tricoli, V. (2012). Effects of strength and power training on neuromuscular adaptations and jumping movement pattern and performance. Journal of Strength &amp; Conditioning Research, 26(12), 3335.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/22222321">PubMed</a>]</li><li>Farup, J., Sørensen, H., &amp; Kjølhede, T. (2014). Similar changes in muscle fiber phenotype with differentiated consequences for rate of force development: Endurance versus resistance training. Human movement science, 34, 109-119.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/24530017">PubMed</a>]</li><li>Bazyler, C. D., Sato, K., Wassinger, C. A., Lamont, H. S., &amp; Stone, M. H. (2014). The efficacy of incorporating partial squats in maximal strength training. Journal of strength and conditioning research&#x2F;National Strength &amp; Conditioning Association, 28(11), 3024.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/24662234">PubMed</a>]</li></ol>]]></content>
     
     
     <categories>
       
-      <category>文章</category>
+      <category>转载</category>
       
     </categories>
     
@@ -2606,7 +2383,7 @@
     
     <categories>
       
-      <category>资料整合</category>
+      <category>合集</category>
       
     </categories>
     
@@ -2656,95 +2433,16 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>部署</category>
       
     </categories>
     
     
     <tags>
-      
-      <tag>计算机视觉</tag>
-      
-      <tag>Python</tag>
       
       <tag>深度学习</tag>
       
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Well-being, Flow Experience and Personal Characteristics of Individuals who Do Extreme Sports as Serious Leisure</title>
-    <link href="/2023/09/06/Well-being-Flow-Experience-and-Personal-Characteristics-of-Individuals-who-Do-Extreme-Sports-as-Serious-Leisure/"/>
-    <url>/2023/09/06/Well-being-Flow-Experience-and-Personal-Characteristics-of-Individuals-who-Do-Extreme-Sports-as-Serious-Leisure/</url>
-    
-    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/12AC5B89-A212-4D4C-9180-A48F2FB6DFF5_2/CMVybFFXpxjQzpuBPhwfMONl9DVcQpoKOXGkiBGA9JYz/Well-being%20Flow%20Experience%20and%20Personal%20Characteristics%20of%20Individuals%20who%20Do%20Extreme%20Sports%20as%20Serious%20Leisure.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>运动文献</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>运动心理学</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Peak Moments in Sport - A Literature Review</title>
-    <link href="/2023/09/06/Peak-Moments-in-Sport-A-Literature-Review/"/>
-    <url>/2023/09/06/Peak-Moments-in-Sport-A-Literature-Review/</url>
-    
-    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/C0564B89-023E-4F5D-AD12-900F64D29736_2/cE20Wlyq2UgcQqwRtX6NZjssSDCtNBGxm3XSJGtP2Woz/Peak%20Moments%20in%20Sport%20-%20A%20Literature%20Review.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>运动文献</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>运动心理学</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Peak Experience, Peak Performance, and Flow - A Comparative Analysis of Positive Human Experiences</title>
-    <link href="/2023/09/06/Peak-Experience-Peak-Performance-and-Flow-A-Comparative-Analysis-of-Positive-Human-Experiences/"/>
-    <url>/2023/09/06/Peak-Experience-Peak-Performance-and-Flow-A-Comparative-Analysis-of-Positive-Human-Experiences/</url>
-    
-    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/A8E499E9-9042-4335-9E87-7661FFB215B7_2/jdcLtkey9EjoxrC2b9wP3mvmnbX9o6p6mxXt8z4ywLAz/Peak%20Experience%20Peak%20Performance%20and%20Flow%20-%20A%20Comparative%20Analysis%20of%20Positive%20Human%20Experiences.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>运动文献</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>运动心理学</tag>
+      <tag>Python</tag>
       
     </tags>
     
@@ -2762,9 +2460,7 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>Hexo</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2772,33 +2468,6 @@
     <tags>
       
       <tag>Hexo</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>基于表面肌电信号和动作捕捉的上肢运动疲劳分析</title>
-    <link href="/2023/09/01/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E9%9D%A2%E8%82%8C%E7%94%B5%E4%BF%A1%E5%8F%B7%E5%92%8C%E5%8A%A8%E4%BD%9C%E6%8D%95%E6%8D%89%E7%9A%84%E4%B8%8A%E8%82%A2%E8%BF%90%E5%8A%A8%E7%96%B2%E5%8A%B3%E5%88%86%E6%9E%90/"/>
-    <url>/2023/09/01/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E9%9D%A2%E8%82%8C%E7%94%B5%E4%BF%A1%E5%8F%B7%E5%92%8C%E5%8A%A8%E4%BD%9C%E6%8D%95%E6%8D%89%E7%9A%84%E4%B8%8A%E8%82%A2%E8%BF%90%E5%8A%A8%E7%96%B2%E5%8A%B3%E5%88%86%E6%9E%90/</url>
-    
-    <content type="html"><![CDATA[<div class="row">    <embed src="https://res.craft.do/user/full/6a1edbd6-3a87-0108-9aee-13ed8d2519a6/4521B14B-F4D8-4E18-9C33-075EB468CAA8_2/0anKdmJXKHOfJLskNNsD0U5WBCELNFkNh3CnGIplcIYz/4521B14B-F4D8-4E18-9C33-075EB468CAA8_2.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>运动文献</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>运动科学</tag>
-      
-      <tag>EMG</tag>
       
     </tags>
     
@@ -2816,9 +2485,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2843,9 +2510,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2870,9 +2535,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2888,18 +2551,16 @@
   
   
   <entry>
-    <title>Mac 环境下搭建 Hexo 个人博客</title>
-    <link href="/2023/08/28/Mac-%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA-Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <url>/2023/08/28/Mac-%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA-Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <title>「转载」Mac 环境下搭建 Hexo 个人博客</title>
+    <link href="/2023/08/28/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DMac-%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA-Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <url>/2023/08/28/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DMac-%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA-Hexo-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     
     <content type="html"><![CDATA[<p>原文：<a href="https://l3zc.com/2022/05/mac%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac OS 环境下使用 Hexo 搭建个人博客</a>。</p><p>参考：</p><ol><li><a href="https://www.zhihu.com/question/26071345">Mac 系统有什么软件打开 .pub 文件？</a>；</li><li><a href="https://blog.csdn.net/xs20691718/article/details/81873921">hexo 发布之后 gitpage 自定义域名失效</a>。</li></ol><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="安装-Git-和-Node-js"><a href="#安装-Git-和-Node-js" class="headerlink" title="安装 Git 和 Node.js"></a>安装 Git 和 Node.js</h4><div class="code-wrapper"><pre><code class="hljs bash">brew install gitbrew install node</code></pre></div><h4 id="测试所需组件是否安装成功"><a href="#测试所需组件是否安装成功" class="headerlink" title="测试所需组件是否安装成功"></a>测试所需组件是否安装成功</h4><div class="code-wrapper"><pre><code class="hljs bash">npm -vnode -vgit --version</code></pre></div><p>均返回版本号即代表安装成功。</p><h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p>我们使用 npm 命令安装 Hexo：</p><div class="code-wrapper"><pre><code class="hljs bash">npm install -g hexo-cli</code></pre></div><p>等待安装完成后初始化博客：</p><div class="code-wrapper"><pre><code class="hljs bash">hexo init blog</code></pre></div><p>这条指令的作用是在你目前所在的目录下（默认是你的 home 目录）新建一个名为 blog 的文件夹（你可以将这条命令中的 blog 替换成任何你想要的名字），并在内初始化你的博客。<strong>之后所有的操作都在这个文件夹下进行，请确保在执行后文的操作前已经切换到了这个文件夹（cd blog）。</strong></p><p>待初始化完成，切换到 blog 文件夹中，即可生成和预览博客。</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> bloghexo ghexo s</code></pre></div><p>执行 <code>hexo s</code> 命令后，通过浏览器访问 <code>http://127.0.0.1:4000</code> 可以预览你的博客，预览功能会实时监测博客的文件变化，并实时反馈在浏览器上，在调试博客前端时非常好用。</p><h3 id="部署网站到-GitHub"><a href="#部署网站到-GitHub" class="headerlink" title="部署网站到 GitHub"></a>部署网站到 GitHub</h3><p>执行 <code>hexo g</code> 命令后博客静态文件会生成在 public 文件夹下，只需要将这些文件上传到你的静态网站托管服务即可将站点发布到公网，本文用到的托管服务是 Github Pages，下文提到的用户名均指你的 Github 用户名。</p><h4 id="添加-SSH-Key-到-github"><a href="#添加-SSH-Key-到-github" class="headerlink" title="添加 SSH Key 到 github"></a>添加 SSH Key 到 github</h4><p>若之前使用过相关功能且已经配置过请跳过此步。</p><p>配置 Git 用户名和账号：</p><div class="code-wrapper"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;username&quot;</span>git config --global user.email <span class="hljs-string">&quot;example@example.com&quot;</span></code></pre></div><p>其中 <code>username</code> 是你的用户名，<code>example@example.com</code> 是你 Github 的登录邮箱。</p><p>然后通过终端命令生成 SSH Key：</p><div class="code-wrapper"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;example@example.com&quot;</span></code></pre></div><p>如果已经创建过会出现 <code>Overwrite (y/n)? n</code> 提示可以输入 <code>n</code>，没有创建过的话三个回车就好，执行完成后会在 <code>~/.ssh/id_rsa.pub</code> 目录下生成需要使用的 key，也就是公钥。</p><p>到账户主文件夹下同时按 <code>Command+Shift+.</code> 显示隐藏文件，找到 <code>.ssh</code> 文件夹，打开 <code>id_rsa.pub</code>，将里面的内容全部复制（使用 cd 命令进入 <code>id_rsa.pub</code> 目录，再使用 <code>more id_rsa.pub</code> 命令查看公钥的内容）。</p><p>打开 <a href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建 New SSH Key，Title 随意填，Key 就把刚才复制的内容全都粘贴上去。然后点 Add SSH Key 即可。</p><p>完成这些工作以后可以通过以下命令测试是否配置成功：</p><div class="code-wrapper"><pre><code class="hljs bash">ssh git@github.com</code></pre></div><p>出现你的 Github 用户名代表配置成功。</p><h4 id="上传本地文件到-Github"><a href="#上传本地文件到-Github" class="headerlink" title="上传本地文件到 Github"></a>上传本地文件到 Github</h4><p>在Github上新建一个仓库，Repository Name 填 <code>你的用户名.github.io</code>，仓库状态设为 Public，点击 Create Repository 创建新的网站仓库。</p><p>安装 Hexo 的扩展 <code>hexo-deployer-git</code>，注意一定要在你的博客文件夹下执行：</p><div class="code-wrapper"><pre><code class="hljs bash">npm install hexo-deployer-git --save</code></pre></div><p>编辑博客安装文件夹下的 <code>_config.yml</code> 文件，<strong>翻到底部</strong>，修改 deploy 部分为：</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span>  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:你的用户名/你的用户名.github.io.git</span>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span></code></pre></div><p>修改完成后保存，此时就可以使用 <code>hexo d</code> 把存在本地的博客 deploy 到 Github 上了：</p><div class="code-wrapper"><pre><code class="hljs bash">hexo ghexo d</code></pre></div><p>第一次执行 <code>hexo d</code> 命令时可能要求你输入你的 Github 账号和密码，如果报错，可能是因为 Github 在 2021 年 8 月 13 日停止了使用账户密码认证的支持，这时需要在 Gihub 上 <a href="https://github.com/settings/tokens">Developer Settings页面</a> 上新建一个 Personal Access Token 代替密码就可以顺利 deploy。</p><p>执行完毕后，访问 <code>你的用户名.github.io</code> 就能看到你的博客了。</p><h3 id="绑定自定义域名（可选）"><a href="#绑定自定义域名（可选）" class="headerlink" title="绑定自定义域名（可选）"></a>绑定自定义域名（可选）</h3><p>其实到这一步就可以开始写博客了，默认的 github.io 的域名是可以更换的：</p><p>首先自行申请一个域名，登陆到域名申请的后台，添加一条 <code>CNAME</code> 解析记录：<code>你的用户名.github.io</code>。</p><p>打开存放博客的 Github 仓库，进入 Settings 页面在 pages 选项里的 Custom domain 里填入你的域名，点击 Save，勾选 Enforce HTTPS，即可通过自定义域名访问你的博客。</p><p>每次配置 Custom domain 之后，再次 <code>hexo deploy</code> 之后，Custom domain 会被重置失效。解决方案为：</p><p>在 hexo 生成的博客的 source 目录下新建一个 <code>CNAME</code> 文件，然后在这个文件中填入你的域名，这样就不会每次发布之后，Custom domain 都被重置掉。</p>]]></content>
     
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>Hexo</category>
+      <category>转载</category>
       
     </categories>
     
@@ -2924,7 +2585,7 @@
     
     <categories>
       
-      <category>资料整合</category>
+      <category>合集</category>
       
     </categories>
     
@@ -2958,9 +2619,9 @@
     
     <tags>
       
-      <tag>CEPT</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
@@ -2969,18 +2630,16 @@
   
   
   <entry>
-    <title>使用 uPic 搭配腾讯云搭建图床</title>
-    <link href="/2023/08/26/%E4%BD%BF%E7%94%A8-uPic-%E6%90%AD%E9%85%8D%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/"/>
-    <url>/2023/08/26/%E4%BD%BF%E7%94%A8-uPic-%E6%90%AD%E9%85%8D%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/</url>
+    <title>「转载」使用 uPic 搭配腾讯云搭建图床</title>
+    <link href="/2023/08/26/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E4%BD%BF%E7%94%A8-uPic-%E6%90%AD%E9%85%8D%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/"/>
+    <url>/2023/08/26/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E4%BD%BF%E7%94%A8-uPic-%E6%90%AD%E9%85%8D%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/</url>
     
     <content type="html"><![CDATA[<p><a href="https://sspai.com/post/64169">原文链接</a></p><h3 id="搭建私有图床"><a href="#搭建私有图床" class="headerlink" title="搭建私有图床"></a>搭建私有图床</h3><p>免费图床有两个缺点，一方面是基于隐私的保护的问题，另一方面是你不知道它什么时候可能就没了~，所以如果你对资源管理有更高的要求，或者你是一个小团队需要有自己的图床以保证稳定性，不妨往下看，我手把手教你搭建自己的私有图床。</p><p>需要用到两个东西：</p><ol><li>腾讯云 COS（对象存储）</li><li>uPic 客户端</li></ol><h4 id="购买腾讯云-COS"><a href="#购买腾讯云-COS" class="headerlink" title="购买腾讯云 COS"></a>购买腾讯云 COS</h4><p>其实国内提供对象存储服务的有很多，例如腾讯云、阿里云、七牛云、百度云、又拍云等，选择腾讯云主要是基于两点考虑：</p><ol><li>稳定可靠速度快，节点丰富还便宜</li><li>支持微信或 QQ 登录，对大多数人来说方面，不用再格外注册账号</li></ol><blockquote><p>你甚至可以使用 github 来做免费图床，但缺点是 github 在国内速度太慢了，体验不好，我不推荐。</p></blockquote><p>首先，你需要注册并开通「<a href="https://sspai.com/link?target=https://link.zhihu.com/?target=https://console.cloud.tencent.com/cos5">腾讯云对象存储</a>」，你可以使用微信或 QQ 登录：</p><p><img src="https://cdn.sspai.com/2020/12/22/8c71da4b83b79821350aeb074312bb85.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>在「存储桶列表」&gt;「创建存储桶」，地区按照你的实际情况选择，访问权限设置为「公有读私有写」：</p><p><img src="https://cdn.sspai.com/2020/12/22/157a4689ac564d86ab64cfe8ce0c456b.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p><img src="https://cdn.sspai.com/2020/12/22/16e922b14f5ae75c91845683a540b870.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>存储桶创建好之后，接下来就可以直接上传图片：</p><p><img src="https://cdn.sspai.com/2020/12/22/b09b74e4a9cd77b4255cd4542d519ba9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>上传完成后，点击「详情」，复制「对象地址」中的 URL 即可访问对象：</p><p><img src="https://cdn.sspai.com/2020/12/22/e6bd74b237fa8914f5dc85788c8b3fdf.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p><img src="https://cdn.sspai.com/2020/12/22/5f6286198ba8b1ad6c743952cd4d9b99.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>如果你要使用 Markdown，只需要手动编辑 Markdown 语法即可，例如：</p><div class="code-wrapper"><pre><code class="hljs markdown">![<span class="hljs-string">example</span>](<span class="hljs-link">https://myupic-1253463441.cos.ap-nanjing.myqcloud.com/3b6cae2afdea8f710c0a5ccb460c39cb-0.jpg</span>)</code></pre></div><p>腾讯云是根据流量来实时计费的，根据我自己的使用经验来看价格是非常便宜：</p><p><img src="https://cdn.sspai.com/2020/12/22/3908682f470e049dae15ff3b3178352d.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>更详细的计费规则参见：<a href="https://sspai.com/link?target=https://link.zhihu.com/?target=https://cloud.tencent.com/product/cos/pricing">腾讯云 COS 定价</a></p><p>上面已经介绍了基本的使用方法，但是你可能也发现了，如果每张图片都这样手动上传、手动复制链接、手动粘贴的话，效率未免太低了，这时候就需要使用我们的主角—— uPic 客户端了。</p><h4 id="uPic-客户端配置"><a href="#uPic-客户端配置" class="headerlink" title="uPic 客户端配置"></a>uPic 客户端配置</h4><p>uPic客户端是开源免费的，可以在如下 GitHub 地址进行下载：</p><ul><li><a href="https://sspai.com/link?target=https://github.com/gee1k/uPic">https://github.com/gee1k/uPic</a></li></ul><p>打开偏好设置，在「图床」中添加一个「腾讯云 COS」：</p><p><img src="https://cdn.sspai.com/2020/12/22/16763a27c4f28b8a2608574f1b763bd9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><h3 id="配置项说明"><a href="#配置项说明" class="headerlink" title="配置项说明"></a>配置项说明</h3><ul><li><code>区域</code>: 对象储存空间所属的区域，可在腾讯云控制台查看。</li><li><code>空间名称</code>: 对象储存空间名称，可在腾讯云控制台查看。</li><li><code>SecretId</code>: 密钥。</li><li><code>SecretKey</code>: 密钥。</li><li><code>域名</code>: 使用腾讯云默认提供的测试域名或者你的自定义域名。域名可在控制台查看。<code>域名需以http://或者https://开头</code>。</li><li><code>保存路径</code>: 文件储存的路径（包括文件夹）。 <code>支持 &#123;year&#125; &#123;month&#125; &#123;day&#125; &#123;hour&#125; &#123;minute&#125; &#123;second&#125; &#123;since_second&#125; &#123;since_millisecond&#125; &#123;random&#125; &#123;filename&#125; &#123;.suffix&#125; 等变量。比如：上传的图片为 uPic.jpg，设定为 “uPic/&#123;filename&#125;&#123;.suffix&#125;”，则会保存到 “uPic/uPic.jpg”。</code></li><li>在<code>保存路径</code>输入框后面的是<code>网址后缀</code>: 用于自定义图片处理。腾讯云 COS 目前还不支持，先预留。</li></ul><p><strong>看起来有点复杂，不过没关系，下面跟着我一步步配置即可。</strong></p><p>点击腾讯云<strong>「</strong>存储桶列表<strong>」</strong>，点击「配置管理」：</p><p><img src="https://cdn.sspai.com/2020/12/22/1b8680f5e02cc2d70f1a0253afd037c1.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>可以看到「存储桶名称」和「访问域名」，复制填写到 uPic 中：</p><p><img src="https://cdn.sspai.com/2020/12/22/a3fc05d6a35b9065478cc417c0a26679.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>然进入腾讯云「API 密钥管理」，系统会提示建议创建子账号来管理，点击「切换使用子账号密钥」：</p><p><img src="https://cdn.sspai.com/2020/12/22/ccd164a592c4ef6659d8231145681902.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>选择「快速创建」：</p><p><img src="https://cdn.sspai.com/2020/12/22/e39f339ac3902bc03f3b8672c1e0470a.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>随意输入用户名，例如 GuestforuPic，点击用户权限：</p><p><img src="https://cdn.sspai.com/2020/12/22/461469f544f6e3037721265a3ea20757.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>搜索「QcloudCOSFullAccess」，勾选并确定：</p><p><img src="https://cdn.sspai.com/2020/12/22/71787d4c7210fceaaddf58a8805fdca9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p><img src="https://cdn.sspai.com/2020/12/22/c0856f11a2315a401d5e8dcc5ba1617f.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>然后进入腾讯云的「用户列表」&gt;「用户详情」&gt;「API密钥」&gt;「新建密钥」：</p><p><img src="https://cdn.sspai.com/2020/12/22/641b4ba0223a8225ad0161ddbdb92b91.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p><img src="https://cdn.sspai.com/2020/12/22/e20dabd582fda5b2ebb904738c6529b6.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>复制 SecretId 和 SecretKey 到 uPic 客户端：</p><p><img src="https://cdn.sspai.com/2020/12/22/b6c2c37042dc1bef7ec884cc3be20fde.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p><p>至于最后的「保存路径」可以保持不变，如果你有特殊要求再做自定义。</p><p>点击「验证」测试一下，如果提示上传成功就配置完成啦！点击保存即可。</p><p><img src="https://cdn.sspai.com/2020/12/22/67ca93666ebccc3e530b3affabcbe7c6.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img"></p>]]></content>
     
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>图床</category>
+      <category>转载</category>
       
     </categories>
     
@@ -3005,9 +2664,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -3032,16 +2689,14 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>VSCode</category>
+      <category>随笔</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>VSCode</tag>
       
     </tags>
     
@@ -3059,16 +2714,14 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>计算机视觉</tag>
+      <tag>深度学习</tag>
       
       <tag>Python</tag>
       
@@ -3088,16 +2741,14 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>AlphaPose</category>
+      <category>部署</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>计算机视觉</tag>
+      <tag>深度学习</tag>
       
     </tags>
     
@@ -3115,18 +2766,20 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Arduino</category>
+      <category>部署</category>
       
     </categories>
     
     
     <tags>
       
+      <tag>EMG</tag>
+      
+      <tag>Arduino</tag>
+      
       <tag>传感器</tag>
       
-      <tag>EMG</tag>
+      <tag>DIY</tag>
       
     </tags>
     
@@ -3144,7 +2797,7 @@
     
     <categories>
       
-      <category>资料整合</category>
+      <category>合集</category>
       
     </categories>
     
@@ -3194,9 +2847,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>文章</category>
       
     </categories>
     
@@ -3204,6 +2855,8 @@
     <tags>
       
       <tag>Python</tag>
+      
+      <tag>串口</tag>
       
     </tags>
     
@@ -3221,9 +2874,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Arduino</category>
+      <category>部署</category>
       
     </categories>
     
@@ -3234,7 +2885,7 @@
       
       <tag>传感器</tag>
       
-      <tag>CEPT</tag>
+      <tag>DIY</tag>
       
     </tags>
     
@@ -3252,9 +2903,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Arduino</category>
+      <category>部署</category>
       
     </categories>
     
@@ -3265,7 +2914,7 @@
       
       <tag>传感器</tag>
       
-      <tag>CEPT</tag>
+      <tag>DIY</tag>
       
     </tags>
     
@@ -3283,9 +2932,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Arduino</category>
+      <category>文章</category>
       
     </categories>
     
@@ -3310,9 +2957,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Arduino</category>
+      <category>文章</category>
       
     </categories>
     
@@ -3337,9 +2982,7 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>Raspberry Pi</category>
+      <category>文章</category>
       
     </categories>
     
@@ -3364,9 +3007,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -3391,9 +3032,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -3418,9 +3057,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -3445,20 +3082,16 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>文章</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>计算机视觉</tag>
+      <tag>深度学习</tag>
       
       <tag>Python</tag>
-      
-      <tag>深度学习</tag>
       
     </tags>
     
@@ -3476,16 +3109,14 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>Xcode</category>
+      <category>随笔</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>iOS Development</tag>
+      <tag>Xcode</tag>
       
     </tags>
     
@@ -3528,7 +3159,7 @@
     
     <categories>
       
-      <category>资料整合</category>
+      <category>合集</category>
       
     </categories>
     
@@ -3553,9 +3184,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Arduino</category>
+      <category>部署</category>
       
     </categories>
     
@@ -3566,7 +3195,7 @@
       
       <tag>传感器</tag>
       
-      <tag>CEPT</tag>
+      <tag>DIY</tag>
       
     </tags>
     
@@ -3584,11 +3213,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -3615,9 +3240,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -3642,9 +3265,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -3669,16 +3290,16 @@
     
     <categories>
       
-      <category>资料整合</category>
+      <category>合集</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>IMU</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -3704,6 +3325,8 @@
     <tags>
       
       <tag>传感器</tag>
+      
+      <tag>串口</tag>
       
       <tag>Mac</tag>
       
@@ -3757,6 +3380,8 @@
       
       <tag>传感器</tag>
       
+      <tag>串口</tag>
+      
       <tag>Mac</tag>
       
     </tags>
@@ -3800,18 +3425,16 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>PyCharm</category>
-      
-      <category>Anaconda</category>
+      <category>随笔</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>Pycharm</tag>
+      
+      <tag>Anaconda</tag>
       
     </tags>
     
@@ -3829,18 +3452,16 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Python</category>
+      <category>文章</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -3858,43 +3479,14 @@
     
     <categories>
       
-      <category>PM</category>
-      
-      <category>UX</category>
+      <category>合集</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>UX</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>好看的 App 之 Dtd Playlist（音乐播放 App）</title>
-    <link href="/2023/05/23/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-Dtd-Playlist%EF%BC%88%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE-App%EF%BC%89/"/>
-    <url>/2023/05/23/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-Dtd-Playlist%EF%BC%88%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE-App%EF%BC%89/</url>
-    
-    <content type="html"><![CDATA[<p>UI 非常对我胃口的一个 App。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>PM</category>
-      
-      <category>App</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>App</tag>
+      <tag>生产力（摸鱼）</tag>
       
     </tags>
     
@@ -3928,60 +3520,6 @@
   
   
   <entry>
-    <title>好看的 App 之 NoteCircle 和 DayCircle（记事工具）</title>
-    <link href="/2023/05/11/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-NoteCircle-%E5%92%8C-DayCircle%EF%BC%88%E8%AE%B0%E4%BA%8B%E5%B7%A5%E5%85%B7%EF%BC%89/"/>
-    <url>/2023/05/11/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-NoteCircle-%E5%92%8C-DayCircle%EF%BC%88%E8%AE%B0%E4%BA%8B%E5%B7%A5%E5%85%B7%EF%BC%89/</url>
-    
-    <content type="html"><![CDATA[<p>一个是 todo 软件，一个是记日软件。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>PM</category>
-      
-      <category>App</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>App</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>好看的 App 之 MySC（素材收集 App）</title>
-    <link href="/2023/05/10/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-MySC%EF%BC%88%E7%B4%A0%E6%9D%90%E6%94%B6%E9%9B%86-App%EF%BC%89/"/>
-    <url>/2023/05/10/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-MySC%EF%BC%88%E7%B4%A0%E6%9D%90%E6%94%B6%E9%9B%86-App%EF%BC%89/</url>
-    
-    <content type="html"><![CDATA[<p>MySC 界面好看</p><p><a href="https://www.mysc.app/index.html">官网地址</a></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>PM</category>
-      
-      <category>App</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>App</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>SwiftUI Button Disabled</title>
     <link href="/2023/04/18/SwiftUI-Button-Disabled/"/>
     <url>/2023/04/18/SwiftUI-Button-Disabled/</url>
@@ -3991,9 +3529,7 @@
     
     <categories>
       
-      <category>Code</category>
-      
-      <category>Swift</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -4027,32 +3563,7 @@
       
       <tag>Python</tag>
       
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>好看的 App 之 Overdrop（天气 App）</title>
-    <link href="/2023/03/25/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-Overdrop%EF%BC%88%E5%A4%A9%E6%B0%94-App%EF%BC%89/"/>
-    <url>/2023/03/25/%E5%A5%BD%E7%9C%8B%E7%9A%84-App-%E4%B9%8B-Overdrop%EF%BC%88%E5%A4%A9%E6%B0%94-App%EF%BC%89/</url>
-    
-    <content type="html"><![CDATA[<p>好看，小组件更是逆天。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>PM</category>
-      
-      <category>App</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>App</tag>
+      <tag>Anaconda</tag>
       
     </tags>
     
@@ -4070,16 +3581,16 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>PyCharm</category>
+      <category>随笔</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>git</tag>
+      <tag>PyCharm</tag>
+      
+      <tag>Git</tag>
       
     </tags>
     
@@ -4097,9 +3608,7 @@
     
     <categories>
       
-      <category>环境配置</category>
-      
-      <category>Xocde</category>
+      <category>部署</category>
       
     </categories>
     
@@ -4108,7 +3617,7 @@
       
       <tag>Mac</tag>
       
-      <tag>iOS Development</tag>
+      <tag>Xocde</tag>
       
     </tags>
     
