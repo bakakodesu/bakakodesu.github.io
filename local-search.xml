@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>npm 查看安装了那些包</title>
+    <link href="/2024/08/20/npm-%E6%9F%A5%E7%9C%8B%E5%AE%89%E8%A3%85%E4%BA%86%E9%82%A3%E4%BA%9B%E5%8C%85/"/>
+    <url>/2024/08/20/npm-%E6%9F%A5%E7%9C%8B%E5%AE%89%E8%A3%85%E4%BA%86%E9%82%A3%E4%BA%9B%E5%8C%85/</url>
+    
+    <content type="html"><![CDATA[<ol><li><code>npm list --depth=0</code>。指令用来查看单个项目中安装的模块（指定文件夹），其中 depth 表示深度，我们使用的模块会有依赖，深度为 0 时，不会显示依赖模块；</li><li><code>npm list --depth=0 --global</code>。指令用来查看全局安装了哪些模块。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>npm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>npm 关闭 fund 赞助提示</title>
+    <link href="/2024/08/20/npm-%E5%85%B3%E9%97%AD-fund-%E8%B5%9E%E5%8A%A9%E6%8F%90%E7%A4%BA/"/>
+    <url>/2024/08/20/npm-%E5%85%B3%E9%97%AD-fund-%E8%B5%9E%E5%8A%A9%E6%8F%90%E7%A4%BA/</url>
+    
+    <content type="html"><![CDATA[<p>通过 <code>npm install</code> 时会出现这样的信息：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">testuser@localhost ~ $ npm install xxx<br>up to <span class="hljs-built_in">date</span>, audited 117 packages <span class="hljs-keyword">in</span> 1s<br>5 packages are looking <span class="hljs-keyword">for</span> funding<br><br>  run `npm fund` <span class="hljs-keyword">for</span> details<br>  <br>found 0 vulnerabilities<br></code></pre></td></tr></table></figure><p>输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> fund <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure><p>可以把 <code>run npm fund for details</code> 永久关闭掉。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>npm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>PC上屏蔽知乎视频</title>
     <link href="/2024/06/18/PC%E4%B8%8A%E5%B1%8F%E8%94%BD%E7%9F%A5%E4%B9%8E%E8%A7%86%E9%A2%91/"/>
     <url>/2024/06/18/PC%E4%B8%8A%E5%B1%8F%E8%94%BD%E7%9F%A5%E4%B9%8E%E8%A7%86%E9%A2%91/</url>
@@ -222,9 +272,9 @@
     
     <tags>
       
-      <tag>Anaconda</tag>
-      
       <tag>Raspberry Pi</tag>
+      
+      <tag>Anaconda</tag>
       
     </tags>
     
@@ -249,9 +299,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -276,9 +326,9 @@
     
     <tags>
       
-      <tag>运动科学</tag>
-      
       <tag>Arduino</tag>
+      
+      <tag>运动科学</tag>
       
       <tag>DIY</tag>
       
@@ -330,9 +380,9 @@
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>Swift</tag>
+      
+      <tag>心率</tag>
       
     </tags>
     
@@ -992,11 +1042,11 @@
     
     <tags>
       
+      <tag>Swift</tag>
+      
       <tag>心率</tag>
       
       <tag>传感器</tag>
-      
-      <tag>Swift</tag>
       
     </tags>
     
@@ -2078,11 +2128,11 @@
     
     <tags>
       
+      <tag>Swift</tag>
+      
       <tag>IMU</tag>
       
       <tag>传感器</tag>
-      
-      <tag>Swift</tag>
       
     </tags>
     
@@ -2775,13 +2825,13 @@
     
     <tags>
       
-      <tag>EMG</tag>
-      
       <tag>Arduino</tag>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>EMG</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -2856,9 +2906,9 @@
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>串口</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -2885,9 +2935,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -2914,9 +2964,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -3195,9 +3245,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
