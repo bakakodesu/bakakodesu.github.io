@@ -1,0 +1,863 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="刘子航">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="系统功能分析个体呼出气体成分，并计算耗氧速度（摄氧量）$V_{O_2}$ 以及代谢能量 EE。 呼吸监测方法介绍道格拉斯袋法道格拉斯袋法（douglas bags）是最早的开放式（open circuit）间接测量代谢消耗的方法，也是测量代谢消耗的「金标准」[1][2]。 原理很简单，将运动呼出的气体用道格拉斯气袋收集起来，然后测量气袋中气体的体积、$O_2$、$CO_2$ 浓度。之后经过计算就能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="呼吸代谢监测">
+<meta property="og:url" content="https://wonderhoi.com/2023/08/28/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B/index.html">
+<meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="系统功能分析个体呼出气体成分，并计算耗氧速度（摄氧量）$V_{O_2}$ 以及代谢能量 EE。 呼吸监测方法介绍道格拉斯袋法道格拉斯袋法（douglas bags）是最早的开放式（open circuit）间接测量代谢消耗的方法，也是测量代谢消耗的「金标准」[1][2]。 原理很简单，将运动呼出的气体用道格拉斯气袋收集起来，然后测量气袋中气体的体积、$O_2$、$CO_2$ 浓度。之后经过计算就能">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B1.png">
+<meta property="article:published_time" content="2023-08-28T04:08:38.000Z">
+<meta property="article:modified_time" content="2024-07-05T03:45:51.000Z">
+<meta property="article:author" content="刘子航">
+<meta property="article:tag" content="运动科学">
+<meta property="article:tag" content="DIY">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B1.png">
+  
+  
+  
+  <title>呼吸代谢监测 - 这是一个PM的BLOG</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wonderhoi.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="呼吸代谢监测"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-08-28 12:08" pubdate>
+          2023年8月28日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">呼吸代谢监测</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="系统功能"><a href="#系统功能" class="headerlink" title="系统功能"></a>系统功能</h2><p>分析个体呼出气体成分，并计算耗氧速度（摄氧量）$V_{O_2}$ 以及代谢能量 EE。</p>
+<h2 id="呼吸监测方法介绍"><a href="#呼吸监测方法介绍" class="headerlink" title="呼吸监测方法介绍"></a>呼吸监测方法介绍</h2><h3 id="道格拉斯袋法"><a href="#道格拉斯袋法" class="headerlink" title="道格拉斯袋法"></a>道格拉斯袋法</h3><p>道格拉斯袋法（douglas bags）是最早的开放式（open circuit）间接测量代谢消耗的方法，也是测量代谢消耗的「金标准」[1][2]。</p>
+<p>原理很简单，将运动呼出的气体用道格拉斯气袋收集起来，然后测量气袋中气体的体积、$O_2$、$CO_2$ 浓度。之后经过计算就能得出运动中代谢能量消耗。</p>
+<h3 id="逐步呼吸法"><a href="#逐步呼吸法" class="headerlink" title="逐步呼吸法"></a>逐步呼吸法</h3><p>道格拉斯袋法必须在运动完成后进行测量，测得值是一个平均量，无法实时测量，也无法对运动的某个时间节点进行分析。随着计算机的发展，逐步呼吸法（breath by breath）被发明[3]。借助于传感器（对传感器性能和信号处理要求很高）和电脑，可以实现对每次呼出气体的流量、成分进行测量，从而得到实时代谢能量消耗。</p>
+<h3 id="混合气室法（系统采用）"><a href="#混合气室法（系统采用）" class="headerlink" title="混合气室法（系统采用）"></a>混合气室法（系统采用）</h3><p>混合气室法（mixing chamber）[4]是将呼出气体排入到一个 5L 左右的混合室内让其充分混合，通过测量混合室中的气体浓度来计算代谢能量消耗。可以理解为测量几次呼出气体的平均值。主要有 2 个优点：</p>
+<ol>
+<li>相较于道格拉斯袋法，混合气室法能实现实时代谢测量（相较于逐步呼吸法没那么实时，视运动量而定）；</li>
+<li>相较于逐步呼吸法，虽然时效性没有那么好，但混合气室法更加稳定[5]，信号处理起来更容易[6]，且对传感器的要求不高。</li>
+</ol>
+<h2 id="系统组成"><a href="#系统组成" class="headerlink" title="系统组成"></a>系统组成</h2><p>基于混合气室法的呼吸监测模块由 4 个重要组成部分。</p>
+<h3 id="非重复呼吸阀-管道"><a href="#非重复呼吸阀-管道" class="headerlink" title="非重复呼吸阀&#x2F;管道"></a>非重复呼吸阀&#x2F;管道</h3><p>非重复呼吸阀（Non Rebreathing Valve）的作用是保证第二次呼吸不会吸入上一次呼出的气体，否则会造成误差。但实际这个现象不可避免，所以需要保证呼吸阀腔体（也叫死腔，dead space）体积小于 70ml[1]。</p>
+<p>此外，死腔体积不能太小，否者会对呼吸造成阻力增加测量时的人体额外能量消耗，WHO 建议呼吸阀的阻力不高于 $300L&#x2F;min-5cmH_2O$[1]。同理，连接呼吸阀和混合室的管道建议阻力不高于 $300L&#x2F;min-1.5cmH_2O$。</p>
+<h3 id="混合室"><a href="#混合室" class="headerlink" title="混合室"></a>混合室</h3><p>人体在静息状态下，每分钟的通气量大约为 4-8L，采用 5L 的混合室，意味着静息状态的呼出气体能在 1min 中充满混合室（将混合室原本的气体排出）。</p>
+<h3 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h3><p>传感器的原则是响应时间越短越好。</p>
+<h4 id="响应时间"><a href="#响应时间" class="headerlink" title="响应时间"></a>响应时间</h4><p><a href="https://wonderhoi.com/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/">传感器的响应时间</a>。</p>
+<h4 id="传感器清单"><a href="#传感器清单" class="headerlink" title="传感器清单"></a>传感器清单</h4><p><a href="https://wonderhoi.com/2023/08/03/%E6%B0%94%E4%BD%93%E6%B5%81%E9%87%8F%E4%BC%A0%E6%84%9F%E5%99%A8-AFM3000-SFM3000-%E9%A9%B1%E5%8A%A8/">气体流量传感器</a>；</p>
+<p><a href="https://wonderhoi.com/2023/08/11/O2-%E6%B5%93%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0496-%E9%A9%B1%E5%8A%A8/">O2浓度传感器</a>；</p>
+<p><a href="https://wonderhoi.com/2023/08/11/CO2-%E6%B5%93%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0220-%E9%A9%B1%E5%8A%A8/">CO2浓度传感器</a>。</p>
+<h3 id="上位机"><a href="#上位机" class="headerlink" title="上位机"></a>上位机</h3><p>目前的方案是下位机数据采集 Arduino&#x2F;C++，上位机数据处理树莓派&#x2F;Python。</p>
+<h2 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h2><p>呼吸代谢监测系统最终会采集到：</p>
+<ol>
+<li>呼出或吸入气体流量；</li>
+<li>呼出气体中的 $O_2$ 浓度；</li>
+<li>呼出气体中的 $CO_2$ 浓度。</li>
+</ol>
+<p>之后通过计算可得出摄氧速度（摄氧量） $V_{O_2}$、呼吸商 RQ、代谢能量 EE。</p>
+<p><strong>这里按气体流量传感器采集呼出气体流量计算（采集吸入气体的流量其计算原理是一样的）。</strong></p>
+<h3 id="气体流量-ATPS-换算-STPD"><a href="#气体流量-ATPS-换算-STPD" class="headerlink" title="气体流量 ATPS 换算 STPD"></a>气体流量 ATPS 换算 STPD</h3><p>气体体积需按标准状态（STPD 状态，$\theta &#x3D; 0°C$，$\rho &#x3D; 101.3kPa$ 或 $\rho &#x3D; 760mmHg$，干燥气体）来计算[7][8]。</p>
+<p>由于所收集的气体都是饱和水蒸气（其饱和水蒸气压力是温度的函数），而测量温度为室温条（ATPS 状态，环境温度，环境压力，水蒸气饱和），两者换算系数 $f$ 可利用水蒸气分压计算：</p>
+<p>在千帕单位下换算系数为：<br>$$<br>f &#x3D; \frac{273K * (\rho-\rho_{H_2O})}{(273K+\theta)*101.3kPa}<br>$$<br>或者在毫米汞柱单位下：<br>$$<br>f &#x3D; \frac{273K * (\rho-\rho_{H_2O})}{(273K+\theta)*760mmHg}<br>$$<br>其中：</p>
+<ul>
+<li>$f$ 为标准状态气体体积换算系数；</li>
+<li>$\rho$ 为测得环境的大气压；</li>
+<li>$\rho_{H_2O}$ 为呼出气体饱和水蒸气的分压；</li>
+<li>$\theta$ 为呼出气体的温度（在气体流量计中或用道格拉斯袋时测量的大气温度），单位为摄氏度(°C)。</li>
+</ul>
+<p>如果收集到的呼出气体在环境中受热高于 37°C 以上，需用 37°C 的饱和水蒸气压 6.27kPa。如果收集到的呼出气体温度不高于 37°C，其饱和水蒸气压见下表：</p>
+<p>20°C~37°C 范围内（间隔为 1°C）饱和水蒸气压力，单位为千帕(kPa)：</p>
+<table>
+<thead>
+<tr>
+<th>温度&#x2F;°C</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>20</td>
+<td>2.34</td>
+<td>2.49</td>
+<td>2.64</td>
+<td>2.81</td>
+<td>2.98</td>
+<td>3.17</td>
+<td>3.36</td>
+<td>3.56</td>
+<td>3.78</td>
+<td>4.00</td>
+</tr>
+<tr>
+<td>30</td>
+<td>4.24</td>
+<td>4.49</td>
+<td>4.75</td>
+<td>5.03</td>
+<td>5.32</td>
+<td>5.62</td>
+<td>5.94</td>
+<td>6.27</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>转换为毫米汞柱(mmHg)：</p>
+<table>
+<thead>
+<tr>
+<th>温度&#x2F;°C</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>20</td>
+<td>17.5</td>
+<td>18.7</td>
+<td>19.8</td>
+<td>21.1</td>
+<td>22.4</td>
+<td>23.8</td>
+<td>25.2</td>
+<td>26.7</td>
+<td>28.4</td>
+<td>30.0</td>
+</tr>
+<tr>
+<td>30</td>
+<td>31.8</td>
+<td>33.7</td>
+<td>35.7</td>
+<td>37.7</td>
+<td>39.9</td>
+<td>42.2</td>
+<td>44.6</td>
+<td>47.1</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>记气体流量传感器读值（呼出气体流量）为 $V_{E-ATPS}$，单位一般为 L&#x2F;min。</p>
+<p>则标准状态的气体流量为 $V_{E-STPD}&#x3D;f*V_{E-ATPS}$。</p>
+<h4 id="BTPS-概念"><a href="#BTPS-概念" class="headerlink" title="BTPS 概念"></a>BTPS 概念</h4><ul>
+<li>STPD 状态，$\theta &#x3D; 0°C$，$\rho &#x3D; 101.3kPa$ 或 $\rho &#x3D; 760mmHg$，干燥气体；</li>
+<li>ATPS 状态，环境温度，环境压力，水蒸气饱和；</li>
+<li>BTPS 状态，身体内环境温度 37°C，环境压力，水蒸气饱和。</li>
+</ul>
+<p>三者的转换公式为：<br>$$<br>V_{BTPS}&#x3D;V_{ATPS} * \frac{(273K+37) * (\rho-\rho_{H_2O})}{(273K+\theta) * (\rho-47.1mmHg)}<br>$$</p>
+<p>$$<br>V_{STPD}&#x3D;V_{BTPS} * \frac{273K * (\rho-47.1mmHg)}{(273K+37) * 760mmHg}<br>$$</p>
+<h3 id="V-O-2-计算"><a href="#V-O-2-计算" class="headerlink" title="$V_{O_2}$ 计算"></a>$V_{O_2}$ 计算</h3><p>核心关系是人体不会消耗和产生氮气，也就是人体吸入和呼出的 $N_2$ 量是不变的。大气中气体成分可以近似分为 0.03% 的 $CO_2$，20.93% 的 $O_2$ 和 79.04% 的 $N_2$ 以及非常少的稀有气体。</p>
+<p>记吸入气体中 $O_2$ 浓度为 $F_IO_2$，$CO_2$ 浓度为 $F_ICO_2$，$N_2$ 浓度为 $F_IN_2$；</p>
+<p>记呼出气体中 $O_2$ 浓度为 $F_EO_2$，$CO_2$ 浓度为 $F_ECO_2$，$N_2$ 浓度为 $F_EN_2$。</p>
+<p>那么吸入气体流量：<br>$$<br>V_{I-STPD}&#x3D;V_{E-STPD}*\frac{F_EN_2}{F_IN_2}&#x3D;V_{E-STPD}*\frac{1-F_EO_2-F_ECO_2}{1-F_IO_2-F_ICO_2}<br>$$<br>$O_2$ 消耗速度（摄氧量）：<br>$$<br>V_{O_2}&#x3D;V_{I-STPD}*F_IO_2-V_{E-STPD}*F_EO_2<br>$$<br>同理 $CO_2$ 产生速度：<br>$$<br>V_{CO_2}&#x3D;V_{E-STPD}*F_ECO_2-V_{I-STPD}*F_ICO_2<br>$$</p>
+<h4 id="最大摄氧量-V-O-2max"><a href="#最大摄氧量-V-O-2max" class="headerlink" title="最大摄氧量 $V_{O_2max}$"></a>最大摄氧量 $V_{O_2max}$</h4><p>当个体满足以下 4 种条件的任意 3 种即认为达到最大摄氧量标准[9]：</p>
+<ol>
+<li>$V_{O_2}$ 不随负荷的增加而上升，且个体达到力竭；</li>
+<li>$V_{O_2}$ 的变化幅度不超过 5% 或 150mL&#x2F;min 或 2mL&#x2F;kg&#x2F;min；</li>
+<li>呼吸商大于 1.15；</li>
+<li>心率大于 180 次&#x2F;min。</li>
+</ol>
+<h3 id="RQ、EE计算"><a href="#RQ、EE计算" class="headerlink" title="RQ、EE计算"></a>RQ、EE计算</h3><p>呼吸商 RQ 或者呼吸交换率 RER 等于 $\frac{V_{CO_2}}{V_{O_2}}$。根据 RQ 数值查询对应的 O2-kCal&#x2F;L 数值：</p>
+<p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B1.png" srcset="/img/loading.gif" lazyload></p>
+<p>例如 RQ&#x3D;0.8，那么意味着每消耗 1L 氧气，人体需要代谢 4.801kCal 的能量。那么此时的人体代谢 EE &#x3D; $V_{O_2}$ * 4.801 kCal&#x2F;min。</p>
+<h4 id="呼吸底物"><a href="#呼吸底物" class="headerlink" title="呼吸底物"></a>呼吸底物</h4><p>由上表可以发现，根据 RQ 可以知道当前呼吸代谢底物是以脂肪为主还是以糖类为主。</p>
+<h2 id="系统校准"><a href="#系统校准" class="headerlink" title="系统校准"></a>系统校准</h2><p>系统校准可以采用测量代谢当量 MET 的方法进行。1MET 的耗氧量为 3.5ml&#x2F;kg&#x2F;min[10]，在人<strong>静息</strong>状态下测得。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1689864610603-1d877ddb-18a2-4d7e-881a-5cc99e0757d4.pdf">📎Open-circuit respirometry a historical review of portable gas analysis systems.pdf</a></p>
+<p>[2] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1689864623935-2727c37e-08b5-4cde-bed8-0ac81d0c527f.pdf">📎a brief historical review of the use of Douglas bags and chemical analyzers.pdf</a></p>
+<p>[3] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1689864746920-56963d18-9dce-4cf1-9034-3ad2229d9af5.pdf">📎On-line computer analysis and breath-by-breath graphical display of exercise function tests..pdf</a></p>
+<p>[4] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1689864829672-a808cc03-6ed0-4525-8dfa-31de54e3d435.pdf">📎Validity and Stability of a Computerized Metabolic System with Mixing Chamber.pdf</a></p>
+<p>[5] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1689864864021-dd003bcd-bd70-4c95-888a-7b6223a43b05.pdf">📎Accuracy and precision of CPET equipment A comparison of breath by breath and mixing chamber systems.pdf</a></p>
+<p>[6] <a target="_blank" rel="noopener" href="https://www.redbackbiotek.com/mixing-chamber">Mxing Chamber vs Breath by Breath</a></p>
+<p>[7] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1692113579367-e3ed568b-cb7a-4409-9709-89baabb1a4ae.pdf">📎Metabolic Computations in Open-Circuit Spirometry.pdf</a></p>
+<p>[8] <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1692113510091-3b4b025d-54f9-42e4-b53e-50f43c2bf02b.pdf">📎热环境人类工效学 代谢率的测定.pdf</a></p>
+<p>[9] 《体育院校通用教材&#x2F;运动生理学》，人民体育出版社，2002</p>
+<p>[10]  <a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/pdf/38539471/1692114986255-7fc81d83-22c1-41c8-9b77-4b87cbbbf5d0.pdf">📎Resting Oxygen Uptake Value of 1 Metabolic Equivalent of Task in Older Adults A Systematic Review and Descriptive Analysis.pdf</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%96%87%E7%AB%A0/" class="category-chain-item">文章</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%BF%90%E5%8A%A8%E7%A7%91%E5%AD%A6/" class="print-no-link">#运动科学</a>
+      
+        <a href="/tags/DIY/" class="print-no-link">#DIY</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>呼吸代谢监测</div>
+      <div>https://wonderhoi.com/2023/08/28/呼吸代谢监测/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>刘子航</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年8月28日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/08/28/EMG-%E7%9B%B8%E5%85%B3%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/" title="EMG 相关应用场景">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">EMG 相关应用场景</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/08/26/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E4%BD%BF%E7%94%A8-uPic-%E6%90%AD%E9%85%8D%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" title="「转载」使用 uPic 搭配腾讯云搭建图床">
+                        <span class="hidden-mobile">「转载」使用 uPic 搭配腾讯云搭建图床</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
