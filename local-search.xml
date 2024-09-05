@@ -4,6 +4,285 @@
   
   
   <entry>
+    <title>面积并</title>
+    <link href="/2024/09/06/%E9%9D%A2%E7%A7%AF%E5%B9%B6/"/>
+    <url>/2024/09/06/%E9%9D%A2%E7%A7%AF%E5%B9%B6/</url>
+    
+    <content type="html"><![CDATA[<ol><li>bzoj 1845 Cqoi2005<ol><li><a href="https://darkbzoj.cc/problem/1845">[Cqoi2005] 三角形面积并</a></li><li><a href="https://www.cnblogs.com/mhy12345/p/4375049.html">bzoj 1845: [Cqoi2005] 三角形面积并 扫描线</a></li><li><a href="https://blog.csdn.net/jiangyuze831/article/details/42582663">BZOJ 1845 CQOI 2005 三角形面积并 扫描线</a></li><li><a href="https://www.cnblogs.com/candy99/p/6360495.html">BZOJ 1845: [Cqoi2005] 三角形面积并 [计算几何 扫描线] </a></li><li><a href="https://yhx-12243.github.io/OI-transit/records/lydsy1845%3Blg4406.html">[lydsy1845][lg4406][CQOI2005]三角形面积并</a></li></ol></li><li>AcWing 2801<ol><li><a href="https://www.acwing.com/solution/content/45569/">AcWing 2801. 三角形面积并</a></li><li><a href="https://blog.csdn.net/qq_43685900/article/details/113798599">AcWing 2801. 三角形面积并 [CQOI2005] 扫描线</a></li></ol></li><li>圆形并<ol><li><a href="https://yhx-12243.github.io/OI-transit/records/lydsy2178%3BspojCIRU.html">[lydsy2178][spoj CIRU]圆的面积并</a></li></ol></li><li>合集<ol><li><a href="https://blog.csdn.net/weixin_42638946/article/details/121358732">【算法专题】平面图形的面积并问题</a></li></ol></li><li>LeetCode 850<ol><li><a href="https://www.cnblogs.com/AngleLin/p/16918221.html">LeetCode | 850. 矩形面积 II</a></li><li><a href="https://acoier.com/2022/09/16/850.%20%E7%9F%A9%E5%BD%A2%E9%9D%A2%E7%A7%AF%20II%EF%BC%88%E5%9B%B0%E9%9A%BE%EF%BC%89/">LC 850. 矩形面积 II </a></li><li><a href="https://leetcode.cn/problems/rectangle-area-ii/description/"><a href="https://leetcode.cn/problems/rectangle-area-ii/">850. 矩形面积 II</a></a></li></ol></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>合集</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>判断一个平面内的两个三角形是否相交</title>
+    <link href="/2024/09/06/%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%B9%B3%E9%9D%A2%E5%86%85%E7%9A%84%E4%B8%A4%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4/"/>
+    <url>/2024/09/06/%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%B9%B3%E9%9D%A2%E5%86%85%E7%9A%84%E4%B8%A4%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4/</url>
+    
+    <content type="html"><![CDATA[<ol><li><a href="https://blog.csdn.net/weixin_44120025/article/details/123830197">用向量叉乘快速判断点在三角形内外原理与代码</a></li><li><a href="https://juejin.cn/post/7197608584690532411">判断一个点是否在三角形内(向量&amp;向量叉乘)</a></li><li><a href="https://blog.51cto.com/u_16175522/6741721">python判断两条线段是否相交</a></li><li><a href="https://blog.csdn.net/weixin_44671418/article/details/125130971">C++检测平面内两个三角形是否相交（逻辑清晰，手撕精简版）</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>合集</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SwiftUI 用 zIndex 调整视图显示顺序</title>
+    <link href="/2024/09/06/SwiftUI-%E7%94%A8-zIndex-%E8%B0%83%E6%95%B4%E8%A7%86%E5%9B%BE%E6%98%BE%E7%A4%BA%E9%A1%BA%E5%BA%8F/"/>
+    <url>/2024/09/06/SwiftUI-%E7%94%A8-zIndex-%E8%B0%83%E6%95%B4%E8%A7%86%E5%9B%BE%E6%98%BE%E7%A4%BA%E9%A1%BA%E5%BA%8F/</url>
+    
+    <content type="html"><![CDATA[<p>在 SwiftUI 中，开发者使用 zIndex 修饰符来控制重叠视图间的显示顺序，具有较大 zIndex 值的视图将显示在具有较小 zIndex 值的视图之上。在没有指定 zIndex 值的时候，SwiftUI 默认会给视图一个为 0 的 zIndex 值。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">ZStack</span> &#123;<br>    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Hello&quot;</span>) <span class="hljs-comment">// 默认 zIndex 值为 0 ，显示在最后面</span><br>    <br>    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;World&quot;</span>)<br>        .zIndex(<span class="hljs-number">3.5</span>)  <span class="hljs-comment">// 显示在最前面</span><br>    <br>    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Hi&quot;</span>)<br>        .zIndex(<span class="hljs-number">3.0</span>)  <br>    <br>    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Fat&quot;</span>)<br>        .zIndex(<span class="hljs-number">3.0</span>) <span class="hljs-comment">// 显示在 Hi 之前， 相同 zIndex 值，按布局顺序显示</span><br>&#125;<br></code></pre></td></tr></table></figure><p>参考：<a href="https://cloud.tencent.com/developer/article/2059875">在 SwiftUI 中用 zIndex 调整视图显示顺序</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Swift 无序排列组合</title>
+    <link href="/2024/09/06/Swift-%E6%97%A0%E5%BA%8F%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
+    <url>/2024/09/06/Swift-%E6%97%A0%E5%BA%8F%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/</url>
+    
+    <content type="html"><![CDATA[<p>参考：<a href="https://github.com/apple/swift-algorithms/blob/main/Guides/Combinations.md">Combinations</a></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">//===----------------------------------------------------------------------===//</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">// This source file is part of the Swift Algorithms open source project</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">// Copyright (c) 2020-2021 Apple Inc. and the Swift project authors</span><br><span class="hljs-comment">// Licensed under Apache License v2.0 with Runtime Library Exception</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">// See https://swift.org/LICENSE.txt for license information</span><br><span class="hljs-comment">//</span><br><span class="hljs-comment">//===----------------------------------------------------------------------===//</span><br><br><span class="hljs-comment">/// A collection wrapper that generates combinations of a base collection.</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">CombinationsSequence</span>&lt;<span class="hljs-type">Base</span>: <span class="hljs-type">Collection</span>&gt; &#123;<br>  <span class="hljs-comment">/// The collection to iterate over for combinations.</span><br>  <span class="hljs-keyword">@usableFromInline</span><br>  <span class="hljs-keyword">internal</span> <span class="hljs-keyword">let</span> base: <span class="hljs-type">Base</span><br>  <br>  <span class="hljs-keyword">@usableFromInline</span><br>  <span class="hljs-keyword">internal</span> <span class="hljs-keyword">let</span> baseCount: <span class="hljs-type">Int</span><br>  <br>  <span class="hljs-comment">/// The range of accepted sizes of combinations.</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// - Note: This may be `nil` if the attempted range entirely exceeds the</span><br>  <span class="hljs-comment">/// upper bounds of the size of the `base` collection.</span><br>  <span class="hljs-keyword">@usableFromInline</span><br>  <span class="hljs-keyword">internal</span> <span class="hljs-keyword">let</span> kRange: <span class="hljs-type">Range</span>&lt;<span class="hljs-type">Int</span>&gt;?<br>  <br>  <span class="hljs-comment">/// Initializes a `CombinationsSequence` for all combinations of `base` of</span><br>  <span class="hljs-comment">/// size `k`.</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// - Parameters:</span><br>  <span class="hljs-comment">///   - base: The collection to iterate over for combinations.</span><br>  <span class="hljs-comment">///   - k: The expected size of each combination.</span><br>  <span class="hljs-keyword">@inlinable</span><br>  <span class="hljs-keyword">internal</span> <span class="hljs-keyword">init</span>(<span class="hljs-keyword">_</span> <span class="hljs-params">base</span>: <span class="hljs-type">Base</span>, <span class="hljs-params">k</span>: <span class="hljs-type">Int</span>) &#123;<br>    <span class="hljs-keyword">self</span>.<span class="hljs-keyword">init</span>(base, kRange: k<span class="hljs-operator">...</span>k)<br>  &#125;<br>  <br>  <span class="hljs-comment">/// Initializes a `CombinationsSequence` for all combinations of `base` of</span><br>  <span class="hljs-comment">/// sizes within a given range.</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// - Parameters:</span><br>  <span class="hljs-comment">///   - base: The collection to iterate over for combinations.</span><br>  <span class="hljs-comment">///   - kRange: The range of accepted sizes of combinations.</span><br>  <span class="hljs-keyword">@inlinable</span><br>  <span class="hljs-keyword">internal</span> <span class="hljs-keyword">init</span>&lt;<span class="hljs-type">R</span>: <span class="hljs-type">RangeExpression</span>&gt;(<br>    <span class="hljs-keyword">_</span> <span class="hljs-params">base</span>: <span class="hljs-type">Base</span>, <span class="hljs-params">kRange</span>: <span class="hljs-type">R</span><br>  ) <span class="hljs-keyword">where</span> <span class="hljs-type">R</span>.<span class="hljs-type">Bound</span> <span class="hljs-operator">==</span> <span class="hljs-type">Int</span> &#123;<br>    <span class="hljs-keyword">let</span> range <span class="hljs-operator">=</span> kRange.relative(to: <span class="hljs-number">0</span> <span class="hljs-operator">..&lt;</span> .max)<br>    <span class="hljs-keyword">self</span>.base <span class="hljs-operator">=</span> base<br>    <span class="hljs-keyword">let</span> baseCount <span class="hljs-operator">=</span> base.count<br>    <span class="hljs-keyword">self</span>.baseCount <span class="hljs-operator">=</span> baseCount<br>    <span class="hljs-keyword">let</span> upperBound <span class="hljs-operator">=</span> baseCount <span class="hljs-operator">+</span> <span class="hljs-number">1</span><br>    <span class="hljs-keyword">self</span>.kRange <span class="hljs-operator">=</span> range.lowerBound <span class="hljs-operator">&lt;</span> upperBound<br>      <span class="hljs-operator">?</span> range.clamped(to: <span class="hljs-number">0</span> <span class="hljs-operator">..&lt;</span> upperBound)<br>      : <span class="hljs-literal">nil</span><br>  &#125;<br>  <br>  <span class="hljs-comment">/// The total number of combinations.</span><br>  <span class="hljs-keyword">@inlinable</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> count: <span class="hljs-type">Int</span> &#123;<br>    <span class="hljs-keyword">guard</span> <span class="hljs-keyword">let</span> k <span class="hljs-operator">=</span> <span class="hljs-keyword">self</span>.kRange <span class="hljs-keyword">else</span> &#123; <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> &#125;<br>    <span class="hljs-keyword">let</span> n <span class="hljs-operator">=</span> baseCount<br>    <span class="hljs-keyword">if</span> k <span class="hljs-operator">==</span> <span class="hljs-number">0</span> <span class="hljs-operator">..&lt;</span> (n <span class="hljs-operator">+</span> <span class="hljs-number">1</span>) &#123;<br>      <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> <span class="hljs-operator">&lt;&lt;</span> n<br>    &#125;<br>    <br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">binomial</span>(<span class="hljs-params">n</span>: <span class="hljs-type">Int</span>, <span class="hljs-params">k</span>: <span class="hljs-type">Int</span>) -&gt; <span class="hljs-type">Int</span> &#123;<br>      <span class="hljs-keyword">switch</span> k &#123;<br>      <span class="hljs-keyword">case</span> n, <span class="hljs-number">0</span>: <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>      <span class="hljs-keyword">case</span> n<span class="hljs-operator">...</span>: <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>      <span class="hljs-keyword">case</span> (n <span class="hljs-operator">/</span> <span class="hljs-number">2</span> <span class="hljs-operator">+</span> <span class="hljs-number">1</span>)<span class="hljs-operator">...</span>: <span class="hljs-keyword">return</span> binomial(n: n, k: n <span class="hljs-operator">-</span> k)<br>      <span class="hljs-keyword">default</span>: <span class="hljs-keyword">return</span> n <span class="hljs-operator">*</span> binomial(n: n <span class="hljs-operator">-</span> <span class="hljs-number">1</span>, k: k <span class="hljs-operator">-</span> <span class="hljs-number">1</span>) <span class="hljs-operator">/</span> k<br>      &#125;<br>    &#125;<br>    <br>    <span class="hljs-keyword">return</span> k.map &#123;<br>      binomial(n: n, k: <span class="hljs-variable">$0</span>)<br>    &#125;.reduce(<span class="hljs-number">0</span>, <span class="hljs-operator">+</span>)<br>  &#125;<br><br>  <span class="hljs-comment">/// The total number of combinations.</span><br>  <span class="hljs-keyword">@inlinable</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> underestimatedCount: <span class="hljs-type">Int</span> &#123; count &#125;<br>&#125;<br><br><span class="hljs-keyword">extension</span> <span class="hljs-title class_">CombinationsSequence</span>: <span class="hljs-title class_ inherited__">Sequence</span> &#123;<br>  <span class="hljs-comment">/// The iterator for a `CombinationsSequence` instance.</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Iterator</span>: <span class="hljs-title class_ inherited__">IteratorProtocol</span> &#123;<br>    <span class="hljs-keyword">@usableFromInline</span><br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">let</span> base: <span class="hljs-type">Base</span><br>    <br>    <span class="hljs-comment">/// The current range of accepted sizes of combinations.</span><br>    <span class="hljs-comment">///</span><br>    <span class="hljs-comment">/// - Note: The range is contracted until empty while iterating over</span><br>    <span class="hljs-comment">/// combinations of different sizes. When the range is empty, iteration is</span><br>    <span class="hljs-comment">/// finished.</span><br>    <span class="hljs-keyword">@usableFromInline</span><br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">var</span> kRange: <span class="hljs-type">Range</span>&lt;<span class="hljs-type">Int</span>&gt;<br>    <br>    <span class="hljs-comment">/// Whether or not iteration is finished (`kRange` is empty)</span><br>    <span class="hljs-keyword">@inlinable</span><br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">var</span> isFinished: <span class="hljs-type">Bool</span> &#123;<br>      <span class="hljs-keyword">return</span> kRange.isEmpty<br>    &#125;<br>    <br>    <span class="hljs-keyword">@usableFromInline</span><br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">var</span> indexes: [<span class="hljs-type">Base</span>.<span class="hljs-type">Index</span>]<br>    <br>    <span class="hljs-keyword">@inlinable</span><br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">init</span>(<span class="hljs-keyword">_</span> <span class="hljs-params">combinations</span>: <span class="hljs-type">CombinationsSequence</span>) &#123;<br>      <span class="hljs-keyword">self</span>.base <span class="hljs-operator">=</span> combinations.base<br>      <span class="hljs-keyword">self</span>.kRange <span class="hljs-operator">=</span> combinations.kRange <span class="hljs-operator">??</span> <span class="hljs-number">0</span><span class="hljs-operator">..&lt;</span><span class="hljs-number">0</span><br>      <span class="hljs-keyword">self</span>.indexes <span class="hljs-operator">=</span> <span class="hljs-type">Array</span>(combinations.base.indices.prefix(kRange.lowerBound))<br>    &#125;<br>    <br>    <span class="hljs-comment">/// Advances the current indices to the next set of combinations. If</span><br>    <span class="hljs-comment">/// `indexes.count == 3` and `base.count == 5`, the indices advance like</span><br>    <span class="hljs-comment">/// this:</span><br>    <span class="hljs-comment">///</span><br>    <span class="hljs-comment">///     [0, 1, 2]</span><br>    <span class="hljs-comment">///     [0, 1, 3]</span><br>    <span class="hljs-comment">///     [0, 1, 4] *</span><br>    <span class="hljs-comment">///     // * `base.endIndex` reached in `indexes.last`</span><br>    <span class="hljs-comment">///     // Advance penultimate index and propagate that change</span><br>    <span class="hljs-comment">///     [0, 2, 3]</span><br>    <span class="hljs-comment">///     [0, 2, 4] *</span><br>    <span class="hljs-comment">///     [0, 3, 4] *</span><br>    <span class="hljs-comment">///     [1, 2, 3]</span><br>    <span class="hljs-comment">///     [1, 2, 4] *</span><br>    <span class="hljs-comment">///     [1, 3, 4] *</span><br>    <span class="hljs-comment">///     [2, 3, 4] *</span><br>    <span class="hljs-comment">///     // Can&#x27;t advance without needing to go past `base.endIndex`,</span><br>    <span class="hljs-comment">///     // so the iteration is finished.</span><br>    <span class="hljs-keyword">@inlinable</span><br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">mutating</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">advance</span>() &#123;<br>      <span class="hljs-comment">/// Advances `kRange` by incrementing its `lowerBound` until the range is</span><br>      <span class="hljs-comment">/// empty, when iteration is finished.</span><br>      <span class="hljs-keyword">func</span> <span class="hljs-title function_">advanceKRange</span>() &#123;<br>        <span class="hljs-keyword">if</span> kRange.lowerBound <span class="hljs-operator">&lt;</span> kRange.upperBound &#123;<br>          <span class="hljs-keyword">let</span> advancedLowerBound <span class="hljs-operator">=</span> kRange.lowerBound <span class="hljs-operator">+</span> <span class="hljs-number">1</span><br>          kRange <span class="hljs-operator">=</span> advancedLowerBound <span class="hljs-operator">..&lt;</span> kRange.upperBound<br>          indexes.removeAll(keepingCapacity: <span class="hljs-literal">true</span>)<br>          indexes.append(contentsOf: base.indices.prefix(kRange.lowerBound))<br>        &#125;<br>      &#125;<br>      <br>      <span class="hljs-keyword">guard</span> <span class="hljs-operator">!</span>indexes.isEmpty <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-comment">// Initial state for combinations of 0 elements is an empty array with</span><br>        <span class="hljs-comment">// `finished == false`. Even though no indexes are involved, advancing</span><br>        <span class="hljs-comment">// from that state means we are finished with iterating.</span><br>        advanceKRange()<br>        <span class="hljs-keyword">return</span><br>      &#125;<br>      <br>      <span class="hljs-keyword">let</span> i <span class="hljs-operator">=</span> indexes.count <span class="hljs-operator">-</span> <span class="hljs-number">1</span><br>      base.formIndex(after: <span class="hljs-operator">&amp;</span>indexes[i])<br>      <span class="hljs-keyword">if</span> indexes[i] <span class="hljs-operator">!=</span> base.endIndex &#123; <span class="hljs-keyword">return</span> &#125;<br>      <br>      <span class="hljs-keyword">var</span> j <span class="hljs-operator">=</span> i<br>      <span class="hljs-keyword">while</span> indexes[i] <span class="hljs-operator">==</span> base.endIndex &#123;<br>        j <span class="hljs-operator">-=</span> <span class="hljs-number">1</span><br>        <span class="hljs-keyword">guard</span> j <span class="hljs-operator">&gt;=</span> <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-comment">// Finished iterating over combinations of this size.</span><br>          advanceKRange()<br>          <span class="hljs-keyword">return</span><br>        &#125;<br>        <br>        base.formIndex(after: <span class="hljs-operator">&amp;</span>indexes[j])<br>        <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> indexes.indices[(j <span class="hljs-operator">+</span> <span class="hljs-number">1</span>)<span class="hljs-operator">...</span>] &#123;<br>          indexes[k] <span class="hljs-operator">=</span> base.index(after: indexes[k <span class="hljs-operator">-</span> <span class="hljs-number">1</span>])<br>          <span class="hljs-keyword">if</span> indexes[k] <span class="hljs-operator">==</span> base.endIndex &#123;<br>            <span class="hljs-keyword">break</span><br>          &#125;<br>        &#125;<br>      &#125;<br>    &#125;<br>    <br>    <span class="hljs-keyword">@inlinable</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">mutating</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">next</span>() -&gt; [<span class="hljs-type">Base</span>.<span class="hljs-type">Element</span>]<span class="hljs-operator">?</span> &#123;<br>      <span class="hljs-keyword">guard</span> <span class="hljs-operator">!</span>isFinished <span class="hljs-keyword">else</span> &#123; <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span> &#125;<br>      <span class="hljs-keyword">defer</span> &#123; advance() &#125;<br>      <span class="hljs-keyword">return</span> indexes.map &#123; i <span class="hljs-keyword">in</span> base[i] &#125;<br>    &#125;<br>  &#125;<br>  <br>  <span class="hljs-keyword">@inlinable</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">makeIterator</span>() -&gt; <span class="hljs-type">Iterator</span> &#123;<br>    <span class="hljs-type">Iterator</span>(<span class="hljs-keyword">self</span>)<br>  &#125;<br>&#125;<br><br><span class="hljs-keyword">extension</span> <span class="hljs-title class_">CombinationsSequence</span>: <span class="hljs-title class_ inherited__">LazySequenceProtocol</span><br>  <span class="hljs-keyword">where</span> <span class="hljs-title class_ inherited__">Base</span>: <span class="hljs-title class_ inherited__">LazySequenceProtocol</span> &#123;&#125;<br><br><span class="hljs-comment">//===----------------------------------------------------------------------===//</span><br><span class="hljs-comment">// combinations(ofCount:)</span><br><span class="hljs-comment">//===----------------------------------------------------------------------===//</span><br><br><span class="hljs-keyword">extension</span> <span class="hljs-title class_">Collection</span> &#123;<br>  <span class="hljs-comment">/// Returns a collection of combinations of this collection&#x27;s elements, with</span><br>  <span class="hljs-comment">/// each combination having the specified number of elements.</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// This example prints the different combinations of 1 and 2 from an array of</span><br>  <span class="hljs-comment">/// four colors:</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">///     let colors = [&quot;fuchsia&quot;, &quot;cyan&quot;, &quot;mauve&quot;, &quot;magenta&quot;]</span><br>  <span class="hljs-comment">///     for combo in colors.combinations(ofCount: 1...2) &#123;</span><br>  <span class="hljs-comment">///         print(combo.joined(separator: &quot;, &quot;))</span><br>  <span class="hljs-comment">///     &#125;</span><br>  <span class="hljs-comment">///     // fuchsia</span><br>  <span class="hljs-comment">///     // cyan</span><br>  <span class="hljs-comment">///     // mauve</span><br>  <span class="hljs-comment">///     // magenta</span><br>  <span class="hljs-comment">///     // fuchsia, cyan</span><br>  <span class="hljs-comment">///     // fuchsia, mauve</span><br>  <span class="hljs-comment">///     // fuchsia, magenta</span><br>  <span class="hljs-comment">///     // cyan, mauve</span><br>  <span class="hljs-comment">///     // cyan, magenta</span><br>  <span class="hljs-comment">///     // mauve, magenta</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// The returned collection presents combinations in a consistent order, where</span><br>  <span class="hljs-comment">/// the indices in each combination are in ascending lexicographical order.</span><br>  <span class="hljs-comment">/// That is, in the example above, the combinations in order are the elements</span><br>  <span class="hljs-comment">/// at `[0]`, `[1]`, `[2]`, `[3]`, `[0, 1]`, `[0, 2]`, `[0, 3]`, `[1, 2]`,</span><br>  <span class="hljs-comment">/// `[1, 3]`, and finally `[2, 3]`.</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// This example prints _all_ the combinations (including an empty array and</span><br>  <span class="hljs-comment">/// the original collection) from an array of numbers:</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">///     let numbers = [10, 20, 30, 40]</span><br>  <span class="hljs-comment">///     for combo in numbers.combinations(ofCount: 0...) &#123;</span><br>  <span class="hljs-comment">///         print(combo)</span><br>  <span class="hljs-comment">///     &#125;</span><br>  <span class="hljs-comment">///     // []</span><br>  <span class="hljs-comment">///     // [10]</span><br>  <span class="hljs-comment">///     // [20]</span><br>  <span class="hljs-comment">///     // [30]</span><br>  <span class="hljs-comment">///     // [40]</span><br>  <span class="hljs-comment">///     // [10, 20]</span><br>  <span class="hljs-comment">///     // [10, 30]</span><br>  <span class="hljs-comment">///     // [10, 40]</span><br>  <span class="hljs-comment">///     // [20, 30]</span><br>  <span class="hljs-comment">///     // [20, 40]</span><br>  <span class="hljs-comment">///     // [30, 40]</span><br>  <span class="hljs-comment">///     // [10, 20, 30]</span><br>  <span class="hljs-comment">///     // [10, 20, 40]</span><br>  <span class="hljs-comment">///     // [10, 30, 40]</span><br>  <span class="hljs-comment">///     // [20, 30, 40]</span><br>  <span class="hljs-comment">///     // [10, 20, 30, 40]</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// If `kRange` is `0...0`, the resulting sequence has exactly one element, an</span><br>  <span class="hljs-comment">/// empty array. The given range is limited to `0...base.count`. If the</span><br>  <span class="hljs-comment">/// limited range is empty, the resulting sequence has no elements.</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// - Parameter kRange: The range of numbers of elements to include in each</span><br>  <span class="hljs-comment">///   combination.</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// - Complexity: O(1) for random-access base collections. O(*n*) where *n*</span><br>  <span class="hljs-comment">///   is the number of elements in the base collection, since</span><br>  <span class="hljs-comment">///   `CombinationsSequence` accesses the `count` of the base collection.</span><br>  <span class="hljs-keyword">@inlinable</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">combinations</span>&lt;<span class="hljs-type">R</span>: <span class="hljs-type">RangeExpression</span>&gt;(<br>    <span class="hljs-params">ofCount</span> <span class="hljs-params">kRange</span>: <span class="hljs-type">R</span><br>  ) -&gt; <span class="hljs-type">CombinationsSequence</span>&lt;<span class="hljs-keyword">Self</span>&gt; <span class="hljs-keyword">where</span> <span class="hljs-type">R</span>.<span class="hljs-type">Bound</span> <span class="hljs-operator">==</span> <span class="hljs-type">Int</span> &#123;<br>    <span class="hljs-type">CombinationsSequence</span>(<span class="hljs-keyword">self</span>, kRange: kRange)<br>  &#125;<br>  <br>  <span class="hljs-comment">/// Returns a collection of combinations of this collection&#x27;s elements, with</span><br>  <span class="hljs-comment">/// each combination having the specified number of elements.</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// This example prints the different combinations of three from an array of</span><br>  <span class="hljs-comment">/// four colors:</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">///     let colors = [&quot;fuchsia&quot;, &quot;cyan&quot;, &quot;mauve&quot;, &quot;magenta&quot;]</span><br>  <span class="hljs-comment">///     for combo in colors.combinations(ofCount: 3) &#123;</span><br>  <span class="hljs-comment">///         print(combo.joined(separator: &quot;, &quot;))</span><br>  <span class="hljs-comment">///     &#125;</span><br>  <span class="hljs-comment">///     // fuchsia, cyan, mauve</span><br>  <span class="hljs-comment">///     // fuchsia, cyan, magenta</span><br>  <span class="hljs-comment">///     // fuchsia, mauve, magenta</span><br>  <span class="hljs-comment">///     // cyan, mauve, magenta</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// The returned collection presents combinations in a consistent order, where</span><br>  <span class="hljs-comment">/// the indices in each combination are in ascending lexicographical order.</span><br>  <span class="hljs-comment">/// That is, in the example above, the combinations in order are the elements</span><br>  <span class="hljs-comment">/// at `[0, 1, 2]`, `[0, 1, 3]`, `[0, 2, 3]`, and finally `[1, 2, 3]`.</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// If `k` is zero, the resulting sequence has exactly one element, an empty</span><br>  <span class="hljs-comment">/// array. If `k` is greater than the number of elements in this sequence,</span><br>  <span class="hljs-comment">/// the resulting sequence has no elements.</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// - Parameter k: The number of elements to include in each combination.</span><br>  <span class="hljs-comment">///</span><br>  <span class="hljs-comment">/// - Complexity: O(1) for random-access base collections. O(*n*) where *n*</span><br>  <span class="hljs-comment">///   is the number of elements in the base collection, since</span><br>  <span class="hljs-comment">///   `CombinationsSequence` accesses the `count` of the base collection.</span><br>  <span class="hljs-keyword">@inlinable</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">combinations</span>(<span class="hljs-params">ofCount</span> <span class="hljs-params">k</span>: <span class="hljs-type">Int</span>) -&gt; <span class="hljs-type">CombinationsSequence</span>&lt;<span class="hljs-keyword">Self</span>&gt; &#123;<br>    <span class="hljs-built_in">precondition</span>(k <span class="hljs-operator">&gt;=</span> <span class="hljs-number">0</span>, <span class="hljs-string">&quot;Can&#x27;t have combinations with a negative number of elements.&quot;</span>)<br>    <span class="hljs-keyword">return</span> <span class="hljs-type">CombinationsSequence</span>(<span class="hljs-keyword">self</span>, k: k)<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>使用：</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> numbers <span class="hljs-operator">=</span> [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>]<br><span class="hljs-keyword">for</span> combo <span class="hljs-keyword">in</span> numbers.combinations(ofCount: <span class="hljs-number">2</span>) &#123;<br>    <span class="hljs-built_in">print</span>(combo)<br>&#125;<br><span class="hljs-comment">// [10, 20]</span><br><span class="hljs-comment">// [10, 30]</span><br><span class="hljs-comment">// [10, 40]</span><br><span class="hljs-comment">// [20, 30]</span><br><span class="hljs-comment">// [20, 40]</span><br><span class="hljs-comment">// [30, 40]</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python 有序或者无序排列组合</title>
+    <link href="/2024/09/06/Python-%E6%9C%89%E5%BA%8F%E6%88%96%E8%80%85%E6%97%A0%E5%BA%8F%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
+    <url>/2024/09/06/Python-%E6%9C%89%E5%BA%8F%E6%88%96%E8%80%85%E6%97%A0%E5%BA%8F%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> itertools<br><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">无序排列</span><br><span class="hljs-string">combinations(M个数的集合,选取N个数为一组)</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br>c = <span class="hljs-built_in">list</span>(itertools.combinations([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], <span class="hljs-number">2</span>))<br><span class="hljs-built_in">print</span>(c)<br><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">有序排列</span><br><span class="hljs-string">permutations(M个数的集合,选取N个数为一组)</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br>p = <span class="hljs-built_in">list</span>(itertools.permutations([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], <span class="hljs-number">2</span>))<br><span class="hljs-built_in">print</span>(p)<br><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">测试结果：</span><br><span class="hljs-string">[(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]</span><br><span class="hljs-string">[(1, 2), (1, 3), (1, 4), (2, 1), (2, 3), (2, 4), (3, 1), (3, 2), (3, 4), (4, 1), (4, 2), (4, 3)]</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SwiftUI Path 使用</title>
+    <link href="/2024/09/06/SwiftUI-Path-%E4%BD%BF%E7%94%A8/"/>
+    <url>/2024/09/06/SwiftUI-Path-%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 绘制一个矩形</span><br><span class="hljs-type">Path</span>() &#123; path <span class="hljs-keyword">in</span><br>        path.move(to: <span class="hljs-type">CGPoint</span>(x: <span class="hljs-number">0</span>, y: <span class="hljs-number">0</span>))<br>        path.addLine(to: <span class="hljs-type">CGPoint</span>(x:<span class="hljs-number">0</span>, y: <span class="hljs-number">200</span>))<br>        path.addLine(to: <span class="hljs-type">CGPoint</span>(x: <span class="hljs-number">300</span>, y: <span class="hljs-number">200</span>))<br>        path.addLine(to: <span class="hljs-type">CGPoint</span>(x: <span class="hljs-number">300</span>, y: <span class="hljs-number">0</span>))<br>        <span class="hljs-comment">// path.closeSubpath() </span><br>&#125;<br>.fill(<span class="hljs-type">Color</span>.blue)<br><span class="hljs-comment">// .stroke(Color.blue,lineWidth: 10)</span><br></code></pre></td></tr></table></figure><p>需要注意的一点是，可以在 ForEach 中使用 Path。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Mac 彻底删除 VSCode</title>
+    <link href="/2024/09/06/Mac-%E5%BD%BB%E5%BA%95%E5%88%A0%E9%99%A4-VSCode/"/>
+    <url>/2024/09/06/Mac-%E5%BD%BB%E5%BA%95%E5%88%A0%E9%99%A4-VSCode/</url>
+    
+    <content type="html"><![CDATA[<p>参考：<a href="https://jimkang.medium.com/complete-uninstall-remove-vscode-mac-5e48bef3bdec">Complete uninstall &#x2F; remove vscode (Mac)</a></p><p>想要彻底卸载mac上的vscode大概要经过以下几步：</p><ul><li>1、退出vscode</li><li>2、删除配置文件</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">rm</span> -rf <span class="hljs-variable">$HOME</span>/Library/Application\ Support/Code<br>// <span class="hljs-keyword">if</span> you<span class="hljs-string">&#x27;re using insider*</span><br><span class="hljs-string">sudo rm -rf $HOME/Library/Application\ Support/Code\ -\ Insiders/</span><br></code></pre></td></tr></table></figure><ul><li>3、删除扩展插件</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">rm</span> -rf <span class="hljs-variable">$HOME</span>/.vscode<br>// <span class="hljs-keyword">if</span> you<span class="hljs-string">&#x27;re using insider*</span><br><span class="hljs-string">sudo rm -rf $HOME/.vscode-insiders/</span><br></code></pre></td></tr></table></figure><ul><li>4、从应用中删除vscode（如果存在的话，如果直接解压后使用似乎不用做）</li><li>5、卸载所有vscode系统配置</li><li>6、重新下载vscode安装</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">rm</span> -rf <span class="hljs-variable">$HOME</span>/.vscode<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Mac</tag>
+      
+      <tag>VSCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Xcode 创建 C++ 工程</title>
+    <link href="/2024/09/05/Xcode-%E5%88%9B%E5%BB%BA-C-%E5%B7%A5%E7%A8%8B/"/>
+    <url>/2024/09/05/Xcode-%E5%88%9B%E5%BB%BA-C-%E5%B7%A5%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<ol><li>选择 macOS 中的 Command line tool；</li><li>选择语言 C++。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Xcode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>VSCode 设置中文</title>
+    <link href="/2024/09/05/VSCode-%E8%AE%BE%E7%BD%AE%E4%B8%AD%E6%96%87/"/>
+    <url>/2024/09/05/VSCode-%E8%AE%BE%E7%BD%AE%E4%B8%AD%E6%96%87/</url>
+    
+    <content type="html"><![CDATA[<ol><li>打开 <code>显示（View）</code> 菜单，选择 <code>命令面板（Command Palette）</code> 菜单项或 <code>Ctrl+Shift+P</code> 快捷键 打开命令面板；</li><li>在命令面板中，输入<code>Configure Display Language</code>，选择<code>Configure Display Language</code>命令。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>VSCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>「Game Feel，制造游戏感」</title>
+    <link href="/2024/08/26/%E3%80%8CGame-Feel%EF%BC%8C%E5%88%B6%E9%80%A0%E6%B8%B8%E6%88%8F%E6%84%9F%E3%80%8D/"/>
+    <url>/2024/08/26/%E3%80%8CGame-Feel%EF%BC%8C%E5%88%B6%E9%80%A0%E6%B8%B8%E6%88%8F%E6%84%9F%E3%80%8D/</url>
+    
+    <content type="html"><![CDATA[<ul><li><p><a href="https://www.gcores.com/articles/137125">游戏论文分享：Game Feel 设计纵览</a></p></li><li><p><a href="https://www.douban.com/note/802646785/?_i=4143223hxGRY4Q">Game Feel设计纵览：一篇有213个参考文献的论文</a></p></li><li><p><a href="https://www.gcores.com/articles/147708">译介丨游戏论文《制造游戏感》</a></p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>合集</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>游戏设计</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Alfred 搜索不到书签的解决办法</title>
+    <link href="/2024/08/26/Alfred-%E6%90%9C%E7%B4%A2%E4%B8%8D%E5%88%B0%E4%B9%A6%E7%AD%BE%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <url>/2024/08/26/Alfred-%E6%90%9C%E7%B4%A2%E4%B8%8D%E5%88%B0%E4%B9%A6%E7%AD%BE%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<p>去 Mac 设置里的 <code>隐私与安全性</code> 中打开 Alfred 的 <code>完全磁盘访问权限</code> 即可。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Mac</tag>
+      
+      <tag>生产力（摸鱼）</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>npm 查看安装了那些包</title>
     <link href="/2024/08/20/npm-%E6%9F%A5%E7%9C%8B%E5%AE%89%E8%A3%85%E4%BA%86%E9%82%A3%E4%BA%9B%E5%8C%85/"/>
     <url>/2024/08/20/npm-%E6%9F%A5%E7%9C%8B%E5%AE%89%E8%A3%85%E4%BA%86%E9%82%A3%E4%BA%9B%E5%8C%85/</url>
@@ -195,9 +474,9 @@
     
     <tags>
       
-      <tag>Raspberry Pi</tag>
-      
       <tag>VSCode</tag>
+      
+      <tag>Raspberry Pi</tag>
       
     </tags>
     
@@ -272,9 +551,9 @@
     
     <tags>
       
-      <tag>Raspberry Pi</tag>
-      
       <tag>Anaconda</tag>
+      
+      <tag>Raspberry Pi</tag>
       
     </tags>
     
@@ -299,9 +578,9 @@
     
     <tags>
       
-      <tag>DIY</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
@@ -326,9 +605,9 @@
     
     <tags>
       
-      <tag>Arduino</tag>
-      
       <tag>运动科学</tag>
+      
+      <tag>Arduino</tag>
       
       <tag>DIY</tag>
       
@@ -380,9 +659,9 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>心率</tag>
+      
+      <tag>Swift</tag>
       
     </tags>
     
@@ -1042,11 +1321,11 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>心率</tag>
       
       <tag>传感器</tag>
+      
+      <tag>Swift</tag>
       
     </tags>
     
@@ -2128,11 +2407,11 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>IMU</tag>
       
       <tag>传感器</tag>
+      
+      <tag>Swift</tag>
       
     </tags>
     
@@ -2338,9 +2617,9 @@
     
     <tags>
       
-      <tag>串口</tag>
-      
       <tag>Mac</tag>
+      
+      <tag>串口</tag>
       
     </tags>
     
@@ -2748,9 +3027,9 @@
     
     <tags>
       
-      <tag>Anaconda</tag>
-      
       <tag>VSCode</tag>
+      
+      <tag>Anaconda</tag>
       
     </tags>
     
@@ -2825,13 +3104,13 @@
     
     <tags>
       
-      <tag>Arduino</tag>
-      
-      <tag>DIY</tag>
-      
       <tag>EMG</tag>
       
+      <tag>Arduino</tag>
+      
       <tag>传感器</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
@@ -2906,9 +3185,9 @@
     
     <tags>
       
-      <tag>串口</tag>
-      
       <tag>Python</tag>
+      
+      <tag>串口</tag>
       
     </tags>
     
@@ -2935,9 +3214,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>DIY</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
@@ -2964,9 +3243,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>DIY</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
@@ -3245,9 +3524,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>DIY</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
@@ -3376,9 +3655,9 @@
     
     <tags>
       
-      <tag>串口</tag>
-      
       <tag>Mac</tag>
+      
+      <tag>串口</tag>
       
     </tags>
     
@@ -3428,9 +3707,9 @@
     
     <tags>
       
-      <tag>串口</tag>
-      
       <tag>Mac</tag>
+      
+      <tag>串口</tag>
       
     </tags>
     
