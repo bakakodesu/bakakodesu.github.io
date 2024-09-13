@@ -4,6 +4,131 @@
   
   
   <entry>
+    <title>小米 MESH 无法自定义切换路由节点的信号阈值</title>
+    <link href="/2024/09/10/%E5%B0%8F%E7%B1%B3-MESH-%E6%97%A0%E6%B3%95%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%87%E6%8D%A2%E8%B7%AF%E7%94%B1%E8%8A%82%E7%82%B9%E7%9A%84%E4%BF%A1%E5%8F%B7%E9%98%88%E5%80%BC/"/>
+    <url>/2024/09/10/%E5%B0%8F%E7%B1%B3-MESH-%E6%97%A0%E6%B3%95%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%87%E6%8D%A2%E8%B7%AF%E7%94%B1%E8%8A%82%E7%82%B9%E7%9A%84%E4%BF%A1%E5%8F%B7%E9%98%88%E5%80%BC/</url>
+    
+    <content type="html"><![CDATA[<p>参考：<a href="https://fast.v2ex.com/t/1041802">小米 MESH 如何修改弱信号切换阈值？</a></p><blockquote><p>首先，这个问题不仅需要路由器支持相应的协议，需要手机端也要支持。就算双方都支持，也不是说能达到很灵敏的切换到最优信号。</p><p>切换到最优信号，一种是客户端主动切换，这个支持最好的应该是苹果，官网也有信号低到多少阈值会执行切换的文档，具体数字应该是-70dbm. 相应的 wifi 协议是 11k ，路由器与客户端需要都支持，可以减少切换需要的时间。<br>但是这个的问题在于，-70 是定死的，但每家每户的节点信号强度是不一样的。有的家里两个节点间距离较远，可能切换效果好一点。有的家庭两个节点比较近，即使你站在 B 节点的附近，此时 A 节点的信号强度还是比-70 好，所以还是不会切到 B 节点。</p><p>另外一种是 router 端主动把客户端踢到指定的节点。这个是 11v 协议的内容，这个目前市面上的高端的设备，只能说是支持，但是目前没有听说哪家体验很好。</p><p>一楼所说的将无线发射功率调低一点，也算一个解决办法。效果相当与上面说的把 A 和 B 两个节点距离拉远一点。可能会有一些帮助，但是不要期望太多。</p><p>还有人提到 Linksys 针对这个做的优化，大概说的是他家的 client steering 功能，效果有，但是也不要期望太高。</p><p>因为目前市面上设备针对这个功能进行优化的，还是太少了，需要芯片厂商从底层无线 driver 层面实现对上述协议的良好支持。另外信号强度这个东西太难以捉摸，同一个设备不同时间，强度也会波动，不同频段频道信噪比不一样，所以也不一定是信号强度最好的就速度一定最快。</p><p>罗嗦的讲了一通，我觉得不要纠结与客户端是否是连在最好的节点上，而应该更加关注连在非最优节点时候的客户端是否有网络卡顿，掉线等问题。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生产力（摸鱼）</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Swift 找到数组中指定元素的 index</title>
+    <link href="/2024/09/10/Swift-%E6%89%BE%E5%88%B0%E6%95%B0%E7%BB%84%E4%B8%AD%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0%E7%9A%84-index/"/>
+    <url>/2024/09/10/Swift-%E6%89%BE%E5%88%B0%E6%95%B0%E7%BB%84%E4%B8%AD%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0%E7%9A%84-index/</url>
+    
+    <content type="html"><![CDATA[<ul><li><p><code>firstIndex(where:)</code>，如果有多个元素，返回第一个元素索引</p></li><li><p><code>lastIndex(where:)</code>，如果有多个元素，返回最后一个元素索引</p></li></ul><p><strong>使用方法</strong></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Swift"><span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> dataSource.firstIndex(where: &#123; <span class="hljs-variable">$0</span>.id <span class="hljs-operator">==</span> item.id &#125;) &#123;<br>  dataSource.remove(at: index)<br>&#125;<br></code></pre></td></tr></table></figure><p>参考：<a href="https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/%E5%BE%9E%E9%9B%86%E5%90%88%E6%89%BE%E5%B0%8B%E6%88%90%E5%93%A1%E7%9A%84-firstindex-where-firstindex-of-swift-4-2-c5841aa56ac8">從集合找尋成員編號的<strong>firstIndex(where:) &amp; firstIndex(of:)</strong> — Swift 4.2</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Xcode 打包 macOS 应用</title>
+    <link href="/2024/09/10/Xcode-%E6%89%93%E5%8C%85-macOS-%E5%BA%94%E7%94%A8/"/>
+    <url>/2024/09/10/Xcode-%E6%89%93%E5%8C%85-macOS-%E5%BA%94%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<p><code>Product - Archive - Distribute App - Custom - Copy App</code></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Xcode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SwiftUI 设置 macOS 窗口默认尺寸</title>
+    <link href="/2024/09/10/SwiftUI-%E8%AE%BE%E7%BD%AE-macOS-%E7%AA%97%E5%8F%A3%E9%BB%98%E8%AE%A4%E5%B0%BA%E5%AF%B8/"/>
+    <url>/2024/09/10/SwiftUI-%E8%AE%BE%E7%BD%AE-macOS-%E7%AA%97%E5%8F%A3%E9%BB%98%E8%AE%A4%E5%B0%BA%E5%AF%B8/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">import</span> SwiftUI<br><br><span class="hljs-keyword">@main</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">DotsApp</span>: <span class="hljs-title class_ inherited__">App</span> &#123;<br>    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">Scene</span> &#123;<br>        <span class="hljs-type">WindowGroup</span> &#123;<br>            <span class="hljs-type">ContentView</span>()<br>        &#125;<br>        .defaultSize(width: <span class="hljs-number">1920</span>, height: <span class="hljs-number">1080</span>)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Sketch 组件库默认存放路径</title>
+    <link href="/2024/09/06/Sketch-%E7%BB%84%E4%BB%B6%E5%BA%93%E9%BB%98%E8%AE%A4%E5%AD%98%E6%94%BE%E8%B7%AF%E5%BE%84/"/>
+    <url>/2024/09/06/Sketch-%E7%BB%84%E4%BB%B6%E5%BA%93%E9%BB%98%E8%AE%A4%E5%AD%98%E6%94%BE%E8%B7%AF%E5%BE%84/</url>
+    
+    <content type="html"><![CDATA[<p><code>User/UserName/Library/Application Support/com.bohemiancoding.sketch3/Libraries</code></p><p>其中，Libraries 文件夹是隐藏的，需要 <code>Shift+Command+.</code> 显示出来。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Mac</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>面积并</title>
     <link href="/2024/09/06/%E9%9D%A2%E7%A7%AF%E5%B9%B6/"/>
     <url>/2024/09/06/%E9%9D%A2%E7%A7%AF%E5%B9%B6/</url>
