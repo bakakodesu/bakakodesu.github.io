@@ -4,6 +4,131 @@
   
   
   <entry>
+    <title>训练集归一化</title>
+    <link href="/2024/09/24/%E8%AE%AD%E7%BB%83%E9%9B%86%E5%BD%92%E4%B8%80%E5%8C%96/"/>
+    <url>/2024/09/24/%E8%AE%AD%E7%BB%83%E9%9B%86%E5%BD%92%E4%B8%80%E5%8C%96/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> StandardScaler<br><br>scaler = StandardScaler()<br>features = scaler.fit_transform(features)<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>深度学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>PyTorch 常用损失函数</title>
+    <link href="/2024/09/24/PyTorch-%E5%B8%B8%E7%94%A8%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/"/>
+    <url>/2024/09/24/PyTorch-%E5%B8%B8%E7%94%A8%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<p>参考：</p><ol><li><a href="https://blog.csdn.net/weixin_39263657/article/details/121780642">pytorch模型构建（四）——常用的回归损失函数</a></li><li><a href="https://blog.csdn.net/l13022736018/article/details/116452727">几种常见的计算机视觉中的损失函数原理理解&amp;分析</a></li><li><a href="https://blog.csdn.net/irober/article/details/113779250">PyTorch中的损失函数大致使用场景</a></li></ol><h2 id="分类损失函数"><a href="#分类损失函数" class="headerlink" title="分类损失函数"></a><strong>分类损失函数</strong></h2><p>一般有 <code>CrossEntropy Loss</code>、<code>NLL Loss</code>、<code>KLDiv Loss</code>、<code>BCE Loss</code>、<code>BCE With Logits Loss</code>、<code>Margin Ranking Loss</code>、<code>Hinge Embedding Loss</code>、<code>Huber Loss</code> 等。</p><h3 id="CrossEntropy-Loss"><a href="#CrossEntropy-Loss" class="headerlink" title="CrossEntropy Loss"></a>CrossEntropy Loss</h3><p>交叉熵损失 CrossEntropyLoss</p><p>代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">torch.nn.CrossEntropyLoss(weight=<span class="hljs-literal">None</span>,ignore_index=-<span class="hljs-number">100</span>, reduction=<span class="hljs-string">&#x27;mean&#x27;</span>)<br></code></pre></td></tr></table></figure><p>当训练有多个类别的分类问题时很有效。<br>在多分类任务中，经常采用 softmax 激活函数+交叉熵损失函数，因为交叉熵描述了两个概率分布的差异，然而神经网络输出的是<strong>向量</strong>，并不是概率分布的形式。所以需要 softmax 激活函数将一个向量进行“归一化”成概率分布的形式，再采用交叉熵损失函数计算 loss。</p><h2 id="回归损失函数"><a href="#回归损失函数" class="headerlink" title="回归损失函数"></a><strong>回归损失函数</strong></h2><p>一般有 <code>L1 Loss</code>、<code>L2 Loss</code>、<code>Smooth L1 Loss</code> 等。</p><h3 id="L1-Loss"><a href="#L1-Loss" class="headerlink" title="L1 Loss"></a>L1 Loss</h3><p>L1 Loss 即平均绝对误差（Mean Absolute Error， MAE）</p><p>代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">torch.nn.L1Loss(size_average=<span class="hljs-literal">None</span>, reduce=<span class="hljs-literal">None</span>, reduction=<span class="hljs-string">&#x27;mean&#x27;</span>)<br></code></pre></td></tr></table></figure><p><strong>什么时候使用？</strong></p><ol><li>简单的模型</li><li>由于神经网络通常是解决复杂问题，所以很少使用。</li></ol><h3 id="L2-Loss"><a href="#L2-Loss" class="headerlink" title="L2 Loss"></a>L2 Loss</h3><p>L2 Loss 即均方差（Mean Squred Error， MSE）</p><p>代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">torch.nn.MSELoss(size_average=<span class="hljs-literal">None</span>, reduce=<span class="hljs-literal">None</span>, reduction=<span class="hljs-string">&#x27;mean&#x27;</span>)<br></code></pre></td></tr></table></figure><p><strong>什么时候使用？</strong></p><ol><li>数值特征不大</li><li>问题维度不高</li></ol><p>两者区别</p><ol><li>L1 Loss。0 处导数不连续，收敛速度慢。 对异常值不敏感，因为是求平均，会忽略掉异常值的作用，一般可用于有少许数据错误的值，这样就可以忽略掉这些错误的离群值；</li><li>L2 Loss。收敛速度快，对异常值敏感，如果是需要进行异常检测，就不能忽略掉离群值。</li></ol><p>假如数据集多数为 1000，少数为 10，那么 L1 会偏向 1000（因为更偏向于平均），L2 则会偏向于 10，因为对离群值更敏感，所以实际中这两种都不太可取，所以 Smooth L1 Loss 可以同时利用两者的优点。</p><h3 id="Smooth-L1-Loss"><a href="#Smooth-L1-Loss" class="headerlink" title="Smooth L1 Loss"></a>Smooth L1 Loss</h3><p>平滑的 L1 损失（Smooth L1 Loss， SLL）</p><p>代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">torch.nn.SmoothL1Loss(size_average=<span class="hljs-literal">None</span>, reduce=<span class="hljs-literal">None</span>, reduction=<span class="hljs-string">&#x27;mean&#x27;</span>, beta=<span class="hljs-number">1.0</span>)<br></code></pre></td></tr></table></figure><p>Smooth L1 Loss 的优点：</p><ol><li>结合了 L1 Loss 对离群点、异常值不敏感的优点;</li><li>结合了 L2 Loss 在 0 处可导数，收敛速度快、训练不容易跑飞的优点。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>文章</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>深度学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>PyTorch 回归模型</title>
+    <link href="/2024/09/24/PyTorch-%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B/"/>
+    <url>/2024/09/24/PyTorch-%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B/</url>
+    
+    <content type="html"><![CDATA[<p>线性回归</p><ul><li><a href="https://www.cnblogs.com/maycap/p/17766022.html">PyTorch之线性回归模型</a></li><li><a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch/blob/master/docs/chapter03_DL-basics/3.3_linear-regression-pytorch.md">3.3 线性回归的简洁实现</a></li></ul><p>非线性回归</p><ul><li><a href="https://blog.csdn.net/weixin_46919419/article/details/122544512">pytorch学习线性回归与非线性回归，以及理解nn.linear()和ReLU激活函数</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>合集</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>深度学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>PyTorch 提示 RuntimeError: expected scalar type Long but found Float</title>
+    <link href="/2024/09/24/PyTorch-%E6%8F%90%E7%A4%BA-RuntimeError-expected-scalar-type-Long-but-found-Float/"/>
+    <url>/2024/09/24/PyTorch-%E6%8F%90%E7%A4%BA-RuntimeError-expected-scalar-type-Long-but-found-Float/</url>
+    
+    <content type="html"><![CDATA[<p>对于多分类一般采用的交叉熵损失函数 <code>torch.nn.CrossEntropyLoss()</code>，此时 label 的取值为 LongTensor 没有问题。</p><p>但在回归时，label 的取值为 FloatTensor，此时再使用 <code>torch.nn.CrossEntropyLoss()</code> 就会提示标题错误。</p><p>参考：</p><ol><li><a href="https://stackoverflow.com/questions/60440292/runtimeerror-expected-scalar-type-long-but-found-float">RuntimeError: expected scalar type Long but found Float</a></li><li><a href="https://stackoverflow.com/questions/70279287/runtimeerror-expected-scalar-type-long-but-found-float-pytorch">RuntimeError: expected scalar type Long but found Float (Pytorch)</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>深度学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>PyCharm 右侧显示代码缩略图</title>
+    <link href="/2024/09/24/PyCharm-%E5%8F%B3%E4%BE%A7%E6%98%BE%E7%A4%BA%E4%BB%A3%E7%A0%81%E7%BC%A9%E7%95%A5%E5%9B%BE/"/>
+    <url>/2024/09/24/PyCharm-%E5%8F%B3%E4%BE%A7%E6%98%BE%E7%A4%BA%E4%BB%A3%E7%A0%81%E7%BC%A9%E7%95%A5%E5%9B%BE/</url>
+    
+    <content type="html"><![CDATA[<p>找到插件下载 <code>CodeGlance</code></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PyCharm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>小米 MESH 无法自定义切换路由节点的信号阈值</title>
     <link href="/2024/09/10/%E5%B0%8F%E7%B1%B3-MESH-%E6%97%A0%E6%B3%95%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%87%E6%8D%A2%E8%B7%AF%E7%94%B1%E8%8A%82%E7%82%B9%E7%9A%84%E4%BF%A1%E5%8F%B7%E9%98%88%E5%80%BC/"/>
     <url>/2024/09/10/%E5%B0%8F%E7%B1%B3-MESH-%E6%97%A0%E6%B3%95%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%87%E6%8D%A2%E8%B7%AF%E7%94%B1%E8%8A%82%E7%82%B9%E7%9A%84%E4%BF%A1%E5%8F%B7%E9%98%88%E5%80%BC/</url>
