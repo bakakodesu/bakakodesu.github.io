@@ -21,24 +21,24 @@
   <meta name="author" content="刘子航">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1234from sklearn.preprocessing import StandardScalerscaler &#x3D; StandardScaler()features &#x3D; scaler.fit_transform(features)">
+    <meta name="description" content="首先参考：  Python获取列表中最大&#x2F;最小的n个元素及索引 Python获取list中最大或最小的n个数及其索引  但都不是很优雅，尤其是在有重复元素的情况下。 于是有了：Python lists: indices of heapq.nlargest with repeating values in list 12345678&gt;&gt;&gt; import heapq&gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="训练集归一化">
-<meta property="og:url" content="https://wonderhoi.com/2024/09/24/%E8%AE%AD%E7%BB%83%E9%9B%86%E5%BD%92%E4%B8%80%E5%8C%96/index.html">
+<meta property="og:title" content="Python 取出数组中最大&#x2F;小的 n 个（重复）元素以及索引">
+<meta property="og:url" content="https://wonderhoi.com/2024/10/10/Python-%E5%8F%96%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7-%E5%B0%8F%E7%9A%84-n-%E4%B8%AA-%E9%87%8D%E5%A4%8D-%E5%85%83%E7%B4%A0%E4%BB%A5%E5%8F%8A%E7%B4%A2%E5%BC%95/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="1234from sklearn.preprocessing import StandardScalerscaler &#x3D; StandardScaler()features &#x3D; scaler.fit_transform(features)">
+<meta property="og:description" content="首先参考：  Python获取列表中最大&#x2F;最小的n个元素及索引 Python获取list中最大或最小的n个数及其索引  但都不是很优雅，尤其是在有重复元素的情况下。 于是有了：Python lists: indices of heapq.nlargest with repeating values in list 12345678&gt;&gt;&gt; import heapq&gt;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-24T14:56:18.000Z">
-<meta property="article:modified_time" content="2024-09-24T14:57:35.381Z">
+<meta property="article:published_time" content="2024-10-10T08:37:33.000Z">
+<meta property="article:modified_time" content="2024-10-10T09:07:37.095Z">
 <meta property="article:author" content="刘子航">
-<meta property="article:tag" content="深度学习">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>训练集归一化 - 这是一个PM的BLOG</title>
+  <title>Python 取出数组中最大/小的 n 个（重复）元素以及索引 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="训练集归一化"></span>
+            <span id="subtitle" data-typed-text="Python 取出数组中最大/小的 n 个（重复）元素以及索引"></span>
           
         </div>
 
@@ -226,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-24 22:56" pubdate>
-          2024年9月24日 晚上
+        <time datetime="2024-10-10 16:37" pubdate>
+          2024年10月10日 下午
         </time>
       </span>
     
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7 字
+          115 字
         
       </span>
     
@@ -277,12 +277,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">训练集归一化</h1>
+            <h1 id="seo-header">Python 取出数组中最大/小的 n 个（重复）元素以及索引</h1>
             
             
               <div class="markdown-body">
                 
-                <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> StandardScaler<br><br>scaler = StandardScaler()<br>features = scaler.fit_transform(features)<br></code></pre></td></tr></table></figure>
+                <p>首先参考：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Parzival_/article/details/123411234">Python获取列表中最大&#x2F;最小的n个元素及索引</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Mark_2018/article/details/102471466">Python获取list中最大或最小的n个数及其索引</a></li>
+</ol>
+<p>但都不是很优雅，<strong>尤其是在有重复元素的情况下</strong>。</p>
+<p>于是有了：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/22076427/python-lists-indices-of-heapq-nlargest-with-repeating-values-in-list">Python lists: indices of heapq.nlargest with repeating values in list</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> heapq<br><span class="hljs-meta">&gt;&gt;&gt; </span>my_list = [<span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>data = heapq.nlargest(<span class="hljs-number">2</span>, <span class="hljs-built_in">enumerate</span>(my_list), key=<span class="hljs-keyword">lambda</span> x:x[<span class="hljs-number">1</span>])<br><span class="hljs-meta">&gt;&gt;&gt; </span>indices, vals = <span class="hljs-built_in">zip</span>(*data)<br><span class="hljs-meta">&gt;&gt;&gt; </span>indices<br>(<span class="hljs-number">1</span>, <span class="hljs-number">4</span>)<br><span class="hljs-meta">&gt;&gt;&gt; </span>vals<br>(<span class="hljs-number">8</span>, <span class="hljs-number">8</span>)<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -316,7 +323,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="print-no-link">#深度学习</a>
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
       
     </div>
   
@@ -328,8 +335,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>训练集归一化</div>
-      <div>https://wonderhoi.com/2024/09/24/训练集归一化/</div>
+      <div>Python 取出数组中最大/小的 n 个（重复）元素以及索引</div>
+      <div>https://wonderhoi.com/2024/10/10/Python-取出数组中最大-小的-n-个-重复-元素以及索引/</div>
     </div>
     <div class="license-meta">
       
@@ -341,7 +348,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年9月24日</div>
+          <div>2024年10月10日</div>
         </div>
       
       
@@ -373,12 +380,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2024/10/10/%E5%9C%B0%E5%9B%BE%E5%9D%90%E6%A0%87%E9%97%AE%E9%A2%98/" title="地图坐标问题">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">地图坐标问题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/24/PyTorch-%E5%B8%B8%E7%94%A8%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/" title="PyTorch 常用损失函数">
-                        <span class="hidden-mobile">PyTorch 常用损失函数</span>
+                      <a href="/2024/09/24/sklearn-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/" title="sklearn 数据预处理">
+                        <span class="hidden-mobile">sklearn 数据预处理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

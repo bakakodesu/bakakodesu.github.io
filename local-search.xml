@@ -4,11 +4,61 @@
   
   
   <entry>
-    <title>训练集归一化</title>
-    <link href="/2024/09/24/%E8%AE%AD%E7%BB%83%E9%9B%86%E5%BD%92%E4%B8%80%E5%8C%96/"/>
-    <url>/2024/09/24/%E8%AE%AD%E7%BB%83%E9%9B%86%E5%BD%92%E4%B8%80%E5%8C%96/</url>
+    <title>地图坐标问题</title>
+    <link href="/2024/10/10/%E5%9C%B0%E5%9B%BE%E5%9D%90%E6%A0%87%E9%97%AE%E9%A2%98/"/>
+    <url>/2024/10/10/%E5%9C%B0%E5%9B%BE%E5%9D%90%E6%A0%87%E9%97%AE%E9%A2%98/</url>
     
-    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> StandardScaler<br><br>scaler = StandardScaler()<br>features = scaler.fit_transform(features)<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<ul><li>高德地图、腾讯地图以及谷歌中国区地图使用的是 GCJ-02 坐标系，也就是国测局坐标系（火星坐标系）；</li><li>百度地图使用的是BD-09坐标系；</li><li>底层接口(HTML5 Geolocation或ios、安卓API)通过GPS设备获取的坐标使用的是WGS-84坐标系。</li></ul><p>参考：<a href="https://www.cnblogs.com/chenggang816/p/10253523.html">高德地图、腾讯地图、谷歌中国区地图与百度地图坐标系</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>DIY</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python 取出数组中最大/小的 n 个（重复）元素以及索引</title>
+    <link href="/2024/10/10/Python-%E5%8F%96%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7-%E5%B0%8F%E7%9A%84-n-%E4%B8%AA-%E9%87%8D%E5%A4%8D-%E5%85%83%E7%B4%A0%E4%BB%A5%E5%8F%8A%E7%B4%A2%E5%BC%95/"/>
+    <url>/2024/10/10/Python-%E5%8F%96%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7-%E5%B0%8F%E7%9A%84-n-%E4%B8%AA-%E9%87%8D%E5%A4%8D-%E5%85%83%E7%B4%A0%E4%BB%A5%E5%8F%8A%E7%B4%A2%E5%BC%95/</url>
+    
+    <content type="html"><![CDATA[<p>首先参考：</p><ol><li><a href="https://blog.csdn.net/Parzival_/article/details/123411234">Python获取列表中最大&#x2F;最小的n个元素及索引</a></li><li><a href="https://blog.csdn.net/Mark_2018/article/details/102471466">Python获取list中最大或最小的n个数及其索引</a></li></ol><p>但都不是很优雅，<strong>尤其是在有重复元素的情况下</strong>。</p><p>于是有了：<a href="https://stackoverflow.com/questions/22076427/python-lists-indices-of-heapq-nlargest-with-repeating-values-in-list">Python lists: indices of heapq.nlargest with repeating values in list</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> heapq<br><span class="hljs-meta">&gt;&gt;&gt; </span>my_list = [<span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>data = heapq.nlargest(<span class="hljs-number">2</span>, <span class="hljs-built_in">enumerate</span>(my_list), key=<span class="hljs-keyword">lambda</span> x:x[<span class="hljs-number">1</span>])<br><span class="hljs-meta">&gt;&gt;&gt; </span>indices, vals = <span class="hljs-built_in">zip</span>(*data)<br><span class="hljs-meta">&gt;&gt;&gt; </span>indices<br>(<span class="hljs-number">1</span>, <span class="hljs-number">4</span>)<br><span class="hljs-meta">&gt;&gt;&gt; </span>vals<br>(<span class="hljs-number">8</span>, <span class="hljs-number">8</span>)<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>sklearn 数据预处理</title>
+    <link href="/2024/09/24/sklearn-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/"/>
+    <url>/2024/09/24/sklearn-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> MinMaxScaler, StandardScaler, Normalizer, Binarizer<br><br><span class="hljs-comment"># 区间缩放是将原始数据中的数据缩放到[0,1]范围</span><br>scaler = MinMaxScaler(feature_range=(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>))<br>features = scaler.fit_transform(features)<br><br><span class="hljs-comment"># 标准化是将数据的分布调整成正态分布，也叫高斯分布，也就是使得数据的均值为0，方差为1</span><br>scaler = StandardScaler()<br>features = scaler.fit_transform(features)<br><br><span class="hljs-comment"># 正则化/归一化是将样本在向量空间模型上的一个转换，经常被使用在分类与聚类中。其目的在于样本向量在点乘运算或其他核函数计算相似性时，拥有统一的标准。</span><br>scaler = Normalizer()<br>features = scaler.fit_transform(features)<br><br><span class="hljs-comment"># 特征二值化是将特征值转换为0或1。</span><br><span class="hljs-comment"># 例如，在房价预测问题中对于“是否为学区房”这一特征，取值为1表示该房是学区房，反之则为0。 </span><br><span class="hljs-comment"># 在sklearn中可以设置一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0。</span><br>scaler = Binarizer(threshold=<span class="hljs-number">3</span>)<br>features = scaler.fit_transform(features)<br><br><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br><br>X_train, X_test, y_train, y_test = train_test_split(features, labels, train_size=<span class="hljs-number">0.8</span>, random_state=<span class="hljs-number">0</span>)<br><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">参数说明：</span><br><span class="hljs-string">- arrays：样本数组，包含特征向量和标签</span><br><span class="hljs-string">- test_size：float-获得多大比重的测试样本, int - 获得多少个测试样本</span><br><span class="hljs-string">- train_size: 同test_size</span><br><span class="hljs-string">- random_state:int - 随机种子（种子固定，实验可复现）</span><br><span class="hljs-string">- shuffle - 是否在分割之前对数据进行洗牌</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
@@ -828,9 +878,9 @@
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -1573,9 +1623,9 @@
       
       <tag>心率</tag>
       
-      <tag>传感器</tag>
-      
       <tag>Swift</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -2659,9 +2709,9 @@
       
       <tag>IMU</tag>
       
-      <tag>传感器</tag>
-      
       <tag>Swift</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -3358,9 +3408,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -3464,9 +3514,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -3493,9 +3543,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
@@ -3774,9 +3824,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>传感器</tag>
       
     </tags>
     
