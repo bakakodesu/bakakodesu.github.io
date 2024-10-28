@@ -4,6 +4,256 @@
   
   
   <entry>
+    <title>SwiftUI Text 的 specifier 和 formatter 参数</title>
+    <link href="/2024/10/28/SwiftUI-Text-%E7%9A%84-specifier-%E5%92%8C-formatter-%E5%8F%82%E6%95%B0/"/>
+    <url>/2024/10/28/SwiftUI-Text-%E7%9A%84-specifier-%E5%92%8C-formatter-%E5%8F%82%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/swiftui-text-%E7%9A%84-string-interpolation-%E5%92%8C%E5%8F%83%E6%95%B8-specifier-formatter-42640ec823af">SwiftUI Text 的 string interpolation 和參數 specifier &amp; formatter</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>合集</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SwiftUI Materials 模糊背景使用</title>
+    <link href="/2024/10/28/SwiftUI-Materials-%E6%A8%A1%E7%B3%8A%E8%83%8C%E6%99%AF%E4%BD%BF%E7%94%A8/"/>
+    <url>/2024/10/28/SwiftUI-Materials-%E6%A8%A1%E7%B3%8A%E8%83%8C%E6%99%AF%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs swift">.ultraThinMaterial<br>.thinMaterial<br>.regularMaterial<br>.thickMaterial<br>.ultraThickMaterial<br>.bar<br></code></pre></td></tr></table></figure><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/Materials.png"></p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Ultra thin material&quot;</span>)<br>   .background(.ultraThinMaterial)<br>   <br><span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Ultra thin material&quot;</span>)<br>   .background(<br>      .ultraThinMaterial,<br>      in: <span class="hljs-type">RoundedRectangle</span>(cornerRadius: <span class="hljs-number">8</span>, style: .continuous)<br>   )<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SwiftUI Alert 合集</title>
+    <link href="/2024/10/28/SwiftUI-Alert-%E5%90%88%E9%9B%86/"/>
+    <url>/2024/10/28/SwiftUI-Alert-%E5%90%88%E9%9B%86/</url>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/%E8%AA%8D%E8%AD%98-swiftui-%E7%9A%84-alert-83c41ddedca">認識 SwiftUI 的 Alert</a></li><li><a href="https://blog.csdn.net/mydo/article/details/130514831">SwiftUI 新 Alert 弹出窗口圆你文本输入之梦</a></li><li><a href="https://juejin.cn/post/7268112661472198668">SwiftUI基础篇Alert</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>合集</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SwiftUI Menu 合集</title>
+    <link href="/2024/10/28/SwiftUI-Menu-%E5%90%88%E9%9B%86/"/>
+    <url>/2024/10/28/SwiftUI-Menu-%E5%90%88%E9%9B%86/</url>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://swiftwithmajid.com/">Swift with Majid</a></li><li><a href="https://stackoverflow.com/questions/64277962/how-to-open-menu-only-on-long-press-gesture-swiftui">How to open Menu only on long press gesture SwiftUI</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>合集</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SwiftUI List 合集</title>
+    <link href="/2024/10/28/SwiftUI-List-%E5%90%88%E9%9B%86/"/>
+    <url>/2024/10/28/SwiftUI-List-%E5%90%88%E9%9B%86/</url>
+    
+    <content type="html"><![CDATA[<ul><li><p><a href="https://www.6hu.cc/archives/203140.html">SwiftUI基础篇List</a></p></li><li><p><a href="https://www.swiftyplace.com/blog/customise-list-view-appearance-in-swiftui-examples-beyond-the-default-stylings">How to Customise the SwiftUI List Style and Background Color</a></p></li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">List</span>&#123;<br>    <span class="hljs-type">ForEach</span>(billDateModel.dataSource)&#123; section <span class="hljs-keyword">in</span><br>        <span class="hljs-type">Section</span>(header: <span class="hljs-type">SectionView</span>(text: section.date)<br>            .listRowInsets(<span class="hljs-type">EdgeInsets</span>())                            <span class="hljs-comment">// Remove section padding</span><br>            .background(<span class="hljs-type">Color</span>.green.opacity(<span class="hljs-number">0.2</span>))                   <span class="hljs-comment">// section 默认透明</span><br>        ) &#123;<br>            <span class="hljs-type">ForEach</span>(section.bills) &#123; row <span class="hljs-keyword">in</span><br>                <span class="hljs-type">RowView</span>(text: row.count)<br>                    .listRowInsets(<span class="hljs-type">EdgeInsets</span>())                    <span class="hljs-comment">// Remove row padding，实际上还存在上下默认间隙</span><br>                    .listRowBackground(<span class="hljs-type">Color</span>.red.opacity(<span class="hljs-number">0.2</span>))      <span class="hljs-comment">// row 自带白色</span><br>                    .listRowSeparator(.hidden)                      <span class="hljs-comment">// 隐藏线条</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br>.environment(\.defaultMinListRowHeight, <span class="hljs-number">0</span>)                          <span class="hljs-comment">// 去掉 row 上下的默认间隙</span><br>.environment(\.defaultMinListHeaderHeight, <span class="hljs-number">0</span>)                       <span class="hljs-comment">// 去掉 header 下面的默认间隙</span><br>.listStyle(<span class="hljs-type">PlainListStyle</span>())                                        <span class="hljs-comment">// Remove Group</span><br><br>.background(<span class="hljs-type">Color</span>.blue.opacity(<span class="hljs-number">0.1</span>))                                <span class="hljs-comment">// list 不带颜色，background 不包括 row</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>合集</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Xcode 删除 Untitled 开发证书</title>
+    <link href="/2024/10/28/Xcode-%E5%88%A0%E9%99%A4-Untitled-%E5%BC%80%E5%8F%91%E8%AF%81%E4%B9%A6/"/>
+    <url>/2024/10/28/Xcode-%E5%88%A0%E9%99%A4-Untitled-%E5%BC%80%E5%8F%91%E8%AF%81%E4%B9%A6/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/68007837/how-do-i-delete-untitled-xcode-signing-certificates">How do I delete “Untitled” XCode signing certificates?</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Xcode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SwiftUI 检测 Dark Model</title>
+    <link href="/2024/10/28/SwiftUI-%E6%A3%80%E6%B5%8B-Dark-Model/"/>
+    <url>/2024/10/28/SwiftUI-%E6%A3%80%E6%B5%8B-Dark-Model/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">ContentView</span>: <span class="hljs-title class_ inherited__">View</span> &#123;<br>    <span class="hljs-meta">@Environment</span>(\.colorScheme) <span class="hljs-keyword">var</span> colorScheme<br><br>    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>        <span class="hljs-type">Text</span>(colorScheme <span class="hljs-operator">==</span> .dark <span class="hljs-operator">?</span> <span class="hljs-string">&quot;在暗模式下&quot;</span> : <span class="hljs-string">&quot;在亮模式下&quot;</span>)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SwiftUI 关于 Sheet 的使用</title>
+    <link href="/2024/10/23/SwiftUI-%E5%85%B3%E4%BA%8E-Sheet-%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <url>/2024/10/23/SwiftUI-%E5%85%B3%E4%BA%8E-Sheet-%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="使用-sheet-item-selectedTag-传入值为-Int-时报错"><a href="#使用-sheet-item-selectedTag-传入值为-Int-时报错" class="headerlink" title="使用 .sheet(item: $selectedTag) 传入值为 Int 时报错"></a>使用 <code>.sheet(item: $selectedTag)</code> 传入值为 Int 时报错</h1><p>提示:</p><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs oxygene">Instance <span class="hljs-keyword">method</span> &#x27;<span class="hljs-title function_">sheet</span><span class="hljs-params">(item:onDismiss:content:)</span>&#x27; <span class="hljs-title function_">requires</span> <span class="hljs-title function_">that</span> &#x27;<span class="hljs-title function_">Int</span>&#x27; <span class="hljs-title function_">conform</span> <span class="hljs-title function_">to</span> &#x27;<span class="hljs-title function_">Identifiable</span>&#x27;<br></code></pre></td></tr></table></figure><p>item 应该遵循 Identifiable 协议，Int 类型不支持。所以：</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">extension</span> <span class="hljs-title class_">Int</span>: <span class="hljs-title class_ inherited__">Identifiable</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">typealias</span> <span class="hljs-type">ID</span> <span class="hljs-operator">=</span> <span class="hljs-type">Int</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> id: <span class="hljs-type">Int</span> &#123;<br>        <span class="hljs-keyword">return</span> hashValue<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>参考：<a href="https://stackoverflow.com/questions/67977092/swiftui-initialzier-requires-string-conform-to-identifiable">SwiftUI Initialzier requires String conform to Identifiable</a></p><p>如果想要向 sheet 中传入实例的话，对象除了需要遵循 Identifiable 外，还需要遵循 Equatable &amp; Hashable 协议。</p><p>详情可以看：<a href="https://blog.csdn.net/qq_28323373/article/details/102310403">Swift 自定义结构体和类应该遵循的通用协议</a></p><h1 id="Custom-Sheet"><a href="#Custom-Sheet" class="headerlink" title="Custom Sheet"></a>Custom Sheet</h1><p>参考：</p><ul><li><a href="https://www.appcoda.com.tw/swiftui-bottom-sheet-background/">Xcode 14.3 新功能：輕鬆客製化 SwiftUI Bottom Sheet 背景及滾動行為</a></li><li><a href="https://www.appcoda.com/bottom-sheet-swiftui/">How to Display a Bottom Sheet Using SwiftUI</a></li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs swift">.presentationBackground(.thinMaterial)<span class="hljs-comment">// 模糊效果</span><br>.presentationBackground(.yellow)<span class="hljs-comment">// 设置颜色</span><br>.presentationCornerRadius(<span class="hljs-number">8</span>)<span class="hljs-comment">// 圆角</span><br><span class="hljs-comment">// When it first appears, the bottom sheet is displayed in medium size. You can expand it to large size by dragging the sheet.</span><br>.presentationDetents([.medium, .large])<br><span class="hljs-comment">// supports 4 different sizes including: around 10% of the screen height；a fixed height of 200 points；the standard Medium and Large sizes</span><br>.presentationDetents([.fraction(<span class="hljs-number">0.1</span>), .height(<span class="hljs-number">200</span>), .medium, .large])<br>.presentationDragIndicator(.hidden) <span class="hljs-comment">// 隐藏指示器</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>文章</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>iOS17 MapKit 开发指北</title>
+    <link href="/2024/10/22/iOS17-MapKit-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8C%97/"/>
+    <url>/2024/10/22/iOS17-MapKit-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8C%97/</url>
+    
+    <content type="html"><![CDATA[<p>参考：<a href="https://developer.apple.com/cn/videos/play/wwdc2023/10043/">认识 SwiftUI 版 MapKit</a></p><h1 id="Camera-两种初始化的方式"><a href="#Camera-两种初始化的方式" class="headerlink" title="Camera 两种初始化的方式"></a>Camera 两种初始化的方式</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-meta">@State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> position <span class="hljs-operator">=</span> <span class="hljs-type">MapCameraPosition</span>.region(<br><span class="hljs-type">MKCoordinateRegion</span>(center: <span class="hljs-type">CLLocationCoordinate2D</span>(latitude: <span class="hljs-number">28.209195</span>, longitude: <span class="hljs-number">112.842627</span>), latitudinalMeters: <span class="hljs-number">300</span>, longitudinalMeters: <span class="hljs-number">300</span>)<br><span class="hljs-comment">// MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 28.209195, longitude: 112.842627), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))</span><br>)<br><br><span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>  <span class="hljs-comment">// Map(initialPosition: position) &#123;</span><br><span class="hljs-type">Map</span>(position: <span class="hljs-variable">$position</span>) &#123;<br><span class="hljs-operator">...</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>上面两种初始化 Camera 的方式是一样的。</p><h1 id="地理坐标与墨卡托投影坐标转换"><a href="#地理坐标与墨卡托投影坐标转换" class="headerlink" title="地理坐标与墨卡托投影坐标转换"></a>地理坐标与墨卡托投影坐标转换</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 经纬度转投影坐标</span><br><span class="hljs-keyword">let</span> coordinate <span class="hljs-operator">=</span> <span class="hljs-type">CLLocationCoordinate2D</span>(latitude: <span class="hljs-number">28.209321</span>, longitude: <span class="hljs-number">112.843033</span>)<br><span class="hljs-keyword">let</span> point: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(<span class="hljs-type">Coordinate</span>)<br><span class="hljs-built_in">print</span>(point.x)<br><span class="hljs-built_in">print</span>(point.y)<br><br><span class="hljs-comment">// 投影坐标转经纬度</span><br><span class="hljs-keyword">let</span> point <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(x: <span class="hljs-number">218359192.2732601</span>, y: <span class="hljs-number">112278796.05034925</span>)<br><span class="hljs-keyword">let</span> coordinate <span class="hljs-operator">=</span> point.coordinate<br></code></pre></td></tr></table></figure><h1 id="将-iOS-系统自带定位坐标转换成高德坐标"><a href="#将-iOS-系统自带定位坐标转换成高德坐标" class="headerlink" title="将 iOS 系统自带定位坐标转换成高德坐标"></a>将 iOS 系统自带定位坐标转换成高德坐标</h1><p><a href="https://github.com/Zws-China/swift-Coordinate">swift Coordinate</a></p><p>系统定位拿到的坐标是 WGS-84 国际标准。</p><p>但是在 Map 显示时，因为 iPhone 使用的是高德地图，所以会有偏移，需要把坐标转换为 GCJ-02 火星坐标。</p><h1 id="请求权限"><a href="#请求权限" class="headerlink" title="请求权限"></a>请求权限</h1><p>需要在 Targets 中的 Info 中添加：</p><p>Privacy - Location When In Use Usage Description</p><p>或者</p><p>Privacy - Location Always Usage Description</p><p>Privacy - Location Always and When In Use Usage Description</p><p>我用的是前者，需要加入代码</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> locationManager <span class="hljs-operator">=</span> <span class="hljs-type">CLLocationManager</span>()<br>locationManager.requestWhenInUseAuthorization()<br><span class="hljs-comment">// locationManager.requestAlwaysAuthorization() 总是</span><br></code></pre></td></tr></table></figure><h1 id="定位精度"><a href="#定位精度" class="headerlink" title="定位精度"></a>定位精度</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> locationManager <span class="hljs-operator">=</span> <span class="hljs-type">CLLocationManager</span>()<br>locationManager.desiredAccuracy <span class="hljs-operator">=</span> kCLLocationAccuracyBest<br><span class="hljs-comment">// kCLLocationAccuracyBestForNavigation精度最高，一般用于导航</span><br><span class="hljs-comment">// kCLLocationAccuracyBest精确度最佳</span><br><span class="hljs-comment">// kCLLocationAccuracynearestTenMeters 精确度10m以内</span><br><span class="hljs-comment">// kCLLocationAccuracyHundredMeters精确度100m以内</span><br><span class="hljs-comment">// kCLLocationAccuracyKilometer精确度1000m以内</span><br><span class="hljs-comment">// kCLLocationAccuracyThreeKilometers精确度3000m以内</span><br></code></pre></td></tr></table></figure><h1 id="获取用户位置坐标"><a href="#获取用户位置坐标" class="headerlink" title="获取用户位置坐标"></a>获取用户位置坐标</h1><p><a href="https://blog.csdn.net/guoyongming925/article/details/139517701">SwiftUI获取用户的位置信息 CLLocationManager，CLLocationManagerDelegate</a></p><p><a href="https://www.cnblogs.com/LiuLady12138/p/5048521.html">Swift - 使用CoreLocation实现定位（经纬度、海拔、速度、距离等）</a></p><p>更新频率的设置：</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">locationManager.distanceFilter</span> = <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure><p>我们无法直接控制 loctionManager 更新的频率，但可使用 distanceFilter 属性（单位米）进行间接控制。</p><p>它指设备（水平或垂直）移动多少米后才将另一个更新发送给委托。定位要求的精度越高，distanceFilter 属性的值越小，应用程序的耗电量就越大。</p><h1 id="判断用户是否在特定区域内（多边形）"><a href="#判断用户是否在特定区域内（多边形）" class="headerlink" title="判断用户是否在特定区域内（多边形）"></a>判断用户是否在特定区域内（多边形）</h1><p>将用户以及围城区域的点的坐标全部转换为 MKMapPoint，再绘制路径，最后判断用户的点是否被路径包含</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> point1: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">0</span>])<br><span class="hljs-keyword">let</span> point2: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">1</span>])<br><span class="hljs-keyword">let</span> point3: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">2</span>])<br><span class="hljs-keyword">let</span> point4: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">3</span>])<br><span class="hljs-keyword">let</span> point5: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">4</span>])<br><span class="hljs-keyword">let</span> point6: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">5</span>])<br><br><span class="hljs-keyword">let</span> path <span class="hljs-operator">=</span> <span class="hljs-type">UIBezierPath</span>()<br>path.move(to: <span class="hljs-type">CGPoint</span>(x: point1.x, y: point1.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point2.x, y: point2.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point3.x, y: point3.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point4.x, y: point4.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point5.x, y: point5.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point6.x, y: point6.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point1.x, y: point1.y))<br>path.close()<br><br><span class="hljs-keyword">if</span> path.contains(<span class="hljs-type">CGPoint</span>(x: userPosition.x, y: userPosition.y)) &#123;<br><span class="hljs-operator">...</span><br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>文章</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Swift</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python 报错 RuntimeError: Can&#39;t call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead</title>
+    <link href="/2024/10/11/Python-%E6%8A%A5%E9%94%99-RuntimeError-Can-t-call-numpy-on-Tensor-that-requires-grad-Use-tensor-detach-numpy-instead/"/>
+    <url>/2024/10/11/Python-%E6%8A%A5%E9%94%99-RuntimeError-Can-t-call-numpy-on-Tensor-that-requires-grad-Use-tensor-detach-numpy-instead/</url>
+    
+    <content type="html"><![CDATA[<p>在使用 sklearn 计算回归模型的 R2 评分时，出现该报错</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">predictions = model(test_features)<br>r2 = r2_score(test_labels, predictions)<br></code></pre></td></tr></table></figure><p>出现这个现象的原因是：待转换类型的 PyTorch Tensor 变量带有梯度，直接将其转换为 numpy 数据将破坏计算图，因此 numpy 拒绝进行数据转换，实际上这是对开发者的一种提醒。如果自己在转换数据时不需要保留梯度信息，可以在变量转换之前添加 detach() 调用。</p><p>解决办法：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">predictions = model(test_features)<br>r2 = r2_score(test_labels.detach(), predictions.detach())<br><br><span class="hljs-comment"># 直接 predictions.numpy() 也会出现该报错</span><br><span class="hljs-comment"># 需要 predictions.detach().numpy()</span><br></code></pre></td></tr></table></figure><p>参考：<a href="https://blog.csdn.net/discoverer100/article/details/103902130">解决Python报错：RuntimeError: Can’t call numpy() on Variable that requires grad. Use var.detach().numpy()</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>地图坐标问题</title>
     <link href="/2024/10/10/%E5%9C%B0%E5%9B%BE%E5%9D%90%E6%A0%87%E9%97%AE%E9%A2%98/"/>
     <url>/2024/10/10/%E5%9C%B0%E5%9B%BE%E5%9D%90%E6%A0%87%E9%97%AE%E9%A2%98/</url>
@@ -108,7 +358,7 @@
     <link href="/2024/09/24/PyTorch-%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B/"/>
     <url>/2024/09/24/PyTorch-%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B/</url>
     
-    <content type="html"><![CDATA[<p>线性回归</p><ul><li><a href="https://www.cnblogs.com/maycap/p/17766022.html">PyTorch之线性回归模型</a></li><li><a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch/blob/master/docs/chapter03_DL-basics/3.3_linear-regression-pytorch.md">3.3 线性回归的简洁实现</a></li></ul><p>非线性回归</p><ul><li><a href="https://blog.csdn.net/weixin_46919419/article/details/122544512">pytorch学习线性回归与非线性回归，以及理解nn.linear()和ReLU激活函数</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>线性回归</p><ul><li><a href="https://www.cnblogs.com/maycap/p/17766022.html">PyTorch之线性回归模型</a></li><li><a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch/blob/master/docs/chapter03_DL-basics/3.3_linear-regression-pytorch.md">3.3 线性回归的简洁实现</a></li></ul><p>非线性回归</p><ul><li><a href="https://blog.csdn.net/weixin_46919419/article/details/122544512">pytorch学习线性回归与非线性回归，以及理解nn.linear()和ReLU激活函数</a></li></ul><p>回归模型评价指标</p><ul><li><a href="https://blog.csdn.net/weixin_35757704/article/details/122659500">sklearn 回归模型评价指标及代码示例</a></li></ul>]]></content>
     
     
     <categories>
@@ -878,9 +1128,9 @@
     
     <tags>
       
-      <tag>DIY</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
@@ -3408,9 +3658,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>DIY</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
@@ -3514,9 +3764,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>DIY</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
@@ -3543,9 +3793,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>DIY</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
@@ -3824,9 +4074,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>DIY</tag>
-      
       <tag>传感器</tag>
+      
+      <tag>DIY</tag>
       
     </tags>
     
