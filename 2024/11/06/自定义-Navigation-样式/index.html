@@ -18,28 +18,27 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="刘子航">
+  <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="How to hide keyboard when using SwiftUI?; How to dismiss keyboard for UITextView with return key?">
+    <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&#x2F;&#x2F; MARK: Custom Navigationstruct NavigationBarColor: ViewModifier &#123;    init(backgroundColo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SwiftUI 隐藏键盘">
-<meta property="og:url" content="https://wonderhoi.com/2023/10/06/SwiftUI-%E9%9A%90%E8%97%8F%E9%94%AE%E7%9B%98/index.html">
+<meta property="og:title" content="自定义 Navigation 样式">
+<meta property="og:url" content="https://wonderhoi.com/2024/11/06/%E8%87%AA%E5%AE%9A%E4%B9%89-Navigation-%E6%A0%B7%E5%BC%8F/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="How to hide keyboard when using SwiftUI?; How to dismiss keyboard for UITextView with return key?">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&#x2F;&#x2F; MARK: Custom Navigationstruct NavigationBarColor: ViewModifier &#123;    init(backgroundColo">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-05T17:20:30.000Z">
-<meta property="article:modified_time" content="2024-10-31T09:44:59.768Z">
-<meta property="article:author" content="刘子航">
-<meta property="article:tag" content="Swift">
-<meta property="article:tag" content="SwiftUI">
+<meta property="article:published_time" content="2024-11-06T03:01:01.000Z">
+<meta property="article:modified_time" content="2024-11-06T03:06:43.253Z">
+<meta property="article:author" content="wonderhoi">
+<meta property="article:tag" content="UIKit">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>SwiftUI 隐藏键盘 - 这是一个PM的BLOG</title>
+  <title>自定义 Navigation 样式 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -216,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="SwiftUI 隐藏键盘"></span>
+            <span id="subtitle" data-typed-text="自定义 Navigation 样式"></span>
           
         </div>
 
@@ -227,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-06 01:20" pubdate>
-          2023年10月6日 凌晨
+        <time datetime="2024-11-06 11:01" pubdate>
+          2024年11月6日 上午
         </time>
       </span>
     
@@ -239,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2 字
+          186 字
         
       </span>
     
@@ -278,15 +277,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">SwiftUI 隐藏键盘</h1>
+            <h1 id="seo-header">自定义 Navigation 样式</h1>
             
             
               <div class="markdown-body">
                 
-                <ul>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/56491386/how-to-hide-keyboard-when-using-swiftui">How to hide keyboard when using SwiftUI?</a>;</li>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/703754/how-to-dismiss-keyboard-for-uitextview-with-return-key">How to dismiss keyboard for UITextView with return key?</a></li>
-</ul>
+                <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// MARK: Custom Navigation</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">NavigationBarColor</span>: <span class="hljs-title class_ inherited__">ViewModifier</span> &#123;<br><br>    <span class="hljs-keyword">init</span>(<span class="hljs-params">backgroundColor</span>: <span class="hljs-type">UIColor</span>, <span class="hljs-params">tintColor</span>: <span class="hljs-type">UIColor</span>, <span class="hljs-params">backColor</span>: <span class="hljs-type">UIColor</span>) &#123;<br>      <br>        <span class="hljs-keyword">let</span> coloredAppearance <span class="hljs-operator">=</span> <span class="hljs-type">UINavigationBarAppearance</span>()<br>        coloredAppearance.configureWithOpaqueBackground()<br>        coloredAppearance.backgroundColor <span class="hljs-operator">=</span> backgroundColor<br>        <br>        <span class="hljs-comment">// Inline Title 字体</span><br>        <span class="hljs-keyword">let</span> attrs1: [<span class="hljs-type">NSAttributedString</span>.<span class="hljs-type">Key</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [<br>            .foregroundColor: tintColor,<br>            .font: <span class="hljs-type">UIFont</span>.monospacedSystemFont(ofSize: <span class="hljs-number">24</span>, weight: .black)<br>            <span class="hljs-comment">// .font: Font.system(size: 24, weight: .black, design: .monospaced)    // 报错</span><br>        ]<br>        <br>        <span class="hljs-comment">// Large Title 字体</span><br>        <span class="hljs-keyword">let</span> attrs2: [<span class="hljs-type">NSAttributedString</span>.<span class="hljs-type">Key</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [<br>            .foregroundColor: tintColor,<br>            .font: <span class="hljs-type">UIFont</span>.monospacedSystemFont(ofSize: <span class="hljs-number">14</span>, weight: .bold)<br>        ]<br>        <br>        coloredAppearance.largeTitleTextAttributes <span class="hljs-operator">=</span> attrs1<br>        coloredAppearance.titleTextAttributes <span class="hljs-operator">=</span> attrs2<br>        <span class="hljs-comment">//不要下面的线</span><br>        coloredAppearance.shadowColor <span class="hljs-operator">=</span> .clear<br>    <br>        <span class="hljs-comment">// back 图片</span><br>        <span class="hljs-keyword">let</span> config <span class="hljs-operator">=</span> <span class="hljs-type">UIImage</span>.<span class="hljs-type">SymbolConfiguration</span>(font: .monospacedSystemFont(ofSize: <span class="hljs-number">14</span>, weight: .regular))<br>        <span class="hljs-keyword">let</span> backImage <span class="hljs-operator">=</span> <span class="hljs-type">UIImage</span>(systemName: <span class="hljs-string">&quot;chevron.backward&quot;</span>, withConfiguration: config)<span class="hljs-operator">?</span>.withTintColor(backColor, renderingMode: .alwaysOriginal)<br>        coloredAppearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)<br>        <br>        <span class="hljs-comment">// back 字体</span><br>        <span class="hljs-keyword">let</span> fontAttributes: [<span class="hljs-type">NSAttributedString</span>.<span class="hljs-type">Key</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [<br>            .foregroundColor: backColor,<br>            .font: <span class="hljs-type">UIFont</span>.monospacedSystemFont(ofSize: <span class="hljs-number">12</span>, weight: .regular)<br>        ]<br>        <br>        coloredAppearance.buttonAppearance.normal.titleTextAttributes <span class="hljs-operator">=</span> fontAttributes<br>        <br>        <span class="hljs-type">UINavigationBar</span>.appearance().standardAppearance <span class="hljs-operator">=</span> coloredAppearance<br>        <span class="hljs-type">UINavigationBar</span>.appearance().scrollEdgeAppearance <span class="hljs-operator">=</span> coloredAppearance<br>        <span class="hljs-type">UINavigationBar</span>.appearance().compactAppearance <span class="hljs-operator">=</span> coloredAppearance<br>    &#125;<br><br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">body</span>(<span class="hljs-params">content</span>: <span class="hljs-type">Content</span>) -&gt; <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>        content<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">//配合上面</span><br><span class="hljs-keyword">extension</span> <span class="hljs-title class_">View</span> &#123;<br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">navigationBarColor</span>(<span class="hljs-params">backgroundColor</span>: <span class="hljs-type">UIColor</span>, <span class="hljs-params">tintColor</span>: <span class="hljs-type">UIColor</span>, <span class="hljs-params">backColor</span>: <span class="hljs-type">UIColor</span>) -&gt; <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>        <span class="hljs-keyword">self</span>.modifier(<span class="hljs-type">NavigationBarColor</span>(backgroundColor: backgroundColor, tintColor: tintColor, backColor: backColor))<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>使用:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">NavigationView</span> &#123;<br>  	<span class="hljs-operator">...</span><br>&#125;<br>.navigationBarColor(backgroundColor: <span class="hljs-type">UIColor</span>(.blue), tintColor: <span class="hljs-type">UIColor</span>(<span class="hljs-type">Color</span>(.black), backColor: <span class="hljs-type">UIColor</span>(.pink))<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -305,7 +304,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
   
   
 
@@ -320,9 +319,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Swift/" class="print-no-link">#Swift</a>
-      
-        <a href="/tags/SwiftUI/" class="print-no-link">#SwiftUI</a>
+        <a href="/tags/UIKit/" class="print-no-link">#UIKit</a>
       
     </div>
   
@@ -334,20 +331,20 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>SwiftUI 隐藏键盘</div>
-      <div>https://wonderhoi.com/2023/10/06/SwiftUI-隐藏键盘/</div>
+      <div>自定义 Navigation 样式</div>
+      <div>https://wonderhoi.com/2024/11/06/自定义-Navigation-样式/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>刘子航</div>
+          <div>wonderhoi</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月6日</div>
+          <div>2024年11月6日</div>
         </div>
       
       
@@ -379,9 +376,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/10/Swift-%E6%B1%89%E5%AD%97%E8%BD%AC%E7%A0%81/" title="Swift 汉字转码">
+                      <a href="/2024/11/06/%E6%AD%A3%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%BB%98%E5%88%B6/" title="正多边形绘制">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Swift 汉字转码</span>
+                        <span class="hidden-mobile">正多边形绘制</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -389,8 +386,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/06/Swift-%E5%88%9B%E5%BB%BA%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%8A%A8%E5%81%9C%E6%AD%A2%E7%9A%84-Timer/" title="Swift 创建可以自动停止的 Timer">
-                        <span class="hidden-mobile">Swift 创建可以自动停止的 Timer</span>
+                      <a href="/2024/11/06/UIImage-%E4%BD%BF%E7%94%A8-SF-Symbols/" title="UIImage 使用 SF Symbols">
+                        <span class="hidden-mobile">UIImage 使用 SF Symbols</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

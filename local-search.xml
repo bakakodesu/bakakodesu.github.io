@@ -4,6 +4,81 @@
   
   
   <entry>
+    <title>正多边形绘制</title>
+    <link href="/2024/11/06/%E6%AD%A3%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%BB%98%E5%88%B6/"/>
+    <url>/2024/11/06/%E6%AD%A3%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%BB%98%E5%88%B6/</url>
+    
+    <content type="html"><![CDATA[<p>参考：<a href="https://blog.csdn.net/qq_40734247/article/details/124884705">正多边形的数学推导及绘制</a></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">/*</span><br><span class="hljs-comment">x 外接圆圆心 x坐标</span><br><span class="hljs-comment">y 外接圆圆心 y坐标</span><br><span class="hljs-comment">r 外接圆半径</span><br><span class="hljs-comment">startAngle 起始旋转角度</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">drawPolygon</span>(<span class="hljs-params">centerX, centerY, radius, sides, startAngle</span>) &#123;<br><span class="hljs-keyword">let</span> angle = startAngle || <span class="hljs-number">0</span>;<br><span class="hljs-keyword">let</span> points = []<br><br><span class="hljs-comment">// 求各个顶点的坐标</span><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; sides; i++) &#123;<br>x = centerX + radius * <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">sin</span>(angle);<br>y = centerY - radius * <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">cos</span>(angle);<br>angle += <span class="hljs-number">2</span>*<span class="hljs-title class_">Math</span>.<span class="hljs-property">PI</span>/sides;<br>points.<span class="hljs-title function_">push</span>(&#123;<span class="hljs-attr">x</span>: x, <span class="hljs-attr">y</span>: y&#125;);<br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(points);<br><span class="hljs-comment">// 顶点坐标连线，先移动到第一个顶点</span><br>context.<span class="hljs-title function_">moveTo</span>(points[<span class="hljs-number">0</span>].<span class="hljs-property">x</span>, points[<span class="hljs-number">0</span>].<span class="hljs-property">y</span>);<br><span class="hljs-comment">// 依次开始连线</span><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; sides; i++) &#123;<br>context.<span class="hljs-title function_">lineTo</span>(points[i].<span class="hljs-property">x</span>, points[i].<span class="hljs-property">y</span>);<br>&#125;<br><span class="hljs-comment">// 关闭路径，使得最后一点和第一点闭合</span><br>context.<span class="hljs-title function_">closePath</span>();<br>context.<span class="hljs-title function_">stroke</span>();<br>&#125;<br><br><br><span class="hljs-title function_">drawPolygon</span>(<span class="hljs-number">100</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>, <span class="hljs-number">3</span>);<br><span class="hljs-title function_">drawPolygon</span>(<span class="hljs-number">300</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>, <span class="hljs-number">4</span>, <span class="hljs-number">45</span>/<span class="hljs-number">180</span>*<span class="hljs-title class_">Math</span>.<span class="hljs-property">PI</span>);<br><span class="hljs-title function_">drawPolygon</span>(<span class="hljs-number">500</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>, <span class="hljs-number">5</span>);<br><span class="hljs-title function_">drawPolygon</span>(<span class="hljs-number">700</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>, <span class="hljs-number">6</span>, <span class="hljs-number">30</span>/<span class="hljs-number">180</span>*<span class="hljs-title class_">Math</span>.<span class="hljs-property">PI</span>);<br><span class="hljs-title function_">drawPolygon</span>(<span class="hljs-number">100</span>, <span class="hljs-number">400</span>, <span class="hljs-number">100</span>, <span class="hljs-number">7</span>);<br><span class="hljs-title function_">drawPolygon</span>(<span class="hljs-number">300</span>, <span class="hljs-number">400</span>, <span class="hljs-number">100</span>, <span class="hljs-number">8</span>, <span class="hljs-number">22.5</span>/<span class="hljs-number">180</span>*<span class="hljs-title class_">Math</span>.<span class="hljs-property">PI</span>);<br><span class="hljs-title function_">drawPolygon</span>(<span class="hljs-number">500</span>, <span class="hljs-number">400</span>, <span class="hljs-number">100</span>, <span class="hljs-number">9</span>);<br><span class="hljs-title function_">drawPolygon</span>(<span class="hljs-number">700</span>, <span class="hljs-number">400</span>, <span class="hljs-number">100</span>, <span class="hljs-number">10</span>, <span class="hljs-number">18</span>/<span class="hljs-number">180</span>*<span class="hljs-title class_">Math</span>.<span class="hljs-property">PI</span>);<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>自定义 Navigation 样式</title>
+    <link href="/2024/11/06/%E8%87%AA%E5%AE%9A%E4%B9%89-Navigation-%E6%A0%B7%E5%BC%8F/"/>
+    <url>/2024/11/06/%E8%87%AA%E5%AE%9A%E4%B9%89-Navigation-%E6%A0%B7%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// MARK: Custom Navigation</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">NavigationBarColor</span>: <span class="hljs-title class_ inherited__">ViewModifier</span> &#123;<br><br>    <span class="hljs-keyword">init</span>(<span class="hljs-params">backgroundColor</span>: <span class="hljs-type">UIColor</span>, <span class="hljs-params">tintColor</span>: <span class="hljs-type">UIColor</span>, <span class="hljs-params">backColor</span>: <span class="hljs-type">UIColor</span>) &#123;<br>      <br>        <span class="hljs-keyword">let</span> coloredAppearance <span class="hljs-operator">=</span> <span class="hljs-type">UINavigationBarAppearance</span>()<br>        coloredAppearance.configureWithOpaqueBackground()<br>        coloredAppearance.backgroundColor <span class="hljs-operator">=</span> backgroundColor<br>        <br>        <span class="hljs-comment">// Inline Title 字体</span><br>        <span class="hljs-keyword">let</span> attrs1: [<span class="hljs-type">NSAttributedString</span>.<span class="hljs-type">Key</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [<br>            .foregroundColor: tintColor,<br>            .font: <span class="hljs-type">UIFont</span>.monospacedSystemFont(ofSize: <span class="hljs-number">24</span>, weight: .black)<br>            <span class="hljs-comment">// .font: Font.system(size: 24, weight: .black, design: .monospaced)    // 报错</span><br>        ]<br>        <br>        <span class="hljs-comment">// Large Title 字体</span><br>        <span class="hljs-keyword">let</span> attrs2: [<span class="hljs-type">NSAttributedString</span>.<span class="hljs-type">Key</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [<br>            .foregroundColor: tintColor,<br>            .font: <span class="hljs-type">UIFont</span>.monospacedSystemFont(ofSize: <span class="hljs-number">14</span>, weight: .bold)<br>        ]<br>        <br>        coloredAppearance.largeTitleTextAttributes <span class="hljs-operator">=</span> attrs1<br>        coloredAppearance.titleTextAttributes <span class="hljs-operator">=</span> attrs2<br>        <span class="hljs-comment">//不要下面的线</span><br>        coloredAppearance.shadowColor <span class="hljs-operator">=</span> .clear<br>    <br>        <span class="hljs-comment">// back 图片</span><br>        <span class="hljs-keyword">let</span> config <span class="hljs-operator">=</span> <span class="hljs-type">UIImage</span>.<span class="hljs-type">SymbolConfiguration</span>(font: .monospacedSystemFont(ofSize: <span class="hljs-number">14</span>, weight: .regular))<br>        <span class="hljs-keyword">let</span> backImage <span class="hljs-operator">=</span> <span class="hljs-type">UIImage</span>(systemName: <span class="hljs-string">&quot;chevron.backward&quot;</span>, withConfiguration: config)<span class="hljs-operator">?</span>.withTintColor(backColor, renderingMode: .alwaysOriginal)<br>        coloredAppearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)<br>        <br>        <span class="hljs-comment">// back 字体</span><br>        <span class="hljs-keyword">let</span> fontAttributes: [<span class="hljs-type">NSAttributedString</span>.<span class="hljs-type">Key</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [<br>            .foregroundColor: backColor,<br>            .font: <span class="hljs-type">UIFont</span>.monospacedSystemFont(ofSize: <span class="hljs-number">12</span>, weight: .regular)<br>        ]<br>        <br>        coloredAppearance.buttonAppearance.normal.titleTextAttributes <span class="hljs-operator">=</span> fontAttributes<br>        <br>        <span class="hljs-type">UINavigationBar</span>.appearance().standardAppearance <span class="hljs-operator">=</span> coloredAppearance<br>        <span class="hljs-type">UINavigationBar</span>.appearance().scrollEdgeAppearance <span class="hljs-operator">=</span> coloredAppearance<br>        <span class="hljs-type">UINavigationBar</span>.appearance().compactAppearance <span class="hljs-operator">=</span> coloredAppearance<br>    &#125;<br><br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">body</span>(<span class="hljs-params">content</span>: <span class="hljs-type">Content</span>) -&gt; <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>        content<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">//配合上面</span><br><span class="hljs-keyword">extension</span> <span class="hljs-title class_">View</span> &#123;<br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">navigationBarColor</span>(<span class="hljs-params">backgroundColor</span>: <span class="hljs-type">UIColor</span>, <span class="hljs-params">tintColor</span>: <span class="hljs-type">UIColor</span>, <span class="hljs-params">backColor</span>: <span class="hljs-type">UIColor</span>) -&gt; <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>        <span class="hljs-keyword">self</span>.modifier(<span class="hljs-type">NavigationBarColor</span>(backgroundColor: backgroundColor, tintColor: tintColor, backColor: backColor))<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure><p>使用:</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">NavigationView</span> &#123;<br>  <span class="hljs-operator">...</span><br>&#125;<br>.navigationBarColor(backgroundColor: <span class="hljs-type">UIColor</span>(.blue), tintColor: <span class="hljs-type">UIColor</span>(<span class="hljs-type">Color</span>(.black), backColor: <span class="hljs-type">UIColor</span>(.pink))<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>UIKit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>UIImage 使用 SF Symbols</title>
+    <link href="/2024/11/06/UIImage-%E4%BD%BF%E7%94%A8-SF-Symbols/"/>
+    <url>/2024/11/06/UIImage-%E4%BD%BF%E7%94%A8-SF-Symbols/</url>
+    
+    <content type="html"><![CDATA[<h1 id="设置-SF-Symbols-样式"><a href="#设置-SF-Symbols-样式" class="headerlink" title="设置 SF Symbols 样式"></a>设置 SF Symbols 样式</h1><p>参考：</p><ul><li><a href="https://stackoverflow.com/questions/60910712/resizing-uimage-when-using-sf-symbols-uiimagesystemname">Resizing UImage when using SF Symbols - UIImage(systemName:)</a></li><li><a href="https://stackoverflow.com/questions/60641048/change-a-sf-symbol-size-inside-a-uibutton">Change a SF Symbol size inside a UIButton</a></li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> config <span class="hljs-operator">=</span> <span class="hljs-type">UIImage</span>.<span class="hljs-type">SymbolConfiguration</span>(pointSize: <span class="hljs-number">14</span>, weight: .bold, scale: .large) <br><span class="hljs-comment">// let config = UIImage.SymbolConfiguration(font: .monospacedSystemFont(ofSize: 14, weight: .regular))</span><br><span class="hljs-keyword">let</span> image <span class="hljs-operator">=</span> <span class="hljs-type">UIImage</span>(systemName: <span class="hljs-string">&quot;doc.circle.fill&quot;</span>, withConfiguration: config)<br></code></pre></td></tr></table></figure><h1 id="设置-SF-Symbols-颜色"><a href="#设置-SF-Symbols-颜色" class="headerlink" title="设置 SF Symbols 颜色"></a>设置 SF Symbols 颜色</h1><p>参考：</p><ul><li><a href="https://medium.com/@bhupendra.trivedi14/uiimage-rendering-images-in-different-colors-39968ceb3174">UIImage: Rendering images in different colors</a></li><li><a href="https://sarunw.com/posts/how-to-change-uiimage-color-in-swift/">How to change UIImage color in Swift</a></li><li><a href="https://stackoverflow.com/questions/58256044/how-to-change-sf-symbol-icon-color-in-uikit">How to change SF Symbol icon color in UIKit?</a></li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> image <span class="hljs-operator">=</span> <span class="hljs-type">UIImage</span>(systemName: <span class="hljs-string">&quot;doc.circle.fill&quot;</span>, withConfiguration: config)<span class="hljs-operator">?</span>.withTintColor(.red, renderingMode: .alwaysOriginal)<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>UIKit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>SwiftUI 在不使用 EditButton 的情况下选择 ListRow</title>
     <link href="/2024/10/31/SwiftUI-%E5%9C%A8%E4%B8%8D%E4%BD%BF%E7%94%A8-EditButton-%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E9%80%89%E6%8B%A9-ListRow/"/>
     <url>/2024/10/31/SwiftUI-%E5%9C%A8%E4%B8%8D%E4%BD%BF%E7%94%A8-EditButton-%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E9%80%89%E6%8B%A9-ListRow/</url>
@@ -19,8 +94,6 @@
     
     
     <tags>
-      
-      <tag>Swift</tag>
       
       <tag>SwiftUI</tag>
       
@@ -47,8 +120,6 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>SwiftData</tag>
       
     </tags>
@@ -74,7 +145,7 @@
     
     <tags>
       
-      <tag>Swift</tag>
+      <tag>UIKit</tag>
       
     </tags>
     
@@ -199,8 +270,6 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>SwiftUI</tag>
       
     </tags>
@@ -225,8 +294,6 @@
     
     
     <tags>
-      
-      <tag>Swift</tag>
       
       <tag>SwiftUI</tag>
       
@@ -253,8 +320,6 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>SwiftUI</tag>
       
     </tags>
@@ -268,7 +333,7 @@
     <link href="/2024/10/28/SwiftUI-Menu-%E5%90%88%E9%9B%86/"/>
     <url>/2024/10/28/SwiftUI-Menu-%E5%90%88%E9%9B%86/</url>
     
-    <content type="html"><![CDATA[<ul><li><a href="https://swiftwithmajid.com/">Swift with Majid</a></li><li><a href="https://stackoverflow.com/questions/64277962/how-to-open-menu-only-on-long-press-gesture-swiftui">How to open Menu only on long press gesture SwiftUI</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><a href="https://swiftwithmajid.com/2020/08/05/menus-in-swiftui/">Menus in SwiftUI</a></li><li><a href="https://stackoverflow.com/questions/64277962/how-to-open-menu-only-on-long-press-gesture-swiftui">How to open Menu only on long press gesture SwiftUI</a></li></ul>]]></content>
     
     
     <categories>
@@ -279,8 +344,6 @@
     
     
     <tags>
-      
-      <tag>Swift</tag>
       
       <tag>SwiftUI</tag>
       
@@ -306,8 +369,6 @@
     
     
     <tags>
-      
-      <tag>Swift</tag>
       
       <tag>SwiftUI</tag>
       
@@ -343,9 +404,9 @@
   
   
   <entry>
-    <title>SwiftUI 检测 Dark Model</title>
-    <link href="/2024/10/28/SwiftUI-%E6%A3%80%E6%B5%8B-Dark-Model/"/>
-    <url>/2024/10/28/SwiftUI-%E6%A3%80%E6%B5%8B-Dark-Model/</url>
+    <title>Swift 检测 Dark Model</title>
+    <link href="/2024/10/28/Swift-%E6%A3%80%E6%B5%8B-Dark-Model/"/>
+    <url>/2024/10/28/Swift-%E6%A3%80%E6%B5%8B-Dark-Model/</url>
     
     <content type="html"><![CDATA[<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">ContentView</span>: <span class="hljs-title class_ inherited__">View</span> &#123;<br>    <span class="hljs-meta">@Environment</span>(\.colorScheme) <span class="hljs-keyword">var</span> colorScheme<br><br>    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>        <span class="hljs-type">Text</span>(colorScheme <span class="hljs-operator">==</span> .dark <span class="hljs-operator">?</span> <span class="hljs-string">&quot;在暗模式下&quot;</span> : <span class="hljs-string">&quot;在亮模式下&quot;</span>)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
     
@@ -384,8 +445,6 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>SwiftUI</tag>
       
     </tags>
@@ -410,8 +469,6 @@
     
     
     <tags>
-      
-      <tag>Swift</tag>
       
       <tag>SwiftUI</tag>
       
@@ -713,8 +770,6 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>SwiftUI</tag>
       
     </tags>
@@ -815,8 +870,6 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>SwiftUI</tag>
       
     </tags>
@@ -891,8 +944,6 @@
     
     
     <tags>
-      
-      <tag>Swift</tag>
       
       <tag>SwiftUI</tag>
       
@@ -1408,9 +1459,11 @@
     
     <tags>
       
+      <tag>运动科学</tag>
+      
       <tag>心率</tag>
       
-      <tag>Swift</tag>
+      <tag>传感器</tag>
       
     </tags>
     
@@ -1843,8 +1896,6 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>SwiftUI</tag>
       
     </tags>
@@ -1869,8 +1920,6 @@
     
     
     <tags>
-      
-      <tag>Swift</tag>
       
       <tag>SwiftUI</tag>
       
@@ -2154,8 +2203,6 @@
     
     
     <tags>
-      
-      <tag>Swift</tag>
       
       <tag>SwiftUI</tag>
       
@@ -3021,11 +3068,11 @@
   
   
   <entry>
-    <title>SwiftUI 隐藏键盘</title>
-    <link href="/2023/10/06/SwiftUI-%E9%9A%90%E8%97%8F%E9%94%AE%E7%9B%98/"/>
-    <url>/2023/10/06/SwiftUI-%E9%9A%90%E8%97%8F%E9%94%AE%E7%9B%98/</url>
+    <title>SwiftUI TextField 与 Keyboard 合集</title>
+    <link href="/2023/10/06/SwiftUI-TextField-%E4%B8%8E-Keyboard-%E5%90%88%E9%9B%86/"/>
+    <url>/2023/10/06/SwiftUI-TextField-%E4%B8%8E-Keyboard-%E5%90%88%E9%9B%86/</url>
     
-    <content type="html"><![CDATA[<ul><li><a href="https://stackoverflow.com/questions/56491386/how-to-hide-keyboard-when-using-swiftui">How to hide keyboard when using SwiftUI?</a>;</li><li><a href="https://stackoverflow.com/questions/703754/how-to-dismiss-keyboard-for-uitextview-with-return-key">How to dismiss keyboard for UITextView with return key?</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="TextField"><a href="#TextField" class="headerlink" title="TextField"></a>TextField</h1><ul><li><a href="https://fatbobman.com/zh/posts/textfield-event-focus-keyboard/">SwiftUI TextField 进阶 —— 事件、焦点、键盘</a></li></ul><h1 id="Keyboard"><a href="#Keyboard" class="headerlink" title="Keyboard"></a>Keyboard</h1><ul><li><a href="https://stackoverflow.com/questions/56491386/how-to-hide-keyboard-when-using-swiftui">How to hide keyboard when using SwiftUI?</a>;</li><li><a href="https://stackoverflow.com/questions/703754/how-to-dismiss-keyboard-for-uitextview-with-return-key">How to dismiss keyboard for UITextView with return key?</a></li></ul><p>关于键盘会上推组件：</p><p><a href="https://fatbobman.com/zh/posts/textfield-event-focus-keyboard/">掌握 SwiftUI 的 Safe Area</a></p>]]></content>
     
     
     <categories>
@@ -3036,8 +3083,6 @@
     
     
     <tags>
-      
-      <tag>Swift</tag>
       
       <tag>SwiftUI</tag>
       
@@ -4604,11 +4649,11 @@
   
   
   <entry>
-    <title>SwiftUI Button Disabled</title>
-    <link href="/2023/04/18/SwiftUI-Button-Disabled/"/>
-    <url>/2023/04/18/SwiftUI-Button-Disabled/</url>
+    <title>SwiftUI Disabled 与 AllowsHitTesting</title>
+    <link href="/2023/04/18/SwiftUI-Disabled-%E4%B8%8E-AllowsHitTesting/"/>
+    <url>/2023/04/18/SwiftUI-Disabled-%E4%B8%8E-AllowsHitTesting/</url>
     
-    <content type="html"><![CDATA[<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> isButtonDisabled <span class="hljs-operator">=</span> <span class="hljs-literal">true</span><br><br><span class="hljs-type">Button</span>(action: &#123;<br>    <span class="hljs-comment">// 按钮被点击后执行的操作</span><br>&#125;) &#123;<br>    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Button&quot;</span>)<br>&#125;.disabled(isButtonDisabled)<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Button</span>(action: &#123;<br><br>&#125;) &#123;<br>    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Button&quot;</span>)<br>&#125;<br>.disabled(<span class="hljs-literal">true</span>)<br></code></pre></td></tr></table></figure><p>此时按钮不可点击。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Button</span>(action: &#123;<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Pressed&quot;</span>)<br>&#125;) &#123;<br><span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Press me&quot;</span>)<br>&#125;<br>.disabled(<span class="hljs-literal">false</span>)<br>.overlay(<br><span class="hljs-type">Color</span>.clear<br>)<br></code></pre></td></tr></table></figure><p>此时按钮仍然不可点击，因为 overlay 覆盖住了按钮。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Button</span>(action: &#123;<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Pressed&quot;</span>)<br>&#125;) &#123;<br><span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Press me&quot;</span>)<br>&#125;<br>.disabled(<span class="hljs-literal">false</span>)<br>.overlay(<br><span class="hljs-type">Color</span>.clear<br>.allowsHitTesting(<span class="hljs-literal">false</span>)<br>)<br></code></pre></td></tr></table></figure><p>此时按钮可以点击。</p>]]></content>
     
     
     <categories>
@@ -4620,7 +4665,7 @@
     
     <tags>
       
-      <tag>Swift</tag>
+      <tag>SwiftUI</tag>
       
     </tags>
     
