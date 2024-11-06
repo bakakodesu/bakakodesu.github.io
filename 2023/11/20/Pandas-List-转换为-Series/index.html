@@ -21,17 +21,17 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="手上有 ecg 信号数组。需要转换成相应的格式： 1234567891011120        0.0007631       -0.0006102        0.0007633        0.0022894        0.005341           ...   50677    0.00579850678    0.00335750679    0.00839250680">
+    <meta name="description" content="手上有组 ecg 信号，为 List。需要转换成下面的格式用于 Neurokit 分析。 1234567891011120        0.0007631       -0.0006102        0.0007633        0.0022894        0.005341           ...   50677    0.00579850678    0.0033575067">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pandas List 转换为 Series">
 <meta property="og:url" content="https://wonderhoi.com/2023/11/20/Pandas-List-%E8%BD%AC%E6%8D%A2%E4%B8%BA-Series/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="手上有 ecg 信号数组。需要转换成相应的格式： 1234567891011120        0.0007631       -0.0006102        0.0007633        0.0022894        0.005341           ...   50677    0.00579850678    0.00335750679    0.00839250680">
+<meta property="og:description" content="手上有组 ecg 信号，为 List。需要转换成下面的格式用于 Neurokit 分析。 1234567891011120        0.0007631       -0.0006102        0.0007633        0.0022894        0.005341           ...   50677    0.00579850678    0.0033575067">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-20T09:28:15.000Z">
-<meta property="article:modified_time" content="2024-07-05T04:08:03.000Z">
+<meta property="article:modified_time" content="2024-11-06T12:27:56.322Z">
 <meta property="article:author" content="wonderhoi">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Pandas">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          76 字
+          84 字
         
       </span>
     
@@ -282,13 +282,13 @@
             
               <div class="markdown-body">
                 
-                <p>手上有 ecg 信号数组。需要转换成相应的格式：</p>
+                <p>手上有组 ecg 信号，为 List。需要转换成下面的格式用于 Neurokit 分析。</p>
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs dns"><span class="hljs-number">0</span>        <span class="hljs-number">0.000763</span><br><span class="hljs-number">1</span>       -<span class="hljs-number">0.000610</span><br><span class="hljs-number">2</span>        <span class="hljs-number">0.000763</span><br><span class="hljs-number">3</span>        <span class="hljs-number">0.002289</span><br><span class="hljs-number">4</span>        <span class="hljs-number">0.005341</span><br>           ...   <br><span class="hljs-number">50677</span>    <span class="hljs-number">0.005798</span><br><span class="hljs-number">50678</span>    <span class="hljs-number">0.003357</span><br><span class="hljs-number">50679</span>    <span class="hljs-number">0.008392</span><br><span class="hljs-number">50680</span>    <span class="hljs-number">0.010681</span><br><span class="hljs-number">50681</span>    <span class="hljs-number">0.008240</span><br>Name: ECG, Length: <span class="hljs-number">50682</span>, dtype: float64<br></code></pre></td></tr></table></figure>
 
-<p>type 后可以发现该格式为：</p>
+<p>从 Neurokit load 下来的数据格式为：</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;pandas.core.series.Series&#x27;</span>&gt;<br></code></pre></td></tr></table></figure>
 
-<p>于是可以</p>
+<p>于是可以使用</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">ecg = pd.Series(ecg, name=<span class="hljs-string">&#x27;ECG&#x27;</span>)<br></code></pre></td></tr></table></figure>
 
 <p>这样就将 List 转换成了 Series</p>
@@ -310,7 +310,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
   
   
 
@@ -325,7 +325,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
+        <a href="/tags/Pandas/" class="print-no-link">#Pandas</a>
       
     </div>
   

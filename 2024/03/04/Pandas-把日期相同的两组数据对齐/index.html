@@ -21,17 +21,17 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="12345678910111213141516171819202122232425262728293031323334import pandas as pdfilepath1 &#x3D; &#x27;&#x27;filepath2 &#x3D; &#x27;&#x27; &quot;&quot;&quot;		 date 	d12022&#x2F;5&#x2F;24		23502022&#x2F;5&#x2F;25		23402022&#x2F;5&#x2F;26		234">
+    <meta name="description" content="手上 3 个数据流的开始时间不一致，所以需要对齐数据。 12345678910111213141516171819202122232425262728293031323334import pandas as pdfilepath1 &#x3D; &#x27;&#x27;filepath2 &#x3D; &#x27;&#x27; &quot;&quot;&quot;		 date 	d12022&#x2F;5&#x2F;24		23502">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pandas 把日期相同的两组数据对齐">
 <meta property="og:url" content="https://wonderhoi.com/2024/03/04/Pandas-%E6%8A%8A%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%90%8C%E7%9A%84%E4%B8%A4%E7%BB%84%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334import pandas as pdfilepath1 &#x3D; &#x27;&#x27;filepath2 &#x3D; &#x27;&#x27; &quot;&quot;&quot;		 date 	d12022&#x2F;5&#x2F;24		23502022&#x2F;5&#x2F;25		23402022&#x2F;5&#x2F;26		234">
+<meta property="og:description" content="手上 3 个数据流的开始时间不一致，所以需要对齐数据。 12345678910111213141516171819202122232425262728293031323334import pandas as pdfilepath1 &#x3D; &#x27;&#x27;filepath2 &#x3D; &#x27;&#x27; &quot;&quot;&quot;		 date 	d12022&#x2F;5&#x2F;24		23502">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-04T09:16:26.000Z">
-<meta property="article:modified_time" content="2024-07-05T03:58:35.000Z">
+<meta property="article:modified_time" content="2024-11-06T14:38:14.590Z">
 <meta property="article:author" content="wonderhoi">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Pandas">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          101 字
+          124 字
         
       </span>
     
@@ -282,7 +282,8 @@
             
               <div class="markdown-body">
                 
-                <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><br><br>filepath1 = <span class="hljs-string">&#x27;&#x27;</span><br>filepath2 = <span class="hljs-string">&#x27;&#x27;</span><br> <br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">		 date 	d1</span><br><span class="hljs-string">2022/5/24		2350</span><br><span class="hljs-string">2022/5/25		2340</span><br><span class="hljs-string">2022/5/26		2340</span><br><span class="hljs-string">2022/5/27		2325</span><br><span class="hljs-string"></span><br><span class="hljs-string">		 date 	d2</span><br><span class="hljs-string">2022/5/26		2590</span><br><span class="hljs-string">2022/5/27		2590</span><br><span class="hljs-string">2022/5/30		2590</span><br><span class="hljs-string">2022/5/31		2580</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><br>df1 = pd.read_csv(filepath1)<br>df2 = pd.read_csv(filepath2)<br>data = pd.merge(df1, df2, on=<span class="hljs-string">&#x27;date&#x27;</span>, how=<span class="hljs-string">&#x27;outer&#x27;</span>)  <span class="hljs-comment">#用&quot;outer&quot;属性代表是两组数据的并集，避免丢失数据</span><br><span class="hljs-built_in">print</span>(data)<br><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">				date      d1      d2</span><br><span class="hljs-string">0 2022-05-24  2350.0     NaN</span><br><span class="hljs-string">1 2022-05-25  2340.0     NaN</span><br><span class="hljs-string">2 2022-05-26  2340.0  2590.0</span><br><span class="hljs-string">3 2022-05-27  2325.0  2590.0</span><br><span class="hljs-string">4 2022-05-30     NaN  2590.0</span><br><span class="hljs-string">5 2022-05-31     NaN  2580.0</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br></code></pre></td></tr></table></figure>
+                <p>手上 3 个数据流的开始时间不一致，所以需要对齐数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><br><br>filepath1 = <span class="hljs-string">&#x27;&#x27;</span><br>filepath2 = <span class="hljs-string">&#x27;&#x27;</span><br> <br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">		 date 	d1</span><br><span class="hljs-string">2022/5/24		2350</span><br><span class="hljs-string">2022/5/25		2340</span><br><span class="hljs-string">2022/5/26		2340</span><br><span class="hljs-string">2022/5/27		2325</span><br><span class="hljs-string"></span><br><span class="hljs-string">		 date 	d2</span><br><span class="hljs-string">2022/5/26		2590</span><br><span class="hljs-string">2022/5/27		2590</span><br><span class="hljs-string">2022/5/30		2590</span><br><span class="hljs-string">2022/5/31		2580</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><br>df1 = pd.read_csv(filepath1)<br>df2 = pd.read_csv(filepath2)<br>data = pd.merge(df1, df2, on=<span class="hljs-string">&#x27;date&#x27;</span>, how=<span class="hljs-string">&#x27;outer&#x27;</span>)  <span class="hljs-comment">#用&quot;outer&quot;属性代表是两组数据的并集，避免丢失数据</span><br><span class="hljs-built_in">print</span>(data)<br><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">				date      d1      d2</span><br><span class="hljs-string">0 2022-05-24  2350.0     NaN</span><br><span class="hljs-string">1 2022-05-25  2340.0     NaN</span><br><span class="hljs-string">2 2022-05-26  2340.0  2590.0</span><br><span class="hljs-string">3 2022-05-27  2325.0  2590.0</span><br><span class="hljs-string">4 2022-05-30     NaN  2590.0</span><br><span class="hljs-string">5 2022-05-31     NaN  2580.0</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br></code></pre></td></tr></table></figure>
 
 
                 
@@ -302,7 +303,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
   
   
 
@@ -317,7 +318,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
+        <a href="/tags/Pandas/" class="print-no-link">#Pandas</a>
       
     </div>
   

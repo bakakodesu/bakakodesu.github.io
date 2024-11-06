@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>PyQt 组件之间的层级关系</title>
+    <link href="/2024/11/06/PyQt-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/"/>
+    <url>/2024/11/06/PyQt-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/</url>
+    
+    <content type="html"><![CDATA[<p>层级结构如下：</p><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext">QMainWindow<br><span class="hljs-bullet">-</span> <span class="hljs-string">setCentralWidget</span><br>QWidget<br><span class="hljs-bullet">-</span> <span class="hljs-string">setLayout</span><br>QVBoxLayout<br><span class="hljs-bullet">-</span> <span class="hljs-string">addLayout</span><br>QHBoxLayout<br><span class="hljs-bullet">-</span> <span class="hljs-string">addWidget</span><br>pg.PlotWidget<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>呼吸代谢 Project</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PyQt</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>正多边形绘制</title>
     <link href="/2024/11/06/%E6%AD%A3%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%BB%98%E5%88%B6/"/>
     <url>/2024/11/06/%E6%AD%A3%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%BB%98%E5%88%B6/</url>
@@ -472,6 +497,8 @@
       
       <tag>SwiftUI</tag>
       
+      <tag>Map</tag>
+      
     </tags>
     
   </entry>
@@ -488,14 +515,14 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>VO2max Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>PyTorch</tag>
       
     </tags>
     
@@ -520,7 +547,7 @@
     
     <tags>
       
-      <tag>DIY</tag>
+      <tag>Map</tag>
       
     </tags>
     
@@ -563,7 +590,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>VO2max Project</category>
       
     </categories>
     
@@ -588,14 +615,14 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>VO2max Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>深度学习</tag>
+      <tag>PyTorch</tag>
       
     </tags>
     
@@ -613,7 +640,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>VO2max Project</category>
       
     </categories>
     
@@ -638,14 +665,14 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>VO2max Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>深度学习</tag>
+      <tag>PyTorch</tag>
       
     </tags>
     
@@ -1074,7 +1101,7 @@
       
       <tag>Mac</tag>
       
-      <tag>生产力（摸鱼）</tag>
+      <tag>生产力</tag>
       
     </tags>
     
@@ -1149,7 +1176,7 @@
     
     <tags>
       
-      <tag>生产力（摸鱼）</tag>
+      <tag>生产力</tag>
       
     </tags>
     
@@ -1371,16 +1398,16 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>Sensor</tag>
       
     </tags>
     
@@ -1398,14 +1425,12 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
     
     <tags>
-      
-      <tag>运动科学</tag>
       
       <tag>Arduino</tag>
       
@@ -1418,23 +1443,23 @@
   
   
   <entry>
-    <title>matplotlib 与 pyqt 组件之间的层级关系</title>
-    <link href="/2024/04/08/matplotlib-%E4%B8%8E-pyqt-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/"/>
-    <url>/2024/04/08/matplotlib-%E4%B8%8E-pyqt-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/</url>
+    <title>matplotlib 组件之间的层级关系</title>
+    <link href="/2024/04/08/matplotlib-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/"/>
+    <url>/2024/04/08/matplotlib-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/</url>
     
-    <content type="html"><![CDATA[<h3 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h3><p>可参考 <a href="https://www.zhihu.com/tardis/zm/art/139052035?source_id=1003">matplotlib.pyplot的使用总结大全</a></p><p>两种示例用法</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">plot_ACC</span>(<span class="hljs-params">path</span>):<br>    df = pd.read_csv(path)<br>    <span class="hljs-built_in">print</span>(df)<br>    fig, axes = plt.subplots(<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, figsize=(<span class="hljs-number">36</span>, <span class="hljs-number">10</span>))<br><br>    axes[<span class="hljs-number">0</span>].scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;X&#x27;</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;1&#x27;</span>, label=<span class="hljs-string">&#x27;X Acc&#x27;</span>)<br>    axes[<span class="hljs-number">0</span>].set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)<br>    axes[<span class="hljs-number">0</span>].set_ylabel(<span class="hljs-string">&#x27;g or mg&#x27;</span>)<br>    axes[<span class="hljs-number">0</span>].legend(loc=<span class="hljs-number">2</span>)<br><br>    axes[<span class="hljs-number">1</span>].scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;Y&#x27;</span>], c=<span class="hljs-string">&#x27;blue&#x27;</span>, marker=<span class="hljs-string">&#x27;2&#x27;</span>, label=<span class="hljs-string">&#x27;Y Acc&#x27;</span>)<br>    axes[<span class="hljs-number">1</span>].set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)<br>    axes[<span class="hljs-number">1</span>].set_ylabel(<span class="hljs-string">&#x27;g or mg&#x27;</span>)<br>    axes[<span class="hljs-number">1</span>].legend(loc=<span class="hljs-number">2</span>)<br><br>    axes[<span class="hljs-number">2</span>].scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;Z&#x27;</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;3&#x27;</span>, label=<span class="hljs-string">&#x27;Z Acc&#x27;</span>)<br>    axes[<span class="hljs-number">2</span>].set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)<br>    axes[<span class="hljs-number">2</span>].set_ylabel(<span class="hljs-string">&#x27;g or mg&#x27;</span>)<br>    axes[<span class="hljs-number">2</span>].legend(loc=<span class="hljs-number">2</span>)<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">plot_ECG</span>(<span class="hljs-params">path</span>):<br>    df = pd.read_csv(path)<br>    <span class="hljs-built_in">print</span>(df)<br>    fig = plt.figure(figsize=(<span class="hljs-number">36</span>, <span class="hljs-number">10</span>))<br>    ax = fig.add_subplot()<br>    ax.scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;ECG&#x27;</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;1&#x27;</span>, label=<span class="hljs-string">&#x27;ECG&#x27;</span>)<br>    ax.set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)<br>    ax.set_ylabel(<span class="hljs-string">&#x27;mV&#x27;</span>)<br>    ax.legend(loc=<span class="hljs-number">2</span>)<br><br><br>iPhone_path = <span class="hljs-string">&#x27;20240128/CSV/iPhone_ACC_date.csv_CUT/9.csv&#x27;</span><br>Polar_ACC_path = <span class="hljs-string">&#x27;20240128/CSV/Polar_ACC_date.csv_CUT/9.csv&#x27;</span><br>Polar_ECG_path = <span class="hljs-string">&#x27;20240128/CSV/Polar_ECG_date.csv_CUT/9.csv&#x27;</span><br><br>plot_ECG(Polar_ECG_path)<br>plot_ACC(iPhone_path)<br>plot_ACC(Polar_ACC_path)<br><br>plt.show()<br></code></pre></td></tr></table></figure><p>关于 <a href="https://blog.csdn.net/weixin_43412878/article/details/109561021">legend()中loc的用法</a></p><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs excel">legend 主要用来设置图例相关的内容，其中 loc 用来表示图例的具体位置，他的可选的参数可以是字符，也可以是数字，默认情况下是 <span class="hljs-number">0</span>（即 best），参数及意思如下：<br><span class="hljs-symbol">0:</span> ‘best’ （自动寻找最好的位置）<br><span class="hljs-symbol">1:</span> ‘<span class="hljs-built_in">upper</span> <span class="hljs-built_in">right</span>’ （右上角）<br><span class="hljs-symbol">2:</span> ‘<span class="hljs-built_in">upper</span> <span class="hljs-built_in">left</span>’ （左上角）<br><span class="hljs-symbol">3:</span> ‘<span class="hljs-built_in">lower</span> <span class="hljs-built_in">left</span>’ （左下角）<br><span class="hljs-symbol">4:</span> ‘<span class="hljs-built_in">lower</span> <span class="hljs-built_in">right</span>’ （右下角）<br><span class="hljs-symbol">5:</span> ‘<span class="hljs-built_in">right</span>’ （右边中间）<br><span class="hljs-symbol">6:</span> ‘center <span class="hljs-built_in">left</span>’ （左边中间）<br><span class="hljs-symbol">7:</span> ‘center <span class="hljs-built_in">right</span>’ （右边中间）<br><span class="hljs-symbol">8:</span> ‘<span class="hljs-built_in">lower</span> center’ （中间最下面）<br><span class="hljs-symbol">9:</span> ‘<span class="hljs-built_in">upper</span> center’ （中间最上面）<br><span class="hljs-symbol">10:</span> ‘center’ （正中心）<br></code></pre></td></tr></table></figure><h3 id="PyQt"><a href="#PyQt" class="headerlink" title="PyQt"></a>PyQt</h3><p>层级结构如下：</p><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext">QMainWindow<br><span class="hljs-bullet">-</span> <span class="hljs-string">setCentralWidget</span><br>QWidget<br><span class="hljs-bullet">-</span> <span class="hljs-string">setLayout</span><br>QVBoxLayout<br><span class="hljs-bullet">-</span> <span class="hljs-string">addLayout</span><br>QHBoxLayout<br><span class="hljs-bullet">-</span> <span class="hljs-string">addWidget</span><br>pg.PlotWidget<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h3 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h3><p>可参考 <a href="https://www.zhihu.com/tardis/zm/art/139052035?source_id=1003">matplotlib.pyplot的使用总结大全</a></p><p>两种示例用法</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">plot_ACC</span>(<span class="hljs-params">path</span>):<br>    df = pd.read_csv(path)<br>    <span class="hljs-built_in">print</span>(df)<br>    fig, axes = plt.subplots(<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, figsize=(<span class="hljs-number">36</span>, <span class="hljs-number">10</span>))<br><br>    axes[<span class="hljs-number">0</span>].scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;X&#x27;</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;1&#x27;</span>, label=<span class="hljs-string">&#x27;X Acc&#x27;</span>)<br>    axes[<span class="hljs-number">0</span>].set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)<br>    axes[<span class="hljs-number">0</span>].set_ylabel(<span class="hljs-string">&#x27;g or mg&#x27;</span>)<br>    axes[<span class="hljs-number">0</span>].legend(loc=<span class="hljs-number">2</span>)<br><br>    axes[<span class="hljs-number">1</span>].scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;Y&#x27;</span>], c=<span class="hljs-string">&#x27;blue&#x27;</span>, marker=<span class="hljs-string">&#x27;2&#x27;</span>, label=<span class="hljs-string">&#x27;Y Acc&#x27;</span>)<br>    axes[<span class="hljs-number">1</span>].set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)<br>    axes[<span class="hljs-number">1</span>].set_ylabel(<span class="hljs-string">&#x27;g or mg&#x27;</span>)<br>    axes[<span class="hljs-number">1</span>].legend(loc=<span class="hljs-number">2</span>)<br><br>    axes[<span class="hljs-number">2</span>].scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;Z&#x27;</span>], c=<span class="hljs-string">&#x27;green&#x27;</span>, marker=<span class="hljs-string">&#x27;3&#x27;</span>, label=<span class="hljs-string">&#x27;Z Acc&#x27;</span>)<br>    axes[<span class="hljs-number">2</span>].set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)<br>    axes[<span class="hljs-number">2</span>].set_ylabel(<span class="hljs-string">&#x27;g or mg&#x27;</span>)<br>    axes[<span class="hljs-number">2</span>].legend(loc=<span class="hljs-number">2</span>)<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">plot_ECG</span>(<span class="hljs-params">path</span>):<br>    df = pd.read_csv(path)<br>    <span class="hljs-built_in">print</span>(df)<br>    fig = plt.figure(figsize=(<span class="hljs-number">36</span>, <span class="hljs-number">10</span>))<br>    ax = fig.add_subplot()<br>    ax.scatter(df[<span class="hljs-string">&#x27;Timestamp&#x27;</span>], df[<span class="hljs-string">&#x27;ECG&#x27;</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, marker=<span class="hljs-string">&#x27;1&#x27;</span>, label=<span class="hljs-string">&#x27;ECG&#x27;</span>)<br>    ax.set_xlabel(<span class="hljs-string">&#x27;time&#x27;</span>)<br>    ax.set_ylabel(<span class="hljs-string">&#x27;mV&#x27;</span>)<br>    ax.legend(loc=<span class="hljs-number">2</span>)<br><br><br>iPhone_path = <span class="hljs-string">&#x27;20240128/CSV/iPhone_ACC_date.csv_CUT/9.csv&#x27;</span><br>Polar_ACC_path = <span class="hljs-string">&#x27;20240128/CSV/Polar_ACC_date.csv_CUT/9.csv&#x27;</span><br>Polar_ECG_path = <span class="hljs-string">&#x27;20240128/CSV/Polar_ECG_date.csv_CUT/9.csv&#x27;</span><br><br>plot_ECG(Polar_ECG_path)<br>plot_ACC(iPhone_path)<br>plot_ACC(Polar_ACC_path)<br><br>plt.show()<br></code></pre></td></tr></table></figure><p>关于 <a href="https://blog.csdn.net/weixin_43412878/article/details/109561021">legend()中loc的用法</a></p><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs excel">legend 主要用来设置图例相关的内容，其中 loc 用来表示图例的具体位置，他的可选的参数可以是字符，也可以是数字，默认情况下是 <span class="hljs-number">0</span>（即 best），参数及意思如下：<br><span class="hljs-symbol">0:</span> ‘best’ （自动寻找最好的位置）<br><span class="hljs-symbol">1:</span> ‘<span class="hljs-built_in">upper</span> <span class="hljs-built_in">right</span>’ （右上角）<br><span class="hljs-symbol">2:</span> ‘<span class="hljs-built_in">upper</span> <span class="hljs-built_in">left</span>’ （左上角）<br><span class="hljs-symbol">3:</span> ‘<span class="hljs-built_in">lower</span> <span class="hljs-built_in">left</span>’ （左下角）<br><span class="hljs-symbol">4:</span> ‘<span class="hljs-built_in">lower</span> <span class="hljs-built_in">right</span>’ （右下角）<br><span class="hljs-symbol">5:</span> ‘<span class="hljs-built_in">right</span>’ （右边中间）<br><span class="hljs-symbol">6:</span> ‘center <span class="hljs-built_in">left</span>’ （左边中间）<br><span class="hljs-symbol">7:</span> ‘center <span class="hljs-built_in">right</span>’ （右边中间）<br><span class="hljs-symbol">8:</span> ‘<span class="hljs-built_in">lower</span> center’ （中间最下面）<br><span class="hljs-symbol">9:</span> ‘<span class="hljs-built_in">upper</span> center’ （中间最上面）<br><span class="hljs-symbol">10:</span> ‘center’ （正中心）<br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>Matplotlib</tag>
       
     </tags>
     
@@ -1452,18 +1477,16 @@
     
     <categories>
       
-      <category>部署</category>
+      <category>ECG Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>运动科学</tag>
+      <tag>PPG</tag>
       
-      <tag>心率</tag>
-      
-      <tag>传感器</tag>
+      <tag>Sensor</tag>
       
     </tags>
     
@@ -1556,7 +1579,7 @@
     
     <categories>
       
-      <category>部署</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -1653,19 +1676,19 @@
     <link href="/2024/03/04/Pandas-%E6%8A%8A%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%90%8C%E7%9A%84%E4%B8%A4%E7%BB%84%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90/"/>
     <url>/2024/03/04/Pandas-%E6%8A%8A%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%90%8C%E7%9A%84%E4%B8%A4%E7%BB%84%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90/</url>
     
-    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><br><br>filepath1 = <span class="hljs-string">&#x27;&#x27;</span><br>filepath2 = <span class="hljs-string">&#x27;&#x27;</span><br> <br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string"> date d1</span><br><span class="hljs-string">2022/5/242350</span><br><span class="hljs-string">2022/5/252340</span><br><span class="hljs-string">2022/5/262340</span><br><span class="hljs-string">2022/5/272325</span><br><span class="hljs-string"></span><br><span class="hljs-string"> date d2</span><br><span class="hljs-string">2022/5/262590</span><br><span class="hljs-string">2022/5/272590</span><br><span class="hljs-string">2022/5/302590</span><br><span class="hljs-string">2022/5/312580</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><br>df1 = pd.read_csv(filepath1)<br>df2 = pd.read_csv(filepath2)<br>data = pd.merge(df1, df2, on=<span class="hljs-string">&#x27;date&#x27;</span>, how=<span class="hljs-string">&#x27;outer&#x27;</span>)  <span class="hljs-comment">#用&quot;outer&quot;属性代表是两组数据的并集，避免丢失数据</span><br><span class="hljs-built_in">print</span>(data)<br><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">date      d1      d2</span><br><span class="hljs-string">0 2022-05-24  2350.0     NaN</span><br><span class="hljs-string">1 2022-05-25  2340.0     NaN</span><br><span class="hljs-string">2 2022-05-26  2340.0  2590.0</span><br><span class="hljs-string">3 2022-05-27  2325.0  2590.0</span><br><span class="hljs-string">4 2022-05-30     NaN  2590.0</span><br><span class="hljs-string">5 2022-05-31     NaN  2580.0</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>手上 3 个数据流的开始时间不一致，所以需要对齐数据。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><br><br>filepath1 = <span class="hljs-string">&#x27;&#x27;</span><br>filepath2 = <span class="hljs-string">&#x27;&#x27;</span><br> <br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string"> date d1</span><br><span class="hljs-string">2022/5/242350</span><br><span class="hljs-string">2022/5/252340</span><br><span class="hljs-string">2022/5/262340</span><br><span class="hljs-string">2022/5/272325</span><br><span class="hljs-string"></span><br><span class="hljs-string"> date d2</span><br><span class="hljs-string">2022/5/262590</span><br><span class="hljs-string">2022/5/272590</span><br><span class="hljs-string">2022/5/302590</span><br><span class="hljs-string">2022/5/312580</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><br>df1 = pd.read_csv(filepath1)<br>df2 = pd.read_csv(filepath2)<br>data = pd.merge(df1, df2, on=<span class="hljs-string">&#x27;date&#x27;</span>, how=<span class="hljs-string">&#x27;outer&#x27;</span>)  <span class="hljs-comment">#用&quot;outer&quot;属性代表是两组数据的并集，避免丢失数据</span><br><span class="hljs-built_in">print</span>(data)<br><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">date      d1      d2</span><br><span class="hljs-string">0 2022-05-24  2350.0     NaN</span><br><span class="hljs-string">1 2022-05-25  2340.0     NaN</span><br><span class="hljs-string">2 2022-05-26  2340.0  2590.0</span><br><span class="hljs-string">3 2022-05-27  2325.0  2590.0</span><br><span class="hljs-string">4 2022-05-30     NaN  2590.0</span><br><span class="hljs-string">5 2022-05-31     NaN  2580.0</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>Pandas</tag>
       
     </tags>
     
@@ -1708,14 +1731,14 @@
     
     <categories>
       
-      <category>部署</category>
+      <category>ECG Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>心率</tag>
+      <tag>ECG</tag>
       
       <tag>Python</tag>
       
@@ -1842,7 +1865,7 @@
     
     <tags>
       
-      <tag>生产力（摸鱼）</tag>
+      <tag>生产力</tag>
       
     </tags>
     
@@ -1860,18 +1883,16 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>心率</tag>
-      
       <tag>IMU</tag>
       
-      <tag>传感器</tag>
+      <tag>Sensor</tag>
       
     </tags>
     
@@ -1939,7 +1960,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>空间轨迹 Project</category>
       
     </categories>
     
@@ -1948,7 +1969,7 @@
       
       <tag>IMU</tag>
       
-      <tag>传感器</tag>
+      <tag>Sensor</tag>
       
     </tags>
     
@@ -1966,7 +1987,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2086,12 +2107,12 @@
     <link href="/2024/01/18/%E6%8A%A5%E9%94%99-async-call-in-a-function-that-does-not-support-concurrency/"/>
     <url>/2024/01/18/%E6%8A%A5%E9%94%99-async-call-in-a-function-that-does-not-support-concurrency/</url>
     
-    <content type="html"><![CDATA[<p>异步函数的调用方式是</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Task</span> &#123;<br><span class="hljs-keyword">await</span> yourFunction()<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>给 Polar 设置时间时，因为是异步函数，不能直接调用。</p><p>异步函数的调用方式是：</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Button</span>&#123;aciton: &#123;<br><span class="hljs-type">Task</span> &#123;<span class="hljs-comment">// Add Here</span><br>      <span class="hljs-keyword">await</span> bleSdkManager.setTime()<br>    &#125;<br>&#125;, label: &#123;<br><span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Calibration Time&quot;</span>)<br>.font(.system(size: <span class="hljs-number">14.0</span>, weight: .black, design: .monospaced))<br>  .foregroundColor(.blue)<br>&#125;)<br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2116,16 +2137,16 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>心率</tag>
+      <tag>ECG</tag>
       
-      <tag>传感器</tag>
+      <tag>Sensor</tag>
       
       <tag>Swift</tag>
       
@@ -2192,12 +2213,12 @@
     <link href="/2024/01/13/SwiftUI-%E4%B8%8B-WatchOS-%E4%B8%8E-iOS-%E9%80%9A%E4%BF%A1/"/>
     <url>/2024/01/13/SwiftUI-%E4%B8%8B-WatchOS-%E4%B8%8E-iOS-%E9%80%9A%E4%BF%A1/</url>
     
-    <content type="html"><![CDATA[<p>关于 WatchOS 的工程文件创建，可参考 <a href="https://developer.apple.com/tutorials/swiftui/creating-a-watchos-app#Share-files-between-targets">Creating a watchOS app</a></p><p>关于具体的代码，可参考 <a href="https://github.com/MilanistaDev/WatchConnectivitySampleForSwiftUI/tree/main">WatchConnectivitySampleForSwiftUI</a></p>]]></content>
+    <content type="html"><![CDATA[<p>目的是通过 iWatch 记录当前的 RPE。</p><ul><li><p>关于 WatchOS 的工程文件创建，可参考 <a href="https://developer.apple.com/tutorials/swiftui/creating-a-watchos-app#Share-files-between-targets">Creating a watchOS app</a></p></li><li><p>关于具体的代码，可参考 <a href="https://github.com/MilanistaDev/WatchConnectivitySampleForSwiftUI/tree/main">WatchConnectivitySampleForSwiftUI</a></p></li></ul>]]></content>
     
     
     <categories>
       
-      <category>合集</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2222,7 +2243,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2247,7 +2268,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2272,7 +2293,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2281,9 +2302,9 @@
       
       <tag>深度学习</tag>
       
-      <tag>心率</tag>
+      <tag>ECG</tag>
       
-      <tag>Python</tag>
+      <tag>PyTorch</tag>
       
     </tags>
     
@@ -2301,7 +2322,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2310,9 +2331,9 @@
       
       <tag>深度学习</tag>
       
-      <tag>心率</tag>
+      <tag>ECG</tag>
       
-      <tag>Python</tag>
+      <tag>PyTorch</tag>
       
     </tags>
     
@@ -2330,14 +2351,14 @@
     
     <categories>
       
-      <category>部署</category>
+      <category>ECG Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>心率</tag>
+      <tag>ECG</tag>
       
       <tag>Python</tag>
       
@@ -2382,7 +2403,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2393,7 +2414,7 @@
       
       <tag>运动科学</tag>
       
-      <tag>心率</tag>
+      <tag>ECG</tag>
       
       <tag>IMU</tag>
       
@@ -2517,7 +2538,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2528,7 +2549,7 @@
       
       <tag>运动科学</tag>
       
-      <tag>心率</tag>
+      <tag>ECG</tag>
       
     </tags>
     
@@ -2553,7 +2574,7 @@
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>Pandas</tag>
       
     </tags>
     
@@ -2578,7 +2599,7 @@
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>Pandas</tag>
       
     </tags>
     
@@ -2603,7 +2624,7 @@
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>Pandas</tag>
       
     </tags>
     
@@ -2628,7 +2649,7 @@
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>Pandas</tag>
       
     </tags>
     
@@ -2646,7 +2667,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2728,7 +2749,7 @@
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>Pandas</tag>
       
     </tags>
     
@@ -2741,19 +2762,19 @@
     <link href="/2023/11/20/Pandas-List-%E8%BD%AC%E6%8D%A2%E4%B8%BA-Series/"/>
     <url>/2023/11/20/Pandas-List-%E8%BD%AC%E6%8D%A2%E4%B8%BA-Series/</url>
     
-    <content type="html"><![CDATA[<p>手上有 ecg 信号数组。需要转换成相应的格式：</p><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs dns"><span class="hljs-number">0</span>        <span class="hljs-number">0.000763</span><br><span class="hljs-number">1</span>       -<span class="hljs-number">0.000610</span><br><span class="hljs-number">2</span>        <span class="hljs-number">0.000763</span><br><span class="hljs-number">3</span>        <span class="hljs-number">0.002289</span><br><span class="hljs-number">4</span>        <span class="hljs-number">0.005341</span><br>           ...   <br><span class="hljs-number">50677</span>    <span class="hljs-number">0.005798</span><br><span class="hljs-number">50678</span>    <span class="hljs-number">0.003357</span><br><span class="hljs-number">50679</span>    <span class="hljs-number">0.008392</span><br><span class="hljs-number">50680</span>    <span class="hljs-number">0.010681</span><br><span class="hljs-number">50681</span>    <span class="hljs-number">0.008240</span><br>Name: ECG, Length: <span class="hljs-number">50682</span>, dtype: float64<br></code></pre></td></tr></table></figure><p>type 后可以发现该格式为：</p><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;pandas.core.series.Series&#x27;</span>&gt;<br></code></pre></td></tr></table></figure><p>于是可以</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">ecg = pd.Series(ecg, name=<span class="hljs-string">&#x27;ECG&#x27;</span>)<br></code></pre></td></tr></table></figure><p>这样就将 List 转换成了 Series</p>]]></content>
+    <content type="html"><![CDATA[<p>手上有组 ecg 信号，为 List。需要转换成下面的格式用于 Neurokit 分析。</p><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs dns"><span class="hljs-number">0</span>        <span class="hljs-number">0.000763</span><br><span class="hljs-number">1</span>       -<span class="hljs-number">0.000610</span><br><span class="hljs-number">2</span>        <span class="hljs-number">0.000763</span><br><span class="hljs-number">3</span>        <span class="hljs-number">0.002289</span><br><span class="hljs-number">4</span>        <span class="hljs-number">0.005341</span><br>           ...   <br><span class="hljs-number">50677</span>    <span class="hljs-number">0.005798</span><br><span class="hljs-number">50678</span>    <span class="hljs-number">0.003357</span><br><span class="hljs-number">50679</span>    <span class="hljs-number">0.008392</span><br><span class="hljs-number">50680</span>    <span class="hljs-number">0.010681</span><br><span class="hljs-number">50681</span>    <span class="hljs-number">0.008240</span><br>Name: ECG, Length: <span class="hljs-number">50682</span>, dtype: float64<br></code></pre></td></tr></table></figure><p>从 Neurokit load 下来的数据格式为：</p><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">&#x27;pandas.core.series.Series&#x27;</span>&gt;<br></code></pre></td></tr></table></figure><p>于是可以使用</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">ecg = pd.Series(ecg, name=<span class="hljs-string">&#x27;ECG&#x27;</span>)<br></code></pre></td></tr></table></figure><p>这样就将 List 转换成了 Series</p>]]></content>
     
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>Pandas</tag>
       
     </tags>
     
@@ -2778,9 +2799,11 @@
     
     <tags>
       
-      <tag>心率</tag>
+      <tag>ECG</tag>
       
-      <tag>传感器</tag>
+      <tag>PPG</tag>
+      
+      <tag>Sensor</tag>
       
     </tags>
     
@@ -2798,14 +2821,14 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>Matplotlib</tag>
       
     </tags>
     
@@ -2823,14 +2846,16 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>ECG Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>心率</tag>
+      <tag>ECG</tag>
+      
+      <tag>PPG</tag>
       
     </tags>
     
@@ -2848,7 +2873,7 @@
     
     <categories>
       
-      <category>文档翻译</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2856,8 +2881,6 @@
     <tags>
       
       <tag>心率</tag>
-      
-      <tag>Python</tag>
       
     </tags>
     
@@ -2875,7 +2898,7 @@
     
     <categories>
       
-      <category>文档翻译</category>
+      <category>ECG Project</category>
       
     </categories>
     
@@ -2883,8 +2906,6 @@
     <tags>
       
       <tag>心率</tag>
-      
-      <tag>Python</tag>
       
     </tags>
     
@@ -3009,7 +3030,7 @@
     
     <tags>
       
-      <tag>Swift</tag>
+      <tag>CoreData</tag>
       
     </tags>
     
@@ -3034,7 +3055,7 @@
     
     <tags>
       
-      <tag>Swift</tag>
+      <tag>CoreData</tag>
       
     </tags>
     
@@ -3072,7 +3093,7 @@
     <link href="/2023/10/06/SwiftUI-TextField-%E4%B8%8E-Keyboard-%E5%90%88%E9%9B%86/"/>
     <url>/2023/10/06/SwiftUI-TextField-%E4%B8%8E-Keyboard-%E5%90%88%E9%9B%86/</url>
     
-    <content type="html"><![CDATA[<h1 id="TextField"><a href="#TextField" class="headerlink" title="TextField"></a>TextField</h1><ul><li><a href="https://fatbobman.com/zh/posts/textfield-event-focus-keyboard/">SwiftUI TextField 进阶 —— 事件、焦点、键盘</a></li></ul><h1 id="Keyboard"><a href="#Keyboard" class="headerlink" title="Keyboard"></a>Keyboard</h1><ul><li><a href="https://stackoverflow.com/questions/56491386/how-to-hide-keyboard-when-using-swiftui">How to hide keyboard when using SwiftUI?</a>;</li><li><a href="https://stackoverflow.com/questions/703754/how-to-dismiss-keyboard-for-uitextview-with-return-key">How to dismiss keyboard for UITextView with return key?</a></li></ul><p>关于键盘会上推组件：</p><p><a href="https://fatbobman.com/zh/posts/textfield-event-focus-keyboard/">掌握 SwiftUI 的 Safe Area</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="TextField"><a href="#TextField" class="headerlink" title="TextField"></a>TextField</h1><ul><li><a href="https://fatbobman.com/zh/posts/textfield-event-focus-keyboard/">SwiftUI TextField 进阶 —— 事件、焦点、键盘</a></li></ul><h1 id="Keyboard"><a href="#Keyboard" class="headerlink" title="Keyboard"></a>Keyboard</h1><ul><li><a href="https://stackoverflow.com/questions/56491386/how-to-hide-keyboard-when-using-swiftui">How to hide keyboard when using SwiftUI?</a>;</li></ul><p>关于键盘会上推组件：</p><p><a href="https://fatbobman.com/zh/posts/textfield-event-focus-keyboard/">掌握 SwiftUI 的 Safe Area</a></p>]]></content>
     
     
     <categories>
@@ -3127,14 +3148,14 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>PyQt</tag>
       
     </tags>
     
@@ -3168,31 +3189,6 @@
   
   
   <entry>
-    <title>能量代谢占比计算</title>
-    <link href="/2023/09/18/%E8%83%BD%E9%87%8F%E4%BB%A3%E8%B0%A2%E5%8D%A0%E6%AF%94%E8%AE%A1%E7%AE%97/"/>
-    <url>/2023/09/18/%E8%83%BD%E9%87%8F%E4%BB%A3%E8%B0%A2%E5%8D%A0%E6%AF%94%E8%AE%A1%E7%AE%97/</url>
-    
-    <content type="html"><![CDATA[<p>关于人体能量代谢占比的计算方式，可以参考文献：男子赛艇240次卧拉练习的能量代谢特征</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>随笔</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>运动科学</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Swift 通过 CMMotionManager 获取 iPhone 加速度传感器、陀螺仪等信息</title>
     <link href="/2023/09/13/Swift-%E9%80%9A%E8%BF%87-CMMotionManager-%E8%8E%B7%E5%8F%96-iPhone-%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E3%80%81%E9%99%80%E8%9E%BA%E4%BB%AA%E7%AD%89%E4%BF%A1%E6%81%AF/"/>
     <url>/2023/09/13/Swift-%E9%80%9A%E8%BF%87-CMMotionManager-%E8%8E%B7%E5%8F%96-iPhone-%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E3%80%81%E9%99%80%E8%9E%BA%E4%BB%AA%E7%AD%89%E4%BF%A1%E6%81%AF/</url>
@@ -3202,7 +3198,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>空间轨迹 Project</category>
       
     </categories>
     
@@ -3211,7 +3207,7 @@
       
       <tag>IMU</tag>
       
-      <tag>传感器</tag>
+      <tag>Sensor</tag>
       
       <tag>Swift</tag>
       
@@ -3231,7 +3227,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>空间轨迹 Project</category>
       
     </categories>
     
@@ -3264,6 +3260,8 @@
     <tags>
       
       <tag>Mac</tag>
+      
+      <tag>生产力</tag>
       
     </tags>
     
@@ -3564,7 +3562,7 @@
     
     <categories>
       
-      <category>部署</category>
+      <category>人体姿态识别 Project</category>
       
     </categories>
     
@@ -3666,7 +3664,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
@@ -3674,6 +3672,8 @@
     <tags>
       
       <tag>Python</tag>
+      
+      <tag>PyQt</tag>
       
     </tags>
     
@@ -3718,7 +3718,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>EMG Project</category>
       
     </categories>
     
@@ -3745,7 +3745,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
@@ -3797,7 +3797,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>人体姿态识别 Project</category>
       
     </categories>
     
@@ -3849,7 +3849,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>人体姿态识别 Project</category>
       
     </categories>
     
@@ -3874,7 +3874,7 @@
     
     <categories>
       
-      <category>部署</category>
+      <category>人体姿态识别 Project</category>
       
     </categories>
     
@@ -3899,7 +3899,7 @@
     
     <categories>
       
-      <category>部署</category>
+      <category>EMG Project</category>
       
     </categories>
     
@@ -3910,9 +3910,7 @@
       
       <tag>Arduino</tag>
       
-      <tag>传感器</tag>
-      
-      <tag>DIY</tag>
+      <tag>Sensor</tag>
       
     </tags>
     
@@ -3930,7 +3928,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>空间轨迹 Projecct</category>
       
     </categories>
     
@@ -3980,7 +3978,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
@@ -4007,7 +4005,7 @@
     
     <categories>
       
-      <category>部署</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
@@ -4036,7 +4034,7 @@
     
     <categories>
       
-      <category>部署</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
@@ -4065,7 +4063,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
@@ -4090,7 +4088,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
@@ -4224,7 +4222,7 @@
       
       <tag>深度学习</tag>
       
-      <tag>Python</tag>
+      <tag>PyTorch</tag>
       
     </tags>
     
@@ -4267,39 +4265,14 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>传感器</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>绳波功率计算公式</title>
-    <link href="/2023/08/03/%E7%BB%B3%E6%B3%A2%E5%8A%9F%E7%8E%87%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/"/>
-    <url>/2023/08/03/%E7%BB%B3%E6%B3%A2%E5%8A%9F%E7%8E%87%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/</url>
-    
-    <content type="html"><![CDATA[<p>绳波的功率公式为<br>$$<br>P&#x3D;(μA²ω²v)&#x2F;2<br>$$<br>其中</p><ul><li>密度μ等于绳重&#x2F;绳长，单位为kg&#x2F;m；</li><li>A绳波振幅，单位为m；</li><li>ω角速度，角速度公式为ω&#x3D;2πf，f为绳波频率。</li></ul><p>波速v计算公式<br>$$<br>v&#x3D;λ&#x2F;T&#x3D;fλ&#x3D;\sqrt{F&#x2F;μ}<br>$$<br>其中</p><ul><li>λ波长，是两个相邻的状态相同的点之间的距离，单位为m;</li><li>周期T&#x3D;1&#x2F;f，波前进一个波长的距离所需的时间;</li><li>F为绳的内部张力或者说拉力。</li></ul><p>但由于拉力F不好测量，所以测量波长λ或者直接测量波速v会是一个更好的方法。</p><p>参考：</p><p><a href="https://www.zhihu.com/question/39274349">已知绳波的轨迹方程，和变力方程如何求其能量？</a></p><p><a href="https://query.libretexts.org/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AD%A6_I-%E5%8A%9B%E5%AD%A6%E3%80%81%E5%A3%B0%E9%9F%B3%E3%80%81%E6%8C%AF%E8%8D%A1%E5%92%8C%E6%B3%A2%E6%B5%AA_(OpenStax)/16%3A_Waves/16.05%3A_%E6%B3%A2%E6%B5%AA%E7%9A%84%E8%83%BD%E9%87%8F%E5%92%8C%E5%8A%9B%E9%87%8F">波浪的能量和力量</a></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>合集</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>IMU</tag>
+      <tag>Sensor</tag>
       
     </tags>
     
@@ -4317,7 +4290,7 @@
     
     <categories>
       
-      <category>部署</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
@@ -4326,9 +4299,9 @@
       
       <tag>Arduino</tag>
       
-      <tag>传感器</tag>
-      
       <tag>DIY</tag>
+      
+      <tag>Sensor</tag>
       
     </tags>
     
@@ -4353,9 +4326,9 @@
     
     <tags>
       
-      <tag>Swift</tag>
-      
       <tag>Python</tag>
+      
+      <tag>Swift</tag>
       
     </tags>
     
@@ -4373,7 +4346,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
@@ -4398,7 +4371,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
@@ -4423,7 +4396,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>空间轨迹 Projecct</category>
       
     </categories>
     
@@ -4431,8 +4404,6 @@
     <tags>
       
       <tag>IMU</tag>
-      
-      <tag>传感器</tag>
       
     </tags>
     
@@ -4450,7 +4421,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>呼吸代谢 Project</category>
       
     </categories>
     
@@ -4502,7 +4473,7 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>空间轨迹 Project</category>
       
     </categories>
     
@@ -4590,7 +4561,7 @@
       
       <tag>深度学习</tag>
       
-      <tag>Python</tag>
+      <tag>PyTorch</tag>
       
     </tags>
     
@@ -4615,7 +4586,7 @@
     
     <tags>
       
-      <tag>生产力（摸鱼）</tag>
+      <tag>生产力</tag>
       
     </tags>
     
@@ -4735,7 +4706,7 @@
     
     <categories>
       
-      <category>部署</category>
+      <category>ECG Project</category>
       
     </categories>
     
