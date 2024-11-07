@@ -21,18 +21,18 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="购买地址相关信息示例代码1234567891011121314151617181920212223242526272829303132333435&#x2F;*!  * @file  getOxygenConcentration.ino  * @brief Enable the power, and the information is printed on the serial port.  * @n W">
+    <meta name="description" content="传感器采购自 DFRobot，基本上是即买即用。  购买地址  相关信息   Arduino 驱动代码： 1234567891011121314151617181920212223242526272829303132333435&#x2F;*!  * @file  getOxygenConcentration.ino  * @brief Enable the power, and the informati">
 <meta property="og:type" content="article">
 <meta property="og:title" content="O2 浓度传感器 SEN0496 驱动">
 <meta property="og:url" content="https://wonderhoi.com/2023/08/11/O2-%E6%B5%93%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0496-%E9%A9%B1%E5%8A%A8/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="购买地址相关信息示例代码1234567891011121314151617181920212223242526272829303132333435&#x2F;*!  * @file  getOxygenConcentration.ino  * @brief Enable the power, and the information is printed on the serial port.  * @n W">
+<meta property="og:description" content="传感器采购自 DFRobot，基本上是即买即用。  购买地址  相关信息   Arduino 驱动代码： 1234567891011121314151617181920212223242526272829303132333435&#x2F;*!  * @file  getOxygenConcentration.ino  * @brief Enable the power, and the informati">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-11T13:54:20.000Z">
-<meta property="article:modified_time" content="2024-11-06T12:03:21.378Z">
+<meta property="article:modified_time" content="2024-11-07T04:10:57.365Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="Arduino">
-<meta property="article:tag" content="传感器">
+<meta property="article:tag" content="Sensor">
 <meta property="article:tag" content="DIY">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -111,7 +111,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 40vh;">
+<div class="header-inner" style="height: 30vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -211,7 +211,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/wallhaven-m35rwm.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -240,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          104 字
+          120 字
         
       </span>
     
@@ -284,7 +284,15 @@
             
               <div class="markdown-body">
                 
-                <h4 id="购买地址"><a href="#购买地址" class="headerlink" title="购买地址"></a><a target="_blank" rel="noopener" href="https://www.dfrobot.com.cn/goods-3501.html">购买地址</a></h4><h4 id="相关信息"><a href="#相关信息" class="headerlink" title="相关信息"></a><a target="_blank" rel="noopener" href="https://wiki.dfrobot.com.cn/SKU_SEN0496_Gravity_%E7%94%B5%E5%8C%96%E5%AD%A6%E6%B0%A7%E6%B0%94%E4%BC%A0%E6%84%9F%E5%99%A8_%E5%85%A8%E9%87%8F%E7%A8%8B_I2C">相关信息</a></h4><h4 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/*!</span><br><span class="hljs-comment">  * @file  getOxygenConcentration.ino</span><br><span class="hljs-comment">  * @brief Enable the power, and the information is printed on the serial port.</span><br><span class="hljs-comment">  * @n When using IIC device, select I2C address, set the dialing switch A0, A1 (Address_0 is [0 0]), (Address_1 is [1 0]), (Address_2 is [0 1]), (Address_3 is [1 1]).</span><br><span class="hljs-comment">  * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (https://www.dfrobot.com)</span><br><span class="hljs-comment">  */</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;DFRobot_EOxygenSensor.h&quot;</span>  <span class="hljs-comment">// 需要额外安装DFRobot_EOxygenSensor库</span></span><br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> *  iic slave Address, The default is E_OXYGEN_ADDRESS_0</span><br><span class="hljs-comment"> *     E_OXYGEN_ADDRESS_0               0x70</span><br><span class="hljs-comment"> *     E_OXYGEN_ADDRESS_1               0x71</span><br><span class="hljs-comment"> *     E_OXYGEN_ADDRESS_2               0x72</span><br><span class="hljs-comment"> *     E_OXYGEN_ADDRESS_3               0x73</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> OXYGEN_I2C_ADDRESS E_OXYGEN_ADDRESS_0</span><br><span class="hljs-function">DFRobot_EOxygenSensor_I2C <span class="hljs-title">oxygen</span><span class="hljs-params">(&amp;Wire, OXYGEN_I2C_ADDRESS)</span></span>;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  Serial.<span class="hljs-built_in">begin</span>(<span class="hljs-number">115200</span>);<br>  <span class="hljs-keyword">while</span>(!Serial);<br>  <span class="hljs-keyword">while</span>(!oxygen.<span class="hljs-built_in">begin</span>())&#123;<br>    Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;NO Deivces !&quot;</span>);<br>    <span class="hljs-built_in">delay</span>(<span class="hljs-number">1000</span>);<br>  &#125; Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;Device connected successfully !&quot;</span>);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span><br><span class="hljs-function"></span>&#123;<br>  Serial.<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;oxygen concetnration is &quot;</span>); <br>  Serial.<span class="hljs-built_in">print</span>(oxygen.<span class="hljs-built_in">readOxygenConcentration</span>());<br>  Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;% VOL&quot;</span>);<br>  <span class="hljs-built_in">delay</span>(<span class="hljs-number">1000</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+                <p>传感器采购自 DFRobot，基本上是即买即用。</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.dfrobot.com.cn/goods-3501.html">购买地址</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://wiki.dfrobot.com.cn/SKU_SEN0496_Gravity_%E7%94%B5%E5%8C%96%E5%AD%A6%E6%B0%A7%E6%B0%94%E4%BC%A0%E6%84%9F%E5%99%A8_%E5%85%A8%E9%87%8F%E7%A8%8B_I2C">相关信息</a></p>
+</li>
+</ul>
+<p>Arduino 驱动代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/*!</span><br><span class="hljs-comment">  * @file  getOxygenConcentration.ino</span><br><span class="hljs-comment">  * @brief Enable the power, and the information is printed on the serial port.</span><br><span class="hljs-comment">  * @n When using IIC device, select I2C address, set the dialing switch A0, A1 (Address_0 is [0 0]), (Address_1 is [1 0]), (Address_2 is [0 1]), (Address_3 is [1 1]).</span><br><span class="hljs-comment">  * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (https://www.dfrobot.com)</span><br><span class="hljs-comment">  */</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;DFRobot_EOxygenSensor.h&quot;</span>  <span class="hljs-comment">// 需要额外安装DFRobot_EOxygenSensor库</span></span><br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> *  iic slave Address, The default is E_OXYGEN_ADDRESS_0</span><br><span class="hljs-comment"> *     E_OXYGEN_ADDRESS_0               0x70</span><br><span class="hljs-comment"> *     E_OXYGEN_ADDRESS_1               0x71</span><br><span class="hljs-comment"> *     E_OXYGEN_ADDRESS_2               0x72</span><br><span class="hljs-comment"> *     E_OXYGEN_ADDRESS_3               0x73</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> OXYGEN_I2C_ADDRESS E_OXYGEN_ADDRESS_0</span><br><span class="hljs-function">DFRobot_EOxygenSensor_I2C <span class="hljs-title">oxygen</span><span class="hljs-params">(&amp;Wire, OXYGEN_I2C_ADDRESS)</span></span>;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>		Serial.<span class="hljs-built_in">begin</span>(<span class="hljs-number">115200</span>);<br>		<span class="hljs-keyword">while</span>(!Serial);<br>		<span class="hljs-keyword">while</span>(!oxygen.<span class="hljs-built_in">begin</span>())&#123;<br>				Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;NO Deivces !&quot;</span>);<br>				<span class="hljs-built_in">delay</span>(<span class="hljs-number">1000</span>);<br>		&#125; Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;Device connected successfully !&quot;</span>);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span><br><span class="hljs-function"></span>&#123;<br>    Serial.<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;oxygen concetnration is &quot;</span>); <br>    Serial.<span class="hljs-built_in">print</span>(oxygen.<span class="hljs-built_in">readOxygenConcentration</span>());<br>    Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;% VOL&quot;</span>);<br>    <span class="hljs-built_in">delay</span>(<span class="hljs-number">1000</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -320,7 +328,7 @@
       
         <a href="/tags/Arduino/" class="print-no-link">#Arduino</a>
       
-        <a href="/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/" class="print-no-link">#传感器</a>
+        <a href="/tags/Sensor/" class="print-no-link">#Sensor</a>
       
         <a href="/tags/DIY/" class="print-no-link">#DIY</a>
       

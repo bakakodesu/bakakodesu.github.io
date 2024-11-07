@@ -21,15 +21,15 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="传感器购买连接。 传感器相关信息，这个也是。 传感器驱动示例代码： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878">
+    <meta name="description" content="传感器采购自 DFRobot，基本上是即买即用。  购买地址  相关信息，这个也是。   Arduino 驱动代码： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475">
 <meta property="og:type" content="article">
 <meta property="og:title" content="肌电传感器 SEN0240">
 <meta property="og:url" content="https://wonderhoi.com/2023/08/14/%E8%82%8C%E7%94%B5%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0240/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="传感器购买连接。 传感器相关信息，这个也是。 传感器驱动示例代码： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878">
+<meta property="og:description" content="传感器采购自 DFRobot，基本上是即买即用。  购买地址  相关信息，这个也是。   Arduino 驱动代码： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-14T15:48:25.000Z">
-<meta property="article:modified_time" content="2024-11-06T14:30:57.601Z">
+<meta property="article:modified_time" content="2024-11-07T05:04:44.068Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="EMG">
 <meta property="article:tag" content="Arduino">
@@ -111,7 +111,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 40vh;">
+<div class="header-inner" style="height: 30vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -211,7 +211,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/wallhaven-m35rwm.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -240,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          535 字
+          540 字
         
       </span>
     
@@ -284,9 +284,14 @@
             
               <div class="markdown-body">
                 
-                <p>传感器购买<a target="_blank" rel="noopener" href="https://www.dfrobot.com.cn/goods-1503.html">连接</a>。</p>
-<p>传感器<a target="_blank" rel="noopener" href="https://wiki.dfrobot.com.cn/_SKU_SEN0240_%E8%82%8C%E7%94%B5%E4%BC%A0%E6%84%9F%E5%99%A8_Analog_EMG_Sensor_by_OYMotion">相关信息</a>，<a target="_blank" rel="noopener" href="https://www.yuque.com/cs/products/rwe87o">这个也是</a>。</p>
-<p>传感器驱动示例代码：</p>
+                <p>传感器采购自 DFRobot，基本上是即买即用。</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.dfrobot.com.cn/goods-1503.html">购买地址</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://wiki.dfrobot.com.cn/_SKU_SEN0240_%E8%82%8C%E7%94%B5%E4%BC%A0%E6%84%9F%E5%99%A8_Analog_EMG_Sensor_by_OYMotion">相关信息</a>，<a target="_blank" rel="noopener" href="https://www.yuque.com/cs/products/rwe87o">这个也是</a>。</p>
+</li>
+</ul>
+<p>Arduino 驱动代码：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">/*</span><br><span class="hljs-comment">* Copyright 2017, OYMotion Inc.</span><br><span class="hljs-comment">* All rights reserved.</span><br><span class="hljs-comment">*</span><br><span class="hljs-comment">* Redistribution and use in source and binary forms, with or without</span><br><span class="hljs-comment">* modification, are permitted provided that the following conditions</span><br><span class="hljs-comment">* are met:</span><br><span class="hljs-comment">*</span><br><span class="hljs-comment">* 1. Redistributions of source code must retain the above copyright</span><br><span class="hljs-comment">*    notice, this list of conditions and the following disclaimer.</span><br><span class="hljs-comment">*</span><br><span class="hljs-comment">* 2. Redistributions in binary form must reproduce the above copyright</span><br><span class="hljs-comment">*    notice, this list of conditions and the following disclaimer in</span><br><span class="hljs-comment">*    the documentation and/or other materials provided with the</span><br><span class="hljs-comment">*    distribution.</span><br><span class="hljs-comment">*</span><br><span class="hljs-comment">* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span><br><span class="hljs-comment">* &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span><br><span class="hljs-comment">* LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span><br><span class="hljs-comment">* FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span><br><span class="hljs-comment">* COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span><br><span class="hljs-comment">* INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span><br><span class="hljs-comment">* BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS</span><br><span class="hljs-comment">* OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED</span><br><span class="hljs-comment">* AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,</span><br><span class="hljs-comment">* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF</span><br><span class="hljs-comment">* THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH</span><br><span class="hljs-comment">* DAMAGE.</span><br><span class="hljs-comment">*</span><br><span class="hljs-comment">*/</span><br><br><span class="hljs-meta">#<span class="hljs-keyword">if</span> defined(ARDUINO) &amp;&amp; ARDUINO &gt;= 100</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;Arduino.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">else</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;WProgram.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">endif</span></span><br><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;EMGFilters.h&quot;</span></span><br><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> TIMING_DEBUG 1</span><br><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> SensorInputPin A0 <span class="hljs-comment">// input pin number</span></span><br><br>EMGFilters myFilter;<br><span class="hljs-comment">// discrete filters must works with fixed sample frequence</span><br><span class="hljs-comment">// our emg filter only support &quot;SAMPLE_FREQ_500HZ&quot; or &quot;SAMPLE_FREQ_1000HZ&quot;</span><br><span class="hljs-comment">// other sampleRate inputs will bypass all the EMG_FILTER</span><br><span class="hljs-type">int</span> sampleRate = SAMPLE_FREQ_1000HZ;<br><span class="hljs-comment">// For countries where power transmission is at 50 Hz</span><br><span class="hljs-comment">// For countries where power transmission is at 60 Hz, need to change to</span><br><span class="hljs-comment">// &quot;NOTCH_FREQ_60HZ&quot;</span><br><span class="hljs-comment">// our emg filter only support 50Hz and 60Hz input</span><br><span class="hljs-comment">// other inputs will bypass all the EMG_FILTER</span><br><span class="hljs-type">int</span> humFreq = NOTCH_FREQ_50HZ;<br><br><span class="hljs-comment">// Calibration:</span><br><span class="hljs-comment">// put on the sensors, and release your muscles;</span><br><span class="hljs-comment">// wait a few seconds, and select the max value as the threshold;</span><br><span class="hljs-comment">// any value under threshold will be set to zero</span><br><span class="hljs-type">static</span> <span class="hljs-type">int</span> Threshold = <span class="hljs-number">0</span>;<br><br><span class="hljs-type">unsigned</span> <span class="hljs-type">long</span> timeStamp;<br><span class="hljs-type">unsigned</span> <span class="hljs-type">long</span> timeBudget;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-comment">/* add setup code here */</span><br>    myFilter.<span class="hljs-built_in">init</span>(sampleRate, humFreq, <span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>);<br><br>    <span class="hljs-comment">// open serial</span><br>    Serial.<span class="hljs-built_in">begin</span>(<span class="hljs-number">115200</span>);<br><br>    <span class="hljs-comment">// setup for time cost measure</span><br>    <span class="hljs-comment">// using micros()</span><br>    timeBudget = <span class="hljs-number">1e6</span> / sampleRate;<br>    <span class="hljs-comment">// micros will overflow and auto return to zero every 70 minutes</span><br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-comment">/* add main program code here */</span><br>    <span class="hljs-comment">// In order to make sure the ADC sample frequence on arduino,</span><br>    <span class="hljs-comment">// the time cost should be measured each loop</span><br>    <span class="hljs-comment">/*------------start here-------------------*/</span><br>    timeStamp = <span class="hljs-built_in">micros</span>();<br><br>    <span class="hljs-type">int</span> Value = <span class="hljs-built_in">analogRead</span>(SensorInputPin);<br><br>    <span class="hljs-comment">// filter processing</span><br>    <span class="hljs-type">int</span> DataAfterFilter = myFilter.<span class="hljs-built_in">update</span>(Value);<br><br>    <span class="hljs-type">int</span> envlope = <span class="hljs-built_in">sq</span>(DataAfterFilter);<br>    <span class="hljs-comment">// any value under threshold will be set to zero</span><br>    envlope = (envlope &gt; Threshold) ? envlope : <span class="hljs-number">0</span>;<br><br>    timeStamp = <span class="hljs-built_in">micros</span>() - timeStamp;<br>    <span class="hljs-keyword">if</span> (TIMING_DEBUG) &#123;<br>        <span class="hljs-comment">// Serial.print(&quot;Read Data: &quot;); Serial.println(Value);</span><br>        <span class="hljs-comment">// Serial.print(&quot;Filtered Data: &quot;);Serial.println(DataAfterFilter);</span><br>        Serial.<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Squared Data: &quot;</span>);<br>        Serial.<span class="hljs-built_in">println</span>(envlope);<br>        <span class="hljs-comment">// Serial.print(&quot;Filters cost time: &quot;); Serial.println(timeStamp);</span><br>        <span class="hljs-comment">// the filter cost average around 520 us</span><br>    &#125;<br><br>    <span class="hljs-comment">/*------------end here---------------------*/</span><br>    <span class="hljs-comment">// if less than timeBudget, then you still have (timeBudget - timeStamp) to</span><br>    <span class="hljs-comment">// do your work</span><br>    <span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">500</span>);<br>    <span class="hljs-comment">// if more than timeBudget, the sample rate need to reduce to</span><br>    <span class="hljs-comment">// SAMPLE_FREQ_500HZ</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>驱动代码需要用到 EMGFilters 库，<a target="_blank" rel="noopener" href="https://github.com/oymotion/EMGFilters">下载地址</a>。</p>
@@ -397,9 +402,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/08/16/AlphaPose-%E9%83%A8%E7%BD%B2/" title="AlphaPose 部署">
+                      <a href="/2023/08/15/Python-%E4%BB%A5%E5%8F%8A-pyqt-%E7%BA%BF%E7%A8%8B%E9%94%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="Python 以及 pyqt 线程锁简单使用">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">AlphaPose 部署</span>
+                        <span class="hidden-mobile">Python 以及 pyqt 线程锁简单使用</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -407,8 +412,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/08/13/IMU-%E5%86%85%E5%8F%82%E6%A0%87%E5%AE%9A/" title="IMU 内参标定">
-                        <span class="hidden-mobile">IMU 内参标定</span>
+                      <a href="/2023/08/14/PyQt-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/" title="PyQt 组件之间的层级关系">
+                        <span class="hidden-mobile">PyQt 组件之间的层级关系</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

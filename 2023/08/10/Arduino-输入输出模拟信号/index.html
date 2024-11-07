@@ -29,7 +29,7 @@
 <meta property="og:description" content="在 Arduino UNO 上，除了 14 个数字输入&#x2F;输出引脚，还带有 6 个编号 A 的模拟输入引脚。Arduino 可以读取这些引脚上输入的模拟值，即读取引脚上输入的电压大小。模拟信号是用连续变化的物理量表示的信息，信号随时间作连续变化。 模拟输入引脚是带有 ADC（Analog-to-Digital Converter，模数转换器）功能的引脚。它可以将外部输入的模拟信号转换为芯片">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-10T08:10:31.000Z">
-<meta property="article:modified_time" content="2024-11-06T14:30:35.213Z">
+<meta property="article:modified_time" content="2024-11-07T04:09:55.111Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="Arduino">
 <meta name="twitter:card" content="summary_large_image">
@@ -109,7 +109,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 40vh;">
+<div class="header-inner" style="height: 30vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -209,7 +209,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/wallhaven-m35rwm.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -291,7 +291,7 @@
 <p>参数 pin 是指定要读取模拟值的引脚，被指定的引脚必须是模拟输入引脚。如 <code>analogRead(A0)</code>，即是读取A0引脚上的模拟值。Arduino 读取一次模拟输入需要消耗 100 微秒的时间，最大频率为 10000HZ。</p>
 <p><strong>注意：在模拟输入引脚没有任何连接的情况下，用 <code>analogRead()</code> 读取该引脚，这时获得的返回值为不固定的数值。这个数值可能受到多种因素影响，如将手靠近引脚也可能使得该返回值产生变化。</strong></p>
 <p>示例代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// 传感器数据传输引脚连接在Arduino的A0引脚</span><br><span class="hljs-comment">// 传感器另外两个引脚分别连接在Arduino的5V和GND引脚</span><br><br><span class="hljs-comment">// 变量sensorValue用来存储模拟输入信号</span><br><span class="hljs-type">int</span> sensorValue = <span class="hljs-number">0</span>;           <br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-comment">// Arduino串口通讯初始化 </span><br>  Serial.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>); <br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-comment">// 读取引脚A0输入信号</span><br>  sensorValue = <span class="hljs-built_in">analogRead</span>(A0);   <br><br>  <span class="hljs-comment">// 将A0输入信号转换为0-1023之间的数值</span><br>  <span class="hljs-comment">// 并且通过串口监视器显示 </span><br>  Serial.<span class="hljs-built_in">println</span>(sensorValue); <br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// 传感器数据传输引脚连接在Arduino的A0引脚</span><br><span class="hljs-comment">// 传感器另外两个引脚分别连接在Arduino的5V和GND引脚</span><br><br><span class="hljs-comment">// 变量sensorValue用来存储模拟输入信号</span><br><span class="hljs-type">int</span> sensorValue = <span class="hljs-number">0</span>;           <br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>		<span class="hljs-comment">// Arduino串口通讯初始化 </span><br>		Serial.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>); <br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>		<span class="hljs-comment">// 读取引脚A0输入信号</span><br>		sensorValue = <span class="hljs-built_in">analogRead</span>(A0);   <br><br>		<span class="hljs-comment">// 将A0输入信号转换为0-1023之间的数值</span><br>		<span class="hljs-comment">// 并且通过串口监视器显示 </span><br>		Serial.<span class="hljs-built_in">println</span>(sensorValue); <br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h3 id="输出信号"><a href="#输出信号" class="headerlink" title="输出信号"></a>输出信号</h3><p>与模拟输入功能对应的是模拟输出功能，使用 <code>analogWrite()</code> 函数实现这个功能。但该函数并不是输出真正意义上的模拟值，而是以一种特殊的方式来达到输出近似模拟值的效果，这种方式叫做脉冲宽度调制（PWM，Pulse Width Modulation）。</p>
 <p>在Arduino Uno中，提供PWM功能的引脚为3、5、6、9、10、11。</p>
