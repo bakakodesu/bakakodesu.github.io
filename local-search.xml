@@ -4,6 +4,81 @@
   
   
   <entry>
+    <title>空间轨迹 Project 简介</title>
+    <link href="/2024/11/08/%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9-Project-%E7%AE%80%E4%BB%8B/"/>
+    <url>/2024/11/08/%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9-Project-%E7%AE%80%E4%BB%8B/</url>
+    
+    <content type="html"><![CDATA[<p>本项目目的是采集 IMU 数据，并对 IMU 的空间轨迹进行复现。</p><p>具体可以分为 2 个板块：</p><ol><li>数据采集；</li><li>轨迹计算。</li></ol><h1 id="数据采集"><a href="#数据采集" class="headerlink" title="数据采集"></a>数据采集</h1><h2 id="iPhone"><a href="#iPhone" class="headerlink" title="iPhone"></a>iPhone</h2><ol><li><a href="https://wonderhoi.com/2024/01/22/iOS-%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9D%90%E6%A0%87/">iOS 加速度坐标</a></li><li><a href="https://wonderhoi.com/2023/09/13/Swift-%E9%80%9A%E8%BF%87-CMMotionManager-%E8%8E%B7%E5%8F%96-iPhone-%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E3%80%81%E9%99%80%E8%9E%BA%E4%BB%AA%E7%AD%89%E4%BF%A1%E6%81%AF/">Swift 通过 CMMotionManager 获取 iPhone 加速度传感器、陀螺仪等信息</a></li><li><a href="https://wonderhoi.com/2023/09/13/Swift-%E5%AF%BC%E5%87%BA-csv-%E6%96%87%E4%BB%B6/">Swift 导出 .csv 文件</a></li></ol><h2 id="WHEELTEC-N100"><a href="#WHEELTEC-N100" class="headerlink" title="WHEELTEC N100"></a>WHEELTEC N100</h2><ol><li><a href="https://wonderhoi.com/2023/07/27/M1-Mac-Parallels-Desktop-Windows11-%E5%AE%89%E8%A3%85-CP210x-%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8/">M1 Mac Parallels Desktop Windows11 安装 CP210x 串口驱动</a></li></ol><h1 id="轨迹计算"><a href="#轨迹计算" class="headerlink" title="轨迹计算"></a>轨迹计算</h1><ol><li><a href="https://wonderhoi.com/2023/08/13/IMU-%E5%86%85%E5%8F%82%E6%A0%87%E5%AE%9A/">IMU 内参标定</a></li><li><a href="https://wonderhoi.com/2023/08/03/%E9%80%9A%E8%BF%87-IMU-%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%A7%BB%E5%8A%A8%E7%9A%84%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9/">通过 IMU 绘制物体移动的空间轨迹</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>空间轨迹 Project</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>项目简介</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>呼吸代谢 Project 简介</title>
+    <link href="/2024/11/08/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project-%E7%AE%80%E4%BB%8B/"/>
+    <url>/2024/11/08/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project-%E7%AE%80%E4%BB%8B/</url>
+    
+    <content type="html"><![CDATA[<p>本项目目的是 DIY 呼吸代谢监测系统来监测人体的呼吸代谢，顺带对人体的 VO2max 进行测量。</p><p>具体可以分为 2 个板块：</p><ol><li>数据采集；</li><li>代谢计算。</li></ol><h1 id="数据采集"><a href="#数据采集" class="headerlink" title="数据采集"></a>数据采集</h1><h2 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h2><ol><li><a href="https://wonderhoi.com/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/">传感器的响应时间</a></li><li><a href="https://wonderhoi.com/2023/08/03/%E6%B0%94%E4%BD%93%E6%B5%81%E9%87%8F%E4%BC%A0%E6%84%9F%E5%99%A8-AFM3000-SFM3000-%E9%A9%B1%E5%8A%A8/">气体流量传感器 AFM3000&#x2F;SFM3000 驱动</a></li><li><a href="https://wonderhoi.com/2023/08/11/CO2-%E6%B5%93%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0220-%E9%A9%B1%E5%8A%A8/">CO2 浓度传感器 SEN0220 驱动</a></li><li><a href="https://wonderhoi.com/2023/08/11/O2-%E6%B5%93%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0496-%E9%A9%B1%E5%8A%A8/">O2 浓度传感器 SEN0496 驱动</a></li><li><a href="https://wonderhoi.com/2023/08/10/Arduino-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7/">Arduino 输入输出模拟信号</a></li><li><a href="https://wonderhoi.com/2023/08/11/Arduino-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7/">Arduino 输入输出数字信号</a></li><li><a href="https://wonderhoi.com/2024/04/11/%E6%96%87%E4%B8%98%E9%87%8C%E5%96%B7%E5%98%B4%E9%80%9A%E8%BF%87%E5%B7%AE%E5%8E%8B%E6%B5%8B%E9%87%8F%E6%B5%81%E9%87%8F/">文丘里喷嘴通过差压测量流量</a></li></ol><h2 id="上位机"><a href="#上位机" class="headerlink" title="上位机"></a>上位机</h2><ol><li><a href="https://wonderhoi.com/2023/07/28/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/">Mac 串口查询之 &#x2F;dev&#x2F;cu. 与 &#x2F;dev&#x2F;tty. 记录</a></li><li><a href="https://wonderhoi.com/2023/09/12/Linux-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2/">Linux 串口查询</a></li><li><a href="https://wonderhoi.com/2023/08/03/Python-%E5%AF%BC%E5%87%BA%E4%BC%A0%E6%84%9F%E5%99%A8%E6%95%B0%E6%8D%AE%E5%88%B0-csv-%E6%96%87%E4%BB%B6/">Python 导出传感器数据到 .csv 文件</a></li><li><a href="https://wonderhoi.com/2023/08/03/Python-%E7%BB%98%E5%88%B6%E6%95%B0%E6%8D%AE%E7%A7%BB%E5%8A%A8%E7%AA%97%E5%8F%A3/">Python 绘制数据移动窗口</a></li><li><a href="https://wonderhoi.com/2023/08/11/Python-%E8%AF%BB%E5%8F%96%E4%B8%B2%E5%8F%A3%E6%95%B0%E6%8D%AE/">Python 读取串口数据</a></li><li><a href="https://wonderhoi.com/2023/08/09/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BC%80%E5%90%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B9%B6%E4%BF%AE%E6%94%B9%E5%88%86%E8%BE%A8%E7%8E%87/">树莓派开启远程桌面并修改分辨率</a></li><li><a href="https://wonderhoi.com/2023/08/11/SCP-%E8%BF%9C%E7%A8%8B%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6%E5%88%B0%E6%A0%91%E8%8E%93%E6%B4%BE/">SCP 远程拷贝文件到树莓派</a></li><li><a href="https://wonderhoi.com/2023/08/13/pyqtgraph-%E6%97%A0%E6%B3%95%E5%AE%9E%E6%97%B6%E5%88%B7%E6%96%B0%E5%9B%BE%E8%A1%A8/">pyqtgraph 无法实时刷新图表</a></li><li><a href="https://wonderhoi.com/2023/08/14/PyQt-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/">PyQt 组件之间的层级关系</a></li><li><a href="https://wonderhoi.com/2023/08/29/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B%EF%BC%9A%E4%BB%A3%E7%A0%81/">呼吸代谢监测：代码</a></li></ol><h1 id="代谢计算"><a href="#代谢计算" class="headerlink" title="代谢计算"></a>代谢计算</h1><ol><li><p><a href="https://wonderhoi.com/2023/08/15/Python-%E4%BB%A5%E5%8F%8A-pyqt-%E7%BA%BF%E7%A8%8B%E9%94%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">Python 以及 pyqt 线程锁简单使用</a></p></li><li><p><a href="https://wonderhoi.com/2023/08/28/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B%EF%BC%9A%E5%8E%9F%E7%90%86/">呼吸代谢监测：原理</a></p></li><li><p><a href="https://wonderhoi.com/2024/04/09/DIY-%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B%E7%B3%BB%E7%BB%9F/">DIY 呼吸代谢监测系统</a></p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>呼吸代谢 Project</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>项目简介</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ECG Project 简介</title>
+    <link href="/2024/11/07/ECG-Project-%E7%AE%80%E4%BB%8B/"/>
+    <url>/2024/11/07/ECG-Project-%E7%AE%80%E4%BB%8B/</url>
+    
+    <content type="html"><![CDATA[<p>项目的初衷是想通过 ECG 信号来预测运动状态下的 RPE。</p><p>具体可以分为 3 个板块：</p><ol><li>数据采集；</li><li>数据处理；</li><li>深度学习。</li></ol><h1 id="数据采集"><a href="#数据采集" class="headerlink" title="数据采集"></a>数据采集</h1><h2 id="ECG-采集"><a href="#ECG-采集" class="headerlink" title="ECG 采集"></a>ECG 采集</h2><h3 id="Polar-H10"><a href="#Polar-H10" class="headerlink" title="Polar H10"></a>Polar H10</h3><ol><li><p><a href="https://wonderhoi.com/2023/01/09/cocoapods-%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">cocoapods 更新失败的解决办法</a></p></li><li><p><a href="https://wonderhoi.com/2024/01/10/%E4%BD%BF%E7%94%A8-Cocoapods-%E6%97%B6%E6%8A%A5%E9%94%99-Sandbox-rsync-samba-62830-deny-1/">使用 Cocoapods 时报错 Sandbox: rsync.samba(62830) deny(1)</a></p></li><li><p><a href="https://wonderhoi.com/2024/01/10/Xcode-%E5%B7%A5%E7%A8%8B-Bluetooth-Always-Usage-Description-%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/">Xcode 工程 Bluetooth Always Usage Description 设置问题</a></p></li><li><p><a href="https://wonderhoi.com/2024/01/18/%E5%BC%80%E5%8F%91-Polar-H10-%E5%BF%83%E7%8E%87%E5%B8%A6%E9%81%87%E5%88%B0%E7%9A%84%E6%97%B6%E9%97%B4%E6%88%B3%E9%97%AE%E9%A2%98/">开发 Polar H10 心率带遇到的时间戳问题</a></p></li><li><p><a href="https://wonderhoi.com/2024/01/18/%E6%8A%A5%E9%94%99-async-call-in-a-function-that-does-not-support-concurrency/">报错 ‘async’ call in a function that does not support concurrency</a></p></li></ol><h3 id="DIY"><a href="#DIY" class="headerlink" title="DIY"></a>DIY</h3><ol><li><a href="https://wonderhoi.com/2023/09/11/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE%E8%93%9D%E7%89%99%EF%BC%88%E7%BB%88%E7%AB%AF%EF%BC%89/">树莓派配置蓝牙（终端）</a></li><li><a href="https://wonderhoi.com/2023/09/11/%E6%A0%91%E8%8E%93%E6%B4%BE%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5-HC05-%E6%8F%90%E7%A4%BA-Failed-to-connect-org-bluez-Error-NotAvailable-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">树莓派蓝牙连接 HC05 提示 Failed to connect: org.bluez.Error.NotAvailable 解决办法</a></li><li><a href="https://wonderhoi.com/2023/09/11/macOS-%E6%9F%A5%E7%9C%8B%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87%E7%9A%84-MAC-%E5%9C%B0%E5%9D%80/">macOS 查看蓝牙设备的 MAC 地址</a></li></ol><h2 id="RPE-采集"><a href="#RPE-采集" class="headerlink" title="RPE 采集"></a>RPE 采集</h2><ol><li><a href="https://wonderhoi.com/2024/01/13/SwiftUI-%E4%B8%8B-WatchOS-%E4%B8%8E-iOS-%E9%80%9A%E4%BF%A1/">SwiftUI 下 WatchOS 与 iOS 通信</a></li><li><a href="https://wonderhoi.com/2024/01/19/Xcode-%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95-iWatch-%E7%9A%84%E5%9D%91/">Xcode 真机调试 iWatch 的坑</a></li></ol><h2 id="ACC-采集"><a href="#ACC-采集" class="headerlink" title="ACC 采集"></a>ACC 采集</h2><ol><li><a href="https://wonderhoi.com/2024/01/26/Polar-H10-%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9D%90%E6%A0%87%E7%B3%BB/">Polar H10 的加速度坐标系</a></li></ol><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol><li><a href="https://wonderhoi.com/2023/11/16/ECG-PPG-%E9%87%8F%E6%B5%8B%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">ECG&#x2F;PPG 量测解决方案</a></li><li><a href="https://wonderhoi.com/2024/04/03/%E4%BD%BF%E7%94%A8-SensorKit-%E8%8E%B7%E5%8F%96-iWatch-%E7%9A%84-PPG-%E4%BF%A1%E5%8F%B7/">使用 SensorKit 获取 iWatch 的 PPG 信号</a></li></ol><h1 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h1><h2 id="HeartPy"><a href="#HeartPy" class="headerlink" title="HeartPy"></a>HeartPy</h2><ol><li><p><a href="https://wonderhoi.com/2023/11/06/%E3%80%8C%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91%E3%80%8DHeartPy-Python-Heart-Rate-Analysis-Toolkit%20I/">「文档翻译」HeartPy - Python Heart Rate Analysis Toolkit I</a></p></li><li><p><a href="https://wonderhoi.com/2023/11/07/%E3%80%8C%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91%E3%80%8DHeartPy-Python-Heart-Rate-Analysis-Toolkit-II/">「文档翻译」HeartPy - Python Heart Rate Analysis Toolkit II</a></p></li></ol><h2 id="Neurokit"><a href="#Neurokit" class="headerlink" title="Neurokit"></a>Neurokit</h2><ol><li><a href="https://wonderhoi.com/2024/03/02/Neurokit-%E5%88%86%E6%9E%90%E5%BF%83%E7%8E%87%E7%9A%84%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95/">Neurokit 分析心率的简单用法</a></li><li><a href="https://wonderhoi.com/2023/11/17/%E5%A6%82%E4%BD%95%E8%AE%A9-plt-savefig-%E4%B8%BA%E6%9C%80%E5%A4%A7%E5%8C%96%E7%9A%84%E7%AA%97%E5%8F%A3%E4%BF%9D%E5%AD%98%E5%9B%BE%E5%83%8F%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E9%BB%98%E8%AE%A4%E7%9A%84%E5%B0%BA%E5%AF%B8/">如何让 plt.savefig() 为最大化的窗口保存图像，而不是默认的尺寸</a></li><li><a href="https://wonderhoi.com/2023/11/20/Pandas-List-%E8%BD%AC%E6%8D%A2%E4%B8%BA-Series/">Pandas List 转换为 Series</a></li></ol><h2 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h2><ol><li><a href="https://wonderhoi.com/2023/11/28/Python-%E7%BA%B3%E7%A7%92%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%97%B6%E9%97%B4/">Python 纳秒时间戳转时间</a></li><li><a href="https://wonderhoi.com/2024/03/04/Pandas-%E6%8A%8A%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%90%8C%E7%9A%84%E4%B8%A4%E7%BB%84%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90/">Pandas 把日期相同的两组数据对齐</a></li><li><a href="https://wonderhoi.com/2024/04/08/matplotlib-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/">matplotlib 组件之间的层级关系</a></li></ol><h1 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h1><ol><li><a href="https://wonderhoi.com/2023/12/15/%E9%80%9A%E8%BF%87-HRV-%E9%A2%84%E6%B5%8B%E8%BF%90%E5%8A%A8-RPE/">通过 HRV 预测运动 RPE</a></li><li><a href="https://wonderhoi.com/2023/12/29/ANN%E3%80%81RNN-%E4%B8%8E-CNN-%E5%9C%A8%E8%BF%90%E5%8A%A8%E4%BF%A1%E5%8F%B7%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B6/">ANN、RNN 与 CNN 在运动信号方面的研究</a></li><li><a href="https://wonderhoi.com/2024/01/04/Python-%E4%BD%BF%E7%94%A8-wfdb-%E5%BA%93%E5%A4%84%E7%90%86-MIT-BIH-%E5%BF%83%E5%BE%8B%E5%A4%B1%E5%B8%B8%E6%95%B0%E6%8D%AE/">Python 使用 wfdb 库处理 MIT-BIH 心律失常数据</a></li><li><a href="https://wonderhoi.com/2024/01/09/%E5%88%A9%E7%94%A8-RNN-%E5%AF%B9-ECG-%E5%BF%83%E7%94%B5%E4%BF%A1%E5%8F%B7%E8%BF%9B%E8%A1%8C%E5%BF%83%E6%8B%8D%E5%88%86%E7%B1%BB%EF%BC%88pytorch%EF%BC%89/">利用 RNN 对 ECG 心电信号进行心拍分类（pytorch）</a></li><li><a href="https://wonderhoi.com/2024/01/09/%E5%88%A9%E7%94%A8-CNN-%E5%AF%B9-ECG-%E5%BF%83%E7%94%B5%E4%BF%A1%E5%8F%B7%E8%BF%9B%E8%A1%8C%E5%BF%83%E6%8B%8D%E5%88%86%E7%B1%BB%EF%BC%88pytorch%EF%BC%89/">利用 CNN 对 ECG 心电信号进行心拍分类（pytorch）</a></li><li><a href="https://wonderhoi.com/2024/03/21/DTC-%E6%A8%A1%E5%9E%8B%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E8%81%9A%E7%B1%BB/">DTC 模型时间序列聚类</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>ECG Project</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>项目简介</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>正多边形绘制</title>
     <link href="/2024/11/06/%E6%AD%A3%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%BB%98%E5%88%B6/"/>
     <url>/2024/11/06/%E6%AD%A3%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%BB%98%E5%88%B6/</url>
@@ -1375,14 +1450,16 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>传感器</category>
+      
     </categories>
     
     
     <tags>
       
       <tag>Sensor</tag>
-      
-      <tag>DIY</tag>
       
     </tags>
     
@@ -1402,6 +1479,8 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>代谢计算</category>
+      
     </categories>
     
     
@@ -1409,7 +1488,7 @@
       
       <tag>Arduino</tag>
       
-      <tag>DIY</tag>
+      <tag>Sensor</tag>
       
     </tags>
     
@@ -1428,6 +1507,10 @@
     <categories>
       
       <category>ECG Project</category>
+      
+      <category>数据处理</category>
+      
+      <category>其他</category>
       
     </categories>
     
@@ -1453,6 +1536,10 @@
     <categories>
       
       <category>ECG Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>其他</category>
       
     </categories>
     
@@ -1556,6 +1643,8 @@
       
       <category>ECG Project</category>
       
+      <category>深度学习</category>
+      
     </categories>
     
     
@@ -1658,6 +1747,10 @@
       
       <category>ECG Project</category>
       
+      <category>数据处理</category>
+      
+      <category>其他</category>
+      
     </categories>
     
     
@@ -1707,6 +1800,10 @@
     <categories>
       
       <category>ECG Project</category>
+      
+      <category>数据处理</category>
+      
+      <category>Neurokit</category>
       
     </categories>
     
@@ -1860,6 +1957,10 @@
       
       <category>ECG Project</category>
       
+      <category>数据采集</category>
+      
+      <category>ACC 采集</category>
+      
     </categories>
     
     
@@ -1937,6 +2038,10 @@
       
       <category>空间轨迹 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>iPhone</category>
+      
     </categories>
     
     
@@ -1963,6 +2068,10 @@
     <categories>
       
       <category>ECG Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>RPE 采集</category>
       
     </categories>
     
@@ -2089,6 +2198,12 @@
       
       <category>ECG Project</category>
       
+      <category>数据采集</category>
+      
+      <category>ECG 采集</category>
+      
+      <category>Polar H10</category>
+      
     </categories>
     
     
@@ -2114,6 +2229,12 @@
       
       <category>ECG Project</category>
       
+      <category>数据采集</category>
+      
+      <category>ECG 采集</category>
+      
+      <category>Polar H10</category>
+      
     </categories>
     
     
@@ -2122,8 +2243,6 @@
       <tag>ECG</tag>
       
       <tag>Sensor</tag>
-      
-      <tag>Swift</tag>
       
     </tags>
     
@@ -2195,6 +2314,10 @@
       
       <category>ECG Project</category>
       
+      <category>数据采集</category>
+      
+      <category>RPE 采集</category>
+      
     </categories>
     
     
@@ -2219,6 +2342,12 @@
     <categories>
       
       <category>ECG Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>ECG 采集</category>
+      
+      <category>Polar H10</category>
       
     </categories>
     
@@ -2245,12 +2374,18 @@
       
       <category>ECG Project</category>
       
+      <category>数据采集</category>
+      
+      <category>ECG 采集</category>
+      
+      <category>Polar H10</category>
+      
     </categories>
     
     
     <tags>
       
-      <tag>Xcode</tag>
+      <tag>CocoaPods</tag>
       
     </tags>
     
@@ -2269,6 +2404,8 @@
     <categories>
       
       <category>ECG Project</category>
+      
+      <category>深度学习</category>
       
     </categories>
     
@@ -2299,6 +2436,8 @@
       
       <category>ECG Project</category>
       
+      <category>深度学习</category>
+      
     </categories>
     
     
@@ -2327,6 +2466,8 @@
     <categories>
       
       <category>ECG Project</category>
+      
+      <category>深度学习</category>
       
     </categories>
     
@@ -2379,6 +2520,8 @@
     <categories>
       
       <category>ECG Project</category>
+      
+      <category>深度学习</category>
       
     </categories>
     
@@ -2515,6 +2658,8 @@
       
       <category>ECG Project</category>
       
+      <category>深度学习</category>
+      
     </categories>
     
     
@@ -2644,6 +2789,10 @@
       
       <category>ECG Project</category>
       
+      <category>数据处理</category>
+      
+      <category>其他</category>
+      
     </categories>
     
     
@@ -2744,6 +2893,10 @@
       
       <category>ECG Project</category>
       
+      <category>数据处理</category>
+      
+      <category>Neurokit</category>
+      
     </categories>
     
     
@@ -2798,6 +2951,10 @@
       
       <category>ECG Project</category>
       
+      <category>数据处理</category>
+      
+      <category>Neurokit</category>
+      
     </categories>
     
     
@@ -2822,6 +2979,10 @@
     <categories>
       
       <category>ECG Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>其他</category>
       
     </categories>
     
@@ -2850,6 +3011,10 @@
       
       <category>ECG Project</category>
       
+      <category>数据处理</category>
+      
+      <category>HeartPy</category>
+      
     </categories>
     
     
@@ -2876,6 +3041,10 @@
     <categories>
       
       <category>ECG Project</category>
+      
+      <category>数据处理</category>
+      
+      <category>HeartPy</category>
       
     </categories>
     
@@ -3154,6 +3323,10 @@
       
       <category>空间轨迹 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>iPhone</category>
+      
     </categories>
     
     
@@ -3182,6 +3355,10 @@
     <categories>
       
       <category>空间轨迹 Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>iPhone</category>
       
     </categories>
     
@@ -3233,7 +3410,11 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>呼吸代谢 Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>上位机</category>
       
     </categories>
     
@@ -3285,7 +3466,13 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>ECG 采集</category>
+      
+      <category>DIY</category>
       
     </categories>
     
@@ -3312,7 +3499,13 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>ECG 采集</category>
+      
+      <category>DIY</category>
       
     </categories>
     
@@ -3364,7 +3557,13 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>ECG Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>ECG 采集</category>
+      
+      <category>DIY</category>
       
     </categories>
     
@@ -3620,12 +3819,14 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>上位机</category>
+      
     </categories>
     
     
     <tags>
-      
-      <tag>DIY</tag>
       
       <tag>Python</tag>
       
@@ -3703,14 +3904,14 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>代谢计算</category>
+      
     </categories>
     
     
     <tags>
       
       <tag>运动科学</tag>
-      
-      <tag>DIY</tag>
       
     </tags>
     
@@ -3857,6 +4058,8 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>代谢计算</category>
+      
     </categories>
     
     
@@ -3913,6 +4116,10 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>上位机</category>
+      
     </categories>
     
     
@@ -3937,6 +4144,8 @@
     <categories>
       
       <category>空间轨迹 Project</category>
+      
+      <category>轨迹计算</category>
       
     </categories>
     
@@ -3963,6 +4172,10 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>上位机</category>
+      
     </categories>
     
     
@@ -3986,7 +4199,11 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>呼吸代谢 Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>上位机</category>
       
     </categories>
     
@@ -4012,6 +4229,10 @@
     <categories>
       
       <category>呼吸代谢 Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>上位机</category>
       
     </categories>
     
@@ -4040,6 +4261,10 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>传感器</category>
+      
     </categories>
     
     
@@ -4048,8 +4273,6 @@
       <tag>Arduino</tag>
       
       <tag>Sensor</tag>
-      
-      <tag>DIY</tag>
       
     </tags>
     
@@ -4069,6 +4292,10 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>传感器</category>
+      
     </categories>
     
     
@@ -4077,8 +4304,6 @@
       <tag>Arduino</tag>
       
       <tag>Sensor</tag>
-      
-      <tag>DIY</tag>
       
     </tags>
     
@@ -4097,6 +4322,10 @@
     <categories>
       
       <category>呼吸代谢 Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>传感器</category>
       
     </categories>
     
@@ -4123,6 +4352,10 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>传感器</category>
+      
     </categories>
     
     
@@ -4146,7 +4379,11 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>呼吸代谢 Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>上位机</category>
       
     </categories>
     
@@ -4300,6 +4537,10 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>传感器</category>
+      
     </categories>
     
     
@@ -4325,6 +4566,10 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>传感器</category>
+      
     </categories>
     
     
@@ -4333,8 +4578,6 @@
       <tag>Arduino</tag>
       
       <tag>Sensor</tag>
-      
-      <tag>DIY</tag>
       
     </tags>
     
@@ -4381,6 +4624,10 @@
       
       <category>呼吸代谢 Project</category>
       
+      <category>数据采集</category>
+      
+      <category>上位机</category>
+      
     </categories>
     
     
@@ -4405,6 +4652,10 @@
     <categories>
       
       <category>呼吸代谢 Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>上位机</category>
       
     </categories>
     
@@ -4431,6 +4682,8 @@
       
       <category>空间轨迹 Project</category>
       
+      <category>轨迹计算</category>
+      
     </categories>
     
     
@@ -4455,6 +4708,10 @@
     <categories>
       
       <category>呼吸代谢 Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>上位机</category>
       
     </categories>
     
@@ -4507,6 +4764,10 @@
     <categories>
       
       <category>空间轨迹 Project</category>
+      
+      <category>数据采集</category>
+      
+      <category>WHEELTEC N100</category>
       
     </categories>
     
@@ -4734,19 +4995,25 @@
     <link href="/2023/01/09/cocoapods-%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
     <url>/2023/01/09/cocoapods-%E6%9B%B4%E6%96%B0%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     
-    <content type="html"><![CDATA[<p>最近要写 swift 代码，需要用到第三方库，所以需要更新 cocoapods</p><p>输入</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">sudo</span> gem install cocoapods<br></code></pre></td></tr></table></figure><p>更新失败，出现：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs sh">Ignoring ffi-1.15.0 because its extensions are not built. Try: gem pristine ffi --version 1.15.0<br>Fetching rexml-3.2.6.gem<br>Fetching xcodeproj-1.23.0.gem<br>Fetching ruby-macho-2.5.1.gem<br>Fetching molinillo-0.8.0.gem<br>Fetching cocoapods-trunk-1.6.0.gem<br>Fetching cocoapods-downloader-2.1.gem<br>Fetching public_suffix-4.0.7.gem<br>Fetching concurrent-ruby-1.2.2.gem<br>Fetching addressable-2.8.6.gem<br>Fetching cocoapods-core-1.14.3.gem<br>Fetching cocoapods-1.14.3.gem<br>Successfully installed rexml-3.2.6<br>ERROR:  While executing gem ... (Gem::FilePermissionError)<br>    You don<span class="hljs-string">&#x27;t have write permissions for the /usr/bin directory.</span><br></code></pre></td></tr></table></figure><p>此时我以为是 gem 版本太低，随即更新 gem，输入</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">sudo</span> gem update --system -n /usr/local/bin<br></code></pre></td></tr></table></figure><p>更新失败，出现：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sh">Ignoring ffi-1.15.0 because its extensions are not built. Try: gem pristine ffi --version 1.15.0<br>Updating rubygems-update<br>ERROR:  Error installing rubygems-update:<br>rubygems-update-3.5.4 requires Ruby version &gt;= 3.0.0. The current ruby version is 2.6.10.210.<br>Installing RubyGems 3.2.15<br>Ignoring ffi-1.15.0 because its extensions are not built. Try: gem pristine ffi --version 1.15.0<br>ERROR:  While executing gem ... (Errno::EPERM)<br>    Operation not permitted @ rb_sysopen - /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/gem<br></code></pre></td></tr></table></figure><p>我以为是 Ruby 版本过低，于是更新 Ruby，输入</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">brew install ruby<br></code></pre></td></tr></table></figure><p>更新成功，但是 <code>sudo gem install cocoapods</code> 或 <code>sudo gem update --system -n /usr/local/bin</code> 时，报错不变。</p><p>我又输入提示指令</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">gem pristine ffi --version 1.15.0<br></code></pre></td></tr></table></figure><p>但是不生效</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh">Ignoring ffi-1.15.0 because its extensions are not built. Try: gem pristine ffi --version 1.15.0<br>Restoring gems to pristine condition...<br>ERROR:  While executing gem ... (Gem::FilePermissionError)<br>    You don<span class="hljs-string">&#x27;t have write permissions for the /Library/Ruby/Gems/2.6.0 directory.</span><br></code></pre></td></tr></table></figure><p>最后在</p><p><a href="https://stackoverflow.com/questions/64698820/ignoring-ffi-1-13-1-because-its-extensions-are-not-built-try-gem-pristine-ffi">Ignoring ffi-1.13.1 because its extensions are not built. Try: gem pristine ffi –version 1.13.1</a></p><p>中找到解决办法。按照高赞回答说的，我先输入了</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">brew install cocoapods<br></code></pre></td></tr></table></figure><p>但是提示</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs sh">Error: The `brew <span class="hljs-built_in">link</span>` step did not complete successfully<br>The formula built, but is not symlinked into /usr/local<br>Could not symlink bin/pod<br>Target /usr/local/bin/pod<br>already exists. You may want to remove it:<br>  <span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;/usr/local/bin/pod&#x27;</span><br><br>To force the <span class="hljs-built_in">link</span> and overwrite all conflicting files:<br>  brew <span class="hljs-built_in">link</span> --overwrite cocoapods<br><br>To list all files that would be deleted:<br>  brew <span class="hljs-built_in">link</span> --overwrite --dry-run cocoapods<br><br>Possible conflicting files are:<br>/usr/local/bin/pod<br>/usr/local/bin/xcodeproj<br>==&gt; Summary<br>🍺  /usr/local/Cellar/cocoapods/1.14.3: 13,791 files, 28.8MB<br>==&gt; Running `brew cleanup cocoapods`...<br>Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.<br>Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).<br></code></pre></td></tr></table></figure><p>所以按照回答以及提示，我输入</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">brew <span class="hljs-built_in">link</span> --overwrite cocoapods<br></code></pre></td></tr></table></figure><p>之后再输入 <code>brew install cocoapods</code> 自此，cocoapods 更新成功</p>]]></content>
+    <content type="html"><![CDATA[<p>需要通过 Polar H10 心率带采集 ECG 信号，所以得用到 Polar 的第三方库，也就要更新 cocoapods。</p><p>输入</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">sudo</span> gem install cocoapods<br></code></pre></td></tr></table></figure><p>更新失败，出现：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs sh">Ignoring ffi-1.15.0 because its extensions are not built. Try: gem pristine ffi --version 1.15.0<br>Fetching rexml-3.2.6.gem<br>Fetching xcodeproj-1.23.0.gem<br>Fetching ruby-macho-2.5.1.gem<br>Fetching molinillo-0.8.0.gem<br>Fetching cocoapods-trunk-1.6.0.gem<br>Fetching cocoapods-downloader-2.1.gem<br>Fetching public_suffix-4.0.7.gem<br>Fetching concurrent-ruby-1.2.2.gem<br>Fetching addressable-2.8.6.gem<br>Fetching cocoapods-core-1.14.3.gem<br>Fetching cocoapods-1.14.3.gem<br>Successfully installed rexml-3.2.6<br>ERROR:  While executing gem ... (Gem::FilePermissionError)<br>    You don<span class="hljs-string">&#x27;t have write permissions for the /usr/bin directory.</span><br></code></pre></td></tr></table></figure><p>此时我以为是 gem 版本太低，随即更新 gem，输入</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">sudo</span> gem update --system -n /usr/local/bin<br></code></pre></td></tr></table></figure><p>更新失败，出现：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sh">Ignoring ffi-1.15.0 because its extensions are not built. Try: gem pristine ffi --version 1.15.0<br>Updating rubygems-update<br>ERROR:  Error installing rubygems-update:<br>rubygems-update-3.5.4 requires Ruby version &gt;= 3.0.0. The current ruby version is 2.6.10.210.<br>Installing RubyGems 3.2.15<br>Ignoring ffi-1.15.0 because its extensions are not built. Try: gem pristine ffi --version 1.15.0<br>ERROR:  While executing gem ... (Errno::EPERM)<br>    Operation not permitted @ rb_sysopen - /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/gem<br></code></pre></td></tr></table></figure><p>我以为是 Ruby 版本过低，于是更新 Ruby，输入</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">brew install ruby<br></code></pre></td></tr></table></figure><p>更新成功，但是 <code>sudo gem install cocoapods</code> 或 <code>sudo gem update --system -n /usr/local/bin</code> 时，报错不变。</p><p>我又输入提示指令</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">gem pristine ffi --version 1.15.0<br></code></pre></td></tr></table></figure><p>但是不生效</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh">Ignoring ffi-1.15.0 because its extensions are not built. Try: gem pristine ffi --version 1.15.0<br>Restoring gems to pristine condition...<br>ERROR:  While executing gem ... (Gem::FilePermissionError)<br>    You don<span class="hljs-string">&#x27;t have write permissions for the /Library/Ruby/Gems/2.6.0 directory.</span><br></code></pre></td></tr></table></figure><p>最后在</p><p><a href="https://stackoverflow.com/questions/64698820/ignoring-ffi-1-13-1-because-its-extensions-are-not-built-try-gem-pristine-ffi">Ignoring ffi-1.13.1 because its extensions are not built. Try: gem pristine ffi –version 1.13.1</a></p><p>中找到解决办法。按照高赞回答说的，我先输入了</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">brew install cocoapods<br></code></pre></td></tr></table></figure><p>但是提示</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs sh">Error: The `brew <span class="hljs-built_in">link</span>` step did not complete successfully<br>The formula built, but is not symlinked into /usr/local<br>Could not symlink bin/pod<br>Target /usr/local/bin/pod<br>already exists. You may want to remove it:<br>  <span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;/usr/local/bin/pod&#x27;</span><br><br>To force the <span class="hljs-built_in">link</span> and overwrite all conflicting files:<br>  brew <span class="hljs-built_in">link</span> --overwrite cocoapods<br><br>To list all files that would be deleted:<br>  brew <span class="hljs-built_in">link</span> --overwrite --dry-run cocoapods<br><br>Possible conflicting files are:<br>/usr/local/bin/pod<br>/usr/local/bin/xcodeproj<br>==&gt; Summary<br>🍺  /usr/local/Cellar/cocoapods/1.14.3: 13,791 files, 28.8MB<br>==&gt; Running `brew cleanup cocoapods`...<br>Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.<br>Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).<br></code></pre></td></tr></table></figure><p>所以按照回答以及提示，我输入</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">brew <span class="hljs-built_in">link</span> --overwrite cocoapods<br></code></pre></td></tr></table></figure><p>之后再输入 <code>brew install cocoapods</code> 自此，cocoapods 更新成功</p>]]></content>
     
     
     <categories>
       
       <category>ECG Project</category>
       
+      <category>数据采集</category>
+      
+      <category>ECG 采集</category>
+      
+      <category>Polar H10</category>
+      
     </categories>
     
     
     <tags>
       
-      <tag>Xcode</tag>
+      <tag>CocoaPods</tag>
       
     </tags>
     

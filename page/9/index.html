@@ -238,6 +238,203 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2024/01/19/Xcode-%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95-iWatch-%E7%9A%84%E5%9D%91/" target="_self">
+          Xcode 真机调试 iWatch 的坑
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/19/Xcode-%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95-iWatch-%E7%9A%84%E5%9D%91/" target="_self">
+        <div>
+          总之而言，不要在 Xcode 上直接选择真机来运行 Watch App 工程。 由于 Watch App 不能从电脑直接安装，Xcode 需要首先把 swift 的运行时和一系列安装脚本先传到手机上，再由手机完成安装过程。之后 Xcode 还需要通过手机来和 Watch 建立连接才能调试。 这样的结果就是 Xcode 不停地提示正在连接手表以及正在重新连接手表。 最好的办法是，选择 iOS App
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-01-19 15:46" pubdate>
+              2024-01-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/RPE-%E9%87%87%E9%9B%86/" class="category-chain-item">RPE 采集</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Xcode/">#Xcode</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/01/19/Swift-%E7%9A%84%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8/" target="_self">
+          Swift 的声音和振动
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/19/Swift-%E7%9A%84%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8/" target="_self">
+        <div>
+          声音123456789import AVFoundationclass SoundPlayer &#123;    var soundIdIndex = 1000    func playSound() &#123;        let soundID = SystemSoundID(soundIdIndex)        AudioServicesPlaySystemSound(soundI
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-01-19 15:38" pubdate>
+              2024-01-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Swift/">#Swift</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/01/19/Swift-String-format-%E7%9A%84%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" target="_self">
+          Swift String format 的相关使用方法
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/19/Swift-String-format-%E7%9A%84%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" target="_self">
+        <div>
+          最简单的方法字符串中包裹着 \() 12345678let age = 10let name = &quot;xxx&quot;let string = String(format: &quot;%@ Age Is %d&quot;, name, age)Text(&quot;\(name) Age Is \(age)&quot;)Text(name + &quot;Age Is&quot; +
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-01-19 15:01" pubdate>
+              2024-01-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%96%87%E7%AB%A0/" class="category-chain-item">文章</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Swift/">#Swift</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2024/01/19/Swift-%E6%95%B4%E9%99%A4%E8%BF%90%E7%AE%97/" target="_self">
           Swift 整除运算
         </a>
@@ -395,6 +592,27 @@
   <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
   
   
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/ECG-%E9%87%87%E9%9B%86/" class="category-chain-item">ECG 采集</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/ECG-%E9%87%87%E9%9B%86/Polar-H10/" class="category-chain-item">Polar H10</a>
+  
+  
+
+  
+
+  
+
+  
 
       </span>
     
@@ -456,6 +674,27 @@
   <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
   
   
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/ECG-%E9%87%87%E9%9B%86/" class="category-chain-item">ECG 采集</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/ECG-%E9%87%87%E9%9B%86/Polar-H10/" class="category-chain-item">Polar H10</a>
+  
+  
+
+  
+
+  
+
+  
 
       </span>
     
@@ -471,8 +710,6 @@
               <a href="/tags/ECG/">#ECG</a>
             
               <a href="/tags/Sensor/">#Sensor</a>
-            
-              <a href="/tags/Swift/">#Swift</a>
             
           </div>
         
@@ -645,6 +882,20 @@
   <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
   
   
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/RPE-%E9%87%87%E9%9B%86/" class="category-chain-item">RPE 采集</a>
+  
+  
+
+  
+
+  
 
       </span>
     
@@ -658,193 +909,6 @@
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/SwiftUI/">#SwiftUI</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/10/Xcode-%E5%B7%A5%E7%A8%8B-Bluetooth-Always-Usage-Description-%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/" target="_self">
-          Xcode 工程 Bluetooth Always Usage Description 设置问题
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/10/Xcode-%E5%B7%A5%E7%A8%8B-Bluetooth-Always-Usage-Description-%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/" target="_self">
-        <div>
-          在进行蓝牙开发时，如果没有设置 Bluetooth Always Usage Description，则会提示： 1This app has crashed because it attempted to access privacy-sensitive data without a usage description. The app&#x27;s Info.plist must contain
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-10 23:47" pubdate>
-              2024-01-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Xcode/">#Xcode</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/10/%E4%BD%BF%E7%94%A8-Cocoapods-%E6%97%B6%E6%8A%A5%E9%94%99-Sandbox-rsync-samba-62830-deny-1/" target="_self">
-          使用 Cocoapods 时报错 Sandbox: rsync.samba(62830) deny(1)
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/10/%E4%BD%BF%E7%94%A8-Cocoapods-%E6%97%B6%E6%8A%A5%E9%94%99-Sandbox-rsync-samba-62830-deny-1/" target="_self">
-        <div>
-          问题描述在 Xcode 新建项目并 pod install 后，run 的时候，遇到了如下的问题： 沙盒报错 1Sandbox: rsync.samba(62830) deny(1)  解决办法在 TARGETS 的 Build Settings 中选择「All」与「Combined」之后搜索： 1User Script Sandboxing  将其改为 NO 即可解决。 参考 iOS Xcode
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-10 23:31" pubdate>
-              2024-01-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Xcode/">#Xcode</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/09/%E5%88%A9%E7%94%A8-CNN-%E5%AF%B9-ECG-%E5%BF%83%E7%94%B5%E4%BF%A1%E5%8F%B7%E8%BF%9B%E8%A1%8C%E5%BF%83%E6%8B%8D%E5%88%86%E7%B1%BB%EF%BC%88pytorch%EF%BC%89/" target="_self">
-          利用 CNN 对 ECG 心电信号进行心拍分类（pytorch）
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/09/%E5%88%A9%E7%94%A8-CNN-%E5%AF%B9-ECG-%E5%BF%83%E7%94%B5%E4%BF%A1%E5%8F%B7%E8%BF%9B%E8%A1%8C%E5%BF%83%E6%8B%8D%E5%88%86%E7%B1%BB%EF%BC%88pytorch%EF%BC%89/" target="_self">
-        <div>
-          12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-09 23:40" pubdate>
-              2024-01-09
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">#深度学习</a>
-            
-              <a href="/tags/ECG/">#ECG</a>
-            
-              <a href="/tags/PyTorch/">#PyTorch</a>
             
           </div>
         
