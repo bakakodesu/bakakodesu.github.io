@@ -21,15 +21,15 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="最简单的方法字符串中包裹着 \() 12345678let age &#x3D; 10let name &#x3D; &quot;xxx&quot;let string &#x3D; String(format: &quot;%@ Age Is %d&quot;, name, age)Text(&quot;\(name) Age Is \(age)&quot;)Text(name + &quot;Age Is&quot; +">
+    <meta name="description" content="基本操作123456789101112let s &#x3D; &quot; &#x2F; 2 3 4 ? &#x2F; &quot;&#x2F;&#x2F; 替换print(&quot;空格替换成-:&quot;, s.replacingOccurrences(of: &quot; &quot;, with: &quot;-&quot;))&#x2F;&#x2F; 过滤print(&quot;空格过滤掉:&quot;, s.replacingOccurrences">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift String format 的相关使用方法">
-<meta property="og:url" content="https://wonderhoi.com/2024/01/19/Swift-String-format-%E7%9A%84%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:title" content="Swift String 合集">
+<meta property="og:url" content="https://wonderhoi.com/2024/01/19/Swift-String-%E5%90%88%E9%9B%86/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="最简单的方法字符串中包裹着 \() 12345678let age &#x3D; 10let name &#x3D; &quot;xxx&quot;let string &#x3D; String(format: &quot;%@ Age Is %d&quot;, name, age)Text(&quot;\(name) Age Is \(age)&quot;)Text(name + &quot;Age Is&quot; +">
+<meta property="og:description" content="基本操作123456789101112let s &#x3D; &quot; &#x2F; 2 3 4 ? &#x2F; &quot;&#x2F;&#x2F; 替换print(&quot;空格替换成-:&quot;, s.replacingOccurrences(of: &quot; &quot;, with: &quot;-&quot;))&#x2F;&#x2F; 过滤print(&quot;空格过滤掉:&quot;, s.replacingOccurrences">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-19T07:01:51.000Z">
-<meta property="article:modified_time" content="2024-07-05T04:24:31.000Z">
+<meta property="article:modified_time" content="2024-11-18T06:35:35.185Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="Swift">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Swift String format 的相关使用方法 - 这是一个PM的BLOG</title>
+  <title>Swift String 合集 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Swift String format 的相关使用方法"></span>
+            <span id="subtitle" data-typed-text="Swift String 合集"></span>
           
         </div>
 
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          293 字
+          1.4k 字
         
       </span>
     
@@ -277,12 +277,41 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Swift String format 的相关使用方法</h1>
+            <h1 id="seo-header">Swift String 合集</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="最简单的方法"><a href="#最简单的方法" class="headerlink" title="最简单的方法"></a>最简单的方法</h3><p>字符串中包裹着 <code>\()</code></p>
+                <h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> s <span class="hljs-operator">=</span> <span class="hljs-string">&quot; / 2 3 4 ? / &quot;</span><br><span class="hljs-comment">// 替换</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;空格替换成-:&quot;</span>, s.replacingOccurrences(of: <span class="hljs-string">&quot; &quot;</span>, with: <span class="hljs-string">&quot;-&quot;</span>))<br><span class="hljs-comment">// 过滤</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;空格过滤掉:&quot;</span>, s.replacingOccurrences(of: <span class="hljs-string">&quot; &quot;</span>, with: <span class="hljs-string">&quot;&quot;</span>))<br><span class="hljs-comment">// 去首尾空格</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;去掉空格:&quot;</span>, s.trimmingCharacters(in: .whitespaces))<br><span class="hljs-comment">// 分割</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;分割:&quot;</span>, s.components(separatedBy: <span class="hljs-string">&quot;/&quot;</span>))<br><span class="hljs-comment">// 拼接</span><br><span class="hljs-keyword">let</span> a <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;3&quot;</span>]<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;拼接:&quot;</span>, a.joined(separator: <span class="hljs-string">&quot;-&quot;</span>))<br></code></pre></td></tr></table></figure>
+
+<h2 id="使用-Substring-分割字符串"><a href="#使用-Substring-分割字符串" class="headerlink" title="使用 Substring 分割字符串"></a>使用 <code>Substring</code> 分割字符串</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> string <span class="hljs-operator">=</span> <span class="hljs-string">&quot;aaa/bbb/ccc/dddd&quot;</span><br><span class="hljs-keyword">let</span> arraySubstrings: [<span class="hljs-type">Substring</span>] <span class="hljs-operator">=</span> string.split(separator: <span class="hljs-string">&quot;/&quot;</span>)<br><br><span class="hljs-keyword">var</span> arrayStrings: [<span class="hljs-type">String</span>] <span class="hljs-operator">=</span> []<br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> arraySubstrings &#123;           <br>    arrayStrings.append(<span class="hljs-string">&quot;<span class="hljs-subst">\(item)</span>&quot;</span>)<br>    <span class="hljs-comment">//arrayStrings.append(String(item))</span><br>&#125;<br><br><span class="hljs-comment">// 或者</span><br><span class="hljs-keyword">let</span> arrayStrings: [<span class="hljs-type">String</span>] <span class="hljs-operator">=</span> arraySubstrings.compactMap &#123; <span class="hljs-string">&quot;<span class="hljs-subst">\(<span class="hljs-variable">$0</span>)</span>&quot;</span> &#125;<br><br><span class="hljs-comment">// 写法等同于</span><br><span class="hljs-keyword">let</span> arrayStrings: [<span class="hljs-type">String</span>] <span class="hljs-operator">=</span> arraySubstring.compactMap &#123; (item) -&gt; <span class="hljs-type">String</span> <span class="hljs-keyword">in</span><br>   <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;<span class="hljs-subst">\(item)</span>&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> str <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello! World&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>这里需要注意的是，以下除非特别说明，不然截取字符串之后获得的都是 <code>Substring</code>。如果需要转变成字符串使用，那么用 <code>String()</code> 扩起来就行了。</strong></p>
+<h3 id="单方向截取"><a href="#单方向截取" class="headerlink" title="单方向截取"></a>单方向截取</h3><p>这种方式只能从两端中的某一端开始截取，细分的话可以分为<strong>从特定下标开始截取</strong>和<strong>从特定字符开始截取</strong>：<br><strong>“从特定下标开始截取”适合处理格式固定但内容不固定</strong>的字符串，方法如下（注释为输出的结果）：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 从字符串开头数6个字符，截取这6个字符——截取前六个字符</span><br>str.prefix(<span class="hljs-number">6</span>)<br><span class="hljs-comment">// &quot;Hello!&quot;</span><br><br><span class="hljs-comment">// 从字符串末尾数5个字符，然后截取这5个字符——截取最后五个字符</span><br>str.suffix(<span class="hljs-number">5</span>)<br><span class="hljs-comment">// &quot;World&quot;</span><br><br><span class="hljs-comment">// 偏移量超过字符串中字符数量，就显示所有的字符</span><br>str.suffix(<span class="hljs-number">50</span>)<br><span class="hljs-comment">// &quot;Hello! World&quot;</span><br><br><span class="hljs-comment">// index表明定位到从开始(startIndex)偏移五个字符(offsetBy: 5)之后的一个字符——这里是感叹号</span><br><span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.index(str.startIndex, offsetBy: <span class="hljs-number">5</span>)<br><span class="hljs-comment">// 从index定位到的字符开始截取</span><br>str.suffix(from: index)<br> <span class="hljs-comment">// &quot;! World&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>“从特定字符开始截取”适合截取内容有特定字符或格式不固定但是有特定内容</strong>的字符串，方法如下：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 从特定字符串开始截取</span><br><span class="hljs-comment">// 从开始端（左端）的第一个o开始截取</span><br><span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.firstIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br>str.prefix(through: index！) <br><span class="hljs-comment">// &quot;Hello&quot;</span><br><br><span class="hljs-comment">// 从末端（右端）的第一个o开始截取</span><br><span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br>str.suffix(from: index！) <br><span class="hljs-comment">// &quot;orld&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>这段代码还可以这么写：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 还可以这样写</span><br><span class="hljs-comment">// 从开始端（左端）的第一个o开始截取</span><br><span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.firstIndex(of: <span class="hljs-string">&quot;o&quot;</span>) &#123;<br>    str.prefix(through: index)<br>&#125;<br><span class="hljs-comment">// &quot;Hello&quot;</span><br><br><span class="hljs-comment">// 从末端（右端）的第一个o开始截取</span><br><span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>) &#123;<br>    str.suffix(from: index) <br>&#125;<br><span class="hljs-comment">// &quot;orld&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="截取中间一段"><a href="#截取中间一段" class="headerlink" title="截取中间一段"></a>截取中间一段</h3><p>这种方式会截取字符串中间的一段，同样有两种<strong>使用下标截取中间一段字符</strong>和<strong>特定字符截取</strong>两种办法。<br><strong>使用下标截取中间一段字符</strong>的方法如下：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 截取第二个到第九个字符之间的字符</span><br>str.dropFirst(<span class="hljs-number">3</span>).prefix(<span class="hljs-number">9</span>) <span class="hljs-keyword">as</span> <span class="hljs-type">Substring</span><br><span class="hljs-comment">// &quot;lo! Worl&quot;</span><br><br><span class="hljs-comment">// 截取第二个到倒数第二个字符之间的字符</span><br>str.dropFirst(<span class="hljs-number">3</span>).dropLast(<span class="hljs-number">3</span>) <span class="hljs-keyword">as</span> <span class="hljs-type">Substring</span><br><span class="hljs-comment">// &quot;lo! Wo&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>这里注意需要加上最后的</p>
+<p><strong>截取两个特定字符中间的一段字符串</strong>并没有这么简单的办法，实现方法会有些复杂。这里慢慢说。<br>例如我们需要截取两个“o”之间（含两端的“o”）的字符串：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> index1 <span class="hljs-operator">=</span> str.firstIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br><span class="hljs-keyword">let</span> str2: <span class="hljs-type">String</span> <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(str.suffix(from: index1<span class="hljs-operator">!</span>)) <span class="hljs-comment">//&quot;o! World&quot;</span><br><span class="hljs-keyword">let</span> index2 <span class="hljs-operator">=</span> str2.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br><span class="hljs-keyword">let</span> str3 <span class="hljs-operator">=</span> str2.prefix(through: index2<span class="hljs-operator">!</span>) <span class="hljs-comment">//&quot;o! Wo&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>这里首先是使用单向（从右端）截取了一段，然后将这段使用 <code>String</code> 转变成字符串格式并且定义为一个新的字符串，然后对其实行反向（从坐左端）截取了一段。这样是包含两端的“o”的。<br>那么如果我们不想要右端的“o”呢？使用以下方法：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> index1 <span class="hljs-operator">=</span> str.firstIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br><span class="hljs-keyword">let</span> str2: <span class="hljs-type">String</span> <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(str.suffix(from: index1<span class="hljs-operator">!</span>)) <span class="hljs-comment">//&quot;o! World&quot;</span><br><span class="hljs-keyword">let</span> index2 <span class="hljs-operator">=</span> str2.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br><span class="hljs-keyword">let</span> str3 <span class="hljs-operator">=</span> str2.prefix(upTo: index2<span class="hljs-operator">!</span>) <span class="hljs-comment">//&quot;o! W&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>只用将最后一行代码的 <code>through</code> 变成 <code>upTo</code> 就可以了。<br>那么如果我们两端都需要去掉“o”呢？使用以下方法：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br><span class="hljs-keyword">let</span> str2 <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(str.prefix(through: str.index(before: index<span class="hljs-operator">!</span>))) <span class="hljs-comment">//&quot;Hello! W&quot;</span><br><span class="hljs-keyword">let</span> index2 <span class="hljs-operator">=</span> str2.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br>str2.suffix(from: str2.index(after: index2<span class="hljs-operator">!</span>)) <span class="hljs-comment">//&quot;! W&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="format-使用"><a href="#format-使用" class="headerlink" title="format 使用"></a>format 使用</h2><h3 id="最简单的方法"><a href="#最简单的方法" class="headerlink" title="最简单的方法"></a>最简单的方法</h3><p>字符串中包裹着 <code>\()</code></p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> age <span class="hljs-operator">=</span> <span class="hljs-number">10</span><br><span class="hljs-keyword">let</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;xxx&quot;</span><br><br><span class="hljs-keyword">let</span> string <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%@ Age Is %d&quot;</span>, name, age)<br><br><span class="hljs-type">Text</span>(<span class="hljs-string">&quot;<span class="hljs-subst">\(name)</span> Age Is <span class="hljs-subst">\(age)</span>&quot;</span>)<br><span class="hljs-type">Text</span>(name <span class="hljs-operator">+</span> <span class="hljs-string">&quot;Age Is&quot;</span> <span class="hljs-operator">+</span> <span class="hljs-type">String</span>(age))<br><span class="hljs-type">Text</span>(string)<br></code></pre></td></tr></table></figure>
 
 <h3 id="整数与小数"><a href="#整数与小数" class="headerlink" title="整数与小数"></a>整数与小数</h3><h4 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> string <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%d&quot;</span>, <span class="hljs-number">123892674027</span>)<br><span class="hljs-type">Text</span>(string)<br><span class="hljs-comment">// 结果却是：&quot;-661377557&quot;</span><br><span class="hljs-keyword">let</span> string <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%ld&quot;</span>, <span class="hljs-number">123892674027</span>)<br></code></pre></td></tr></table></figure>
@@ -321,7 +350,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%96%87%E7%AB%A0/" class="category-chain-item">文章</a>
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
   
   
 
@@ -348,8 +377,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Swift String format 的相关使用方法</div>
-      <div>https://wonderhoi.com/2024/01/19/Swift-String-format-的相关使用方法/</div>
+      <div>Swift String 合集</div>
+      <div>https://wonderhoi.com/2024/01/19/Swift-String-合集/</div>
     </div>
     <div class="license-meta">
       

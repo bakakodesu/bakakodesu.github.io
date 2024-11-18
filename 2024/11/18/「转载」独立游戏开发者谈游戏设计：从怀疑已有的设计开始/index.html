@@ -21,24 +21,24 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="数组去交集How to find the difference between two arrays 1234567extension Array where Element: Hashable &#123;    func difference(from other: [Element]) -&gt; [Element] &#123;        let thisSet &#x3D; Set(self)">
+    <meta name="description" content="原文：独立游戏开发者谈游戏设计：从怀疑已有的设计开始 写在前面的话：我一直对固有的游戏框架抱有怀疑，这可能跟我的游戏喜好有关，我喜欢别出心裁的设计，喜欢变换维度的解谜，喜欢用各种形式表现的文本，而讨厌一成不变的设计。所以我一直在思考，如何去优化、改良、甚至重新塑造框架。  每个人都是带着偏见看这个世界的，如果你不带着偏见，那么你对这个世界根本就没有看待的方式。 ——许知远  我很喜欢许知远的这句话">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift 数组操作">
-<meta property="og:url" content="https://wonderhoi.com/2024/10/31/Swift-%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="「转载」独立游戏开发者谈游戏设计：从怀疑已有的设计开始">
+<meta property="og:url" content="https://wonderhoi.com/2024/11/18/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E8%80%85%E8%B0%88%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%EF%BC%9A%E4%BB%8E%E6%80%80%E7%96%91%E5%B7%B2%E6%9C%89%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%A7%8B/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="数组去交集How to find the difference between two arrays 1234567extension Array where Element: Hashable &#123;    func difference(from other: [Element]) -&gt; [Element] &#123;        let thisSet &#x3D; Set(self)">
+<meta property="og:description" content="原文：独立游戏开发者谈游戏设计：从怀疑已有的设计开始 写在前面的话：我一直对固有的游戏框架抱有怀疑，这可能跟我的游戏喜好有关，我喜欢别出心裁的设计，喜欢变换维度的解谜，喜欢用各种形式表现的文本，而讨厌一成不变的设计。所以我一直在思考，如何去优化、改良、甚至重新塑造框架。  每个人都是带着偏见看这个世界的，如果你不带着偏见，那么你对这个世界根本就没有看待的方式。 ——许知远  我很喜欢许知远的这句话">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-31T08:56:05.000Z">
-<meta property="article:modified_time" content="2024-10-31T09:05:48.265Z">
+<meta property="article:published_time" content="2024-11-18T05:31:58.000Z">
+<meta property="article:modified_time" content="2024-11-18T05:42:03.703Z">
 <meta property="article:author" content="wonderhoi">
-<meta property="article:tag" content="Swift">
+<meta property="article:tag" content="游戏设计">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Swift 数组操作 - 这是一个PM的BLOG</title>
+  <title>「转载」独立游戏开发者谈游戏设计：从怀疑已有的设计开始 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Swift 数组操作"></span>
+            <span id="subtitle" data-typed-text="「转载」独立游戏开发者谈游戏设计：从怀疑已有的设计开始"></span>
           
         </div>
 
@@ -226,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-31 16:56" pubdate>
-          2024年10月31日 下午
+        <time datetime="2024-11-18 13:31" pubdate>
+          2024年11月18日 下午
         </time>
       </span>
     
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          301 字
+          3.1k 字
         
       </span>
     
@@ -277,27 +277,51 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Swift 数组操作</h1>
+            <h1 id="seo-header">「转载」独立游戏开发者谈游戏设计：从怀疑已有的设计开始</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="数组去交集"><a href="#数组去交集" class="headerlink" title="数组去交集"></a>数组去交集</h1><p><a target="_blank" rel="noopener" href="https://www.hackingwithswift.com/example-code/language/how-to-find-the-difference-between-two-arrays">How to find the difference between two arrays</a></p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">extension</span> <span class="hljs-title class_">Array</span> <span class="hljs-keyword">where</span> <span class="hljs-type">Element</span>: <span class="hljs-type">Hashable</span> &#123;<br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">difference</span>(<span class="hljs-params">from</span> <span class="hljs-params">other</span>: [<span class="hljs-type">Element</span>]) -&gt; [<span class="hljs-type">Element</span>] &#123;<br>        <span class="hljs-keyword">let</span> thisSet <span class="hljs-operator">=</span> <span class="hljs-type">Set</span>(<span class="hljs-keyword">self</span>)<br>        <span class="hljs-keyword">let</span> otherSet <span class="hljs-operator">=</span> <span class="hljs-type">Set</span>(other)<br>        <span class="hljs-keyword">return</span> <span class="hljs-type">Array</span>(thisSet.symmetricDifference(otherSet))<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>使用：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> names1 <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;Paul&quot;</span>, <span class="hljs-string">&quot;Ringo&quot;</span>]<br><span class="hljs-keyword">let</span> names2 <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;Ringo&quot;</span>, <span class="hljs-string">&quot;Paul&quot;</span>, <span class="hljs-string">&quot;George&quot;</span>]<br><span class="hljs-keyword">let</span> difference <span class="hljs-operator">=</span> names1.difference(from: names2)<br></code></pre></td></tr></table></figure>
-
-<h1 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Forever_wj/article/details/108269453">Swift之数组去重(去除重复元素)</a></p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">import</span> UIKit<br><br><span class="hljs-keyword">extension</span> <span class="hljs-title class_">Array</span> &#123;<br>    <br>    <span class="hljs-comment">// 去重</span><br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">filterDuplicates</span>&lt;<span class="hljs-type">E</span>: <span class="hljs-type">Equatable</span>&gt;(<span class="hljs-keyword">_</span> <span class="hljs-params">filter</span>: (<span class="hljs-type">Element</span>) -&gt; <span class="hljs-type">E</span>) -&gt; [<span class="hljs-type">Element</span>] &#123;<br>        <span class="hljs-keyword">var</span> result <span class="hljs-operator">=</span> [<span class="hljs-type">Element</span>]()<br>        <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-keyword">self</span> &#123;<br>            <span class="hljs-keyword">let</span> key <span class="hljs-operator">=</span> filter(value)<br>            <span class="hljs-keyword">if</span> <span class="hljs-operator">!</span>result.map(&#123;filter(<span class="hljs-variable">$0</span>)&#125;).contains(key) &#123;<br>                result.append(value)<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> result<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// 基础类型去重</span><br><span class="hljs-keyword">let</span> arrays <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;3&quot;</span>, <span class="hljs-string">&quot;4&quot;</span>, <span class="hljs-string">&quot;4&quot;</span>]<br><span class="hljs-keyword">let</span> filterArrays <span class="hljs-operator">=</span> arrays.filterDuplicates(&#123;<span class="hljs-variable">$0</span>&#125;)<br><span class="hljs-built_in">print</span>(filterArrays)<br><br><span class="hljs-comment">// model类的去重</span><br><span class="hljs-keyword">let</span> modelArrays <span class="hljs-operator">=</span> [<span class="hljs-type">Model</span>(<span class="hljs-string">&quot;1&quot;</span>), <span class="hljs-type">Model</span>(<span class="hljs-string">&quot;1&quot;</span>), <span class="hljs-type">Model</span>(<span class="hljs-string">&quot;2&quot;</span>), <span class="hljs-type">Model</span>(<span class="hljs-string">&quot;3&quot;</span>)]<br><span class="hljs-keyword">let</span> filterModels <span class="hljs-operator">=</span> modelArrays.filterDuplicates(&#123;<span class="hljs-variable">$0</span>.name&#125;)<br><span class="hljs-built_in">print</span>(filterModels)<br></code></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904119082336270">Swift数组去重</a></p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> arr <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;strawberry&quot;</span>, <span class="hljs-string">&quot;pear&quot;</span>, <span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;strawberry&quot;</span>]<br><span class="hljs-keyword">let</span> results <span class="hljs-operator">=</span> arr.enumerated().filter &#123; (index,value) -&gt; <span class="hljs-type">Bool</span> <span class="hljs-keyword">in</span><br>		<span class="hljs-keyword">return</span> arr.firstIndex(of: value) <span class="hljs-operator">==</span> index<br>&#125;.map &#123;<br>    <span class="hljs-variable">$0</span>.element<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>or</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs swift"> <span class="hljs-keyword">let</span> arr <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;strawberry&quot;</span>, <span class="hljs-string">&quot;pear&quot;</span>, <span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;strawberry&quot;</span>]<br> arr.removeDuplicate()<br> <span class="hljs-comment">// Array 扩展</span><br> <span class="hljs-keyword">public</span> <span class="hljs-keyword">extension</span> <span class="hljs-title class_">Array</span> <span class="hljs-keyword">where</span> <span class="hljs-type">Element</span>: <span class="hljs-type">Equatable</span> &#123;<br>    <br>    <span class="hljs-comment">/// 去除数组重复元素</span><br>    <span class="hljs-comment">/// - Returns: 去除数组重复元素后的数组</span><br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">removeDuplicate</span>() -&gt; <span class="hljs-type">Array</span> &#123;<br>       <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.enumerated().filter &#123; (index,value) -&gt; <span class="hljs-type">Bool</span> <span class="hljs-keyword">in</span><br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.firstIndex(of: value) <span class="hljs-operator">==</span> index<br>        &#125;.map &#123; (<span class="hljs-keyword">_</span>, value) <span class="hljs-keyword">in</span><br>            value<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h1 id="Set-操作"><a href="#Set-操作" class="headerlink" title="Set 操作"></a>Set 操作</h1><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ccb280fff766">wift5 集合（Set）操作</a></p>
+                <p>原文：<a target="_blank" rel="noopener" href="http://www.gamelook.com.cn/2018/07/336371">独立游戏开发者谈游戏设计：从怀疑已有的设计开始</a></p>
+<p>写在前面的话：我一直对固有的游戏框架抱有怀疑，这可能跟我的游戏喜好有关，我喜欢别出心裁的设计，喜欢变换维度的解谜，喜欢用各种形式表现的文本，而讨厌一成不变的设计。所以我一直在思考，如何去优化、改良、甚至重新塑造框架。</p>
+<blockquote>
+<p>每个人都是带着偏见看这个世界的，如果你不带着偏见，那么你对这个世界根本就没有看待的方式。</p>
+<p>——许知远</p>
+</blockquote>
+<p>我很喜欢许知远的这句话，而以下，便全是我的偏见。</p>
+<p>1974年，万物起源的DND横空出世，它提出了血条的概念，并将其数值化，六种骰子一共七颗（四天王有五个，七宗罪有八个人是常识）造就了核心的游戏规则。而《异域镇魂曲》、《冰风谷》、《博德之门》便都是DND规则的衍生物，黑岛工作室是游戏业界的巨人，可实际上他们依旧是站在了巨人的肩膀。</p>
+<p>1980年，南梦宫还没开始炒冷饭的世代，推出了风靡全球的吃豆人，而其中有一个有意思的设计，主角吃豆人吃了超级豆子后，可以变身，并能吃掉来追杀的敌人。这可以说是最早的主角升级的概念。</p>
+<p>而同样也是这一年，rogue问世，随机生成的地下城、开放的玩法，乃至于真实死亡的设计，都极其地优秀并相对成熟。沙盒，开放世界的启蒙者，其设定甚至启蒙了很多美式角色扮演类游戏。而如今，《杀戮尖塔》、《以撒》作为继承其衣钵的优秀作品仍旧名扬四海，而rougelike也被理所当然地当做了游戏类型。</p>
+<p>1981年《大金刚》第一个让角色拥有了跳跃的能力，82年十字键应允而生，而83年，哦，对不起，好像和设计没啥关系，这一年是雅达利大崩溃，数以万计的卡带被埋葬在了沙漠之下。</p>
+<p>而我一直对这些优秀的设计抱有怀疑，它们是否适合当今的世代，亦或是每一款作品难道都必须要有血条、蓝量、变身等等？老实说，上田文人给了所有人一个答案，大刀阔斧地用减法，有些时候并不是坏事。</p>
+<p><strong>你不打破旧规则，就无法创造新规则。</strong></p>
+<p>而这四十年间，经济爆炸，互联网产生，人们变得更加忙碌，而闲暇时间也更加的碎片化。以上这些东西，我们耳濡目击，老实说，如果不是这两天我在看98年的韩剧《看了又看》，我甚至已经忘记了千禧年的交替、世代的变更。</p>
+<p>而世代的变化，产生了非常多的新产业。家用机的诞生，也让我们重新思考了死亡系统，并构建了更多的任务与剧情，游戏时长也被一些玩家当成了挑选游戏的标准之一。网络的兴起让游戏的购买更加方便，北京鼓楼的电玩街，如今已经比PS2那个年代凄凉更多，我们甚至再也不用为如何堆叠深度，创造无聊且冗长的游戏体验而烦恼，因为玩家玩腻了，可以很轻松地就购买到下一款游戏。游戏论坛、视频网站、直播平台，视频通关变成了很多“玩家”体验游戏的一种方式，剧情类游戏越发地叫好不叫座。</p>
+<p>游戏业渐渐失去了机能的枷锁，但我仍旧感觉到，我们的设计受到了很多以往游戏的禁锢。在重新看待游戏史的时候，我有一种很奇怪的感受，循规蹈矩，就会造成公式化，而公式化的东西无法带给玩家新鲜感。</p>
+<p>什么意思呢？</p>
+<p><strong>我一直将游戏内的需求分为四部分：学习需求、数值需求、挑战需求、荣耀需求，而这四种需求也相应的有四种阶段。</strong></p>
+<p>玩家处在学习阶段时，因为接收到的都是新东西，在探究游戏的构成，在了解游戏中的元素，所以玩家会不断地尝试。</p>
+<p>数值阶段，玩家基本已经找到了心目中的最优解，怎么打怪比较轻松不费力，怎样才能更轻易地拿到自己想要的物品，处在这个阶段时，玩家会反复地进行某项活动，从而提升数值。</p>
+<p>挑战阶段，挑战boss，检验数值和操作。</p>
+<p>荣耀阶段，在现今的游戏中，更多体现在脑补和游戏之外，比如《骑马与砍杀》，我们经常会说自己打赢了至关重要的一仗，明明游戏里没有给任何提示，可我们却因为战斗的艰难，脑补了自己所获得的荣耀。以及上传自己的极限通关与速通视频，这些都处在荣耀阶段。</p>
+<p>当然，这些阶段在游戏体验时，是有重合的部分，就比如数值需求往往贯穿了整个游戏。</p>
+<p>马里奥关卡设计的四步法则，起承转合的关卡设计，把一个大关分成四部分，那么前两关必定是学习阶段，了解新的机制。而第三关往往会把条件限制地稍微苛刻，让玩家更努力地找到最优解，而最后一关往往是给了玩家更艰难的挑战，从而让玩家在不断尝试的过程后获得满足感。</p>
+<p>为什么roguelike好玩？我个人觉得，就在于每一次死亡后，我们都会重新回到学习阶段，而在这个阶段，玩家需要更专注地去思考新元素会带给自己怎样的优势与劣势，也就会更容易达到心流。</p>
+<p>学习阶段往往是连续的乐趣，但数值需求不一样，拿大菠萝2代举例，其实刷刷刷的时候带给我们快感的是获得心怡装备的瞬间，是升级的小火光闪起的瞬间，而并非无限地打怪时机械化的操作。所以我认为在数值阶段，乐趣是间断的点。</p>
+<p>而挑战阶段必定伴随着负反馈，如果难度过低，称不上挑战，如果难度过高，玩家便会陷入无限的负反馈循环，宫崎英高所谓的<strong>“战胜压倒性优势的快感”</strong>便是对挑战阶段很好的诠释，玩家需要检验自己的操作与数值，那么提供相应的挑战就是我们的重点。而在挑战时，只有0和1的区别，过关或死亡。玩家会越发地专注，因为稍有不慎便会game over，而这时候，我认为也自然会很容易达到心流，在赢得挑战过后，紧绷的瞬间得以放松，再加上数值的奖励，便是巨大的满足感。</p>
+<p><strong>而公式化的框架，最容易导致的就是丧失掉学习阶段的乐趣</strong>，属性的相性背的滚瓜烂熟，战斗时甚至本能地就选择好了属性。见过许多次的系统根本掀不起心中的波澜，大概地了解一遍天赋树的各类分支，就大概明白其所带来的体验。任务变换的也只是接到任务、完成任务的地方，杀n只怪，取得宝物……</p>
+<p>我怀疑的不是这些前人用汗水和灵感打造的设计，我怀疑的是让玩家一次又一次经历是否正确，以及这些设计是否在当代被滥用。</p>
+<p>《上古卷轴5》是否真的需要跳跃键？从头至尾，我都觉得跳跃键本身是多余的设计，它丝毫和核心玩法挂不上钩，唯一带来的，只是玩家跑路时无聊的消遣手段。</p>
+<p>传说系列是否必须要有繁多的物品收集？那远处诱人的宝箱装着普通的药草是否真的合适？每一个显眼的收集品，都会促使玩家前行，但实际究竟有没有回报？翻箱倒柜固然是一些玩家的心头好，但更多的，是大部分人的眼中刺，如果不采集就会因为缺少物品无法打赢boss，那为什么没有简化的途径，捡一颗草药和捡另一颗草药在体验上没有不同，那为什么要让玩家反复经历，延长游戏时间？做更多的趋向性路径？我们明明可以有更有趣的内容来完成这种功能性。</p>
+<p>快速旅行是否真的必要？《黑魂1》的路线需要思考究竟有哪里不好？老实讲，这便是轻量化的产物，和小地图一样，在我眼里这两者都只会使美术精心打造的地图变得无关紧要，有快速旅行这个简单直接的办法，我们就不会选择慢吞吞地移动，那行走就变成了纯粹开地图的手段。《黑魂3》固然神作，但是玩的时候，老实说，我怀念《黑魂1》的传火竞技场，四通八达，慢慢熟悉地图，感受它的精妙是一段非常有意思的体验。</p>
+<p>但往往谈到以上这些时，经常会有人问我：“这些是玩家的诉求啊，你怎么能忽视掉？”那么这时候就引出了另外一个话题，在设计时，玩家需要的、索求的东西，我们需不需要满足，又或者说玩家需要的，真的是我们必须提供的设计么？</p>
+<p>我记得很早以前，我看过一个演讲，里面说了这么一个例子，来解释，人们其实不知道自己想要什么。</p>
+<p>很久以前，一家做意大利面酱的公司找到一位教授，希望他能通过调查了解到人们究竟想要什么样子的意大利面酱，又或者说最影响意大利面酱卖得好坏的元素是什么。教授便做了这样那样的调研，人们的关注点往往在甜度多少，咸度多少，是浓还是稀。于是他继续了研究，他做出了n多种意大利面酱，让人们来进行选择，有的只有甜度进行变化，有的只有咸度进行变化，然而在得到数据的时候，他惊讶地发现，数据极其地不规律，只要甜得不齁儿，咸得不让人咂舌，人们便都能接受，他进行了无数次的数据统计，但依旧不具有明显的规律。于是在8年的研究之后，他发现，其实最能影响意大利面酱卖的好坏的，并非这些，而是可见颗粒物的种类多少，番茄块，牛肉块，洋葱块是否多种多样。然而一开始，却没人说的出这些。</p>
+<p>回到游戏本身，其实大多数的玩家不具备理性。他们会将随机性归结为设计的不合理，他们甚至不经常反思，将赢归结为自己操作的好，死归结给糟糕的设计。所以我一直保有一个态度，在游戏制作时，玩家与我相关，但又与我无关。</p>
+<p><strong>玩家的意见只是参考，但绝不能予取予求。</strong></p>
+<p>写在后面的话：游戏应该是多元的，但只可惜，循规蹈矩的设计让一切都同质化，离经叛道也成了白日做梦的笑料。</p>
+<p>一阵唏嘘罢。</p>
+<p>最后有句话希望与各位共勉——在我们还什么都不是的时候，我们就还不配失去希望。</p>
 
                 
               </div>
@@ -316,7 +340,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
+  <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="category-chain-item">转载</a>
   
   
 
@@ -331,7 +355,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Swift/" class="print-no-link">#Swift</a>
+        <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" class="print-no-link">#游戏设计</a>
       
     </div>
   
@@ -343,8 +367,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Swift 数组操作</div>
-      <div>https://wonderhoi.com/2024/10/31/Swift-数组操作/</div>
+      <div>「转载」独立游戏开发者谈游戏设计：从怀疑已有的设计开始</div>
+      <div>https://wonderhoi.com/2024/11/18/「转载」独立游戏开发者谈游戏设计：从怀疑已有的设计开始/</div>
     </div>
     <div class="license-meta">
       
@@ -356,7 +380,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月31日</div>
+          <div>2024年11月18日</div>
         </div>
       
       
@@ -388,9 +412,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/10/31/UIFontDescriptor.SystemDesign-%E6%8C%87%E5%AE%9A%E7%B3%BB%E7%BB%9F%E5%AD%97%E4%BD%93/" title="iOS 系统字体">
+                      <a href="/2024/11/18/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8A%A8%E4%BD%9C%E7%B1%BB%E6%B8%B8%E6%88%8F%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E5%8A%A0%E5%85%A5%E4%BD%93%E5%8A%9B%E5%80%BC%E9%99%90%E5%88%B6%E7%8E%A9%E5%AE%B6%E7%9A%84%E8%A1%8C%E5%8A%A8/" title="「转载」为什么动作类游戏越来越多加入体力值限制玩家的行动?">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">iOS 系统字体</span>
+                        <span class="hidden-mobile">「转载」为什么动作类游戏越来越多加入体力值限制玩家的行动?</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -398,8 +422,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/30/%E6%AD%A3%E5%85%AD%E8%BE%B9%E5%BD%A2%E7%BD%91%E6%A0%BC%E7%9B%B8%E5%85%B3%E7%AE%97%E6%B3%95/" title="正六边形网格相关算法">
-                        <span class="hidden-mobile">正六边形网格相关算法</span>
+                      <a href="/2024/11/18/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E8%A1%80%E7%93%B6vs%E8%93%9D%E7%93%B6%EF%BC%9A%E5%AF%B9%E8%83%BD%E9%87%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%80%9D%E8%80%83/" title="「转载」血瓶vs蓝瓶：对能量系统设计的思考">
+                        <span class="hidden-mobile">「转载」血瓶vs蓝瓶：对能量系统设计的思考</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
