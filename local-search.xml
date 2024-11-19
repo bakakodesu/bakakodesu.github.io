@@ -4,6 +4,58 @@
   
   
   <entry>
+    <title>「转载」Mixing Chamber VS Breath by Breath</title>
+    <link href="/2024/11/18/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DMixing-Chamber-VS-Breath-by-Breath/"/>
+    <url>/2024/11/18/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DMixing-Chamber-VS-Breath-by-Breath/</url>
+    
+    <content type="html"><![CDATA[<p>原文：<a href="https://www.redbackbiotek.com/mixing-chamber">Mixing Chamber VS Breath by Breath</a></p><h2 id="Modern-Indirect-Respiratory-Metabolic-Analysis-VO2"><a href="#Modern-Indirect-Respiratory-Metabolic-Analysis-VO2" class="headerlink" title="Modern Indirect Respiratory Metabolic Analysis(VO2)"></a>Modern Indirect Respiratory Metabolic Analysis(VO2)</h2><p>Sometimes called CPET (Cardio Pulmonary Exercise Testing), or VO2 max testing. Despite this being a very commonplace test, it is actually very hard to do properly. This is because, in reality, there are a multitude of factors that can conspire against a diligent scientist that can go wrong. Unfortunately this type of testing has been made to look simple with a much more convenient technology in recent times called Breath by Breath (BxB) CPET. See picture below. Note how much less cumbersome this looks, is to work with for the scientist and use for the athlete.</p><p>It is only fair to hope that life can be made easier with changing technology, this however has camouflaged the reality of the significant errors that result from this BxB methodology. Too great to be ignored or in fact useful for athletic measurements.</p><p>This methodology was initially proposed in the late 1960’s by Beaver and Wasserman of Harbor-UCLA and later with Brian Whipp became the gurus and advocates of BxB measurements. It was hoped that the intra-breath information of BBB measurements would yield information about the dynamics of muscle O2 uptake. (Ref. John Hoppe and Andrew Huszczuk Ph.D.)</p><p>Unfortunately, at the time, the technology didn’t exist to do this properly. Now that the technology does exist and we can measure this information with more detailed sensors, we’ve learnt that the methodology is flawed. In fact the many problems and magnitude of errors makes this system unfit for the purpose of tracking athletic performance (despite the many manufacturer’s claims). Lets examine why…</p><h2 id="Summary-of-Breath-by-Breath-issues"><a href="#Summary-of-Breath-by-Breath-issues" class="headerlink" title="Summary of Breath by Breath issues:"></a>Summary of Breath by Breath issues:</h2><p>Firstly let us summarise the issues and expand on this understanding later.</p><ol><li>BxB system use very noisy (real) instantaneous O2, CO2, and flow signals.</li><li>Time misalignment of O2, CO2 and flow signals are almost impossible to correct.</li><li>The instantaneous multiplication of these signals to VO2 create incredibly noisy VO2 signals.</li><li>Very small changes or errors in O2 results in very large changes or errors in VO2 (about 50 times).</li><li>Gas sampling at a point with large flow variations means flow to sensors is unstable.</li><li>Mouthpeice sampling means very large swings in gas concentrations from room air to sample.</li><li>If running, then a very noisy flow resulting from lung vibrations adds to the noise in BxB systems.</li></ol><h3 id="1-Flow-O2-and-CO2-versus-time-graphs-are-very-noisy"><a href="#1-Flow-O2-and-CO2-versus-time-graphs-are-very-noisy" class="headerlink" title="1.Flow, O2 and CO2 versus time graphs are very noisy"></a>1.Flow, O2 and CO2 versus time graphs are very noisy</h3><p>This is a typical resting flow versus time graph. See below.</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/Flow-graph.jpg"></p><p>You may not think that this is a very noisy signal right. Just smooth it and work with the smoothed curve? That is exactly what mixing chambers do. But BxB systems do not have this luxury. They must sample this curve at least 200 times per second and hence the data they are using is every single noisy point. (also this graph is using older more forgiving technology). Newer technology (Hans Rudolph Pneumotach…a gold standard well above most) will have far more variations.</p><p>This graph is for rested breathing but in reality, for exercise, this graph is even noisier, varies significantly in amplitude for each breath, is faster and harder to track and is very inconsistent. This makes it very hard to determine when an actual breath starts and finishes… certainly an issue if you need to look at segments within each breath as you do in BxB…where you need to know precisely where each section of each breath is for time alignment. Also the graphs for O2 and CO2 concentrations are also very noisy with the added issue that they vary within the breath. Typically the O2 values are high at the start of the breath and low at the end, with the CO2 being the opposite. </p><p>(ref. L.E. Armstrong and D.L. Costill. Variability of respiration and metabolism 1985)</p><h3 id="2-Time-misalignment-of-flow-O2-and-CO2"><a href="#2-Time-misalignment-of-flow-O2-and-CO2" class="headerlink" title="2.Time misalignment of flow, O2 and CO2"></a>2.Time misalignment of flow, O2 and CO2</h3><p>The first sensor signal to be received is usually the flow (Ve or Vi). This is because generally it is used as the reference point but also as it is normally closest to the subject. The O2 and CO2 must wait their turn as the sample line takes a little longer to take the sample from the mouth to the sensors and their electronics. (<em>Again in Mixing chamber systems this is much more forgiving because they only need to synchronise this once per breath and being a little out is no great sin. Also as the tubing bore is about 25 times wider than a BxB sample line, transport time is easy to calculate using simple physics, is not subject to issues of restricted flow due to sample line humidity and other issues we’ll discuss shortly</em>).</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/flow-O2-CO2-curves11222018-1024x718.jpg"></p><p>And here we are now at a very significant point where we must now multiply the exact portion of breath for each Flow, O2 and CO2. Now if you’ve been following this discussion at all, you’ll realise we have the following:</p><ol><li>very noisy flow, O2 and CO2 signals</li><li>these signals have been sampled about 200 times per breath (to reconstruct the breath properly)</li><li>the signals are misaligned</li><li>we must multiply the exact same sections of this breath.</li></ol><p>If we say a breath is one second long for simplicity, then we want to multiply every 1&#x2F;200th of breath Flow, O2 and CO2 with each other. Lets just look at one of these points, say sample at time 0.500 to 0.505. This means we must realign sections of Flow(0.500s to 0.505s), O2(0.500s to 0.505s) and CO2(0.500s to 0.505s). But in such a noisy signal how can we be sure we have aligned these at all? We need to be sure where each breath starts and finishes. Its just not possible given how much the data is changing in real time. So manufacturers just produce an algorithm to guess this and curve fit. This is why none of them will give you the algorithm, not because there is some genius in their knowledge (this kind of signal processing is very well understood) but because they employ fudge factors to make all this work…and they still cant make it work if you explore published findings. So what does this mean to our information? Well if we are multiplying the data as follows for example Flow(0.505s), O2(0.540), CO2(0.545), which is very likely because we have misaligned data, then we are just creating new data based on our sampling methods that never existed. If you feel that perhaps these are trivial changes to the data, then read on. You will realise that the slightest error in say O2 will result in a very significant error in VO2. (in fact about 50x the O2 error). Read on.</p><h3 id="3-Multiplying-instantaneous-values-of-Flow-O2-and-CO2-creates-very-noisy-signals"><a href="#3-Multiplying-instantaneous-values-of-Flow-O2-and-CO2-creates-very-noisy-signals" class="headerlink" title="3.Multiplying instantaneous values of Flow, O2 and CO2 creates very noisy signals"></a>3.Multiplying instantaneous values of Flow, O2 and CO2 creates very noisy signals</h3><p>Below is a spreadsheet developed by us to track mathematically an error in any one or multiple VO2 parameters and their effect on VO2 error. We normally use these to see how much error any metabolic system has based on manufacturer’s specifications. </p><p><a href="https://www.redbackbiotek.com/wp-content/uploads/2018/01/VO2-calculator-Redback-Biotek-Error-sum-of-squares-for-absolute-error-2.xlsx">VO2 calculator Redback Biotek – Error sum of squares for absolute error (2)</a></p><p>Lets just see what happens if we insert an O2 error of about 5% relative and a Flow error of the same. This I’m sure you’ll agree looking at the above graph is pretty generous, as it could be much more with all the probable causes in error already discussed (with much more to come).</p><p>So with reference values set at say: FiO2&#x3D;21%, <strong>FeO2&#x3D;17.5%</strong>, FiCO2&#x3D;0.04, FeCO2&#x3D;3.8, <strong>Ve&#x3D;137L&#x2F;min</strong>.</p><p>Now lets add the 5% relative error to <strong>FeO2</strong> and <strong>Ve</strong> only. This would change these values to: <strong>FeO2&#x3D; 18.3% , Ve&#x3D;143.8L&#x2F;min</strong></p><p>Its not looking too drastic at all at this stage. However using our error algorithm above, this amounts to a <strong>VO2 error &#x3D; 33.9%</strong></p><p>If you cant follow or dont believe the algorithm, simply do the VO2 calculation yourself with these  new values and see what the new VO2 will be.</p><p>Also keep in mind we have not added any error to CO2 or any other sensors. For example humidity can play havoc on this measurement if we dont have an excellent drying system. Any if you test many athletes at once, this perfect drying system will certainly have its work cut out.(Dr. Chris Gore et. al, Australian Institute of Sport. Error contributions to VO2.)</p><p>Now one could say, that we could smooth these values by averaging and this is very true. But now you have created a very noisy signal that you need to smooth and average. This will never properly reconstruct the data to something useful for athletic use, where we know that very small changes of say 2-5% in VO2 are very large improvements for an athlete even over the course of one to two years. Added to the fact that not only is it noisy but seriously erroneous based on misaligned data.</p><h3 id="4-Small-errors-in-O2-result-in-very-large-errors-in-VO2"><a href="#4-Small-errors-in-O2-result-in-very-large-errors-in-VO2" class="headerlink" title="4.Small errors in O2 result in very large errors in VO2"></a>4.Small errors in O2 result in very large errors in VO2</h3><p>To get closer to the culprit in VO2 errors we simply need to examine the effect of O2 errors on the VO2 calculation. This holds true for mixing chamber as well as BxB systems.</p><p>If we take the error calculating spreadsheet above and look at FeO2&#x3D;17.5% as previously discussed, what happens if we have even just 0.1% absolute error in the O2 sensor. (pretty common accuracy) So FeO2&#x3D;17.6%, put this to the VO2 equation and you’ll find a VO2 error of about 4%. Too high an increment for tracking athlete improvements. Add the typical flow sensor error of 2-3% and you have quite a lot of error already.</p><p><strong>0.1% O2 error &#x3D; 4% VO2 error<br>2.5% Flow error &#x3D; 2.5% VO2 error</strong></p><p>So its not enough to have a mixing chamber system, you must have a very accurate O2 sensor also! Its goes without saying that you can add the error of your calibration gas to this error. So for this reason, any calibration gas that has an error of more than 0.02% absolute is not useful. (VO2 error&#x3D;about 0.8%) Some gases supplied to many labs have certification at 5% relative (This is roughly 1% absolute). If 0.1% gives an error of about 4% VO2, how can we accept a gas with a 1.0% error (ten times worse)?</p><p>O2 Cal gas error 0.02% &#x3D; 0.8% VO2 error<br>O2 Cal gas error 0.1% &#x3D; 4.0% VO2 error<br>O2 Cal gas error 1.0% &#x3D; 33.2% VO2 error</p><h3 id="5-Flow-variations-cause-havoc-with-O2-and-CO2-sensors"><a href="#5-Flow-variations-cause-havoc-with-O2-and-CO2-sensors" class="headerlink" title="5.Flow variations cause havoc with O2 and CO2 sensors"></a>5.Flow variations cause havoc with O2 and CO2 sensors</h3><p>Some people may think that sensors measure the percentage of O2 or CO2. This is not true. In fact, all a sensor can hope to measure is the amount of O2 or CO2. At least with sensors to date. So it responds to the amount of O2 or CO2 presented to the sensor. This means that we must keep the flow through the sensor as constant as possible. So that the changes in O2 or CO2 can only be the result in the change in concentration. </p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/mouthpiece11222018_0001-1024x718.jpg"></p><p>This is not a problem for Mixing chamber systems as the mixing chamber dampens any flow variations from the breathing tube. Unfortunately, in the case of BxB systems, the sample line is constantly experiencing large flow changes. This is due to the normal flow of expired followed by inspired air happening right at the point of sampling. This means it is well-nigh impossible to maintain a constant flow into the O2 and CO2 sensors. This makes for a very erroneous and unsettled O2 and CO2 values (keep in mind sensors take time…about 0.1 to 3.0 seconds, just to settle…how can you ever get a true reading of the situation). Unfortunately, you now must also mutiply this oscillating signal of O2 to Flow as per above. As if the situation wasnt bad enough already when we didnt assume these issues, we’re really making a bad situation very much worse.</p><h3 id="6-Mouthpiece-sampling-means-large-swings-from-room-air-to-sample-air-gas-concentrations"><a href="#6-Mouthpiece-sampling-means-large-swings-from-room-air-to-sample-air-gas-concentrations" class="headerlink" title="6.Mouthpiece sampling means large swings from room air to sample air gas concentrations"></a>6.Mouthpiece sampling means large swings from room air to sample air gas concentrations</h3><p>To make matters worse, the sample line is not just subject to unstable flow, but it is also subject to large swings in concentration, due to the pressure changes at the mouthpeice. To explain, as the breath is expired, the sample line and sensors see the human expired gas but when an inspiration occurs, the pressure reverses and the sample line and sensors are now looking at the room air coming into the mouthpeice. This means that not only are the sensors given no chance to settle but they are also having to make these large changes from room air (21% O2) to expired gas (15% O2), in a very short space of time. (<em>Here the mixing chamber wins again as the expired gas goes from a narrow tube to a large volume of mixing chamber and any pressure variations are damped significantly, giving the sensors a view of really only expired gas and not room air</em>).</p><p>Mixing chamber…see below.</p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/mixing-chamber-2.jpg"></p><h3 id="7-Running-mechanics-causes-noise-variations-in-the-flow-signal"><a href="#7-Running-mechanics-causes-noise-variations-in-the-flow-signal" class="headerlink" title="7.Running mechanics causes noise variations in the flow signal"></a>7.Running mechanics causes noise variations in the flow signal</h3><p>In the special case where running is involved (but most movements will cause these issues), we have an added overlayed error in the signal caused by movement mechanics. This means in exercise we have an extra noisy flow signal (and possibly…not yet known…O2 and CO2). See below. Again, this noise is absorbed in a Mixing chamber system. The BxB method is really now looking like an exceptionally noisy and erroneous methodology compared to other methods. <em>Daley MA, (2013) Impact Loading and Locomotor-Respiratory Coordination Significantly Influence Breathing Dynamics in Running Humans.</em></p><p><img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/flow-breath-running.png"></p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>As you can see there are many significant disadvantages of BxB systems over other methodologies, including Mixing chamber. In essence, it is not reliable for athletic measurements. If however, you can live with errors in the order of 15 to 30%, then you’re probably OK with BxB. </p><p>Finally, Mixing chamber systems are not perfect but they have far more chance of measuring the actual values originally created by the human subject. The main issue with them (apart from being more awkward to implement) is that the mixing chamber is not perfectly one breath in volume, which leads to some minor errors. In fact if someone could invent a mixing chamber that adapted its volume to one breath for every individual, we’d be much closer to a perfect system.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>转载</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>运动科学</tag>
+      
+      <tag>VO2</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>三角形 Project 简介</title>
+    <link href="/2024/11/18/%E4%B8%89%E8%A7%92%E5%BD%A2-Project-%E7%AE%80%E4%BB%8B/"/>
+    <url>/2024/11/18/%E4%B8%89%E8%A7%92%E5%BD%A2-Project-%E7%AE%80%E4%BB%8B/</url>
+    
+    <content type="html"><![CDATA[<p>项目参考 <a href="https://ingress.com/en">ingress</a> 的玩法，通过占领地图上的点位生成三角形区域，然后比较三角形区域的大小。</p><p>不同的是，项目多了一条底层规则——<strong>双方的区域不可相交</strong>。</p><p>项目具体可以分为两个板块：</p><ol><li>三角形绘制；</li><li>面积计算。</li></ol><h2 id="三角形绘制"><a href="#三角形绘制" class="headerlink" title="三角形绘制"></a>三角形绘制</h2><ol><li><a href="https://wonderhoi.com/2024/09/06/Swift-%E6%97%A0%E5%BA%8F%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/">Swift 无序排列组合</a></li><li><a href="https://wonderhoi.com/2024/09/10/SwiftUI-%E8%AE%BE%E7%BD%AE-macOS-%E7%AA%97%E5%8F%A3%E9%BB%98%E8%AE%A4%E5%B0%BA%E5%AF%B8/">SwiftUI 设置 macOS 窗口默认尺寸</a></li><li><a href="https://wonderhoi.com/2024/09/06/%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%B9%B3%E9%9D%A2%E5%86%85%E7%9A%84%E4%B8%A4%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4/">判断一个平面内的两个三角形是否相交</a></li></ol><h2 id="面积计算"><a href="#面积计算" class="headerlink" title="面积计算"></a>面积计算</h2><ol><li><a href="https://wonderhoi.com/2024/09/05/Xcode-%E5%88%9B%E5%BB%BA-C-%E5%B7%A5%E7%A8%8B/">Xcode 创建 C++ 工程</a></li><li><a href="https://wonderhoi.com/2024/09/06/%E9%9D%A2%E7%A7%AF%E5%B9%B6/">面积并</a></li></ol><h2 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a>整体思路</h2><ol><li>我方每占领一个点位，判断我方总占领点位是否大于等于 3；</li><li>若是大于等于 3——以 4 个点位为例，将 4 个点位进行无序排列组合，共 4 个三角形：<ol><li>(1, 2, 3)</li><li>(1, 2, 4)</li><li>(1, 3, 4)</li><li>(2, 3, 4)</li></ol></li><li>遍历这 4 个三角形与敌方三角形的关系，以 (1, 2, 3) 为例：<ol><li>首先判断 123 三个顶点是否在敌方三角形中。这里计算量小，如果顶点在敌方三角形中，说明该三角形区域一定会与敌方三角形相交；</li><li>若三个顶点均不在敌方任意的三角形中，再判断边 12、23、31 是否与敌方任意三角形的边相交。如果相交，说明该三角形区域一定会与敌方三角形相交；</li></ol></li><li>绘制出我方不与敌方三角形区域相交的三角形，并计算面积并。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>三角形 Project</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>项目简介</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>「转载」为什么动作类游戏越来越多加入体力值限制玩家的行动?</title>
     <link href="/2024/11/18/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8A%A8%E4%BD%9C%E7%B1%BB%E6%B8%B8%E6%88%8F%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E5%8A%A0%E5%85%A5%E4%BD%93%E5%8A%9B%E5%80%BC%E9%99%90%E5%88%B6%E7%8E%A9%E5%AE%B6%E7%9A%84%E8%A1%8C%E5%8A%A8/"/>
     <url>/2024/11/18/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8A%A8%E4%BD%9C%E7%B1%BB%E6%B8%B8%E6%88%8F%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E5%8A%A0%E5%85%A5%E4%BD%93%E5%8A%9B%E5%80%BC%E9%99%90%E5%88%B6%E7%8E%A9%E5%AE%B6%E7%9A%84%E8%A1%8C%E5%8A%A8/</url>
@@ -197,6 +249,8 @@
     
     <tags>
       
+      <tag>VO2</tag>
+      
       <tag>PyTorch</tag>
       
     </tags>
@@ -223,6 +277,8 @@
     
     
     <tags>
+      
+      <tag>VO2</tag>
       
       <tag>PyTorch</tag>
       
@@ -251,6 +307,8 @@
     
     <tags>
       
+      <tag>VO2</tag>
+      
       <tag>Dataset</tag>
       
     </tags>
@@ -264,7 +322,7 @@
     <link href="/2024/11/12/VO2max-Project-%E7%AE%80%E4%BB%8B/"/>
     <url>/2024/11/12/VO2max-Project-%E7%AE%80%E4%BB%8B/</url>
     
-    <content type="html"><![CDATA[<p>项目通过深度学习的方式对 VO2max 进行预测。</p><p>具体可分为 2 个板块：</p><ol><li>数据集；</li><li>模型训练。</li></ol><h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><ol><li><a href="https://wonderhoi.com/2024/11/12/VO2max-%E6%95%B0%E6%8D%AE%E9%9B%86/">VO2max 数据集</a></li></ol><h1 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h1><ol><li><a href="https://wonderhoi.com/2024/09/24/PyTorch-%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B/">PyTorch 回归模型</a></li><li><a href="https://wonderhoi.com/2024/09/24/PyTorch-%E5%B8%B8%E7%94%A8%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/">PyTorch 常用损失函数</a></li><li><a href="https://wonderhoi.com/2024/09/24/sklearn-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/">sklearn 数据预处理</a></li><li><a href="https://wonderhoi.com/2024/09/24/PyTorch-%E6%8F%90%E7%A4%BA-RuntimeError-expected-scalar-type-Long-but-found-Float/">PyTorch 提示 RuntimeError: expected scalar type Long but found Float</a></li><li><a href="https://wonderhoi.com/2024/10/11/Python-%E6%8A%A5%E9%94%99-RuntimeError-Can-t-call-numpy-on-Tensor-that-requires-grad-Use-tensor-detach-numpy-instead/">Python 报错 RuntimeError: Can’t call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead</a></li><li><a href="https://wonderhoi.com/2024/11/12/VO2max-%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9/">VO2max 特征选择</a></li><li><a href="https://wonderhoi.com/2024/11/13/PyTorch-%E9%A2%84%E6%B5%8B-VO2max/">PyTorch 预测 VO2max</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>项目通过深度学习的方式对 VO2max 进行预测。</p><p>具体可分为 2 个板块：</p><ol><li>数据集；</li><li>模型训练。</li></ol><h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><ol><li><a href="https://wonderhoi.com/2024/11/12/VO2max-%E6%95%B0%E6%8D%AE%E9%9B%86/">VO2max 数据集</a></li></ol><h1 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h1><ol><li><a href="https://wonderhoi.com/2024/09/24/PyTorch-%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B/">PyTorch 回归模型</a></li><li><a href="https://wonderhoi.com/2024/09/24/PyTorch-%E5%B8%B8%E7%94%A8%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/">PyTorch 常用损失函数</a></li><li><a href="https://wonderhoi.com/2024/09/24/sklearn-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/">sklearn 数据预处理</a></li><li><a href="https://wonderhoi.com/2024/09/24/PyTorch-%E6%8F%90%E7%A4%BA-RuntimeError-expected-scalar-type-Long-but-found-Float/">PyTorch 提示 RuntimeError: expected scalar type Long but found Float</a></li><li><a href="https://wonderhoi.com/2024/10/11/Python-%E6%8A%A5%E9%94%99-RuntimeError-Can-t-call-numpy-on-Tensor-that-requires-grad-Use-tensor-detach-numpy-instead/">Python 报错 RuntimeError: Can’t call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead</a></li><li><a href="https://wonderhoi.com/2024/09/06/Python-%E6%9C%89%E5%BA%8F%E6%88%96%E8%80%85%E6%97%A0%E5%BA%8F%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/">Python 有序或者无序排列组合</a></li><li><a href="https://wonderhoi.com/2024/11/12/VO2max-%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9/">VO2max 特征选择</a></li><li><a href="https://wonderhoi.com/2024/11/13/PyTorch-%E9%A2%84%E6%B5%8B-VO2max/">PyTorch 预测 VO2max</a></li></ol>]]></content>
     
     
     <categories>
@@ -469,7 +527,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -485,7 +543,7 @@
   
   
   <entry>
-    <title>iOS 系统字体</title>
+    <title>UIFontDescriptor.SystemDesign 指定系统字体</title>
     <link href="/2024/10/31/UIFontDescriptor.SystemDesign-%E6%8C%87%E5%AE%9A%E7%B3%BB%E7%BB%9F%E5%AD%97%E4%BD%93/"/>
     <url>/2024/10/31/UIFontDescriptor.SystemDesign-%E6%8C%87%E5%AE%9A%E7%B3%BB%E7%BB%9F%E5%AD%97%E4%BD%93/</url>
     
@@ -494,7 +552,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -544,7 +602,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -569,7 +627,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -785,16 +843,16 @@
   
   
   <entry>
-    <title>SwiftUI 关于 Sheet 的使用</title>
-    <link href="/2024/10/23/SwiftUI-%E5%85%B3%E4%BA%8E-Sheet-%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <url>/2024/10/23/SwiftUI-%E5%85%B3%E4%BA%8E-Sheet-%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <title>SwiftUI Sheet 合集</title>
+    <link href="/2024/10/23/SwiftUI-Sheet-%E5%90%88%E9%9B%86/"/>
+    <url>/2024/10/23/SwiftUI-Sheet-%E5%90%88%E9%9B%86/</url>
     
-    <content type="html"><![CDATA[<h1 id="Custom-Sheet"><a href="#Custom-Sheet" class="headerlink" title="Custom Sheet"></a>Custom Sheet</h1><p>参考：</p><ul><li><a href="https://www.appcoda.com.tw/swiftui-bottom-sheet-background/">Xcode 14.3 新功能：輕鬆客製化 SwiftUI Bottom Sheet 背景及滾動行為</a></li><li><a href="https://www.appcoda.com/bottom-sheet-swiftui/">How to Display a Bottom Sheet Using SwiftUI</a></li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs swift">.presentationBackground(.thinMaterial)<span class="hljs-comment">// 模糊效果</span><br>.presentationBackground(.yellow)<span class="hljs-comment">// 设置颜色</span><br>.presentationCornerRadius(<span class="hljs-number">8</span>)<span class="hljs-comment">// 圆角</span><br><span class="hljs-comment">// When it first appears, the bottom sheet is displayed in medium size. You can expand it to large size by dragging the sheet.</span><br>.presentationDetents([.medium, .large])<br><span class="hljs-comment">// supports 4 different sizes including: around 10% of the screen height；a fixed height of 200 points；the standard Medium and Large sizes</span><br>.presentationDetents([.fraction(<span class="hljs-number">0.1</span>), .height(<span class="hljs-number">200</span>), .medium, .large])<br>.presentationDragIndicator(.hidden) <span class="hljs-comment">// 隐藏指示器</span><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="Custom-Sheet"><a href="#Custom-Sheet" class="headerlink" title="Custom Sheet"></a>Custom Sheet</h2><p>参考：</p><ul><li><a href="https://www.appcoda.com.tw/swiftui-bottom-sheet-background/">Xcode 14.3 新功能：輕鬆客製化 SwiftUI Bottom Sheet 背景及滾動行為</a></li><li><a href="https://www.appcoda.com/bottom-sheet-swiftui/">How to Display a Bottom Sheet Using SwiftUI</a></li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs swift">.presentationBackground(.thinMaterial)<span class="hljs-comment">// 模糊效果</span><br>.presentationBackground(.yellow)<span class="hljs-comment">// 设置颜色</span><br>.presentationCornerRadius(<span class="hljs-number">8</span>)<span class="hljs-comment">// 圆角</span><br><span class="hljs-comment">// When it first appears, the bottom sheet is displayed in medium size. You can expand it to large size by dragging the sheet.</span><br>.presentationDetents([.medium, .large])<br><span class="hljs-comment">// supports 4 different sizes including: around 10% of the screen height；a fixed height of 200 points；the standard Medium and Large sizes</span><br>.presentationDetents([.fraction(<span class="hljs-number">0.1</span>), .height(<span class="hljs-number">200</span>), .medium, .large])<br>.presentationDragIndicator(.hidden) <span class="hljs-comment">// 隐藏指示器</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
       
-      <category>文章</category>
+      <category>合集</category>
       
     </categories>
     
@@ -810,16 +868,16 @@
   
   
   <entry>
-    <title>iOS17 MapKit 开发指北</title>
-    <link href="/2024/10/22/iOS17-MapKit-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8C%97/"/>
-    <url>/2024/10/22/iOS17-MapKit-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8C%97/</url>
+    <title>SwiftUI Map 合集</title>
+    <link href="/2024/10/22/SwiftUI-Map-%E5%90%88%E9%9B%86/"/>
+    <url>/2024/10/22/SwiftUI-Map-%E5%90%88%E9%9B%86/</url>
     
-    <content type="html"><![CDATA[<p>参考：<a href="https://developer.apple.com/cn/videos/play/wwdc2023/10043/">认识 SwiftUI 版 MapKit</a></p><h1 id="Camera-两种初始化的方式"><a href="#Camera-两种初始化的方式" class="headerlink" title="Camera 两种初始化的方式"></a>Camera 两种初始化的方式</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-meta">@State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> position <span class="hljs-operator">=</span> <span class="hljs-type">MapCameraPosition</span>.region(<br><span class="hljs-type">MKCoordinateRegion</span>(center: <span class="hljs-type">CLLocationCoordinate2D</span>(latitude: <span class="hljs-number">28.209195</span>, longitude: <span class="hljs-number">112.842627</span>), latitudinalMeters: <span class="hljs-number">300</span>, longitudinalMeters: <span class="hljs-number">300</span>)<br><span class="hljs-comment">// MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 28.209195, longitude: 112.842627), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))</span><br>)<br><br><span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>  <span class="hljs-comment">// Map(initialPosition: position) &#123;</span><br><span class="hljs-type">Map</span>(position: <span class="hljs-variable">$position</span>) &#123;<br><span class="hljs-operator">...</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>上面两种初始化 Camera 的方式是一样的。</p><h1 id="地理坐标与墨卡托投影坐标转换"><a href="#地理坐标与墨卡托投影坐标转换" class="headerlink" title="地理坐标与墨卡托投影坐标转换"></a>地理坐标与墨卡托投影坐标转换</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 经纬度转投影坐标</span><br><span class="hljs-keyword">let</span> coordinate <span class="hljs-operator">=</span> <span class="hljs-type">CLLocationCoordinate2D</span>(latitude: <span class="hljs-number">28.209321</span>, longitude: <span class="hljs-number">112.843033</span>)<br><span class="hljs-keyword">let</span> point: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(<span class="hljs-type">Coordinate</span>)<br><span class="hljs-built_in">print</span>(point.x)<br><span class="hljs-built_in">print</span>(point.y)<br><br><span class="hljs-comment">// 投影坐标转经纬度</span><br><span class="hljs-keyword">let</span> point <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(x: <span class="hljs-number">218359192.2732601</span>, y: <span class="hljs-number">112278796.05034925</span>)<br><span class="hljs-keyword">let</span> coordinate <span class="hljs-operator">=</span> point.coordinate<br></code></pre></td></tr></table></figure><h1 id="将-iOS-系统自带定位坐标转换成高德坐标"><a href="#将-iOS-系统自带定位坐标转换成高德坐标" class="headerlink" title="将 iOS 系统自带定位坐标转换成高德坐标"></a>将 iOS 系统自带定位坐标转换成高德坐标</h1><p><a href="https://github.com/Zws-China/swift-Coordinate">swift Coordinate</a></p><p>系统定位拿到的坐标是 WGS-84 国际标准。</p><p>但是在 Map 显示时，因为 iPhone 使用的是高德地图，所以会有偏移，需要把坐标转换为 GCJ-02 火星坐标。</p><h1 id="请求权限"><a href="#请求权限" class="headerlink" title="请求权限"></a>请求权限</h1><p>需要在 Targets 中的 Info 中添加：</p><p>Privacy - Location When In Use Usage Description</p><p>或者</p><p>Privacy - Location Always Usage Description</p><p>Privacy - Location Always and When In Use Usage Description</p><p>我用的是前者，需要加入代码</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> locationManager <span class="hljs-operator">=</span> <span class="hljs-type">CLLocationManager</span>()<br>locationManager.requestWhenInUseAuthorization()<br><span class="hljs-comment">// locationManager.requestAlwaysAuthorization() 总是</span><br></code></pre></td></tr></table></figure><h1 id="定位精度"><a href="#定位精度" class="headerlink" title="定位精度"></a>定位精度</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> locationManager <span class="hljs-operator">=</span> <span class="hljs-type">CLLocationManager</span>()<br>locationManager.desiredAccuracy <span class="hljs-operator">=</span> kCLLocationAccuracyBest<br><span class="hljs-comment">// kCLLocationAccuracyBestForNavigation精度最高，一般用于导航</span><br><span class="hljs-comment">// kCLLocationAccuracyBest精确度最佳</span><br><span class="hljs-comment">// kCLLocationAccuracynearestTenMeters 精确度10m以内</span><br><span class="hljs-comment">// kCLLocationAccuracyHundredMeters精确度100m以内</span><br><span class="hljs-comment">// kCLLocationAccuracyKilometer精确度1000m以内</span><br><span class="hljs-comment">// kCLLocationAccuracyThreeKilometers精确度3000m以内</span><br></code></pre></td></tr></table></figure><h1 id="获取用户位置坐标"><a href="#获取用户位置坐标" class="headerlink" title="获取用户位置坐标"></a>获取用户位置坐标</h1><p><a href="https://blog.csdn.net/guoyongming925/article/details/139517701">SwiftUI获取用户的位置信息 CLLocationManager，CLLocationManagerDelegate</a></p><p><a href="https://www.cnblogs.com/LiuLady12138/p/5048521.html">Swift - 使用CoreLocation实现定位（经纬度、海拔、速度、距离等）</a></p><p>更新频率的设置：</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">locationManager.distanceFilter</span> = <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure><p>我们无法直接控制 loctionManager 更新的频率，但可使用 distanceFilter 属性（单位米）进行间接控制。</p><p>它指设备（水平或垂直）移动多少米后才将另一个更新发送给委托。定位要求的精度越高，distanceFilter 属性的值越小，应用程序的耗电量就越大。</p><h1 id="判断用户是否在特定区域内（多边形）"><a href="#判断用户是否在特定区域内（多边形）" class="headerlink" title="判断用户是否在特定区域内（多边形）"></a>判断用户是否在特定区域内（多边形）</h1><p>将用户以及围城区域的点的坐标全部转换为 MKMapPoint，再绘制路径，最后判断用户的点是否被路径包含</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> point1: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">0</span>])<br><span class="hljs-keyword">let</span> point2: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">1</span>])<br><span class="hljs-keyword">let</span> point3: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">2</span>])<br><span class="hljs-keyword">let</span> point4: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">3</span>])<br><span class="hljs-keyword">let</span> point5: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">4</span>])<br><span class="hljs-keyword">let</span> point6: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">5</span>])<br><br><span class="hljs-keyword">let</span> path <span class="hljs-operator">=</span> <span class="hljs-type">UIBezierPath</span>()<br>path.move(to: <span class="hljs-type">CGPoint</span>(x: point1.x, y: point1.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point2.x, y: point2.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point3.x, y: point3.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point4.x, y: point4.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point5.x, y: point5.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point6.x, y: point6.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point1.x, y: point1.y))<br>path.close()<br><br><span class="hljs-keyword">if</span> path.contains(<span class="hljs-type">CGPoint</span>(x: userPosition.x, y: userPosition.y)) &#123;<br><span class="hljs-operator">...</span><br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>参考：<a href="https://developer.apple.com/cn/videos/play/wwdc2023/10043/">认识 SwiftUI 版 MapKit</a></p><h2 id="Camera-两种初始化的方式"><a href="#Camera-两种初始化的方式" class="headerlink" title="Camera 两种初始化的方式"></a>Camera 两种初始化的方式</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-meta">@State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> position <span class="hljs-operator">=</span> <span class="hljs-type">MapCameraPosition</span>.region(<br><span class="hljs-type">MKCoordinateRegion</span>(center: <span class="hljs-type">CLLocationCoordinate2D</span>(latitude: <span class="hljs-number">28.209195</span>, longitude: <span class="hljs-number">112.842627</span>), latitudinalMeters: <span class="hljs-number">300</span>, longitudinalMeters: <span class="hljs-number">300</span>)<br><span class="hljs-comment">// MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 28.209195, longitude: 112.842627), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))</span><br>)<br><br><span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>  <span class="hljs-comment">// Map(initialPosition: position) &#123;</span><br><span class="hljs-type">Map</span>(position: <span class="hljs-variable">$position</span>) &#123;<br><span class="hljs-operator">...</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>上面两种初始化 Camera 的方式是一样的。</p><h2 id="地理坐标与墨卡托投影坐标转换"><a href="#地理坐标与墨卡托投影坐标转换" class="headerlink" title="地理坐标与墨卡托投影坐标转换"></a>地理坐标与墨卡托投影坐标转换</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 经纬度转投影坐标</span><br><span class="hljs-keyword">let</span> coordinate <span class="hljs-operator">=</span> <span class="hljs-type">CLLocationCoordinate2D</span>(latitude: <span class="hljs-number">28.209321</span>, longitude: <span class="hljs-number">112.843033</span>)<br><span class="hljs-keyword">let</span> point: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(<span class="hljs-type">Coordinate</span>)<br><span class="hljs-built_in">print</span>(point.x)<br><span class="hljs-built_in">print</span>(point.y)<br><br><span class="hljs-comment">// 投影坐标转经纬度</span><br><span class="hljs-keyword">let</span> point <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(x: <span class="hljs-number">218359192.2732601</span>, y: <span class="hljs-number">112278796.05034925</span>)<br><span class="hljs-keyword">let</span> coordinate <span class="hljs-operator">=</span> point.coordinate<br></code></pre></td></tr></table></figure><h2 id="将-iOS-系统自带定位坐标转换成高德坐标"><a href="#将-iOS-系统自带定位坐标转换成高德坐标" class="headerlink" title="将 iOS 系统自带定位坐标转换成高德坐标"></a>将 iOS 系统自带定位坐标转换成高德坐标</h2><p><a href="https://github.com/Zws-China/swift-Coordinate">swift Coordinate</a></p><p>系统定位拿到的坐标是 WGS-84 国际标准。</p><p>但是在 Map 显示时，因为 iPhone 使用的是高德地图，所以会有偏移，需要把坐标转换为 GCJ-02 火星坐标。</p><h2 id="请求权限"><a href="#请求权限" class="headerlink" title="请求权限"></a>请求权限</h2><p>需要在 Targets 中的 Info 中添加：</p><p>Privacy - Location When In Use Usage Description</p><p>或者</p><p>Privacy - Location Always Usage Description</p><p>Privacy - Location Always and When In Use Usage Description</p><p>我用的是前者，需要加入代码</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> locationManager <span class="hljs-operator">=</span> <span class="hljs-type">CLLocationManager</span>()<br>locationManager.requestWhenInUseAuthorization()<br><span class="hljs-comment">// locationManager.requestAlwaysAuthorization() 总是</span><br></code></pre></td></tr></table></figure><h2 id="定位精度"><a href="#定位精度" class="headerlink" title="定位精度"></a>定位精度</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> locationManager <span class="hljs-operator">=</span> <span class="hljs-type">CLLocationManager</span>()<br>locationManager.desiredAccuracy <span class="hljs-operator">=</span> kCLLocationAccuracyBest<br><span class="hljs-comment">// kCLLocationAccuracyBestForNavigation精度最高，一般用于导航</span><br><span class="hljs-comment">// kCLLocationAccuracyBest精确度最佳</span><br><span class="hljs-comment">// kCLLocationAccuracynearestTenMeters 精确度10m以内</span><br><span class="hljs-comment">// kCLLocationAccuracyHundredMeters精确度100m以内</span><br><span class="hljs-comment">// kCLLocationAccuracyKilometer精确度1000m以内</span><br><span class="hljs-comment">// kCLLocationAccuracyThreeKilometers精确度3000m以内</span><br></code></pre></td></tr></table></figure><h2 id="获取用户位置坐标"><a href="#获取用户位置坐标" class="headerlink" title="获取用户位置坐标"></a>获取用户位置坐标</h2><p><a href="https://blog.csdn.net/guoyongming925/article/details/139517701">SwiftUI获取用户的位置信息 CLLocationManager，CLLocationManagerDelegate</a></p><p><a href="https://www.cnblogs.com/LiuLady12138/p/5048521.html">Swift - 使用CoreLocation实现定位（经纬度、海拔、速度、距离等）</a></p><p>更新频率的设置：</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">locationManager.distanceFilter</span> = <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure><p>我们无法直接控制 loctionManager 更新的频率，但可使用 distanceFilter 属性（单位米）进行间接控制。</p><p>它指设备（水平或垂直）移动多少米后才将另一个更新发送给委托。定位要求的精度越高，distanceFilter 属性的值越小，应用程序的耗电量就越大。</p><h2 id="判断用户是否在特定区域内（多边形）"><a href="#判断用户是否在特定区域内（多边形）" class="headerlink" title="判断用户是否在特定区域内（多边形）"></a>判断用户是否在特定区域内（多边形）</h2><p>将用户以及围城区域的点的坐标全部转换为 MKMapPoint，再绘制路径，最后判断用户的点是否被路径包含</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> point1: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">0</span>])<br><span class="hljs-keyword">let</span> point2: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">1</span>])<br><span class="hljs-keyword">let</span> point3: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">2</span>])<br><span class="hljs-keyword">let</span> point4: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">3</span>])<br><span class="hljs-keyword">let</span> point5: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">4</span>])<br><span class="hljs-keyword">let</span> point6: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(hexagon.points[<span class="hljs-number">5</span>])<br><br><span class="hljs-keyword">let</span> path <span class="hljs-operator">=</span> <span class="hljs-type">UIBezierPath</span>()<br>path.move(to: <span class="hljs-type">CGPoint</span>(x: point1.x, y: point1.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point2.x, y: point2.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point3.x, y: point3.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point4.x, y: point4.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point5.x, y: point5.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point6.x, y: point6.y))<br>path.addLine(to: <span class="hljs-type">CGPoint</span>(x: point1.x, y: point1.y))<br>path.close()<br><br><span class="hljs-keyword">if</span> path.contains(<span class="hljs-type">CGPoint</span>(x: userPosition.x, y: userPosition.y)) &#123;<br><span class="hljs-operator">...</span><br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
       
-      <category>文章</category>
+      <category>合集</category>
       
     </categories>
     
@@ -1133,7 +1191,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>三角形 Project</category>
+      
+      <category>三角形绘制</category>
       
     </categories>
     
@@ -1185,7 +1245,9 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>三角形 Project</category>
+      
+      <category>面积计算</category>
       
     </categories>
     
@@ -1210,7 +1272,9 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>三角形 Project</category>
+      
+      <category>三角形绘制</category>
       
     </categories>
     
@@ -1260,7 +1324,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>三角形 Project</category>
+      
+      <category>三角形绘制</category>
       
     </categories>
     
@@ -1285,7 +1351,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>VO2max Project</category>
+      
+      <category>模型训练</category>
       
     </categories>
     
@@ -1362,7 +1430,9 @@
     
     <categories>
       
-      <category>随笔</category>
+      <category>三角形 Project</category>
+      
+      <category>面积计算</category>
       
     </categories>
     
@@ -1412,7 +1482,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>转载</category>
       
     </categories>
     
@@ -1589,7 +1659,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>转载</category>
       
     </categories>
     
@@ -1614,7 +1684,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>转载</category>
       
     </categories>
     
@@ -1716,7 +1786,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1756,6 +1826,8 @@
       
       <tag>Sensor</tag>
       
+      <tag>VO2</tag>
+      
     </tags>
     
   </entry>
@@ -1784,6 +1856,8 @@
       <tag>Arduino</tag>
       
       <tag>Sensor</tag>
+      
+      <tag>VO2</tag>
       
     </tags>
     
@@ -1861,7 +1935,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -1886,7 +1960,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2013,7 +2087,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2021,6 +2095,8 @@
     <tags>
       
       <tag>运动科学</tag>
+      
+      <tag>VO2</tag>
       
     </tags>
     
@@ -2528,7 +2604,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2742,6 +2818,8 @@
       
       <tag>Python</tag>
       
+      <tag>Dataset</tag>
+      
     </tags>
     
   </entry>
@@ -2818,7 +2896,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -2868,7 +2946,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -3360,7 +3438,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>转载</category>
       
     </categories>
     
@@ -3505,7 +3583,7 @@
     <link href="/2023/10/06/SwiftUI-TextField-%E4%B8%8E-Keyboard-%E5%90%88%E9%9B%86/"/>
     <url>/2023/10/06/SwiftUI-TextField-%E4%B8%8E-Keyboard-%E5%90%88%E9%9B%86/</url>
     
-    <content type="html"><![CDATA[<h1 id="TextField"><a href="#TextField" class="headerlink" title="TextField"></a>TextField</h1><ul><li><a href="https://fatbobman.com/zh/posts/textfield-event-focus-keyboard/">SwiftUI TextField 进阶 —— 事件、焦点、键盘</a></li></ul><h1 id="Keyboard"><a href="#Keyboard" class="headerlink" title="Keyboard"></a>Keyboard</h1><ul><li><a href="https://stackoverflow.com/questions/56491386/how-to-hide-keyboard-when-using-swiftui">How to hide keyboard when using SwiftUI?</a>;</li></ul><p>关于键盘会上推组件：</p><p><a href="https://fatbobman.com/zh/posts/textfield-event-focus-keyboard/">掌握 SwiftUI 的 Safe Area</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="TextField"><a href="#TextField" class="headerlink" title="TextField"></a>TextField</h2><ul><li><a href="https://fatbobman.com/zh/posts/textfield-event-focus-keyboard/">SwiftUI TextField 进阶 —— 事件、焦点、键盘</a></li></ul><h2 id="Keyboard"><a href="#Keyboard" class="headerlink" title="Keyboard"></a>Keyboard</h2><ul><li><a href="https://stackoverflow.com/questions/56491386/how-to-hide-keyboard-when-using-swiftui">How to hide keyboard when using SwiftUI?</a>;</li></ul><p>关于键盘会上推组件：</p><p><a href="https://fatbobman.com/zh/posts/textfield-event-focus-keyboard/">掌握 SwiftUI 的 Safe Area</a></p>]]></content>
     
     
     <categories>
@@ -3535,7 +3613,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -3560,7 +3638,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -3568,6 +3646,8 @@
     <tags>
       
       <tag>运动科学</tag>
+      
+      <tag>VO2</tag>
       
     </tags>
     
@@ -3929,7 +4009,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>转载</category>
       
     </categories>
     
@@ -4065,6 +4145,8 @@
     
     <tags>
       
+      <tag>VO2</tag>
+      
       <tag>Python</tag>
       
       <tag>PyQt</tag>
@@ -4149,6 +4231,8 @@
     <tags>
       
       <tag>运动科学</tag>
+      
+      <tag>VO2</tag>
       
     </tags>
     
@@ -4511,6 +4595,8 @@
       
       <tag>Sensor</tag>
       
+      <tag>VO2</tag>
+      
     </tags>
     
   </entry>
@@ -4541,6 +4627,8 @@
       <tag>Arduino</tag>
       
       <tag>Sensor</tag>
+      
+      <tag>VO2</tag>
       
     </tags>
     
@@ -4645,7 +4733,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -4720,7 +4808,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -4813,6 +4901,8 @@
       <tag>Arduino</tag>
       
       <tag>Sensor</tag>
+      
+      <tag>VO2</tag>
       
     </tags>
     
@@ -5081,7 +5171,7 @@
     
     <categories>
       
-      <category>文章</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -5106,7 +5196,7 @@
     
     <categories>
       
-      <category>合集</category>
+      <category>随笔</category>
       
     </categories>
     
