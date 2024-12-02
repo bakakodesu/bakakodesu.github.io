@@ -29,7 +29,7 @@
 <meta property="og:description" content="参考：认识 SwiftUI 版 MapKit Camera 两种初始化的方式1234567891011@State private var position &#x3D; MapCameraPosition.region(		MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 28.209195, longitude: 112.842627">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-23T08:54:25.000Z">
-<meta property="article:modified_time" content="2024-11-21T08:54:31.263Z">
+<meta property="article:modified_time" content="2024-11-27T03:46:36.520Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="Map">
 <meta property="article:tag" content="SwiftUI">
@@ -239,7 +239,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          204 字
+          639 字
         
       </span>
     
@@ -292,6 +292,33 @@
 <h2 id="将-iOS-系统自带定位坐标转换成高德坐标"><a href="#将-iOS-系统自带定位坐标转换成高德坐标" class="headerlink" title="将 iOS 系统自带定位坐标转换成高德坐标"></a>将 iOS 系统自带定位坐标转换成高德坐标</h2><p><a target="_blank" rel="noopener" href="https://github.com/Zws-China/swift-Coordinate">swift Coordinate</a></p>
 <p>系统定位拿到的坐标是 WGS-84 国际标准。</p>
 <p>但是在 Map 显示时，因为 iPhone 使用的是高德地图，所以会有偏移，需要把坐标转换为 GCJ-02 火星坐标。</p>
+<h2 id="MapControls"><a href="#MapControls" class="headerlink" title="MapControls"></a>MapControls</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Map</span>() &#123;<br><br>&#125;<br>.mapControls(&#123;<br>		<span class="hljs-type">MapCompass</span>()                    <span class="hljs-comment">// 指南针</span><br>                <br>		<span class="hljs-keyword">#if</span> os(watchOS)<br>		<span class="hljs-type">MapLocationCompass</span>()            <span class="hljs-comment">// 仅适用于 WatchOS 的指南针</span><br>		<span class="hljs-keyword">#endif</span><br>                <br>    <span class="hljs-keyword">#if</span> os(macOS)<br>    <span class="hljs-type">MapPitchSlider</span>()                <span class="hljs-comment">// 控制地图是否显示高度，也就是 2D / 3D</span><br>    <span class="hljs-type">MapZoomStepper</span>()                <span class="hljs-comment">// 允许用户调节缩放比例</span><br>    <span class="hljs-keyword">#endif</span><br>                <br>    <span class="hljs-type">MapPitchToggle</span>()<br><br>    <span class="hljs-type">MapScaleView</span>(anchorEdge: .trailing)     <span class="hljs-comment">// 用于显示地图比例尺的一个控件。比例尺可以帮助用户了解地图上显示的距离，与实际世界中的距离的比例关系</span><br><br>    <span class="hljs-type">MapUserLocationButton</span>()                 <span class="hljs-comment">// 设置关联的地图位置为当前用户的位置： 右上角的箭头</span><br>    &#125;)<br></code></pre></td></tr></table></figure>
+
+<h2 id="MapStyle"><a href="#MapStyle" class="headerlink" title="MapStyle"></a>MapStyle</h2><p><code>MapStyle</code>有预先配置好的地图样式可以选择，如果没有特别要求，基本可以满足。</p>
+<ul>
+<li><code>.standard</code>: 标准样式</li>
+<li><code>.imagery</code>: 基于图像的风格，如使用卫星图像的风格。</li>
+<li><code>.hybrid</code>: 混合风格，例如使用一个地区的卫星图像，并在其上添加道路和路名信息层。</li>
+</ul>
+<p>其次我们可以添加额外配置，控制是否渲染高度（2D, 3D切换）、地图强调风格，显示兴趣点和显示交通情况等。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Map</span>() &#123;<br><br>&#125;<br>.mapStyle(<br>    <span class="hljs-type">MapStyle</span>.standard(<br>        elevation: .flat, <br>        emphasis: .muted, <br>        pointsOfInterest: <span class="hljs-type">PointOfInterestCategories</span>(arrayLiteral: .publicTransport), <br>        showsTraffic: <span class="hljs-literal">true</span>))<br></code></pre></td></tr></table></figure>
+
+<p>关于 <code>pointsOfInterest</code>：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs swift">.mapStyle(.standard(pointsOfInterest: .excludingAll))					<span class="hljs-comment">// 除去所有兴趣点</span><br>.mapStyle(.standard(pointsOfInterest: .including([.cafe])))<br></code></pre></td></tr></table></figure>
+
+<h2 id="地图交互"><a href="#地图交互" class="headerlink" title="地图交互"></a>地图交互</h2><p><code>Map</code>地图上的交互主要通过配置<code>interactionModes</code>进行设置，有下面几种类型：</p>
+<ul>
+<li><code>.all</code>: 允许所有的交互类型</li>
+<li><code>.pin</code>: 允许用户平移到地图的不同区域</li>
+<li><code>.zoom</code>: 允许用户放大或缩小地图位置</li>
+<li><code>.pitch</code>: 允许用户设置地图的间距，从不同的角度查看地图</li>
+<li><code>.rotate</code>: 允许用户对地图进行旋转操作</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Map</span>(<br>    <span class="hljs-operator">...</span><br>    interactionModes: [.pitch, .pin],<br>    <span class="hljs-operator">...</span>)&#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="一个-MapKit-没有的功能"><a href="#一个-MapKit-没有的功能" class="headerlink" title="一个 MapKit 没有的功能"></a>一个 MapKit 没有的功能</h2><p><a target="_blank" rel="noopener" href="https://www.reddit.com/r/SwiftUI/comments/1av4de1/ios_17_swiftui_mapkit_has_anyone_solved_for/">iOS 17, SwiftUI MapKit. Has anyone solved for smooth animation of custom annotations?</a></p>
+<p><a target="_blank" rel="noopener" href="https://forums.developer.apple.com/forums/thread/759289">SwiftUI Map Annotation Coordinate Animation</a></p>
+<p>Map 上的控件在移动时，做不到像 <code>UserAnnotation()</code> 那样顺滑，好像是 <code>withAnimation()</code> 不会生效。</p>
 
                 
               </div>
@@ -394,8 +421,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/23/SwiftUI-Sheet-%E5%90%88%E9%9B%86/" title="SwiftUI Sheet 合集">
-                        <span class="hidden-mobile">SwiftUI Sheet 合集</span>
+                      <a href="/2024/10/23/SwiftUI-Sheet-fullScreenCover-%E5%90%88%E9%9B%86/" title="SwiftUI Sheet&amp;fullScreenCover 合集">
+                        <span class="hidden-mobile">SwiftUI Sheet&amp;fullScreenCover 合集</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
