@@ -29,7 +29,7 @@
 <meta property="og:description" content="Custom Sheet参考：  Xcode 14.3 新功能：輕鬆客製化 SwiftUI Bottom Sheet 背景及滾動行為 How to Display a Bottom Sheet Using SwiftUI  12345678.presentationBackground(.thinMaterial)	&#x2F;&#x2F; 模糊效果.presentationBackground(.yellow)">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-23T08:54:25.000Z">
-<meta property="article:modified_time" content="2024-11-28T08:06:18.789Z">
+<meta property="article:modified_time" content="2024-12-04T04:34:21.183Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="SwiftUI">
 <meta name="twitter:card" content="summary_large_image">
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          85 字
+          95 字
         
       </span>
     
@@ -290,7 +290,7 @@
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs swift">.presentationBackground(.thinMaterial)	<span class="hljs-comment">// 模糊效果</span><br>.presentationBackground(.yellow)				<span class="hljs-comment">// 设置颜色</span><br>.presentationCornerRadius(<span class="hljs-number">8</span>)						<span class="hljs-comment">// 圆角</span><br><span class="hljs-comment">// When it first appears, the bottom sheet is displayed in medium size. You can expand it to large size by dragging the sheet.</span><br>.presentationDetents([.medium, .large])<br><span class="hljs-comment">// supports 4 different sizes including: around 10% of the screen height；a fixed height of 200 points；the standard Medium and Large sizes</span><br>.presentationDetents([.fraction(<span class="hljs-number">0.1</span>), .height(<span class="hljs-number">200</span>), .medium, .large])<br>.presentationDragIndicator(.hidden) 		<span class="hljs-comment">// 隐藏指示器</span><br></code></pre></td></tr></table></figure>
 
 <h2 id="dismiss"><a href="#dismiss" class="headerlink" title="dismiss()"></a>dismiss()</h2><p>在 sheet 和 fullScreenCover 中都可以使用</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-meta">@Environment</span>(\.presentationMode) <span class="hljs-keyword">var</span> presentationMode<br><span class="hljs-comment">// Use: presentationMode.wrappedValue.dismiss()</span><br><br><span class="hljs-meta">@Environment</span>(\.dismiss) <span class="hljs-keyword">var</span> dismiss<br><span class="hljs-comment">// Use: dismiss()</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-meta">@Environment</span>(\.presentationMode) <span class="hljs-keyword">var</span> presentationMode<br><span class="hljs-comment">// Use: presentationMode.wrappedValue.dismiss()</span><br><span class="hljs-comment">// 该方法在 iOS 15.0 后被 dismiss() 替代</span><br><br><span class="hljs-meta">@Environment</span>(\.dismiss) <span class="hljs-keyword">var</span> dismiss<br><span class="hljs-comment">// Use: dismiss()</span><br></code></pre></td></tr></table></figure>
 
                 
               </div>
