@@ -29,7 +29,7 @@
 <meta property="og:description" content="项目中 SwiftData 要将 CLLocationCoordinate2D 作为数组存储对象，但报错： 1Referencing instance method &#x27;setValue(forKey:to:)&#x27; on &#x27;Array&#x27; requires that &#x27;CLLocationCoordinate2D&#x27; conform to &amp;#x">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-11T04:47:41.000Z">
-<meta property="article:modified_time" content="2024-12-11T07:17:15.376Z">
+<meta property="article:modified_time" content="2024-12-19T14:37:22.608Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="SwiftData">
 <meta name="twitter:card" content="summary_large_image">
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          185 字
+          228 字
         
       </span>
     
@@ -288,7 +288,7 @@
 <p>需要：</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">enum</span> <span class="hljs-title class_">CodingKeys</span>: <span class="hljs-title class_ inherited__">String</span>, <span class="hljs-title class_ inherited__">CodingKey</span> &#123;<br>        <span class="hljs-keyword">case</span> latitude<br>        <span class="hljs-keyword">case</span> longitude<br>   &#125;<br><br><span class="hljs-keyword">extension</span> <span class="hljs-title class_">CLLocationCoordinate2D</span>: <span class="hljs-title class_ inherited__">Decodable</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">init</span>(<span class="hljs-params">from</span> <span class="hljs-params">decoder</span>: <span class="hljs-type">Decoder</span>) <span class="hljs-keyword">throws</span> &#123;<br>        <span class="hljs-keyword">let</span> values <span class="hljs-operator">=</span> <span class="hljs-keyword">try</span> decoder.container(keyedBy: <span class="hljs-type">CodingKeys</span>.<span class="hljs-keyword">self</span>)<br>        <span class="hljs-keyword">self</span>.<span class="hljs-keyword">init</span>()<br>        latitude <span class="hljs-operator">=</span> <span class="hljs-keyword">try</span> values.decode(<span class="hljs-type">Double</span>.<span class="hljs-keyword">self</span>, forKey: .latitude)<br>        longitude <span class="hljs-operator">=</span> <span class="hljs-keyword">try</span> values.decode(<span class="hljs-type">Double</span>.<span class="hljs-keyword">self</span>, forKey: .longitude)<br>   &#125;<br>&#125;<br><br><span class="hljs-keyword">extension</span> <span class="hljs-title class_">CLLocationCoordinate2D</span>: <span class="hljs-title class_ inherited__">Encodable</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">encode</span>(<span class="hljs-params">to</span> <span class="hljs-params">encoder</span>: <span class="hljs-type">Encoder</span>) <span class="hljs-keyword">throws</span> &#123;<br>        <span class="hljs-keyword">var</span> container <span class="hljs-operator">=</span> encoder.container(keyedBy: <span class="hljs-type">CodingKeys</span>.<span class="hljs-keyword">self</span>)<br>        <span class="hljs-keyword">try</span> container.encode(latitude, forKey: .latitude)<br>        <span class="hljs-keyword">try</span> container.encode(longitude, forKey: .longitude)<br>   &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>从这里也可以看出，使用 SwiftData 存储的对象可以直接使用 <code>==</code> 来判断两者是否为同一对象。</p>
+<p>从这里也可以看出，使用 SwiftData 存储的对象可以直接使用 <code>==</code> 来判断两者是否为同一对象（SwiftData 可以使用等于（&#x3D;&#x3D;）和非等于（！&#x3D;）运算符比较等于类型的实例）。</p>
 <p>例如在获得数组元素 index 时：</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 一般来说是这样</span><br><span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> items.firstIndex(where: &#123; <span class="hljs-variable">$0</span>.id <span class="hljs-operator">==</span> item.id &#125;)<br><br><span class="hljs-comment">// 使用 SwiftData 后可以这样</span><br><span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> items.firstIndex(where: &#123; <span class="hljs-variable">$0</span> <span class="hljs-operator">==</span> item &#125;)<br></code></pre></td></tr></table></figure>
 
@@ -296,6 +296,7 @@
 <ol>
 <li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/77633315/how-to-use-cllocationcoordinate2d-and-color-data-types-in-swift-data">How to use CLLocationCoordinate2D and Color data types in Swift Data?</a></li>
 <li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/78264020/cllocationcoordinate2d-does-not-conform-to-persistentmodel-swiftdata">CLLocationCoordinate2d does not conform to ‘PersistentModel’ SwiftData</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_28323373/article/details/102310403">Swift 自定义结构体和类应该遵循的通用协议</a></li>
 </ol>
 
                 
