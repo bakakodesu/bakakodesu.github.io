@@ -1,0 +1,720 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <link rel="icon" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="wonderhoi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="原文：Swift 自定义结构体和类应该遵循的通用协议 Equatable &amp; Hashable使用自定义类型对程序中的数据进行建模时，可能经常需要检查两个值是否相同或不同，或者值列表中是否包含特定值。 此功能以及将值存储在集合中或用作字典中的键的功能受两个相关的标准库协议Equatable和Hashable约束。 你可以使用等于（&#x3D;&#x3D;）和非等于（！&#x3D;）运算符比">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「转载」Swift Equatable &amp; Hashable 通用协议">
+<meta property="og:url" content="https://wonderhoi.com/2024/12/20/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DSwift-Equatable-Hashable-%E9%80%9A%E7%94%A8%E5%8D%8F%E8%AE%AE/index.html">
+<meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="原文：Swift 自定义结构体和类应该遵循的通用协议 Equatable &amp; Hashable使用自定义类型对程序中的数据进行建模时，可能经常需要检查两个值是否相同或不同，或者值列表中是否包含特定值。 此功能以及将值存储在集合中或用作字典中的键的功能受两个相关的标准库协议Equatable和Hashable约束。 你可以使用等于（&#x3D;&#x3D;）和非等于（！&#x3D;）运算符比">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-12-20T08:45:59.000Z">
+<meta property="article:modified_time" content="2025-01-06T18:11:50.005Z">
+<meta property="article:author" content="wonderhoi">
+<meta property="article:tag" content="SwiftUI">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>「转载」Swift Equatable &amp; Hashable 通用协议 - 这是一个PM的BLOG</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wonderhoi.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>这是一个PM的BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/wallhaven-m35rwm.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="「转载」Swift Equatable &amp; Hashable 通用协议"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-12-20 16:45" pubdate>
+          2024年12月20日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.5k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">「转载」Swift Equatable &amp; Hashable 通用协议</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>原文：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_28323373/article/details/102310403">Swift 自定义结构体和类应该遵循的通用协议</a></p>
+<h2 id="Equatable-Hashable"><a href="#Equatable-Hashable" class="headerlink" title="Equatable &amp; Hashable"></a>Equatable &amp; Hashable</h2><p>使用自定义类型对程序中的数据进行建模时，可能经常需要检查两个值是否相同或不同，或者值列表中是否包含特定值。 此功能以及将值存储在集合中或用作字典中的键的功能受两个相关的标准库协议Equatable和Hashable约束。</p>
+<p>你可以使用等于（&#x3D;&#x3D;）和非等于（！&#x3D;）运算符比较等于类型的实例。</p>
+<p>可散列类型的实例可以在数学上将其值减小为单个整数，集合和字典在内部使用该整数来快速一致地进行查找。</p>
+<p>许多标准库类型都是可等于和可哈希的，包括字符串，整数，浮点值，布尔值以及可等于和可哈希的类型的集合。 在下面的示例中，&#x3D;&#x3D;比较和contains（_ :)方法调用取决于相等的字符串和整数：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">if</span> username <span class="hljs-operator">==</span> <span class="hljs-string">&quot;Arturo&quot;</span> &#123;<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hi, Arturo!&quot;</span>)<br>&#125;<br><br><span class="hljs-keyword">let</span> favoriteNumbers <span class="hljs-operator">=</span> [<span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]<br><span class="hljs-keyword">if</span> favoriteNumbers.contains(todaysDate.day) &#123;<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;It&#x27;s a good day today!&quot;</span>)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>遵循Equatable和Hashable协议非常简单，可以轻松地在Swift中使用您自己的类型。 对于所有自定义模型类型而言，这都是一个好主意。</p>
+<h2 id="自动遵循Equatable和Hashable"><a href="#自动遵循Equatable和Hashable" class="headerlink" title="自动遵循Equatable和Hashable"></a>自动遵循Equatable和Hashable</h2><p>您可以通过简单地在与类型的原始声明相同的文件中声明这些协议一致性，来使许多自定义类型可等于和可哈希化。 在声明类型时，将Equatable和Hashable添加到采用的协议列表中，然后编译器自动填写这两个协议的要求：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">/// A position in an x-y coordinate system.</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Position</span>: <span class="hljs-title class_ inherited__">Equatable</span>, <span class="hljs-title class_ inherited__">Hashable</span> &#123;<br>    <span class="hljs-keyword">var</span> x: <span class="hljs-type">Int</span><br>    <span class="hljs-keyword">var</span> y: <span class="hljs-type">Int</span><br>    <br>    <span class="hljs-keyword">init</span>(<span class="hljs-keyword">_</span> <span class="hljs-params">x</span>: <span class="hljs-type">Int</span>, <span class="hljs-keyword">_</span> <span class="hljs-params">y</span>: <span class="hljs-type">Int</span>) &#123;<br>        <span class="hljs-keyword">self</span>.x <span class="hljs-operator">=</span> x<br>        <span class="hljs-keyword">self</span>.y <span class="hljs-operator">=</span> y<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>使用Equatable一致性，您可以将等于运算符（&#x3D;&#x3D;）或不等于运算符（！&#x3D;）与Position类型的任意两个实例一起使用。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> availablePositions <span class="hljs-operator">=</span> [<span class="hljs-type">Position</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>), <span class="hljs-type">Position</span>(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>), <span class="hljs-type">Position</span>(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>)]<br><span class="hljs-keyword">let</span> gemPosition <span class="hljs-operator">=</span> <span class="hljs-type">Position</span>(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>)<br><br><span class="hljs-keyword">for</span> position <span class="hljs-keyword">in</span> availablePositions &#123;<br>    <span class="hljs-keyword">if</span> gemPosition <span class="hljs-operator">==</span> position &#123;<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Gem found at (<span class="hljs-subst">\(position.x)</span>, <span class="hljs-subst">\(position.y)</span>)!&quot;</span>)<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;No gem at (<span class="hljs-subst">\(position.x)</span>, <span class="hljs-subst">\(position.y)</span>)&quot;</span>)<br>    &#125;<br>&#125;<br><span class="hljs-comment">// No gem at (0, 0)</span><br><span class="hljs-comment">// No gem at (0, 1)</span><br><span class="hljs-comment">// Gem found at (1, 0)!</span><br></code></pre></td></tr></table></figure>
+
+<p>可散列的一致性意味着您可以将职位存储在集合中，并快速检查您之前是否访问过职位，如以下示例所示：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">var</span> visitedPositions: <span class="hljs-type">Set</span> <span class="hljs-operator">=</span> [<span class="hljs-type">Position</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>), <span class="hljs-type">Position</span>(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>)]<br><span class="hljs-keyword">let</span> currentPosition <span class="hljs-operator">=</span> <span class="hljs-type">Position</span>(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>)<br><br><span class="hljs-keyword">if</span> visitedPositions.contains(currentPosition) &#123;<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Already visited (<span class="hljs-subst">\(currentPosition.x)</span>, <span class="hljs-subst">\(currentPosition.y)</span>)&quot;</span>)<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;First time at (<span class="hljs-subst">\(currentPosition.x)</span>, <span class="hljs-subst">\(currentPosition.y)</span>)&quot;</span>)<br>    visitedPositions.insert(currentPosition)<br>&#125;<br><span class="hljs-comment">// First time at (1, 3)</span><br></code></pre></td></tr></table></figure>
+
+<p>除了简化代码外，这种自动一致性还减少了错误，因为在哈希和测试相等性时会自动包括添加到自定义类型的任何新属性。 如果类型是满足以下条件的结构或枚举，则该类型可自动符合Equatable和Hashable：</p>
+<p>对于结构，其所有存储的属性必须符合Equatable和Hashable。</p>
+<p>对于枚举，其所有关联值必须符合Equatable和Hashable。 （没有关联值的枚举即使没有声明采用也具有Equatable和Hashable一致性。）</p>
+<h2 id="手动遵循-Equatable-Hashable"><a href="#手动遵循-Equatable-Hashable" class="headerlink" title="手动遵循 Equatable &amp; Hashable"></a>手动遵循 Equatable &amp; Hashable</h2><p>在以下情况下，您需要为类型手动实现Equatable和Hashable一致性：</p>
+<p>该类型不符合上一节中列出的条件。</p>
+<p>您要自定义类型的一致性。</p>
+<p>您要扩展在另一个文件或模块中声明的类型以使其符合标准。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Player</span> &#123;<br>    <span class="hljs-keyword">var</span> name: <span class="hljs-type">String</span><br>    <span class="hljs-keyword">var</span> position: <span class="hljs-type">Position</span><br>    <br>    <span class="hljs-keyword">init</span>(<span class="hljs-params">name</span>: <span class="hljs-type">String</span>, <span class="hljs-params">position</span>: <span class="hljs-type">Position</span>) &#123;<br>        <span class="hljs-keyword">self</span>.name <span class="hljs-operator">=</span> name<br>        <span class="hljs-keyword">self</span>.position <span class="hljs-operator">=</span> position<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>Player类型是一个类，因此不符合自动合成Equatable或Hashable要求的条件。 要使此类符合Equatable协议，请在扩展中声明符合性并实现静态&#x3D;&#x3D; 运算符方法。 比较 &#x3D;&#x3D;方法实现中每个重要属性的相等性：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">extension</span> <span class="hljs-title class_">Player</span>: <span class="hljs-title class_ inherited__">Equatable</span> &#123;<br>    <span class="hljs-keyword">static</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">==</span>(<span class="hljs-params">lhs</span>: <span class="hljs-type">Player</span>, <span class="hljs-params">rhs</span>: <span class="hljs-type">Player</span>) -&gt; <span class="hljs-type">Bool</span> &#123;<br>        <span class="hljs-keyword">return</span> lhs.name <span class="hljs-operator">==</span> rhs.name <span class="hljs-operator">&amp;&amp;</span> lhs.position <span class="hljs-operator">==</span> rhs.position<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>为了使Player符合Hashable协议，请在另一个扩展中声明符合性并实现hash（into :)方法。 在hash（into :)方法中，对提供的具有每个重要属性的哈希器调用Combine（_ :)方法：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">extension</span> <span class="hljs-title class_">Player</span>: <span class="hljs-title class_ inherited__">Hashable</span> &#123;<br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">hash</span>(<span class="hljs-params">into</span> <span class="hljs-params">hasher</span>: <span class="hljs-keyword">inout</span> <span class="hljs-type">Hasher</span>) &#123;<br>        hasher.combine(name)<br>        hasher.combine(position)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="将所有重要属性用于Equatable-Hashable"><a href="#将所有重要属性用于Equatable-Hashable" class="headerlink" title="将所有重要属性用于Equatable&amp;Hashable"></a>将所有重要属性用于Equatable&amp;Hashable</h2><p>在实现&#x3D;&#x3D;方法和hash(into :)方法时，请使用所有会影响自定义类型的两个实例是否相等的属性。 在上面的实现中，Player类型在两种方法中都使用名称和位置。</p>
+<p>如果您的类型包含不会影响两个实例是否相等的属性，请在&#x3D;&#x3D;方法中进行比较，并从hash（into :)中的哈希中排除这些属性。 例如，一种类型可能会缓存一个昂贵的计算值，因此它只需要计算一次即可。 如果比较该类型的两个实例，则是否已缓存计算值不会影响它们的相等性，因此应将缓存值排除在比较和哈希之外。</p>
+<p><strong>在&#x3D;&#x3D;和hash（into :)方法中始终使用相同的属性。 在集合和字典中使用自定义类型时，在两种方法中使用不同的属性组可能导致意外的行为或性能。</strong></p>
+<h2 id="自定义NSObject子类行为"><a href="#自定义NSObject子类行为" class="headerlink" title="自定义NSObject子类行为"></a>自定义NSObject子类行为</h2><p>NSObject子类继承对Equatable和Hashable协议的一致性，并基于实例身份进行相等性处理。 如果需要自定义此行为，请重写isEqual（_ :)方法和hash属性，而不要使用&#x3D;&#x3D;运算符方法和hashValue属性。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">extension</span> <span class="hljs-title class_">MyNSObjectSubclass</span> &#123;<br>    <span class="hljs-keyword">override</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">isEqual</span>(<span class="hljs-keyword">_</span> <span class="hljs-params">object</span>: <span class="hljs-keyword">Any</span><span class="hljs-operator">?</span>) -&gt; <span class="hljs-type">Bool</span> &#123;<br>        <span class="hljs-keyword">guard</span> <span class="hljs-keyword">let</span> other <span class="hljs-operator">=</span> object <span class="hljs-keyword">as?</span> <span class="hljs-type">MyNSObjectSubclass</span><br>            <span class="hljs-keyword">else</span> &#123; <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span> &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.firstProperty <span class="hljs-operator">==</span> other.firstProperty <br>            <span class="hljs-operator">&amp;&amp;</span> <span class="hljs-keyword">self</span>.secondProperty <span class="hljs-operator">==</span> other.secondProperty<br>    &#125;<br><br>    <span class="hljs-keyword">override</span> <span class="hljs-keyword">var</span> hash: <span class="hljs-type">Int</span> &#123;<br>        <span class="hljs-keyword">var</span> hasher <span class="hljs-operator">=</span> <span class="hljs-type">Hasher</span>()<br>        hasher.combine(firstProperty)<br>        hasher.combine(secondProperty)<br>        <span class="hljs-keyword">return</span> hasher.finalize()<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>如前一节所述，被认为相等的两个实例必须具有相同的哈希值。 如果您覆盖这些声明之一，则也必须覆盖另一个声明以维持该保证。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="category-chain-item">转载</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/SwiftUI/" class="print-no-link">#SwiftUI</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>「转载」Swift Equatable &amp; Hashable 通用协议</div>
+      <div>https://wonderhoi.com/2024/12/20/「转载」Swift-Equatable-Hashable-通用协议/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>wonderhoi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年12月20日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/01/07/Xcode-%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E7%AA%97%E5%8F%A3/" title="Xcode 打开多个窗口">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Xcode 打开多个窗口</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/12/19/SwiftUI-Equatable-%E4%B8%8E-Hashable-%E5%8D%8F%E8%AE%AE/" title="SwiftUI Equatable 与 Hashable 协议">
+                        <span class="hidden-mobile">SwiftUI Equatable 与 Hashable 协议</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
