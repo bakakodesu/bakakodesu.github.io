@@ -21,17 +21,16 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="关于版本号具体可看 Xcode 工程设置构建版本号自动递增 我们这里取的是 Verson 而不是 Build，所以可以参考 How do I get the App version and build number using Swift? 中的： 1let appVersion &#x3D; Bundle.main.infoDictionary?[&quot;CFBundleShortVersionStr">
+    <meta name="description" content="版本号获取这里取的是 Verson 而不是 Build，参考 How do I get the App version and build number using Swift? 中的： 1let appVersion &#x3D; Bundle.main.infoDictionary?[&quot;CFBundleShortVersionString&quot;] as? String  构建版本号递增可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift 获取工程版本号">
+<meta property="og:title" content="Xcode 获取工程版本号以及构建版本号自动递增">
 <meta property="og:url" content="https://wonderhoi.com/2024/01/13/Swift-%E8%8E%B7%E5%8F%96%E5%B7%A5%E7%A8%8B%E7%89%88%E6%9C%AC%E5%8F%B7/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="关于版本号具体可看 Xcode 工程设置构建版本号自动递增 我们这里取的是 Verson 而不是 Build，所以可以参考 How do I get the App version and build number using Swift? 中的： 1let appVersion &#x3D; Bundle.main.infoDictionary?[&quot;CFBundleShortVersionStr">
+<meta property="og:description" content="版本号获取这里取的是 Verson 而不是 Build，参考 How do I get the App version and build number using Swift? 中的： 1let appVersion &#x3D; Bundle.main.infoDictionary?[&quot;CFBundleShortVersionString&quot;] as? String  构建版本号递增可">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-13T06:08:09.000Z">
-<meta property="article:modified_time" content="2024-07-05T04:03:55.000Z">
+<meta property="article:modified_time" content="2025-01-09T05:10:26.407Z">
 <meta property="article:author" content="wonderhoi">
-<meta property="article:tag" content="Swift">
 <meta property="article:tag" content="Xcode">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -39,7 +38,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Swift 获取工程版本号 - 这是一个PM的BLOG</title>
+  <title>Xcode 获取工程版本号以及构建版本号自动递增 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -216,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Swift 获取工程版本号"></span>
+            <span id="subtitle" data-typed-text="Xcode 获取工程版本号以及构建版本号自动递增"></span>
           
         </div>
 
@@ -239,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          58 字
+          166 字
         
       </span>
     
@@ -278,17 +277,20 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Swift 获取工程版本号</h1>
+            <h1 id="seo-header">Xcode 获取工程版本号以及构建版本号自动递增</h1>
             
             
               <div class="markdown-body">
                 
-                <p>关于版本号具体可看 <a target="_blank" rel="noopener" href="https://kangzubin.com/xcode-buildversion-increase/">Xcode 工程设置构建版本号自动递增</a></p>
-<p>我们这里取的是 <code>Verson</code> 而不是 <code>Build</code>，所以可以参考 <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25965239/how-do-i-get-the-app-version-and-build-number-using-swift">How do I get the App version and build number using Swift?</a> 中的：</p>
+                <h2 id="版本号获取"><a href="#版本号获取" class="headerlink" title="版本号获取"></a>版本号获取</h2><p>这里取的是 <code>Verson</code> 而不是 <code>Build</code>，参考 <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25965239/how-do-i-get-the-app-version-and-build-number-using-swift">How do I get the App version and build number using Swift?</a> 中的：</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> appVersion <span class="hljs-operator">=</span> <span class="hljs-type">Bundle</span>.main.infoDictionary<span class="hljs-operator">?</span>[<span class="hljs-string">&quot;CFBundleShortVersionString&quot;</span>] <span class="hljs-keyword">as?</span> <span class="hljs-type">String</span><br></code></pre></td></tr></table></figure>
 
-<p>关于使用</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Text</span>(appVersion <span class="hljs-operator">??</span> <span class="hljs-string">&quot;-.-.-&quot;</span>)<br></code></pre></td></tr></table></figure>
+<h2 id="构建版本号递增"><a href="#构建版本号递增" class="headerlink" title="构建版本号递增"></a>构建版本号递增</h2><p>可看 <a target="_blank" rel="noopener" href="https://kangzubin.com/xcode-buildversion-increase/">Xcode 工程设置构建版本号自动递增</a></p>
+<p>首先，在 Build Settings-Versioning 配置项中，设置 <code>Current Project Version</code> 为选定的值，例如 <code>100</code>（可以为整数或浮点数，新工程一般设为 <code>1</code>），<code>agvtool</code> 命令会根据这个值来递增 “Build” 号。另外需要再选择 <code>Versioning System</code>的值为 <code>Apple Generic</code></p>
+<p>然后，在 Build Phases 中，点击 “+” 号，选择 “New Run Script Phase” 添加一个执行脚本，并设置以下脚本代码</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">xcrun agvtool next-version -all<br></code></pre></td></tr></table></figure>
+
+<p>以上，我们在每次编译工程时，“Build” 号就会自动递增加 1 了。</p>
 
                 
               </div>
@@ -322,8 +324,6 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Swift/" class="print-no-link">#Swift</a>
-      
         <a href="/tags/Xcode/" class="print-no-link">#Xcode</a>
       
     </div>
@@ -336,7 +336,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Swift 获取工程版本号</div>
+      <div>Xcode 获取工程版本号以及构建版本号自动递增</div>
       <div>https://wonderhoi.com/2024/01/13/Swift-获取工程版本号/</div>
     </div>
     <div class="license-meta">
