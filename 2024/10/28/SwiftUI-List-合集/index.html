@@ -21,15 +21,15 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="SwiftUI基础篇List  How to Customise the SwiftUI List Style and Background Color   1234567891011121314151617181920List&#123;    ForEach(billDateModel.dataSource)&#123; section in        Section(header: S">
+    <meta name="description" content="SwiftUI基础篇List  How to Customise the SwiftUI List Style and Background Color  SwiftUI中List的样式及使用详解（添加、移动、删除、自定义滑动）   1234567891011121314151617181920List&#123;    ForEach(billDateModel.dataSource)&amp;#12">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SwiftUI List 合集">
 <meta property="og:url" content="https://wonderhoi.com/2024/10/28/SwiftUI-List-%E5%90%88%E9%9B%86/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="SwiftUI基础篇List  How to Customise the SwiftUI List Style and Background Color   1234567891011121314151617181920List&#123;    ForEach(billDateModel.dataSource)&#123; section in        Section(header: S">
+<meta property="og:description" content="SwiftUI基础篇List  How to Customise the SwiftUI List Style and Background Color  SwiftUI中List的样式及使用详解（添加、移动、删除、自定义滑动）   1234567891011121314151617181920List&#123;    ForEach(billDateModel.dataSource)&amp;#12">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-28T02:15:09.000Z">
-<meta property="article:modified_time" content="2024-11-06T03:17:49.225Z">
+<meta property="article:modified_time" content="2025-01-10T16:12:25.400Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="SwiftUI">
 <meta name="twitter:card" content="summary_large_image">
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          118 字
+          139 字
         
       </span>
     
@@ -286,6 +286,8 @@
 <li><p><a target="_blank" rel="noopener" href="https://www.6hu.cc/archives/203140.html">SwiftUI基础篇List</a></p>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://www.swiftyplace.com/blog/customise-list-view-appearance-in-swiftui-examples-beyond-the-default-stylings">How to Customise the SwiftUI List Style and Background Color</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/guoyongming925/article/details/139031763">SwiftUI中List的样式及使用详解（添加、移动、删除、自定义滑动）</a></p>
 </li>
 </ul>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">List</span>&#123;<br>    <span class="hljs-type">ForEach</span>(billDateModel.dataSource)&#123; section <span class="hljs-keyword">in</span><br>        <span class="hljs-type">Section</span>(header: <span class="hljs-type">SectionView</span>(text: section.date)<br>            .listRowInsets(<span class="hljs-type">EdgeInsets</span>())                            <span class="hljs-comment">// Remove section padding</span><br>            .background(<span class="hljs-type">Color</span>.green.opacity(<span class="hljs-number">0.2</span>))                   <span class="hljs-comment">// section 默认透明</span><br>        ) &#123;<br>            <span class="hljs-type">ForEach</span>(section.bills) &#123; row <span class="hljs-keyword">in</span><br>                <span class="hljs-type">RowView</span>(text: row.count)<br>                    .listRowInsets(<span class="hljs-type">EdgeInsets</span>())                    <span class="hljs-comment">// Remove row padding，实际上还存在上下默认间隙</span><br>                    .listRowBackground(<span class="hljs-type">Color</span>.red.opacity(<span class="hljs-number">0.2</span>))      <span class="hljs-comment">// row 自带白色</span><br>                    .listRowSeparator(.hidden)                      <span class="hljs-comment">// 隐藏线条</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br>.environment(\.defaultMinListRowHeight, <span class="hljs-number">0</span>)                          <span class="hljs-comment">// 去掉 row 上下的默认间隙</span><br>.environment(\.defaultMinListHeaderHeight, <span class="hljs-number">0</span>)                       <span class="hljs-comment">// 去掉 header 下面的默认间隙</span><br>.listStyle(<span class="hljs-type">PlainListStyle</span>())                                        <span class="hljs-comment">// Remove Group</span><br><br>.background(<span class="hljs-type">Color</span>.blue.opacity(<span class="hljs-number">0.1</span>))                                <span class="hljs-comment">// list 不带颜色，background 不包括 row</span><br></code></pre></td></tr></table></figure>
