@@ -1,0 +1,720 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <link rel="icon" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="wonderhoi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="正六边形的结构1234567struct Hexagon:&#123;    let points: [CLLocationCoordinate2D]    let centerLatitude: Double    let centerLongitude: Double    let startAngle: Double    let radius: Double    &#125;  正六边形">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift 在地图上绘制正六边形">
+<meta property="og:url" content="https://wonderhoi.com/2024/12/11/Swift-%E5%9C%A8%E5%9C%B0%E5%9B%BE%E4%B8%8A%E7%BB%98%E5%88%B6%E6%AD%A3%E5%85%AD%E8%BE%B9%E5%BD%A2/index.html">
+<meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="正六边形的结构1234567struct Hexagon:&#123;    let points: [CLLocationCoordinate2D]    let centerLatitude: Double    let centerLongitude: Double    let startAngle: Double    let radius: Double    &#125;  正六边形">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/121201.png">
+<meta property="article:published_time" content="2024-12-11T07:58:52.000Z">
+<meta property="article:modified_time" content="2025-01-15T17:36:01.186Z">
+<meta property="article:author" content="wonderhoi">
+<meta property="article:tag" content="Map">
+<meta property="article:tag" content="Swift">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/121201.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Swift 在地图上绘制正六边形 - 这是一个PM的BLOG</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wonderhoi.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>这是一个PM的BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/wallhaven-m35rwm.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Swift 在地图上绘制正六边形"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-12-11 15:58" pubdate>
+          2024年12月11日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          789 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Swift 在地图上绘制正六边形</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="正六边形的结构"><a href="#正六边形的结构" class="headerlink" title="正六边形的结构"></a>正六边形的结构</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Hexagon</span>:&#123;<br>    <span class="hljs-keyword">let</span> points: [<span class="hljs-type">CLLocationCoordinate2D</span>]<br>    <span class="hljs-keyword">let</span> centerLatitude: <span class="hljs-type">Double</span><br>    <span class="hljs-keyword">let</span> centerLongitude: <span class="hljs-type">Double</span><br>    <span class="hljs-keyword">let</span> startAngle: <span class="hljs-type">Double</span><br>    <span class="hljs-keyword">let</span> radius: <span class="hljs-type">Double</span>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="正六边形顶点确认"><a href="#正六边形顶点确认" class="headerlink" title="正六边形顶点确认"></a>正六边形顶点确认</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// startAngle 正六边形的起始角度</span><br><span class="hljs-comment">// radius 正六边形中心到顶点的距离</span><br><span class="hljs-keyword">func</span> <span class="hljs-title function_">drawHexagon</span>(<span class="hljs-params">centerLatitude</span>: <span class="hljs-type">Double</span>, <span class="hljs-params">centerLongitude</span>: <span class="hljs-type">Double</span>, <span class="hljs-params">startAngle</span>: <span class="hljs-type">Double</span>, <span class="hljs-params">radius</span>: <span class="hljs-type">Double</span>) -&gt; <span class="hljs-type">Hexagon</span> &#123;<br><br>    <span class="hljs-keyword">let</span> point: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(<span class="hljs-type">CLLocationCoordinate2D</span>(latitude: centerLatitude, longitude: centerLongitude))<br>    <span class="hljs-keyword">var</span> i <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br>    <span class="hljs-keyword">var</span> points: [<span class="hljs-type">MKMapPoint</span>] <span class="hljs-operator">=</span> []<br>    <span class="hljs-keyword">var</span> angle <span class="hljs-operator">=</span> startAngle <span class="hljs-operator">/</span> <span class="hljs-number">180</span> <span class="hljs-operator">*</span> <span class="hljs-type">Double</span>.pi<br><br>    <span class="hljs-keyword">while</span> i <span class="hljs-operator">&lt;</span> <span class="hljs-number">6</span> &#123;<br>        <span class="hljs-keyword">let</span> x <span class="hljs-operator">=</span> point.x <span class="hljs-operator">+</span> radius <span class="hljs-operator">*</span> sin(angle) <span class="hljs-operator">*</span> <span class="hljs-number">7.612952538285698</span><br>        <span class="hljs-keyword">let</span> y <span class="hljs-operator">=</span> point.y <span class="hljs-operator">-</span> radius <span class="hljs-operator">*</span> cos(angle) <span class="hljs-operator">*</span> <span class="hljs-number">7.612952538285698</span><br>        angle <span class="hljs-operator">+=</span> <span class="hljs-type">Double</span>.pi <span class="hljs-operator">/</span> <span class="hljs-number">3</span><br>        <span class="hljs-keyword">let</span> p: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(x: x, y: y)<br>        points.append(p)<br>        i <span class="hljs-operator">+=</span> <span class="hljs-number">1</span><br>    &#125;<br><br>    <span class="hljs-comment">// 实际距离，单位 m</span><br>    <span class="hljs-keyword">let</span> physicalDistance <span class="hljs-operator">=</span> points[<span class="hljs-number">0</span>].distance(to: points[<span class="hljs-number">1</span>])<br>    <span class="hljs-comment">// CG 距离，两点的距离公式</span><br>    <span class="hljs-keyword">let</span> cgDistance <span class="hljs-operator">=</span> sqrt(pow((points[<span class="hljs-number">0</span>].x <span class="hljs-operator">-</span> points[<span class="hljs-number">1</span>].x), <span class="hljs-number">2</span>) <span class="hljs-operator">+</span> pow((points[<span class="hljs-number">0</span>].y <span class="hljs-operator">-</span> points[<span class="hljs-number">1</span>].y), <span class="hljs-number">2</span>))<br>    <span class="hljs-built_in">print</span>(cgDistance)<br>    <span class="hljs-built_in">print</span>(physicalDistance)<br>    <span class="hljs-built_in">print</span>(cgDistance <span class="hljs-operator">/</span> physicalDistance)<br>  <br>    <span class="hljs-keyword">let</span> hexagon <span class="hljs-operator">=</span> <span class="hljs-type">Hexagon</span>(points: [<br><br>      points[<span class="hljs-number">0</span>].coordinate,<br>      points[<span class="hljs-number">1</span>].coordinate,<br>      points[<span class="hljs-number">2</span>].coordinate,<br>      points[<span class="hljs-number">3</span>].coordinate,<br>      points[<span class="hljs-number">4</span>].coordinate,<br>      points[<span class="hljs-number">5</span>].coordinate<br>    <br>    ], centerLatitude: centerLatitude, centerLongitude: centerLongitude, startAngle: startAngle, radius: radius)<br>  <br>    <span class="hljs-keyword">return</span> hexagon<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>关于 7.612952538285698，是通过 CG 距离除 cllocationdistance 也就是实际物理距离得到的。</p>
+<h2 id="在已知正六边形的基础上绘制相邻的正六边形"><a href="#在已知正六边形的基础上绘制相邻的正六边形" class="headerlink" title="在已知正六边形的基础上绘制相邻的正六边形"></a>在已知正六边形的基础上绘制相邻的正六边形</h2><p>准确来说，应该分成两步：</p>
+<ol>
+<li>获得正六边形相邻 6 个正六边形的中心；</li>
+<li>以新的中心为基础，确定新正六边形的 6 个顶点。</li>
+</ol>
+<h3 id="获得相邻正六边形的中心"><a href="#获得相邻正六边形的中心" class="headerlink" title="获得相邻正六边形的中心"></a>获得相邻正六边形的中心</h3><p>由图可以观察到，相邻正六边形的中心位于正六边形顶点 +30 度，距离根号三倍半径的地方。</p>
+<img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/121201.png" srcset="/img/loading.gif" lazyload style="zoom:33%;" />
+
+<p>于是有：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">func</span> <span class="hljs-title function_">getCenters</span>(<span class="hljs-params">hexagon</span>: <span class="hljs-type">Hexagon</span>, <span class="hljs-params">direction</span>: <span class="hljs-type">Int</span>) -&gt; <span class="hljs-type">MKMapPoint</span> &#123;<br>    <span class="hljs-comment">// 取出中心点</span><br>    <span class="hljs-keyword">let</span> point: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(<span class="hljs-type">CLLocationCoordinate2D</span>(latitude: hexagon.centerLatitude, longitude: hexagon.centerLongitude))<br>    <span class="hljs-comment">// 一共有六个相邻 hex</span><br>    <span class="hljs-keyword">let</span> pointCount <span class="hljs-operator">=</span> <span class="hljs-number">6</span><br>    <span class="hljs-keyword">var</span> i <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br>    <span class="hljs-keyword">var</span> centerPoints: [<span class="hljs-type">MKMapPoint</span>] <span class="hljs-operator">=</span> []<br>    <span class="hljs-comment">// 在生成顶点的角度下偏转 30 度即为六个相邻 hex 的中心点方向</span><br>    <span class="hljs-keyword">var</span> centerAngle <span class="hljs-operator">=</span> (hexagon.startAngle <span class="hljs-operator">+</span> <span class="hljs-number">30</span>) <span class="hljs-operator">/</span> <span class="hljs-number">180</span> <span class="hljs-operator">*</span> <span class="hljs-type">Double</span>.pi<br><br>    <span class="hljs-keyword">while</span> i <span class="hljs-operator">&lt;</span> pointCount &#123;<br>        <span class="hljs-comment">// 2 分之根号 3 为中心点到边的垂直距离，乘 2 为中心点到相邻 hex 中心点的距离</span><br>        <span class="hljs-keyword">let</span> x <span class="hljs-operator">=</span> point.x <span class="hljs-operator">+</span> hexagon.radius <span class="hljs-operator">/</span> <span class="hljs-number">2</span> <span class="hljs-operator">*</span> sqrt(<span class="hljs-number">3</span>) <span class="hljs-operator">*</span> <span class="hljs-number">2</span> <span class="hljs-operator">*</span> sin(centerAngle) <span class="hljs-operator">*</span> <span class="hljs-number">7.612952538285698</span><br>        <span class="hljs-keyword">let</span> y <span class="hljs-operator">=</span> point.y <span class="hljs-operator">-</span> hexagon.radius <span class="hljs-operator">/</span> <span class="hljs-number">2</span> <span class="hljs-operator">*</span> sqrt(<span class="hljs-number">3</span>) <span class="hljs-operator">*</span> <span class="hljs-number">2</span> <span class="hljs-operator">*</span> cos(centerAngle) <span class="hljs-operator">*</span> <span class="hljs-number">7.612952538285698</span><br>        centerAngle <span class="hljs-operator">+=</span> <span class="hljs-number">2</span> <span class="hljs-operator">*</span> <span class="hljs-type">Double</span>.pi <span class="hljs-operator">/</span> <span class="hljs-type">Double</span>(pointCount)<br>        <span class="hljs-keyword">let</span> center: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(x: x, y: y)<br>        centerPoints.append(center)<br>        i <span class="hljs-operator">+=</span> <span class="hljs-number">1</span><br>    &#125;<br>    <span class="hljs-keyword">return</span> centerPoints[direction]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="绘制相邻正六边形"><a href="#绘制相邻正六边形" class="headerlink" title="绘制相邻正六边形"></a>绘制相邻正六边形</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> hexagon <span class="hljs-operator">=</span> drawHexagon(<span class="hljs-operator">...</span>)<br><br><span class="hljs-comment">// 绘制正六边形相邻右上角的正六边形</span><br><span class="hljs-keyword">let</span> topRighthexagon <span class="hljs-operator">=</span> drawHexagon(<br>    centerLatitude: getCenters(hexagon: hexagon, direction: <span class="hljs-number">0</span>).latitude,<br>    centerLongitude: getCenters(hexagon: hexagon, direction: <span class="hljs-number">0</span>).longitude,<br>    startAngle: hexagon.startAngle,<br>    radius: hexagon.radius<br>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="全新的正六边形顶点确定方法"><a href="#全新的正六边形顶点确定方法" class="headerlink" title="全新的正六边形顶点确定方法"></a>全新的正六边形顶点确定方法</h2><p>参考：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/7278094/moving-a-cllocation-by-x-meters">Moving a CLLocation by x meters</a></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">func</span> <span class="hljs-title function_">drawHexagon</span>(<span class="hljs-params">origin</span>: <span class="hljs-type">CLLocationCoordinate2D</span>, <span class="hljs-params">distance</span>: <span class="hljs-type">Double</span>) -&gt; [<span class="hljs-type">CLLocationCoordinate2D</span>]&#123;<br>    <span class="hljs-keyword">let</span> distRadians <span class="hljs-operator">=</span> distance <span class="hljs-operator">/</span> (<span class="hljs-number">6372797.6</span>) <span class="hljs-comment">// earth radius in meters</span><br><br>    <span class="hljs-comment">// Degrees To Radians</span><br>    <span class="hljs-keyword">let</span> lat1 <span class="hljs-operator">=</span> origin.latitude <span class="hljs-operator">*</span> .pi <span class="hljs-operator">/</span> <span class="hljs-number">180</span><br>    <span class="hljs-keyword">let</span> lon1 <span class="hljs-operator">=</span> origin.longitude <span class="hljs-operator">*</span> .pi <span class="hljs-operator">/</span> <span class="hljs-number">180</span><br><br>    <span class="hljs-keyword">var</span> i <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br>    <br>	<span class="hljs-comment">// 90 度转弧度</span><br>    <span class="hljs-comment">// var bearing = 90.0 * .pi / 180</span><br>    <br>    <span class="hljs-comment">// 90 度弧度</span><br>    <span class="hljs-comment">// var bearing = pi/2</span><br><br>    <span class="hljs-keyword">var</span> bearing <span class="hljs-operator">=</span> <span class="hljs-number">0.0</span><br>    <span class="hljs-keyword">var</span> points: [<span class="hljs-type">CLLocationCoordinate2D</span>] <span class="hljs-operator">=</span> []<br><br>    <span class="hljs-keyword">while</span> i <span class="hljs-operator">&lt;</span> <span class="hljs-number">6</span> &#123;<br><br>        <span class="hljs-keyword">let</span> lat2 <span class="hljs-operator">=</span> asin(sin(lat1) <span class="hljs-operator">*</span> cos(distRadians) <span class="hljs-operator">+</span> cos(lat1) <span class="hljs-operator">*</span> sin(distRadians) <span class="hljs-operator">*</span> cos(bearing))<br>        <span class="hljs-keyword">let</span> lon2 <span class="hljs-operator">=</span> lon1 <span class="hljs-operator">+</span> atan2(sin(bearing) <span class="hljs-operator">*</span> sin(distRadians) <span class="hljs-operator">*</span> cos(lat1), cos(distRadians) <span class="hljs-operator">-</span> sin(lat1) <span class="hljs-operator">*</span> sin(lat2))<br><br>        <span class="hljs-keyword">let</span> point <span class="hljs-operator">=</span> <span class="hljs-type">CLLocationCoordinate2D</span>(latitude: lat2 <span class="hljs-operator">*</span> <span class="hljs-number">180</span> <span class="hljs-operator">/</span> .pi, longitude: lon2 <span class="hljs-operator">*</span> <span class="hljs-number">180</span> <span class="hljs-operator">/</span> .pi)     <span class="hljs-comment">// Radians To Degrees</span><br>        i <span class="hljs-operator">+=</span> <span class="hljs-number">1</span><br>        <span class="hljs-comment">// 60 度弧度</span><br>        bearing <span class="hljs-operator">+=</span> .pi <span class="hljs-operator">/</span> <span class="hljs-number">3</span><br>        points.append(point)<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> points<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>本质上是调用这个方法六次，每次 30 度：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">extension</span> <span class="hljs-title class_">CLLocationCoordinate2D</span> &#123;<br><br>    <span class="hljs-comment">/// Get coordinate moved from current to `distanceMeters` meters with azimuth `azimuth` [0, Double.pi)</span><br>    <span class="hljs-comment">///</span><br>    <span class="hljs-comment">/// - Parameters:</span><br>    <span class="hljs-comment">///   - distanceMeters: the distance in meters</span><br>    <span class="hljs-comment">///   - azimuth: the azimuth (bearing)</span><br>    <span class="hljs-comment">/// - Returns: new coordinate</span><br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">shift</span>(<span class="hljs-params">byDistance</span> <span class="hljs-params">distanceMeters</span>: <span class="hljs-type">Double</span>, <span class="hljs-params">azimuth</span>: <span class="hljs-type">Double</span>) -&gt; <span class="hljs-type">CLLocationCoordinate2D</span> &#123;<br>        <span class="hljs-keyword">let</span> bearing <span class="hljs-operator">=</span> azimuth<br>        <span class="hljs-keyword">let</span> origin <span class="hljs-operator">=</span> <span class="hljs-keyword">self</span><br>        <span class="hljs-keyword">let</span> distRadians <span class="hljs-operator">=</span> distanceMeters <span class="hljs-operator">/</span> (<span class="hljs-number">6372797.6</span>) <span class="hljs-comment">// earth radius in meters</span><br><br>        <span class="hljs-keyword">let</span> lat1 <span class="hljs-operator">=</span> origin.latitude <span class="hljs-operator">*</span> <span class="hljs-type">Double</span>.pi <span class="hljs-operator">/</span> <span class="hljs-number">180</span><br>        <span class="hljs-keyword">let</span> lon1 <span class="hljs-operator">=</span> origin.longitude <span class="hljs-operator">*</span> <span class="hljs-type">Double</span>.pi <span class="hljs-operator">/</span> <span class="hljs-number">180</span><br><br>        <span class="hljs-keyword">let</span> lat2 <span class="hljs-operator">=</span> asin(sin(lat1) <span class="hljs-operator">*</span> cos(distRadians) <span class="hljs-operator">+</span> cos(lat1) <span class="hljs-operator">*</span> sin(distRadians) <span class="hljs-operator">*</span> cos(bearing))<br>        <span class="hljs-keyword">let</span> lon2 <span class="hljs-operator">=</span> lon1 <span class="hljs-operator">+</span> atan2(sin(bearing) <span class="hljs-operator">*</span> sin(distRadians) <span class="hljs-operator">*</span> cos(lat1), cos(distRadians) <span class="hljs-operator">-</span> sin(lat1) <span class="hljs-operator">*</span> sin(lat2))<br>        <span class="hljs-keyword">return</span> <span class="hljs-type">CLLocationCoordinate2D</span>(latitude: lat2 <span class="hljs-operator">*</span> <span class="hljs-number">180</span> <span class="hljs-operator">/</span> <span class="hljs-type">Double</span>.pi, longitude: lon2 <span class="hljs-operator">*</span> <span class="hljs-number">180</span> <span class="hljs-operator">/</span> <span class="hljs-type">Double</span>.pi)<br>    &#125;<br>&#125;<br><br>point.shift(byDistance: <span class="hljs-number">100.0</span>, azimuth: .pi)<br></code></pre></td></tr></table></figure>
+
+<p>关于 azimuth：</p>
+<ul>
+<li>0 为正北（N）</li>
+<li>pi&#x2F;2 为正东（90，E）</li>
+<li>pi 为正南（180，S）</li>
+<li>3&#x2F;2pi为正西（270，W）</li>
+</ul>
+<p>为了更好理解，可以将</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// let bearing = azimuth -&gt;</span><br><span class="hljs-keyword">let</span> bearing <span class="hljs-operator">=</span> azimuth <span class="hljs-operator">*</span> .pi <span class="hljs-operator">/</span> <span class="hljs-number">180</span><br><br>point.shift(byDistance: <span class="hljs-number">100.0</span>, azimuth: <span class="hljs-number">180</span>)<br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Map/" class="print-no-link">#Map</a>
+      
+        <a href="/tags/Swift/" class="print-no-link">#Swift</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Swift 在地图上绘制正六边形</div>
+      <div>https://wonderhoi.com/2024/12/11/Swift-在地图上绘制正六边形/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>wonderhoi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年12月11日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/12/12/Xcode-%E6%8F%90%E7%A4%BA-Modifications-to-the-layout-engine-must-not-be-performed-from-a-background-thread-after-it-has-been-accessed-from-the-main-thread/" title="Xcode 提示 Modifications to the layout engine must not be performed from a background thread after it has been accessed from the main thread.">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Xcode 提示 Modifications to the layout engine must not be performed from a background thread after it has been accessed from the main thread.</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/12/11/%E5%9C%A8-SwiftData-%E4%B8%AD%E4%BD%BF%E7%94%A8-CLLocationCoordinate2D-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="在 SwiftData 中使用 CLLocationCoordinate2D 数据类型">
+                        <span class="hidden-mobile">在 SwiftData 中使用 CLLocationCoordinate2D 数据类型</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

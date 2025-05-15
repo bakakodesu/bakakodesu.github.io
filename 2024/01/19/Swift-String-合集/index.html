@@ -1,0 +1,748 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <link rel="icon" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="wonderhoi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="基本操作替换12let text &#x3D; &quot;Hello, World!&quot;print(text.replacingOccurrences(of: &quot;World&quot;, with: &quot;Swift&quot;)) &#x2F;&#x2F; &quot;Hello, Swift!&quot;  去首尾空格12let text &#x3D; &quot;  Swift  &quot;print(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift String 合集">
+<meta property="og:url" content="https://wonderhoi.com/2024/01/19/Swift-String-%E5%90%88%E9%9B%86/index.html">
+<meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="基本操作替换12let text &#x3D; &quot;Hello, World!&quot;print(text.replacingOccurrences(of: &quot;World&quot;, with: &quot;Swift&quot;)) &#x2F;&#x2F; &quot;Hello, Swift!&quot;  去首尾空格12let text &#x3D; &quot;  Swift  &quot;print(">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-01-19T07:01:51.000Z">
+<meta property="article:modified_time" content="2025-04-10T07:01:42.860Z">
+<meta property="article:author" content="wonderhoi">
+<meta property="article:tag" content="Swift">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Swift String 合集 - 这是一个PM的BLOG</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wonderhoi.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>这是一个PM的BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/wallhaven-m35rwm.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Swift String 合集"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-01-19 15:01" pubdate>
+          2024年1月19日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.7k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Swift String 合集</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello, World!&quot;</span><br><span class="hljs-built_in">print</span>(text.replacingOccurrences(of: <span class="hljs-string">&quot;World&quot;</span>, with: <span class="hljs-string">&quot;Swift&quot;</span>)) <span class="hljs-comment">// &quot;Hello, Swift!&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="去首尾空格"><a href="#去首尾空格" class="headerlink" title="去首尾空格"></a>去首尾空格</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;  Swift  &quot;</span><br><span class="hljs-built_in">print</span>(text.trimmingCharacters(in: .whitespaces)) <span class="hljs-comment">// &quot;Swift&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="分割"><a href="#分割" class="headerlink" title="分割"></a>分割</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 按分隔符拆分字符串</span><br><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Swift,UI,Code&quot;</span><br><span class="hljs-built_in">print</span>(text.components(separatedBy: <span class="hljs-string">&quot;,&quot;</span>)) <span class="hljs-comment">// [&quot;Swift&quot;, &quot;UI&quot;, &quot;Code&quot;]</span><br><br><span class="hljs-comment">// 按字符拆分字符串</span><br><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Swift UI Code&quot;</span><br><span class="hljs-built_in">print</span>(text.split(separator: <span class="hljs-string">&quot; &quot;</span>)) <span class="hljs-comment">// [&quot;Swift&quot;, &quot;UI&quot;, &quot;Code&quot;]</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="拼接"><a href="#拼接" class="headerlink" title="拼接"></a>拼接</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> array <span class="hljs-operator">=</span> [<span class="hljs-string">&quot;Swift&quot;</span>, <span class="hljs-string">&quot;UI&quot;</span>, <span class="hljs-string">&quot;Code&quot;</span>]<br><span class="hljs-built_in">print</span>(array.joined(separator: <span class="hljs-string">&quot; &quot;</span>)) <span class="hljs-comment">// &quot;Swift UI Code&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="大小写转换"><a href="#大小写转换" class="headerlink" title="大小写转换"></a>大小写转换</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Swift&quot;</span><br><span class="hljs-built_in">print</span>(text.lowercased()) <span class="hljs-comment">// &quot;swift&quot;</span><br><span class="hljs-built_in">print</span>(text.uppercased()) <span class="hljs-comment">// &quot;SWIFT&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="索引操作"><a href="#索引操作" class="headerlink" title="索引操作"></a>索引操作</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// startIndex 和 endIndex: 获取字符串的起始和结束索引</span><br><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Swift&quot;</span><br><span class="hljs-built_in">print</span>(text[text.startIndex]) <span class="hljs-comment">// &quot;S&quot;</span><br><span class="hljs-built_in">print</span>(text[text.index(before: text.endIndex)]) <span class="hljs-comment">// &quot;t&quot;</span><br><br><span class="hljs-comment">// index(_:offsetBy:): 根据偏移量获取索引</span><br><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Swift&quot;</span><br><span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> text.index(text.startIndex, offsetBy: <span class="hljs-number">2</span>)<br><span class="hljs-built_in">print</span>(text[index]) <span class="hljs-comment">// &quot;i&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="contain"><a href="#contain" class="headerlink" title="contain"></a>contain</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 精准匹配</span><br><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello, World!&quot;</span><br><span class="hljs-built_in">print</span>(text.contains(<span class="hljs-string">&quot;World&quot;</span>)) <span class="hljs-comment">// true</span><br><br><br><span class="hljs-comment">/// 忽略大小写匹配</span><br><span class="hljs-comment">/// 需要简单的本地化字符串匹配，但不涉及排序规则等复杂逻辑</span><br><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello, SwiftUI!&quot;</span><br><span class="hljs-keyword">let</span> searchQuery <span class="hljs-operator">=</span> <span class="hljs-string">&quot;swift&quot;</span><br><br><span class="hljs-keyword">let</span> result <span class="hljs-operator">=</span> text.localizedCaseInsensitiveContains(searchQuery)<br><span class="hljs-built_in">print</span>(result) <span class="hljs-comment">// true</span><br><br><span class="hljs-comment">/// 文本匹配</span><br><span class="hljs-comment">/// 对大小写不敏感（Hello, SwiftUI! 中的 Swift 与 swift 能匹配）</span><br><span class="hljs-comment">/// 能正确处理用户语言环境下的特定字符匹配，比localizedCaseInsensitiveContains高级</span><br><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello, SwiftUI!&quot;</span><br><span class="hljs-keyword">let</span> searchQuery <span class="hljs-operator">=</span> <span class="hljs-string">&quot;swift&quot;</span><br><br><span class="hljs-keyword">let</span> result <span class="hljs-operator">=</span> text.localizedStandardContains(searchQuery)<br><span class="hljs-built_in">print</span>(result) <span class="hljs-comment">// true</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="检查开头或结尾是否为指定字符串"><a href="#检查开头或结尾是否为指定字符串" class="headerlink" title="检查开头或结尾是否为指定字符串"></a>检查开头或结尾是否为指定字符串</h2><h3 id="hasPrefix-检查字符串是否以指定前缀开头"><a href="#hasPrefix-检查字符串是否以指定前缀开头" class="headerlink" title="hasPrefix(_:): 检查字符串是否以指定前缀开头"></a><strong>hasPrefix(_:)</strong>: 检查字符串是否以指定前缀开头</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello, World!&quot;</span><br><span class="hljs-built_in">print</span>(text.hasPrefix(<span class="hljs-string">&quot;Hello&quot;</span>)) <span class="hljs-comment">// true</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="hasSuffix-检查字符串是否以指定后缀结尾"><a href="#hasSuffix-检查字符串是否以指定后缀结尾" class="headerlink" title="hasSuffix(_:): 检查字符串是否以指定后缀结尾"></a><strong>hasSuffix(_:)</strong>: 检查字符串是否以指定后缀结尾</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello, World!&quot;</span><br><span class="hljs-built_in">print</span>(text.hasSuffix(<span class="hljs-string">&quot;!&quot;</span>)) <span class="hljs-comment">// true</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="使用-Substring-分割字符串"><a href="#使用-Substring-分割字符串" class="headerlink" title="使用 Substring 分割字符串"></a>使用 <code>Substring</code> 分割字符串</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> string <span class="hljs-operator">=</span> <span class="hljs-string">&quot;aaa/bbb/ccc/dddd&quot;</span><br><span class="hljs-keyword">let</span> arraySubstrings: [<span class="hljs-type">Substring</span>] <span class="hljs-operator">=</span> string.split(separator: <span class="hljs-string">&quot;/&quot;</span>)<br><br><span class="hljs-keyword">var</span> arrayStrings: [<span class="hljs-type">String</span>] <span class="hljs-operator">=</span> []<br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> arraySubstrings &#123;           <br>    arrayStrings.append(<span class="hljs-string">&quot;<span class="hljs-subst">\(item)</span>&quot;</span>)<br>    <span class="hljs-comment">//arrayStrings.append(String(item))</span><br>&#125;<br><br><span class="hljs-comment">// 或者</span><br><span class="hljs-keyword">let</span> arrayStrings: [<span class="hljs-type">String</span>] <span class="hljs-operator">=</span> arraySubstrings.compactMap &#123; <span class="hljs-string">&quot;<span class="hljs-subst">\(<span class="hljs-variable">$0</span>)</span>&quot;</span> &#125;<br><br><span class="hljs-comment">// 写法等同于</span><br><span class="hljs-keyword">let</span> arrayStrings: [<span class="hljs-type">String</span>] <span class="hljs-operator">=</span> arraySubstring.compactMap &#123; (item) -&gt; <span class="hljs-type">String</span> <span class="hljs-keyword">in</span><br>   <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;<span class="hljs-subst">\(item)</span>&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> str <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello! World&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>这里需要注意的是，以下除非特别说明，不然截取字符串之后获得的都是 <code>Substring</code>。如果需要转变成字符串使用，那么用 <code>String()</code> 扩起来就行了。</strong></p>
+<h3 id="单方向截取"><a href="#单方向截取" class="headerlink" title="单方向截取"></a>单方向截取</h3><p>这种方式只能从两端中的某一端开始截取，细分的话可以分为<strong>从特定下标开始截取</strong>和<strong>从特定字符开始截取</strong>：<br><strong>“从特定下标开始截取”适合处理格式固定但内容不固定</strong>的字符串，方法如下（注释为输出的结果）：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 从字符串开头数6个字符，截取这6个字符——截取前六个字符</span><br>str.prefix(<span class="hljs-number">6</span>)<br><span class="hljs-comment">// &quot;Hello!&quot;</span><br><br><span class="hljs-comment">// 从字符串末尾数5个字符，然后截取这5个字符——截取最后五个字符</span><br>str.suffix(<span class="hljs-number">5</span>)<br><span class="hljs-comment">// &quot;World&quot;</span><br><br><span class="hljs-comment">// 偏移量超过字符串中字符数量，就显示所有的字符</span><br>str.suffix(<span class="hljs-number">50</span>)<br><span class="hljs-comment">// &quot;Hello! World&quot;</span><br><br><span class="hljs-comment">// index表明定位到从开始(startIndex)偏移五个字符(offsetBy: 5)之后的一个字符——这里是感叹号</span><br><span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.index(str.startIndex, offsetBy: <span class="hljs-number">5</span>)<br><span class="hljs-comment">// 从index定位到的字符开始截取</span><br>str.suffix(from: index)<br> <span class="hljs-comment">// &quot;! World&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>“从特定字符开始截取”适合截取内容有特定字符或格式不固定但是有特定内容</strong>的字符串，方法如下：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 从特定字符串开始截取</span><br><span class="hljs-comment">// 从开始端（左端）的第一个o开始截取</span><br><span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.firstIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br>str.prefix(through: index！) <br><span class="hljs-comment">// &quot;Hello&quot;</span><br><br><span class="hljs-comment">// 从末端（右端）的第一个o开始截取</span><br><span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br>str.suffix(from: index！) <br><span class="hljs-comment">// &quot;orld&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>这段代码还可以这么写：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 还可以这样写</span><br><span class="hljs-comment">// 从开始端（左端）的第一个o开始截取</span><br><span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.firstIndex(of: <span class="hljs-string">&quot;o&quot;</span>) &#123;<br>    str.prefix(through: index)<br>&#125;<br><span class="hljs-comment">// &quot;Hello&quot;</span><br><br><span class="hljs-comment">// 从末端（右端）的第一个o开始截取</span><br><span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>) &#123;<br>    str.suffix(from: index) <br>&#125;<br><span class="hljs-comment">// &quot;orld&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="截取中间一段"><a href="#截取中间一段" class="headerlink" title="截取中间一段"></a>截取中间一段</h3><p>这种方式会截取字符串中间的一段，同样有两种<strong>使用下标截取中间一段字符</strong>和<strong>特定字符截取</strong>两种办法。<br><strong>使用下标截取中间一段字符</strong>的方法如下：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 截取第二个到第九个字符之间的字符</span><br>str.dropFirst(<span class="hljs-number">3</span>).prefix(<span class="hljs-number">9</span>) <span class="hljs-keyword">as</span> <span class="hljs-type">Substring</span><br><span class="hljs-comment">// &quot;lo! Worl&quot;</span><br><br><span class="hljs-comment">// 截取第二个到倒数第二个字符之间的字符</span><br>str.dropFirst(<span class="hljs-number">3</span>).dropLast(<span class="hljs-number">3</span>) <span class="hljs-keyword">as</span> <span class="hljs-type">Substring</span><br><span class="hljs-comment">// &quot;lo! Wo&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>这里注意需要加上最后的</p>
+<p><strong>截取两个特定字符中间的一段字符串</strong>并没有这么简单的办法，实现方法会有些复杂。这里慢慢说。<br>例如我们需要截取两个“o”之间（含两端的“o”）的字符串：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> index1 <span class="hljs-operator">=</span> str.firstIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br><span class="hljs-keyword">let</span> str2: <span class="hljs-type">String</span> <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(str.suffix(from: index1<span class="hljs-operator">!</span>)) <span class="hljs-comment">//&quot;o! World&quot;</span><br><span class="hljs-keyword">let</span> index2 <span class="hljs-operator">=</span> str2.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br><span class="hljs-keyword">let</span> str3 <span class="hljs-operator">=</span> str2.prefix(through: index2<span class="hljs-operator">!</span>) <span class="hljs-comment">//&quot;o! Wo&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>这里首先是使用单向（从右端）截取了一段，然后将这段使用 <code>String</code> 转变成字符串格式并且定义为一个新的字符串，然后对其实行反向（从坐左端）截取了一段。这样是包含两端的“o”的。<br>那么如果我们不想要右端的“o”呢？使用以下方法：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> index1 <span class="hljs-operator">=</span> str.firstIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br><span class="hljs-keyword">let</span> str2: <span class="hljs-type">String</span> <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(str.suffix(from: index1<span class="hljs-operator">!</span>)) <span class="hljs-comment">//&quot;o! World&quot;</span><br><span class="hljs-keyword">let</span> index2 <span class="hljs-operator">=</span> str2.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br><span class="hljs-keyword">let</span> str3 <span class="hljs-operator">=</span> str2.prefix(upTo: index2<span class="hljs-operator">!</span>) <span class="hljs-comment">//&quot;o! W&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>只用将最后一行代码的 <code>through</code> 变成 <code>upTo</code> 就可以了。<br>那么如果我们两端都需要去掉“o”呢？使用以下方法：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> index <span class="hljs-operator">=</span> str.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br><span class="hljs-keyword">let</span> str2 <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(str.prefix(through: str.index(before: index<span class="hljs-operator">!</span>))) <span class="hljs-comment">//&quot;Hello! W&quot;</span><br><span class="hljs-keyword">let</span> index2 <span class="hljs-operator">=</span> str2.lastIndex(of: <span class="hljs-string">&quot;o&quot;</span>)<br>str2.suffix(from: str2.index(after: index2<span class="hljs-operator">!</span>)) <span class="hljs-comment">//&quot;! W&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="format-使用"><a href="#format-使用" class="headerlink" title="format 使用"></a>format 使用</h2><h3 id="最简单的方法"><a href="#最简单的方法" class="headerlink" title="最简单的方法"></a>最简单的方法</h3><p>字符串中包裹着 <code>\()</code></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> age <span class="hljs-operator">=</span> <span class="hljs-number">10</span><br><span class="hljs-keyword">let</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;xxx&quot;</span><br><br><span class="hljs-keyword">let</span> string <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%@ Age Is %d&quot;</span>, name, age)<br><br><span class="hljs-type">Text</span>(<span class="hljs-string">&quot;<span class="hljs-subst">\(name)</span> Age Is <span class="hljs-subst">\(age)</span>&quot;</span>)<br><span class="hljs-type">Text</span>(name <span class="hljs-operator">+</span> <span class="hljs-string">&quot;Age Is&quot;</span> <span class="hljs-operator">+</span> <span class="hljs-type">String</span>(age))<br><span class="hljs-type">Text</span>(string)<br></code></pre></td></tr></table></figure>
+
+<h3 id="整数与小数"><a href="#整数与小数" class="headerlink" title="整数与小数"></a>整数与小数</h3><h4 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> string <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%d&quot;</span>, <span class="hljs-number">123892674027</span>)<br><span class="hljs-type">Text</span>(string)<br><span class="hljs-comment">// 结果却是：&quot;-661377557&quot;</span><br><span class="hljs-keyword">let</span> string <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%ld&quot;</span>, <span class="hljs-number">123892674027</span>)<br></code></pre></td></tr></table></figure>
+
+<p>如果数据大，可能大于 2147483647（10 位），使用 <code>&quot;%ld&quot;</code>，否则使用 <code>&quot;%d&quot;</code> 即可。</p>
+<p>长度修饰符</p>
+<ul>
+<li>h，代表 shor t或者 unsigned short</li>
+<li>l，代表 long 或者 unsiged long  (ll 表示 long long 或者 unsigned long long) Int</li>
+<li>L，代表 Long double</li>
+</ul>
+<h4 id="小数"><a href="#小数" class="headerlink" title="小数"></a>小数</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> i <span class="hljs-operator">=</span> <span class="hljs-number">1.1111</span><br><span class="hljs-keyword">let</span> string <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%f&quot;</span>, i)	<span class="hljs-comment">// 1.1111，默认保留 6 位小数</span><br><span class="hljs-keyword">let</span> string <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%.2f&quot;</span>, i)	<span class="hljs-comment">// 1.11，输入几保留几位小数</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">let</span> minutes: <span class="hljs-type">Int</span> <span class="hljs-operator">=</span> <span class="hljs-number">8</span><br><span class="hljs-keyword">let</span> seconds: <span class="hljs-type">Int</span> <span class="hljs-operator">=</span> <span class="hljs-number">9</span><br><span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%02d:%02d&quot;</span>, minutes, seconds) <span class="hljs-comment">//08:09</span><br><br><br><span class="hljs-keyword">let</span> i: <span class="hljs-type">Int</span> <span class="hljs-operator">=</span> <span class="hljs-number">36</span><br><span class="hljs-keyword">let</span> i2: <span class="hljs-type">Int</span> <span class="hljs-operator">=</span> <span class="hljs-number">350087</span><br><span class="hljs-comment">// 固定四位显示</span><br><span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%4d&quot;</span>, i) <span class="hljs-comment">// &quot;  36&quot; （注意有两个空格）</span><br><span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%4d&quot;</span>, i2) <span class="hljs-comment">// &quot;350087&quot; (位数大于，则全部显示)</span><br> <br><span class="hljs-comment">// 固定四位显示，不足补0</span><br><span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%04d&quot;</span>, i) <span class="hljs-comment">// &quot;0036&quot;</span><br><span class="hljs-type">String</span>(format: <span class="hljs-string">&quot;%04d&quot;</span>, i2) <span class="hljs-comment">// &quot;350087&quot; (位数大于，则全部显示)</span><br></code></pre></td></tr></table></figure>
+
+<p>参考</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_14920635/article/details/96479691">Swift 数字字符串格式化</a></li>
+<li><a target="_blank" rel="noopener" href="https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E6%95%99%E5%AE%A4/swift-%E9%80%8F%E9%81%8E-string-%E8%AE%93%E6%95%B8%E5%80%BC%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%91%88%E7%8F%BE-%E6%95%B4%E6%95%B8%E8%A3%9C%E9%9B%B6-%E5%B0%8F%E6%95%B8%E5%9B%9B%E6%8D%A8%E4%BA%94%E5%85%A5%E8%87%B3%E7%AC%AC%E5%B9%BE%E4%BD%8D%E6%95%B8-eefb15b998b6">透過 String 讓數值格式化呈現(整數補零、小數四捨五入至第幾位數)</a></li>
+</ol>
+<h2 id="formatter"><a href="#formatter" class="headerlink" title="formatter"></a>formatter</h2><p><a target="_blank" rel="noopener" href="https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/swiftui-text-%E7%9A%84-string-interpolation-%E5%92%8C%E5%8F%83%E6%95%B8-specifier-formatter-42640ec823af">SwiftUI Text 的 string interpolation 和參數 specifier &amp; formatter</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Swift/" class="print-no-link">#Swift</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Swift String 合集</div>
+      <div>https://wonderhoi.com/2024/01/19/Swift-String-合集/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>wonderhoi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年1月19日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/01/19/Swift-%E7%9A%84%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8/" title="Swift 的声音和振动">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Swift 的声音和振动</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/01/19/Swift-%E6%95%B4%E9%99%A4%E8%BF%90%E7%AE%97/" title="Swift 整除运算">
+                        <span class="hidden-mobile">Swift 整除运算</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

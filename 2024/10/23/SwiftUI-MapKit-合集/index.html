@@ -1,0 +1,741 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <link rel="icon" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="wonderhoi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="参考：认识 SwiftUI 版 MapKit Camera 初始化方式123456789101112@State private var position &#x3D; MapCameraPosition.region(    MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 28.209195, longitude: 112.84262">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SwiftUI MapKit 合集">
+<meta property="og:url" content="https://wonderhoi.com/2024/10/23/SwiftUI-MapKit-%E5%90%88%E9%9B%86/index.html">
+<meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="参考：认识 SwiftUI 版 MapKit Camera 初始化方式123456789101112@State private var position &#x3D; MapCameraPosition.region(    MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 28.209195, longitude: 112.84262">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-23T08:54:25.000Z">
+<meta property="article:modified_time" content="2025-01-15T17:16:55.858Z">
+<meta property="article:author" content="wonderhoi">
+<meta property="article:tag" content="Map">
+<meta property="article:tag" content="SwiftUI">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>SwiftUI MapKit 合集 - 这是一个PM的BLOG</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wonderhoi.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>这是一个PM的BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/wallhaven-m35rwm.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="SwiftUI MapKit 合集"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-10-23 16:54" pubdate>
+          2024年10月23日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">SwiftUI MapKit 合集</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>参考：<a target="_blank" rel="noopener" href="https://developer.apple.com/cn/videos/play/wwdc2023/10043/">认识 SwiftUI 版 MapKit</a></p>
+<h2 id="Camera-初始化方式"><a href="#Camera-初始化方式" class="headerlink" title="Camera 初始化方式"></a>Camera 初始化方式</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-meta">@State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> position <span class="hljs-operator">=</span> <span class="hljs-type">MapCameraPosition</span>.region(<br>    <span class="hljs-type">MKCoordinateRegion</span>(center: <span class="hljs-type">CLLocationCoordinate2D</span>(latitude: <span class="hljs-number">28.209195</span>, longitude: <span class="hljs-number">112.842627</span>), latitudinalMeters: <span class="hljs-number">300</span>, longitudinalMeters: <span class="hljs-number">300</span>)<br>    <span class="hljs-comment">// MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 28.209195, longitude: 112.842627),</span><br>    <span class="hljs-comment">//                    span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))</span><br>)<br><br><span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>    <span class="hljs-comment">// Map(initialPosition: position) &#123;</span><br>    <span class="hljs-type">Map</span>(position: <span class="hljs-variable">$position</span>) &#123;<br>        <span class="hljs-comment">// initialPosition 与 position 的区别——使用 position 时，更新 MapCameraPosition 会跳转镜头</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://developer.apple.com/documentation/mapkit/mkcoordinateregion/1452293-span">span</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.apple.com/documentation/mapkit/mkcoordinateregion/1452245-init">latitudinalMeters &amp; longitudinalMeters</a></p>
+</li>
+</ul>
+<p>这段代码可以等同于：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-meta">@State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> region <span class="hljs-operator">=</span> <span class="hljs-type">MKCoordinateRegion</span>(center: <span class="hljs-type">CLLocationCoordinate2D</span>(latitude: <span class="hljs-number">25.7617</span>, longitude: <span class="hljs-number">80.1918</span>),<br>                                               span: <span class="hljs-type">MKCoordinateSpan</span>(latitudeDelta: <span class="hljs-number">10</span>, longitudeDelta: <span class="hljs-number">10</span>))<br><br><span class="hljs-type">Map</span>(coordinateRegion: <span class="hljs-variable">$region</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="地理坐标与墨卡托投影坐标转换"><a href="#地理坐标与墨卡托投影坐标转换" class="headerlink" title="地理坐标与墨卡托投影坐标转换"></a>地理坐标与墨卡托投影坐标转换</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-comment">// 经纬度转投影坐标</span><br><span class="hljs-keyword">let</span> coordinate <span class="hljs-operator">=</span> <span class="hljs-type">CLLocationCoordinate2D</span>(latitude: <span class="hljs-number">28.209321</span>, longitude: <span class="hljs-number">112.843033</span>)<br><span class="hljs-keyword">let</span> point: <span class="hljs-type">MKMapPoint</span> <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(<span class="hljs-type">Coordinate</span>)<br><span class="hljs-built_in">print</span>(point.x)<br><span class="hljs-built_in">print</span>(point.y)<br><br><span class="hljs-comment">// 投影坐标转经纬度</span><br><span class="hljs-keyword">let</span> point <span class="hljs-operator">=</span> <span class="hljs-type">MKMapPoint</span>(x: <span class="hljs-number">218359192.2732601</span>, y: <span class="hljs-number">112278796.05034925</span>)<br><span class="hljs-keyword">let</span> coordinate <span class="hljs-operator">=</span> point.coordinate<br></code></pre></td></tr></table></figure>
+
+<h2 id="将-iOS-系统自带定位坐标转换成高德坐标"><a href="#将-iOS-系统自带定位坐标转换成高德坐标" class="headerlink" title="将 iOS 系统自带定位坐标转换成高德坐标"></a>将 iOS 系统自带定位坐标转换成高德坐标</h2><p><a target="_blank" rel="noopener" href="https://github.com/Zws-China/swift-Coordinate">swift Coordinate</a></p>
+<p>系统定位拿到的坐标是 WGS-84 国际标准。</p>
+<p>但是在 Map 显示时，因为 iPhone 使用的是高德地图，所以会有偏移，需要把坐标转换为 GCJ-02 火星坐标。</p>
+<h2 id="MapControls"><a href="#MapControls" class="headerlink" title="MapControls"></a>MapControls</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Map</span>() &#123;<br><br>&#125;<br>.mapControls(&#123;<br>		<span class="hljs-type">MapCompass</span>()                    <span class="hljs-comment">// 指南针</span><br>                <br>		<span class="hljs-keyword">#if</span> os(watchOS)<br>		<span class="hljs-type">MapLocationCompass</span>()            <span class="hljs-comment">// 仅适用于 WatchOS 的指南针</span><br>		<span class="hljs-keyword">#endif</span><br>                <br>    <span class="hljs-keyword">#if</span> os(macOS)<br>    <span class="hljs-type">MapPitchSlider</span>()                <span class="hljs-comment">// 控制地图是否显示高度，也就是 2D / 3D</span><br>    <span class="hljs-type">MapZoomStepper</span>()                <span class="hljs-comment">// 允许用户调节缩放比例</span><br>    <span class="hljs-keyword">#endif</span><br>                <br>    <span class="hljs-type">MapPitchToggle</span>()<br><br>    <span class="hljs-type">MapScaleView</span>(anchorEdge: .trailing)     <span class="hljs-comment">// 用于显示地图比例尺的一个控件。比例尺可以帮助用户了解地图上显示的距离，与实际世界中的距离的比例关系</span><br><br>    <span class="hljs-type">MapUserLocationButton</span>()                 <span class="hljs-comment">// 设置关联的地图位置为当前用户的位置： 右上角的箭头</span><br>    &#125;)<br></code></pre></td></tr></table></figure>
+
+<h2 id="MapStyle"><a href="#MapStyle" class="headerlink" title="MapStyle"></a>MapStyle</h2><p><code>MapStyle</code>有预先配置好的地图样式可以选择，如果没有特别要求，基本可以满足。</p>
+<ul>
+<li><code>.standard</code>: 标准样式</li>
+<li><code>.imagery</code>: 基于图像的风格，如使用卫星图像的风格。</li>
+<li><code>.hybrid</code>: 混合风格，例如使用一个地区的卫星图像，并在其上添加道路和路名信息层。</li>
+</ul>
+<p>其次我们可以添加额外配置，控制是否渲染高度（2D, 3D切换）、地图强调风格，显示兴趣点和显示交通情况等。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Map</span>() &#123;<br><br>&#125;<br>.mapStyle(<br>    <span class="hljs-type">MapStyle</span>.standard(<br>        elevation: .flat, <br>        emphasis: .muted, <br>        pointsOfInterest: <span class="hljs-type">PointOfInterestCategories</span>(arrayLiteral: .publicTransport), <br>        showsTraffic: <span class="hljs-literal">true</span>))<br></code></pre></td></tr></table></figure>
+
+<p>关于 <code>pointsOfInterest</code>：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs swift">.mapStyle(.standard(pointsOfInterest: .excludingAll))					<span class="hljs-comment">// 除去所有兴趣点</span><br>.mapStyle(.standard(pointsOfInterest: .including([.cafe])))<br></code></pre></td></tr></table></figure>
+
+<h2 id="地图交互"><a href="#地图交互" class="headerlink" title="地图交互"></a>地图交互</h2><p><code>Map</code>地图上的交互主要通过配置<code>interactionModes</code>进行设置，有下面几种类型：</p>
+<ul>
+<li><code>.all</code>: 允许所有的交互类型</li>
+<li><code>.pin</code>: 允许用户平移到地图的不同区域</li>
+<li><code>.zoom</code>: 允许用户放大或缩小地图位置</li>
+<li><code>.pitch</code>: 允许用户设置地图的间距，从不同的角度查看地图</li>
+<li><code>.rotate</code>: 允许用户对地图进行旋转操作</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Map</span>(<br>    <span class="hljs-operator">...</span><br>    interactionModes: [.pitch, .pin],<br>    <span class="hljs-operator">...</span>)&#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="MapReader"><a href="#MapReader" class="headerlink" title="MapReader"></a>MapReader</h2><p>参考：<a target="_blank" rel="noopener" href="https://fangjunyu.com/2024/11/23/swiftui%E8%8E%B7%E5%8F%96%E5%9C%B0%E5%9B%BE%E4%BF%A1%E6%81%AF%E7%9A%84mapreader%E8%A7%86%E5%9B%BE/">SwiftUI获取地图信息的MapReader视图</a></p>
+<p>MapReader 是 SwiftUI 提供的一个容器，用于与 Map 视图进行更高级的交互。它允许开发者访问一个 MapProxy 对象，该对象可以提供关于地图当前状态的信息，并支持将屏幕坐标转换为地理坐标等操作。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">MapReader</span> &#123; reader <span class="hljs-keyword">in</span><br>    <span class="hljs-type">Map</span>()<br>        .onTapGesture &#123; position <span class="hljs-keyword">in</span><br>            <span class="hljs-comment">// 将点击位置的屏幕坐标转换为地理坐标</span><br>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> coordinate <span class="hljs-operator">=</span> reader.convert(position, from: .local) &#123;<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Tapped at: <span class="hljs-subst">\(coordinate.latitude)</span>, <span class="hljs-subst">\(coordinate.longitude)</span>&quot;</span>)<br>            &#125;<br>        &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>onTapGesture 不使用 MapReader 时，输出的定位信息是基于屏幕左上角的位置信息，因此不满足在地图中的获取实际的地理位置。</p>
+<p>使用 proxy.convert 将点击位置从本地视图坐标（CGPoint）转换为地理坐标（CLLocationCoordinate2D）。</p>
+<p>MapReader 需要一个闭包，该闭包接收 reader 对象作为参数，允许开发者通过 reader 访问地图状态或进行相关操作。</p>
+<h3 id="坐标转换"><a href="#坐标转换" class="headerlink" title="坐标转换"></a>坐标转换</h3><p>convert(_:from:): 将视图坐标转换为地理坐标。</p>
+<p>convert(_:to:): 将地理坐标转换为视图坐标。</p>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>位置标记：允许用户点击地图以标记一个特定的地理位置。</p>
+<p>动态状态显示：如显示地图中心点、缩放级别等实时信息。</p>
+<p>交互式地图工具：例如，绘制多边形、测量距离、选择特定区域等。</p>
+<h2 id="一个-MapKit-没有的功能"><a href="#一个-MapKit-没有的功能" class="headerlink" title="一个 MapKit 没有的功能"></a>一个 MapKit 没有的功能</h2><p><a target="_blank" rel="noopener" href="https://www.reddit.com/r/SwiftUI/comments/1av4de1/ios_17_swiftui_mapkit_has_anyone_solved_for/">iOS 17, SwiftUI MapKit. Has anyone solved for smooth animation of custom annotations?</a></p>
+<p><a target="_blank" rel="noopener" href="https://forums.developer.apple.com/forums/thread/759289">SwiftUI Map Annotation Coordinate Animation</a></p>
+<p>Map 上的控件在移动时，做不到像 <code>UserAnnotation()</code> 那样顺滑，好像是 <code>withAnimation()</code> 不会生效。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Map/" class="print-no-link">#Map</a>
+      
+        <a href="/tags/SwiftUI/" class="print-no-link">#SwiftUI</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>SwiftUI MapKit 合集</div>
+      <div>https://wonderhoi.com/2024/10/23/SwiftUI-MapKit-合集/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>wonderhoi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年10月23日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/10/28/Swift-%E6%A3%80%E6%B5%8B-Dark-Model/" title="Swift 检测 Dark Model">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Swift 检测 Dark Model</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/10/23/SwiftUI-Sheet-fullScreenCover-%E5%90%88%E9%9B%86/" title="SwiftUI Sheet&amp;fullScreenCover 合集">
+                        <span class="hidden-mobile">SwiftUI Sheet&amp;fullScreenCover 合集</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

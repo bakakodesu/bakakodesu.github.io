@@ -1,0 +1,770 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <link rel="icon" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="wonderhoi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="原文链接 搭建私有图床免费图床有两个缺点，一方面是基于隐私的保护的问题，另一方面是你不知道它什么时候可能就没了~，所以如果你对资源管理有更高的要求，或者你是一个小团队需要有自己的图床以保证稳定性，不妨往下看，我手把手教你搭建自己的私有图床。 需要用到两个东西：  腾讯云 COS（对象存储） uPic 客户端  购买腾讯云 COS其实国内提供对象存储服务的有很多，例如腾讯云、阿里云、七牛云、百度云、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「转载」使用 uPic 搭配腾讯云搭建图床">
+<meta property="og:url" content="https://wonderhoi.com/2023/08/26/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E4%BD%BF%E7%94%A8-uPic-%E6%90%AD%E9%85%8D%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/index.html">
+<meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="原文链接 搭建私有图床免费图床有两个缺点，一方面是基于隐私的保护的问题，另一方面是你不知道它什么时候可能就没了~，所以如果你对资源管理有更高的要求，或者你是一个小团队需要有自己的图床以保证稳定性，不妨往下看，我手把手教你搭建自己的私有图床。 需要用到两个东西：  腾讯云 COS（对象存储） uPic 客户端  购买腾讯云 COS其实国内提供对象存储服务的有很多，例如腾讯云、阿里云、七牛云、百度云、">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/8c71da4b83b79821350aeb074312bb85.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/157a4689ac564d86ab64cfe8ce0c456b.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/16e922b14f5ae75c91845683a540b870.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/b09b74e4a9cd77b4255cd4542d519ba9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/e6bd74b237fa8914f5dc85788c8b3fdf.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/5f6286198ba8b1ad6c743952cd4d9b99.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/3908682f470e049dae15ff3b3178352d.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/16763a27c4f28b8a2608574f1b763bd9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/1b8680f5e02cc2d70f1a0253afd037c1.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/a3fc05d6a35b9065478cc417c0a26679.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/ccd164a592c4ef6659d8231145681902.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/e39f339ac3902bc03f3b8672c1e0470a.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/461469f544f6e3037721265a3ea20757.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/71787d4c7210fceaaddf58a8805fdca9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/c0856f11a2315a401d5e8dcc5ba1617f.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/641b4ba0223a8225ad0161ddbdb92b91.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/e20dabd582fda5b2ebb904738c6529b6.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/b6c2c37042dc1bef7ec884cc3be20fde.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2020/12/22/67ca93666ebccc3e530b3affabcbe7c6.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="article:published_time" content="2023-08-26T02:54:30.000Z">
+<meta property="article:modified_time" content="2024-07-04T17:03:39.000Z">
+<meta property="article:author" content="wonderhoi">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.sspai.com/2020/12/22/8c71da4b83b79821350aeb074312bb85.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>「转载」使用 uPic 搭配腾讯云搭建图床 - 这是一个PM的BLOG</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wonderhoi.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>这是一个PM的BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/wallhaven-m35rwm.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="「转载」使用 uPic 搭配腾讯云搭建图床"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-08-26 10:54" pubdate>
+          2023年8月26日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">「转载」使用 uPic 搭配腾讯云搭建图床</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><a target="_blank" rel="noopener" href="https://sspai.com/post/64169">原文链接</a></p>
+<h3 id="搭建私有图床"><a href="#搭建私有图床" class="headerlink" title="搭建私有图床"></a>搭建私有图床</h3><p>免费图床有两个缺点，一方面是基于隐私的保护的问题，另一方面是你不知道它什么时候可能就没了~，所以如果你对资源管理有更高的要求，或者你是一个小团队需要有自己的图床以保证稳定性，不妨往下看，我手把手教你搭建自己的私有图床。</p>
+<p>需要用到两个东西：</p>
+<ol>
+<li>腾讯云 COS（对象存储）</li>
+<li>uPic 客户端</li>
+</ol>
+<h4 id="购买腾讯云-COS"><a href="#购买腾讯云-COS" class="headerlink" title="购买腾讯云 COS"></a>购买腾讯云 COS</h4><p>其实国内提供对象存储服务的有很多，例如腾讯云、阿里云、七牛云、百度云、又拍云等，选择腾讯云主要是基于两点考虑：</p>
+<ol>
+<li>稳定可靠速度快，节点丰富还便宜</li>
+<li>支持微信或 QQ 登录，对大多数人来说方面，不用再格外注册账号</li>
+</ol>
+<blockquote>
+<p>你甚至可以使用 github 来做免费图床，但缺点是 github 在国内速度太慢了，体验不好，我不推荐。</p>
+</blockquote>
+<p>首先，你需要注册并开通「<a href="https://sspai.com/link?target=https://link.zhihu.com/?target=https://console.cloud.tencent.com/cos5">腾讯云对象存储</a>」，你可以使用微信或 QQ 登录：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/8c71da4b83b79821350aeb074312bb85.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>在「存储桶列表」&gt;「创建存储桶」，地区按照你的实际情况选择，访问权限设置为「公有读私有写」：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/157a4689ac564d86ab64cfe8ce0c456b.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://cdn.sspai.com/2020/12/22/16e922b14f5ae75c91845683a540b870.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>存储桶创建好之后，接下来就可以直接上传图片：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/b09b74e4a9cd77b4255cd4542d519ba9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>上传完成后，点击「详情」，复制「对象地址」中的 URL 即可访问对象：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/e6bd74b237fa8914f5dc85788c8b3fdf.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://cdn.sspai.com/2020/12/22/5f6286198ba8b1ad6c743952cd4d9b99.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>如果你要使用 Markdown，只需要手动编辑 Markdown 语法即可，例如：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">![<span class="hljs-string">example</span>](<span class="hljs-link">https://myupic-1253463441.cos.ap-nanjing.myqcloud.com/3b6cae2afdea8f710c0a5ccb460c39cb-0.jpg</span>)<br></code></pre></td></tr></table></figure>
+
+<p>腾讯云是根据流量来实时计费的，根据我自己的使用经验来看价格是非常便宜：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/3908682f470e049dae15ff3b3178352d.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>更详细的计费规则参见：<a href="https://sspai.com/link?target=https://link.zhihu.com/?target=https://cloud.tencent.com/product/cos/pricing">腾讯云 COS 定价</a></p>
+<p>上面已经介绍了基本的使用方法，但是你可能也发现了，如果每张图片都这样手动上传、手动复制链接、手动粘贴的话，效率未免太低了，这时候就需要使用我们的主角—— uPic 客户端了。</p>
+<h4 id="uPic-客户端配置"><a href="#uPic-客户端配置" class="headerlink" title="uPic 客户端配置"></a>uPic 客户端配置</h4><p>uPic客户端是开源免费的，可以在如下 GitHub 地址进行下载：</p>
+<ul>
+<li><a href="https://sspai.com/link?target=https://github.com/gee1k/uPic">https://github.com/gee1k/uPic</a></li>
+</ul>
+<p>打开偏好设置，在「图床」中添加一个「腾讯云 COS」：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/16763a27c4f28b8a2608574f1b763bd9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="配置项说明"><a href="#配置项说明" class="headerlink" title="配置项说明"></a>配置项说明</h3><ul>
+<li><code>区域</code>: 对象储存空间所属的区域，可在腾讯云控制台查看。</li>
+<li><code>空间名称</code>: 对象储存空间名称，可在腾讯云控制台查看。</li>
+<li><code>SecretId</code>: 密钥。</li>
+<li><code>SecretKey</code>: 密钥。</li>
+<li><code>域名</code>: 使用腾讯云默认提供的测试域名或者你的自定义域名。域名可在控制台查看。<code>域名需以http://或者https://开头</code>。</li>
+<li><code>保存路径</code>: 文件储存的路径（包括文件夹）。 <code>支持 &#123;year&#125; &#123;month&#125; &#123;day&#125; &#123;hour&#125; &#123;minute&#125; &#123;second&#125; &#123;since_second&#125; &#123;since_millisecond&#125; &#123;random&#125; &#123;filename&#125; &#123;.suffix&#125; 等变量。比如：上传的图片为 uPic.jpg，设定为 “uPic/&#123;filename&#125;&#123;.suffix&#125;”，则会保存到 “uPic/uPic.jpg”。</code></li>
+<li>在<code>保存路径</code>输入框后面的是<code>网址后缀</code>: 用于自定义图片处理。腾讯云 COS 目前还不支持，先预留。</li>
+</ul>
+<p><strong>看起来有点复杂，不过没关系，下面跟着我一步步配置即可。</strong></p>
+<p>点击腾讯云<strong>「</strong>存储桶列表<strong>」</strong>，点击「配置管理」：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/1b8680f5e02cc2d70f1a0253afd037c1.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>可以看到「存储桶名称」和「访问域名」，复制填写到 uPic 中：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/a3fc05d6a35b9065478cc417c0a26679.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>然进入腾讯云「API 密钥管理」，系统会提示建议创建子账号来管理，点击「切换使用子账号密钥」：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/ccd164a592c4ef6659d8231145681902.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>选择「快速创建」：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/e39f339ac3902bc03f3b8672c1e0470a.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>随意输入用户名，例如 GuestforuPic，点击用户权限：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/461469f544f6e3037721265a3ea20757.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>搜索「QcloudCOSFullAccess」，勾选并确定：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/71787d4c7210fceaaddf58a8805fdca9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://cdn.sspai.com/2020/12/22/c0856f11a2315a401d5e8dcc5ba1617f.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>然后进入腾讯云的「用户列表」&gt;「用户详情」&gt;「API密钥」&gt;「新建密钥」：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/641b4ba0223a8225ad0161ddbdb92b91.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://cdn.sspai.com/2020/12/22/e20dabd582fda5b2ebb904738c6529b6.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>复制 SecretId 和 SecretKey 到 uPic 客户端：</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/b6c2c37042dc1bef7ec884cc3be20fde.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>至于最后的「保存路径」可以保持不变，如果你有特殊要求再做自定义。</p>
+<p>点击「验证」测试一下，如果提示上传成功就配置完成啦！点击保存即可。</p>
+<p><img src="https://cdn.sspai.com/2020/12/22/67ca93666ebccc3e530b3affabcbe7c6.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload alt="img"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="category-chain-item">转载</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>「转载」使用 uPic 搭配腾讯云搭建图床</div>
+      <div>https://wonderhoi.com/2023/08/26/「转载」使用-uPic-搭配腾讯云搭建图床/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>wonderhoi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年8月26日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/08/28/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2%E7%9B%91%E6%B5%8B%EF%BC%9A%E5%8E%9F%E7%90%86/" title="呼吸代谢监测：原理">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">呼吸代谢监测：原理</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/08/22/Python-%E4%B8%AD-PIL.Image-%E5%92%8C-OpenCV-%E5%9B%BE%E5%83%8F%E6%A0%BC%E5%BC%8F%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/" title="Python 中 PIL.Image 和 OpenCV 图像格式相互转换">
+                        <span class="hidden-mobile">Python 中 PIL.Image 和 OpenCV 图像格式相互转换</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,741 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <link rel="icon" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="wonderhoi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="原文：血瓶vs蓝瓶：对能量系统设计的思考 血瓶vs蓝瓶：红蓝二元系统让我用这张图来开始这篇文章。这图上画出了一般的MMORPG杀怪升级的循环图，血和魔法值（由于传统上用蓝色表示，所以就是图中的蓝色方块）是玩家的两种资源，击败或被击败的关键在于使生命值（红）降低至0以下，而削弱对方生命值或补充自己生命值（或补充他人生命值）都要靠技能来实现，而技能是消耗魔法值（蓝）这一资源的。我把这种类似的结构统称为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「转载」血瓶vs蓝瓶：对能量系统设计的思考">
+<meta property="og:url" content="https://wonderhoi.com/2024/11/18/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E8%A1%80%E7%93%B6vs%E8%93%9D%E7%93%B6%EF%BC%9A%E5%AF%B9%E8%83%BD%E9%87%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%80%9D%E8%80%83/index.html">
+<meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="原文：血瓶vs蓝瓶：对能量系统设计的思考 血瓶vs蓝瓶：红蓝二元系统让我用这张图来开始这篇文章。这图上画出了一般的MMORPG杀怪升级的循环图，血和魔法值（由于传统上用蓝色表示，所以就是图中的蓝色方块）是玩家的两种资源，击败或被击败的关键在于使生命值（红）降低至0以下，而削弱对方生命值或补充自己生命值（或补充他人生命值）都要靠技能来实现，而技能是消耗魔法值（蓝）这一资源的。我把这种类似的结构统称为">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-11-18T05:17:41.000Z">
+<meta property="article:modified_time" content="2024-11-18T05:25:49.053Z">
+<meta property="article:author" content="wonderhoi">
+<meta property="article:tag" content="游戏设计">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>「转载」血瓶vs蓝瓶：对能量系统设计的思考 - 这是一个PM的BLOG</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wonderhoi.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>这是一个PM的BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/wallhaven-m35rwm.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="「转载」血瓶vs蓝瓶：对能量系统设计的思考"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-11-18 13:17" pubdate>
+          2024年11月18日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8.2k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">「转载」血瓶vs蓝瓶：对能量系统设计的思考</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>原文：<a target="_blank" rel="noopener" href="https://maniahero.com/2013/04/06/%E8%A1%80%E7%93%B6vs%E8%93%9D%E7%93%B6%EF%BC%9A%E5%AF%B9%E8%83%BD%E9%87%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%80%9D%E8%80%83/">血瓶vs蓝瓶：对能量系统设计的思考</a></p>
+<h2 id="血瓶vs蓝瓶：红蓝二元系统"><a href="#血瓶vs蓝瓶：红蓝二元系统" class="headerlink" title="血瓶vs蓝瓶：红蓝二元系统"></a>血瓶vs蓝瓶：红蓝二元系统</h2><p>让我用这张图来开始这篇文章。这图上画出了一般的MMORPG杀怪升级的循环图，血和魔法值（由于传统上用蓝色表示，所以就是图中的蓝色方块）是玩家的两种资源，击败或被击败的关键在于使生命值（红）降低至0以下，而削弱对方生命值或补充自己生命值（或补充他人生命值）都要靠技能来实现，而技能是消耗魔法值（蓝）这一资源的。我把这种类似的结构统称为<strong>“红蓝二元系统”</strong>，因而这种系统中的其他所有子系统如消耗品（红瓶蓝瓶），装备（提升属性从而提升技能威力与红、蓝最大值或恢复速度）都是围绕着红与蓝两个存量进行设计的。图中的红线部分为消耗掉的蓝的走向，绿线为战斗胜利后获得的战利品。</p>
+<p>进一步，我们要思考为什么要如此设计，红与蓝二个存量存在的意义是什么。<strong>由于是战斗系统的核心存量，我们可以发现，红是战胜与战败的条件，蓝是实现该手段的限制。</strong>如果你令敌人的红降低至0，则你获胜，反之你的生命值降低至0则你战败，而降低敌人或提高自己红存量要通过技能来实现，而释放技能是要消耗蓝的，当蓝不足的时候玩家就无法使用技能，只能任人宰割，因而实际上只要把对手的蓝耗光，也是获胜的一种手段——这十分类似于《万智牌》的两种获胜手段，你可以击杀对手，也可以耗光对手的牌库使其无法施展任何能力从而战败。</p>
+<h2 id="努力练级，拼命嗑药，不断加血"><a href="#努力练级，拼命嗑药，不断加血" class="headerlink" title="努力练级，拼命嗑药，不断加血"></a>努力练级，拼命嗑药，不断加血</h2><p>我们可以简单的考虑这样一个模型：在蓝耗光之前，假设我们可以稳定的为自己恢复生命值，同时稳定的对对方的生命值造成伤害，这样就有了从蓝指向自己生命值，以及从蓝指向对方生命值的两个流量，同样对方也有这两个流量。当某一方对对方造成伤害的流量大于其恢复流量时，对方的生命存量就开始下降，直到为0则战败。其中存在着两个变数：</p>
+<ol>
+<li>若蓝被耗光，则自己的流量都会变为0。</li>
+<li>单位时间内，造成伤害的总流量大于对方生命值库存总量，于是无论对方恢复生命的流量有多大，都会被秒杀。</li>
+</ol>
+<p>由于这两个问题的存在，我们要尽力避免自己的蓝被耗光，同时防止被对手秒杀。由于秒杀是无视对手对自己造成伤害以及恢复生命的能力的，因而会有一种随便虐对手，他根本没有还手之力的感觉，很爽。然而，很多游戏秒杀同等级的对手是十分困难的，在战斗中并没有太多突增流量的办法，因而玩家优先考虑的是避免情况1的发生，而不太担心情况2的发生，于是就变成了狂按红瓶蓝瓶的无聊嗑药泡菜游戏，玩家并不在意自己当前的红蓝存量，而更在意包里的红瓶与蓝瓶，因为这些消耗品才是真正的战斗力。</p>
+<p>在传统的RPG中玩家是会不断成长的，因而这一战斗模型会随着玩家等级的提升而提升，由于养成要素的存在，拥有更高等级、更好装备、更强大或更多消耗品的玩家很容易获胜。我们怎么避免这一状况呢？</p>
+<p>《暗黑破坏神2》对嗑药进行了改良，游戏中默认的红瓶与蓝瓶不会直接提高玩家的红与蓝存量，而是在一段时间内提高其输入流量。这样的做法首先大大降低了玩家无脑按红瓶与蓝瓶的可能性，从瞬间生效变为缓慢恢复大大延长了药瓶的有效时间，而其效果并不叠加，所以最优做法是等上一个瓶子效果结束后再按下一个，而之前的最优做法则是无脑狂按的button smasher。其次，这种做法强化了战斗的稳定性，我们可以这样想象，若你一次致命攻击把对手打得濒死，而他却瞬间吃了2个血瓶血又满了，游戏就变成了一个人品游戏，而如果血瓶增加的是流量，受到致命攻击的玩家在很长一段时间内依然会是保持劣势。对于战斗系统中伤害和恢复能力都相当于流量的游戏来说，流量无限大的血瓶与蓝瓶就是BUG一样的存在。不过《暗黑破坏神2》也保留了瞬间增加红与蓝的强力版紫色瓶子，玩家吃下后能够瞬间按百分比恢复红与蓝，但这种瓶子较为稀少，并不是烂大街的存在。</p>
+<p>《魔兽世界》也明白，瞬间提高红与蓝的存量是近乎于BUG的玩法，因而所有治疗手段都有以下几个特点：</p>
+<ol>
+<li>能够一下回复大量生命值的法术，需要很长的咏唱时间，用恢复量除以咏唱时间就可以得出其流入量，流量并不是无限大（伤害法术同理）。</li>
+<li>不需要咏唱时间的治疗法术，大多并不会一下回复大量生命值，而是在一个长时间内持续恢复，也就是提高了生命值的流入量（HOT或DOT法术）。</li>
+<li>能够一下回复大量生命值且无咏唱时间的法术，拥有很长的冷却时间（还可能同时伴有不成正比的大量蓝消耗以降低其性价比，如圣疗术），由于其流量无限大是BUG，因而要用长CD使其不能成为一般恢复手段。磕血瓶也在此列，《魔兽世界》的血瓶是拥有很长的CD的，这比《暗黑破坏神2》中紫瓶子通过稀有度来控制高明的很多——你包里揣着再多的瓶子也救不了你。</li>
+</ol>
+<h2 id="但我能平A，蓝的存在真的有必要么？"><a href="#但我能平A，蓝的存在真的有必要么？" class="headerlink" title="但我能平A，蓝的存在真的有必要么？"></a>但我能平A，蓝的存在真的有必要么？</h2><p>红的存在是由于其是胜负的根本条件，而蓝实际上存在的唯一意义在于使上文中状况1的发生——没蓝的角色是完全无能的。然而，实际上有很多游戏，并不是所有技能都耗蓝的，只依赖这种手段，依然可以达成战胜对手的目标。</p>
+<p>我们考察RTS游戏和FPS游戏。在FPS游戏中，几乎所有枪械都是有弹量限制的，这就相当于蓝，子弹打光了并且找不到补给，玩家就只能用效率低下但不需要弹药就能使用的近战武器或小手枪来进行游戏了。而在RTS游戏中，由于单位很多，游戏的scale更大，因而对于单个单位是不宜计较其残弹量的（也有一些RTS很计较，比如《猪兔大战》，但这无疑降低了游戏的scale），早期的RTS游戏从坦克到步兵的弹药都是无限的，在《命令与征服》中只有飞机例外，它们由于无视地形且移动力超强，因而需要不断地回到停机坪进行补给。而我们把这一现代战争背景改为奇幻，得到的就是近战步兵用刀砍人不会崩刃，远程单位用箭射人弹药无限。这些单位不用蓝，因为他们只会“平砍”或者说“平A”，这是他们唯一的战斗能力，而且效率未必像FPS游戏中一样低下。</p>
+<p>何人发明的“平砍”一词现在不得而知，我个人猜想是从麻将中的“平和”或者“屁和”引申来的，这一“平”字正暗示了其效率的低下——大多麻将中“平和”是赢的最少的获胜方式。情况在到了《魔兽争霸3》的时候发生了改变，《魔兽争霸3》由于引入了英雄，英雄有了蓝，而普通小兵没有蓝，只能平砍，而英雄则又能平砍又能用蓝放技能，这一游戏机制催化了MOBA类游戏的诞生，到了《DOTA》和《英雄联盟》盛行的年代后更加分化，物理英雄平砍为主要输出手段，法术英雄则是通过耗蓝放技能作为主要的输出手段——虽然大家都能平砍。《魔兽世界》也是如此，法师也能平砍，但正常人都不会干这种傻事的。</p>
+<p>在FPS游戏中，弹尽粮绝的情况下才会展开白刃战，而《魔兽世界》或《英雄联盟》（甚至《魔兽争霸3》中的敏捷英雄）中平砍却往往成为玩家追求的主要伤害能力，于是蓝的存在的价值就变得很尴尬：我没蓝也不要紧，因为平砍是我的主要输出手段。</p>
+<p>这导致了两个解决方案的出现：</p>
+<ol>
+<li>为近战职业提供其他机制的能量槽以修正蓝对其没用的问题。</li>
+<li>取消蓝的消耗，所有技能都是“平砍”。</li>
+</ol>
+<p>方案1是《魔兽世界》中的所有物理职业成为永动机的根本原因，战士，猎人，盗贼，死亡骑士和非治疗的武僧，在战斗时其能量都有一个固定的流入量，利用这些能量尽量提高输出能力就成了其主要的玩法循环，而平砍（或者说平射，如果是猎人的话）在这些职业输出中占了相当大的比重。当法师们没蓝了开始喝药、唤醒、激活、生命分流时，近战职业不用管这些，这样好像近战职业就变得十分IMBA，但在《魔兽世界》的团队战中，首先大部分情况下近战的输出位置并不占优势，其次一旦治疗职业的蓝用光了所有人都得死不管你是不是永动机，因而问题并不大。</p>
+<p>方案2是《激战2》的做法，该游戏所有职业都没有能量槽，所有的技能都是平砍——更恰当的说法是，所有的平砍都是一个没有CD、自动施法的技能，这个技能的快捷键是1，其他9个技能从2至0都是有CD的技能。</p>
+<p>这时候我们应该来想一想格斗游戏。格斗游戏中，玩家拥有普通技能，必杀技和超必杀技。普通技能是直接按键就能释放的轻拳LP、轻脚LK、重拳HP、重脚HK等，有的游戏还有中拳MP和中脚MK，如《街头霸王》或者其他脚踢或投技按钮，但总之这些只要按键就能释放的技能，就是最普通的攻击手段。必杀技则是需要输入一定指令才能释放的技能，如波动拳、升龙拳或是暗勾手、鬼烧。超必杀技则需要消耗一定的资源（蓝），这种资源是通过攻击和挨揍来获得的，超必杀技的指令比必杀技更为复杂，往往拥有一发定胜负的强大威力，并且视觉表现极其华丽。</p>
+<p>我们再看回《魔兽世界》，从强度上来说平砍就相当于普通技，英勇打击或寒冰箭则相当于必杀技，盾墙、圣盾术、冰箱、唤醒等技能则相当于超必杀技。在《魔兽世界》中“必杀技”级别的技能就已经开始消耗蓝（或者是其他资源）了，而“超必杀技”级别的技能则只用能长CD来限制了。而格斗游戏不是这样。一方面是由于两个游戏的节奏不同，格斗游戏往往不到一分钟就能分出胜负，而《魔兽世界》的团队或竞技场战斗往往会打上十几分钟。令一方面在于，格斗游戏一个人物的技能只有十个左右，而《魔兽世界》一个人物的技能则有几十个，技能多了的话平衡性就需要利用资源系统来控制其性价比（我想《激战2》也正是由于每个人只有10个技能因而不需要能量系统，只有CD就够了）。</p>
+<p>我们再来考虑卡牌游戏，如《万智牌》。《万智牌》的牌库总张数已经达到了字面意义的成千上万张，因而必须要有一个能量系统来控制每一张牌的性价比，如果是一个所有牌打出的价值都一样的游戏（比如《三国杀》，所有手牌都是每一张都可以随意打出，不消耗任何资源），后期必然难以扩展。《万智牌》不但拥有能量系统，且能量系统复杂，法术力拥有5种颜色，每一个法术或生物召唤时都会指定要求法术力的颜色，这就进一步加强了游戏的深度，而所有能量系统是从《万智牌》简化而来的游戏（如暴雪的新作《炉石传说》，法术简化到了只有一种颜色），其复杂性和深度在日后的扩展上都是难以望其项背的。</p>
+<p>这再次说明了格斗游戏的绝大多数技能与《激战2》为什么可以做到技能不消耗任何能量，而不用担心平衡问题，这是因为角色的可定制性并没有那么高（《激战2》的10个技能中只有5个是玩家自选的，且这5个技能基本都是战术性技能而不是伤害性技能，另外5个与格斗游戏类似，拿上了一个武器&#x2F;选了一个人之后就是那固定的5种技能，为伤害性技能）。但虽然技能少了，格斗游戏和《激战2》却拥有其他游戏所没有的复杂的COMBO机制，因而其简化了战术层的决策，强化了即时战斗的临场反应和配合能力，依然是十分出色的游戏。</p>
+<p>《万智牌》由于其法术槽多达5种的复杂性，只能作为回合游戏存在，玩家可以花大量的时间思考下一步的行动，即时游戏《魔兽世界》的绝大多数职业只有1种能量槽，这使得玩家在紧张激烈的战斗时依然能有闲暇来看一下自己的能量状态。如果《魔兽世界》的某个角色也和《万智牌》一样拥有5色法术力，不同的技能所消耗的法术力都不相同，那么这游戏就没法玩了——然而，暴雪似乎正在犯这样一个错误，就是不断地使能量系统更加复杂，这样一来整个游戏的方向都发生了偏转。下面我们就来挨个说一说，《魔兽世界》和《暗黑破坏神3》中各个职业的能量系统设计。</p>
+<h2 id="怒气：从格斗游戏那扒不一定是个好事"><a href="#怒气：从格斗游戏那扒不一定是个好事" class="headerlink" title="怒气：从格斗游戏那扒不一定是个好事"></a>怒气：从格斗游戏那扒不一定是个好事</h2><p>战士和野蛮人的怒气机制是和格斗游戏的能量机制是十分类似的：</p>
+<ol>
+<li>揍人会涨怒气</li>
+<li>挨揍会涨怒气</li>
+<li>由于《魔兽世界》与《暗黑破坏神3》并不像格斗游戏一样是回合制的，因而还有另外一条限制：不战斗的时候会减怒气。</li>
+</ol>
+<p>问题接着就来了。在PVE中，挨揍会涨怒气使得扛怪的战士坦克拥有大量的怒气溢出，他们往往可以变成button smasher狂拍按键而不用担心怒气不够用。挨揍会涨怒气也使得闪避几率成为了一个矛盾属性，闪避高了固然可以加强生存几率，但也会降低你的怒气获取量，于是就成了一个失败的设计。在PVP中，挨揍会涨怒气曾经会使得1个战士1个治疗的战斗力大于对方的2个玩家，这是因为格斗游戏基本没有回血手段，而《魔兽世界》中充满了恢复手段，只要有足够的生命流入量确保战士不死，承受大量伤害的战士的战斗能力就是远高于其他职业的。从60级满级的年代开始战士就是如此（一个战士后面跟着一队治疗职业横扫战场），而暴雪并没有意识到这是其机制导致的问题，而草率地认为是战士过强从而被一砍再砍，直到如今战士终于被取消了挨揍会涨怒气的设计，但这改动相当于颠覆了之前沉淀了六七年的概念，使得大量战士玩家不满。</p>
+<p>所以说暴雪在扒怒气机制的时候，显然忘了《魔兽世界》能加血，而且非常能加血，而格斗游戏根本不能加血这一问题。</p>
+<p>到了《暗黑破坏神3》，这一问题貌似被解除了：玩家最多只能4人进行游戏，而这4人中没有任何一个人是能专业加血的。野蛮人的技能分成了三类：平砍，涨怒气的技能，以及消耗怒气的技能。大家都发现了暴雪的白痴之处：玩家完全可以用涨怒气的技能代替平砍，这样一来平砍还有什么意义？可暴雪是没发现这一点的，事实上《暗黑破坏神3》的任何职业的平砍都是没有意义的冗余设计，因为总会有某些增加能量或0能量消耗的技能能够代替掉平砍。《暗黑破坏神3》虽然砍掉了专业治疗职业，也颇为“进步”的不以血瓶为主要生命恢复手段，但令人遗憾的是核心的战斗循环依然和本文开头的那一张图一样，因而砍掉了专业治疗职业的结果就是，这部分生命流出量的压力要玩家自己来负责——每一个玩家都要自己为自己提供恢复生命的手段。暴雪意识到了这一问题，于是他们推出了“血球”系统，玩家在攻击怪物时怪物会掉落血球，玩家走到血球旁边就可以恢复生命，这样一来玩家并不用考虑生命恢复手段，只要拥有足够的攻击力和生命存量，就可以不断杀怪，并在生命值降低到危险状态前吃一个血球。这听起来不错，是吧？但暴雪就是高超的没做好，失败在于两点：</p>
+<ol>
+<li>首先血球掉落是一个几率问题，因而你完全无法预测血球掉落的位置。你可以挑选一个增加拾取半径的装备来让你更容易拾取血球，但这种装备同时会使得你更难以选择拾取血球的时机——可能你现在血很多想等着掉更多的血的时候再捡，但由于你的拾取半径过大，你浪费了一个血球，大量治疗溢出了。这种情况下，依靠血球恢复生命变得极其不稳定。</li>
+<li>第二个是上面早就说过的问题：怪物的伤害流量实在是太猛了，很容易就能秒了你，而血球的发挥又极其不稳定，因而玩家需要强力的吸血属性来保证存活，这使得拥有吸血属性的装备价格飞涨，而玩家的输出能力与承受伤害能力完全不成正比，往往DPS高达几十万而生命值还不到十万，这样一来游戏的大部分过程是你脆弱的血线飘忽不定，只要怪物的一招没能秒了你，你超高的DPS带来的成吨吸血治疗量就能使你瞬间满血，而只要怪物的攻击力高了那么一点或者你没能躲开某个技能，恭喜你被秒了，因而血球、血瓶都是浮云，游戏的实际状况是：满血orDIE。</li>
+</ol>
+<p>由于野蛮人是挨揍涨怒气的，第二个问题也直接使得野蛮人变成了怒气满or断怒俩状态，没有第三种。很多装备足够好的玩家是完全放弃了产生怒气的技能的，全靠挨揍来获得怒气，并且用DPS远高于产怒技能的耗怒技能来当做“平砍”用的，由于DPS超高回血也超高，因而其实生存能力更强了，于是暴雪不但平砍变成了冗余设计，产生怒气的技能也变成了没必要存在的东西，不知道这是不是他们的设计初衷？</p>
+<h2 id="能量：不攒豆会死星人"><a href="#能量：不攒豆会死星人" class="headerlink" title="能量：不攒豆会死星人"></a>能量：不攒豆会死星人</h2><p>《魔兽世界》的武僧和盗贼有什么区别？区别在于盗贼的连击点数在敌人身上，而武僧的连击点数在自己身上。上文提到了暴雪痴迷于在即时战斗游戏中复杂化能量系统，死亡骑士与武僧这两个最新的职业都拥有了双套能量系统（以及《暗黑破坏神3》中的恶魔猎手）都是好例子，而且其他原本只耗蓝的职业也增加了新的能量机制，如牧师的查克拉，或者骑士的那个类似于连击点的系统。</p>
+<p>武僧、盗贼和死亡骑士的共同点在于，要用一种低端能量来生成一种高端能量，不同的技能要求的能量不同。这样一来，消耗“低端能量”的技能依然相当于格斗游戏中的“必杀技”，消耗高端能量的技能则相当于格斗游戏中的“超必杀技”了。然而在《魔兽世界》快节奏的战斗中，原本要同时监测目标的状态，自己的位置，技能的CD，自己的血量，自己的能量就已经很吃力了，现在又多了一种能量，游戏的强度就变得更大了，玩这些双能量的职业总是比玩单能量的职业更累的，那是肯定的，而实际上这种复杂性并没有对游戏玩法的提升有很大的帮助，玩家基本也是很快就能掌握一套固定的输出思路——消耗低端能量，攒高端能量，攒到一定程度释放某个“超必杀技”，然后回到第一步——其他那些只有一种能量系统的职业，基本也都是这个思路的。</p>
+<h2 id="集中值：实在设计不出来了，用这个凑数吧"><a href="#集中值：实在设计不出来了，用这个凑数吧" class="headerlink" title="集中值：实在设计不出来了，用这个凑数吧"></a>集中值：实在设计不出来了，用这个凑数吧</h2><p>集中值是一个混合的东西，首先像能量一样能够自动恢复，其次有类似于《暗黑破坏神3》的”产怒技能“。这样玩起来的实际方式和盗贼&#x2F;武僧没有任何区别，集中值不够的情况下拼命用产集中值的技能，集中值够了就放一个消耗集中值的技能——产集中值的技能相当于”必杀技“，消耗集中值的技能相当于”超必杀技“。这本来是个烂设计，因为在持续战斗中本质上与能量系统没有任何区别，而暴雪却把这东西套在了《暗黑破坏神3》的所有职业设计思路里，他们真的是疯了。</p>
+<p>这个系统的进一步修改产物是《暗黑破坏神3》武僧的精力能量系统，他们取消了集中值自动回复的那部分，所有能量都要靠产生该能量的技能来提供。听着耳熟是吧？这其实就是挨揍不回怒的怒气系统，而且对玩家体验没有任何影响，依然是能量不够的时候拼命产能量，能量够了拼命花能量，实战的时候没有任何变数，这就是唯一的最优解，再加上打怪过程是“满血orDIE“，游戏过程非常无聊，因为你知道了最优解你不需要任何作战技术，只要装备够，傻子都能赢，装备不够的话技术再高超也是被怪秒，武僧的游戏过程就是“按住鼠标左键，精力够了就按右键，要死了按1，1冷却的情况下按2，2冷却的情况下按3，3冷却的情况下按4，4个技能都冷却怪还没死的话就等死”。</p>
+<h2 id="彻底的双能量系统：奇葩恶魔猎人"><a href="#彻底的双能量系统：奇葩恶魔猎人" class="headerlink" title="彻底的双能量系统：奇葩恶魔猎人"></a>彻底的双能量系统：奇葩恶魔猎人</h2><p>刚才说了，《魔兽世界》中大部分职业其实都是双能量系统了，尤其是盗贼、武僧、死亡骑士最具代表性，但《魔兽世界》中的能量系统都是“用低端能量产生高端能量”的思路，而《暗黑破坏神3》的恶魔猎人则完全不一样——她就是拥有两套能量，一套用于进攻，一套用于防守，且两套能量几乎不能互相转换。用于进攻的憎恨系统与集中值一样，自动回复且有产憎恨值的技能，用于防守的戒律则与能量一样完全靠自然回复。</p>
+<p>首先这样在战斗的过程中你要多留意一种资源，所以玩起来肯定更累这是没说的了，其次《暗黑破坏神3》只能同时携带6个技能，你要带产憎恨的技能，还要带消耗憎恨的技能，还要带消耗戒律的技能，那么你每种技能能挑几个？因而恶魔猎人的技能搭配自由度从理论上来说是远低于其他职业的（而从实践上来说，每个职业有效的组合只有那么几种，因而差别不大。这算因祸得福吧？）。</p>
+<p>而且还有一个问题就是之前我们说过了，复杂的能量机制一般都是伴有大量的技能的，恶魔猎人的能量机制比他人复杂，但技能也只是能带6个而已，暴雪的解决方法是不给恶魔猎人设计长CD的“超必杀技”，也就是说恶魔猎人消耗戒律的技能就相当于其他职业的“超必杀技”了，考虑到戒律恢复速度是如此之慢，这是说的过去的，然而笔者认为在只有6个技能的情况下还设计长CD的超必杀技，这绝对是嘬死行为，一下从《暗黑破坏神2》的所有技能随便用、所有技能没CD变成了如今的只能带6个技能而且还有大招，这难道是受到了《DOTA》的影响吗？然而《DOTA》是一局一利索的对战游戏，并且是5v5，团战的时候是同时有几十个技能在天上飞来飞去的，可不是角色在线达几百小时的RPG！如此过犹不及的做法，绝对是找死行为。</p>
+<p>总而言之，产能量技能的设计、只有6个技能以及长技能CD的设计统统是很糟糕的，从根本思路上来说就既无法达到《激战2》一般的战斗体验（而且《激战2》拥有特殊的死亡系统），也无法达到像《魔兽世界》一样的RPG体验，更何况在实际游戏中由于数值过于糟糕，因而《暗黑破坏神3》的end game可以说是雪上加霜的糟糕，而《魔兽世界》的思路也在从RPG往格斗游戏上偏。</p>
+<h2 id="那么多能量系统就真的不好么？"><a href="#那么多能量系统就真的不好么？" class="headerlink" title="那么多能量系统就真的不好么？"></a>那么多能量系统就真的不好么？</h2><p>归根结底，笔者认为这是个scale问题，也就是系统边界划分错误的问题。人脑能够同时处理的事情最多是7件，因而如果一个游戏玩家需要同时思考的东西过多，那么游戏就过于复杂，过少的话又会过于无聊。《命令与征服3》中就犯了一个错误，作为一个操纵大量单位作战的游戏，你还必须像FPS游戏一样为每一个单位手动reload换子弹才能达到最优解，这种做法是反人类的。《战争机器》也有着一样的设计，reload的时候其实是一个小游戏，当滑块到达适当位置的时候再次按R键就能立刻装好子弹，这是因为该游戏还有用另外一个强大的掩体系统，你在reload的时候一般都是躲在掩体后面无事可做的，因而来玩玩小游戏再好不过；而一个RTS游戏里单位几十上百不说还要不断的采集资源、建造单位、控制部队移动，还哪有功夫为每一个单位reload？我们可以想一下如果《模拟城市》融入了竞速或模拟驾驶成分，每一个市民每天上班下班都要玩家为其开车控制，一个有40万居民的城市玩起来将会是多么过瘾——这就是scale的问题，在《坦克世界》中一辆坦克的复杂程度，也就是子系统的数量及其之间的连接，必然是远远高于《命令与征服》中的一辆坦克的。</p>
+<p>刚才说的之所以即时战斗不适用太复杂的能量系统也是如此，人脑是处理不过来的，不管是无脑还是烧脑，都是过犹不及的设计。实际上很多回合游戏都是拥有多能量系统的，而且像《万智牌》一样玩家可以围绕着某一种能量系统构建自己的战术，然而在激烈的即时战斗中玩家往往只会想”不够就用这个，够就用那个“，虽然比无脑搓寒冰箭复杂了一些，但其实并没有本质改变——”有蓝就搓寒冰箭，没蓝就唤醒&#x2F;喝血瓶“，增加了玩家的操作强度，而又没能提升游戏深度，就是冗余设计了。</p>
+<p>《激战2》是对传统RPG能量系统的一大颠覆，它打破了”红蓝二元系统“，做到了像格斗游戏一样的激烈对战与COMBO，并且意识到了不能让玩家带大量技能，采用5个固定技能5个自定义技能这一方式，使得玩家在不容易轻松找到最优解的情况下，又保证了很高的自由度与平衡性。《英雄联盟》也借鉴了很多《魔兽世界》中的新系统，并不再是所有英雄都用蓝条了，而且很多英雄也是干脆就没有能量系统的，如德玛西亚之力，或者某些英雄的能量槽就是生命槽，如蒙多或吸血鬼。但《英雄联盟》毕竟每个人物只有4个技能，而且是类似于格斗游戏的回合游戏，因而在MMORPG的设计上能借鉴的并不太多，弄不好还会像《暗黑破坏神3》一样弄巧成拙。</p>
+<p>因而我们在设计一个游戏的时候，可以根据游戏的激烈程度与节奏，自由地设计能量系统以使得游戏更加爽快或更加复杂。能量系统并不是必须存在的，也并不是越复杂越好的，要和具体状况结合才能知道。</p>
+<p>也许有朝一日，不但”蓝“这边会有诸多变种，”红“这边的设计也会像《家园》或《辐射》一样，引入多血槽系统或其他更加颠覆性的系统，届时”红蓝二元系统“会进化成什么样子，更加令人期待了不是吗？</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="category-chain-item">转载</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" class="print-no-link">#游戏设计</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>「转载」血瓶vs蓝瓶：对能量系统设计的思考</div>
+      <div>https://wonderhoi.com/2024/11/18/「转载」血瓶vs蓝瓶：对能量系统设计的思考/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>wonderhoi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年11月18日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/11/18/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E8%80%85%E8%B0%88%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%EF%BC%9A%E4%BB%8E%E6%80%80%E7%96%91%E5%B7%B2%E6%9C%89%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%A7%8B/" title="「转载」独立游戏开发者谈游戏设计：从怀疑已有的设计开始">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">「转载」独立游戏开发者谈游戏设计：从怀疑已有的设计开始</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/11/18/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8DM-is-for-Magic%E2%80%94%E2%80%94%E6%B8%B8%E6%88%8F%E9%87%8C%E2%80%9C%E9%AD%94%E6%B3%95%E5%80%BC%E2%80%9D%E7%9A%84%E6%9D%A5%E6%BA%90/" title="「转载」M is for Magic——游戏里“魔法值”的来源">
+                        <span class="hidden-mobile">「转载」M is for Magic——游戏里“魔法值”的来源</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

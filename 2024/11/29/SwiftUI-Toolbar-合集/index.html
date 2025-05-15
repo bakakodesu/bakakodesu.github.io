@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <link rel="icon" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="wonderhoi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Toolbar在 .toolbar 修饰符的闭包中添加组件即可，结合 NavigationView 的时候，添加的组件默认都在导航栏的右侧排布。 12345678910111213.toolbar &#123;    Button(action: &#123;        print(&quot;Saved&quot;)    &#125;, label: &#123;        Text(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SwiftUI Toolbar 合集">
+<meta property="og:url" content="https://wonderhoi.com/2024/11/29/SwiftUI-Toolbar-%E5%90%88%E9%9B%86/index.html">
+<meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="Toolbar在 .toolbar 修饰符的闭包中添加组件即可，结合 NavigationView 的时候，添加的组件默认都在导航栏的右侧排布。 12345678910111213.toolbar &#123;    Button(action: &#123;        print(&quot;Saved&quot;)    &#125;, label: &#123;        Text(">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-11-29T05:47:18.000Z">
+<meta property="article:modified_time" content="2024-12-02T13:36:11.735Z">
+<meta property="article:author" content="wonderhoi">
+<meta property="article:tag" content="SwiftUI">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>SwiftUI Toolbar 合集 - 这是一个PM的BLOG</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wonderhoi.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>这是一个PM的BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/wallhaven-m35rwm.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="SwiftUI Toolbar 合集"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-11-29 13:47" pubdate>
+          2024年11月29日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          876 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">SwiftUI Toolbar 合集</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="Toolbar"><a href="#Toolbar" class="headerlink" title="Toolbar"></a>Toolbar</h2><p>在 <code>.toolbar</code> 修饰符的闭包中添加组件即可，结合 <code>NavigationView</code> 的时候，添加的组件默认都在导航栏的右侧排布。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs swift">.toolbar &#123;<br>    <span class="hljs-type">Button</span>(action: &#123;<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Saved&quot;</span>)<br>    &#125;, label: &#123;<br>        <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Save&quot;</span>)<br>    &#125;)<br>    <br>    <span class="hljs-type">Button</span>(action: &#123;<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Added&quot;</span>)<br>    &#125;, label: &#123;<br>        <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Add&quot;</span>)<br>    &#125;)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="ToolbarItem"><a href="#ToolbarItem" class="headerlink" title="ToolbarItem"></a>ToolbarItem</h2><p><code>ToolbarItem</code> 持有一个将被放置在工具栏中的视图。它的特殊之处在于你可以在工具栏中为视图添加位置。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs swift">.toolbar &#123;<br>    <span class="hljs-type">ToolbarItem</span>(placement: .topBarLeading) &#123;<br>        <span class="hljs-type">Button</span>(action: &#123;<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Saved&quot;</span>)<br>        &#125;, label: &#123;<br>            <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Save&quot;</span>)<br>        &#125;)<br>    &#125;<br>    <br>    <span class="hljs-type">ToolbarItem</span>(placement: .topBarLeading) &#123;<br>        <span class="hljs-type">Button</span>(action: &#123;<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Added&quot;</span>)<br>        &#125;, label: &#123;<br>            <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Add&quot;</span>)<br>        &#125;)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>下面看一下 <code>placement</code> 参数的可选值，<code>placement</code> 属于 ToolbarItemPlacement 类型，以下类型针对 iOS, iPadOS, and tvOS等平台。</p>
+<ul>
+<li>automatic：默认的放置位置。系统会根据上下文自动决定最合适的位置。在 iOS 和 tvOS 上，默认放在导航栏的右侧。</li>
+<li>principal：将工具栏项放置在导航栏的中心位置。这通常用于标题或者重要控件的展示（如果使用了 <code>principal</code>，那么之前设置的navigation title就失效了。）。</li>
+<li>navigation：将工具栏项放置在导航栏的左侧位置。如果左侧在 compact 模式下有返回按钮的话，那么将工具栏项放置在 primaryAction 的位置。</li>
+<li>primaryAction：将工具栏项放置在导航栏的右侧位置。</li>
+<li>confirmationAction：将工具栏项放置在导航栏的右侧。专门用于放置确认或完成操作的位置。这通常用于模态视图或表单提交的场景。</li>
+<li>cancellationAction：将工具栏项放置在导航栏的左侧。专门用于放置取消操作的位置。这通常用于模态视图中，提供明显的取消选项。</li>
+<li>destructiveAction：将工具栏项放置在导航栏的右侧。专门用于放置可能导致数据删除或其他重要更改的操作，通常用红色或其他警示颜色标记。</li>
+<li>keyboard：将工具栏项放置在键盘的顶部工具栏上。这适用于输入场景，如文本编辑时提供快捷操作。</li>
+<li>navigationBarLeading：将工具栏项放置在导航栏的左侧。建议用 <code>.topBarLeading</code> 代替。</li>
+<li>navigationBarTrailing：将工具栏项放置在导航栏的右侧。建议用 <code>.topBarTrailing</code> 代替。</li>
+<li>bottomBar：将工具栏项放置在屏幕底部的工具栏中。这适用于那些需要常驻底部、易于访问的操作。</li>
+</ul>
+<h2 id="ToolbarItemGroup"><a href="#ToolbarItemGroup" class="headerlink" title="ToolbarItemGroup"></a>ToolbarItemGroup</h2><p><code>ToolbarItemGroup</code> 允许我们定义一组位于同一部位的 item，这样可以简化一些代码。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs swift">.toolbar &#123;<br>    <span class="hljs-type">ToolbarItemGroup</span>(placement: .topBarTrailing) &#123;<br>        <span class="hljs-type">Button</span>(action: &#123;<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Saved&quot;</span>)<br>        &#125;, label: &#123;<br>            <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Saved&quot;</span>)<br>        &#125;)<br>        <br>        <span class="hljs-type">Button</span>(action: &#123;<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Added&quot;</span>)<br>        &#125;, label: &#123;<br>            <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Add&quot;</span>)<br>        &#125;)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="ToolbarContent"><a href="#ToolbarContent" class="headerlink" title="ToolbarContent"></a>ToolbarContent</h2><p>如果我们要加的 Toolbar item 较多，那么整个代码看起来就非常臃肿了，有的时候有些 <code>Toolbar</code> 是可以复用的，我们可以将 <code>toolbar</code> 修饰符中的内容单独提出来，使用协议 <code>ToolbarContent</code>。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">HomeToolbar</span>: <span class="hljs-title class_ inherited__">ToolbarContent</span> &#123;<br>    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">ToolbarContent</span> &#123;<br>        <span class="hljs-type">ToolbarItem</span>(placement: .navigationBarTrailing) &#123;<br>            <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Home&quot;</span>)<br>        &#125;<br>        <br>        <span class="hljs-type">ToolbarItem</span>(placement: .principal) &#123;<br>            <span class="hljs-type">Image</span>(systemName: <span class="hljs-string">&quot;bus&quot;</span>)<br>        &#125;<br>        <br>        <span class="hljs-type">ToolbarItem</span>(placement: .bottomBar) &#123;<br>            <span class="hljs-type">Button</span>(<span class="hljs-string">&quot;Save&quot;</span>) &#123;<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Saved&quot;</span>)<br>            &#125;<br>            .buttonStyle(.borderedProminent)<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>在调用的地方，只需要实例化一个 <code>HomeToolbar</code> 即可。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs swift">.toolbar &#123;<br>    <span class="hljs-type">HomeToolbar</span>()<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="ToolbarTitleMenu"><a href="#ToolbarTitleMenu" class="headerlink" title="ToolbarTitleMenu"></a>ToolbarTitleMenu</h2><p><code>toolbarTitleMenu</code> 修饰符允许我们在导航栏的中间部分添加一个 menu 按钮，点击后出现一个下拉菜单。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs swift">.toolbar &#123;<br>    <span class="hljs-type">ToolbarTitleMenu</span> &#123;<br>        <span class="hljs-type">Button</span>(<span class="hljs-string">&quot;Save&quot;</span>) &#123;<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Saved&quot;</span>)<br>        &#125;<br>        <br>        <span class="hljs-type">Button</span>(action: &#123;<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Added&quot;</span>)<br>        &#125;, label: &#123;<br>            <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Add&quot;</span>)<br>        &#125;)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/guoyongming925/article/details/139409033">SwiftUI中Toolbar使用介绍（ToolbarItem, ToolbarItemPlacement, ToolbarItemGroup, ToolbarContent）</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/SwiftUI/" class="print-no-link">#SwiftUI</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>SwiftUI Toolbar 合集</div>
+      <div>https://wonderhoi.com/2024/11/29/SwiftUI-Toolbar-合集/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>wonderhoi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年11月29日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/11/29/SwiftUI-LabeledContent-%E5%90%88%E9%9B%86/" title="SwiftUI LabeledContent 合集">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">SwiftUI LabeledContent 合集</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/11/29/SwiftUI-Picker-Segmented-%E5%90%88%E9%9B%86/" title="SwiftUI Picker&amp;Segmented 合集">
+                        <span class="hidden-mobile">SwiftUI Picker&amp;Segmented 合集</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

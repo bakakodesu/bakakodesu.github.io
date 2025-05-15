@@ -1,0 +1,706 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  <link rel="icon" href="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="wonderhoi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="原文：[技術宅] 關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！ Choices 選擇－探索非線性互動媒體的獨特魅力「一個遊戲是由一系列的有趣決定所構成。」 — 《文明帝國》的創始者席德·梅爾（Sid Meier）所說的。這句話深刻地揭示了遊戲作為一種獨特媒介的核心特質，那就是透過玩家與遊戲的互動，帶來多樣且豐富的體驗。「選擇」成為了遊戲與其他媒介區別開來的關">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「转载」關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！">
+<meta property="og:url" content="https://wonderhoi.com/2024/06/17/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E9%97%9C%E5%8D%A1%E8%A8%AD%E8%A8%88%E7%9A%84%E4%BA%94%E5%A4%A7%E5%BF%83%E6%B3%95%EF%BC%8D%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9A%E9%81%B8%E6%93%87%E3%80%82%E9%AB%94%E9%A9%97%E4%B8%8D%E5%8F%AA%E6%98%AFYES-NO%EF%BC%8C%E8%80%8C%E6%98%AF%E6%83%B3%E8%A6%81%E6%9B%B4%E5%A4%9A%EF%BC%81/index.html">
+<meta property="og:site_name" content="这是一个PM的BLOG">
+<meta property="og:description" content="原文：[技術宅] 關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！ Choices 選擇－探索非線性互動媒體的獨特魅力「一個遊戲是由一系列的有趣決定所構成。」 — 《文明帝國》的創始者席德·梅爾（Sid Meier）所說的。這句話深刻地揭示了遊戲作為一種獨特媒介的核心特質，那就是透過玩家與遊戲的互動，帶來多樣且豐富的體驗。「選擇」成為了遊戲與其他媒介區別開來的關">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-06-17T06:46:04.000Z">
+<meta property="article:modified_time" content="2024-07-04T17:02:49.000Z">
+<meta property="article:author" content="wonderhoi">
+<meta property="article:tag" content="游戏设计">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>「转载」關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！ - 这是一个PM的BLOG</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wonderhoi.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>这是一个PM的BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/wallhaven-m35rwm.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="「转载」關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-06-17 14:46" pubdate>
+          2024年6月17日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.8k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">「转载」關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>原文：<a target="_blank" rel="noopener" href="https://lucigamedesign543.medium.com/top-5-level-design-principles-72ebcabe5739">[技術宅] 關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！</a></p>
+<h1 id="Choices-選擇－探索非線性互動媒體的獨特魅力"><a href="#Choices-選擇－探索非線性互動媒體的獨特魅力" class="headerlink" title="Choices 選擇－探索非線性互動媒體的獨特魅力"></a>Choices 選擇－探索非線性互動媒體的獨特魅力</h1><p>「一個遊戲是由一系列的有趣決定所構成。」 — 《<em>文明帝國</em>》的創始者席德·梅爾（Sid Meier）所說的。這句話深刻地揭示了遊戲作為一種獨特媒介的核心特質，那就是透過玩家與遊戲的互動，帶來多樣且豐富的體驗。「選擇」成為了遊戲與其他媒介區別開來的關鍵要素，賦予玩家成為故事主導的能力。</p>
+<p>這背後的深意是通過讓玩家主動作出選擇，他們不僅是在遊戲中活動的參與者，更是推動故事發展的重要力量。在遊戲設計領域，這種玩家的主導權被稱為「Agency」。在深入探討「選擇」這一概念時，我們可以將其細分為以下三點。</p>
+<h2 id="1-機會與選項-—-Opportunity-Options"><a href="#1-機會與選項-—-Opportunity-Options" class="headerlink" title="1. 機會與選項 — Opportunity &amp; Options"></a>1. 機會與選項 — Opportunity &amp; Options</h2><p>「選項」可能很直接，就如同問玩家“你想採取哪一個行動？”例如，在《<em>Candy Crush</em>》遊戲中，可動的糖果數量就代表了玩家的選項，他們可以選擇將藍色糖果向下滑動形成特殊糖果，或者將綠色糖果向左滑動進行消除等等。</p>
+<p>「Opportunity 機會」則需要玩家透過遊戲機制和深思熟慮來進行行動。以圖中的關卡為例，玩家需要破壞瓶子糖果並填滿橘色汽水，讓Bubble Bear能夠上升到糖果線的右上方。在這個關卡中，糖果魚是關鍵的元素，所以如果玩家選擇了上述的藍色match 4，他們將獲得一個藍色垂直射線特殊糖果，從而有機會擊中下方的黃色糖果魚。</p>
+<p>當然，你可能會想，“這種完美的配合不可能每次都發生，有時候沒有糖果魚或特殊糖果可用！”這就是開發者透過設計來創造的「機會」。這個開放式的關卡設計，加上特定顏色的汽水和其他元素，使得創造特殊糖果的機會較高，從而提高了隱性選擇的可行性。</p>
+<p>幾乎所有的遊戲都能提供「機會」與「選項」的概念，不論是劇情為重的《<em>Detroit: Become Human</em>》讓玩家選擇對話回應或是動作；或是開放世界的《G<em>host of Tsushima</em>》中，可以讓玩家選擇走平面入侵蒙古軍，或是登高上屋簷潛行刺殺；又或是節奏快速的roguelike《<em>Hades</em>》，提供玩家開場武器跟，或是清場後的技能等等都是選擇。讀者也可以思考你最近玩的遊戲中，哪一些是所謂的「機會與選擇」</p>
+<p>那麼，當遊戲提供了眾多選擇時，玩家如何判斷哪些是“好”的選擇？又該如何在众多選項中做出最佳決定？這引出了我們的下一個討論點：“<strong>具意義的選擇 — Meaningful Choice</strong>”。</p>
+<h2 id="2-具意義的選擇-—-Meaningful-Choice"><a href="#2-具意義的選擇-—-Meaningful-Choice" class="headerlink" title="2. 具意義的選擇 — Meaningful Choice"></a>2. 具意義的選擇 — Meaningful Choice</h2><p>在探索遊戲世界的過程中，「具意義的選擇」究竟是什麼？作為一種充滿互動性的非線性媒介，遊戲由一系列精彩的決定構成，而這些「選擇」即是玩家的「決定」。不過，並非所有決定都需帶有深遠的意義。有些選擇雖然有趣，但影響有限。作為開發者，我們追求的是創造那些能引發玩家情感共鳴，並對遊戲進程產生重要影響的「有意義」瞬間。那麼，如何設計出讓玩家感受到重要性並需深思熟慮的選擇呢？</p>
+<h3 id="引導玩家「優先化選擇」"><a href="#引導玩家「優先化選擇」" class="headerlink" title="引導玩家「優先化選擇」"></a><strong>引導玩家「優先化選擇」</strong></h3><p>所謂的「優先化選擇」是指讓玩家對眼前的選項進行排序，決定哪些需優先考慮。在這一過程中，玩家會思考哪些選擇更為重要，從而決定行動的先後順序。創造一個能夠引發玩家這種思維的環境需要對遊戲玩法機制進行細緻的整合，並設計各種情境來激發玩家的判斷力。如老闆在《淺談Level Design — 關卡設計》中所提到：</p>
+<blockquote>
+<p><em>Level Design是一種設計讓玩家透過遊戲中階段性的環境，空間或遊玩的互動，來發揮出game mechanic（遊戲機制）的最大效益，而讓遊戲有更強的帶入感，更吸引玩家，或是使其更有趣，玩家可從中得到喜悅與樂趣。</em></p>
+</blockquote>
+<p>例如，在三消遊戲中，將blocker（障礙方塊）視為敵人，設計師會利用各種blocker（障礙方塊）創造預期的關卡難度和情境。每個blocker（障礙方塊）的行為模式和位置都不同，這迫使玩家思考如何有效地移除這些障礙，哪些blocker應優先處理，以及從哪個位置開始攻略關卡。</p>
+<p>在非三消的遊戲中，開發者需理解「敵人單位的差異化（Orthogonal Unit Differentiation）」，創造出讓玩家需要進行「優先化選擇」的情境。知名的《<em>Doom</em>》便是一個例子，遊戲中不同類型的敵人具有不同的攻擊模式，玩家需在快速的遊戲節奏中判斷哪個敵人應先被攻擊。這樣的設計理念在許多遊戲中都有體現，如《<em>Uncharted</em>》系列、《<em>God of War</em>》、《<em>Hades</em>》、《<em>Diablo</em>》等。</p>
+<h3 id="情境與機會驅動的選擇"><a href="#情境與機會驅動的選擇" class="headerlink" title="情境與機會驅動的選擇"></a><strong>情境與機會驅動的選擇</strong></h3><p>在「優先化選擇」的基礎上，玩家會根據當前的情境和潛在機會作出有意義的優先選擇。例如，在一個關卡中可能有多條路線通往終點，玩家會根據自身的利益和當前情境決定走哪條路，這可能基於對某種玩法的偏好、獲勝的概率或額外獎勵等因素。《Super Mario Bro》中的水管提供了一個選擇，玩家可以潛入其中獲取更多金幣或道具，使得這一選擇成為有意義的行為。</p>
+<p>發者透過關卡設計提供的選擇，不僅體現在如《<em>Metal Gear</em>》和《<em>Assassin’s Creed</em>》等遊戲中帶起的潛行玩法，而且也適用於休閒遊戲。在《<em>Candy Crush</em>》系列中，選擇何時使用Color bomb 或Sprinkleshell 等道具，往往取決於當前情境和機會。例如，Sprinkleshell 的功能是在收集到足夠的青色糖果後，玩家可以點擊啟動消除關卡中指定顏色的糖果。在設計以此功能為核心的關卡時，玩家需要判斷在適當的情境下何時使用，每次選擇的時機都至關重要。</p>
+<p>以特定關卡為例，玩家的目標是收集所有的Honey Bear。當關卡進入第二個畫面時，玩家需要擊破深藍色的糖果以破壞Honey Bear，但這些糖果的位置通常不易觸及。設計師巧妙地希望玩家利用Sprinkleshell來一次性擊破深藍色糖果，從而完成目標。因此，每一次玩家選擇使用Sprinkleshell的時機都受到情境和機會的驅動，這種選擇的重要性不言而喻。</p>
+<h2 id="3-技巧與機運的交織-—-Skill-or-Luck-or-Both"><a href="#3-技巧與機運的交織-—-Skill-or-Luck-or-Both" class="headerlink" title="3. 技巧與機運的交織 — Skill or Luck or Both?"></a>3. 技巧與機運的交織 — Skill or Luck or Both?</h2><p>當我們談論「技巧」與「機運」時，你可能會好奇它們與選擇有何關聯。提及「機運」，我們常聯想到隨機性和運氣，這些元素與技巧形成了一種微妙的平衡。技巧是玩家可以透過練習掌握的元素，而隨機性則是無法預測的，它為遊戲增添了挑戰、驚喜和不確定性。然而，技巧在很多情況下成為了玩家戰勝關卡的關鍵，尤其對於那些技巧嫻熟的玩家來說，他們能夠利用自己的技巧來抵消不幸的影響。相反地，對於新手或技巧尚未成熟的玩家，我們也不希望他們因為不幸的隨機事件而沮喪至放棄遊戲。於是，選擇成為了克服隨機性和提升技巧的重要工具之一。</p>
+<p>「Fielding」是開發者希望帶給玩家的一種經驗。玩家需要透過自身技巧，分析隨機事件對關卡所帶來的變化，從而作出最佳選擇。並且，從每次正面或負面的回饋中學習，理解為何某個選擇是好的或壞的，並在未來的選擇中進行調整。</p>
+<p>在遊戲的每一個情境下，都存在「已知」與「未知」的元素。「隨機、機運、機率」這些因素增加了未知元素的比重，從而打破了玩家對遊戲一成不變的認知，帶來驚奇、挑戰和新鮮感。</p>
+<p>在開發三消遊戲時，開發者可以透過控制關卡中的物件（例如blocker、candies、specials）的釋放機率、顏色、數量等，來為玩家創造一定的機運。目標是找到那個甜蜜點，讓不可控因素不會超過玩家對遊戲的控制。在進行關卡review時，如果發現某個關卡特別容易產生大量特殊糖果或觸發連鎖反應，我們會特別留意並進行多次測試，確保它符合預期的體驗和難度，並確保玩家仍在控制中。會議中常說的一句話是：“Don’t let the level play by itself,” 即使關卡符合我們的預期難度和體驗。</p>
+<p>《Baldur’s Gate 3》中每個招式的施放都有一定的成功機率，Roguelite遊戲也同樣融入了隨機元素，玩家需要根據當前的關卡選擇有利於自己的技能和武器。另一個“運氣與技能”典型的例子是《Mario Kart》的問號箱，它看似隨機，但實際上會根據玩家的排名影響道具的機率，考驗玩家使用道具的技巧。</p>
+<h2 id="結語：三者的和諧共鳴"><a href="#結語：三者的和諧共鳴" class="headerlink" title="結語：三者的和諧共鳴"></a>結語：三者的和諧共鳴</h2><p>在這篇探討中，我們發現「機會與選擇」、「具意義的選擇」以及「技巧與機運」這三點彼此之間有著深刻的相互影響。如果開發者僅提供機會與選擇，遊戲可能會顯得單調乏味，難以吸引玩家深入體驗。相對地，若只強調具意義的選擇，則可能使遊戲過於壓力山大，讓玩家對每個可能的後果感到躊躇。至於技巧與機運，若不當平衡則可能造成遊戲的不確定因素過高或技術門檻太大，阻礙玩家進入那個狀態的心流。</p>
+<p>這三者之間存在著一種相輔相成的關係。至少根據老闆在開發三消遊戲和先前經驗中的體會，透過這三個要素的結合可以創造出引人入勝的關卡設計。這些原則或許在開發其他類型的產品時也能發揮作用，雖然其中某些可能不盡適用。如果讀者們有任何特別的想法或見解，非常歡迎在留言區進行分享與討論。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="category-chain-item">转载</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" class="print-no-link">#游戏设计</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>「转载」關卡設計的五大心法－第一篇：選擇。體驗不只是YES &amp; NO，而是想要更多！</div>
+      <div>https://wonderhoi.com/2024/06/17/「转载」關卡設計的五大心法－第一篇：選擇。體驗不只是YES-NO，而是想要更多！/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>wonderhoi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年6月17日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/06/17/%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E5%A6%82%E4%BD%95%E7%A3%A8%E7%BB%83%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%9A%84%E2%80%9C%E6%89%8B%E8%89%BA%E2%80%9D%EF%BC%9F%E4%BB%8E%E8%BF%99%E4%B8%AA%E6%96%B9%E5%90%91%E7%9D%80%E6%89%8B%E8%AF%95%E8%AF%95/" title="「转载」如何磨练关卡设计师的“手艺”？从这个方向着手试试">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">「转载」如何磨练关卡设计师的“手艺”？从这个方向着手试试</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/05/07/%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF%E7%9A%84%E5%AF%BC%E6%BC%94%E7%B3%BB%E7%BB%9F/" title="求生之路的导演系统">
+                        <span class="hidden-mobile">求生之路的导演系统</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
