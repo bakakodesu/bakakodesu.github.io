@@ -23,7 +23,7 @@
   
     <meta name="description" content="如图所示，蓝色正六边形族的数量应该是 4 和 2。  下面介绍 Swift 代码的实现办法。 首先为正六边形进行编号，如图：  再为每个正六边形关联相邻的六边形，例如  1 - 2, 3, 4 2 - 1, 4, 6  关联好之后，以 1 号六边形为例：  将 1 号加入 check 数组 -&gt; [1] 遍历 check 数组，将 1 号加入 blue 数组 -&gt; [1]；将 1 号加">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift 求正六边形网格中颜色相同且相邻的正六边形数量">
+<meta property="og:title" content="Swift 求正六边形网格中颜色相同且相邻的正六边形数量（递归）">
 <meta property="og:url" content="https://wonderhoi.com/2024/12/12/Swift-%E6%B1%82%E6%AD%A3%E5%85%AD%E8%BE%B9%E5%BD%A2%E7%BD%91%E6%A0%BC%E4%B8%AD%E9%A2%9C%E8%89%B2%E7%9B%B8%E5%90%8C%E4%B8%94%E7%9B%B8%E9%82%BB%E7%9A%84%E6%AD%A3%E5%85%AD%E8%BE%B9%E5%BD%A2%E6%95%B0%E9%87%8F/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
 <meta property="og:description" content="如图所示，蓝色正六边形族的数量应该是 4 和 2。  下面介绍 Swift 代码的实现办法。 首先为正六边形进行编号，如图：  再为每个正六边形关联相邻的六边形，例如  1 - 2, 3, 4 2 - 1, 4, 6  关联好之后，以 1 号六边形为例：  将 1 号加入 check 数组 -&gt; [1] 遍历 check 数组，将 1 号加入 blue 数组 -&gt; [1]；将 1 号加">
@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/121202.png">
 <meta property="og:image" content="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/121203.png">
 <meta property="article:published_time" content="2024-12-12T14:28:41.000Z">
-<meta property="article:modified_time" content="2024-12-12T16:51:49.881Z">
+<meta property="article:modified_time" content="2025-06-24T20:31:17.289Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="Swift">
 <meta name="twitter:card" content="summary_large_image">
@@ -41,7 +41,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Swift 求正六边形网格中颜色相同且相邻的正六边形数量 - 这是一个PM的BLOG</title>
+  <title>Swift 求正六边形网格中颜色相同且相邻的正六边形数量（递归） - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -218,7 +218,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Swift 求正六边形网格中颜色相同且相邻的正六边形数量"></span>
+            <span id="subtitle" data-typed-text="Swift 求正六边形网格中颜色相同且相邻的正六边形数量（递归）"></span>
           
         </div>
 
@@ -241,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          406 字
+          408 字
         
       </span>
     
@@ -280,7 +280,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Swift 求正六边形网格中颜色相同且相邻的正六边形数量</h1>
+            <h1 id="seo-header">Swift 求正六边形网格中颜色相同且相邻的正六边形数量（递归）</h1>
             
             
               <div class="markdown-body">
@@ -307,7 +307,7 @@
 <li>遍历 check 数组，提取蓝色正六边形 -&gt; 6 ……</li>
 </ol>
 <p>可以发现，checked 数组的元素从 1 号开始，是一层层随着颜色往外遍历的。</p>
-<p>编写成代码：</p>
+<p>编写成递归代码：</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">func</span> <span class="hljs-title function_">blueHexagonCount</span>(<span class="hljs-params">check</span>: [<span class="hljs-type">Hexagon</span>]) -&gt; [<span class="hljs-type">Hexagon</span>] &#123;<br><br>    <span class="hljs-keyword">var</span> checked: [<span class="hljs-type">Hexagon</span>] <span class="hljs-operator">=</span> []     <span class="hljs-comment">// 存放遍历过的六边形</span><br>    <span class="hljs-keyword">var</span> result: [<span class="hljs-type">Hexagon</span>] <span class="hljs-operator">=</span> []      <span class="hljs-comment">// 存放颜色相同且相邻的六边形</span><br><br>    <span class="hljs-keyword">return</span> checking(check: check)<br><br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">checking</span>(<span class="hljs-params">check</span>: [<span class="hljs-type">Hexagon</span>]) -&gt; [<span class="hljs-type">Hexagon</span>] &#123;<br><br>        <span class="hljs-keyword">var</span> target: [<span class="hljs-type">Hexagon</span>] <span class="hljs-operator">=</span> []  <span class="hljs-comment">// 临时存放颜色相同的六边形</span><br><br>        <span class="hljs-keyword">for</span> hexagon <span class="hljs-keyword">in</span> check &#123;<br>            <span class="hljs-keyword">if</span> hexagon.color <span class="hljs-operator">==</span> .blue &#123;<br>                target.append(hexagon)<br>            &#125;<br>        &#125;<br><br>        checked <span class="hljs-operator">+=</span> check<br><br>        <span class="hljs-keyword">if</span> target.count <span class="hljs-operator">==</span> <span class="hljs-number">0</span> &#123;<br>            <span class="hljs-keyword">return</span> result<br>        &#125;<br><br>        <span class="hljs-keyword">else</span> &#123;<br><br>            result <span class="hljs-operator">+=</span> target<br><br>            <span class="hljs-keyword">var</span> relation: [<span class="hljs-type">Hexagon</span>] <span class="hljs-operator">=</span> []    <span class="hljs-comment">// 存放与 target 中六边形相邻的六边形</span><br>            <span class="hljs-keyword">for</span> hexagon <span class="hljs-keyword">in</span> target &#123;<br>                relation <span class="hljs-operator">+=</span> hexagon.relations<br>            &#125;<br><br>            relation <span class="hljs-operator">=</span> relation.removeDuplicate()<br><br>            <span class="hljs-keyword">for</span> h1 <span class="hljs-keyword">in</span> checked &#123;<br>                <span class="hljs-keyword">for</span> h2 <span class="hljs-keyword">in</span> relation &#123;<br>                    <span class="hljs-keyword">if</span> h1 <span class="hljs-operator">==</span> h2 &#123;<br>                        relation.removeAll(where: &#123; <span class="hljs-variable">$0</span> <span class="hljs-operator">==</span> h2 &#125;) <span class="hljs-comment">// checked 中的六边形不再 checking</span><br>                    &#125;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">return</span> checking(check: relation)<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
                 
@@ -354,7 +354,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Swift 求正六边形网格中颜色相同且相邻的正六边形数量</div>
+      <div>Swift 求正六边形网格中颜色相同且相邻的正六边形数量（递归）</div>
       <div>https://wonderhoi.com/2024/12/12/Swift-求正六边形网格中颜色相同且相邻的正六边形数量/</div>
     </div>
     <div class="license-meta">

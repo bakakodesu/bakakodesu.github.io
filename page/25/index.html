@@ -238,15 +238,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/08/11/CO2-%E6%B5%93%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0220-%E9%A9%B1%E5%8A%A8/" target="_self">
-          CO2 浓度传感器 SEN0220 驱动
+        <a href="/2023/08/22/VSCode-%E9%85%8D%E7%BD%AE-Conda-%E7%8E%AF%E5%A2%83/" target="_self">
+          VSCode 配置 Conda 环境
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/11/CO2-%E6%B5%93%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0220-%E9%A9%B1%E5%8A%A8/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/22/VSCode-%E9%85%8D%E7%BD%AE-Conda-%E7%8E%AF%E5%A2%83/" target="_self">
         <div>
-          传感器采购自 DFRobot，基本上是即买即用。  购买地址  相关信息   Arduino 驱动代码： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051/*! * @file  SEN0220.ino * @brief Infrared CO2 Sensor
+          VSCode 下载 Python 插件：  在 VSCode 中使用 CTRL+P 打开搜索，然后输入 &gt; select interpreter：  选择对应环境即可。 运行代码后，可以在 VSCode 的终端发现自动输入了如下指令：
         </div>
       </a>
 
@@ -254,8 +254,193 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-08-11 20:23" pubdate>
-              2023-08-11
+            <time datetime="2023-08-22 11:21" pubdate>
+              2023-08-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/VSCode/">#VSCode</a>
+            
+              <a href="/tags/Anaconda/">#Anaconda</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/18/OpenCV-CAP_PROP_FRAME_COUNT-%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E5%B8%A7%E6%95%B0%E9%97%AE%E9%A2%98/" target="_self">
+          OpenCV CAP_PROP_FRAME_COUNT 获取视频帧数问题
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/18/OpenCV-CAP_PROP_FRAME_COUNT-%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E5%B8%A7%E6%95%B0%E9%97%AE%E9%A2%98/" target="_self">
+        <div>
+          OpenCV 读取视频，可以通过属性 CAP_PROP_FRAME_COUNT 获取视频的总帧数，但是有些视频通过该属性获取的帧数和实际遍历整个视频的帧数不一样。 1234567891011121314151617import cv2 as cvvideo = &#x27;video.mp4&#x27;cap = cv.VideoCapture(video)frames = cap.get(cv.
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-18 15:50" pubdate>
+              2023-08-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BA%BA%E4%BD%93%E5%A7%BF%E6%80%81%E8%AF%86%E5%88%AB-Project/" class="category-chain-item">人体姿态识别 Project</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/16/AlphaPose-%E9%83%A8%E7%BD%B2/" target="_self">
+          AlphaPose 部署
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/16/AlphaPose-%E9%83%A8%E7%BD%B2/" target="_self">
+        <div>
+          AlphaPose 为开源项目。项目基于PyTorch深度学习框架，所以要安装PyTorch，一般来说把这两个教程看完，PyTorch就能成功安装了：  搭建Pytorch环境(GPU版本，含CUDA、cuDNN)，并在Pycharm上使用（零基础小白向） PyCharm与Anaconda超详细安装配置教程  之后就是 AlphaPose 的本地部署，copy 源码后一个一个一个一个往 Conda
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-16 12:43" pubdate>
+              2023-08-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BA%BA%E4%BD%93%E5%A7%BF%E6%80%81%E8%AF%86%E5%88%AB-Project/" class="category-chain-item">人体姿态识别 Project</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">#深度学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/15/Python-%E4%BB%A5%E5%8F%8A-pyqt-%E7%BA%BF%E7%A8%8B%E9%94%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" target="_self">
+          Python 以及 pyqt 线程锁简单使用
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/15/Python-%E4%BB%A5%E5%8F%8A-pyqt-%E7%BA%BF%E7%A8%8B%E9%94%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" target="_self">
+        <div>
+          项目一共有 4 个线程，分别为 3 个传感器采集线程和 1 个计算线程。 理想中 4 个线程需要以队列的方式执行： 线程 1 采集数据 ——&gt; 线程 2 采集数据 ——&gt; 线程 3 采集数据 ——&gt; 线程 4 计算数据 这里采用给线程加锁的方式： 采用 threading 并加锁123456789101112131415161718192021222324252627282930
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-15 17:16" pubdate>
+              2023-08-15
             </time>
           </div>
         
@@ -275,15 +460,8 @@
   
     <span>></span>
     
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
+  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E4%BB%A3%E8%B0%A2%E8%AE%A1%E7%AE%97/" class="category-chain-item">代谢计算</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/%E4%BC%A0%E6%84%9F%E5%99%A8/" class="category-chain-item">传感器</a>
-  
-  
-
   
 
   
@@ -299,11 +477,149 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/Python/">#Python</a>
+            
+              <a href="/tags/PyQt/">#PyQt</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/14/%E8%82%8C%E7%94%B5%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0240/" target="_self">
+          肌电传感器 SEN0240
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/14/%E8%82%8C%E7%94%B5%E4%BC%A0%E6%84%9F%E5%99%A8-SEN0240/" target="_self">
+        <div>
+          传感器采购自 DFRobot，基本上是即买即用。  购买地址  相关信息，这个也是。   Arduino 驱动代码： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-14 23:48" pubdate>
+              2023-08-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/EMG-Project/" class="category-chain-item">EMG Project</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
               <a href="/tags/Arduino/">#Arduino</a>
+            
+              <a href="/tags/EMG/">#EMG</a>
             
               <a href="/tags/Sensor/">#Sensor</a>
             
-              <a href="/tags/VO2/">#VO2</a>
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/14/PyQt-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/" target="_self">
+          PyQt 组件之间的层级关系
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/14/PyQt-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/" target="_self">
+        <div>
+          PyQt 构建 UI 的逻辑有点类似 SwiftUI，下面以 pyqtgraph 为最小组件来构建 UI： 层级结构如下： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152import sysimport pyqtgraph as pgfrom PyQt5.
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-14 22:27" pubdate>
+              2023-08-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/" class="category-chain-item">呼吸代谢 Project</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/%E4%B8%8A%E4%BD%8D%E6%9C%BA/" class="category-chain-item">上位机</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/PyQt/">#PyQt</a>
             
           </div>
         
@@ -317,15 +633,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/08/11/Arduino-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7/" target="_self">
-          Arduino 输入输出数字信号
+        <a href="/2023/08/13/IMU-%E5%86%85%E5%8F%82%E6%A0%87%E5%AE%9A/" target="_self">
+          IMU 内参标定
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/11/Arduino-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/13/IMU-%E5%86%85%E5%8F%82%E6%A0%87%E5%AE%9A/" target="_self">
         <div>
-          Arduino Uno 上每一个带有数字编号的引脚，都是数字引脚，包括写有 A 编号的模拟输入引脚。 数字信号是以 0、1 表示的电平不连续变化的信号，也就是以二进制的形式表示的信号。在 Arduino 中数字信号通过高低电平来表示，高电平则为数字信号 1，低电平则为数字信号 0。 在使用输入或输出功能前，需要先通过 pinMode() 函数配置引脚的模式为输入模式或输出模式： 1pinMode(
+          标定的本质是参数辨识，参数包括陀螺仪和加速度计各自的零偏、刻度系数误差、安装误差。 IMU的内参标定：通过特定的方法找出生产工艺引起的误差，并把他们量化，最终将数据校正。 相关资料：  IMU 内参标定； 多传感器融合定位理论基础（四）：IMU内参模型及标定。
         </div>
       </a>
 
@@ -333,158 +649,151 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-08-11 16:13" pubdate>
+            <time datetime="2023-08-13 21:49" pubdate>
+              2023-08-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9-Project/" class="category-chain-item">空间轨迹 Project</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9-Project/%E8%BD%A8%E8%BF%B9%E8%AE%A1%E7%AE%97/" class="category-chain-item">轨迹计算</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/IMU/">#IMU</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/13/pyqtgraph-%E6%97%A0%E6%B3%95%E5%AE%9E%E6%97%B6%E5%88%B7%E6%96%B0%E5%9B%BE%E8%A1%A8/" target="_self">
+          pyqtgraph 无法实时刷新图表
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/13/pyqtgraph-%E6%97%A0%E6%B3%95%E5%AE%9E%E6%97%B6%E5%88%B7%E6%96%B0%E5%9B%BE%E8%A1%A8/" target="_self">
+        <div>
+          使用 pyqtgraph 显示传感器数据时，会出现图表无法刷新的情况（数据依然在采集，但图表无法刷新）。 测试下来的原因是绘制 curve 的 setData() 必须在主线程中运行。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-13 00:10" pubdate>
+              2023-08-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/" class="category-chain-item">呼吸代谢 Project</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/%E4%B8%8A%E4%BD%8D%E6%9C%BA/" class="category-chain-item">上位机</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/PyQt/">#PyQt</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/11/SCP-%E8%BF%9C%E7%A8%8B%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6%E5%88%B0%E6%A0%91%E8%8E%93%E6%B4%BE/" target="_self">
+          SCP 远程拷贝文件到树莓派
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/11/SCP-%E8%BF%9C%E7%A8%8B%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6%E5%88%B0%E6%A0%91%E8%8E%93%E6%B4%BE/" target="_self">
+        <div>
+          12345scp file user@host:target patheg. scp main.py pi@192.168.1.1:/home/pi/Desktop/demo将目录下的 main.py 拷贝至树莓派的桌面 demo 文件夹中
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-11 22:44" pubdate>
               2023-08-11
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/" class="category-chain-item">呼吸代谢 Project</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/%E4%BC%A0%E6%84%9F%E5%99%A8/" class="category-chain-item">传感器</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Arduino/">#Arduino</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/08/10/Arduino-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7/" target="_self">
-          Arduino 输入输出模拟信号
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/10/Arduino-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7/" target="_self">
-        <div>
-          在 Arduino UNO 上，除了 14 个数字输入&#x2F;输出引脚，还带有 6 个编号 A 的模拟输入引脚。Arduino 可以读取这些引脚上输入的模拟值，即读取引脚上输入的电压大小。模拟信号是用连续变化的物理量表示的信息，信号随时间作连续变化。 模拟输入引脚是带有 ADC（Analog-to-Digital Converter，模数转换器）功能的引脚。它可以将外部输入的模拟信号转换为芯片
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-08-10 16:10" pubdate>
-              2023-08-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/" class="category-chain-item">呼吸代谢 Project</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/%E4%BC%A0%E6%84%9F%E5%99%A8/" class="category-chain-item">传感器</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Arduino/">#Arduino</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/08/09/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BC%80%E5%90%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B9%B6%E4%BF%AE%E6%94%B9%E5%88%86%E8%BE%A8%E7%8E%87/" target="_self">
-          树莓派开启远程桌面并修改分辨率
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/09/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BC%80%E5%90%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B9%B6%E4%BF%AE%E6%94%B9%E5%88%86%E8%BE%A8%E7%8E%87/" target="_self">
-        <div>
-          1.启动树莓派桌面系统自带的 VNC 服务首先 ssh 登录树莓派，终端输入 sudo raspi-config 启动自带的配置程序。 找到「Interfacing Options」选项，进入二级菜单找到「VNC」选项开启。 2.下载 VNC Viewer下载地址 3.登录远程桌面运行 VNC Viewer 之后输入树莓派的 IP 地址，通过 ifconfig 命令可以查看。选择连接之后输入树莓派
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-08-09 11:15" pubdate>
-              2023-08-09
             </time>
           </div>
         
@@ -542,15 +851,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/08/07/Swift-Timer-%E5%AE%9A%E6%97%B6%E5%99%A8/" target="_self">
-          Swift Timer 定时器
+        <a href="/2023/08/11/Python-%E8%AF%BB%E5%8F%96%E4%B8%B2%E5%8F%A3%E6%95%B0%E6%8D%AE/" target="_self">
+          Python 读取串口数据
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/07/Swift-Timer-%E5%AE%9A%E6%97%B6%E5%99%A8/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/11/Python-%E8%AF%BB%E5%8F%96%E4%B8%B2%E5%8F%A3%E6%95%B0%E6%8D%AE/" target="_self">
         <div>
-          1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950import SwiftUIstruct TimerView: View &#123;    @State var count1: Int = 0    @State var count2: Int = 0    @S
+          serial 读取串口数据初始化ser 123import serialser = serial.Serial(&#x27;com1&#x27;, 9600, timeout=1)  初始化的参数 123456789101112131415161718ser = serial.Serial(port=None,              # number of device, numbering
         </div>
       </a>
 
@@ -558,313 +867,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-08-07 17:21" pubdate>
-              2023-08-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Swift/">#Swift</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/08/07/Python-%E5%85%B3%E9%94%AE%E5%AD%97-Nonlocal-%E4%B8%8E-Global/" target="_self">
-          Python 关键字 Nonlocal 与 Global
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/07/Python-%E5%85%B3%E9%94%AE%E5%AD%97-Nonlocal-%E4%B8%8E-Global/" target="_self">
-        <div>
-          global 的用法： 123456789101112num1 = 0num2 = 0def change_num():  global num1  num1 = 1  num2 = 1change_num()print(num1, num2)# output: 1, 0# 不允许直接修改全局变量(数组、字典除外)，需要添加 global 关键字  nonlocal 的用法： 1234567891
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-08-07 16:54" pubdate>
-              2023-08-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Python/">#Python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/08/07/Python-%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E6%9C%80%E5%A4%9A%E7%9A%84%E5%85%83%E7%B4%A0/" target="_self">
-          Python 获取数组出现次数最多的元素
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/07/Python-%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E6%9C%80%E5%A4%9A%E7%9A%84%E5%85%83%E7%B4%A0/" target="_self">
-        <div>
-          1234a = [1, 2, 3, 4, 2, 3, 2]max_label = max(a, key=a.count)print(max_label)# output: 2
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-08-07 16:28" pubdate>
-              2023-08-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Python/">#Python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/08/07/PyTorch-%E7%8C%AB%E7%8B%97%E8%AF%86%E5%88%AB%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-I-%E4%BD%8E%E5%87%86%E7%A1%AE%E5%BA%A6%E7%89%88%E6%9C%AC/" target="_self">
-          PyTorch 猫狗识别深度学习 I 低准确度版本
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/07/PyTorch-%E7%8C%AB%E7%8B%97%E8%AF%86%E5%88%AB%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-I-%E4%BD%8E%E5%87%86%E7%A1%AE%E5%BA%A6%E7%89%88%E6%9C%AC/" target="_self">
-        <div>
-          数据源Cat and Dog 下载的文件层级为： PetImages(doc) - Cat(doc)&#x2F;Dog(doc) - image(jpg) 需要注意狗的 11702 和猫的 666 这两张图片损坏了。在加载数据集的时候会出现警告。 处理图片获取猫狗图片的 txt12345678910def get_txt(path, file_name, label):    # path：dat
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-08-07 16:06" pubdate>
-              2023-08-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/PyTorch/">#PyTorch</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/08/07/Xcode-%E6%8A%A5%E9%94%99-Failed-to-register-bundle-identifier/" target="_self">
-          Xcode 报错 Failed to register bundle identifier
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/07/Xcode-%E6%8A%A5%E9%94%99-Failed-to-register-bundle-identifier/" target="_self">
-        <div>
-          大概率是注册 Bundle Identifier 的时候 edu.self.AppName 被人注册了
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-08-07 13:19" pubdate>
-              2023-08-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Xcode/">#Xcode</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/" target="_self">
-          传感器的响应时间
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/07/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4/" target="_self">
-        <div>
-          关于响应时间，例如热电偶测量水温的实验过程：  用恒温水槽，水温 $T$，环境温度 $T_0$ ，热电偶首先处于外部环境中，稳定后，反映环境温度 $T_0$； 将热电偶迅速插入到恒温水槽中，这时候热电偶感受的温度参数发生突变，由 $T_0$ 到 $T$。  那么此时，热电偶输出反映的温度就是 $T$ 吗？答案通常情况之下是否定的，通常可以看到热电偶反映的温度有一个逐渐上升的过程，最终会达到 $T$
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-08-07 12:14" pubdate>
-              2023-08-07
+            <time datetime="2023-08-11 22:21" pubdate>
+              2023-08-11
             </time>
           </div>
         
@@ -889,7 +893,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/%E4%BC%A0%E6%84%9F%E5%99%A8/" class="category-chain-item">传感器</a>
+  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/%E4%B8%8A%E4%BD%8D%E6%9C%BA/" class="category-chain-item">上位机</a>
   
   
 
@@ -908,7 +912,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Sensor/">#Sensor</a>
+              <a href="/tags/%E4%B8%B2%E5%8F%A3/">#串口</a>
+            
+              <a href="/tags/Python/">#Python</a>
             
           </div>
         
@@ -920,7 +926,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/24/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/#board">23</a><a class="page-number" href="/page/24/#board">24</a><span class="page-number current">25</span><a class="page-number" href="/page/26/#board">26</a><a class="page-number" href="/page/27/#board">27</a><a class="extend next" rel="next" href="/page/26/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/24/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/#board">23</a><a class="page-number" href="/page/24/#board">24</a><span class="page-number current">25</span><a class="page-number" href="/page/26/#board">26</a><a class="page-number" href="/page/27/#board">27</a><a class="page-number" href="/page/28/#board">28</a><a class="extend next" rel="next" href="/page/26/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

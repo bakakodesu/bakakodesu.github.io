@@ -29,7 +29,7 @@
 <meta property="og:description" content="Toolbar在 .toolbar 修饰符的闭包中添加组件即可，结合 NavigationView 的时候，添加的组件默认都在导航栏的右侧排布。 12345678910111213.toolbar &#123;    Button(action: &#123;        print(&quot;Saved&quot;)    &#125;, label: &#123;        Text(">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-29T05:47:18.000Z">
-<meta property="article:modified_time" content="2024-12-02T13:36:11.735Z">
+<meta property="article:modified_time" content="2025-06-16T15:31:10.706Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="SwiftUI">
 <meta name="twitter:card" content="summary_large_image">
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          876 字
+          900 字
         
       </span>
     
@@ -314,7 +314,11 @@
 <h2 id="ToolbarTitleMenu"><a href="#ToolbarTitleMenu" class="headerlink" title="ToolbarTitleMenu"></a>ToolbarTitleMenu</h2><p><code>toolbarTitleMenu</code> 修饰符允许我们在导航栏的中间部分添加一个 menu 按钮，点击后出现一个下拉菜单。</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs swift">.toolbar &#123;<br>    <span class="hljs-type">ToolbarTitleMenu</span> &#123;<br>        <span class="hljs-type">Button</span>(<span class="hljs-string">&quot;Save&quot;</span>) &#123;<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Saved&quot;</span>)<br>        &#125;<br>        <br>        <span class="hljs-type">Button</span>(action: &#123;<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Added&quot;</span>)<br>        &#125;, label: &#123;<br>            <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Add&quot;</span>)<br>        &#125;)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/guoyongming925/article/details/139409033">SwiftUI中Toolbar使用介绍（ToolbarItem, ToolbarItemPlacement, ToolbarItemGroup, ToolbarContent）</a></p>
+<p>参考：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/guoyongming925/article/details/139409033">SwiftUI中Toolbar使用介绍（ToolbarItem, ToolbarItemPlacement, ToolbarItemGroup, ToolbarContent）</a></li>
+<li><a target="_blank" rel="noopener" href="https://lingshunlab.com/program/how-to-add-icons-and-custom-layouts-to-the-window-title-bar-in-swiftui-app-on-macos">MacOS 如何在SwiftUI应用的窗口标题栏中添加并图标和自定义布局</a></li>
+</ol>
 
                 
               </div>

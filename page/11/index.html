@@ -238,15 +238,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/10/28/Swift-%E6%A3%80%E6%B5%8B-Dark-Model/" target="_self">
-          Swift 检测 Dark Model
+        <a href="/2024/10/31/UIFontDescriptor.SystemDesign-%E6%8C%87%E5%AE%9A%E7%B3%BB%E7%BB%9F%E5%AD%97%E4%BD%93/" target="_self">
+          UIFontDescriptor.SystemDesign 指定系统字体
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/28/Swift-%E6%A3%80%E6%B5%8B-Dark-Model/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/31/UIFontDescriptor.SystemDesign-%E6%8C%87%E5%AE%9A%E7%B3%BB%E7%BB%9F%E5%AD%97%E4%BD%93/" target="_self">
         <div>
-          1234567struct ContentView: View &#123;    @Environment(\.colorScheme) var colorScheme    var body: some View &#123;        Text(colorScheme == .dark ? &quot;在暗模式下&quot; : &quot;在亮模式下&quot;)    &#125;&
+          iOS App 的 4 種系統字體 其中，UIKit &amp; system font 有说到： 以 UIFontDescriptor.SystemDesign 選擇想要的系統字體，跟剛剛 SwiftUI 的例子一樣，選項有 .default，.monospaced，.rounded &amp; .serif 四種。不過它的程式比 SwiftUI 複雜，我們必須先產生 UIFontDescrip
         </div>
       </a>
 
@@ -254,7 +254,373 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-10-28 10:10" pubdate>
+            <time datetime="2024-10-31 17:06" pubdate>
+              2024-10-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/UIKit/">#UIKit</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/31/Swift-Array-%E5%90%88%E9%9B%86/" target="_self">
+          Swift Array 合集
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/31/Swift-Array-%E5%90%88%E9%9B%86/" target="_self">
+        <div>
+          数组去交集How to find the difference between two arrays 1234567extension Array where Element: Hashable &#123;    func difference(from other: [Element]) -&gt; [Element] &#123;        let thisSet = Set(self)
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-31 16:56" pubdate>
+              2024-10-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Swift/">#Swift</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/30/%E6%AD%A3%E5%85%AD%E8%BE%B9%E5%BD%A2%E7%BD%91%E6%A0%BC%E7%9B%B8%E5%85%B3%E7%AE%97%E6%B3%95/" target="_self">
+          正六边形网格相关算法
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/30/%E6%AD%A3%E5%85%AD%E8%BE%B9%E5%BD%A2%E7%BD%91%E6%A0%BC%E7%9B%B8%E5%85%B3%E7%AE%97%E6%B3%95/" target="_self">
+        <div>
+          【算法记录&#x2F;六边形网格】(一)坐标系统 【算法记录&#x2F;六边形网格】(三)邻域 Hexagonal Grids
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-30 15:49" pubdate>
+              2024-10-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/30/%E5%B2%9B%E5%B1%BF%E9%97%AE%E9%A2%98/" target="_self">
+          岛屿问题
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/30/%E5%B2%9B%E5%B1%BF%E9%97%AE%E9%A2%98/" target="_self">
+        <div>
+          leetcode&amp;lintcode分类刷题：图论（一、连通域&#x2F;岛屿问题）  LeetCode 岛屿系列全解析 200. 463. 1905. 1254. 695. 827. 694. 711  分享丨【题单】网格图（DFS&#x2F;BFS&#x2F;综合应用）  swift深度优先递归  岛屿数量
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-30 15:45" pubdate>
+              2024-10-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/30/SwiftUI-Identifiable-%E5%8D%8F%E8%AE%AE/" target="_self">
+          SwiftUI Identifiable 协议
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/30/SwiftUI-Identifiable-%E5%8D%8F%E8%AE%AE/" target="_self">
+        <div>
+          当使用 .sheet(item: $selectedTag) 传入值为 Int 时报错，会提示: 1Instance method &#x27;sheet(item:onDismiss:content:)&#x27; requires that &#x27;Int&#x27; conform to &#x27;Identifiable&#x27;  item 应该遵循 Identifiable 协
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-30 00:24" pubdate>
+              2024-10-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SwiftUI/">#SwiftUI</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/28/SwiftUI-Text-%E5%90%88%E9%9B%86/" target="_self">
+          SwiftUI Text 合集
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/28/SwiftUI-Text-%E5%90%88%E9%9B%86/" target="_self">
+        <div>
+          specifier 和 formatterSwiftUI Text 的 string interpolation 和參數 specifier &amp; formatter Text 显示浮点数时，可通过 specifier 控制小数点位数： 1234567891011struct ContentView: View &#123;        var number = 10.567    var
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-28 10:44" pubdate>
+              2024-10-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SwiftUI/">#SwiftUI</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/28/SwiftUI-Materials-%E6%A8%A1%E7%B3%8A%E8%83%8C%E6%99%AF%E4%BD%BF%E7%94%A8/" target="_self">
+          SwiftUI Materials 模糊背景使用
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/28/SwiftUI-Materials-%E6%A8%A1%E7%B3%8A%E8%83%8C%E6%99%AF%E4%BD%BF%E7%94%A8/" target="_self">
+        <div>
+          123456.ultraThinMaterial.thinMaterial.regularMaterial.thickMaterial.ultraThickMaterial.bar   使用12345678Text(&quot;Ultra thin material&quot;)   .background(.ultraThinMaterial)   Text(&quot;Ultra thin m
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-28 10:29" pubdate>
               2024-10-28
             </time>
           </div>
@@ -285,69 +651,6 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Swift/">#Swift</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/10/23/SwiftUI-MapKit-%E5%90%88%E9%9B%86/" target="_self">
-          SwiftUI MapKit 合集
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/23/SwiftUI-MapKit-%E5%90%88%E9%9B%86/" target="_self">
-        <div>
-          参考：认识 SwiftUI 版 MapKit Camera 初始化方式123456789101112@State private var position = MapCameraPosition.region(    MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 28.209195, longitude: 112.84262
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-10-23 16:54" pubdate>
-              2024-10-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Map/">#Map</a>
-            
               <a href="/tags/SwiftUI/">#SwiftUI</a>
             
           </div>
@@ -362,15 +665,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/10/23/SwiftUI-Sheet-fullScreenCover-%E5%90%88%E9%9B%86/" target="_self">
-          SwiftUI Sheet&amp;fullScreenCover 合集
+        <a href="/2024/10/28/SwiftUI-Alert-%E5%90%88%E9%9B%86/" target="_self">
+          SwiftUI Alert 合集
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/23/SwiftUI-Sheet-fullScreenCover-%E5%90%88%E9%9B%86/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/28/SwiftUI-Alert-%E5%90%88%E9%9B%86/" target="_self">
         <div>
-          Custom Sheet参考：  Xcode 14.3 新功能：輕鬆客製化 SwiftUI Bottom Sheet 背景及滾動行為 How to Display a Bottom Sheet Using SwiftUI  12345678.presentationBackground(.thinMaterial)	// 模糊效果.presentationBackground(.yellow)
+          認識 SwiftUI 的 Alert SwiftUI 新 Alert 弹出窗口圆你文本输入之梦 SwiftUI基础篇Alert  基础 Alert1234567891011struct AlertView: View &#123;    @State private var showingAlert = false    var body: some View &#123;        But
         </div>
       </a>
 
@@ -378,8 +681,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-10-23 16:54" pubdate>
-              2024-10-23
+            <time datetime="2024-10-28 10:25" pubdate>
+              2024-10-28
             </time>
           </div>
         
@@ -423,15 +726,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/10/11/Python-%E6%8A%A5%E9%94%99-RuntimeError-Can-t-call-numpy-on-Tensor-that-requires-grad-Use-tensor-detach-numpy-instead/" target="_self">
-          Python 报错 RuntimeError: Can&#39;t call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead
+        <a href="/2024/10/28/SwiftUI-Menu-%E5%90%88%E9%9B%86/" target="_self">
+          SwiftUI Menu 合集
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/11/Python-%E6%8A%A5%E9%94%99-RuntimeError-Can-t-call-numpy-on-Tensor-that-requires-grad-Use-tensor-detach-numpy-instead/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/28/SwiftUI-Menu-%E5%90%88%E9%9B%86/" target="_self">
         <div>
-          在使用 sklearn 计算回归模型的 R2 评分时，出现该报错 12predictions = model(test_features)r2 = r2_score(test_labels, predictions)  出现这个现象的原因是：待转换类型的 PyTorch Tensor 变量带有梯度，直接将其转换为 numpy 数据将破坏计算图，因此 numpy 拒绝进行数据转换，实际上这是对开发者
+          Menus in SwiftUI  基础 Menu123456789101112131415struct MenuView: View &#123;    var body: some View &#123;        Menu(&quot;Options&quot;) &#123;            Button(&quot;Order Now&quot;) &#123;
         </div>
       </a>
 
@@ -439,8 +742,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-10-11 18:06" pubdate>
-              2024-10-11
+            <time datetime="2024-10-28 10:24" pubdate>
+              2024-10-28
             </time>
           </div>
         
@@ -455,15 +758,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/VO2max-Project/" class="category-chain-item">VO2max Project</a>
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/VO2max-Project/%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83/" class="category-chain-item">模型训练</a>
-  
-  
-
   
 
       </span>
@@ -477,7 +773,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/sklearn/">#sklearn</a>
+              <a href="/tags/SwiftUI/">#SwiftUI</a>
             
           </div>
         
@@ -491,15 +787,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/10/10/%E5%9C%B0%E5%9B%BE%E5%9D%90%E6%A0%87%E9%97%AE%E9%A2%98/" target="_self">
-          地图坐标问题
+        <a href="/2024/10/28/SwiftUI-List-%E5%90%88%E9%9B%86/" target="_self">
+          SwiftUI List 合集
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/10/%E5%9C%B0%E5%9B%BE%E5%9D%90%E6%A0%87%E9%97%AE%E9%A2%98/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/28/SwiftUI-List-%E5%90%88%E9%9B%86/" target="_self">
         <div>
-          高德地图、腾讯地图以及谷歌中国区地图使用的是 GCJ-02 坐标系，也就是国测局坐标系（火星坐标系）； 百度地图使用的是BD-09坐标系； 底层接口(HTML5 Geolocation或ios、安卓API)通过GPS设备获取的坐标使用的是WGS-84坐标系。  参考：高德地图、腾讯地图、谷歌中国区地图与百度地图坐标系
+          SwiftUI基础篇List  How to Customise the SwiftUI List Style and Background Color  SwiftUI中List的样式及使用详解（添加、移动、删除、自定义滑动）   1234567891011121314151617181920List&#123;    ForEach(billDateModel.dataSource)&#12
         </div>
       </a>
 
@@ -507,8 +803,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-10-10 16:57" pubdate>
-              2024-10-10
+            <time datetime="2024-10-28 10:15" pubdate>
+              2024-10-28
             </time>
           </div>
         
@@ -523,7 +819,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
   
   
 
@@ -538,342 +834,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Map/">#Map</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/10/10/Python-%E5%8F%96%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7-%E5%B0%8F%E7%9A%84-n-%E4%B8%AA-%E9%87%8D%E5%A4%8D-%E5%85%83%E7%B4%A0%E4%BB%A5%E5%8F%8A%E7%B4%A2%E5%BC%95/" target="_self">
-          Python 取出数组中最大/小的 n 个（重复）元素以及索引
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/10/Python-%E5%8F%96%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7-%E5%B0%8F%E7%9A%84-n-%E4%B8%AA-%E9%87%8D%E5%A4%8D-%E5%85%83%E7%B4%A0%E4%BB%A5%E5%8F%8A%E7%B4%A2%E5%BC%95/" target="_self">
-        <div>
-          首先参考：  Python获取列表中最大&#x2F;最小的n个元素及索引 Python获取list中最大或最小的n个数及其索引  但都不是很优雅，尤其是在有重复元素的情况下。 于是有了：Python lists: indices of heapq.nlargest with repeating values in list 12345678&gt;&gt;&gt; import heapq&gt;
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-10-10 16:37" pubdate>
-              2024-10-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Python/">#Python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/09/24/sklearn-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/" target="_self">
-          sklearn 数据预处理
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/09/24/sklearn-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/" target="_self">
-        <div>
-          1234567891011121314151617181920212223242526272829303132from sklearn.preprocessing import MinMaxScaler, StandardScaler, Normalizer, Binarizer# 区间缩放是将原始数据中的数据缩放到[0,1]范围scaler = MinMaxScaler(feature_rang
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-24 22:56" pubdate>
-              2024-09-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/VO2max-Project/" class="category-chain-item">VO2max Project</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/VO2max-Project/%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83/" class="category-chain-item">模型训练</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/sklearn/">#sklearn</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/09/24/PyTorch-%E5%B8%B8%E7%94%A8%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/" target="_self">
-          PyTorch 常用损失函数
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/09/24/PyTorch-%E5%B8%B8%E7%94%A8%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/" target="_self">
-        <div>
-          参考：  pytorch模型构建（四）——常用的回归损失函数 几种常见的计算机视觉中的损失函数原理理解&amp;分析 PyTorch中的损失函数大致使用场景  分类损失函数一般有 CrossEntropy Loss、NLL Loss、KLDiv Loss、BCE Loss、BCE With Logits Loss、Margin Ranking Loss、Hinge Embedding Loss、H
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-24 22:15" pubdate>
-              2024-09-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/VO2max-Project/" class="category-chain-item">VO2max Project</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/VO2max-Project/%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83/" class="category-chain-item">模型训练</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/PyTorch/">#PyTorch</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/09/24/PyTorch-%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B/" target="_self">
-          PyTorch 回归模型
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/09/24/PyTorch-%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B/" target="_self">
-        <div>
-          线性回归  PyTorch之线性回归模型 3.3 线性回归的简洁实现  非线性回归  pytorch学习线性回归与非线性回归，以及理解nn.linear()和ReLU激活函数  回归模型评价指标  sklearn 回归模型评价指标及代码示例
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-24 22:10" pubdate>
-              2024-09-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/VO2max-Project/" class="category-chain-item">VO2max Project</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/VO2max-Project/%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83/" class="category-chain-item">模型训练</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/PyTorch/">#PyTorch</a>
-            
-              <a href="/tags/sklearn/">#sklearn</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/09/24/PyTorch-%E6%8F%90%E7%A4%BA-RuntimeError-expected-scalar-type-Long-but-found-Float/" target="_self">
-          PyTorch 提示 RuntimeError: expected scalar type Long but found Float
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/09/24/PyTorch-%E6%8F%90%E7%A4%BA-RuntimeError-expected-scalar-type-Long-but-found-Float/" target="_self">
-        <div>
-          对于多分类一般采用的交叉熵损失函数 torch.nn.CrossEntropyLoss()，此时 label 的取值为 LongTensor 没有问题。 但在回归时，label 的取值为 FloatTensor，此时再使用 torch.nn.CrossEntropyLoss() 就会提示标题错误。 参考：  RuntimeError: expected scalar type Long but f
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-24 22:00" pubdate>
-              2024-09-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/VO2max-Project/" class="category-chain-item">VO2max Project</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/VO2max-Project/%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83/" class="category-chain-item">模型训练</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/PyTorch/">#PyTorch</a>
+              <a href="/tags/SwiftUI/">#SwiftUI</a>
             
           </div>
         
@@ -885,7 +846,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/10/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/#board">9</a><a class="page-number" href="/page/10/#board">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/#board">12</a><a class="page-number" href="/page/13/#board">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/#board">27</a><a class="extend next" rel="next" href="/page/12/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/10/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/#board">9</a><a class="page-number" href="/page/10/#board">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/#board">12</a><a class="page-number" href="/page/13/#board">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/#board">28</a><a class="extend next" rel="next" href="/page/12/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

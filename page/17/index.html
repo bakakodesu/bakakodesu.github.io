@@ -238,15 +238,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/01/22/iOS-%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9D%90%E6%A0%87/" target="_self">
-          iOS 加速度坐标
+        <a href="/2024/03/04/Pandas-%E6%8A%8A%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%90%8C%E7%9A%84%E4%B8%A4%E7%BB%84%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90/" target="_self">
+          Pandas 把日期相同的两组数据对齐
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/22/iOS-%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9D%90%E6%A0%87/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/04/Pandas-%E6%8A%8A%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%90%8C%E7%9A%84%E4%B8%A4%E7%BB%84%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90/" target="_self">
         <div>
-          坐标系 X、Y、Z 是相对手机的 所有传感器的原始数据都是一个以手机作为参考系的三维向量：  X轴  手机正放时，屏幕右侧方向为 X 轴正方向，左侧方向为 X 轴负方向；  Y轴  手机屏幕顶部向上方向记为 Y 轴正方向，屏幕底部向下方向为 Y 轴负方向；  Z轴  手机正放时，垂直屏幕向上方向为 Z 轴正方向，向下为 Z 轴负方向。 加速度一共可以获取到 2 种加速度。 gravity重力在 x
+          手上 3 个数据流的开始时间不一致，所以需要对齐数据。 12345678910111213141516171819202122232425262728293031323334import pandas as pdfilepath1 = &#x27;&#x27;filepath2 = &#x27;&#x27; &quot;&quot;&quot;		 date 	d12022/5/24		23502
         </div>
       </a>
 
@@ -254,8 +254,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-22 10:57" pubdate>
-              2024-01-22
+            <time datetime="2024-03-04 17:16" pubdate>
+              2024-03-04
             </time>
           </div>
         
@@ -270,17 +270,535 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9-Project/" class="category-chain-item">空间轨迹 Project</a>
+  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" class="category-chain-item">数据处理</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E7%A9%BA%E9%97%B4%E8%BD%A8%E8%BF%B9-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/iPhone/" class="category-chain-item">iPhone</a>
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/%E5%85%B6%E4%BB%96/" class="category-chain-item">其他</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Pandas/">#Pandas</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/03/03/Python-%E4%B8%AD-os-mkdir-%E4%B8%8E-os-makedirs-%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E7%94%A8%E6%B3%95/" target="_self">
+          Python 中 os.mkdir() 与 os.makedirs() 的区别及用法
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/03/Python-%E4%B8%AD-os-mkdir-%E4%B8%8E-os-makedirs-%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E7%94%A8%E6%B3%95/" target="_self">
+        <div>
+          os.mkdir(path)，他的功能是一级一级的创建目录，前提是前面的目录已存在，如果不存在会报异常，比较麻烦，但是存在即有他的道理，当你的目录是根据文件名动态创建的时候，你会发现他虽然繁琐但是很有保障，不会因为你的一时手抖，创建而创建了双层或者多层错误路径。 1234567import os os.mkdir(&#x27;d:\hello&#x27;)    #  正常os.mkdir(&#x
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-03 18:30" pubdate>
+              2024-03-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/03/02/Neurokit-%E5%88%86%E6%9E%90%E5%BF%83%E7%8E%87%E7%9A%84%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95/" target="_self">
+          Neurokit 分析心率的简单用法
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/02/Neurokit-%E5%88%86%E6%9E%90%E5%BF%83%E7%8E%87%E7%9A%84%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95/" target="_self">
+        <div>
+          NeuroKit 显示 ECG 数据1234567891011121314import neurokit2 as nkimport matplotlib.pyplot as pltimport pandas as pddf = pd.read_csv(&#x27;Polar_ECG.csv&#x27;)ecg = df[&#x27;ECG&#x27;]# ecg = df.ECGsignals,
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-02 22:01" pubdate>
+              2024-03-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" class="category-chain-item">数据处理</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Neurokit/" class="category-chain-item">Neurokit</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ECG/">#ECG</a>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/02/29/Python-%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E9%80%89%E5%8F%96/" target="_self">
+          Python 中的元素选取
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/02/29/Python-%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E9%80%89%E5%8F%96/" target="_self">
+        <div>
+          12string[start:end:step]list[start:end:step]   start：起始索引。这个索引的元素会被包含在其中。如果没有 start，则假定它等于 0； end：终止索引。这个索引的元素不包括在其中。如果没有 end，或者指定的值超出长度，则默认为等于整体长度； step：在当前字符之后的每一个 “step” 字符都要包括在内。默认值是 1。如果没有 step，则
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-02-29 16:56" pubdate>
+              2024-02-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/02/28/%E4%BD%BF%E7%94%A8-git-%E6%8F%90%E4%BA%A4%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0-gitee/" target="_self">
+          使用 git 提交本地代码到 gitee
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/02/28/%E4%BD%BF%E7%94%A8-git-%E6%8F%90%E4%BA%A4%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0-gitee/" target="_self">
+        <div>
+          在 gitee 上创建一个仓库，得到仓库地址。cd 到代码根目录： 初始化项目： 1git init  配置好 git config 后提交项目代码到暂存区： 1git add .  填写备注： 1git commit -m &quot;1&quot;  将远程仓库与本地代码进行关联: 1git remote add origin https://gitee.com/你的仓库地址/xxx.git
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-02-28 16:37" pubdate>
+              2024-02-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/git/">#git</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/02/28/Python-%E6%8C%89%E7%A9%BA%E6%A0%BC%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_self">
+          Python 按空格分割字符串
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/02/28/Python-%E6%8C%89%E7%A9%BA%E6%A0%BC%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_self">
+        <div>
+          123456def test_filter():    str = &quot;aa   bbbbb         ccc  d&quot;    str_list = str.split(&quot; &quot;)    print (str_list)     # [&#x27;aa&#x27;, &#x27;bbbbb&#x27;, &#x27;ccc&#x27;, &#x27;d&#x
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-02-28 11:28" pubdate>
+              2024-02-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/02/18/SwiftUI-StateObject-ObservedObject-Observable-%E4%B8%89%E8%80%85%E7%9A%84%E5%8C%BA%E5%88%AB/" target="_self">
+          SwiftUI @StateObject, @ObservedObject, @Observable 三者的区别
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/02/18/SwiftUI-StateObject-ObservedObject-Observable-%E4%B8%89%E8%80%85%E7%9A%84%E5%8C%BA%E5%88%AB/" target="_self">
+        <div>
+          @StateObject 与 @ObservedObject 的区别@StateObject 与 @ObservedObject 基础作用，这里不再解释，可看： 探讨 SwiftUI 中的关键属性包装器：@State、@Binding、@StateObject、@ObservedObject、@EnvironmentObject 和 @Environment 之前我遇到过在使用 @Observed
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-02-18 18:21" pubdate>
+              2024-02-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SwiftUI/">#SwiftUI</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/01/29/%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98%E5%94%A4%E9%86%92%E5%90%9E%E5%AD%97%E9%97%AE%E9%A2%98/" target="_self">
+          蓝牙键盘唤醒吞字问题
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/29/%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98%E5%94%A4%E9%86%92%E5%90%9E%E5%AD%97%E9%97%AE%E9%A2%98/" target="_self">
+        <div>
+          IQUNIX F96 双模在休眠唤醒后，会出现吞字现象（或者延迟）。 但是 ROG 的魔导士 RX LP 三模则不会。 参考：  为啥国产机械无线键盘休眠唤醒的延时都很高？  无线键盘都是休眠后敲第一个键打不出字符吗？
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-01-29 09:53" pubdate>
+              2024-01-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%94%9F%E4%BA%A7%E5%8A%9B/">#生产力</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/01/26/Polar-H10-%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9D%90%E6%A0%87%E7%B3%BB/" target="_self">
+          Polar H10 的加速度坐标系
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/26/Polar-H10-%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%9D%90%E6%A0%87%E7%B3%BB/" target="_self">
+        <div>
+          参考： Accelerometer raw data format question Verity Sense inconsistent ACC Streaming Acceleration data with gravity eliminated? 另外加速度的单位是 mG，参考下面  Accelerometer data with sample rates of 25Hz, 50Hz, 10
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-01-26 21:06" pubdate>
+              2024-01-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/ACC-%E9%87%87%E9%9B%86/" class="category-chain-item">ACC 采集</a>
   
   
 
@@ -315,15 +833,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/01/19/Xcode-%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95-iWatch-%E7%9A%84%E5%9D%91/" target="_self">
-          Xcode 真机调试 iWatch 的坑
+        <a href="/2024/01/23/SwiftUI-%E5%9C%A8-watchOS-%E4%B8%8A%E4%BD%BF%E7%94%A8-List-%E5%92%8C-ForEach-%E7%9A%84%E5%A5%87%E8%91%A9%E9%97%AE%E9%A2%98/" target="_self">
+          SwiftUI 在 watchOS 上使用 List 和 ForEach 的奇葩问题
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/19/Xcode-%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95-iWatch-%E7%9A%84%E5%9D%91/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/23/SwiftUI-%E5%9C%A8-watchOS-%E4%B8%8A%E4%BD%BF%E7%94%A8-List-%E5%92%8C-ForEach-%E7%9A%84%E5%A5%87%E8%91%A9%E9%97%AE%E9%A2%98/" target="_self">
         <div>
-          总之而言，不要在 Xcode 上直接选择真机来运行 Watch App 工程。 由于 Watch App 不能从电脑直接安装，Xcode 需要首先把 swift 的运行时和一系列安装脚本先传到手机上，再由手机完成安装过程。之后 Xcode 还需要通过手机来和 Watch 建立连接才能调试。 这样的结果就是 Xcode 不停地提示正在连接手表以及正在重新连接手表。 最好的办法是，选择 iOS App
+          在手表上创建可以点击的按钮。 1.List + ForEach + Button12345678910List &#123;    ForEach(data) &#123; item in        Button&#123;            print(&quot;Clicked&quot;)        &#125; label: &#123;            Text(ite
         </div>
       </a>
 
@@ -331,83 +849,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-19 15:46" pubdate>
-              2024-01-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/RPE-%E9%87%87%E9%9B%86/" class="category-chain-item">RPE 采集</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Xcode/">#Xcode</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/19/Swift-%E7%9A%84%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8/" target="_self">
-          Swift 的声音和振动
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/19/Swift-%E7%9A%84%E5%A3%B0%E9%9F%B3%E5%92%8C%E6%8C%AF%E5%8A%A8/" target="_self">
-        <div>
-          声音123456789import AVFoundationclass SoundPlayer &#123;    var soundIdIndex = 1000    func playSound() &#123;        let soundID = SystemSoundID(soundIdIndex)        AudioServicesPlaySystemSound(soundI
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-19 15:38" pubdate>
-              2024-01-19
+            <time datetime="2024-01-23 11:39" pubdate>
+              2024-01-23
             </time>
           </div>
         
@@ -424,491 +867,6 @@
         
   <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
   
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Swift/">#Swift</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/19/Swift-String-%E5%90%88%E9%9B%86/" target="_self">
-          Swift String 合集
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/19/Swift-String-%E5%90%88%E9%9B%86/" target="_self">
-        <div>
-          基本操作替换12let text = &quot;Hello, World!&quot;print(text.replacingOccurrences(of: &quot;World&quot;, with: &quot;Swift&quot;)) // &quot;Hello, Swift!&quot;  去首尾空格12let text = &quot;  Swift  &quot;print(
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-19 15:01" pubdate>
-              2024-01-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Swift/">#Swift</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/19/Swift-%E6%95%B4%E9%99%A4%E8%BF%90%E7%AE%97/" target="_self">
-          Swift 整除运算
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/19/Swift-%E6%95%B4%E9%99%A4%E8%BF%90%E7%AE%97/" target="_self">
-        <div>
-          123456let number = 8if number % 2 == 0 &#123;    print(&quot;这个整数可以被2整除&quot;)&#125; else &#123;    print(&quot;这个整数不能被2整除&quot;)&#125;
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-19 14:00" pubdate>
-              2024-01-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Swift/">#Swift</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/18/%E6%8A%A5%E9%94%99-async-call-in-a-function-that-does-not-support-concurrency/" target="_self">
-          报错 &#39;async&#39; call in a function that does not support concurrency
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/18/%E6%8A%A5%E9%94%99-async-call-in-a-function-that-does-not-support-concurrency/" target="_self">
-        <div>
-          给 Polar 设置时间时，因为是异步函数，不能直接调用。 异步函数的调用方式是： 123456789Button&#123;aciton: &#123;		Task &#123;		// Add Here      	await bleSdkManager.setTime()    &#125;&#125;, label: &#123;		Text(&quot;Calibration Time&
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-18 14:36" pubdate>
-              2024-01-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/ECG-%E9%87%87%E9%9B%86/" class="category-chain-item">ECG 采集</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/ECG-%E9%87%87%E9%9B%86/Polar-H10/" class="category-chain-item">Polar H10</a>
-  
-  
-
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Swift/">#Swift</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/18/%E5%BC%80%E5%8F%91-Polar-H10-%E5%BF%83%E7%8E%87%E5%B8%A6%E9%81%87%E5%88%B0%E7%9A%84%E6%97%B6%E9%97%B4%E6%88%B3%E9%97%AE%E9%A2%98/" target="_self">
-          开发 Polar H10 心率带遇到的时间戳问题
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/18/%E5%BC%80%E5%8F%91-Polar-H10-%E5%BF%83%E7%8E%87%E5%B8%A6%E9%81%87%E5%88%B0%E7%9A%84%E6%97%B6%E9%97%B4%E6%88%B3%E9%97%AE%E9%A2%98/" target="_self">
-        <div>
-          可参考的内容包括：  How to check currently-set epoch for timestamp setLocalTime sets incorrect time and date What is the zero date for the H10 timestamp?  时间戳的基准问题首先需要明确的一点是，Polar H10 的基准时间并不是 1970-01-01 00:00
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-18 11:29" pubdate>
-              2024-01-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/ECG-%E9%87%87%E9%9B%86/" class="category-chain-item">ECG 采集</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/ECG-%E9%87%87%E9%9B%86/Polar-H10/" class="category-chain-item">Polar H10</a>
-  
-  
-
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ECG/">#ECG</a>
-            
-              <a href="/tags/Sensor/">#Sensor</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/13/Swift-%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
-          Swift 时间相关的方法
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/13/Swift-%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
-        <div>
-          时间格式1234567891011121314func getDate() -&gt; String &#123;    //系统时间    let now = Date()    let dateFormatter = DateFormatter()    dformatter.dateFormat = &quot;M月d日&quot;    return dformatter.string(f
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-13 15:24" pubdate>
-              2024-01-13
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Swift/">#Swift</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/13/Swift-%E8%8E%B7%E5%8F%96%E5%B7%A5%E7%A8%8B%E7%89%88%E6%9C%AC%E5%8F%B7/" target="_self">
-          Xcode 获取工程版本号以及构建版本号自动递增
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/13/Swift-%E8%8E%B7%E5%8F%96%E5%B7%A5%E7%A8%8B%E7%89%88%E6%9C%AC%E5%8F%B7/" target="_self">
-        <div>
-          版本号获取这里取的是 Verson 而不是 Build，参考 How do I get the App version and build number using Swift? 中的： 1let appVersion = Bundle.main.infoDictionary?[&quot;CFBundleShortVersionString&quot;] as? String  构建版本号递增可
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-13 14:08" pubdate>
-              2024-01-13
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Xcode/">#Xcode</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/13/SwiftUI-%E4%B8%8B-WatchOS-%E4%B8%8E-iOS-%E9%80%9A%E4%BF%A1/" target="_self">
-          SwiftUI 下 WatchOS 与 iOS 通信
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/13/SwiftUI-%E4%B8%8B-WatchOS-%E4%B8%8E-iOS-%E9%80%9A%E4%BF%A1/" target="_self">
-        <div>
-          目的是通过 iWatch 记录当前的 RPE。  关于 WatchOS 的工程文件创建，可参考 Creating a watchOS app  关于具体的代码，可参考 WatchConnectivitySampleForSwiftUI
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-13 13:57" pubdate>
-              2024-01-13
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/ECG-Project/" class="category-chain-item">ECG Project</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/ECG-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/RPE-%E9%87%87%E9%9B%86/" class="category-chain-item">RPE 采集</a>
-  
-  
-
-  
-
   
 
       </span>
@@ -934,7 +892,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/16/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/#board">18</a><a class="page-number" href="/page/19/#board">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/#board">27</a><a class="extend next" rel="next" href="/page/18/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/16/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/#board">18</a><a class="page-number" href="/page/19/#board">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/#board">28</a><a class="extend next" rel="next" href="/page/18/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
