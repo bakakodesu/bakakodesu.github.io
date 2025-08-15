@@ -238,6 +238,67 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2023/08/07/Python-%E5%85%B3%E9%94%AE%E5%AD%97-Nonlocal-%E4%B8%8E-Global/" target="_self">
+          Python 关键字 Nonlocal 与 Global
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/07/Python-%E5%85%B3%E9%94%AE%E5%AD%97-Nonlocal-%E4%B8%8E-Global/" target="_self">
+        <div>
+          global 的用法： 123456789101112num1 = 0num2 = 0def change_num():  global num1  num1 = 1  num2 = 1change_num()print(num1, num2)# output: 1, 0# 不允许直接修改全局变量(数组、字典除外)，需要添加 global 关键字  nonlocal 的用法： 1234567891
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-07 16:54" pubdate>
+              2023-08-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2023/08/07/Python-%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E6%9C%80%E5%A4%9A%E7%9A%84%E5%85%83%E7%B4%A0/" target="_self">
           Python 获取数组出现次数最多的元素
         </a>
@@ -843,83 +904,6 @@
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/IMU/">#IMU</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/07/28/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/" target="_self">
-          Mac 串口查询之 /dev/cu. 与 /dev/tty. 记录
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/28/Mac-%E4%B8%B2%E5%8F%A3%E6%9F%A5%E8%AF%A2%E4%B9%8B-dev-cu-%E4%B8%8E-dev-tty-%E8%AE%B0%E5%BD%95/" target="_self">
-        <div>
-          输入指令ls /dev/cu.*，可获得 Mac 的串口信息。内容如下  输入指令cd /dev回车，再输入指令ls *tty，也可查询串口信息。内容如下  之前 Mac 与 Arduino 通信的时候，串口的格式为/dev/tty.Arduino。最近在调试 N100 九轴传感器，发现用「&#x2F;tty.」格式的话识别不到传感器，即/dev/tty.N100不行，必须使用/dev/cu.N1
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-28 12:56" pubdate>
-              2023-07-28
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/" class="category-chain-item">呼吸代谢 Project</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="category-chain-item">数据采集</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E5%91%BC%E5%90%B8%E4%BB%A3%E8%B0%A2-Project/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/%E4%B8%8A%E4%BD%8D%E6%9C%BA/" class="category-chain-item">上位机</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Mac/">#Mac</a>
-            
-              <a href="/tags/%E4%B8%B2%E5%8F%A3/">#串口</a>
             
           </div>
         
