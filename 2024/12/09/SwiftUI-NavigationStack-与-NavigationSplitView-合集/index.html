@@ -21,15 +21,15 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="透明的 view，无论是整体 opacity 设置为了0，还是颜色设置为了 clear，在 swiftUI 中，默认的 content shape (内容形状）就是 0，所以点击事件是无法生效的，而要解决这个问题，我们只需要手动设置 content shape 即可。代码如下： 1234Color.clear  .frame(width: 300, height: 300)  .contentSh">
+    <meta name="description" content="NavigationStackSwiftUI 4.0 的全新导航系统 使用 SwiftUI 的 NavigationStack 组件进行页面导航 自定义你的 NavigationStack 导航栏外观 跳转的几种方式12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SwiftUI 透明 View 点击无法生效的问题">
-<meta property="og:url" content="https://wonderhoi.com/2025/06/25/SwiftUI-%E9%80%8F%E6%98%8E-View-%E7%82%B9%E5%87%BB%E6%97%A0%E6%B3%95%E7%94%9F%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="SwiftUI NavigationStack 与 NavigationSplitView 合集">
+<meta property="og:url" content="https://wonderhoi.com/2024/12/09/SwiftUI-NavigationStack-%E4%B8%8E-NavigationSplitView-%E5%90%88%E9%9B%86/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="透明的 view，无论是整体 opacity 设置为了0，还是颜色设置为了 clear，在 swiftUI 中，默认的 content shape (内容形状）就是 0，所以点击事件是无法生效的，而要解决这个问题，我们只需要手动设置 content shape 即可。代码如下： 1234Color.clear  .frame(width: 300, height: 300)  .contentSh">
+<meta property="og:description" content="NavigationStackSwiftUI 4.0 的全新导航系统 使用 SwiftUI 的 NavigationStack 组件进行页面导航 自定义你的 NavigationStack 导航栏外观 跳转的几种方式12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-25T03:48:44.000Z">
-<meta property="article:modified_time" content="2025-06-26T09:08:16.027Z">
+<meta property="article:published_time" content="2024-12-09T14:19:39.000Z">
+<meta property="article:modified_time" content="2025-08-26T08:14:22.176Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="SwiftUI">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>SwiftUI 透明 View 点击无法生效的问题 - 这是一个PM的BLOG</title>
+  <title>SwiftUI NavigationStack 与 NavigationSplitView 合集 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="SwiftUI 透明 View 点击无法生效的问题"></span>
+            <span id="subtitle" data-typed-text="SwiftUI NavigationStack 与 NavigationSplitView 合集"></span>
           
         </div>
 
@@ -226,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-25 11:48" pubdate>
-          2025年6月25日 中午
+        <time datetime="2024-12-09 22:19" pubdate>
+          2024年12月9日 晚上
         </time>
       </span>
     
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          148 字
+          382 字
         
       </span>
     
@@ -277,17 +277,28 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">SwiftUI 透明 View 点击无法生效的问题</h1>
+            <h1 id="seo-header">SwiftUI NavigationStack 与 NavigationSplitView 合集</h1>
             
             
               <div class="markdown-body">
                 
-                <p>透明的 view，无论是整体 opacity 设置为了0，还是颜色设置为了 clear，在 swiftUI 中，默认的 content shape (内容形状）就是 0，所以点击事件是无法生效的，而要解决这个问题，我们只需要手动设置 content shape 即可。代码如下：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">Color</span>.clear<br>  .frame(width: <span class="hljs-number">300</span>, height: <span class="hljs-number">300</span>)<br>  .contentShape(<span class="hljs-type">Rectangle</span>())     <span class="hljs-comment">// 这里，当然上面的frame也有必要，如果frame为0，则肯定也无法触发点击</span><br>  .onTapGesture &#123; <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;tapped&quot;</span>) &#125; <br></code></pre></td></tr></table></figure>
+                <h2 id="NavigationStack"><a href="#NavigationStack" class="headerlink" title="NavigationStack"></a>NavigationStack</h2><p><a target="_blank" rel="noopener" href="https://fatbobman.com/zh/posts/new_navigator_of_swiftui_4/">SwiftUI 4.0 的全新导航系统</a></p>
+<p><a target="_blank" rel="noopener" href="https://ivensliaoblog.com/swiftui-navigationstack-page-navigation-tutorial/#%E5%A6%82%E4%BD%95%E5%9C%A8-sheet-%E8%A7%86%E5%9B%BE%E4%B8%AD%E6%98%BE%E7%A4%BA%E5%AF%BC%E8%88%AA%E6%A0%8F%EF%BC%9F">使用 SwiftUI 的 NavigationStack 组件进行页面导航</a></p>
+<p><a target="_blank" rel="noopener" href="https://ivensliaoblog.com/customize-navigationstack-appearance/">自定义你的 NavigationStack 导航栏外观</a></p>
+<h3 id="跳转的几种方式"><a href="#跳转的几种方式" class="headerlink" title="跳转的几种方式"></a>跳转的几种方式</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">NavigationLinkView</span>: <span class="hljs-title class_ inherited__">View</span> &#123;<br>    <span class="hljs-meta">@State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> path: <span class="hljs-type">NavigationPath</span> <span class="hljs-operator">=</span> .<span class="hljs-keyword">init</span>()<br>    <span class="hljs-meta">@State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> isPresented: <span class="hljs-type">Bool</span> <span class="hljs-operator">=</span> <span class="hljs-literal">false</span><br>    <span class="hljs-meta">@State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> items: [<span class="hljs-type">Item</span>] <span class="hljs-operator">=</span> [<span class="hljs-type">Item</span>(text: <span class="hljs-string">&quot;ForEach 中跳转&quot;</span>)]<br>    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>        <span class="hljs-comment">// 使用 NavigationLink 会导致组件多一个箭头</span><br>        <span class="hljs-type">NavigationStack</span>(path: <span class="hljs-variable">$path</span>) &#123;<br>            <span class="hljs-type">List</span> &#123;<br>                <span class="hljs-type">NavigationLink</span>(<span class="hljs-string">&quot;跳转方式一&quot;</span>) &#123;<br>                    <span class="hljs-comment">// destination</span><br>                &#125;<br>                <span class="hljs-type">NavigationLink</span>(<span class="hljs-string">&quot;跳转方式一&quot;</span>, destination: &#123;<br>                    <span class="hljs-comment">// destination</span><br>                &#125;)<br>                <span class="hljs-type">NavigationLink</span>(destination: &#123;<br>                    <span class="hljs-comment">// destination</span><br>                &#125;, label: &#123;<br>                    <span class="hljs-type">LabeledContent</span>(<span class="hljs-string">&quot;跳转方式&quot;</span>, value: <span class="hljs-string">&quot;一&quot;</span>)<br>                &#125;)<br>                <br>                <span class="hljs-type">Button</span>(action: &#123;<br>                    isPresented.toggle()<br>                &#125;, label: &#123;<br>                    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;跳转方式二&quot;</span>)<br>                &#125;)<br>                <br>                <span class="hljs-type">NavigationLink</span>(<span class="hljs-string">&quot;跳转方式三&quot;</span>, value: <span class="hljs-string">&quot;3&amp;4&quot;</span>)<br>                <br>                <span class="hljs-type">Button</span>(action: &#123;<br>                    path.append(<span class="hljs-string">&quot;3&amp;4&quot;</span>)<br>                &#125;, label: &#123;<br>                    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;跳转方式四&quot;</span>)<br>                &#125;)<br>                <br>                <span class="hljs-comment">// ForEach 跳转方式一</span><br>                <span class="hljs-type">ForEach</span>(items) &#123; item <span class="hljs-keyword">in</span><br>                    <span class="hljs-type">NavigationLink</span>(value: item) &#123;<br>                        <span class="hljs-type">Text</span>(item.text)<br>                    &#125;<br>                &#125;<br>                <br>                <span class="hljs-comment">// ForEach 跳转方式二</span><br>                <span class="hljs-type">ForEach</span>(items) &#123; item <span class="hljs-keyword">in</span><br>                    <span class="hljs-type">Text</span>(item.text)<br>                        .onTapGesture &#123;<br>                            path.append(item)<br>                        &#125;<br>                &#125;<br>                <br>            &#125;<br>        &#125;<br>        <span class="hljs-comment">// 跳转方式二</span><br>        .navigationDestination(isPresented: <span class="hljs-variable">$isPresented</span>) &#123;<br>            <span class="hljs-comment">// destination</span><br>        &#125;<br>        <br>        <span class="hljs-comment">// 跳转方式三 &amp; 四</span><br>        .navigationDestination(for: <span class="hljs-type">String</span>.<span class="hljs-keyword">self</span>) &#123; destination <span class="hljs-keyword">in</span><br>            <span class="hljs-keyword">if</span> destination <span class="hljs-operator">==</span> <span class="hljs-string">&quot;3&amp;4&quot;</span> &#123;<br>                <span class="hljs-comment">// destination</span><br>            &#125;<br>        &#125;<br>        <br>        <span class="hljs-comment">// ForEach 跳转</span><br>        .navigationDestination(for: <span class="hljs-type">Item</span>.<span class="hljs-keyword">self</span>) &#123; item <span class="hljs-keyword">in</span><br>            <span class="hljs-comment">// destination</span><br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Item</span>: <span class="hljs-title class_ inherited__">Identifiable</span>, <span class="hljs-title class_ inherited__">Hashable</span> &#123;<br>    <span class="hljs-keyword">let</span> id <span class="hljs-operator">=</span> <span class="hljs-type">UUID</span>()<br>    <span class="hljs-keyword">let</span> text: <span class="hljs-type">String</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>相关：</p>
-<p><a href="https://wonderhoi.com/2025/01/16/SwiftUI-Spacer-%E9%83%A8%E5%88%86%E6%97%A0%E6%B3%95%E5%93%8D%E5%BA%94%E7%82%B9%E5%87%BB/">SwiftUI Spacer() 部分无法响应点击</a></p>
-<p><a href="https://wonderhoi.com/2024/12/02/SwiftUI-%E8%A3%81%E5%89%AA%E5%9B%BE%E7%89%87%E5%90%8E%E8%A2%AB%E8%A3%81%E5%89%AA%E9%83%A8%E5%88%86%E4%BB%8D%E7%84%B6%E5%8F%AF%E4%BB%A5%E7%82%B9%E5%87%BB%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">SwiftUI 裁剪图片后被裁剪部分仍然可以点击的解决办法</a></p>
+<h3 id="隐藏-NavigationLink-的箭头"><a href="#隐藏-NavigationLink-的箭头" class="headerlink" title="隐藏 NavigationLink 的箭头"></a>隐藏 NavigationLink 的箭头</h3><p>常规手段</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">List</span> &#123;<br>    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;The cell&quot;</span>)<br>        .background(	<span class="hljs-comment">// 使用 overlay 也可以</span><br>            <span class="hljs-type">NavigationLink</span>(value: item) &#123;<br>            	<span class="hljs-type">EmptyView</span>()<br>            &#125;.opacity(<span class="hljs-number">0</span>)<br>        )<br>&#125;<br><br><span class="hljs-comment">// 或者</span><br><br><span class="hljs-type">List</span> &#123;<br>    <span class="hljs-type">ZStack</span> &#123;<br>        <span class="hljs-type">NavigationLink</span>(value: item) &#123;<br>            <span class="hljs-type">EmptyView</span>()<br>        &#125;.opacity(<span class="hljs-number">0</span>)<br>        <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;The cell&quot;</span>)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>非常规手段，使用 <code>.navigationLinkIndicatorVisibility(.hidden)</code>，参考：</p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/%E9%9A%B1%E8%97%8F-%E9%A1%AF%E7%A4%BA%E5%90%91%E5%8F%B3%E7%AE%AD%E9%A0%AD%E7%9A%84-navigationlinkindicatorvisibility-8d0e21708eda">隱藏 &amp; 顯示向右箭頭的 navigationLinkIndicatorVisibility</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.apple.com/documentation/swiftui/view/navigationlinkindicatorvisibility(_:)?changes=latest_minor">navigationLinkIndicatorVisibility(_:)</a></p>
+<p>但不知道为什么，反正我用不了。</p>
+<h2 id="NavigationSplitView"><a href="#NavigationSplitView" class="headerlink" title="NavigationSplitView"></a>NavigationSplitView</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/77464914/navigationstack-inside-navigationsplitview-detail-in-swiftui">NavigationStack inside NavigationSplitView detail in SwiftUI</a></li>
+</ol>
+<h3 id="隐藏-NavigationSplitView-的-detail"><a href="#隐藏-NavigationSplitView-的-detail" class="headerlink" title="隐藏 NavigationSplitView 的 detail"></a>隐藏 NavigationSplitView 的 detail</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">NavigationSplitView</span> &#123;<br>    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Sidebar&quot;</span>)<br>&#125; content: &#123;<br>    <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Content&quot;</span>)<br>&#125; detail: &#123;<br>    <span class="hljs-keyword">if</span> detailViewVisible &#123;<br>        <span class="hljs-type">Text</span>(<span class="hljs-string">&quot;Detail&quot;</span>)<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-type">Spacer</span>()<br>            .navigationSplitViewColumnWidth(<span class="hljs-number">0</span>)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -306,7 +317,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
   
   
 
@@ -333,8 +344,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>SwiftUI 透明 View 点击无法生效的问题</div>
-      <div>https://wonderhoi.com/2025/06/25/SwiftUI-透明-View-点击无法生效的问题/</div>
+      <div>SwiftUI NavigationStack 与 NavigationSplitView 合集</div>
+      <div>https://wonderhoi.com/2024/12/09/SwiftUI-NavigationStack-与-NavigationSplitView-合集/</div>
     </div>
     <div class="license-meta">
       
@@ -346,7 +357,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月25日</div>
+          <div>2024年12月9日</div>
         </div>
       
       
@@ -378,9 +389,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/25/git-%E6%8F%90%E7%A4%BA-Git-Could-not-resolve-host-gitee-com/" title="git 提示 Git Could not resolve host: gitee.com">
+                      <a href="/2024/12/09/Swift-%E5%88%A4%E6%96%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E4%B8%BA-nil-%E6%88%96%E8%80%85-empty/" title="Swift 判断字符串是否为 nil 或者 empty">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">git 提示 Git Could not resolve host: gitee.com</span>
+                        <span class="hidden-mobile">Swift 判断字符串是否为 nil 或者 empty</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -388,8 +399,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/25/SwiftUI-%E5%9C%A8-preview-%E7%95%8C%E9%9D%A2%E8%BF%9B%E8%A1%8C%E6%88%AA%E5%9B%BE/" title="SwiftUI 在 preview 界面进行截图">
-                        <span class="hidden-mobile">SwiftUI 在 preview 界面进行截图</span>
+                      <a href="/2024/12/09/SwiftUI-Published-%E4%B8%8E-onReceive-%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8/" title="SwiftUI @Published 与 onReceive 组合使用">
+                        <span class="hidden-mobile">SwiftUI @Published 与 onReceive 组合使用</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

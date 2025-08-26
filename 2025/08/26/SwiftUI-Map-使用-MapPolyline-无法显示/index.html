@@ -21,27 +21,25 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="图片裁剪前 123456789101112131415struct TestView:View &#123;    @State var count &#x3D; 0    var body: some View &#123;        Image(systemName: &quot;cube&quot;)        .resizable()        .scaledToFill()">
+    <meta name="description" content="参考:SwiftUI Map MapPolyline not showing 原因是没有为 Polyline 设置颜色： 12MapPolyline(coordinates: deviceLocations)     .stroke(.blue, lineWidth: 2.0)  或者 123456789101112struct CustomShapeStyle: ShapeStyle &amp;#123">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SwiftUI 裁剪图片后被裁剪部分仍然可以点击的解决办法">
-<meta property="og:url" content="https://wonderhoi.com/2024/12/02/SwiftUI-%E8%A3%81%E5%89%AA%E5%9B%BE%E7%89%87%E5%90%8E%E8%A2%AB%E8%A3%81%E5%89%AA%E9%83%A8%E5%88%86%E4%BB%8D%E7%84%B6%E5%8F%AF%E4%BB%A5%E7%82%B9%E5%87%BB%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/index.html">
+<meta property="og:title" content="SwiftUI Map 使用 MapPolyline 无法显示">
+<meta property="og:url" content="https://wonderhoi.com/2025/08/26/SwiftUI-Map-%E4%BD%BF%E7%94%A8-MapPolyline-%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="图片裁剪前 123456789101112131415struct TestView:View &#123;    @State var count &#x3D; 0    var body: some View &#123;        Image(systemName: &quot;cube&quot;)        .resizable()        .scaledToFill()">
+<meta property="og:description" content="参考:SwiftUI Map MapPolyline not showing 原因是没有为 Polyline 设置颜色： 12MapPolyline(coordinates: deviceLocations)     .stroke(.blue, lineWidth: 2.0)  或者 123456789101112struct CustomShapeStyle: ShapeStyle &amp;#123">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/120205.png">
-<meta property="og:image" content="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/120206.png">
-<meta property="article:published_time" content="2024-12-02T06:33:19.000Z">
-<meta property="article:modified_time" content="2024-12-02T13:39:11.419Z">
+<meta property="article:published_time" content="2025-08-26T06:23:01.000Z">
+<meta property="article:modified_time" content="2025-08-26T06:25:35.453Z">
 <meta property="article:author" content="wonderhoi">
+<meta property="article:tag" content="Map">
 <meta property="article:tag" content="SwiftUI">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/120205.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>SwiftUI 裁剪图片后被裁剪部分仍然可以点击的解决办法 - 这是一个PM的BLOG</title>
+  <title>SwiftUI Map 使用 MapPolyline 无法显示 - 这是一个PM的BLOG</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -218,7 +216,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="SwiftUI 裁剪图片后被裁剪部分仍然可以点击的解决办法"></span>
+            <span id="subtitle" data-typed-text="SwiftUI Map 使用 MapPolyline 无法显示"></span>
           
         </div>
 
@@ -229,8 +227,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-12-02 14:33" pubdate>
-          2024年12月2日 下午
+        <time datetime="2025-08-26 14:23" pubdate>
+          2025年8月26日 下午
         </time>
       </span>
     
@@ -241,7 +239,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          106 字
+          58 字
         
       </span>
     
@@ -280,21 +278,18 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">SwiftUI 裁剪图片后被裁剪部分仍然可以点击的解决办法</h1>
+            <h1 id="seo-header">SwiftUI Map 使用 MapPolyline 无法显示</h1>
             
             
               <div class="markdown-body">
                 
-                <p>图片裁剪前</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">TestView</span>:<span class="hljs-title class_ inherited__">View</span> &#123;<br>    <span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> count <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br><br>    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>        <span class="hljs-type">Image</span>(systemName: <span class="hljs-string">&quot;cube&quot;</span>)<br>        .resizable()<br>        .scaledToFill()<br>        .frame(width: <span class="hljs-number">200</span>, height: <span class="hljs-number">200</span>)<br>        <span class="hljs-comment">// .clipped()</span><br>        .onTapGesture &#123;<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;tapped mainContainer<span class="hljs-subst">\(count)</span><span class="hljs-subst">\n</span>&quot;</span>)<br>            count <span class="hljs-operator">+=</span> <span class="hljs-number">1</span><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <p>参考:<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/77526711/swiftui-map-mappolyline-not-showing">SwiftUI Map MapPolyline not showing</a></p>
+<p>原因是没有为 Polyline 设置颜色：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">MapPolyline</span>(coordinates: deviceLocations)<br>     .stroke(.blue, lineWidth: <span class="hljs-number">2.0</span>)<br></code></pre></td></tr></table></figure>
 
-<img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/120205.png" srcset="/img/loading.gif" lazyload style="zoom:25%;" />
+<p>或者</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">CustomShapeStyle</span>: <span class="hljs-title class_ inherited__">ShapeStyle</span> &#123;<br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">resolve</span>(<span class="hljs-params">in</span> <span class="hljs-params">environment</span>: <span class="hljs-type">EnvironmentValues</span>) -&gt; <span class="hljs-keyword">some</span> <span class="hljs-type">ShapeStyle</span> &#123;<br>        <span class="hljs-keyword">if</span> environment.colorScheme <span class="hljs-operator">==</span> .light &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-type">Color</span>.blue.blendMode(.lighten)<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-type">Color</span>.blue.blendMode(.darken)<br>        &#125;<br>    &#125;<br>&#125;<br><span class="hljs-operator">...</span><br><span class="hljs-type">MapPolyline</span>(coordinates: deviceLocations)<br>     .stroke(<span class="hljs-type">CustomShapeStyle</span>(), lineWidth: <span class="hljs-number">2.0</span>)<br></code></pre></td></tr></table></figure>
 
-<p>去掉 <code>.clipped()</code> 注释后:</p>
-<img src="https://bakako-1308163928.cos.ap-guangzhou.myqcloud.com/uPic/120206.png" srcset="/img/loading.gif" lazyload style="zoom:25%;" />
-
-<p>但是被裁剪掉的部分仍然可以触发点击事件。解决办法，添加 <code>.contentShape(Rectangle())</code>：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">TestView</span>:<span class="hljs-title class_ inherited__">View</span> &#123;<br>    <span class="hljs-meta">@State</span> <span class="hljs-keyword">var</span> count <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br><br>    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>        <span class="hljs-type">Image</span>(systemName: <span class="hljs-string">&quot;cube&quot;</span>)<br>        .resizable()<br>        .scaledToFill()<br>        .frame(width: <span class="hljs-number">200</span>, height: <span class="hljs-number">200</span>)<br>        .clipped()<br>				.contentShape(<span class="hljs-type">Rectangle</span>())<br>        .onTapGesture &#123;<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;tapped mainContainer<span class="hljs-subst">\(count)</span><span class="hljs-subst">\n</span>&quot;</span>)<br>            count <span class="hljs-operator">+=</span> <span class="hljs-number">1</span><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -328,6 +323,8 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
+        <a href="/tags/Map/" class="print-no-link">#Map</a>
+      
         <a href="/tags/SwiftUI/" class="print-no-link">#SwiftUI</a>
       
     </div>
@@ -340,8 +337,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>SwiftUI 裁剪图片后被裁剪部分仍然可以点击的解决办法</div>
-      <div>https://wonderhoi.com/2024/12/02/SwiftUI-裁剪图片后被裁剪部分仍然可以点击的解决办法/</div>
+      <div>SwiftUI Map 使用 MapPolyline 无法显示</div>
+      <div>https://wonderhoi.com/2025/08/26/SwiftUI-Map-使用-MapPolyline-无法显示/</div>
     </div>
     <div class="license-meta">
       
@@ -353,7 +350,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年12月2日</div>
+          <div>2025年8月26日</div>
         </div>
       
       
@@ -385,9 +382,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/12/02/macOS-%E5%B7%A5%E7%A8%8B%E6%8A%A5%E9%94%99-Error-Error-Domain-NSPOSIXErrorDomain-Code-1-%E3%80%8COperation-not-permitted%E3%80%8D/" title="macOS 工程报错 Error: Error Domain=NSPOSIXErrorDomain Code=1 「Operation not permitted」">
+                      <a href="/2025/08/26/SwiftUI-%E6%B8%90%E5%8F%98%E8%89%B2%E5%90%88%E9%9B%86/" title="SwiftUI 渐变色合集">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">macOS 工程报错 Error: Error Domain=NSPOSIXErrorDomain Code=1 「Operation not permitted」</span>
+                        <span class="hidden-mobile">SwiftUI 渐变色合集</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -395,8 +392,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/11/29/Swift-%E5%8F%91%E9%80%81-GET-POST-%E8%AF%B7%E6%B1%82/" title="Swift 发送 GET/POST 请求">
-                        <span class="hidden-mobile">Swift 发送 GET/POST 请求</span>
+                      <a href="/2025/08/05/Swift-%E5%B7%B2%E7%9F%A5%E5%9C%B0%E5%9B%BE%E4%B8%8A%E4%B8%80%E7%BA%BF%E6%AE%B5%E5%92%8C%E7%82%B9%EF%BC%8C%E6%B1%82%E7%82%B9%E5%88%B0%E7%BA%BF%E6%AE%B5%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB/" title="Swift 已知地图上一线段和点，求点到线段的最短距离">
+                        <span class="hidden-mobile">Swift 已知地图上一线段和点，求点到线段的最短距离</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
