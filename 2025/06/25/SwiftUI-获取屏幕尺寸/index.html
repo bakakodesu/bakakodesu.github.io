@@ -21,15 +21,15 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="bounds1var screenBounds:CGRect &#x3D; UIScreen.main.bounds  bounds 得到的是单位为点（point）的尺寸。 12var width: CGFloat &#x3D; UIScreen.main.bounds.widthvar height: CGFloat &#x3D; UIScreen.main.bounds.height  这样就可以得到 CGFloat 格式">
+    <meta name="description" content="参考：获取屏幕宽度 bounds1var screenBounds: CGRect &#x3D; UIScreen.main.bounds  bounds 得到的是单位为点（point）的尺寸。 12var width: CGFloat &#x3D; UIScreen.main.bounds.widthvar height: CGFloat &#x3D; UIScreen.main.bounds.height  这样就可以得到">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SwiftUI 获取屏幕尺寸">
 <meta property="og:url" content="https://wonderhoi.com/2025/06/25/SwiftUI-%E8%8E%B7%E5%8F%96%E5%B1%8F%E5%B9%95%E5%B0%BA%E5%AF%B8/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="bounds1var screenBounds:CGRect &#x3D; UIScreen.main.bounds  bounds 得到的是单位为点（point）的尺寸。 12var width: CGFloat &#x3D; UIScreen.main.bounds.widthvar height: CGFloat &#x3D; UIScreen.main.bounds.height  这样就可以得到 CGFloat 格式">
+<meta property="og:description" content="参考：获取屏幕宽度 bounds1var screenBounds: CGRect &#x3D; UIScreen.main.bounds  bounds 得到的是单位为点（point）的尺寸。 12var width: CGFloat &#x3D; UIScreen.main.bounds.widthvar height: CGFloat &#x3D; UIScreen.main.bounds.height  这样就可以得到">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-06-25T04:31:42.000Z">
-<meta property="article:modified_time" content="2025-06-26T09:05:22.909Z">
+<meta property="article:modified_time" content="2025-09-03T10:16:27.103Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="SwiftUI">
 <meta name="twitter:card" content="summary_large_image">
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          346 字
+          354 字
         
       </span>
     
@@ -282,7 +282,8 @@
             
               <div class="markdown-body">
                 
-                <h2 id="bounds"><a href="#bounds" class="headerlink" title="bounds"></a>bounds</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">var</span> screenBounds:<span class="hljs-type">CGRect</span> <span class="hljs-operator">=</span> <span class="hljs-type">UIScreen</span>.main.bounds<br></code></pre></td></tr></table></figure>
+                <p>参考：<a target="_blank" rel="noopener" href="https://yindongliang.com/docs/Apple/SwiftUI/Layout/%E8%8E%B7%E5%8F%96%E5%B1%8F%E5%B9%95%E5%AE%BD%E5%BA%A6/">获取屏幕宽度</a></p>
+<h2 id="bounds"><a href="#bounds" class="headerlink" title="bounds"></a>bounds</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">var</span> screenBounds: <span class="hljs-type">CGRect</span> <span class="hljs-operator">=</span> <span class="hljs-type">UIScreen</span>.main.bounds<br></code></pre></td></tr></table></figure>
 
 <p>bounds 得到的是单位为点（point）的尺寸。</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">var</span> width: <span class="hljs-type">CGFloat</span> <span class="hljs-operator">=</span> <span class="hljs-type">UIScreen</span>.main.bounds.width<br><span class="hljs-keyword">var</span> height: <span class="hljs-type">CGFloat</span> <span class="hljs-operator">=</span> <span class="hljs-type">UIScreen</span>.main.bounds.height<br></code></pre></td></tr></table></figure>
