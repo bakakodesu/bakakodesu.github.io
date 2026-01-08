@@ -21,17 +21,18 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="总之而言，不要在 Xcode 上直接选择真机来运行 Watch App 工程。 由于 Watch App 不能从电脑直接安装，Xcode 需要首先把 swift 的运行时和一系列安装脚本先传到手机上，再由手机完成安装过程。之后 Xcode 还需要通过手机来和 Watch 建立连接才能调试。 这样的结果就是 Xcode 不停地提示正在连接手表以及正在重新连接手表。 最好的办法是，选择 iOS App">
+    <meta name="description" content="非独立 watchOS 应用总之而言，不要在 Xcode 上直接选择真机来运行 Watch App 工程。 由于 Watch App 不能从电脑直接安装，Xcode 需要首先把 swift 的运行时和一系列安装脚本先传到手机上，再由手机完成安装过程。之后 Xcode 还需要通过手机来和 Watch 建立连接才能调试。 这样的结果就是 Xcode 不停地提示正在连接手表以及正在重新连接手表。 最好的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xcode 真机调试 iWatch 的坑">
 <meta property="og:url" content="https://wonderhoi.com/2024/01/19/Xcode-%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95-iWatch-%E7%9A%84%E5%9D%91/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="总之而言，不要在 Xcode 上直接选择真机来运行 Watch App 工程。 由于 Watch App 不能从电脑直接安装，Xcode 需要首先把 swift 的运行时和一系列安装脚本先传到手机上，再由手机完成安装过程。之后 Xcode 还需要通过手机来和 Watch 建立连接才能调试。 这样的结果就是 Xcode 不停地提示正在连接手表以及正在重新连接手表。 最好的办法是，选择 iOS App">
+<meta property="og:description" content="非独立 watchOS 应用总之而言，不要在 Xcode 上直接选择真机来运行 Watch App 工程。 由于 Watch App 不能从电脑直接安装，Xcode 需要首先把 swift 的运行时和一系列安装脚本先传到手机上，再由手机完成安装过程。之后 Xcode 还需要通过手机来和 Watch 建立连接才能调试。 这样的结果就是 Xcode 不停地提示正在连接手表以及正在重新连接手表。 最好的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-19T07:46:38.000Z">
-<meta property="article:modified_time" content="2024-11-08T04:16:34.093Z">
+<meta property="article:modified_time" content="2025-12-04T04:20:28.877Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="Xcode">
+<meta property="article:tag" content="watchOS">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -238,7 +239,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          167 字
+          445 字
         
       </span>
     
@@ -282,11 +283,35 @@
             
               <div class="markdown-body">
                 
-                <p>总之而言，不要在 Xcode 上直接选择真机来运行 Watch App 工程。</p>
+                <h2 id="非独立-watchOS-应用"><a href="#非独立-watchOS-应用" class="headerlink" title="非独立 watchOS 应用"></a>非独立 watchOS 应用</h2><p>总之而言，不要在 Xcode 上直接选择真机来运行 Watch App 工程。</p>
 <p>由于 Watch App 不能从电脑直接安装，Xcode 需要首先把 swift 的运行时和一系列安装脚本先传到手机上，再由手机完成安装过程。之后 Xcode 还需要通过手机来和 Watch 建立连接才能调试。</p>
 <p>这样的结果就是 Xcode 不停地提示正在连接手表以及正在重新连接手表。</p>
 <p>最好的办法是，选择 iOS App，直接在 iPhone 上运行。</p>
 <p>因为 iOS App 在安装的时候会把 Watch App 同样编译安装，之后只要手动在「手表」应用中重新安装 Watch App 即可。</p>
+<h2 id="独立-watchOS-应用"><a href="#独立-watchOS-应用" class="headerlink" title="独立 watchOS 应用"></a>独立 watchOS 应用</h2><p>就别想了，通过 TestFlight 真机测试吧。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.reddit.com/r/iOSProgramming/comments/1n6kvw7/f_apple_watch_and_xcode/">F*** Apple Watch and Xcode!</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.reddit.com/r/iOSProgramming/comments/1bmqnpg/apple_watch_app_development_xcode_connection_error/?tl=zh-hant">Apple Watch App 開發 - Xcode 連線錯誤</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/78511979/apple-watch-cant-always-reconnect">Apple Watch can’t always reconnect</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/62487008/xcode-stuck-on-copying-cache-files-from-device-tvos">Xcode stuck on copying cache files from device tvOS</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qinglong61/article/details/47024979">xcode卡在“copying symbol files”状态的解决办法</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.reddit.com/r/iOSProgramming/comments/19en5lx/its_just_impossible_to_do_watchos_development/?tl=zh-hans">做 watchOS 开发简直不可能</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.reddit.com/r/iOSProgramming/comments/17q3tt4/has_anyone_managed_to_connect_xcode_to_their/?tl=zh-hans">有没有人第一次成功将 XCode 连接到他们的 Apple Watch，而无需经历大量的故障排除和痛苦？</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.reddit.com/r/iOSProgramming/comments/1bmqnpg/apple_watch_app_development_xcode_connection_error/?tl=zh-hans">Apple Watch 应用开发 - Xcode 连接错误</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7159572597913911303">LLDB is likely reading from device memory to resolve symbols错误如何解决？</a></li>
+</ul>
+<h2 id="打包上传"><a href="#打包上传" class="headerlink" title="打包上传"></a>打包上传</h2><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/73500469/watchkit-2-0-apps-bundle-id-person-bundle-ropes-watchkitapp-is-not-prefixed-by">WatchKit 2.0 app’s bundle ID person.bundle.Ropes.watchkitapp is not prefixed by the parent app’s bundle ID followed by a ‘.’; expected prefix</a></p>
+<blockquote>
+<p>In the watch app info.plist, make sure the entry <code>WKCompanionAppBundleIdentifier</code> is present and that its value is the bundle ID of the iOS app.</p>
+</blockquote>
+<p>另外，watchOS 应用的 bundle ID 后缀一定要加 <code>.watch</code> 或者 <code>.watchkitapp</code></p>
+<p>需要注意：</p>
+<ul>
+<li>如果是独立 watchOS 应用，那么只需要申请一份 Identifiers 和 Profiles，对应 <code>Bundle ID</code>。将该 <code>Bundle ID</code> 填入 iOS Target 的 Bundle Identifier 中，再将 <code>Bundle ID.watch</code> 或者 <code>Bundle ID.watchkitapp</code> 填入 watchOS Target 的 Bundle Identifier 中即可；</li>
+<li>如果不是独立 watchOS 应用，则需要申请两份 Identifiers 和 Profiles，对应 <code>iOS Bundle ID</code> 和 <code>iOS Bundle ID.watch</code>（实测尾缀 <code>.watchkitapp</code> 无法申请 Identifiers）。再分别将 Identifiers 填入 iOS Target 与 watchOS Target 的 Bundle Identifier 即可。</li>
+</ul>
+<h2 id="网络的坑"><a href="#网络的坑" class="headerlink" title="网络的坑"></a>网络的坑</h2><p><a target="_blank" rel="noopener" href="https://discussionschinese.apple.com/thread/253339098?sortBy=rank&page=1">Apple Watch App 网络权限问题</a></p>
+<p>简单说，独立应用在 GPS 版本的手表上无法进行网络授权请求。只能是蜂窝版本；或者 iPhone&amp;Apple Watch 同步开发，通过 iPhone 进行授权。</p>
 
                 
               </div>
@@ -335,6 +360,8 @@
       <i class="iconfont icon-tags"></i>
       
         <a href="/tags/Xcode/" class="print-no-link">#Xcode</a>
+      
+        <a href="/tags/watchOS/" class="print-no-link">#watchOS</a>
       
     </div>
   
