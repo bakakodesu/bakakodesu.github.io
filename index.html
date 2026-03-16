@@ -238,6 +238,433 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2026/03/16/Swift-%E5%BB%B6%E8%BF%9F%E6%89%A7%E8%A1%8C%E7%9A%84-4-%E7%A7%8D%E6%96%B9%E5%BC%8F/" target="_self">
+          Swift 延迟执行的 4 种方式
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/16/Swift-%E5%BB%B6%E8%BF%9F%E6%89%A7%E8%A1%8C%E7%9A%84-4-%E7%A7%8D%E6%96%B9%E5%BC%8F/" target="_self">
+        <div>
+          1234567891011121314151617181920// 1.perform(必须在主线程中执行)self.perform(#selector(delayExecution), with: nil, afterDelay: 3)// 取消NSObject.cancelPreviousPerformRequests(withTarget: self)// 2.timer(必须在主线程中执行
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-16 17:04" pubdate>
+              2026-03-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Swift/">#Swift</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/16/%E8%8E%B7%E5%8F%96%E8%AE%BE%E5%A4%87%E7%9A%84-UUID/" target="_self">
+          获取设备的 UUID
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/16/%E8%8E%B7%E5%8F%96%E8%AE%BE%E5%A4%87%E7%9A%84-UUID/" target="_self">
+        <div>
+          iOS 1let deviceID = UIDevice.current.identifierForVendor?.uuidString ?? &quot;&quot;  watchOS 1let deviceId = WKInterfaceDevice.current().identifierForVendor?.uuidString ?? &quot;&quot;
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-16 15:39" pubdate>
+              2026-03-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Swift/">#Swift</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/16/swift-%E4%B8%AD%E5%88%A9%E7%94%A8-Subscripts-%E4%B8%8B%E6%A0%87%E8%84%9A%E6%9C%AC%E6%B0%B8%E4%B9%85%E8%A7%A3%E5%86%B3%E6%95%B0%E7%BB%84%E8%B6%8A%E7%95%8C%E9%97%AE%E9%A2%98/" target="_self">
+          swift 中利用 Subscripts 下标脚本永久解决数组越界问题
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/16/swift-%E4%B8%AD%E5%88%A9%E7%94%A8-Subscripts-%E4%B8%8B%E6%A0%87%E8%84%9A%E6%9C%AC%E6%B0%B8%E4%B9%85%E8%A7%A3%E5%86%B3%E6%95%B0%E7%BB%84%E8%B6%8A%E7%95%8C%E9%97%AE%E9%A2%98/" target="_self">
+        <div>
+          平常的代码中为了保证数组不越界，我们经常要在代码中加入判断，这样繁琐的工作可以在 swift 中利用下标脚本很优雅的解决，一劳永逸。 12345678910111213141516extension Array &#123;    // 防止数组越界        subscript(index: Int, safe: Bool) -&gt; Element? &#123;        if s
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-16 15:09" pubdate>
+              2026-03-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Swift/">#Swift</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/16/%E5%9C%A8-macOS-%E4%B8%8A%EF%BC%8CList-%E4%B8%8E-Form-%E7%9A%84%E5%8C%BA%E5%88%AB/" target="_self">
+          在 macOS 上，List 与 Form 的区别
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/16/%E5%9C%A8-macOS-%E4%B8%8A%EF%BC%8CList-%E4%B8%8E-Form-%E7%9A%84%E5%8C%BA%E5%88%AB/" target="_self">
+        <div>
+          先说结论，如果要在 macOS 上显示表单数据和进行表单操作的话，推荐使用 Form，而不是 List。 具体效果可参考下面代码： 1234567891011121314151617181920212223242526272829303132333435363738struct FormVSList: View &#123;        @State private var enterText:
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-16 14:35" pubdate>
+              2026-03-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SwiftUI/">#SwiftUI</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/13/%E7%A6%81%E6%AD%A2-iPhone-%E8%87%AA%E5%8A%A8%E9%94%81%E5%B1%8F/" target="_self">
+          禁止 iPhone 自动锁屏
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/13/%E7%A6%81%E6%AD%A2-iPhone-%E8%87%AA%E5%8A%A8%E9%94%81%E5%B1%8F/" target="_self">
+        <div>
+          1UIApplication.shared.isIdleTimerDisabled = true
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-13 16:30" pubdate>
+              2026-03-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E4%BE%BF/" class="category-chain-item">随便</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Swift/">#Swift</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/13/SwiftUI-Label-%E5%90%88%E9%9B%86/" target="_self">
+          SwiftUI Label 合集
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/13/SwiftUI-Label-%E5%90%88%E9%9B%86/" target="_self">
+        <div>
+          如何使用和自定义 SwiftUI 标签  HowTo —— SwiftUI2.0 如何使用 Label  Label 设置 SF Symbols 的颜色   12345678Label &#123;    Text(&quot;Here is some text, I just want to display the bubble image in Orange. Please help :)
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-13 16:09" pubdate>
+              2026-03-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SwiftUI/">#SwiftUI</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/13/Docker-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/" target="_self">
+          Docker 设置代理
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/13/Docker-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/" target="_self">
+        <div>
+          挂加速镜像 DockerHub 国内加速镜像列表； 开启魔法软件的增强模式（即虚拟网关），参考 请问大佬， MacOS 下如何设置 docker 使用本地代理？； 修改 Docker 的代理，地址与魔法软件一致，参考 Mac 使用 docker 最新解决方案（2024 年 12 月）。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-13 15:58" pubdate>
+              2026-03-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Docker/">#Docker</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2025/12/09/%E8%A7%A3%E5%86%B3-TestFlight-%E6%97%A0%E6%B3%95%E6%8E%A5%E5%85%A5-App-Store/" target="_self">
           解决 TestFlight 无法接入 App Store
         </a>
@@ -408,435 +835,6 @@
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/%E7%94%9F%E4%BA%A7%E5%8A%9B/">#生产力</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/12/03/ngrok-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" target="_self">
-          ngrok 内网穿透
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/12/03/ngrok-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" target="_self">
-        <div>
-          内网穿透：ngrok使用教程
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-12-03 01:56" pubdate>
-              2025-12-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E7%94%9F%E4%BA%A7%E5%8A%9B/">#生产力</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/12/03/Android-%E5%AE%9A%E4%BD%8D/" target="_self">
-          Android 定位
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/12/03/Android-%E5%AE%9A%E4%BD%8D/" target="_self">
-        <div>
-          可参考： 安卓定位方案的价格对比（包含可免费商用的服务） 原生定位浅析Android 11 Gnss定位流程 腾讯定位Android 定位 SDK 权限配置 1234567891011121314151617181920212223&lt;!-- 通过GPS得到精确位置 --&gt;&lt;uses-permission android:name=&quot;android.permission.
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-12-03 01:50" pubdate>
-              2025-12-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Android/">#Android</a>
-            
-              <a href="/tags/Map/">#Map</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/11/11/watchOS-%E4%B8%8D%E6%94%AF%E6%8C%81-WebSocket/" target="_self">
-          watchOS 不支持 WebSocket
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/11/11/watchOS-%E4%B8%8D%E6%94%AF%E6%8C%81-WebSocket/" target="_self">
-        <div>
-          哎。  apple watch上watchOS网络低级别和高级别区别，以及使用tcp&#x2F;udp或者websocket的限制条件 WebSocket connect failed in WatchOS9 beta device, with error”unsatisfied (Path was denied by NECP policy” Is it possible to use Web
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-11-11 01:48" pubdate>
-              2025-11-11
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/watchOS/">#watchOS</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/10/16/SwiftUI-%E5%AE%9E%E7%8E%B0%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%89%AB%E6%8F%8F/" target="_self">
-          SwiftUI 实现二维码扫描
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/10/16/SwiftUI-%E5%AE%9E%E7%8E%B0%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%89%AB%E6%8F%8F/" target="_self">
-        <div>
-          SwiftUI ——扫码 使用swiftui实现打开摄像头扫描二维码功能，如果二维码是网址，就加载网站，如果不是网址，就显示扫到的内容
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-10-16 17:38" pubdate>
-              2025-10-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SwiftUI/">#SwiftUI</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/10/15/SwiftUI-%E4%B9%8B%E5%AF%B9%E9%BD%90/" target="_self">
-          SwiftUI 之对齐
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/10/15/SwiftUI-%E4%B9%8B%E5%AF%B9%E9%BD%90/" target="_self">
-        <div>
-          参考：SwiftUI VStack Alignment Bug? 123456VStack(alignment: .leading) &#123;	Image(systemName: &quot;globe&quot;)		.imageScale(.large)		.foregroundStyle(.tint)	Text(&quot;Hello, world!&quot;)&#125;.frame
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-10-15 17:17" pubdate>
-              2025-10-15
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SwiftUI/">#SwiftUI</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/09/03/SwiftUI-%E8%87%AA%E5%AE%9A%E4%B9%89-ProgressViewStyle/" target="_self">
-          SwiftUI 自定义 ProgressViewStyle
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/09/03/SwiftUI-%E8%87%AA%E5%AE%9A%E4%B9%89-ProgressViewStyle/" target="_self">
-        <div>
-          使用 ProgressViewStyle 自定义 ProgressView 如何使用 ProgressView 和 ProgressViewStyle 自訂義進度條樣式 SwiftUI 内功：“曳光弹“实现自定义样式进度条（ProgressView） HowTo —— SwiftUI2.0 使用 ProgressView 显示进度条
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-09-03 17:44" pubdate>
-              2025-09-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%90%88%E9%9B%86/" class="category-chain-item">合集</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SwiftUI/">#SwiftUI</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/09/03/SwiftUI-%E4%BD%BF%E7%94%A8-trim-%E7%BB%98%E5%88%B6%E5%AE%9E%E4%BD%93%E5%BD%A2%E7%8A%B6%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86/" target="_self">
-          SwiftUI 使用 trim() 绘制实体形状的一部分
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/09/03/SwiftUI-%E4%BD%BF%E7%94%A8-trim-%E7%BB%98%E5%88%B6%E5%AE%9E%E4%BD%93%E5%BD%A2%E7%8A%B6%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86/" target="_self">
-        <div>
-          SwiftUI 允许我们使用其 trim() 修饰符仅绘制笔触的一部分或填充形状，该修饰符采用两个参数：起始值和终止值，都存储为 0 到 1 之间的 CGFloat。 例如，如果您想要一个半圆，则可以这样写： 123Circle()    .trim(from: 0, to: 0.5)    .frame(width: 200, height: 200)  SwiftUI 绘制其形状，以使 0 度
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-09-03 17:37" pubdate>
-              2025-09-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SwiftUI/">#SwiftUI</a>
             
           </div>
         

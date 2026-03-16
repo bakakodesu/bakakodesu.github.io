@@ -21,15 +21,15 @@
   <meta name="author" content="wonderhoi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="方法一直接在 #Preview 中呼叫。点击三下后即可完成截图。 123456789101112131415161718192021222324252627import SwiftUIstruct PreviewScreenshotModifier: ViewModifier &#123;    let screenshotDirectoryURL &#x3D; URL(filePath: &quot;&#x2F;U">
+    <meta name="description" content="最新方法在预览界面开启的情况下，可使用以下两个入口：  通过 Editor —&gt; Canvas —&gt; Copy Preview Screenshot 可以拷贝预览界面。 通过 Editor —&gt; Canvas —&gt; Export Preview Screenshot 可以导出预览界面。  方法一直接在 #Preview 中呼叫。点击三下后即可完成截图。 1234567891">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SwiftUI 在 preview 界面进行截图">
 <meta property="og:url" content="https://wonderhoi.com/2025/06/25/SwiftUI-%E5%9C%A8-preview-%E7%95%8C%E9%9D%A2%E8%BF%9B%E8%A1%8C%E6%88%AA%E5%9B%BE/index.html">
 <meta property="og:site_name" content="这是一个PM的BLOG">
-<meta property="og:description" content="方法一直接在 #Preview 中呼叫。点击三下后即可完成截图。 123456789101112131415161718192021222324252627import SwiftUIstruct PreviewScreenshotModifier: ViewModifier &#123;    let screenshotDirectoryURL &#x3D; URL(filePath: &quot;&#x2F;U">
+<meta property="og:description" content="最新方法在预览界面开启的情况下，可使用以下两个入口：  通过 Editor —&gt; Canvas —&gt; Copy Preview Screenshot 可以拷贝预览界面。 通过 Editor —&gt; Canvas —&gt; Export Preview Screenshot 可以导出预览界面。  方法一直接在 #Preview 中呼叫。点击三下后即可完成截图。 1234567891">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-06-25T03:26:29.000Z">
-<meta property="article:modified_time" content="2025-06-25T03:47:29.815Z">
+<meta property="article:modified_time" content="2026-03-13T08:18:30.076Z">
 <meta property="article:author" content="wonderhoi">
 <meta property="article:tag" content="SwiftUI">
 <meta name="twitter:card" content="summary_large_image">
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          195 字
+          249 字
         
       </span>
     
@@ -282,7 +282,12 @@
             
               <div class="markdown-body">
                 
-                <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>直接在 #Preview 中呼叫。点击三下后即可完成截图。</p>
+                <h2 id="最新方法"><a href="#最新方法" class="headerlink" title="最新方法"></a>最新方法</h2><p>在预览界面开启的情况下，可使用以下两个入口：</p>
+<ul>
+<li>通过 <strong>Editor —&gt; Canvas —&gt; Copy Preview Screenshot</strong> 可以拷贝预览界面。</li>
+<li>通过 <strong>Editor —&gt; Canvas —&gt; Export Preview Screenshot</strong> 可以导出预览界面。</li>
+</ul>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>直接在 #Preview 中呼叫。点击三下后即可完成截图。</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">import</span> SwiftUI<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">PreviewScreenshotModifier</span>: <span class="hljs-title class_ inherited__">ViewModifier</span> &#123;<br>    <span class="hljs-keyword">let</span> screenshotDirectoryURL <span class="hljs-operator">=</span> <span class="hljs-type">URL</span>(filePath: <span class="hljs-string">&quot;/Users/wonderhoi/&quot;</span>)<br>    <span class="hljs-keyword">let</span> tapCount <span class="hljs-operator">=</span> <span class="hljs-number">3</span><br><br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">body</span>(<span class="hljs-params">content</span>: <span class="hljs-type">Content</span>) -&gt; <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>        content<br>            .onTapGesture(count: tapCount, perform: &#123;<br>                <span class="hljs-keyword">let</span> scene <span class="hljs-operator">=</span> <span class="hljs-type">UIApplication</span>.shared.connectedScenes.first <span class="hljs-keyword">as?</span> <span class="hljs-type">UIWindowScene</span><br>                <span class="hljs-keyword">let</span> window <span class="hljs-operator">=</span> scene<span class="hljs-operator">?</span>.keyWindow <span class="hljs-operator">??</span> <span class="hljs-type">UIWindow</span>(frame: .zero)<br>                <span class="hljs-keyword">let</span> renderer <span class="hljs-operator">=</span> <span class="hljs-type">UIGraphicsImageRenderer</span>(size: window.bounds.size)<br>                <span class="hljs-keyword">let</span> image <span class="hljs-operator">=</span> renderer.image &#123; context <span class="hljs-keyword">in</span><br>                    window.drawHierarchy(in: window.bounds, afterScreenUpdates: <span class="hljs-literal">true</span>)<br>                &#125;<br>                <span class="hljs-keyword">let</span> pngData <span class="hljs-operator">=</span> image.pngData()<br>                <span class="hljs-keyword">let</span> screenshotURL <span class="hljs-operator">=</span> screenshotDirectoryURL.appending(path: <span class="hljs-string">&quot;<span class="hljs-subst">\(UUID())</span>&quot;</span>).appendingPathExtension(for: .png)<br>                <span class="hljs-keyword">try?</span> image.pngData()<span class="hljs-operator">?</span>.write(to: screenshotURL)<br>             &#125;)<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">extension</span> <span class="hljs-title class_">View</span> &#123;<br>    <span class="hljs-keyword">func</span> <span class="hljs-title function_">previewScreenshot</span>() -&gt; <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> &#123;<br>        modifier(<span class="hljs-type">PreviewScreenshotModifier</span>())<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>使用</p>
